@@ -1,0 +1,134 @@
+{
+ "A": "187523",
+ "B": "187524",
+ "submitted": "2026-11-09T11:07:24-05:00",
+ "A_reruns": [
+  {
+   "job": "188674",
+   "lines": [
+    11,
+    32,
+    40,
+    41,
+    66,
+    84
+   ],
+   "args": "args_A_rerun1.txt"
+  },
+  {
+   "job": "190063",
+   "lines": [
+    110,
+    111,
+    112,
+    116,
+    120
+   ],
+   "args": "args_A_rerun2.txt"
+  },
+  {
+   "job": "190666",
+   "lines": [
+    183
+   ],
+   "args": "args_A_rerun3.txt"
+  },
+  {
+   "job": "191820",
+   "lines": [
+    228,
+    236
+   ],
+   "args": "args_A_rerun4.txt"
+  },
+  {
+   "job": "197904",
+   "lines": [
+    220
+   ],
+   "args": "args_A_rerun5.txt"
+  }
+ ],
+ "B_reruns": [
+  {
+   "job": "188676",
+   "lines": [
+    7,
+    14
+   ],
+   "args": "args_B_rerun1.txt"
+  },
+  {
+   "job": "190118",
+   "lines": [
+    69
+   ],
+   "args": "args_B_rerun2.txt"
+  },
+  {
+   "job": "190667",
+   "lines": [
+    76
+   ],
+   "args": "args_B_rerun3.txt"
+  },
+  {
+   "job": "191119",
+   "lines": [
+    89
+   ],
+   "args": "args_B_rerun4.txt"
+  },
+  {
+   "job": "191268",
+   "lines": [
+    93
+   ],
+   "args": "args_B_rerun5.txt"
+  },
+  {
+   "job": "193669",
+   "lines": [
+    121
+   ],
+   "args": "args_B_rerun6.txt"
+  },
+  {
+   "job": "194989",
+   "lines": [
+    175
+   ],
+   "args": "args_B_rerun7.txt"
+  },
+  {
+   "job": "195189",
+   "lines": [
+    146,
+    155,
+    158,
+    169,
+    176,
+    177,
+    182
+   ],
+   "args": "args_B_rerun8.txt"
+  }
+ ],
+ "C_1": "190101",
+ "C_2": "193666",
+ "C_2_reruns": [
+  {
+   "job": "195190",
+   "lines": [
+    4,
+    5,
+    6,
+    7,
+    13
+   ],
+   "args": "args_C_2_rerun1.txt"
+  }
+ ],
+ "analysis": "197659",
+ "analysis_final": "200730"
+}

@@ -1,0 +1,15 @@
+/MALECNS_ROOT/results/pd3/multistab/icq_r0.5_g0.9108.npz;/MALECNS_ROOT/results/pd3/multistab/icq_r0.5_g1.0195.npz;/MALECNS_ROOT/results/pd3/multistab/icq_r0.5_g1.1411.npz
+/MALECNS_ROOT/results/pd3/multistab/icq_r0.5_g1.2773.npz;/MALECNS_ROOT/results/pd3/multistab/icq_r0.5_g2.0051.npz;/MALECNS_ROOT/results/pd3/multistab/icq_r0.5_g2.2443.npz
+/MALECNS_ROOT/results/pd3/multistab/icq_r0.5_g2.5121.npz;/MALECNS_ROOT/results/pd3/multistab/icq_r0.5_g2.8119.npz;/MALECNS_ROOT/results/pd3/multistab/icq_r0.5_g3.5230.npz
+/MALECNS_ROOT/results/pd3/multistab/icq_r0.5_g3.9434.npz;/MALECNS_ROOT/results/pd3/multistab/icq_r0.5_g5.5303.npz
+/MALECNS_ROOT/results/pd3/multistab/icq_r1.5_g2.5121.npz;/MALECNS_ROOT/results/pd3/multistab/icq_r1.5_g2.8119.npz
+/MALECNS_ROOT/results/pd3/multistab/icq_r2_g2.0051.npz
+/MALECNS_ROOT/results/pd3/multistab/icq_r3_g0.8137.npz;/MALECNS_ROOT/results/pd3/multistab/icq_r3_g1.1411.npz;/MALECNS_ROOT/results/pd3/multistab/icq_r3_g1.2773.npz
+/MALECNS_ROOT/results/pd3/multistab/icq_r4_g0.7269.npz;/MALECNS_ROOT/results/pd3/multistab/icq_r4_g0.8137.npz;/MALECNS_ROOT/results/pd3/multistab/icq_r4_g0.9108.npz
+/MALECNS_ROOT/results/pd3/multistab/icq_r4_g1.0195.npz;/MALECNS_ROOT/results/pd3/multistab/icq_r4_g1.1411.npz;/MALECNS_ROOT/results/pd3/multistab/icq_r4_g1.2773.npz
+/MALECNS_ROOT/results/pd3/multistab/icq_r4_g1.4297.npz;/MALECNS_ROOT/results/pd3/multistab/icq_r4_g1.6003.npz
+/MALECNS_ROOT/results/pd3/multistab/icq_r6_g0.3302.npz;/MALECNS_ROOT/results/pd3/multistab/icq_r6_g0.3696.npz;/MALECNS_ROOT/results/pd3/multistab/icq_r6_g0.4137.npz
+/MALECNS_ROOT/results/pd3/multistab/icq_r6_g0.4631.npz;/MALECNS_ROOT/results/pd3/multistab/icq_r6_g0.5184.npz;/MALECNS_ROOT/results/pd3/multistab/icq_r6_g0.5802.npz
+/MALECNS_ROOT/results/pd3/multistab/icq_r6_g0.6495.npz;/MALECNS_ROOT/results/pd3/multistab/icq_r6_g0.7269.npz;/MALECNS_ROOT/results/pd3/multistab/icq_r6_g0.8137.npz
+/MALECNS_ROOT/results/pd3/multistab/icq_r6_g0.9108.npz;/MALECNS_ROOT/results/pd3/multistab/icq_r6_g1.0195.npz;/MALECNS_ROOT/results/pd3/multistab/icq_r6_g1.1411.npz
+/MALECNS_ROOT/results/pd3/multistab/icq_r6_g1.2773.npz;/MALECNS_ROOT/results/pd3/multistab/icq_r6_g1.4297.npz;/MALECNS_ROOT/results/pd3/multistab/icq_r6_g1.6003.npz

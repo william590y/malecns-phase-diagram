@@ -1,0 +1,80 @@
+{
+ "module_file": "/MALECNS_ROOT/code/ald_sim_e3_work.py",
+ "S1_spike_efficacy_h0.3_U0.25_tau30": {
+  "pass": true,
+  "expected_exact": 0.38941804054201196,
+  "measured": 0.3893951177597046,
+  "poisson_meanfield": 0.38205693710453403
+ },
+ "S1_spike_rho_unchanged_h0.3_U0.25_tau30": {
+  "pass": true,
+  "expected_exact": 0.2379386390804963,
+  "measured": 0.237955078125
+ },
+ "S2_spike_mean_x_h0.3_U0.25_tau30": {
+  "pass": true,
+  "expected_exact": 0.3680491785945528,
+  "measured": 0.36797013878822327
+ },
+ "S1_spike_efficacy_h0.05_U0.5_tau100": {
+  "pass": true,
+  "expected_exact": 0.30034502598628854,
+  "measured": 0.300468772649765,
+  "poisson_meanfield": 0.29795160632081363
+ },
+ "S1_spike_rho_unchanged_h0.05_U0.5_tau100": {
+  "pass": true,
+  "expected_exact": 0.05199447288108478,
+  "measured": 0.051972076416015624
+ },
+ "S2_spike_mean_x_h0.05_U0.5_tau100": {
+  "pass": true,
+  "expected_exact": 0.2916041880822473,
+  "measured": 0.29148629307746887
+ },
+ "S1_spike_efficacy_h1.0_U0.28_tau240": {
+  "pass": true,
+  "expected_exact": 0.03623397432764989,
+  "measured": 0.0362495556473732,
+  "poisson_meanfield": 0.03612942714157361
+ },
+ "S1_spike_rho_unchanged_h1.0_U0.28_tau240": {
+  "pass": true,
+  "expected_exact": 0.4380202996390044,
+  "measured": 0.43795458984375
+ },
+ "S2_spike_mean_x_h1.0_U0.28_tau240": {
+  "pass": true,
+  "expected_exact": 0.03293745837723022,
+  "measured": 0.03295525908470154
+ },
+ "S3_rate_mode_mean_x": {
+  "pass": true,
+  "expected_exact": 0.5150668668140842,
+  "measured": 0.5149900913238525
+ },
+ "S3_rate_mode_x_given_active": {
+  "pass": true,
+  "expected_exact": 0.4224088389049654,
+  "measured": 0.42246514558792114
+ },
+ "S3_rate_first_epoch_phi_U0.25_tau89": {
+  "pass": true,
+  "formula": 0.8210989768619059,
+  "monte_carlo": 0.8213041073746217
+ },
+ "S3_rate_first_epoch_phi_U0.34_tau240": {
+  "pass": true,
+  "formula": 0.7717687680845818,
+  "monte_carlo": 0.7720073337340148
+ },
+ "S4_spike_U1_first_epoch_only_trajectory": {
+  "pass": true,
+  "max_abs_z": 4.004447882239788,
+  "n_times": 63.0,
+  "B_late_sim": 0.0,
+  "B_late_exact": 7.374856444385684e-16,
+  "B_peak_exact": 0.006837240577969909
+ },
+ "all_pass": true
+}

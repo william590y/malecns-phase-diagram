@@ -1,0 +1,794 @@
+<title>MaleCNS Criticality Notebook</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a lab notebook. One reading column (~66ch) with figure plates that break wider, a sticky contents rail on wide screens. */
+:root {
+  --paper: #f3f6f5;          /* cool, slightly green-grey page: fixed-tissue slide light */
+  --plate: #ffffff;          /* figure plates stay white in both themes (the PNGs are white) */
+  --ink: #14211f;            /* body text */
+  --ink-soft: #4b5c59;       /* secondary text */
+  --rule: #d3dcda;
+  --accent: #1f7a5c;         /* GFP-ish green: the "active neurons" colour */
+  --accent-soft: #dcefe7;
+  --amber: #a5650b;          /* caveats */
+  --amber-soft: #f6ead6;
+  --berry: #8a2d55;          /* not-yet-tested */
+  --berry-soft: #f3e1ea;
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Source Serif 4", "Iowan Old Style", Georgia, serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #0f1716; --plate: #ffffff; --ink: #e3ece9; --ink-soft: #9db1ac; --rule: #2a3a37;
+    --accent: #6fd3a8; --accent-soft: #173229; --amber: #f0b45c; --amber-soft: #33270f; --berry: #f08fb8; --berry-soft: #36182a;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #0f1716; --plate: #ffffff; --ink: #e3ece9; --ink-soft: #9db1ac; --rule: #2a3a37;
+  --accent: #6fd3a8; --accent-soft: #173229; --amber: #f0b45c; --amber-soft: #33270f; --berry: #f08fb8; --berry-soft: #36182a;
+}
+* { box-sizing: border-box; }
+body { background: var(--paper); color: var(--ink); font: 17px/1.62 var(--body); }
+.page { max-width: 1180px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 40px 80px;
+  display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 48px; }
+nav.toc { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 24px); align-self: start; font: 500 13px/1.5 var(--display); }
+nav.toc p { margin: 0 0 10px; color: var(--ink-soft); letter-spacing: .08em; text-transform: uppercase; font-size: 11.5px; }
+nav.toc ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; counter-reset: s; }
+nav.toc a { color: var(--ink-soft); text-decoration: none; display: block; }
+nav.toc a:hover, nav.toc a:focus-visible { color: var(--accent); }
+main { min-width: 0; }
+.col { max-width: 66ch; }
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; letter-spacing: -0.01em; }
+h1 { font-size: clamp(30px, 4.6vw, 46px); line-height: 1.08; margin: 6px 0 14px; font-weight: 700; }
+h2 { font-size: 26px; line-height: 1.2; margin: 64px 0 12px; font-weight: 700; scroll-margin-top: 20px; }
+h2 .n { color: var(--accent); font-variant-numeric: tabular-nums; margin-right: 10px; }
+h3 { font-size: 18px; margin: 28px 0 6px; font-weight: 600; }
+p { margin: 0 0 14px; }
+.eyebrow { font: 600 12px/1.3 var(--display); letter-spacing: .1em; text-transform: uppercase; color: var(--accent); }
+.lede { font-size: 20px; line-height: 1.5; color: var(--ink); }
+.small { font-size: 14.5px; color: var(--ink-soft); }
+code, .num { font-family: var(--mono); font-size: .86em; font-variant-numeric: tabular-nums; }
+a { color: var(--accent); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.status { margin: 26px 0 8px; display: grid; gap: 10px; }
+.finding { display: grid; grid-template-columns: 128px minmax(0, 1fr); gap: 14px; align-items: start; padding: 12px 0; border-top: 1px solid var(--rule); }
+.finding:last-child { border-bottom: 1px solid var(--rule); }
+.chip { font: 600 11.5px/1.2 var(--display); letter-spacing: .06em; text-transform: uppercase; padding: 5px 8px; border-radius: 4px; justify-self: start; }
+.chip.ok { color: var(--accent); background: var(--accent-soft); }
+.chip.mid { color: var(--amber); background: var(--amber-soft); }
+.chip.todo { color: var(--berry); background: var(--berry-soft); }
+.finding p { margin: 0; }
+
+figure { margin: 26px 0 30px; max-width: 980px; }
+figure .plate { background: var(--plate); border: 1px solid var(--rule); border-radius: 6px; padding: 10px; overflow-x: auto; }
+figure img, figure video { display: block; width: 100%; height: auto; min-width: 560px; }
+figure .plate.dark { background: #111; }
+figcaption { font: 14.5px/1.5 var(--body); color: var(--ink-soft); margin-top: 10px; max-width: 66ch; }
+figcaption b { color: var(--ink); font-family: var(--display); font-weight: 600; }
+.read { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; max-width: 980px; margin: 4px 0 10px; }
+.read > div { min-width: 0; }
+.read h4 { font: 600 12px/1.3 var(--display); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); margin: 0 0 6px; }
+.read ul { margin: 0; padding-left: 1.1em; }
+.read li { margin: 0 0 6px; }
+
+.eq { overflow-x: auto; padding: 14px 18px; margin: 12px 0 16px; background: var(--accent-soft); border-radius: 6px; font-size: 17px; }
+.eq .fallback { font-family: var(--mono); font-size: 14px; white-space: pre; }
+table { border-collapse: collapse; font-size: 15px; width: 100%; }
+.tablewrap { overflow-x: auto; margin: 10px 0 18px; max-width: 66ch; }
+th, td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { font: 600 12px/1.3 var(--display); letter-spacing: .06em; text-transform: uppercase; color: var(--ink-soft); }
+td.num, th.num { text-align: right; font-family: var(--mono); font-variant-numeric: tabular-nums; font-size: 14px; white-space: nowrap; }
+.note { border-left: 3px solid var(--amber); background: var(--amber-soft); padding: 12px 16px; margin: 16px 0; max-width: 66ch; font-size: 15.5px; }
+.note b { font-family: var(--display); color: var(--amber); font-weight: 600; }
+dl.gloss { display: grid; grid-template-columns: minmax(130px, 200px) minmax(0, 1fr); gap: 8px 20px; max-width: 70ch; font-size: 15.5px; }
+dl.gloss dt { font: 600 14px/1.5 var(--display); }
+dl.gloss dd { margin: 0; color: var(--ink); }
+footer { margin-top: 70px; padding-top: 16px; border-top: 1px solid var(--rule); font-size: 14px; color: var(--ink-soft); max-width: 70ch; }
+
+@media (max-width: 900px) {
+  .page { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  nav.toc { display: none; }
+}
+@media (max-width: 560px) {
+  body { font-size: 16px; }
+  .finding { grid-template-columns: minmax(0, 1fr); gap: 6px; }
+  .read { grid-template-columns: minmax(0, 1fr); }
+  dl.gloss { grid-template-columns: minmax(0, 1fr); }
+  dl.gloss dd { margin-bottom: 8px; }
+}
+.pages { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 20px; font: 600 13px/1 var(--display); }
+.pages a { padding: 9px 14px; border: 1px solid var(--rule); border-radius: 999px; text-decoration: none; color: var(--ink-soft); }
+.pages a:hover { border-color: var(--accent); color: var(--accent); }
+.pages a[aria-current="page"] { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+</style>
+<script>
+window.MathJax = { tex: { inlineMath: [["\\(", "\\)"]], displayMath: [["\\[", "\\]"]] }, svg: { fontCache: "global" },
+  startup: { pageReady: () => MathJax.startup.defaultPageReady().then(() => document.querySelectorAll(".fallback").forEach(e => e.hidden = true)) } };
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-svg.min.js" async></script>
+
+<div class="page">
+  <nav class="toc" aria-label="Contents">
+    <p>Contents</p>
+    <ol>
+      <li><a href="#question">The question</a></li>
+      <li><a href="#data">The connectome</a></li>
+      <li><a href="#model">The model</a></li>
+      <li><a href="#spectrum">The spectrum</a></li>
+      <li><a href="#decay">Decay experiments</a></li>
+      <li><a href="#where">Where activity lives</a></li>
+      <li><a href="#order">Order parameter</a></li>
+      <li><a href="#spreading">Spreading</a></li>
+      <li><a href="#theory">Putting it together</a></li>
+      <li><a href="#complete">Complete phase diagram</a></li>
+      <li><a href="#antennal-lobe">The antennal lobe and sleep</a></li>
+      <li><a href="#al-defect">Is the AL a model defect?</a></li>
+      <li><a href="#next">Open questions</a></li>
+      <li><a href="#glossary">Glossary</a></li>
+      <li><a href="theory.html">Theory (derivation) →</a></li>
+      <li><a href="flow.html">Flow field (animated) →</a></li>
+      <li><a href="model2.html">New model (Model 2) →</a></li>
+    </ol>
+  </nav>
+
+  <main>
+    <div class="col">
+      <nav class="pages" aria-label="Pages"><a href="./" aria-current="page">Notebook</a><a href="theory.html">Theory (derivation)</a><a href="flow.html">Flow field (animated)</a><a href="model2.html">New model</a></nav>
+      <div class="eyebrow">MaleCNS v1.0 · stochastic Wilson–Cowan · notebook of Nov 8, 2026</div>
+      <h1>Does the fly connectome have a Griffiths phase?</h1>
+      <p class="lede">We simulated every one of the 167,216 neurons of the adult male <i>Drosophila</i> central nervous system, wired exactly as the connectome says. We asked whether the network shows a Griffiths phase, an extended stretch of near-critical behaviour that has been proposed as a signature of the waking brain. Then we asked whether the connectome's spectrum explains it.</p>
+      <p>Short answer so far: the connectome has strongly <b>localized</b> leading modes, and they shape the dynamics. Activity switches on first in a small, tightly wired module around the antennal lobe and stays confined there over a broad range of coupling. A randomly rewired copy with the same connection counts switches on all at once, everywhere. That is the rare-region mechanism behind Griffiths phases. Whether it amounts to a full Griffiths phase is not settled yet.</p>
+
+      <div class="status" role="list">
+        <div class="finding" role="listitem"><span class="chip ok">Established</span><p>The leading eigenvectors of the weighted connectome are localized on a module of a few hundred antennal-lobe neurons. A degree-preserving random rewiring destroys this. Simulated alone, that 526-neuron module reproduces the whole brain's onset.</p></div>
+        <div class="finding" role="listitem"><span class="chip ok">Established</span><p>The complete phase diagram over coupling and inhibition (section 10). It goes quiescent, then a slow window, then localized activity, then delocalized activity. The spectral theory gets the order of the phases everywhere and the boundaries to 5–9% without inhibition. With inhibition it overshoots, by 1.8× at r = 1.</p></div>
+        <div class="finding" role="listitem"><span class="chip mid">Answer, for this model</span><p>The slow window is a <b>single</b> rare region (the module) dying out by chance: its lifetimes are exponential, not broadly distributed. There is no power-law decay, and the earlier "varying exponent" was a fitting artifact. So the network shows a Griffiths-like window, not an extended Griffiths phase.</p></div>
+        <div class="finding" role="listitem"><span class="chip ok">Established</span><p>No sudden global switch-on: activity is recruited region by region, and the top 400 eigenmodes are all localized. A single random seed ignites the real network only if it lands in or feeds the antennal-lobe module.</p></div>
+        <div class="finding" role="listitem"><span class="chip todo">Open</span><p>Why the theory overstates inhibition (about 2× in module size). Whether heterogeneity in neuron properties, adaptation or neuromodulation would create more rare regions and a genuine Griffiths phase. Any link to wakefulness.</p></div>
+      </div>
+    </div>
+
+    <h2 id="question" class="col"><span class="n">1</span>The question</h2>
+    <div class="col">
+      <p>Many models of brain dynamics have a <b>critical point</b>: below a certain coupling strength, activity dies out; above it, activity sustains itself. Exactly at the critical point the system responds to inputs across all scales, with slow, power-law dynamics. Brains are often argued to sit near such a point because that maximizes sensitivity and dynamic range.</p>
+      <p>The trouble is that a critical point is a single value. Real brains would have to be tuned to it exactly. A <b>Griffiths phase</b> relaxes this. In a network that is heterogeneous and modular, some regions are more strongly wired than the rest (the "rare regions"). Over a whole range of coupling below the global transition, those regions can sustain activity locally for a long time even though the network as a whole cannot. The averaged dynamics then look critical (slow, power-law relaxation) across an extended interval instead of a single point. Moretti &amp; Muñoz (2013, <i>Nature Communications</i>) showed that hierarchical modular connectomes produce exactly this, and proposed it as a robust route to criticality.</p>
+      <p>Your hypothesis is that such a phase corresponds to wakeful consciousness: awake brains sit in this extended near-critical regime, anaesthesia and deep sleep fall below it, seizures above it. The simulations here test the first half of that chain, whether the fly connectome produces a Griffiths phase at all. They say nothing yet about wakefulness itself.</p>
+    </div>
+
+    <h2 id="data" class="col"><span class="n">2</span>The connectome</h2>
+    <div class="col">
+      <p>MaleCNS v1.0 is Janelia's electron-microscopy reconstruction of an entire adult male fly CNS, brain and ventral nerve cord together (released June 2026, CC BY 4.0). We use the preprocessed copy from the earlier NeuroMechFly project.</p>
+      <div class="tablewrap"><table>
+        <tr><th>Quantity</th><th class="num">Value</th></tr>
+        <tr><td>Neurons</td><td class="num">167,216</td></tr>
+        <tr><td>Directed neuron-to-neuron connections</td><td class="num">25,587,572</td></tr>
+        <tr><td>Synapses (confidence ≥ 0.5)</td><td class="num">124,193,283</td></tr>
+        <tr><td>Synapses from excitatory (acetylcholine) neurons</td><td class="num">59%</td></tr>
+        <tr><td>Synapses from inhibitory (GABA, glutamate, histamine) neurons</td><td class="num">38%</td></tr>
+        <tr><td>Median / maximum synapses onto one neuron</td><td class="num">345 / 119,936</td></tr>
+        <tr><td>Median / maximum synapses in one connection</td><td class="num">2 / 2,591</td></tr>
+      </table></div>
+      <p>Each neuron is excitatory or inhibitory according to its predicted neurotransmitter. About 4,000 neurons release dopamine, serotonin or octopamine, or have no clear prediction; in this model they have no fast effect. The distributions are very heavy-tailed: a handful of neurons receive tens of thousands of synapses, and a few connections contain thousands.</p>
+    </div>
+
+    <h2 id="model" class="col"><span class="n">3</span>The model</h2>
+    <div class="col">
+      <p>We use the stochastic Wilson–Cowan model of Benayoun, Cowan, van Drongelen &amp; Wallace (2010). Each neuron is a single unit that is either <b>active</b> (1) or <b>quiescent</b> (0). Two rules govern it:</p>
+      <ul>
+        <li>An active neuron becomes quiescent at a constant rate \(\alpha\). We set \(\alpha = 1\), which makes one time unit the average duration of an active bout.</li>
+        <li>A quiescent neuron becomes active at a rate that depends on its input \(s_i\). Excitatory partners that are currently active push the input up; active inhibitory partners push it down.</li>
+      </ul>
+      <div class="eq">\[ 1 \xrightarrow{\;\alpha\;} 0, \qquad 0 \xrightarrow{\;f(s_i)\;} 1, \qquad f(s) = \beta \tanh(s)\ \text{ for } s>0,\quad f(s)=0 \text{ otherwise} \]
+        <div class="fallback">1 → 0 at rate α;  0 → 1 at rate f(sᵢ) = β·tanh(sᵢ) if sᵢ > 0, else 0</div></div>
+      <div class="eq">\[ s_i = g \sum_j \tilde W_{ij}\, a_j + h, \qquad \tilde W_{ij} = c_i\, w_{ij}\, \sigma_j \]
+        <div class="fallback">sᵢ = g · Σⱼ W̃ᵢⱼ aⱼ + h,   W̃ᵢⱼ = cᵢ · wᵢⱼ · σⱼ</div></div>
+      <p>\(w_{ij}\) is the number of synapses from neuron \(j\) onto neuron \(i\). The sign \(\sigma_j\) is \(+1\) for an excitatory neuron, \(-r\) for an inhibitory one, and \(0\) for a modulatory one; \(r\) sets how strong inhibition is relative to excitation. \(g\) is the global coupling, the knob we turn. \(h\) is external drive, set to zero so far, which means that once every neuron is quiet the network stays quiet forever.</p>
+      <p>The factor \(c_i\) sets how inputs are scaled, and it matters a lot:</p>
+      <ul>
+        <li><b>Raw weights:</b> \(c_i = 1/742.7\), one constant for all neurons (742.7 is the average number of input synapses). Neurons with many strong inputs really do get more drive. This keeps all of the connectome's heterogeneity.</li>
+        <li><b>Normalized inputs:</b> \(c_i\) is one over neuron \(i\)'s own total input. Every neuron's maximum possible drive is the same, which strips out most of the heterogeneity.</li>
+      </ul>
+      <p>Averaged over the randomness, the probability \(\rho_i\) that neuron \(i\) is active follows the classic Wilson–Cowan rate equation:</p>
+      <div class="eq">\[ \frac{d\rho_i}{dt} = -\alpha\,\rho_i + (1-\rho_i)\,\beta \tanh\!\Big(g \sum_j \tilde W_{ij}\,\rho_j + h\Big)_{+} \]
+        <div class="fallback">dρᵢ/dt = −α ρᵢ + (1 − ρᵢ) · β · tanh(g Σⱼ W̃ᵢⱼ ρⱼ + h)₊</div></div>
+      <p>Linearizing around the silent state gives the key link to the spectrum. Silence becomes unstable when</p>
+      <div class="eq">\[ g\,\beta\,\Lambda_{\max}(\tilde W) > \alpha \quad\Longleftrightarrow\quad g > g^{*} = \frac{\alpha}{\beta\,\Lambda_{\max}} \]
+        <div class="fallback">g · β · Λmax(W̃) > α   ⇔   g > g* = α / (β Λmax)</div></div>
+      <p>where \(\Lambda_{\max}\) is the leading eigenvalue of the connectivity. If the eigenvector belonging to that eigenvalue is spread over the whole network, the whole network switches on together. If it is concentrated on a small module, only that module switches on, and the rest follows later. That is why the shape of the eigenvectors, and not only the eigenvalues, decides whether a Griffiths phase can exist.</p>
+      <p class="small">Simulation details: all 167,216 neurons updated synchronously in steps of \(\Delta t = 0.2\), on an RTX A6000 (about 2 ms per step for 16 parallel runs). The baseline uses \(\alpha = \beta = 1\), \(r = 1\), \(h = 0\). Each "null" result reruns the identical model on a randomly rewired connectome in which every neuron keeps exactly its number of input and output connections and all synapse counts are kept, but who connects to whom is shuffled.</p>
+    </div>
+
+    <h2 id="spectrum" class="col"><span class="n">4</span>The spectrum</h2>
+    <div class="col">
+      <p>An eigenvector of the connectivity matrix is a pattern of activity that the network maps onto a scaled copy of itself; its eigenvalue is the scale factor. Patterns with large eigenvalues are the ones the network amplifies most, so they are the first to grow when silence becomes unstable. We measure how concentrated each eigenvector is with the <b>inverse participation ratio</b> (IPR). An eigenvector spread evenly over all \(N\) neurons has IPR \(1/N \approx 6\times10^{-6}\); one concentrated on \(k\) neurons has IPR about \(1/k\).</p>
+    </div>
+    <figure>
+      <div class="plate"><img src="figs/fig5_spectrum.png" alt="Left: IPR versus eigenvalue for the top 100 eigenvectors of the real and rewired connectome. Middle and right: the leading eigenvector drawn on soma positions in top and side view, concentrated in the antennal lobe region."></div>
+      <figcaption><b>Figure 1. Localization of the leading modes.</b> Left: each dot is one of the top 100 eigenvectors of the (symmetrized) excitatory synapse-count matrix, placed by eigenvalue and IPR, for the real connectome (blue) and the rewired null (orange). The dotted line is a perfectly spread-out vector. Middle and right: the leading eigenvector of the real connectome drawn on the neurons' soma positions (grey: all neurons; coloured: the 3,000 neurons carrying most of it).</figcaption>
+    </figure>
+    <div class="read">
+      <div><h4>How to read it</h4><ul><li>Further right means a stronger, more amplified mode.</li><li>Higher means more concentrated on few neurons.</li><li>On the maps, colour shows where the mode lives.</li></ul></div>
+      <div><h4>What it shows</h4><ul><li>The real connectome's top modes reach eigenvalue 4,647 and 4,385 (very likely the left and right antennal lobes), far beyond the null's 1,280.</li><li>The leading mode puts 84% of its weight on just 100 neurons and 99% on 1,000, all antennal-lobe local and projection neurons.</li></ul></div>
+    </div>
+    <div class="col">
+      <p>Three comparisons pin down where the localization comes from.</p>
+      <ul>
+        <li><b>Synapse counts make it.</b> Counting every connection as 1 gives delocalized modes (no eigenvector with IPR above 0.01). The concentration comes from a few connections carrying very many synapses.</li>
+        <li><b>The wiring makes it, not the hubs.</b> In the rewired null, which keeps every neuron's connection counts and every synapse count, the top eigenvalue falls from 4,647 to 1,280 and the leading mode spreads out. The null does have localized modes, but each sits on a single heavily connected neuron (a "star"). The real connectome's localization is a whole interconnected module of a few hundred neurons.</li>
+        <li><b>With inputs normalized per neuron,</b> the top eigenvalues form a dense ladder just below 1 (0.91, 0.87, 0.85, 0.83, …), each sitting on about two optic-lobe neurons. A dense tail of strongly localized states would be the textbook spectral picture of a Griffiths phase (a "Lifshitz tail"), but these are artifacts. Checked: the modes sit on R7 and R8 photoreceptors, sensory neurons with only 1–5 input connections, where a single partner supplies 85–100% of the input. Normalizing per neuron turns a few stray synapses into full-strength loops.</li>
+      </ul>
+    </div>
+
+    <h2 id="decay" class="col"><span class="n">5</span>Decay experiments</h2>
+    <div class="col">
+      <p>The cleanest test for a Griffiths phase: start with every neuron active, switch off all outside input, and watch how the fraction of active neurons \(\rho(t)\) falls. Repeat for many couplings \(g\), with 32 independent runs each, up to 8,000 time units.</p>
+      <p>A sharp critical point predicts fast, exponential death below it, a power law \(\rho \sim t^{-\delta}\) at exactly one coupling, and sustained activity above it. A Griffiths phase predicts power-law decay over a whole <i>range</i> of couplings, with an exponent that changes smoothly across that range.</p>
+    </div>
+    <figure>
+      <div class="plate"><img src="figs/fig1_decay_curves.png" alt="Log-log plots of the active fraction against time, one curve per coupling, for the real connectome and the rewired null."></div>
+      <figcaption><b>Figure 2. Raw decay curves</b> (raw synapse weights). One curve per coupling, coloured from weak (purple) to strong (yellow). Curves that plunge off the bottom died out; flat curves are sustained activity.</figcaption>
+    </figure>
+    <figure>
+      <div class="plate"><img src="figs/fig2_slope_map.png" alt="Heat maps of the local decay exponent over coupling and time for the real connectome and the rewired null."></div>
+      <figcaption><b>Figure 3. Local decay exponent</b>, the slope of \(\log\rho\) against \(\log t\) at each moment. This is the most informative single picture here.</figcaption>
+    </figure>
+    <div class="read">
+      <div><h4>How to read it</h4><ul><li>Each row is one coupling \(g\); time runs left to right on a log scale.</li><li>Pale yellow (exponent near 0): activity is holding steady.</li><li>Orange to purple (−0.5 to −3): activity is declining, slowly to fast.</li><li>White: every run has died.</li><li>The jagged edge of the white region is when the last run died.</li></ul></div>
+      <div><h4>What it shows</h4><ul><li>At weak coupling everything dies within about 20–40 time units.</li><li>Approaching onset, the white edge moves far to the right: runs survive for hundreds to thousands of time units before dying.</li><li>Above onset (real ≈ 0.345, null ≈ 1.11) the rows turn pale: sustained activity.</li><li>The lingering band is wider for the real connectome.</li></ul></div>
+    </div>
+    <div class="col">
+      <p>Fitting a power law to each decay curve below onset gives an exponent that changes smoothly with coupling, and a power law fits better than an exponential at every coupling:</p>
+      <div class="tablewrap"><table>
+        <tr><th></th><th class="num">Decay exponent</th><th class="num">Last run dies at</th></tr>
+        <tr><td>Real, \(g = 0.15\)</td><td class="num">−5.5</td><td class="num">32</td></tr>
+        <tr><td>Real, \(g = 0.255\)</td><td class="num">−1.4</td><td class="num">248</td></tr>
+        <tr><td>Real, \(g = 0.315\)</td><td class="num">−0.51</td><td class="num">1,925</td></tr>
+        <tr><td>Real, \(g = 0.33\)</td><td class="num">−0.44</td><td class="num">5,125</td></tr>
+        <tr><td>Null, \(g = 0.60\)</td><td class="num">−4.7</td><td class="num">35</td></tr>
+        <tr><td>Null, \(g = 0.973\)</td><td class="num">−1.4</td><td class="num">271</td></tr>
+        <tr><td>Null, \(g = 1.08\)</td><td class="num">−0.60</td><td class="num">4,289</td></tr>
+      </table></div>
+      <div class="note"><b>Later correction (section 10).</b> The 30,000-unit runs show that, once the transient after the fully active start is excluded, decay is exponential at every coupling, and lifetimes are memoryless. The varying exponent in this table came from a fit window that included the transient.</div>
+      <div class="note"><b>Why this is not yet proof.</b> The smoothly varying exponent appears in the rewired null too, so on its own it does not show a Griffiths phase. In a network of finite size, transient decays near any threshold can look like power laws over a limited range. What differs is the width of the slow window: runs live longer than 200 time units over a 1.35-fold range of coupling in the real connectome (0.255 to 0.345) but only a 1.14-fold range in the null (0.97 to 1.11).</div>
+    </div>
+
+    <h2 id="where" class="col"><span class="n">6</span>Where the activity lives</h2>
+    <div class="col">
+      <p>For each run we also recorded how often each neuron was active over the second half of the run. From that we measure how many neurons effectively carry the activity (the <b>participation ratio</b>) and what share of it falls inside the antennal-lobe module, defined as the 1,000 neurons that carry most of the leading eigenvector.</p>
+    </div>
+    <figure>
+      <div class="plate"><img src="figs/fig7_localization.png" alt="Left: participation ratio of activity against coupling, about 1,000 to 2,800 neurons for the real connectome versus about 75,000 for the null. Right: share of activity in the antennal-lobe module, 0.52 falling to 0.33 for the real connectome, about 0.01 for the null."></div>
+      <figcaption><b>Figure 4. Localization of the active state.</b> Left: number of neurons that effectively carry the surviving activity (log scale; the dotted line is the whole CNS). Right: share of all activity inside the antennal-lobe module. The real connectome is followed from its onset up to \(g = 4\) (the points above 0.6 come from a coarser sweep with 16 runs each).</figcaption>
+    </figure>
+    <div class="read">
+      <div><h4>What it shows</h4><ul><li>Real connectome: just above onset the activity is carried by about 950 neurons, 52% of it inside the antennal-lobe module. That grows smoothly, to about 2,800 neurons at \(g = 0.6\), 7,700 at 1.0 and 24,000 at 4.0, while the module's share falls to 5%. The curve is flattening out by \(g = 4\).</li><li>Null: the moment it switches on, the activity is spread over about 75,000 neurons, with 1% in the same neurons.</li><li>The real curve never jumps. There is no coupling at which the activity suddenly spreads over the whole CNS.</li></ul></div>
+      <div><h4>Why it matters</h4><ul><li>This is the dynamical twin of the spectral result. Activity switches on where the leading eigenvector lives and stays there.</li><li>A transition through a localized rare region that only slowly recruits the rest is the mechanism a Griffiths phase needs. The null shows an ordinary all-at-once transition.</li></ul></div>
+    </div>
+    <figure>
+      <div class="plate"><img src="figs/fig6_activity_maps.png" alt="Four top-view maps of the fly CNS showing which neurons are active at couplings 0.33, 0.42, 0.51 and 0.60; activity starts in the central brain and spreads to the optic lobes and nerve cord."></div>
+      <figcaption><b>Figure 5. Activity on the anatomy.</b> Every neuron drawn at its soma position, seen from above (the optic lobes are the two large lobes at the sides; the ventral nerve cord is at the bottom). Grey neurons were never active; colour shows how often a neuron was active, on a log scale. The neuron count is how many were active more than 0.01% of the time.</figcaption>
+    </figure>
+    <div class="col">
+      <p>At \(g = 0.33\) a little over 6,000 neurons are ever active, concentrated in the central brain. By \(g = 0.42\) the activity has spread through the central brain and nerve cord, and only by \(g \approx 0.6\) does it fill the optic lobes. The brightest spots stay in the same central region throughout. Most of the 66,000 neurons touched at \(g = 0.6\) are only rarely active; the participation ratio says the bulk of the activity is still carried by under 3,000 of them.</p>
+    </div>
+    <figure>
+      <div class="plate dark"><video src="figs/activity_movie.mp4" poster="figs/activity_movie_poster.png" controls muted loop playsinline preload="metadata" aria-label="Six panels of the fly CNS seen from above, animated over time from a fully active start. Yellow dots are active neurons."></video></div>
+      <figcaption><b>Movie 1. Activity collapsing from a fully active start.</b> One run per panel, every neuron at its soma position, yellow when active. Time runs on a log scale, from \(t = 0\) to 3,000 in 111 frames (the clock is in the title). Top row and bottom left: the real connectome at \(g = 0.25\) (below onset), 0.36 (just above), 0.6 and 2.0. Bottom middle and right: the rewired null just above its own onset (1.15) and at 2.0.</figcaption>
+    </figure>
+    <div class="read">
+      <div><h4>What to watch</h4><ul><li>The first few time units: every panel drops from 167,000 active neurons to about 2,000–8,000 by \(t = 5\). For most neurons the coupling is far too weak to keep them on.</li><li>Real \(g = 0.25\): about 90 neurons in the central brain are still flickering at \(t = 10\); the network goes silent at \(t \approx 64\).</li><li>Real 0.36 and 0.6: 100–300 neurons in the central brain hold on to the end; the rest stays dark.</li></ul></div>
+      <div><h4>The contrast</h4><ul><li>Real \(g = 2.0\): about 1,600 neurons active, still concentrated in the central brain and nerve cord, with the optic lobes thinly lit.</li><li>Null at 1.15: barely above its onset, yet its ~280 active neurons are scattered evenly over the whole CNS, with no home region.</li><li>Null at 2.0: about 2,900 active, filling the optic lobes as densely as the centre.</li></ul></div>
+    </div>
+
+    <h2 id="order" class="col"><span class="n">7</span>Order parameter</h2>
+    <figure>
+      <div class="plate"><img src="figs/fig3_order_parameter.png" alt="Three panels: final active fraction against coupling for real and null with raw weights; time until extinction against coupling; final active fraction for normalized inputs at three inhibition strengths."></div>
+      <figcaption><b>Figure 6. Summary against coupling.</b> Left: fraction of neurons still active at the end of the run (raw weights). Middle: time until every run died, for couplings below onset. Right: the same order parameter when every neuron's input is normalized, at three inhibition strengths \(r\).</figcaption>
+    </figure>
+    <div class="col">
+      <ul>
+        <li><b>Raw weights.</b> The real connectome switches on at \(g \approx 0.34\), the null at \(g \approx 1.11\), a ratio of about 3.2. The connectome's localized module sets when activity can first sustain itself. (An earlier version of this page said the ratio matched the eigenvalue ratio of 3.6. That compared symmetrized matrices; the exact operator the simulation uses gives 5.1, and section 9 explains the gap.)</li>
+        <li><b>Above onset,</b> the real connectome's activity grows slowly and smoothly: 0.005% of neurons at \(g = 0.345\), 0.16% at 0.6, 0.4% at 1.0, 1.0% at 1.9 and 2.6% at 4.0. That is a smeared transition, not a jump, all the way to the top of the range we tried.</li>
+        <li><b>With normalized inputs,</b> the transition sits near \(g \approx 1.85\)–2.0, the null behaves almost the same, and decay below threshold is fast. Removing the heterogeneity removes the effect, consistent with the rare-region picture.</li>
+        <li><b>Inhibition</b> (\(r = 0.5, 1, 2\)) shifts the threshold only slightly, from about 1.75 to about 2.0 in the normalized model.</li>
+      </ul>
+    </div>
+
+    <h2 id="spreading" class="col"><span class="n">8</span>Spreading from one neuron</h2>
+    <div class="col">
+      <p>The complementary test starts from a single active neuron, chosen at random, and asks how often the activity survives and how far it grows. In a Griffiths phase the survival probability decays as a power law with an exponent that varies with coupling.</p>
+    </div>
+    <figure>
+      <div class="plate"><img src="figs/fig4_spreading.png" alt="Survival probability and mean number of active neurons against time, after seeding one neuron, for the null network at five couplings."></div>
+      <figcaption><b>Figure 7. Spreading from one neuron</b>, real connectome (solid) and rewired null (dashed), 512 runs per coupling. Left: fraction of runs still alive; the floor at 0.002 is a single surviving run. Right: number of active neurons, averaged over all 512 runs including the dead ones.</figcaption>
+    </figure>
+    <div class="read">
+      <div><h4>What it shows</h4><ul><li>Real, \(g = 0.30\)–0.38: every seed dies within about 100 time units, even at 0.36–0.38, where a fully active start survives indefinitely.</li><li>Real, 0.45 and 0.60: 1 and 3 of 512 seeds (0.2% and 0.6%) take hold. Each survivor sustains about 150–300 active neurons.</li><li>Null, just above its onset: 4–5% of seeds take hold, and each grows to about 350–550 active neurons.</li></ul></div>
+      <div><h4>Why it matters</h4><ul><li>In the real connectome, whether activity survives depends on <i>where</i> it starts. A random neuron is almost never in the module, and activity started elsewhere dies before it gets there.</li><li>That is the rare-region signature from the other direction: a fully active start always visits the module, a random seed almost never does.</li><li>The cost: with so few survivors, these runs cannot give a reliable survival exponent. That needs seeds placed inside the module, or many more runs.</li></ul></div>
+    </div>
+
+    <h2 id="theory" class="col"><span class="n">9</span>Putting it together</h2>
+    <div class="col">
+      <p>The pieces fit a consistent picture, which is still an interpretation:</p>
+      <ol>
+        <li><b>The connectome has a localized amplifier.</b> The antennal-lobe module's strong, dense wiring gives it the largest eigenvalue in the network, and its eigenvector is confined to a few hundred neurons.</li>
+        <li><b>That module goes unstable first.</b> The linear estimate puts the module's threshold at \(g^* \approx 0.18\)–0.20 (table below). That is where lifetimes start to stretch out (from about 30 time units at \(g = 0.15\) to over 70 by 0.195).</li>
+        <li><b>A small region can't hold activity forever.</b> Between about 0.2 and 0.34 the module is unstable on paper but small enough that random fluctuations eventually silence it. Activity lingers in long bursts and dies, which produces the slow window. Only from about 0.34 does the module sustain itself indefinitely.</li>
+        <li><b>The rest is recruited gradually.</b> Above that, activity leaks outward from the module as coupling grows, with no sudden jump to a global state up to \(g = 4\). In the rewired network there is no such module, and the whole network switches on at once.</li>
+      </ol>
+      <p>To check the theory against the simulation exactly, we computed the leading eigenvalue of the very matrix the simulation uses, for the real connectome and for the same rewired copy the null runs used. The linear prediction is \(g^* = 1/\Lambda_{\max}\) (with \(\alpha = \beta = 1\)).</p>
+      <div class="tablewrap"><table>
+        <tr><th>Raw weights</th><th class="num">\(\Lambda_{\max}\)</th><th class="num">Predicted \(g^*\)</th><th class="num">Observed onset</th><th class="num">Observed / predicted</th><th class="num">Neurons in leading mode (1/IPR)</th></tr>
+        <tr><td>Real, signed (as simulated)</td><td class="num">5.06</td><td class="num">0.197</td><td class="num">0.34</td><td class="num">1.7</td><td class="num">≈ 50</td></tr>
+        <tr><td>Real, excitatory inputs only</td><td class="num">5.57</td><td class="num">0.179</td><td class="num">0.34</td><td class="num">1.9</td><td class="num">≈ 70</td></tr>
+        <tr><td>Null, signed (as simulated)</td><td class="num">0.37</td><td class="num">2.68</td><td class="num">1.11</td><td class="num">0.41</td><td class="num">≈ 970</td></tr>
+        <tr><td>Null, excitatory inputs only</td><td class="num">1.10</td><td class="num">0.91</td><td class="num">1.11</td><td class="num">1.2</td><td class="num">≈ 2,000</td></tr>
+      </table></div>
+      <p>Two things come out of this.</p>
+      <ul>
+        <li><b>The excitatory-only matrix is the right one near silence.</b> For the null, the signed matrix predicts onset at 2.68, yet activity sustains itself already at 1.11, which no linear theory allows. The reason is the rectified rate: an active inhibitory neuron can only cancel excitation that the same target is receiving. When activity is sparse that rarely happens, so inhibition does almost nothing and growth is governed by the excitatory connections. In the real connectome the two estimates nearly agree (5.06 against 5.57), so inhibition barely affects the module.</li>
+        <li><b>The gap between prediction and onset measures the rare-region effect.</b> In the null the leading excitatory mode is spread over about 2,000 neurons, and activity sustains itself just 1.2 times above the linear threshold. In the real connectome it sits on about 70 neurons, and sustaining activity takes 1.9 times the threshold, because a region that small is easily silenced by chance. That factor is also why the onset ratio (3.2) is smaller than the eigenvalue ratio (5.1): 5.1 × 1.2 / 1.9 ≈ 3.2.</li>
+      </ul>
+      <p>With normalized inputs the same pattern holds for the real connectome: \(\Lambda_{\max} = 0.91\) predicts 1.09, but the leading modes sit on about two neurons each, far too few to hold activity, and the observed onset is 1.85–2.0. Those two-neuron modes are photoreceptors with almost no input (section 4), so this is an artifact of normalizing, not a real rare region. In the rewired copy, the leading normalized mode is spread out and the signed estimate is 4.5, again far above where activity actually sustains itself, for the same rectification reason.</p>
+      <p>A full derivation of these boundaries from the model equations, with predictions for the whole (coupling, inhibition) plane written before the sweep finished, is on <a href="theory.html">the theory page</a>.</p>
+      <p>In Griffiths-phase language: the window between the most localized mode's instability and the global, delocalized transition is where rare regions dominate. Its width is set by how far the localized eigenvalues stick out above the rest of the spectrum and how few neurons carry them. Here the lower edge is clear (about 0.18–0.20 on paper, 0.26 where lifetimes become long), but no upper edge has appeared: the real connectome never makes a sudden delocalized transition up to \(g = 4\). The transition looks <i>smeared</i>. One region after another switches on as coupling grows, rather than one global switch.</p>
+      <div class="note"><b>Model caveats.</b> Every neuron is a two-state unit, with no refractoriness, delays or adaptation. Glutamate is treated as inhibitory everywhere, which is not true in every fly circuit. Neuromodulators, arguably central to arousal and wakefulness, have no effect here. There is no sensory input. The antennal-lobe module dominating the onset may partly reflect those choices.</div>
+    </div>
+
+    <h2 id="complete" class="col"><span class="n">10</span>The complete phase diagram: simulation vs theory</h2>
+    <div class="col">
+      <p>Overnight the simulation was rerun on a fine grid. The real connectome was swept at 23 inhibition levels from r = 0 to 6, each with 40 couplings near the onset and 32 runs per point, plus the delocalized region up to g = 30. Both null networks were swept at 6 levels, and the driven plane on a finer grid. To compare like with like, simulation and theory now use <b>the same criteria</b>, with simulated lifetimes estimated from each run's extinction time:</p>
+      <ul>
+        <li>the slow window starts where the module's mean lifetime reaches 200 time units;</li>
+        <li>activity counts as sustained where the lifetime reaches T = 3000;</li>
+        <li>activity is delocalized where it is spread over a quarter of the network (participation ratio N/4).</li>
+      </ul>
+      <p>Each analysis was then checked by an independent agent that recomputed its numbers from the raw files, and a final reviewer recomputed the boundaries again.</p>
+    </div>
+    <figure>
+      <div class="plate"><img src="figs/phase_real.png" alt="Phase diagram of the real connectome over coupling and inhibition: theory regions and curves with simulated boundaries as points with error bars."></div>
+      <figcaption><b>Figure 11. MaleCNS: theory (coloured regions, solid curves) against simulation (points with error bars, dashed curves).</b> Blue: start of the slow window. Orange: sustained onset. Green: delocalization. Error bars combine the grid spacing with a bootstrap over runs. Open triangles mark inhibition levels where the simulation never delocalized within the simulated range.</figcaption>
+    </figure>
+    <div class="read">
+      <div><h4>Where the theory works</h4><ul><li><b>The order of the phases is right everywhere:</b> quiescent, then slow window, then sustained, all starting well above g_lin.</li><li><b>Without inhibition (r = 0) the numbers nearly agree.</b> Slow window 0.245 (theory) vs 0.234, onset 0.291 vs 0.266, delocalization 1.45 vs 1.47. The theory is 5–9% high.</li><li><b>Mean field gets delocalization right at r = 0</b>, to within its 20% coupling grid.</li></ul></div>
+      <div><h4>Where it fails</h4><ul><li><b>Inhibition moves every boundary far less than the theory says.</b> From r = 0 to 6 the simulated onset rises 2.2-fold (0.266 → 0.579); the theory's rises 8.1-fold (0.291 → 2.36).</li><li><b>Theory/simulation onset ratio:</b> 1.38 at r = 0.25, 1.78 at r = 1, 4.1 at r = 6.</li><li><b>Mean field overstates inhibition the same way.</b> It never delocalizes for r ≥ 0.75 up to g = 30, whereas the simulation delocalizes at g = 8–29 for r = 0.75–1.5.</li></ul></div>
+    </div>
+    <div class="col">
+      <div class="tablewrap" style="max-width:100%"><table>
+        <tr><th>Network</th><th class="num">r</th><th class="num">S theory</th><th class="num">S simulation</th><th class="num">Onset theory</th><th class="num">Onset simulation</th><th class="num">D theory</th><th class="num">D simulation</th></tr>
+        <tr><td>MaleCNS</td><td class="num">0</td><td class="num">0.245</td><td class="num">0.234 <span class="small">[0.228–0.244]</span></td><td class="num">0.291</td><td class="num">0.266 <span class="small">[0.26–0.278]</span></td><td class="num">1.45</td><td class="num">1.47 <span class="small">[1.44–1.54]</span></td></tr>
+        <tr><td>MaleCNS</td><td class="num">0.25</td><td class="num">0.308</td><td class="num">0.251 <span class="small">[0.244–0.256]</span></td><td class="num">0.395</td><td class="num">0.287 <span class="small">[0.278–0.297]</span></td><td class="num">3.01</td><td class="num">2.5 <span class="small">[2.44–2.6]</span></td></tr>
+        <tr><td>MaleCNS</td><td class="num">0.5</td><td class="num">0.353</td><td class="num">0.265 <span class="small">[0.26–0.278]</span></td><td class="num">0.476</td><td class="num">0.306 <span class="small">[0.3–0.317]</span></td><td class="num">7.67</td><td class="num">4.44 <span class="small">[4.3–4.76]</span></td></tr>
+        <tr><td>MaleCNS</td><td class="num">1</td><td class="num">0.421</td><td class="num">0.283 <span class="small">[0.28–0.289]</span></td><td class="num">0.613</td><td class="num">0.344 <span class="small">[0.34–0.35]</span></td><td class="num">none ≤ 30</td><td class="num">14.5 <span class="small">[14.4–15.7]</span></td></tr>
+        <tr><td>MaleCNS</td><td class="num">2</td><td class="num">0.517</td><td class="num">0.32 <span class="small">[0.313–0.339]</span></td><td class="num">0.842</td><td class="num">0.402 <span class="small">[0.386–0.415]</span></td><td class="num">none ≤ 30</td><td class="num">not reached</td></tr>
+        <tr><td>MaleCNS</td><td class="num">4</td><td class="num">0.658</td><td class="num">0.373 <span class="small">[0.362–0.386]</span></td><td class="num">1.33</td><td class="num">0.508 <span class="small">[0.495–0.525]</span></td><td class="num">none ≤ 30</td><td class="num">not reached</td></tr>
+        <tr><td>MaleCNS</td><td class="num">6</td><td class="num">0.772</td><td class="num">0.436 <span class="small">[0.422–0.44]</span></td><td class="num">2.36</td><td class="num">0.579 <span class="small">[0.561–0.615]</span></td><td class="num">none ≤ 30</td><td class="num">not reached</td></tr>
+        <tr><td>Configuration null</td><td class="num">0</td><td class="num">0.837</td><td class="num">0.841 <span class="small">[0.838–0.905]</span></td><td class="num">0.866</td><td class="num">0.867 <span class="small">[0.838–0.905]</span></td><td class="num">0.91</td><td class="num">0.867 <span class="small">[0.838–0.905]</span></td></tr>
+        <tr><td>Configuration null</td><td class="num">1</td><td class="num">1.12</td><td class="num">1.01 <span class="small">[1–1.03]</span></td><td class="num">1.27</td><td class="num">1.11 <span class="small">[1.1–1.13]</span></td><td class="num">4.2</td><td class="num">1.11 <span class="small">[1.1–1.13]</span></td></tr>
+        <tr><td>Configuration null</td><td class="num">4</td><td class="num">1.26</td><td class="num">1.09 <span class="small">[1.06–1.1]</span></td><td class="num">1.48</td><td class="num">1.2 <span class="small">[1.14–1.24]</span></td><td class="num">none ≤ 30</td><td class="num">1.2 <span class="small">[1.14–1.24]</span></td></tr>
+        <tr><td>Weight-shuffled null</td><td class="num">0</td><td class="num">0.719</td><td class="num">0.709 <span class="small">[0.664–0.717]</span></td><td class="num">0.766</td><td class="num">0.734 <span class="small">[0.717–0.757]</span></td><td class="num">1.18</td><td class="num">1.21 <span class="small">[1.14–1.24]</span></td></tr>
+        <tr><td>Weight-shuffled null</td><td class="num">1</td><td class="num">0.873</td><td class="num">0.762 <span class="small">[0.757–0.775]</span></td><td class="num">0.984</td><td class="num">0.799 <span class="small">[0.775–0.838]</span></td><td class="num">15.9</td><td class="num">4.68 <span class="small">[4.63–4.76]</span></td></tr>
+        <tr><td>Weight-shuffled null</td><td class="num">4</td><td class="num">0.961</td><td class="num">0.871 <span class="small">[0.838–0.905]</span></td><td class="num">1.12</td><td class="num">0.957 <span class="small">[0.91–0.979]</span></td><td class="num">none ≤ 30</td><td class="num">21.8 <span class="small">[20.8–25]</span></td></tr>
+      </table></div>
+      <p class="small">Couplings g at each boundary; brackets are the simulation's uncertainty. "none ≤ 30": mean field never reaches N/4 up to g = 30. For the configuration null, D coincides with the onset at every r: it has no localized phase. All values are from <code>results/analysis2/phase_complete.json</code>.</p>
+    </div>
+    <figure>
+      <div class="plate"><img src="figs/phase_nulls.png" alt="Phase diagrams of the two null networks with theory and simulation overlaid."></div>
+      <figcaption><b>Figure 12. The two null networks.</b> Left: wiring shuffled (degrees kept). Right: synapse counts shuffled (wiring kept). Same style as Figure 11.</figcaption>
+    </figure>
+    <div class="col">
+      <ul>
+        <li><b>Configuration null.</b> It goes straight from the slow window to whole-brain activity at every inhibition level, as predicted (P4). Its onset is matched closely at r = 0, and at r ≥ 1 it is overstated as in the real network (1.27 vs 1.11 at r = 1).</li>
+        <li><b>Weight-shuffled null.</b> Contrary to P4, it <i>does</i> have a localized phase. At r = 0 it switches on at 0.73 and delocalizes only at 1.21. So scrambling which synapses are strong does not remove every local hot spot; the real network's distinctive feature is that its hot spot is far stronger (onset 0.27).</li>
+      </ul>
+    </div>
+    <figure>
+      <div class="plate"><img src="figs/tau_sim_vs_theory.png" alt="Simulated module lifetime against predicted lifetime for every simulated point, for the three networks; all points lie above the diagonal."></div>
+      <figcaption><b>Figure 13. Lifetimes: simulation against theory</b>, for every (g, r) point in the slow window. The solid line is perfect agreement; dashed and dotted lines are 10× and 100×.</figcaption>
+    </figure>
+    <div class="col">
+      <p><b>The theory underestimates how long the module survives.</b> Every point lies above the diagonal. Without inhibition the miss is about 4× (geometric mean). For r ≥ 0.25 it is 17–54×, about 40× at r = 1. In the theory's own terms (section 5 of the <a href="theory.html">theory page</a>), the simulated lifetimes need a module about twice the size the theory computes: K ≈ 37 rather than 17 at r = 1, and K ≈ 76 rather than 58 at r = 0. The most likely culprit is the approximation for inhibition arriving together with excitation, which seems to overstate how much inhibition shrinks the module. That is a hypothesis, not a finding: at r = 0 even removing that term entirely leaves the theory a little short.</p>
+    </div>
+    <figure>
+      <div class="plate"><img src="figs/longruns_survival.png" alt="Survival curves of 32 runs over 30,000 time units at five couplings in the slow window, rescaled curves falling on a straight line on a log scale, and density decay curves."></div>
+      <figcaption><b>Figure 14. Is it a Griffiths phase? The 30,000-time-unit runs.</b> Left: fraction of runs still active. Middle: the same with time divided by each coupling's mean lifetime, on a log scale; a straight line means memoryless, exponentially distributed lifetimes. Right: the mean active fraction. Top row MaleCNS, bottom row the configuration null.</figcaption>
+    </figure>
+    <div class="col">
+      <div class="note"><b>The answer to the original question, for this model.</b> Inside the slow window, lifetimes are <i>memoryless</i>: at every coupling the rescaled survival curves fall on one straight line, and no coupling rejects an exponential (combined test p = 0.84). That is the signature of <b>one</b> metastable rare region, the antennal-lobe module, dying out by chance. A Griffiths phase in the strict sense needs a broad spread of rare regions of different sizes, which would give power-law decay. Once the transient from the fully active start is over, the mean activity decays exponentially at every coupling (10 of 10 real, 8 of 8 null). The "smoothly varying decay exponent" of section 5 came from a fit window that included that transient, and it appeared in the null too. So the fly connectome produces a <b>Griffiths-like window driven by a single dominant rare region</b>, with lifetimes that grow by orders of magnitude over a narrow coupling range. It does not produce an extended power-law Griffiths phase. Above onset, many smaller islands are recruited one by one (the smeared transition of section 7), so rare-region physics does shape the active side.</div>
+    </div>
+    <figure>
+      <div class="plate"><img src="figs/spreading.png" alt="Survival of single-seed spreading for random and module seeds, real and null networks, with theory points."></div>
+      <figcaption><b>Figure 15. Spreading from one neuron, random seeds against seeds placed in the module</b> (r = 1, 512 runs per coupling).</figcaption>
+    </figure>
+    <div class="col">
+      <ul>
+        <li><b>Establishment is predicted.</b> A seed placed on an excitatory module neuron takes hold with probability 0.61, 0.69 and 0.71 at g = 0.42, 0.50 and 0.60. The branching prediction 1 − 1/R gives 0.61, 0.67 and 0.73.</li>
+        <li><b>Survival afterwards is not.</b> The theory's lifetimes are too short (Figure 13), so it predicts almost no survivors where 27–66% survive.</li>
+        <li><b>Random seeds survive only by hitting the module.</b> All 4 random seeds that took hold in the real network were antennal-lobe neurons: two in the module and two olfactory receptor neurons that feed it. The rate matches the module's share of the network (0.6%).</li>
+        <li><b>The null has no such bottleneck.</b> 45 of its 46 surviving seeds started outside its leading mode, from an effective catchment of 13,000–20,000 neurons.</li>
+      </ul>
+    </div>
+    <figure>
+      <div class="plate"><img src="figs/phase_driven.png" alt="Driven plane: simulated density and fluctuations over coupling and external drive, with the theory's fluctuation-peak curves and a mean-field comparison."></div>
+      <figcaption><b>Figure 16. The driven ("awake") plane</b> at r = 1. (a) Simulated activity. (b) Fluctuations across runs, with the theory's predicted fluctuation peak: solid line using the theory's lifetime, dashed line using the measured lifetime. (c) The fluctuation curves. (d) Simulation against mean field.</figcaption>
+    </figure>
+    <div class="col">
+      <ul>
+        <li><b>The flickering-module picture holds.</b> With weak drive (h = 10⁻⁵) the fluctuations peak at g ≈ 0.30, where the module flickers between about 2 and about 100 active neurons and is on half the time. Theory P5 puts the peak at 0.305 if fed the measured lifetime; with its own (too short) lifetime it says 0.45.</li>
+        <li><b>The peak moves down only weakly with drive.</b> The half-on point moves from 0.316 (h = 10⁻⁵) to 0.274 (h = 10⁻⁴), less than predicted. For h ≥ 10⁻³ there is no resolved peak.</li>
+        <li><b>Mean field matches the density</b> to within 9% below threshold. Above g ≈ 0.5 it falls about 2.3× low, overstating inhibition again.</li>
+      </ul>
+      <p class="small">Full tables, methods and every correction made by the verifiers: <code>results/analysis2/phase_complete.md</code>, <code>spreading.md</code>, <code>longruns.md</code>, <code>driven.md</code>.</p>
+    </div>
+
+<!-- Antennal-lobe literature section for the MaleCNS explainer (explainer/index.html).
+     Intended placement: a new section before "Open questions" (renumber the later sections; add
+     <li><a href="#antennal-lobe">The antennal lobe and sleep</a></li> to nav.toc).
+     Uses only the page's existing classes and colour tokens (.col, .tablewrap, .note, .status/.finding/.chip,
+     .read, .small, .num). No external assets. Only citations rated verified or partly verified by the fact-checkers. -->
+<style>
+  #antennal-lobe-refs { max-width: 70ch; font-size: 14.5px; line-height: 1.5; padding-left: 1.4em; }
+  #antennal-lobe-refs li { margin: 0 0 6px; color: var(--ink-soft); }
+  #antennal-lobe-refs li b { color: var(--ink); font-weight: 600; }
+  .al-tag { font: 600 11px/1 var(--display); letter-spacing: .05em; text-transform: uppercase; color: var(--ink-soft);
+            border: 1px solid var(--rule); border-radius: 3px; padding: 2px 5px; margin-left: 4px; white-space: nowrap; }
+</style>
+
+<h2 id="antennal-lobe" class="col"><span class="n">11</span>The antennal lobe: why it dominates, and what the literature says</h2>
+<div class="col">
+  <p class="lede">In every simulation of our model (raw synapse counts, one global scale), the module that ignites first is the antennal lobe (AL), the fly's first olfactory relay. We asked why the connectome makes it special, and whether its special status matches anything known about sleep, anesthesia, consciousness or brain-state transitions in this region. Short answers: <b>why special</b>: a stereotyped clique of cholinergic local neurons, not sensory input. <b>Sleep</b>: yes, there is a real AL–sleep literature, but it is modulatory. Olfactory input and two GABAergic AL output populations change how much, and when, flies sleep, and AL synapses and glia respond to sleep loss. No study shows AL activity switching with sleep state, and a whole-brain survey after sleep deprivation found little change in the AL. <b>Consciousness and phase transitions</b>: we found no empirical result tying the AL to consciousness, anesthesia, seizures or a brain-state transition. We also found no recording of the fly AL across verified sleep or under general anesthesia, and no criticality measurement for it. The closest agreement is theoretical: another fly-connectome model also finds no Griffiths phase.</p>
+  <div class="status" role="list">
+    <div class="finding" role="listitem"><span class="chip ok">Established</span><p>In each lobe, 15 cholinergic local neurons (lLN1_bc) are wired all-to-all at about 200 synapses per connection. With the PN↔LN loops, this gives the AL an excitatory feedback strength 2.97× that of the next circuit. None of the 2,639 olfactory receptor neurons are in the module, and removing them leaves λ at 5.55 of 5.57.</p></div>
+    <div class="finding" role="listitem"><span class="chip mid">Literature</span><p>Olfactory input and two GABAergic AL outputs change how much, and when, flies sleep. AL synapses scale with sleep loss as much as, but no more than, other regions, and AL glia respond to sleep need. The AL keeps processing odors during sleep. No study shows the AL generating sleep or its activity switching with sleep state, and none links it to anesthesia or consciousness.</p></div>
+    <div class="finding" role="listitem"><span class="chip mid">Tension</span><p>Real spontaneous AL activity is driven by the receptor neurons: projection neurons of antennal glomeruli fall silent when the antennae are cut. Our model's AL sustains itself with no input. The model also lacks gap junctions, neuromodulation and any sleep-pressure variable.</p></div>
+    <div class="finding" role="listitem"><span class="chip todo">Open</span><p>We found no recording of the fly AL across verified sleep or under general anesthesia. The model makes specific predictions for both.</p></div>
+  </div>
+</div>
+
+<h3 class="col">Why the AL dominates in our model</h3>
+<div class="col">
+  <div class="tablewrap"><table>
+    <tr><th>Quantity (excitatory operator, r = 0)</th><th class="num">Value</th></tr>
+    <tr><td>Module size; ORNs in it</td><td class="num">526; 0 of 2,639</td></tr>
+    <tr><td>Share of leading mode on 30 lLN1_bc / all lLN2 / uniglomerular PNs</td><td class="num">51% / 29% / 9%</td></tr>
+    <tr><td>Leading eigenvalue; best mode outside the AL</td><td class="num">5.57; 1.88 (VNC leg)</td></tr>
+    <tr><td>lLN1_bc clique alone (420 of 420 same-side pairs, median 204 synapses)</td><td class="num">λ = 3.92</td></tr>
+    <tr><td>Share of λ from LN→LN / PN→LN / LN→PN / any ORN edge</td><td class="num">64.7 / 16.8 / 16.5 / 0.9%</td></tr>
+    <tr><td>Strongest 200 reciprocal excitatory pairs in the CNS that lie in the AL</td><td class="num">161</td></tr>
+    <tr><td>Each region alone: AL / VNC / other central / CX / LH / MB</td><td class="num">5.57 / 1.70 / 1.47 / 1.28 / 0.49 / 0.47</td></tr>
+  </table></div>
+  <ul>
+    <li><b>Survives:</b> removing all ORNs (5.55), keeping only neurons with a soma (5.50), and capping every weight at 50, 20 or 10 synapses (margins 2.2×, 1.8×, 1.4×).</li>
+    <li><b>Killed by:</b> binarizing the weights, after which the mushroom body's many weak Kenyon-cell contacts lead, making the AL local neurons non-excitatory, after which the AL leaves the top 8 modes, and per-neuron input normalization (used early in the project), under which two-neuron optic-lobe motifs lead.</li>
+    <li><b>So:</b> the cause is not sensory convergence. The cause is a stereotyped, heavily weighted, reciprocal <i>cholinergic</i> local-neuron network, and its cholinergic label is decisive. The release labels all 30 lLN1_bc acetylcholine (ground truth 30/30, confidence 0.75). Cholinergic excitatory LNs do exist (<a href="#alr-shang2007">Shang 2007</a>; <a href="#alr-huang2010">Huang 2010</a>), but they are a minority type. Even in the release's own predictions, only 137 of the 420 AL local neurons are cholinergic (115 GABA, 99 glutamate, 67 unclear), so the result depends on getting these particular labels right. The neurons that carry 80% of the leading mode are only preliminarily traced. Independently, FlyWire places the AL among the most reciprocal neuropils, with strong left–right AL coupling (<a href="#alr-lin2024">Lin 2024</a>).</li>
+  </ul>
+</div>
+
+<h3 class="col">What is known about the AL and sleep</h3>
+<div class="col">
+  <div class="tablewrap"><table>
+    <tr><th>Finding</th><th>Source</th><th>Strength</th></tr>
+    <tr><td>Silencing receptor neurons <i>reduced</i> sleep. An independent test found less night sleep and no daytime change (<a href="#alr-singh2020">Singh &amp; Donlea 2020</a>). Activating GABAergic inhibitory PNs at night strongly increased sleep, but the driver also labels vlPr neurons outside the AL (the authors' caveat). No single olfactory population regulates sleep in both directions. Local neurons were not tested.</td><td><a href="#alr-hsu2021">Hsu 2021</a> <span class="al-tag">AL-direct</span></td><td>moderate</td></tr>
+    <tr><td>A preprint reports that receptor-neuron silencing <i>increased</i> sleep, the opposite sign to both peer-reviewed tests above, with glomerulus-specific effects. Its detailed signs could not be checked.</td><td><a href="#alr-cook2025">Cook 2025</a> <span class="al-tag">preprint</span></td><td>weak</td></tr>
+    <tr><td>A posterior-AL cold glomerulus sends GABAergic projection neurons to DN1a clock neurons, which reshape morning sleep.</td><td><a href="#alr-alpert2020">Alpert 2020</a> <span class="al-tag">AL-direct</span></td><td>moderate</td></tr>
+    <tr><td>After 13 h of sleep deprivation, CaMPARI activity snapshots rose in the protocerebral bridge, ellipsoid body and mushroom body, with "little change" in the AL. The whole-brain survey was photoconverted ex vivo, in dissected brains with no antennal input.</td><td><a href="#alr-dai2024">Dai 2024</a> <span class="al-tag">AL-direct, negative</span></td><td>moderate</td></tr>
+    <tr><td>After 16 h of deprivation, AL synaptic BRP rose 69%, as it did elsewhere. Cholinergic presynapses scale roughly uniformly across 37 neuropils.</td><td><a href="#alr-gilestro2009">Gilestro 2009</a>; <a href="#alr-weiss2024">Weiss 2024</a></td><td>strong, not AL-specific</td></tr>
+    <tr><td>AL astrocyte calcium tracks sleep need (imaged in the AL and one other region). Sleep loss slows, and induced sleep speeds, glial clearance of injured olfactory axons from the AL.</td><td><a href="#alr-blum2021">Blum 2021</a>; <a href="#alr-singh2020">Singh &amp; Donlea 2020</a>; <a href="#alr-stanhope2020">Stanhope 2020</a></td><td>moderate</td></tr>
+    <tr><td>Sleeping flies tell odors apart and wake selectively. The identified gates sit in the receptor neurons and the mushroom body or fan-shaped body. No AL shut-off was reported.</td><td><a href="#alr-french2021">French 2021</a></td><td>strong (indirect for the AL)</td></tr>
+    <tr><td>In honeybees resting at night, AL glomeruli are <i>more</i> functionally coupled. Rest was immobility, not verified sleep. A model reproduces this with weaker local inhibition plus correlated noise, so the mechanism is inferred, not measured.</td><td><a href="#alr-moguilner2025">Moguilner 2025</a> <span class="al-tag">bee, n = 9</span></td><td>weak to moderate</td></tr>
+    <tr><td>In the mammalian olfactory bulb, few neurons are gated by sleep-like state. Olfactory cortex is gated.</td><td><a href="#alr-murakami2005">Murakami 2005</a> <span class="al-tag">olfactory-general</span></td><td>moderate</td></tr>
+  </table></div>
+  <p class="small">Coverage gaps: whole-brain sleep imaging did not include the AL (<a href="#alr-taintonheap2021">Tainton-Heap 2021</a>), and fly sleep-stage recordings were taken in the central brain or the R5 ring neurons. No study records the fly AL across verified sleep or tests AL local neurons in sleep regulation.</p>
+</div>
+
+<h3 class="col">Anesthesia, consciousness and seizures</h3>
+<div class="col">
+  <ul>
+    <li><b>We found no insect AL recording under general anesthesia.</b> Fly isoflurane studies probed through the eye, covering the optic lobe and central brain (<a href="#alr-leung2021">Leung 2021</a>; <a href="#alr-leung2025">Leung 2025</a>), or imaged from behind (<a href="#alr-troup2023">Troup 2023</a>).</li>
+    <li><b>Where it was measured:</b> isoflurane hits the central brain harder than the periphery (<a href="#alr-cohen2016">Cohen 2016</a>; <a href="#alr-cohen2018">Cohen 2018</a>). It fragments correlations without silencing the brain: about 18% of neurons are active awake versus 15% under isoflurane (<a href="#alr-troup2023">Troup 2023</a>). It impairs cholinergic release but spares GABA and glutamate synapses, measured at mushroom-body output neurons (<a href="#alr-hines2024">Hines 2024</a>). Wakefulness is marked by longer autocorrelation timescales, measured in the central brain (<a href="#alr-leung2025">Leung 2025</a>).</li>
+    <li><b>The AL in awake recordings:</b> it has the most spontaneous spiking and the most power above 15 Hz. GABAergic activation raises its 50–100 Hz power (<a href="#alr-paulk2013">Paulk 2013</a>). However, spontaneous projection-neuron input is fed forward from the receptor neurons (<a href="#alr-kazama2009">Kazama &amp; Wilson 2009</a>).</li>
+    <li><b>Consciousness:</b> the leading insect account places it in the central complex. The AL appears only as primary odor processing (<a href="#alr-barron2016">Barron &amp; Klein 2016</a>).</li>
+    <li><b>Seizures:</b> optogenetic initiation maps to the mushroom body α/β lobes, and no AL driver was tested (<a href="#alr-saras2017">Saras 2017</a>). Blocking output of GH146 projection neurons had no effect on seizure sensitivity (<a href="#alr-hekmat2010">Hekmat-Scafe 2010</a>). The AL is not implicated.</li>
+  </ul>
+</div>
+
+<h3 class="col">Criticality and state transitions</h3>
+<div class="col">
+  <ul>
+    <li>A Kuramoto model on the hemibrain also found a mean-field-like transition with no clear Griffiths phase, at most "a very weak" one (<a href="#alr-odor2022">Ódor 2022</a>). This agrees with our no-Griffiths-phase result, but from a different model class (phase oscillators) on a partial connectome.</li>
+    <li>Theory accounts for our onset shape. A localized leading eigenvector keeps activity on a few nodes, followed by a gradual crossover (<a href="#alr-goltsev2012">Goltsev 2012</a>). A Griffiths phase needs many rare regions of different sizes, not one (<a href="#alr-moretti2013">Moretti &amp; Muñoz 2013</a>).</li>
+    <li>Known AL dynamics are odor-evoked and shaped by inhibition: local-neuron GABA sets synchrony (<a href="#alr-tanaka2009">Tanaka 2009</a>), activity returns to baseline when input stops (<a href="#alr-mazor2005">Mazor &amp; Laurent 2005</a>), and projection neurons are silent without antennae (<a href="#alr-olsen2007">Olsen 2007</a>). A bee AL keeps an odor-specific correlation trace for minutes (<a href="#alr-galan2006">Galán 2006</a>), the closest analogue to our slow window.</li>
+    <li>Our searches found no avalanche or criticality measurement for the insect AL, the olfactory bulb or the whole fly brain.</li>
+  </ul>
+</div>
+
+<h3 class="col">Where the model agrees, and where it does not</h3>
+<div class="read">
+  <div>
+    <h4>Aligns</h4>
+    <ul>
+      <li>The AL is reciprocal and bilaterally coupled (<a href="#alr-lin2024">Lin 2024</a>) and shows the most spiking in multisite recordings (<a href="#alr-paulk2013">Paulk 2013</a>). With the antennae and proboscis removed, olfactory regions including the AL still give some of the strongest resting correlations in the brain (<a href="#alr-mann2017">Mann 2017</a>; <a href="#alr-turner2021">Turner 2021</a>). That evidence concerns correlations, not activity levels.</li>
+      <li>Local inhibition controls AL dynamics (<a href="#alr-olsen2008">Olsen &amp; Wilson 2008</a>). In the model, inhibition raises the onset from 0.27 at r = 0 to 0.58 at r = 6.</li>
+      <li>The first relay stays on across states, as our lowest-threshold AL would.</li>
+      <li>In resting bees, a model attributes the more coupled AL to weaker local inhibition (<a href="#alr-moguilner2025">Moguilner 2025</a>). In our model, weaker inhibition likewise favours self-sustained AL activity.</li>
+      <li>There is no Griffiths phase, with independent hedged agreement from another fly-connectome model.</li>
+      <li>Isoflurane and sleep loss have natural, untested counterparts in our parameters: a cholinergic gain cut (<a href="#alr-hines2024">Hines 2024</a>) and a uniform cholinergic gain increase (<a href="#alr-weiss2024">Weiss 2024</a>).</li>
+    </ul>
+  </div>
+  <div>
+    <h4>Tension</h4>
+    <ul>
+      <li>The real AL's spontaneous activity is fed forward from receptor neurons (<a href="#alr-kazama2009">Kazama &amp; Wilson 2009</a>; <a href="#alr-olsen2007">Olsen 2007</a>, palps left intact), whereas ours sustains itself at h = 0.</li>
+      <li>12 h of sleep deprivation raises cholinergic presynaptic protein by 21–39% (<a href="#alr-weiss2024">Weiss 2024</a>), more than the width of our whole slow window (1.14–1.22× in g), yet a separate 13 h study found little AL change (<a href="#alr-dai2024">Dai 2024</a>, ex vivo). If presynaptic protein scaled gain one-to-one, the AL would cross its onset. One reading is that the real AL sits well below its onset. That reading is an inference across two studies, and protein abundance is not gain.</li>
+      <li>Sleep and anesthesia are not silence, so h = 0 sub-onset quiescence is not a model of either.</li>
+      <li>The model has no sleep homeostat (dorsal fan-shaped body, ellipsoid-body R5 neurons, protocerebral bridge, clock neurons), no neuromodulation and no gap junctions.</li>
+      <li>The direction of first-relay inhibition across states is contested (<a href="#alr-kato2012">Kato 2012</a> vs <a href="#alr-tsuno2008">Tsuno 2008</a>). Silencing a third of fly AL local neurons left odor responses unchanged (<a href="#alr-strubebloss2017">Strube-Bloss 2017</a>).</li>
+      <li>Odor identity still reaches the mushroom body during fly sleep (<a href="#alr-kirszenblat2025">Kirszenblat 2025</a>, preprint). That cuts against the idea that sleep simply blocks propagation beyond the AL.</li>
+      <li>The fluctuation peak needs very weak drive (h = 1e-5) and is not resolved at h ≥ 1e-3.</li>
+    </ul>
+  </div>
+</div>
+<div class="note"><b>Reading, not finding.</b> The evidence fits "the AL is on in wake and in sleep, and state changes propagation beyond it" better than "AL active = awake". On that reading, our "AL lit, rest of the brain quiet" regime looks sleep-like, and the better wake analogue is <i>recruitment beyond the AL</i>. Neither reading has been tested at the AL itself, and the one fly study downstream finds odor identity intact in sleep, with value coding changed (<a href="#alr-kirszenblat2025">Kirszenblat 2025</a>, preprint).</div>
+
+<h3 class="col">Predictions an experiment could check</h3>
+<div class="col">
+  <ul>
+    <li><b>Graded isoflurane with the AL in view.</b> Use registered multisite recordings or light-field imaging. The model predicts the central and motor tiers drop out first and the AL last, with AL fluctuations peaking at a light dose.</li>
+    <li><b>Full deafferentation.</b> Remove the antennae <i>and</i> maxillary palps, then apply a brief pulse to AL local neurons. If the model's recurrence is real, AL activity outlasts the MB's and LH's, with memoryless lifetimes that grow steeply with cholinergic gain.</li>
+    <li><b>The AL across verified sleep.</b> Image projection and local neurons together with the mushroom-body calyx. The original hypothesis predicts a quieter AL in sleep. The literature-guided reading predicts a preserved, more coupled AL, with the state change appearing downstream in the mushroom body and lateral horn.</li>
+    <li><b>Manipulating AL local neurons and measuring sleep architecture and arousal threshold.</b> This has never been tested. The model predicts that less GABAergic inhibition gives a more self-coupled AL, which would be rest-like if the bee result transfers.</li>
+    <li><b>After 12 h of sleep deprivation.</b> AL off-responses and odor-specific correlation traces should lengthen before those of other regions, if the AL is the circuit closest to its onset.</li>
+  </ul>
+  <p class="small">Next simulations: drive the receptor neurons instead of setting h = 0, and fit the gain to "silent without antennae". Add eLN–PN gap junctions. Rerun with lLN1_bc signs flipped. Model isoflurane as a cholinergic-only gain cut. Model sleep loss as a uniform 21–39% cholinergic gain increase. Add a slow sleep-pressure variable on the dFB, R5 and protocerebral-bridge neurons. Treat neuromodulators as region-specific changes of g and r. Use recruitment beyond the AL as the wake order parameter.</p>
+  <p class="small">Fact-check: four independent checks covered about 130 citation entries plus about 40 recomputed numbers. No citation was rated "not found" or "misreported", so none was dropped. A few were only partly verified (Cook 2025, Lin 2024, Ódor 2022, Tanaka 2009's issue number) and are used here only for what was confirmed. The negative claims ("no study records ...") were not contradicted by targeted searches, which is as far as a negative claim can be checked, so they are phrased as search results. One unread conference poster was excluded. In the data, the stated normalization constant was misreported (1/742.7) and is corrected below; no eigenvalue changes. Corrections applied: seizure initiation is placed in the MB α/β lobes only; the hedges in <a href="#alr-odor2022">Ódor 2022</a> are restored; Weiss 2024 is limited to cholinergic, within-transmitter-class changes; the detailed results of Cook 2025 are marked provisional; and c = 1/745.9 for the normalization constant.</p>
+</div>
+
+<h3 class="col">References</h3>
+<ol id="antennal-lobe-refs">
+  <li id="alr-alpert2020"><b>Alpert MH et al. 2020.</b> A circuit encoding absolute cold temperature in Drosophila. Curr Biol 30:2275. <a href="https://doi.org/10.1016/j.cub.2020.04.038">doi:10.1016/j.cub.2020.04.038</a></li>
+  <li id="alr-barron2016"><b>Barron AB, Klein C 2016.</b> What insects can tell us about the origins of consciousness. PNAS 113:4900. <a href="https://doi.org/10.1073/pnas.1520084113">doi:10.1073/pnas.1520084113</a></li>
+  <li id="alr-blum2021"><b>Blum ID et al. 2021.</b> Astroglial calcium signaling encodes sleep need in Drosophila. Curr Biol 31:150. <a href="https://doi.org/10.1016/j.cub.2020.10.012">doi:10.1016/j.cub.2020.10.012</a></li>
+  <li id="alr-cohen2016"><b>Cohen D, Zalucki OH, van Swinderen B, Tsuchiya N 2016.</b> Local versus global effects of isoflurane anesthesia on visual processing in the fly brain. eNeuro 3:ENEURO.0116-16.2016. <a href="https://doi.org/10.1523/ENEURO.0116-16.2016">doi:10.1523/ENEURO.0116-16.2016</a></li>
+  <li id="alr-cohen2018"><b>Cohen D, van Swinderen B, Tsuchiya N 2018.</b> Isoflurane impairs low-frequency feedback but leaves high-frequency feedforward connectivity intact in the fly brain. eNeuro 5:ENEURO.0329-17.2018. <a href="https://doi.org/10.1523/ENEURO.0329-17.2018">doi:10.1523/ENEURO.0329-17.2018</a></li>
+  <li id="alr-cook2025"><b>Cook OM et al. 2025.</b> Individual olfactory channels shape distinct parameters of sleep architecture. bioRxiv preprint; details partly verified. <a href="https://doi.org/10.1101/2025.09.11.675654">doi:10.1101/2025.09.11.675654</a></li>
+  <li id="alr-dai2024"><b>Dai X, Le JQ, Ma D, Rosbash M 2024.</b> Four SpsP neurons are an integrating sleep regulation hub in Drosophila. Sci Adv 10:eads0652. <a href="https://doi.org/10.1126/sciadv.ads0652">doi:10.1126/sciadv.ads0652</a></li>
+  <li id="alr-french2021"><b>French AS et al. 2021.</b> Sensory processing during sleep in Drosophila melanogaster. Nature 598:479. <a href="https://doi.org/10.1038/s41586-021-03954-w">doi:10.1038/s41586-021-03954-w</a></li>
+  <li id="alr-galan2006"><b>Galán RF et al. 2006.</b> Sensory memory for odors is encoded in spontaneous correlated activity between olfactory glomeruli. Neural Comput 18:10. <a href="https://doi.org/10.1162/089976606774841558">doi:10.1162/089976606774841558</a></li>
+  <li id="alr-gilestro2009"><b>Gilestro GF, Tononi G, Cirelli C 2009.</b> Widespread changes in synaptic markers as a function of sleep and wakefulness in Drosophila. Science 324:109. <a href="https://doi.org/10.1126/science.1166673">doi:10.1126/science.1166673</a></li>
+  <li id="alr-goltsev2012"><b>Goltsev AV et al. 2012.</b> Localization and spreading of diseases in complex networks. Phys Rev Lett 109:128702. <a href="https://doi.org/10.1103/PhysRevLett.109.128702">doi:10.1103/PhysRevLett.109.128702</a></li>
+  <li id="alr-hekmat2010"><b>Hekmat-Scafe DS et al. 2010.</b> Seizure sensitivity is ameliorated by targeted expression of K+-Cl- cotransporter function in the mushroom body of the Drosophila brain. Genetics 184:171. <a href="https://doi.org/10.1534/genetics.109.109074">doi:10.1534/genetics.109.109074</a></li>
+  <li id="alr-hines2024"><b>Hines AD et al. 2024.</b> Synapse-specific trapping of SNARE machinery proteins in the anesthetized Drosophila brain. J Neurosci 44. <a href="https://doi.org/10.1523/JNEUROSCI.0588-23.2024">doi:10.1523/JNEUROSCI.0588-23.2024</a></li>
+  <li id="alr-hsu2021"><b>Hsu CT, Choi JTY, Sehgal A 2021.</b> Manipulations of the olfactory circuit highlight the role of sensory stimulation in regulating sleep amount. Sleep 44:zsaa265. <a href="https://doi.org/10.1093/sleep/zsaa265">doi:10.1093/sleep/zsaa265</a></li>
+  <li id="alr-huang2010"><b>Huang J et al. 2010.</b> Functional connectivity and selective odor responses of excitatory local interneurons in Drosophila antennal lobe. Neuron 67:1021. <a href="https://doi.org/10.1016/j.neuron.2010.08.025">doi:10.1016/j.neuron.2010.08.025</a></li>
+  <li id="alr-kato2012"><b>Kato HK et al. 2012.</b> Dynamic sensory representations in the olfactory bulb: modulation by wakefulness and experience. Neuron 76:962. <a href="https://doi.org/10.1016/j.neuron.2012.09.037">doi:10.1016/j.neuron.2012.09.037</a></li>
+  <li id="alr-kazama2009"><b>Kazama H, Wilson RI 2009.</b> Origins of correlated activity in an olfactory circuit. Nat Neurosci 12:1136. <a href="https://doi.org/10.1038/nn.2376">doi:10.1038/nn.2376</a></li>
+  <li id="alr-kirszenblat2025"><b>Kirszenblat L, Someya M, Kazama H 2025.</b> Sleep promotes aversive value coding in Drosophila. bioRxiv preprint; abstract verified only. <a href="https://doi.org/10.1101/2025.07.04.663253">doi:10.1101/2025.07.04.663253</a></li>
+  <li id="alr-leung2021"><b>Leung A et al. 2021.</b> Integrated information structure collapses with anesthetic loss of conscious arousal in Drosophila melanogaster. PLoS Comput Biol 17:e1008722. <a href="https://doi.org/10.1371/journal.pcbi.1008722">doi:10.1371/journal.pcbi.1008722</a></li>
+  <li id="alr-leung2025"><b>Leung A et al. 2025.</b> Wakefulness can be distinguished from general anesthesia and sleep in flies using a massive library of univariate time series analyses. PLoS Biol 23:e3003217. <a href="https://doi.org/10.1371/journal.pbio.3003217">doi:10.1371/journal.pbio.3003217</a></li>
+  <li id="alr-lin2024"><b>Lin A et al. 2024.</b> Network statistics of the whole-brain connectome of Drosophila. Nature 634:153 (cited for reciprocity only). <a href="https://doi.org/10.1038/s41586-024-07968-y">doi:10.1038/s41586-024-07968-y</a></li>
+  <li id="alr-mann2017"><b>Mann K, Gallen CL, Clandinin TR 2017.</b> Whole-brain calcium imaging reveals an intrinsic functional network in Drosophila. Curr Biol 27:2389. <a href="https://doi.org/10.1016/j.cub.2017.06.076">doi:10.1016/j.cub.2017.06.076</a></li>
+  <li id="alr-mazor2005"><b>Mazor O, Laurent G 2005.</b> Transient dynamics versus fixed points in odor representations by locust antennal lobe projection neurons. Neuron 48:661. <a href="https://doi.org/10.1016/j.neuron.2005.09.032">doi:10.1016/j.neuron.2005.09.032</a></li>
+  <li id="alr-moguilner2025"><b>Moguilner S et al. 2025.</b> Neuronal correlates of sleep in honey bees. Neural Netw 189:107575. <a href="https://doi.org/10.1016/j.neunet.2025.107575">doi:10.1016/j.neunet.2025.107575</a></li>
+  <li id="alr-moretti2013"><b>Moretti P, Muñoz MA 2013.</b> Griffiths phases and the stretching of criticality in brain networks. Nat Commun 4:2521. <a href="https://doi.org/10.1038/ncomms3521">doi:10.1038/ncomms3521</a></li>
+  <li id="alr-murakami2005"><b>Murakami M et al. 2005.</b> State-dependent sensory gating in olfactory cortex. Neuron 46:285. <a href="https://doi.org/10.1016/j.neuron.2005.02.025">doi:10.1016/j.neuron.2005.02.025</a></li>
+  <li id="alr-odor2022"><b>Ódor G, Deco G, Kelling J 2022.</b> Differences in the critical dynamics underlying the human and fruit-fly connectome. Phys Rev Research 4:023057. <a href="https://doi.org/10.1103/PhysRevResearch.4.023057">doi:10.1103/PhysRevResearch.4.023057</a></li>
+  <li id="alr-olsen2007"><b>Olsen SR, Bhandawat V, Wilson RI 2007.</b> Excitatory interactions between olfactory processing channels in the Drosophila antennal lobe. Neuron 54:89. <a href="https://doi.org/10.1016/j.neuron.2007.03.010">doi:10.1016/j.neuron.2007.03.010</a></li>
+  <li id="alr-olsen2008"><b>Olsen SR, Wilson RI 2008.</b> Lateral presynaptic inhibition mediates gain control in an olfactory circuit. Nature 452:956. <a href="https://doi.org/10.1038/nature06864">doi:10.1038/nature06864</a></li>
+  <li id="alr-paulk2013"><b>Paulk AC et al. 2013.</b> Multichannel brain recordings in behaving Drosophila reveal oscillatory activity and local coherence in response to sensory stimulation and circuit activation. J Neurophysiol 110:1703. <a href="https://doi.org/10.1152/jn.00414.2013">doi:10.1152/jn.00414.2013</a></li>
+  <li id="alr-saras2017"><b>Saras A et al. 2017.</b> Investigation of seizure-susceptibility in a Drosophila melanogaster model of human epilepsy with optogenetic stimulation. Genetics 206:1739. <a href="https://doi.org/10.1534/genetics.116.194779">doi:10.1534/genetics.116.194779</a></li>
+  <li id="alr-shang2007"><b>Shang Y et al. 2007.</b> Excitatory local circuits and their implications for olfactory processing in the fly antennal lobe. Cell 128:601. <a href="https://doi.org/10.1016/j.cell.2006.12.034">doi:10.1016/j.cell.2006.12.034</a></li>
+  <li id="alr-singh2020"><b>Singh P, Donlea JM 2020.</b> Bidirectional regulation of sleep and synapse pruning after neural injury. Curr Biol 30:1063. <a href="https://doi.org/10.1016/j.cub.2019.12.065">doi:10.1016/j.cub.2019.12.065</a></li>
+  <li id="alr-stanhope2020"><b>Stanhope BA et al. 2020.</b> Sleep regulates glial plasticity and expression of the engulfment receptor Draper following neural injury. Curr Biol 30:1092. <a href="https://doi.org/10.1016/j.cub.2020.02.057">doi:10.1016/j.cub.2020.02.057</a></li>
+  <li id="alr-strubebloss2017"><b>Strube-Bloss MF, Grabe V, Hansson BS, Sachse S 2017.</b> Calcium imaging revealed no modulatory effect on odor-evoked responses of the Drosophila antennal lobe by two populations of inhibitory local interneurons. Sci Rep 7:7854. <a href="https://doi.org/10.1038/s41598-017-08090-y">doi:10.1038/s41598-017-08090-y</a></li>
+  <li id="alr-taintonheap2021"><b>Tainton-Heap LAL et al. 2021.</b> A paradoxical kind of sleep in Drosophila melanogaster. Curr Biol 31:578. <a href="https://doi.org/10.1016/j.cub.2020.10.081">doi:10.1016/j.cub.2020.10.081</a></li>
+  <li id="alr-tanaka2009"><b>Tanaka NK, Ito K, Stopfer M 2009.</b> Odor-evoked neural oscillations in Drosophila are mediated by widely branching interneurons. J Neurosci 29(26):8595. <a href="https://doi.org/10.1523/JNEUROSCI.1455-09.2009">doi:10.1523/JNEUROSCI.1455-09.2009</a></li>
+  <li id="alr-troup2023"><b>Troup M, Tainton-Heap LAL, van Swinderen B 2023.</b> Neural ensemble fragmentation in the anesthetized Drosophila brain. J Neurosci 43:2537. <a href="https://doi.org/10.1523/JNEUROSCI.1657-22.2023">doi:10.1523/JNEUROSCI.1657-22.2023</a></li>
+  <li id="alr-tsuno2008"><b>Tsuno Y, Kashiwadani H, Mori K 2008.</b> Behavioral state regulation of dendrodendritic synaptic inhibition in the olfactory bulb. J Neurosci 28:9227. <a href="https://doi.org/10.1523/JNEUROSCI.1576-08.2008">doi:10.1523/JNEUROSCI.1576-08.2008</a></li>
+  <li id="alr-turner2021"><b>Turner MH, Mann K, Clandinin TR 2021.</b> The connectome predicts resting-state functional connectivity across the Drosophila brain. Curr Biol 31:2386. <a href="https://doi.org/10.1016/j.cub.2021.03.004">doi:10.1016/j.cub.2021.03.004</a></li>
+  <li id="alr-weiss2024"><b>Weiss JT et al. 2024.</b> Sleep deprivation drives brain-wide changes in cholinergic presynapse abundance in Drosophila melanogaster. PNAS 121:e2312664121 (cholinergic, within transmitter class). <a href="https://doi.org/10.1073/pnas.2312664121">doi:10.1073/pnas.2312664121</a></li>
+</ol>
+
+<!-- Critic review, 2026-11-09. Pre-critic copy: REPORT_section.pre_critic.html (same directory). -->
+<h3 class="col" id="antennal-lobe-critic">Critic review</h3>
+<div class="col">
+  <p class="small">An independent pass checked citation coverage against the line 1–3 verification tables, re-read six sources from their primary text (Hsu 2021, Dai 2024, Paulk 2013, Singh &amp; Donlea 2020 and Mann 2017 in full text; Hines 2024 in the abstract; Ódor 2022 in the arXiv PDF), and checked every data number against <code>data_grounding.json</code> and <code>results/analysis2/phase_complete.md</code>. All 37 original citations are rated verified or partly verified in the tables. All six spot-checks confirmed the cited claim. Every data number matched. Changes:</p>
+  <ul class="small">
+    <li><b>Direct answer.</b> The lede now answers the three parts of the question (why the AL is special; sleep; consciousness and phase transitions) in turn.</li>
+    <li><b>Overstatements softened.</b> "No study shows the AL ... gating sleep" contradicted the report's own Hsu and Alpert rows and was reworded. The authors' Mz699/vlPr caveat was added to the iPN result. "Sleep is needed" for glial clearance became "sleep loss slows, induced sleep speeds". "Map directly onto our parameters" became "untested counterparts". "The real AL probably sits well below its onset" is now marked as an inference across two studies. "Nobody has recorded", "no ... exists" and "the gates ... not in an AL shut-off" are now phrased as search results or as what was reported.</li>
+    <li><b>Unsourced claim replaced.</b> "Most AL LNs are GABAergic" appears in no verification table, and the release's own predictions disagree. It was replaced with the grounded count (137 of 420 ALLN cholinergic; 115 GABA, 99 Glu, 67 unclear).</li>
+    <li><b>Method caveat added.</b> Dai 2024's whole-brain CaMPARI survey was photoconverted ex vivo, after 13 h of deprivation (read in the full text). The AL therefore had no antennal input when it was measured.</li>
+    <li><b>Attribution fixed.</b> The anesthesia bullet credited everything to Hines 2024. Each claim now cites its own source: Cohen 2016/2018 for central versus periphery, Troup 2023 for 18% vs 15%, Hines 2024 (mushroom-body output neurons) for the cholinergic result, and Leung 2025 for autocorrelation.</li>
+    <li><b>Balance.</b> Added Singh &amp; Donlea's independent ORN-silencing result: less night sleep and no daytime change, which sides with Hsu against the Cook preprint. Added Mann 2017's resting correlations with the antennae and proboscis removed, which partly offsets the "fed forward" tension. Added Strube-Bloss 2017, against "inhibition controls the AL", and Kirszenblat 2025, which finds odor identity intact in the mushroom body during sleep and so cuts against "sleep blocks propagation beyond the AL". The model's dependence on input normalization was added under "Killed by", and Ódor 2022's model-class difference is now stated. The added sources are all rated verified in the tables (Kirszenblat from the abstract only).</li>
+    <li><b>Fact-check note.</b> It said "none rated not found" and then "one item rated not found". It now says what was partly verified, and that one data constant was misreported and corrected.</li>
+  </ul>
+  <p class="small">Still open: no <code>REPORT.md</code> exists in <code>results/al_lit/</code>, only this section. Cook 2025's detailed signs and the Kirszenblat 2025 results rest on abstracts or summaries, because bioRxiv returned HTTP 429. The negative claims can only be stated as "not found by search". The section has not yet been inserted into <code>explainer/index.html</code> or republished; section 11 there is still "Open questions".</p>
+</div>
+
+<!-- Section 12 for the MaleCNS explainer (explainer/index.html): "Is the antennal-lobe result a model defect?"
+     Placement: insert directly before <h2 id="next" ...>Open questions...</h2>. Renumber "Open questions" to 13 and
+     "Glossary" to 14, and add <li><a href="#al-defect">Is the AL a model defect?</a></li> to nav.toc after the
+     "The antennal lobe and sleep" entry.
+     Uses only the page's existing classes and colour tokens (.col, .lede, .status/.finding/.chip, .tablewrap, td.num,
+     .note, .read, .small, figure/.plate/figcaption, code). Figures are copied to explainer/figs/aldef/.
+     Written 2026-11-09 by the synthesis step of workflow wf_50011f5c-30d (malecns-al-defect). Every number comes from
+     results/aldef/{lit_biophysics_calc.json, drive/summary.json, drive/rows.json, signs/summary.json,
+     depression/key_numbers.json, depression/points.json, weights/table.md, synth/synth_numbers.json}.
+     Adversarial verification 2026-11-09 (code/ald_verify.py -> results/aldef/verify/verify.json; replications and
+     bit-identity runs code/ald_verify_simcheck.py -> results/aldef/verify/sim/, array 183656): every onset recomputed from
+     the raw runs, 5 onsets replicated with new seeds. Corrected text; the synthesis version is section.html.pre_verify. -->
+
+<h2 id="al-defect" class="col"><span class="n">12</span>Is the antennal-lobe result a model defect?</h2>
+<div class="col">
+  <p class="lede">In our model, the antennal lobe (AL) switches on first and keeps itself active with no input at all (h = 0). Real flies disagree. At rest, AL projection neurons (PNs) are driven by the olfactory receptor neurons (ORNs): a PN's spontaneous input rate, 74.9 Hz, matches 17.4 ORNs firing at 3.44 Hz each (<a href="#alr-kazama2009">Kazama &amp; Wilson 2009</a>). PNs of antennal glomeruli are also silent 10–20 minutes after the antennae are cut (<a href="#alr-olsen2007">Olsen 2007</a>). We ran four simulation experiments and a literature check. <b>Short answer: yes, it is a defect of the model, and of its synapse dynamics rather than its wiring.</b> Two features of the synapse model can each remove it, and our simulations cannot say which matters more: the missing short-term synaptic depression, and the way the model treats the cholinergic local-neuron clique (as plain chemical excitation onto every target). Applied only inside the AL, the two fixes have the same effect. It is not caused by the synapse-count weights, and probably not by the transmitter label itself. It is not a real prediction: no study reports a self-sustaining fly AL, and the model's self-sustaining regime always fails the silence-after-deafferentation test.</p>
+  <div class="status" role="list">
+    <div class="finding" role="listitem"><span class="chip ok">Established</span><p>Drive the ORNs instead of setting h = 0, and the unmodified model passes two tests for g ≈ 0.09–0.29: PNs fire at realistic rates (1–5 Hz for 3.44 Hz ORNs), and they fall silent within tens of model time units once every ORN is removed. Olsen's actual condition, antennae removed with the palps kept, holds only up to g ≈ 0.17–0.19. Above the slow window the model always fails the silence test: PNs keep 31–95% of their driven activity long after every ORN is gone. It also fails the rate test at low and medium ORN drive (PNs at 2–4.6× the ORN rate at level 0.04), but at the highest drive levels the rate test still passes just above the slow window, so only the silence test rules that regime out.</p></div>
+    <div class="finding" role="listitem"><span class="chip ok">Established</span><p>Per-spike synaptic depression at the strengths measured in the AL raises the h = 0 onset 3.3–4.8× (r = 1: 0.346 → 1.14–1.66, with a model time unit of 10 ms). With the two main parameter sets (NW16, KW09), the AL alone then needs g = 3.00–4.53 to sustain itself, while the rest of the brain sustains at 1.48–1.74, so the AL no longer leads. Restricted to the AL, depression gives ×2.9, the same as removing the clique's chemical excitation; the rest of the factor comes from depressing the rest of the brain. Depression barely changes the response to weak input below g_lin (ratio 1.02 ± 0.04 at h = 1e-5, 0.95–0.96 at h = 1e-4).</p></div>
+    <div class="finding" role="listitem"><span class="chip mid">Changes our reading</span><p>The "AL alone is active" regime that section 11 read as sleep-like lies above the range the data allow. It does not appear once literature-strength depression is added (tested at r = 0 and 1), or once the clique stops exciting at r ≥ 1. The mapping "AL-only regime = sleep-like" should be dropped.</p></div>
+    <div class="finding" role="listitem"><span class="chip todo">Open</span><p>The decisive synapse, lLN1_bc onto lLN1_bc (42% of the leading eigenvalue), has never been measured: its sign, whether it is electrical, and how it depresses are all unknown. Target-dependent signs (electrical onto PNs, cholinergic onto inhibitory LNs) are not yet in the simulator.</p></div>
+  </div>
+</div>
+
+<h3 class="col">What was tested</h3>
+<div class="col">
+  <div class="tablewrap"><table>
+    <tr><th>Lane</th><th>What it did</th><th>Result in one line</th></tr>
+    <tr><td>Literature</td><td>Identity of lLN1_bc; how excitatory LNs act; synaptic dynamics; deafferentation; firing rates; a model time unit of τ<sub>u</sub> = 10 ms (<a href="#ald-benayoun2010">Benayoun 2010</a>)</td><td>Every measured excitatory AL synapse depresses strongly. Excitatory LN → PN coupling is electrical. No fly study shows a self-sustaining AL.</td></tr>
+    <tr><td>E1 ORN drive</td><td>Drive the 2,639 ORNs; remove all of them, or only the antennal ones (palps kept); 24 g × r 0, 1 × 5 ORN levels, 64 replicas</td><td>Data-allowed g = 0.09–0.23 (r = 0) and 0.10–0.29 (r = 1), always below the h = 0 onset</td></tr>
+    <tr><td>E2 signs</td><td>lLN1_bc inhibitory or sign 0; plus 40 cholinergic lLN2; transmitter-uncertainty ensembles (40 draws)</td><td>Onset ×1.7–3.0. At r ≥ 1 the AL stops igniting first. The excitatory clique is still the most likely configuration (P = 0.75).</td></tr>
+    <tr><td>E3 depression</td><td>Per-spike and rate-mode depression at literature values, on one population at a time; adaptation; refractoriness; AL alone vs rest; ORN-removal protocol</td><td>Onset ×3.3–4.8 at literature values. The AL loses the lead. The data-allowed range widens (high/low ratio 2.5 → 4.0–4.8 by interpolation; its upper edge is only known to lie between grid points 1.15 and 1.5).</td></tr>
+    <tr><td>E4 weights</td><td>Linear, cap 50/20/10, sqrt, log1p and binary weights at equal mean input; AL switched off, or AL alone</td><td>Every rule self-sustains at h = 0. Linear counts only decide <i>where</i> ignition starts.</td></tr>
+  </table></div>
+</div>
+
+<figure>
+  <div class="plate"><img src="figs/aldef/synth_phase.png" alt="Phase bars over coupling g on a log axis, for the published model and its variants at r = 0 and r = 1. Each bar runs from grey (quiescent) through light blue (slow window) to blue (self-sustained) and dark blue (delocalized). The published model's sustained onset is 0.26 and 0.35; changing the lLN1_bc sign moves it to 0.45 to 1.04; depression moves it to 0.94 to 1.66. Black bars above some rows mark the coupling range allowed by the deafferentation data: 0.09 to 0.29 for the published model, 0.25 to 1.39 with depression. A right-hand column gives the AL module's share at the first sustained point: 48 to 49 percent in the published model, 0.2 to 23 percent in the variants."></div>
+  <figcaption><b>The whole study in one picture.</b> Phase bars at h = 0, starting fully active, with T = 3000. White numbers mark the sustained onset (mean lifetime 3000). Black ticks mark each network's linear instability g_lin. Solid black bars above a row show the coupling range the deafferentation data allow, including the palps-intact test; dashed bars pass the gain and silence tests only. With depression, the right ends of the dashed bars are interpolated between grid points g = 1.15 and 1.5. The right column says where activity first sustains itself. In the published model that is the AL module (48–49% of activity, about 1,100 neurons). In every variant at r = 1 it is a brain-wide pattern of about 9,000–15,000 neurons. Sources: <code>signs/summary.json</code>, <code>depression/key_numbers.json</code>, <code>drive/summary.json</code>, collected by <code>code/ald_synth_calc.py</code>.</figcaption>
+</figure>
+
+<h3 class="col">1. Model defect, input defect, or real prediction? The causes, ranked</h3>
+<div class="col">
+  <div class="tablewrap"><table>
+    <tr><th>Rank</th><th>Suspected cause</th><th>What fixing it does (r = 1 unless noted)</th><th>Support from the literature</th></tr>
+    <tr><td class="num">1 (tie)</td><td><b>No short-term depression</b></td><td>Onset 0.346 → 1.38 (NW16) or 1.66 (KW09); ×4.6 at r = 0. Depressing only the 30 lLN1_bc gives 0.944 (×2.7), the whole AL 1.01 (×2.9); depressing outside the AL changes nothing (0.342). The AL alone needs 3.00, the rest of the brain 1.48, so the AL stops leading. The step from ×2.9 to ×4 comes from depressing the rest of the brain, whose own onset moves from 1.04 to 1.48. These factors assume a 10 ms time unit: at 50 ms the recovery time is about 31 units and the onset factor drops to about 2.5.</td><td>Strong for the synapses that have been measured: ORN → PN and ORN → LN keep 72–91% per spike and recover over 0.6–2.4 s. LN → LN depression has never been measured.</td></tr>
+    <tr><td class="num">1 (tie)</td><td><b>The cholinergic clique as plain excitation onto every target</b></td><td>lLN1_bc made sign 0: onset ×1.7 (r = 0), ×2.9 (r = 1), the same ×2.9 as depression restricted to the AL. At r = 0 the AL still ignites first (23% of activity). Also turning 40 cholinergic lLN2 inhibitory: ×2.2 and ×3.0. At r ≥ 1 the AL drops to 0.3–9% of the first sustained activity.</td><td>Good for the mechanism: eLN → PN is "mainly or purely electrical", while eLN → inhibitory LN is cholinergic (<a href="#ald-yaksi2010">Yaksi &amp; Wilson 2010</a>). The ACh label itself is probably right (P = 0.75 under our mapping). The realistic per-target version is untested.</td></tr>
+    <tr><td class="num">3</td><td>h = 0 everywhere, so g is set too high</td><td>With ORNs driven, the unmodified model passes the rate test and the remove-all-ORNs test for g ≤ 0.23–0.29 (≤ 0.17–0.19 with the palps kept, Olsen's condition). But at those g the rest of the brain sits at ≤ 0.28 of its own onset (1.04), so nothing outside the AL can ever sustain itself.</td><td>Strong: resting PN activity is fed by ORNs, and PNs fall silent without them.</td></tr>
+    <tr><td class="num">4</td><td>Linear synapse-count weights</td><td>Not the cause. Every weight rule self-sustains at h = 0. Compression only moves ignition to the central brain or the mushroom body. At equal leading eigenvalue the onset barely moves (r = 1: 0.32–0.36 against 0.346; binary 0.20).</td><td>Count-proportional strength is measured only for ORN → PN (<a href="#ald-tobin2017">Tobin 2017</a>).</td></tr>
+    <tr><td class="num">–</td><td>Adaptation, refractoriness</td><td>Also raise the onset (0.42–1.71 and 0.47–2.97), but their strengths are not pinned down by data.</td><td>Weak. PNs do not adapt (104% of their initial rate over 500 ms), and realistic refractoriness is about one step.</td></tr>
+  </table></div>
+  <p><b>Why the two leading causes are tied.</b> At r = 1 every fix that removes the AL's lead (depression on lLN1_bc or on the whole AL, lLN1_bc sign 0 or inhibitory, switching the AL off) puts the onset at 0.94–1.04, which is where the rest of the brain ignites on its own (1.04). The simulations therefore show that each fix is sufficient, not which one the fly uses. Depression has the stronger literature support at measured synapses and also works at r = 0; the sign fix is backed by direct physiology of eLN → PN coupling, but only in a crude form here.</p>
+  <p><b>Defect of the inputs?</b> Not the weights (E4). Probably not the label. Given the release's own transmitter confidences, an excitatory clique is the most likely configuration: lLN1_bc stays excitatory in 149 of 200 per-type spectral draws. In the 20 of 24 simulated draws where it does, the AL is the leading region at ignition in 20 of 20 at r = 0, 17 at r = 1 and 11 at r = 3 (E2). The label's source is still unknown, though. The release's <code>ground_truth = ACh</code> for lLN1_bc is not in the Eckstein 2024 ground-truth table, and that paper points to lLN2T_a/b/c as the closer match to known cholinergic LNs (<a href="#ald-eckstein2024">Eckstein 2024</a>).</p>
+  <p><b>Real prediction?</b> No. The literature found no fly recording of a self-sustaining AL. In the fly, removing the input silences PNs (<a href="#alr-olsen2007">Olsen 2007</a>; <a href="#ald-kazama2011">Kazama 2011</a>). Experimenters routinely remove the antennae "to minimize spontaneous activity" (<a href="#ald-yaksi2010">Yaksi &amp; Wilson 2010</a>). The only counter-claims are weak: PN spiking in an isolated brain reported as "data not shown" (<a href="#ald-gu2006">Gu &amp; O'Dowd 2006</a>), and correlated calcium signals without antennae (<a href="#alr-mann2017">Mann 2017</a>). Chronic removal of the antennae over 2–5 days makes odor-evoked lateral excitation of the deafferented PNs "severalfold" larger, partly through stronger eLN → PN electrical coupling, and enlarges their spontaneous fluctuations (<a href="#ald-kazama2011">Kazama 2011</a>). The palps were still in place there, so this is consistent with a margin below ignition but is not a test of activity without any input.</p>
+</div>
+
+<figure>
+  <div class="plate"><img src="figs/aldef/weights_causal.png" alt="Two panels, r = 0 and r = 1, showing the sustained onset relative to the intact network for seven weight rules, with the AL module clamped off (filled triangles) and the AL module alone (open circles). For linear weights, switching the AL off raises the onset 2.2 and 3.0 times while the AL alone matches the intact onset; for binary weights the reverse holds."></div>
+  <figcaption><b>Weights decide where ignition starts, not whether it happens (E4).</b> Each marker is an onset divided by the intact network's onset. With linear counts the AL alone reproduces the whole-brain onset (open circle near 1), and removing the AL raises it 2.2× (r = 0) or 3.0× (r = 1). Strong compression shares ignition with the central brain. With binary weights the AL plays no part and mushroom-body Kenyon cells lead. Every rule still self-sustains at h = 0. Source: <code>weights/table.md</code>.</figcaption>
+</figure>
+
+<h3 class="col">2. Where the real fly sits</h3>
+<div class="col">
+  <p>Two measurements pin the operating point. First, the PN/ORN rate ratio G must lie in 0.29–1.45, which is PN 1–5 Hz over ORN 3.44 Hz. Second, PNs must be silent soon after the ORNs are removed. Both criteria were written down before the runs. Ratios do not depend on the time unit. Absolute rates assume τ<sub>u</sub> = 10 ms.</p>
+  <div class="tablewrap"><table>
+    <tr><th>Model (r = 1)</th><th class="num">Data-allowed g</th><th class="num">h = 0 onset</th><th class="num">AL alone / rest of brain</th><th>Where the fly sits</th></tr>
+    <tr><td>Published</td><td class="num">0.10–0.29<br>(0.18–0.19 with palps test)</td><td class="num">0.344</td><td class="num">0.337 / 1.04</td><td>At most 0.63–0.84 of the h = 0 onset (0.64–0.86 of the AL-alone onset); rest of the brain at ≤ 0.28 of its own</td></tr>
+    <tr><td>Depression, all synapses (NW16)</td><td class="num">0.25–1.18*</td><td class="num">1.38</td><td class="num">3.00 / 1.48</td><td>Whole brain at about 0.85 of ignition (grid bracket 0.83–1.08); AL at ≤ 0.39 of its own</td></tr>
+    <tr><td>Depression, all synapses (KW09)</td><td class="num">0.35–1.39*</td><td class="num">1.66</td><td class="num">4.53 / 1.74</td><td>About 0.83 (bracket 0.69–0.90); AL at ≤ 0.31</td></tr>
+    <tr><td>Depression, excitatory outputs (NW16)</td><td class="num">0.32–1.24*</td><td class="num">1.57</td><td class="num">not run</td><td>About 0.79 (bracket 0.73–0.96)</td></tr>
+  </table></div>
+  <p class="small">* Upper ends interpolated between the grid points g = 1.15 (passes) and 1.5 (fails); the brackets in the last column use those two grid points. ORN level 0.04, r = 1, palps test not run with depression.</p>
+  <ul>
+    <li><b>Inside the allowed range</b> (published model, r = 0, ORN level 0.04, g = 0.12–0.20), PN activity falls to 1/e of its driven level in 2–7 units (20–70 ms) after the ORNs are removed. The AL is completely silent after a median of 5–24 units.</li>
+    <li><b>The AL acts as a moderate amplifier, not a diverging one.</b> At low g the gain grows in proportion to g (G/g = 2.4–2.7, close to the pure ORN → PN estimate of 2.55). Recurrence adds 1.3–3.1× at the top of the allowed range, depending on the ORN level (2.0–2.5 at level 0.04). The AL's fluctuation peak under realistic ORN drive sits at g = 0.16–0.18 (r = 0) and 0.20–0.24 (r = 1), inside the allowed range. The earlier peak at g ≈ 0.30 came from a uniform drive about 3,400 times weaker than a real ORN.</li>
+    <li><b>The palps test is the tightest constraint.</b> With the palps still driven, antennal PNs keep some activity through lateral LN input: 2–9% of their driven level at g = 0.10–0.16, below the pre-registered 10% tolerance, and more than 10% from g = 0.165–0.197. Olsen 2007 saw no spontaneous activity in this condition, so the leak caps the allowed range and points again to lateral excitation onto PNs that is too strong (cause 2). The palps test was not run with depression.</li>
+    <li><b>With depression the allowed range sits above g_lin.</b> Its lower end (0.25–0.35) is already above the linear instability (0.163), so a fully rested network would be linearly unstable there; depression is what keeps activity bounded. Under ORN drive this gives no bursts and no fluctuation peak: the AL-module fluctuation measure stays at 1.2–2.3 over g = 0.06–2.6, while without depression it peaks at 4.2 near g = 0.22 (recomputed from the E3 removal runs). So with depression the AL is a moderate, quiet amplifier, not a near-critical one.</li>
+  </ul>
+</div>
+
+<figure>
+  <div class="plate"><img src="figs/aldef/drive_allowed.png" alt="Two grids, r = 0 and r = 1, of ORN drive level against coupling g. Dark blue cells, where both the gain and the silence criteria pass, span roughly g 0.09 to 0.23 at r = 0 and 0.10 to 0.29 at r = 1. They end at or before the dashed slow-window line and the dotted h = 0 onset line. White crosses mark allowed cells that fail the palps-intact test, from g about 0.18 upward."></div>
+  <figcaption><b>Where the published model matches an ORN-driven AL (E1).</b> Dark blue cells pass both pre-registered criteria: a realistic PN/ORN gain, and silence after every ORN is removed. The allowed range ends at or below the slow-window boundary (dashed) and always below the h = 0 onset (dotted). White crosses mark cells that fail the palps-intact test. The orange dash-dotted line is the old driven-plane fluctuation peak (g ≈ 0.30). Source: <code>drive/summary.json</code>.</figcaption>
+</figure>
+
+<figure>
+  <div class="plate"><img src="figs/aldef/drive_removal.png" alt="Six panels of antennal PN activity relative to its driven level against time since ORN removal, on log axes, for couplings 0.12 to 0.46. Below about g 0.24 activity drops to zero within tens of time units; above about 0.28 it stays at 50 to 80 percent for the whole 3000 units. With palps kept, low-g curves level off at a few percent instead of zero. Right panels show the fraction of replicas with AL activity falling to zero for low g and staying at one for high g."></div>
+  <figcaption><b>Antenna removal in the model (E1, ORN level 0.04).</b> Left: all ORNs removed. Middle: antennae removed, palps kept. Right: the fraction of runs in which the AL is still active. Below the slow window, PN activity collapses within tens of units (× 10 ms), as in the fly. Above it, PNs keep firing for the whole run. With palps kept, a lateral leak of a few percent remains even at low g.</figcaption>
+</figure>
+
+<div class="note"><b>What this does to our earlier reading.</b> Section 11 suggested that the "AL lit, rest of the brain quiet" regime looks sleep-like, with wakefulness as recruitment beyond the AL. That regime is not where the recorded fly sits. In the published model it lies above the data-allowed range, although only 1.15–1.9× in g separates the two, so a modest gain increase in sleep could in principle reach it. In the depression-corrected model (literature values, r = 0 and 1) it does not appear at any g we simulated. The AL alone needs 2.0–2.6× the top of the allowed range, and the rest of the brain ignites first. With much weaker depression (recovery time 30 units, what a 50 ms time unit would imply) the AL still holds 18% of the activity at onset, so this conclusion depends on the time mapping. Weakening inhibition (r = 1 → 0, the bee rest-state mechanism) only moves the brain-wide onset from 1.38 to 1.21, with the AL holding 5% of the activity. What survives is the <i>first half</i> of the literature-guided mapping: the AL is an ORN-driven amplifier held below its ignition point. Recruitment beyond the AL remains a sensible order parameter, but it now has to be studied with input switched on, not as an AL that runs by itself. With depression, the data-allowed range reaches up to roughly 0.7–0.95 of the brain-wide ignition point (about 0.8 by interpolation; the grid is coarse there). So a corrected model is compatible with a brain running just below global ignition, an idea that has nothing specific to do with the AL. That is a possibility, not a finding.</div>
+
+<h3 class="col">3. The phase diagram after the most defensible fixes</h3>
+<div class="col">
+  <ul>
+    <li><b>Quiescent region.</b> At h = 0 it now reaches g ≈ 1.1–1.3 at r = 1 with depression, against 0.29 before. With ORNs driven, this is where the real AL lives: driven, below the sustained onset, silent without input. It is not below the linear instability: from g_lin = 0.163 up, a rested network is linearly unstable, and activity dies only because depression shuts it down.</li>
+    <li><b>The slow window survives, with the same relative width.</b> The ratio of onset to the start of the window (lifetime 200) is 1.21–1.27 with depression and 1.18–1.21 with sign changes, against 1.19–1.21 in the published model (r = 1). It is still a lifetime crossover. Its location is now far above the AL's linear instability: onset/g_lin is 8.5 (NW16) and 10.2 (KW09) at r = 1, against 2.1. Between g_lin and about g = 1, depressed lifetimes stay at 15–70 units (NW16, KW09), hardly longer than the 12–15 units the fully active start needs to die out at g → 0. The linear instability no longer produces long-lived activity.</li>
+    <li><b>No AL-only localized phase.</b> Where activity first lasts, it already covers about 9,000–18,000 neurons (participation ratio), against 1,000–1,400 before. Two settings are exceptions: lLN1_bc at sign 0 with r = 0 (4,700 neurons, AL 23%), and the weak "slow-component" depression (5,000 neurons, AL 21%). The AL module holds 5–11% of the activity with literature depression (13% when only lLN1_bc depress), and 0.3–9% with sign changes at r ≥ 1. The pattern is mostly central brain and nerve cord, plus optic lobe once the clique is silenced. With depression, AL neurons are still the most active per neuron (18–39× the rest of the brain), but they no longer start the ignition. "Localized" survives only in the weak sense of participation below N/4.</li>
+    <li><b>Delocalization.</b> At r = 0 with depression the delocalization line moves from 1.47 to about 6.3, my interpolation of the participation ratio. At r = 1 it was not reached by g = 8, the end of the grid. Up to that point, participation at g = 8 is the same as in the published model (0.185 against 0.186). With sign changes it barely moves (r = 0: 1.47 → 1.48–1.64; r = 1: 14.4 → 14.5–17.0).</li>
+    <li><b>Crossover or transition?</b> The published model's onset is a continuous transition at g_lin, rounded by the module's finite size, with no first-order signs (phase-diagram v2 criticality and multistability programs). After the fixes, sustained activity begins in a broad network far above the AL's g_lin. Silence is far from linearly stable there: at the NW16 onset (g = 1.38), 47 of the top 400 excitatory modes (43 of them outside the AL) are past their linear threshold. What holds activity back below the onset is depression, a nonlinearity. A frozen-resource birth–death theory reproduces the depressed AL-alone onsets (2.83 against 3.00; 4.37 against 4.53), but only with its effective module size calibrated on the published-model runs. No avalanche, quasi-stationary or hysteresis tests were run on the corrected models, so the nature of the broad onset (a smooth crossover, a rounded continuous transition, or a first-order jump) is open.</li>
+  </ul>
+</div>
+
+<figure>
+  <div class="plate"><img src="figs/aldef/depression_isolation.png" alt="Three panels of lifetime against coupling for the whole CNS, the AL alone, and the CNS without the AL, at r = 1. Without depression the AL alone and the whole CNS reach sustained activity at about 0.34, and the CNS without the AL only at about 1.0. With per-spike depression at NW16 and KW09 values, the whole CNS and the CNS without the AL reach it at 1.4 to 1.7, and the AL alone only at 3.0 to 4.5."></div>
+  <figcaption><b>Depression takes the lead away from the AL (E3, r = 1).</b> Without depression (left), the AL alone (blue) sustains exactly where the whole brain does (black). Depression at literature values (middle: Nagel &amp; Wilson 2016; right: Kazama &amp; Wilson 2009) pushes the AL alone to 3.0–4.5. The brain without the AL (orange) then sustains first, and the whole brain follows it. Source: <code>depression/key_numbers.json</code>.</figcaption>
+</figure>
+
+<figure>
+  <div class="plate"><img src="figs/aldef/depression_removal.png" alt="Three panels against coupling g for the ORN-removal protocol with and without depression. Left: PN/ORN gain, with depression curves lying 2.4 to 5.6 times below the no-depression curve, so the realistic gain band is crossed between g 0.25 and 1.4 instead of 0.11 to 0.29. Middle: PN activity remaining after removal, which jumps above 10 percent near 0.3 without depression and near 1.2 to 1.5 with it. Right: the fraction of runs still active at the end, which rises near 0.3 without depression and near 1.2 to 2 with it."></div>
+  <figcaption><b>ORN drive plus depression (E3 with the E1 protocol, r = 1, ORN level 0.04).</b> At rest, depression at the ORN synapses lowers the feed-forward gain, as the measured 0.30–0.84 steady-state depression of ORN → PN at 3.44 Hz implies. Self-sustained activity after removal starts only between the grid points g = 1.15 and 1.5. The data-allowed range widens from 0.11–0.27 to 0.25–1.18 (NW16; upper end interpolated), and its upper end still sits below ignition. Circles mark points that pass every E1 criterion.</figcaption>
+</figure>
+
+<h3 class="col">4. What should change, and the experiment that would decide</h3>
+<div class="read">
+  <div>
+    <h4>Recommended model default</h4>
+    <ul>
+      <li><b>Per-spike depression on excitatory outputs</b> (<code>--std_mode spike</code>, U = 0.25, τ<sub>rec</sub> = 157 units ≈ 1.6 s, the NW16 values). Use all-synapse depression and the KW09 and N15 values as sensitivity checks. Do not use the default rate mode: it also weakens a rested neuron's first spike and moves g_lin by 1.2–1.3×.</li>
+      <li><b>ORN drive instead of h = 0</b>: all 2,639 ORNs at isolated-unit activity 0.04 (h ≈ 0.038; 3.6 Hz at 10 ms per unit).</li>
+      <li><b>Choose g inside the data-allowed range</b> (0.32–1.24 at r = 1 for this setting; the upper end is interpolated between grid points 1.15 and 1.5). Report results relative to that range and to the brain-wide onset (1.57), not relative to an AL onset.</li>
+      <li>Keep linear synapse counts and the released transmitter labels.</li>
+      <li><b>Next code change:</b> per-edge signs, with lLN1_bc → PN non-chemical (sign 0 or weak) and lLN1_bc → LN excitatory. This is the realistic version of cause 2 and is untested. Then rerun the palps-intact test with depression, and give drive to the other sensory inputs too.</li>
+    </ul>
+  </div>
+  <div>
+    <h4>The fly experiment that would decide</h4>
+    <ul>
+      <li><b>Measure the lLN1_bc → lLN1_bc synapse</b>, which carries 42% of the leading eigenvalue. Use a split-GAL4 line matched to lLN1_bc morphology. Stain for ChAT or VAChT to settle the label. Make paired recordings onto another lLN1_bc, onto a PN and onto a GABAergic LN. Block nicotinic receptors with mecamylamine, test a shakB gap-junction mutant, and deliver 10–20 Hz trains. That gives the sign per target, the electrical share, the strength, and the paired-pulse depression (f, τ<sub>rec</sub>). In the model, depression of f ≈ 0.75 on lLN1_bc outputs alone moves the onset 2.7×.</li>
+      <li><b>Functional test.</b> Remove the antennae and palps, drive lLN1_bc optogenetically with conditioning trains of different lengths, and record PNs and LNs after the light goes off. Expectation (not simulated): with depression, the after-activity is short and gets shorter after longer trains. Without depression, it does not depend on train length, and a gain increase of only 1.15–1.9× would make it self-sustaining.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="col">
+  <p class="small"><b>Caveats.</b> The model time unit is an assumption: τ<sub>u</sub> = 10 ms makes the maximum rate 45 Hz. Rate <i>ratios</i> are unaffected by it, but the depression results are not, because the recovery time in model units is τ<sub>rec</sub>/τ<sub>u</sub>. At τ<sub>u</sub> = 50 ms (the upper bound) it would be about 31 units, and the matching run (recovery 30 units) raises the onset only 2.5× and leaves the AL module 18% of the activity at onset. LN → LN and PN → LN depression are unmeasured, so ORN-synapse values stand in for all synapses. The simulator has no gap junctions. The sign ensemble assumes the non-consensus probability is shared among transmitters in proportion to their frequency in the release. Most depression arms are r = 1 only, and the depression runs used one ORN level. In the ORN-drive runs, non-olfactory inputs sit at h = 0. Boundaries are interpolated on grids, with uncertainties of about ±2–10% (more for the upper ends of the depressed allowed ranges, see section 2). <b>Checks.</b> An adversarial pass recomputed every onset quoted here from the raw runs, with three different onset definitions (lifetime, half alive, late lifetime): all agree within 0.4% of the lane values, and the ratios within about 2%. Five onsets were rerun with new seeds and agree within 3%. The current simulator gives bit-identical output to the original one with every new option off, and its faster "push" engine gives the same onset (0.345 against 0.346). The quoted sentences of the six most important papers were re-read in the papers themselves (<code>results/aldef/verify/verify.json</code>, <code>code/ald_verify.py</code>). Lane reports and tables: <code>results/aldef/</code> (<code>lit_biophysics.md</code>, <code>drive/</code>, <code>signs/</code>, <code>depression/</code>, <code>weights/</code>, <code>synth/synth_numbers.json</code>); figures <code>figs/aldef/</code>.</p>
+  <p class="small"><b>New references</b> (the others are in section 11):</p>
+  <ul class="small">
+    <li id="ald-benayoun2010">Benayoun M, Cowan JD, van Drongelen W, Wallace E 2010. Avalanches in a stochastic model of spiking neurons. PLoS Comput Biol 6:e1000846. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2900286/">PMC2900286</a></li>
+    <li id="ald-chou2010">Chou YH et al. 2010. Diversity and wiring variability of olfactory local interneurons in the Drosophila antennal lobe. Nat Neurosci 13:439. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2847188/">PMC2847188</a></li>
+    <li id="ald-eckstein2024">Eckstein N et al. 2024. Neurotransmitter classification from electron microscopy images at synaptic sites in Drosophila melanogaster. Cell 187:2574. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11106717/">PMC11106717</a></li>
+    <li id="ald-gu2006">Gu H, O'Dowd DK 2006. Cholinergic synaptic transmission in adult Drosophila Kenyon cells in situ. J Neurosci 26:265. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6674319/">PMC6674319</a></li>
+    <li id="ald-kazama2008">Kazama H, Wilson RI 2008. Homeostatic matching and nonlinear amplification at identified central synapses. Neuron 58:401. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2429849/">PMC2429849</a></li>
+    <li id="ald-kazama2011">Kazama H, Yaksi E, Wilson RI 2011. Cell death triggers olfactory circuit plasticity via glial signaling in Drosophila. J Neurosci 31:7619. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3119471/">PMC3119471</a></li>
+    <li id="ald-nagel2015">Nagel KI, Hong EJ, Wilson RI 2015. Synaptic and circuit mechanisms promoting broadband transmission of olfactory stimulus dynamics. Nat Neurosci 18:56. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4289142/">PMC4289142</a></li>
+    <li id="ald-nagel2016">Nagel KI, Wilson RI 2016. Mechanisms underlying population response dynamics in inhibitory interneurons of the Drosophila antennal lobe. J Neurosci 36:4325. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4829653/">PMC4829653</a></li>
+    <li id="ald-tobin2017">Tobin WF, Wilson RI, Lee WCA 2017. Wiring variations that enable and constrain neural computation in a sensory microcircuit. eLife 6:e24838. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5440167/">PMC5440167</a></li>
+    <li id="ald-yaksi2010">Yaksi E, Wilson RI 2010. Electrical coupling between olfactory glomeruli. Neuron 67:1034. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2954501/">PMC2954501</a></li>
+  </ul>
+  <p class="small">Depression parameter sets: KW09 = <a href="#alr-kazama2009">Kazama &amp; Wilson 2009</a> ORN → PN (keeps 72% per spike, recovers in 2.4 s); N15 = <a href="#ald-nagel2015">Nagel 2015</a> ORN → PN (78%, 0.89 s); NW16 = <a href="#ald-nagel2016">Nagel &amp; Wilson 2016</a> ORN → LN (75%, 1.57 s). The release probability of ORN → PN synapses, 0.79 per site, is from <a href="#ald-kazama2008">Kazama &amp; Wilson 2008</a>. The LN transmitter fractions are from <a href="#ald-chou2010">Chou 2010</a> and <a href="#ald-eckstein2024">Eckstein 2024</a>.</p>
+</div>
+
+    <h2 id="next" class="col"><span class="n">13</span>Open questions and runs in progress</h2>
+    <div class="col">
+      <ul>
+        <li><b>Done since the first version:</b> the sweep to \(g = 4\) (no global jump; see sections 6–7), real-network spreading (section 8), the movie (section 6), and the spectrum of the exact operator the simulation uses, for the real and the rewired network (section 9). No simulations are running now.</li>
+        <li><b>Since done:</b> the weight-shuffled null, module seeds, long runs, the full (g, r) phase diagram and the driven plane (section 10); the antennal-lobe literature check (section 11).</li>
+        <li><b>Running now:</b> a de Candia-style phase diagram (module phases, second- vs first-order lines, hysteresis), finite-size scaling of the onset, and criticality tests at g_lin, which answer whether the steep crossover is a rounded second-order transition.</li>
+        <li><b>Open:</b> why the theory overstates inhibition (about 2× in K); an isoflurane-like cholinergic weight cut (section 11); telling depression and the lLN1_bc sign apart needs per-target signs and a measurement of the lLN1_bc→lLN1_bc synapse (section 12); heterogeneity, adaptation and neuromodulation as sources of more rare regions</li>
+      </ul>
+    </div>
+
+    <h2 id="glossary" class="col"><span class="n">14</span>Glossary</h2>
+    <dl class="gloss">
+      <dt>Coupling \(g\)</dt><dd>One global multiplier on every synaptic weight. Turning it up makes the whole network more excitable.</dd>
+      <dt>Absorbing state</dt><dd>A state the system can enter but never leave. Here: all neurons quiet with no external drive.</dd>
+      <dt>Eigenvector / eigenvalue</dt><dd>A pattern of activity the connectivity maps onto a scaled copy of itself, and the scale factor. Large eigenvalues are the patterns the network amplifies most.</dd>
+      <dt>IPR</dt><dd>Inverse participation ratio. About \(1/k\) for a vector spread over \(k\) neurons; \(1/N\) when spread over all of them.</dd>
+      <dt>Participation ratio</dt><dd>The effective number of neurons carrying the activity, computed from per-neuron activity levels.</dd>
+      <dt>Localization</dt><dd>An eigenvector or activity pattern concentrated on a small subset of neurons.</dd>
+      <dt>Rare region</dt><dd>A part of a heterogeneous network that is more strongly connected than average, so it can sustain activity under conditions where the network as a whole cannot.</dd>
+      <dt>Griffiths phase</dt><dd>An extended range of parameters, below the global transition, where rare regions make the averaged dynamics slow and power-law-like.</dd>
+      <dt>Lifshitz tail</dt><dd>A sparse tail of large, localized eigenvalues at the top of the spectrum, the spectral fingerprint of rare regions.</dd>
+      <dt>Null model</dt><dd>The connectome with its wiring randomly shuffled, keeping each neuron's number of inputs and outputs and every synapse count. Whatever disappears in the null is due to the specific wiring.</dd>
+    </dl>
+
+    <footer>
+      Data: MaleCNS v1.0 (Janelia, CC BY 4.0). Model: stochastic Wilson–Cowan (Benayoun et al. 2010, <i>PLoS Comput Biol</i> 6:e1000846). Griffiths phases in brain networks: Moretti &amp; Muñoz 2013, <i>Nat Commun</i> 4:2521. Code, results and figures: <code>/MALECNS_ROOT</code> (STATE.md, CLAUDE.md).
+    </footer>
+  </main>
+</div>

@@ -1,0 +1,302 @@
+{
+ "options": {
+  "exp": "quiet",
+  "norm": "raw",
+  "g": [
+   0.08179,
+   0.18572,
+   0.42172,
+   0.95762,
+   2.17454,
+   4.93788,
+   11.2128,
+   25.4616
+  ],
+  "r": 1.75,
+  "h": 0.0,
+  "beta": 1.0,
+  "T": 4500.0,
+  "dt": 0.2,
+  "B": 64,
+  "null": false,
+  "null_kind": "targets",
+  "seed_set": null,
+  "seed": 20058,
+  "out": "/MALECNS_ROOT/results/m2/driven/runs/A1/M2_real_o0.04_r1.75_c3.npz",
+  "drive": [
+   "olfactory=0.037926"
+  ],
+  "clamp_off": [],
+  "clamp_on": [],
+  "sign_override": [],
+  "sign_ensemble": 0,
+  "ens_unit": "neuron",
+  "ens_conf": "body",
+  "ens_gt": "ignore",
+  "ens_qmiss": 0.5,
+  "ens_seed": null,
+  "ens_only": null,
+  "wtransform": "linear",
+  "wnorm": "renorm",
+  "std": null,
+  "std_group": [
+   "sign:1=0.25,157"
+  ],
+  "std_mode": "spike",
+  "adapt": null,
+  "adapt_group": [],
+  "refractory": 0,
+  "region": [
+   "ORN=olfactory",
+   "nonORN=~olfactory",
+   "uPN_ant=/MALECNS_ROOT/results/aldef/drive/groups/uPN_ant.npz",
+   "ALsys=/MALECNS_ROOT/results/aldef/drive/groups/ALsys.npz",
+   "lLN1_bc=type:lLN1_bc"
+  ],
+  "no_default_regions": false,
+  "no_occ": false,
+  "device": "cuda",
+  "engine": "push",
+  "push_max": 0.012,
+  "switch_at": 1500.0,
+  "sw_drive": [],
+  "sw_clamp_off": [
+   "olfactory"
+  ],
+  "sw_clamp_on": [],
+  "rec_lin": 10.0,
+  "win": [
+   "500:1500",
+   "1600:1800",
+   "2500:4500"
+  ],
+  "reg_last": true,
+  "occ_win": "500:1500",
+  "edge_sign": [],
+  "null_seed": null,
+  "graph": null,
+  "rec_counts": true,
+  "counts_win": "500:1500",
+  "counts_reg": true,
+  "pulse": null,
+  "pulse_gap": 0.0,
+  "ramp": 0.0,
+  "ramp_loop": false,
+  "ramp_avg": 0.5,
+  "init": [],
+  "init_frac": 1.0
+ },
+ "device": "cuda",
+ "gpu": "NVIDIA RTX A5000",
+ "c_raw": 0.0013406440848484635,
+ "drive": [
+  {
+   "sel": "olfactory",
+   "h": 0.037926,
+   "n": 2639
+  }
+ ],
+ "std": {
+  "default": null,
+  "groups": [
+   {
+    "sel": "sign:1",
+    "U": 0.25,
+    "tau": 157.0,
+    "n": 103746
+   }
+  ],
+  "n_depressing": 103746,
+  "mode": "spike"
+ },
+ "sw_clamp_off": [
+  {
+   "sel": "olfactory",
+   "n": 2639
+  }
+ ],
+ "switch_step": 7500,
+ "windows_steps": [
+  [
+   2500,
+   7500
+  ],
+  [
+   8000,
+   9000
+  ],
+  [
+   12500,
+   22500
+  ]
+ ],
+ "counts": {
+  "steps": [
+   2500,
+   7500
+  ],
+  "reg": true
+ },
+ "regions": {
+  "AL_module": {
+   "sel": "module",
+   "n": 526
+  },
+  "AL_rest": {
+   "sel": "al_rest",
+   "n": 3395
+  },
+  "CNS_rest": {
+   "sel": "cns_rest",
+   "n": 163295
+  },
+  "ORN": {
+   "sel": "olfactory",
+   "n": 2639
+  },
+  "nonORN": {
+   "sel": "~olfactory",
+   "n": 164577
+  },
+  "uPN_ant": {
+   "sel": "/MALECNS_ROOT/results/aldef/drive/groups/uPN_ant.npz",
+   "n": 220
+  },
+  "ALsys": {
+   "sel": "/MALECNS_ROOT/results/aldef/drive/groups/ALsys.npz",
+   "n": 1282
+  },
+  "lLN1_bc": {
+   "sel": "type:lLN1_bc",
+   "n": 30
+  }
+ },
+ "engine_steps": [
+  {
+   "push": 75787,
+   "spmm": 45373,
+   "zero": 58840
+  }
+ ],
+ "N": 167216,
+ "nnz": [
+  24562483
+ ],
+ "steps": 22500,
+ "n_draws": 1,
+ "ms_per_step": [
+  [
+   3.8434436268276637,
+   3.852162075042725,
+   3.8997488763597277,
+   4.218686517079671,
+   7.202411916520861,
+   10.83386329015096,
+   9.95880904727512,
+   9.952905580732557
+  ]
+ ],
+ "rho_T_mean": [
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0017092414200305939,
+  0.004484189208596945,
+  0.008785792626440525,
+  0.01512153446674347
+ ],
+ "surv_T": [
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.953125,
+  1.0,
+  1.0,
+  1.0
+ ],
+ "wall_s": 1212.1867570877075,
+ "reg_rho_T_mean": {
+  "AL_module": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.03047766163945198,
+   0.055043965578079224,
+   0.06633198261260986,
+   0.08044201135635376
+  ],
+  "AL_rest": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0006719439988955855,
+   0.0020388439297676086,
+   0.00342875556088984,
+   0.00545839499682188
+  ],
+  "CNS_rest": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0016381394816562533,
+   0.0043721674010157585,
+   0.00871180184185505,
+   0.015112029388546944
+  ],
+  "ORN": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "nonORN": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0017366490792483091,
+   0.004556093364953995,
+   0.008926672860980034,
+   0.015364009886980057
+  ],
+  "uPN_ant": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.005539772566407919,
+   0.008167613297700882,
+   0.008096590638160706,
+   0.010369318537414074
+  ],
+  "ALsys": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.014284322038292885,
+   0.027983617037534714,
+   0.036295827478170395,
+   0.04746002331376076
+  ],
+  "lLN1_bc": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.15729168057441711,
+   0.2901041805744171,
+   0.3583333492279053,
+   0.4125000238418579
+  ]
+ }
+}

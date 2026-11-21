@@ -1,0 +1,147 @@
+{
+ "options": {
+  "exp": "quiet",
+  "norm": "raw",
+  "g": [
+   0.25782,
+   0.30377,
+   0.35792
+  ],
+  "r": 0.25,
+  "h": 0.0,
+  "beta": 1.0,
+  "T": 3000.0,
+  "dt": 0.2,
+  "B": 64,
+  "null": false,
+  "null_kind": "targets",
+  "seed_set": null,
+  "seed": 302725316,
+  "out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M1_r0.25_G10_c1_k0.npz",
+  "drive": [],
+  "clamp_off": [],
+  "clamp_on": [],
+  "sign_override": [],
+  "sign_ensemble": 0,
+  "ens_unit": "neuron",
+  "ens_conf": "body",
+  "ens_gt": "ignore",
+  "ens_qmiss": 0.5,
+  "ens_seed": null,
+  "ens_only": null,
+  "wtransform": "linear",
+  "wnorm": "renorm",
+  "std": null,
+  "std_group": [],
+  "std_mode": "rate",
+  "adapt": null,
+  "adapt_group": [],
+  "refractory": 0,
+  "region": [],
+  "no_default_regions": false,
+  "no_occ": true,
+  "device": "cuda",
+  "engine": "push",
+  "push_max": 0.012,
+  "switch_at": null,
+  "sw_drive": [],
+  "sw_clamp_off": [],
+  "sw_clamp_on": [],
+  "rec_lin": 0.0,
+  "win": [],
+  "reg_last": false,
+  "occ_win": null,
+  "edge_sign": [],
+  "null_seed": null,
+  "graph": null,
+  "rec_counts": true,
+  "counts_win": null,
+  "counts_reg": false,
+  "pulse": "olfactory",
+  "pulse_gap": 10.0,
+  "ramp": 0.0,
+  "ramp_loop": false,
+  "ramp_avg": 0.5,
+  "init": [],
+  "init_frac": 1.0
+ },
+ "device": "cuda",
+ "gpu": "NVIDIA L4",
+ "c_raw": 0.0013406440848484635,
+ "counts": {
+  "steps": [
+   0,
+   15000
+  ],
+  "reg": false
+ },
+ "pulse": {
+  "sel": "olfactory",
+  "n": 2639,
+  "gap": 10.0,
+  "p_per_silent_step": 0.019801326693244747,
+  "mean_silent_interval": 10.100333331111107
+ },
+ "regions": {
+  "AL_module": {
+   "sel": "module",
+   "n": 526
+  },
+  "AL_rest": {
+   "sel": "al_rest",
+   "n": 3395
+  },
+  "CNS_rest": {
+   "sel": "cns_rest",
+   "n": 163295
+  }
+ },
+ "engine_steps": [
+  {
+   "push": 44996,
+   "spmm": 0,
+   "zero": 4
+  }
+ ],
+ "N": 167216,
+ "nnz": [
+  24562483
+ ],
+ "steps": 15000,
+ "n_draws": 1,
+ "ms_per_step": [
+  [
+   7.296817350387573,
+   9.047345940272013,
+   10.769536606470743
+  ]
+ ],
+ "rho_T_mean": [
+  0.00012390411575324833,
+  0.0007081970106810331,
+  0.0011843775864690542
+ ],
+ "surv_T": [
+  0.328125,
+  0.96875,
+  1.0
+ ],
+ "wall_s": 408.1810109615326,
+ "reg_rho_T_mean": {
+  "AL_module": [
+   0.022783983498811722,
+   0.10881060361862183,
+   0.15610148012638092
+  ],
+  "AL_rest": [
+   0.0005246686050668359,
+   0.0029132915660738945,
+   0.004887702409178019
+  ],
+  "CNS_rest": [
+   4.2580148146953434e-05,
+   0.00031413621036335826,
+   0.0006083698244765401
+  ]
+ }
+}

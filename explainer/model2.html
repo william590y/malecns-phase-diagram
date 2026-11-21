@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Model 2 Phase Diagrams</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Same notebook design as index.html and theory.html: one reading column, figure plates that break wider, sticky contents rail.
+   Additions for this page only: phase tints for the to-scale strip, grade tags for the agreement tables, a wider minimum for dense figures. */
+:root {
+  --paper: #f3f6f5; --plate: #ffffff; --ink: #14211f; --ink-soft: #4b5c59; --rule: #d3dcda;
+  --accent: #1f7a5c; --accent-soft: #dcefe7; --amber: #a5650b; --amber-soft: #f6ead6; --berry: #8a2d55; --berry-soft: #f3e1ea;
+  --ph-q: #e4ebe9; --ph-s: #c9e3d6; --ph-l: #86c4a8; --ph-d: #1f7a5c;
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Source Serif 4", "Iowan Old Style", Georgia, serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #0f1716; --plate: #ffffff; --ink: #e3ece9; --ink-soft: #9db1ac; --rule: #2a3a37;
+    --accent: #6fd3a8; --accent-soft: #173229; --amber: #f0b45c; --amber-soft: #33270f; --berry: #f08fb8; --berry-soft: #36182a;
+    --ph-q: #18221f; --ph-s: #1d3a2f; --ph-l: #2c6b52; --ph-d: #6fd3a8;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #0f1716; --plate: #ffffff; --ink: #e3ece9; --ink-soft: #9db1ac; --rule: #2a3a37;
+  --accent: #6fd3a8; --accent-soft: #173229; --amber: #f0b45c; --amber-soft: #33270f; --berry: #f08fb8; --berry-soft: #36182a;
+  --ph-q: #18221f; --ph-s: #1d3a2f; --ph-l: #2c6b52; --ph-d: #6fd3a8;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { background: var(--paper); color: var(--ink); font: 17px/1.62 var(--body); }
+.page { max-width: 1180px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 40px 80px;
+  display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 48px; }
+nav.toc { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 24px); align-self: start; font: 500 13px/1.5 var(--display); }
+nav.toc p { margin: 0 0 10px; color: var(--ink-soft); letter-spacing: .08em; text-transform: uppercase; font-size: 11.5px; }
+nav.toc ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+nav.toc a { color: var(--ink-soft); text-decoration: none; display: block; }
+nav.toc a:hover, nav.toc a:focus-visible { color: var(--accent); }
+main { min-width: 0; }
+.col { max-width: 66ch; }
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; letter-spacing: -0.01em; }
+h1 { font-size: clamp(30px, 4.6vw, 46px); line-height: 1.08; margin: 6px 0 14px; font-weight: 700; }
+h2 { font-size: 26px; line-height: 1.2; margin: 64px 0 12px; font-weight: 700; scroll-margin-top: 20px; }
+h2 .n { color: var(--accent); font-variant-numeric: tabular-nums; margin-right: 10px; }
+h3 { font-size: 18px; margin: 28px 0 6px; font-weight: 600; scroll-margin-top: 20px; }
+p { margin: 0 0 14px; }
+ul { padding-left: 1.2em; }
+li { margin: 0 0 6px; }
+.eyebrow { font: 600 12px/1.3 var(--display); letter-spacing: .1em; text-transform: uppercase; color: var(--accent); }
+.lede { font-size: 20px; line-height: 1.5; color: var(--ink); }
+.small { font-size: 14.5px; color: var(--ink-soft); }
+code, .num { font-family: var(--mono); font-size: .86em; font-variant-numeric: tabular-nums; }
+a { color: var(--accent); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.status { margin: 26px 0 8px; display: grid; gap: 10px; }
+.finding { display: grid; grid-template-columns: 128px minmax(0, 1fr); gap: 14px; align-items: start; padding: 12px 0; border-top: 1px solid var(--rule); }
+.finding:last-child { border-bottom: 1px solid var(--rule); }
+.chip { font: 600 11.5px/1.2 var(--display); letter-spacing: .06em; text-transform: uppercase; padding: 5px 8px; border-radius: 4px; justify-self: start; }
+.chip.ok { color: var(--accent); background: var(--accent-soft); }
+.chip.mid { color: var(--amber); background: var(--amber-soft); }
+.chip.todo { color: var(--berry); background: var(--berry-soft); }
+.chip.neg { color: var(--ink); background: var(--rule); }
+.finding p { margin: 0; }
+
+figure { margin: 26px 0 30px; max-width: 980px; }
+figure .plate { background: var(--plate); border: 1px solid var(--rule); border-radius: 6px; padding: 10px; overflow-x: auto; }
+figure img { display: block; width: 100%; height: auto; min-width: 560px; }
+figure .plate.wide img { min-width: 860px; }
+figcaption { font: 14.5px/1.5 var(--body); color: var(--ink-soft); margin-top: 10px; max-width: 66ch; }
+figcaption b { color: var(--ink); font-family: var(--display); font-weight: 600; }
+.read { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; max-width: 980px; margin: 4px 0 10px; }
+.read > div { min-width: 0; }
+.read h4 { font: 600 12px/1.3 var(--display); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); margin: 0 0 6px; }
+.read ul { margin: 0; padding-left: 1.1em; }
+.read li { margin: 0 0 6px; }
+
+.eq { overflow-x: auto; padding: 14px 18px; margin: 12px 0 16px; background: var(--accent-soft); border-radius: 6px; font-size: 17px; max-width: 66ch; }
+.eq .fallback { font-family: var(--mono); font-size: 14px; white-space: pre-wrap; }
+table { border-collapse: collapse; font-size: 15px; width: 100%; }
+.tablewrap { overflow-x: auto; margin: 10px 0 18px; max-width: 66ch; }
+.tablewrap.full { max-width: 980px; }
+.tablewrap.full table { min-width: 720px; }
+th, td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { font: 600 12px/1.3 var(--display); letter-spacing: .06em; text-transform: uppercase; color: var(--ink-soft); }
+td.num, th.num { text-align: right; font-family: var(--mono); font-variant-numeric: tabular-nums; font-size: 14px; white-space: nowrap; }
+tr.group td { font: 600 12.5px/1.3 var(--display); letter-spacing: .06em; text-transform: uppercase; color: var(--accent); padding-top: 16px; border-bottom: 1px solid var(--accent); }
+.g { font: 600 11px/1.2 var(--display); letter-spacing: .05em; text-transform: uppercase; padding: 3px 6px; border-radius: 4px; white-space: nowrap; display: inline-block; margin-bottom: 3px; }
+.g.ok { color: var(--accent); background: var(--accent-soft); }
+.g.no { color: var(--berry); background: var(--berry-soft); }
+.g.mid { color: var(--amber); background: var(--amber-soft); }
+.note { border-left: 3px solid var(--amber); background: var(--amber-soft); padding: 12px 16px; margin: 16px 0; max-width: 66ch; font-size: 15.5px; }
+.note b { font-family: var(--display); color: var(--amber); font-weight: 600; }
+dl.gloss { display: grid; grid-template-columns: minmax(130px, 200px) minmax(0, 1fr); gap: 8px 20px; max-width: 74ch; font-size: 15.5px; }
+dl.gloss dt { font: 600 14px/1.5 var(--display); }
+dl.gloss dd { margin: 0; color: var(--ink); }
+.gloss-h { font: 600 12px/1.3 var(--display); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); margin: 26px 0 10px; }
+footer { margin-top: 70px; padding-top: 16px; border-top: 1px solid var(--rule); font-size: 14px; color: var(--ink-soft); max-width: 70ch; }
+
+/* to-scale strip: Model 1 vs Model 2 at r = 1, drawn from the lane numbers */
+.strip { max-width: 980px; margin: 22px 0 8px; border: 1px solid var(--rule); border-radius: 6px; padding: 12px 12px 6px; overflow-x: auto; }
+.strip svg { display: block; width: 100%; height: auto; min-width: 560px; }
+.strip .lbl { font: 600 13px var(--display); fill: var(--ink); }
+.strip .sub { font: 500 11.5px var(--display); fill: var(--ink-soft); }
+.strip .ph { font: 600 12px var(--display); fill: var(--ink); text-anchor: middle; }
+.strip .ph.on-d { fill: var(--paper); }
+.strip .tick { font: 500 11.5px var(--mono); fill: var(--ink-soft); text-anchor: middle; }
+.strip .axis { stroke: var(--ink-soft); stroke-width: 1; }
+.strip .glin { stroke: var(--ink); stroke-width: 1.2; stroke-dasharray: 3 3; }
+.strip .q { fill: var(--ph-q); stroke: var(--rule); }
+.strip .s { fill: var(--ph-s); }
+.strip .l { fill: var(--ph-l); }
+.strip .d { fill: var(--ph-d); }
+.strip .allowed { fill: var(--ink); }
+.strip .allowed.fail { fill: var(--berry); }
+
+@media (max-width: 900px) {
+  .page { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  nav.toc { display: none; }
+}
+@media (max-width: 560px) {
+  body { font-size: 16px; }
+  .finding { grid-template-columns: minmax(0, 1fr); gap: 6px; }
+  .read { grid-template-columns: minmax(0, 1fr); }
+  dl.gloss { grid-template-columns: minmax(0, 1fr); gap: 2px 0; }
+  dl.gloss dd { margin-bottom: 10px; }
+}
+.pages { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 20px; font: 600 13px/1 var(--display); }
+.pages a { padding: 9px 14px; border: 1px solid var(--rule); border-radius: 999px; text-decoration: none; color: var(--ink-soft); }
+.pages a:hover { border-color: var(--accent); color: var(--accent); }
+.pages a[aria-current="page"] { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+<script>
+window.MathJax = { tex: { inlineMath: [["\\(", "\\)"]], displayMath: [["\\[", "\\]"]] }, svg: { fontCache: "global" },
+  startup: { pageReady: () => MathJax.startup.defaultPageReady().then(() => document.querySelectorAll(".fallback").forEach(e => e.hidden = true)) } };
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-svg.min.js" async></script>
+</head>
+<body>
+<div class="page">
+  <nav class="toc" aria-label="Contents">
+    <p>Contents</p>
+    <ol>
+      <li><a href="#summary">Summary</a></li>
+      <li><a href="#changed">1 · What changed</a></li>
+      <li><a href="#settings">2 · Two settings</a></li>
+      <li><a href="#decay">3 · Diagram at h = 0</a></li>
+      <li><a href="#driven">4 · Diagram with ORN drive</a></li>
+      <li><a href="#agreement">5 · Theory vs simulation</a></li>
+      <li><a href="#nature">6 · Nature of the transition</a></li>
+      <li><a href="#soc">7 · Self-organized criticality?</a></li>
+      <li><a href="#old-new">8 · Old model vs new</a></li>
+      <li><a href="#open">9 · Open problems</a></li>
+      <li><a href="#glossary">10 · Glossary</a></li>
+      <li><a href="./">← Back to the notebook</a></li>
+      <li><a href="theory.html">Theory (derivation) →</a></li>
+    </ol>
+  </nav>
+
+  <main>
+    <div class="col" id="summary">
+      <nav class="pages" aria-label="Pages"><a href="./">Notebook</a><a href="theory.html">Theory (derivation)</a><a href="flow.html">Flow field (animated)</a><a href="model2.html" aria-current="page">New model</a></nav>
+      <div class="eyebrow">MaleCNS · Model 2: depression + ORN drive · restart of Nov 9, 2026</div>
+      <h1>The phase diagrams, redone on the corrected model</h1>
+      <p class="lede">You asked to restart all of the theory and experiment for the phase diagrams on the new model. Model 2 adds the two things <a href="./#al-defect">section 12 of the notebook</a> found missing: short-term depression at excitatory synapses, and spontaneous input from the olfactory receptor neurons (ORNs). Four simulation lanes and two theory lanes redid the work. A synthesis compared them. A verifier then recomputed the numbers from the raw files and reran 16 lines with new random seeds: all 16 replicated, and 9 statements were corrected. None of the corrections moves a boundary or changes a verdict. This page reports the corrected result.</p>
+
+      <div class="status" role="list">
+        <div class="finding" role="listitem"><span class="chip ok">Established</span><p><b>Same phases, new place.</b> At h = 0 the order is still Q → S → L → D at every r. The S line and the onset move up 3.4–4.8× in g, and the D line is now finite at every r. The first sustained state is now <b>brain-wide</b>: 13,600–19,100 neurons carry it and the antennal-lobe (AL) module holds only 5–6% of the activity (Model 1: about 1,000 neurons, 40–50% in the AL). g_lin = 0.1632 does not move, so the onset now sits 7–12× above it.</p></div>
+        <div class="finding" role="listitem"><span class="chip ok">Established</span><p><b>The driven diagram mirrors the h = 0 one.</b> With the ORNs firing, activity outlives ORN removal exactly at the h = 0 onset (ratio 0.97–1.03 at all 23 r), and the range the data allow ends at the h = 0 S line (ratio 0.94–1.03).</p></div>
+        <div class="finding" role="listitem"><span class="chip neg">Negative</span><p><b>No g passes every data test at r = 0 or 1.</b> The PN gain test and the silence-after-removing-all-ORNs test pass from g = 0.216 (r = 0). The palps-intact test passes only below g ≈ 0.20. It is a near miss (7% in g), confirmed with 256 new replicas.</p></div>
+        <div class="finding" role="listitem"><span class="chip neg">Negative</span><p><b>The transition is continuous and rounded, and nothing exotic appears.</b> No first-order line, no coexisting states, no left/right symmetry breaking, no Griffiths window, and no self-organized criticality (0 critical-like points in either model).</p></div>
+        <div class="finding" role="listitem"><span class="chip mid">Mixed</span><p><b>Theory brackets the onset but does not hit it.</b> No pre-registered point estimate of the h = 0 onset agrees at any r (mean field 0.53–0.80× the simulation, stochastic theory 1.41–2.28×), though both bound it. Under ORN drive at r = 0 the linear-noise theory gets the gain window and the fluctuation peak to within 2–9%.</p></div>
+        <div class="finding" role="listitem"><span class="chip todo">Open</span><p>The palp leak, the unmeasured LN→LN synapses, the choice of time unit, and theory with inhibition (section 9).</p></div>
+      </div>
+    </div>
+
+    <h2 id="changed" class="col"><span class="n">1</span>What changed in the model, and why</h2>
+    <div class="col">
+      <p><a href="./#al-defect">Section 12</a> found that Model 1's self-sustaining antennal lobe is a defect of its synapse dynamics. Real projection neurons (PNs) are driven by the ORNs at rest and fall silent when the antennae are cut, and every measured excitatory AL synapse depresses strongly. Model 2 (M2) fixes both and changes nothing else: linear synapse counts, the released transmitter labels, the raw normalization, Δt, α and β all stay as in Model 1 (M1).</p>
+      <ul>
+        <li><b>Per-spike depression on excitatory outputs.</b> Each cholinergic neuron j carries a resource x<sub>j</sub> (1 when rested). Each time j switches on it transmits with strength x<sub>j</sub> for that whole active bout, and x<sub>j</sub> drops by the fraction U = 0.25. Between switch-ons x<sub>j</sub> recovers toward 1 with time constant TAU = 157 model units. These are Nagel &amp; Wilson 2016's ORN→LN values (75% kept per spike, 1.57 s recovery) at 10 ms per model unit. Inhibitory and modulatory outputs are not depressed.</li>
+        <li><b>Spontaneous ORN drive.</b> All 2,639 ORNs get h = 0.0379, which makes an isolated ORN active 4% of the time (3.6 Hz). Every other neuron has h = 0. Recurrent input lowers the real ORN rate at high g (0.030 at g = 1.5 and 0.024 at g = 3 in test runs at r = 1), so every gain uses the measured ORN rate.</li>
+      </ul>
+      <div class="eq">\[ s_i = g \sum_j c\, w_{ij}\, \sigma_j\, e_j\, a_j + h_i, \qquad \text{at each switch-on of } j:\; e_j \leftarrow x_j,\;\; x_j \leftarrow (1-U)\,x_j, \qquad x_j \to 1 \text{ with time constant TAU} \]
+        <div class="fallback">sᵢ = g Σⱼ c wᵢⱼ σⱼ eⱼ aⱼ + hᵢ;   at each switch-on of j: eⱼ ← xⱼ, then xⱼ ← (1 − U) xⱼ;   xⱼ relaxes to 1 with time constant TAU</div></div>
+      <p><b>Why the onset moves but g_lin does not.</b> A fully rested neuron transmits at full strength, so the linear stability of silence is exactly as before: g_lin = 0.1632 (recomputed by the verifier to 0.1631526). Sustained activity is different. A neuron that fires keeps using up its resource, and its outputs weaken (an ORN at 4% activity sits at x ≈ 0.41). Active states therefore need much more coupling to keep themselves going. In the stochastic theory, depression divides the effective size of every eigenmode by 36.3. A small, tight module like the AL is hit hardest, which is why it no longer leads.</p>
+      <p><b>Variants run alongside.</b> M2s adds per-target signs for the cholinergic lLN1_bc clique (onto PNs: 0, standing in for electrical coupling; onto LNs: +1). M1s is that sign fix without depression. Sensitivity runs: depression on every synapse, the KW09 and N15 depression values, TAU = 30 (a 50 ms time unit), and ORN levels 0.01–0.10. Full spec: <code>results/m2/MODEL2.md</code>.</p>
+    </div>
+
+    <div class="strip" role="img" aria-label="Phase strips at r = 1 on a log coupling axis from 0.1 to 30. Model 1: quiescent up to 0.283, slow window to 0.344, localized sustained to 14.5, delocalized above; data-allowed coupling 0.114 to 0.279. Model 2: quiescent up to 1.21, slow window to 1.57, sustained to 13.9, delocalized above; data-allowed coupling 0.317 to 1.23, but it fails the palps-intact test. The dashed line g_lin = 0.163 is the same for both.">
+      <svg viewBox="0 0 640 204" aria-hidden="true">
+        <text class="lbl" x="0" y="44">Model 1</text><text class="sub" x="0" y="59">old model</text>
+        <rect class="q" x="104" y="30" width="94.1" height="24"/><rect class="s" x="198.1" y="30" width="17.7" height="24"/><rect class="l" x="215.8" y="30" width="338.4" height="24"/><rect class="d" x="554.2" y="30" width="65.8" height="24"/>
+        <text class="ph" x="174" y="46.5">Q</text><text class="ph" x="207" y="46.5">S</text><text class="ph" x="385" y="46.5">L · AL module leads (40–50%)</text><text class="ph on-d" x="587" y="46.5">D</text>
+        <rect class="allowed" x="115.9" y="60" width="80.9" height="5"/><text class="sub" x="206" y="67">data-allowed 0.114–0.279</text>
+
+        <text class="lbl" x="0" y="116">Model 2</text><text class="sub" x="0" y="131">new model</text>
+        <rect class="q" x="104" y="102" width="225.6" height="24"/><rect class="s" x="329.6" y="102" width="23.6" height="24"/><rect class="l" x="353.2" y="102" width="197.1" height="24"/><rect class="d" x="550.3" y="102" width="69.7" height="24"/>
+        <text class="ph" x="217" y="118.5">Q</text><text class="ph" x="341.4" y="118.5">S</text><text class="ph" x="451.7" y="118.5">L · brain-wide (AL 6%)</text><text class="ph on-d" x="585" y="118.5">D</text>
+        <rect class="allowed fail" x="208.4" y="132" width="122.9" height="5"/><text class="sub" x="340" y="139">data-allowed 0.317–1.23, fails palp test</text>
+
+        <line class="glin" x1="148.3" y1="20" x2="148.3" y2="150"/><text class="sub" x="152" y="17">g_lin 0.163</text>
+        <line class="axis" x1="104" y1="158" x2="620" y2="158"/>
+        <line class="axis" x1="104" y1="158" x2="104" y2="163"/><line class="axis" x1="203.4" y1="158" x2="203.4" y2="163"/><line class="axis" x1="312.3" y1="158" x2="312.3" y2="163"/><line class="axis" x1="411.7" y1="158" x2="411.7" y2="163"/><line class="axis" x1="520.6" y1="158" x2="520.6" y2="163"/><line class="axis" x1="620" y1="158" x2="620" y2="163"/>
+        <text class="tick" x="104" y="177">0.1</text><text class="tick" x="203.4" y="177">0.3</text><text class="tick" x="312.3" y="177">1</text><text class="tick" x="411.7" y="177">3</text><text class="tick" x="520.6" y="177">10</text><text class="tick" x="612" y="177">30</text>
+        <text class="sub" x="362" y="198" text-anchor="middle">coupling g (log scale), inhibition r = 1, h = 0 phases; bars below: ORN-driven data-allowed range</text>
+      </svg>
+    </div>
+    <p class="small col">Drawn to scale from <code>results/m2/decay/tables.md</code> (M1 lines from <code>analysis2</code>, M2 lines from the decay lane) and <code>results/m2/driven/table.md</code> (allowed ranges at ORN level 0.04). Q quiescent, S slow window, L sustained and localized, D delocalized (glossary).</p>
+
+    <h2 id="settings" class="col"><span class="n">2</span>Two settings, two sets of phase names</h2>
+    <div class="col">
+      <p>With ORN drive, silence is no longer absorbing, so the old lifetime test cannot be used directly. The program therefore draws two diagrams over (g, r):</p>
+    </div>
+    <div class="read">
+      <div><h4>Setting (a): h = 0, fully active start</h4><ul><li>Exactly the Model 1 protocol and thresholds, so the two models compare directly.</li><li><b>Q</b>: mean lifetime τ &lt; 200. <b>S</b>: 200 ≤ τ &lt; 3000 (the slow window). <b>L</b>: sustained to T = 3000 and localized (participation ratio PR &lt; N/4). <b>D</b>: sustained and delocalized (PR ≥ N/4).</li><li>An oscillation flag (O) marks quasi-stationary states whose activity rings.</li></ul></div>
+      <div><h4>Setting (b): ORNs driven, then removed</h4><ul><li>Quiet start, ORN level 0.04 for 1,500 units (15 s), then every ORN is clamped off for 3,000 units, as in an antenna removal.</li><li><b>DQ</b>: PNs barely respond (gain G &lt; 0.29) and fall silent after removal. <b>DA</b>: realistic gain, silent after removal. <b>DT</b>: activity outlives removal by more than 200 units but dies within 3,000. <b>SS-L / SS-D</b>: activity survives removal, localized or delocalized.</li><li><b>Data-allowed region</b>: G between 0.29 and 1.45 (PNs at 1–5 Hz for ORNs at 3.44 Hz) and PNs silent after removal.</li></ul></div>
+    </div>
+
+    <h2 id="decay" class="col"><span class="n">3</span>The phase diagram at h = 0, with theory overlaid</h2>
+    <figure>
+      <div class="plate"><img src="figs/m2/final_decay.png" alt="Left: the Model 2 phase diagram at h = 0 on a log coupling axis from about 0.2 to 30 and inhibition r from 0 to 6. Quiescent up to the simulated S line near g = 1 to 1.6, slow window to the onset at 1.18 to 2.02, localized sustained region to the D line, delocalized beyond. The D line runs from 6.3 at r = 0 out to about 14 at r = 0.5 to 1 and back to 8 at r = 6. Theory curves: mean-field equal-size onset near g = 0.6 to 1.2, mean-field cutoff near 0.25 to 0.33, the mean-field AL-chain band hugging the simulated onset, stochastic single-mode onset from 1.66 at r = 0 to 4.6 at r = 6, stochastic pooled below the onset. Right: theory divided by simulation for the onset against r, with a grey band of plus or minus 10 percent; only the mean-field AL-chain adiabatic curve lies near 1."></div>
+      <figcaption><b>Figure 1. Model 2 at h = 0: simulation (lines with 95% bands) and both theories.</b> Left: the real connectome at 23 inhibition levels, 64 couplings each, 64 runs per point. Mean field (orange): the equal-size onset (dashed), its lower cutoff (dotted), and the AL-mode chain band (dash-dot). Stochastic theory (green): the single renormalized mode (solid, the pre-registered upper estimate) and the pooled state (dotted, lower). Open diamonds: mean-field D. It agrees within 10% at r = 0, 2.5 and 2.75, is absent up to g = 30 at r = 0.25–1.5, too high at r = 0.125 and 1.75–2.25, and 19–35% too low at r ≥ 3. Right: predicted onset divided by simulated onset. Source: <code>figs/m2/final_decay.png</code> from <code>code/m2_synth_figs.py</code>.</figcaption>
+    </figure>
+    <div class="col">
+      <div class="tablewrap" style="max-width:100%"><table>
+        <tr><th class="num">r</th><th class="num">S</th><th class="num">Onset [interval]</th><th class="num">D</th><th class="num">MF onset</th><th class="num">Stoch. onset</th><th class="num">MF D</th></tr>
+        <tr><td class="num">0</td><td class="num">0.981</td><td class="num">1.18 <span class="small">[1.17–1.20]</span></td><td class="num">6.29</td><td class="num">0.63</td><td class="num">1.66</td><td class="num">6.08</td></tr>
+        <tr><td class="num">0.25</td><td class="num">1.10</td><td class="num">1.33 <span class="small">[1.30–1.36]</span></td><td class="num">13.1</td><td class="num">0.83</td><td class="num">1.87</td><td class="num">none ≤ 30</td></tr>
+        <tr><td class="num">0.5</td><td class="num">1.18</td><td class="num">1.43 <span class="small">[1.40–1.46]</span></td><td class="num">14.1</td><td class="num">1.05</td><td class="num">2.08</td><td class="num">none ≤ 30</td></tr>
+        <tr><td class="num">1</td><td class="num">1.21</td><td class="num">1.57 <span class="small">[1.54–1.60]</span></td><td class="num">13.9</td><td class="num">1.23</td><td class="num">2.49</td><td class="num">none ≤ 30</td></tr>
+        <tr><td class="num">2</td><td class="num">1.34</td><td class="num">1.72 <span class="small">[1.70–1.75]</span></td><td class="num">11.9</td><td class="num">1.22</td><td class="num">3.09</td><td class="num">19.6</td></tr>
+        <tr><td class="num">4</td><td class="num">1.47</td><td class="num">1.94 <span class="small">[1.91–1.97]</span></td><td class="num">9.29</td><td class="num">1.20</td><td class="num">3.97</td><td class="num">6.38</td></tr>
+        <tr><td class="num">6</td><td class="num">1.56</td><td class="num">2.02 <span class="small">[1.99–2.10]</span></td><td class="num">8.03</td><td class="num">1.21</td><td class="num">4.60</td><td class="num">5.22</td></tr>
+      </table></div>
+      <p class="small">Couplings g at each boundary, 7 of the 23 simulated r. MF onset = mean field's equal-size rule; Stoch. onset = single renormalized mode (M1-calibrated inhibition for r &gt; 0). Simulation: <code>results/m2/decay/tables.md</code>; theory: <code>results/m2/synth/agreement.csv</code>.</p>
+      <ul>
+        <li><b>Order and width.</b> Q → S → L → D at every r. The slow window is narrow: onset/S = 1.20–1.33. The L phase now ends at a finite D line at every r (6.29 at r = 0, about 14 at r = 0.25–1.25, 8.03 at r = 6). In Model 1, D was not reached up to g = 30 for r = 1.75, 2, 3, 4 and 6, and was not tested beyond g = 2.6 at the other r ≥ 2.25.</li>
+        <li><b>Where the activity lives.</b> At the first sustained g, 13,600–19,100 neurons carry it, mostly central-brain and VNC intrinsic neurons; descending neurons are enriched 5.6–8.8× and VNC motor neurons 9–10×. The AL module carries 5.0–6.3%. The D line is where the optic lobes join in.</li>
+        <li><b>The real brain is no longer easier to ignite than a random one.</b> The configuration null (targets permuted) switches on at 1.37–1.61 and delocalizes at its onset, as in Model 1. The real onset is 0.73× the null's at r = 0 (0.742 on a second null graph) but 1.15–1.42× above it for r ≥ 1. In Model 1 the real onset was 0.3–0.5× the null's. The weight-shuffled null switches on at 1.41–1.59 with D at 2.8–5.4.</li>
+        <li><b>Variants.</b> M2s lies within 6% of M2 on every line, with 4.4–5.1% of activity in the AL. M1s (sign fix without depression) is still AL-led (43–50%), so depression does the work. Onsets relative to M2 at r = 0, 1, 4: KW09 1.16–1.41×, N15 0.73–0.85×, all-synapse depression 0.87–1.02×, TAU 30 0.49–0.71× (AL 12–18%). None is AL-led.</li>
+      </ul>
+    </div>
+    <figure>
+      <div class="plate"><img src="figs/m2/final_decay_nulls.png" alt="Three phase diagrams at h = 0 for seven inhibition levels. Configuration null: onset and D coincide near g = 1.4 to 1.6, so there is no localized phase; mean-field and stochastic theory points sit close to it. Weight-shuffled null: onset 1.4 to 1.6 and D at 2.8 to 5.4. M2s: lines nearly identical to Model 2."></div>
+      <figcaption><b>Figure 2. The two nulls and the sign variant at h = 0</b> (7 core r values). Left: configuration null, which goes straight from quiet to delocalized. Middle: weight-shuffled null (wiring kept, counts shuffled), which keeps a narrow L phase. Right: M2s, within 6% of M2. The grey line in each panel is the real M2 onset. Source: <code>figs/m2/final_decay_nulls.png</code>.</figcaption>
+    </figure>
+
+    <h2 id="driven" class="col"><span class="n">4</span>The phase diagram with ORN drive, with theory overlaid</h2>
+    <figure>
+      <div class="plate"><img src="figs/m2/final_driven.png" alt="Top: the Model 2 driven phase map at ORN level 0.04 over coupling g from 0.05 to 30 and r from 0 to 6, with phases DQ, DA, DT, SS-L and SS-D, a hatched data-allowed region from the G = 0.29 line (0.22 at r = 0 to 0.47 at r = 6) up to about the h = 0 S line, the DT to SS line lying on the h = 0 onset markers, and the SS-D line near g = 6 to 14. Mean-field G = 0.29 line bends outward between r = 1 and 3. Bottom left: PN/ORN gain against g for r = 0, 1, 4 with simulation dots, mean-field dashed lines and the linear-noise curve. Bottom middle: fluctuation (Fano) and autocorrelation time against g at r = 0, simulation and linear-noise theory, peaking near g = 0.7 to 1.0. Bottom right: data-allowed bars for M1, M2 and M2s at the core r values."></div>
+      <figcaption><b>Figure 3. Model 2 driven by spontaneous ORN activity (level 0.04).</b> (a) Phase map with the data-allowed region (hatched; gain and silence-after-removal tests only, not the palps-intact test), the simulated lines, the h = 0 onset and S line for comparison, and the theory: mean field's G = 0.29 line and equal-size removal line, and the linear-noise approximation (LNA, r = 0 only). (b) PN/ORN gain. (c) Fluctuations at r = 0 against the LNA. (d) Data-allowed ranges of M1, M2 and M2s; these bars also omit the palps-intact test. The weight-shuffled null's small allowed region (0.84–1.15 at r = 0, 1.01–1.15 at r = 0.25) is not drawn. Source: <code>figs/m2/final_driven.png</code>.</figcaption>
+    </figure>
+    <div class="col">
+      <div class="tablewrap" style="max-width:100%"><table>
+        <tr><th class="num">r</th><th class="num">DQ→DA</th><th class="num">Data-allowed</th><th class="num">DT→SS</th><th class="num">h = 0 onset</th><th class="num">SS-L→SS-D</th><th class="num">MF DQ→DA</th><th class="num">M1 allowed</th></tr>
+        <tr><td class="num">0</td><td class="num">0.216</td><td class="num">0.216–0.968</td><td class="num">1.21</td><td class="num">1.18</td><td class="num">6.25</td><td class="num">0.213</td><td class="num">0.092–0.215</td></tr>
+        <tr><td class="num">0.25</td><td class="num">0.241</td><td class="num">0.241–1.08</td><td class="num">1.32</td><td class="num">1.33</td><td class="num">12.8</td><td class="num">0.240</td><td class="num">0.097–0.230</td></tr>
+        <tr><td class="num">0.5</td><td class="num">0.267</td><td class="num">0.267–1.13</td><td class="num">1.43</td><td class="num">1.43</td><td class="num">13.9</td><td class="num">0.279</td><td class="num">0.101–0.248</td></tr>
+        <tr><td class="num">1</td><td class="num">0.317</td><td class="num">0.317–1.23</td><td class="num">1.57</td><td class="num">1.57</td><td class="num">13.9</td><td class="num">0.415</td><td class="num">0.114–0.279</td></tr>
+        <tr><td class="num">2</td><td class="num">0.400</td><td class="num">0.400–1.37</td><td class="num">1.73</td><td class="num">1.72</td><td class="num">12.0</td><td class="num">0.892</td><td class="num">0.132–0.306</td></tr>
+        <tr><td class="num">4</td><td class="num">0.463</td><td class="num">0.463–1.48</td><td class="num">1.95</td><td class="num">1.94</td><td class="num">9.43</td><td class="num">0.537</td><td class="num">0.164–0.340</td></tr>
+        <tr><td class="num">6</td><td class="num">0.474</td><td class="num">0.474–1.57</td><td class="num">2.07</td><td class="num">2.02</td><td class="num">8.20</td><td class="num">0.466</td><td class="num">0.187–0.382</td></tr>
+      </table></div>
+      <p class="small">ORN level 0.04, 64 runs per point; 494 GPU runs and 4,036 driven points in all. Data-allowed = gain and all-ORN removal tests (no palp test). Sources: <code>results/m2/driven/table.md</code> (sections A1, A2), <code>results/m2/synth/agreement.csv</code>.</p>
+      <ul>
+        <li><b>Same phase order at every r:</b> DQ → DA → DT → SS-L → SS-D. The allowed region's top is where PNs stop falling silent after removal, which is the h = 0 S line (ratio 0.94–1.03). Activity survives removal exactly at the h = 0 onset (ratio 0.97–1.03). So the driven diagram is the h = 0 diagram seen through an antenna removal.</li>
+        <li><b>No fluctuation peak marks a transition.</b> The pre-registered test was negative: no susceptibility or fluctuation peak tracks g_lin, DT→SS or any h = 0 line. The autocorrelation time peaks at g = 0.69–0.96, which is 0.40–0.61× DT→SS, and the weight-shuffled null has the same peak. The AL fluctuation measure is a broad plateau. Model 1's sharp AL peak sat at 0.55–0.66× its own SS line.</li>
+        <li><b>Depression, not input, sets the driven level.</b> The log–log slope of driven activity against the ORN input actually transmitted falls below 0.5 from g = 0.19–0.29 on (1.2–1.8× g_lin), so over most of the allowed region the activity follows depression more than input. This was a post hoc analysis.</li>
+        <li><b>More ORN drive shrinks the allowed region.</b> At ORN level 0.10 there is none for r ≥ 1, because the gain reaches 0.29 only where PNs no longer fall silent.</li>
+        <li><b>Nulls.</b> The configuration null has no allowed region at any r tested. The weight-shuffled null, which keeps the ORN→PN wiring, has a small one at r = 0 (0.84–1.15) and r = 0.25 (1.01–1.15), and none for r ≥ 0.5.</li>
+        <li>Oscillation flags: 14 of 4,036 driven points, none strong.</li>
+      </ul>
+    </div>
+    <figure>
+      <div class="plate"><img src="figs/m2/driven_palp.png" alt="Two panels, r = 0 and r = 1: antennal PN activity relative to its driven level after the antennal ORNs are removed with the palp ORNs still driven, against coupling g. Model 2 curves cross the 0.1 line near g = 0.2 and rise to 0.3 to 0.45; M2s curves cross near 0.3 and stay lower. Bars at the top mark the M2 allowed region starting at 0.22 (r = 0) and 0.32 (r = 1), and the M2s allowed region."></div>
+      <figcaption><b>Figure 4. The palps-intact test fails throughout M2's allowed region at r = 0 and 1.</b> Antennal PN activity 100–300 units (solid) and 1,000–3,000 units (dashed) after the antennal ORNs are removed, with the palp ORNs still driven, relative to the driven level; the test passes below 0.1 (Olsen et al. 2007 saw no spontaneous activity). At r = 0 the limit is g ≈ 0.20 by interpolation and the gain edge is 0.216. With 256 new replicas at g = 0.216 the late residual is 0.114 [0.112, 0.116], a clear fail; the early one is 0.096 [0.091, 0.102], marginal. M2s halves the leak and leaves a sliver at r = 0 from 0.235 to between 0.26 and about 0.30. Source: <code>figs/m2/driven_palp.png</code>; reruns <code>results/m2/verify/reruns.json</code>.</figcaption>
+    </figure>
+
+    <h2 id="agreement" class="col"><span class="n">5</span>How well the theory did</h2>
+    <div class="col">
+      <p>Two theory lanes wrote predictions before the comparison. Neither was blind, though: both had read the one-paragraph summaries of the experiment lanes in STATE.md. The stochastic lane said so; the mean-field lane did not. Their point estimates of the onset failed anyway, so that exposure produced no agreement.</p>
+    </div>
+    <div class="read">
+      <div><h4>Mean field ("meanfield" lane)</h4><ul><li>Each neuron's activity and resource, averaged exactly over the per-spike depression; inhibition cancels only coincident excitation (CQMF).</li><li>Gives fixed points, oscillations, the driven gain and a D line. An h = 0 onset needs a rule of thumb: the "equal-size" rule says activity sustains once its active core is as large as at Model 1's onset (about 106 neurons). It was labelled heuristic and expected to come out low.</li></ul></div>
+      <div><h4>Stochastic theory ("stochastic" lane)</h4><ul><li>Depression shrinks every mode's effective size by 1 + κ = 36.3. A two-variable (activity, resource) birth–death chain gives lifetimes: the single leading mode is an upper estimate, the pooled state a lower one. Inhibition at r &gt; 0 uses a factor calibrated on Model 1.</li><li>Under drive: a linear-noise approximation (LNA) of the driven state, with no r-dependence at first order.</li></ul></div>
+    </div>
+    <figure>
+      <div class="plate"><img src="figs/m2/final_agreement.png" alt="Three panels of theory divided by simulation against r, with a grey band for plus or minus 10 percent. (a) h = 0 S and onset: mean-field equal-size 0.53 to 0.80, stochastic single mode 1.2 to 2.3, mean-field AL chain adiabatic near 0.9 to 1.0. (b) h = 0 D line: mean field near 1 at r = 0, 2.5 and 2.75, high at r = 0.125 and 1.75 to 2.25, open triangles where it has no D up to g = 30, 0.65 to 0.81 at r of 3 and above. (c) Driven lines: mean-field G = 0.29 near 1 at small and large r and up to 2.5 at r = 1.75, removal line 0.53 to 0.81, allowed top 0.6 to 1.0, LNA G = 0.29 at 0.98 at r = 0 and 0.45 to 0.67 above."></div>
+      <figcaption><b>Figure 5. Theory divided by simulation for every graded boundary of the real connectome.</b> Grey band: ±10%, the pre-registered agreement rule (or inside the simulated interval). In panel (b) the mean-field D line agrees at r = 0, 2.5 and 2.75; the last two only because the error changes sign there. Source: <code>figs/m2/final_agreement.png</code>; every row in <code>results/m2/synth/agreement.csv</code>.</figcaption>
+    </figure>
+    <div class="col">
+      <div class="tablewrap full"><table>
+        <tr><th>Prediction</th><th>Mean field</th><th>Stochastic theory</th><th>Simulation</th></tr>
+        <tr class="group"><td colspan="4">h = 0 boundaries (real connectome)</td></tr>
+        <tr><td>Onset, point estimate</td><td><span class="g no">fails 23/23</span><br>0.53–0.80×</td><td><span class="g no">fails</span><br>1.41× at r = 0; 1.41–2.28× for r &gt; 0</td><td>1.18–2.02</td></tr>
+        <tr><td>S line, point estimate</td><td><span class="g no">fails 23/23</span><br>0.58–0.79×</td><td><span class="g no">fails</span><br>1.20× at r = 0; 1.20–1.98× for r &gt; 0</td><td>0.98–1.57</td></tr>
+        <tr><td>Onset bracket</td><td><span class="g mid">holds 23/23</span><br>[cutoff, AL chain frozen], 8.4–16.5× wide</td><td><span class="g mid">holds 7/7</span><br>[pooled, single], 2.0–3.7× wide</td><td></td></tr>
+        <tr><td>AL-mode chain, adiabatic (meant as an upper bound)</td><td><span class="g mid">close, wrong side</span><br>within 10% at 16/23 r, but below the simulation at 21/23</td><td></td><td></td></tr>
+        <tr><td>r-trend, onset(r = 6) / onset(r = 0)</td><td><span class="g ok">agrees</span><br>1.93</td><td><span class="g no">fails</span><br>2.77</td><td>1.71</td></tr>
+        <tr><td>D line</td><td><span class="g no">fails 20/23</span><br>agrees at r = 0, 2.5, 2.75; none ≤ 30 at r = 0.25–1.5; 1.33–2.36× at r = 0.125, 1.75–2.25; 0.65–0.81× at r ≥ 3</td><td>not predicted</td><td>6.29–14.2</td></tr>
+        <tr><td>Where activity lives at the simulated onset (PR, AL share within 2×)</td><td><span class="g ok">agrees</span></td><td><span class="g ok">agrees</span><br>PR 15,500, AL 5.2%</td><td>PR 13,600–19,100, AL 5.0–6.3%</td></tr>
+        <tr><td>Configuration-null onset</td><td><span class="g no">fails 7/7</span><br>0.78–0.90×</td><td><span class="g ok">agrees 5/6</span><br>own null graphs, 5k–167k neurons (±15%)</td><td>full size 1.37–1.61; at r = 0 from 3.73 (5k) to 1.60 (167k)</td></tr>
+        <tr><td>Real onset vs null onset</td><td></td><td><span class="g no">wrong at r = 0</span><br>predicted 1.30×; right direction at r ≥ 1 (predicted 1.30–2.28×)</td><td>0.73–0.74× at r = 0 (two null graphs), 1.15–1.42× at r ≥ 1</td></tr>
+        <tr><td>Modules alone, r = 0</td><td></td><td><span class="g mid">3 of 6 agree</span><br>AL 2.08, left lobe and OL 5.22 agree; right lobe, CB 1.67 and VNC 24 fail</td><td>AL 2.19, OL 5.00, CB 1.42, VNC 3.36</td></tr>
+        <tr class="group"><td colspan="4">ORN-driven lines (level 0.04)</td></tr>
+        <tr><td>DQ→DA (gain 0.29)</td><td><span class="g mid">agrees 10/23</span><br>r ≤ 0.625 and r ≥ 4.5; up to 2.5× off at r = 1.75</td><td><span class="g ok">agrees at r = 0</span><br>0.213; fails at r ≥ 1 (0.45–0.67×)</td><td>0.216 (r = 0) to 0.474</td></tr>
+        <tr><td>Top of the gain window (G = 1.45), r = 0</td><td></td><td><span class="g ok">agrees</span><br>1.03</td><td>1.05</td></tr>
+        <tr><td>DT→SS (activity survives removal)</td><td><span class="g no">fails 23/23</span><br>0.53–0.81×</td><td>not predicted</td><td>1.21–2.07</td></tr>
+        <tr><td>Top of the allowed region</td><td><span class="g no">fails 16/23</span><br>agrees at 7 r; 0.61–0.99×</td><td></td><td>0.968–1.57</td></tr>
+        <tr><td>Fluctuation (Fano) peak, r = 0</td><td></td><td><span class="g ok">agrees</span><br>59 at g = 0.91</td><td>55 at g = 0.99</td></tr>
+        <tr><td>Autocorrelation-time peak, r = 0</td><td></td><td><span class="g mid">height agrees, place fails</span><br>11.0 at 0.65; at r = 1, 4 the height is 2.0–2.3× too high</td><td>10.1 at 0.74</td></tr>
+        <tr><td>AL Fano peak, r = 0</td><td></td><td><span class="g mid">height agrees, place fails</span><br>2.20 at 0.39</td><td>2.19 at 0.47</td></tr>
+        <tr class="group"><td colspan="4">What kind of transition</td></tr>
+        <tr><td>Bistability, coexisting states</td><td><span class="g ok">agrees</span><br>none</td><td><span class="g ok">agrees</span><br>one fixed point from 6 starts</td><td>one state in all 168 cells tested</td></tr>
+        <tr><td>Left/right symmetry breaking</td><td></td><td><span class="g ok">agrees</span><br>none</td><td>0 of 220 points</td></tr>
+        <tr><td>Oscillations</td><td><span class="g mid">half right</span><br>none at r = 0 (right); large slow oscillations for r &gt; 0 from g ≈ 1.0–1.6 (not seen)</td><td><span class="g ok">agrees</span><br>damped noise quasi-cycle, never strong</td><td>damped quasi-cycles at r = 0 only</td></tr>
+        <tr><td>Driven branching ratio</td><td></td><td><span class="g ok">agrees</span><br>max 0.948 per unit</td><td>max 0.942 per unit</td></tr>
+        <tr><td>Self-organized criticality (pulse avalanches)</td><td></td><td><span class="g ok">agrees</span><br>never critical-like on the real graph</td><td>0 critical-like points</td></tr>
+        <tr><td>Lifetimes in the slow window</td><td></td><td><span class="g ok">agrees</span><br>early deaths, then exponential</td><td>early deaths, then exponential</td></tr>
+        <tr><td>Depression variants (onset relative to M2)</td><td></td><td><span class="g mid">direction only</span><br>KW09 1.51, N15 0.62, TAU 30 0.35</td><td>1.16–1.41, 0.73–0.85, 0.49–0.71</td></tr>
+      </table></div>
+      <p class="small">Ratios are theory ÷ simulation. "Agrees" means inside the simulated interval or within ±10% (±20% for the r-trend, ±15% for the finite-size nulls). Sources: <code>results/m2/synth/agreement.json</code> (tally, trend, where-at-onset), <code>results/m2/theory/stochastic.md</code> sec. 11, <code>results/m2/theory/meanfield_predictions.json</code>, corrections in <code>results/m2/verify/corrections.json</code> (items 2, 3, 8).</p>
+      <div class="note"><b>Reading the scorecard.</b> Both theories get the qualitative picture right: brain-wide onset, no bistability, no symmetry breaking, damped oscillations, no criticality. Neither can place the h = 0 onset. Mean field over-dilutes the active state; the stochastic single mode, with its Model 1 calibration for inhibition, makes inhibition too strong, so its error grows with r (1.41× at r = 0, 2.28× at r = 6). Under drive the LNA works very well at r = 0 but has no way to see inhibition. Compare Model 1, where the spectral theory matched the r = 0 boundaries to 5–9% (notebook section 10).</div>
+    </div>
+
+    <h2 id="nature" class="col"><span class="n">6</span>What kind of transition is it?</h2>
+    <div class="col">
+      <p>Four tests were pre-registered: finite-size scaling of the onset, hysteresis under slow ramps of g, lifetimes in the slow window, and oscillations. A fifth, the module phases of de Candia et al., came from the module lane.</p>
+    </div>
+    <figure>
+      <div class="plate wide"><img src="figs/m2/nature_fss.png" alt="Nine panels of finite-size scaling. Top row: crossover width W = ln(onset/S) against network size N from 5,000 to 167,216 for r = 0, 1, 4; configuration nulls fall from about 0.27 to 0.14 at r = 0 and from 0.45 to 0.08 at r = 1; real uniform subsamples fall slowly from 0.30 to 0.19 at r = 0. Middle row: onset coupling against N; nulls fall toward 1.4 to 1.6, real subsamples fall steeply from 4.4 at 20,000 neurons to 1.18 for the full brain at r = 0. Bottom row: lifetime curves sharpening with N for nulls and real subsamples at r = 1, and the size scaling of fluctuation amplitude."></div>
+      <figcaption><b>Figure 6. Finite-size scaling at h = 0.</b> Top: width of the crossover from S to onset, W = ln(onset/S), against network size. Middle: where the onset sits. Bottom: lifetime curves at r = 1 for nulls (G) and real uniform subsamples (H), and fluctuation scaling (I). Source: <code>figs/m2/nature_fss.png</code>; numbers <code>results/m2/nature/fss.json</code>, recomputed in <code>results/m2/verify/verify.json</code>.</figcaption>
+    </figure>
+    <div class="col">
+      <ul>
+        <li><b>Nulls sharpen.</b> W(167k)/W(5k) = 0.168 at r = 1 and 0.187 at r = 4: the transition gets sharper as the network grows. At r = 0 the ratio is 0.50, right at the pre-registered cut; a bootstrap over the three null graphs per size gives [0.47, 0.55], so pass or fail cannot be decided. W is flat for N ≥ 40k there (0.143, 0.148, 0.136). Null onsets fall toward the null's own g_lin, and the active fraction at onset falls as N grows: a continuous, strongly rounded transition.</li>
+        <li><b>The real brain drifts.</b> Uniform real subsamples narrow only slowly, roughly as N<sup>−0.2</sup> (W 0.30 → 0.19 at r = 0, 0.39 → 0.26 at r = 1, 0.42 → 0.28 at r = 4, from 20k to the full brain), while the onset moves from 4.4 down to 1.18 (r = 0). That is neither sharpening nor a fixed width, so the pre-registered verdict is "inconclusive / drifting". In Model 1 the real onset was pinned by one module: the AL alone matched the whole brain to 1.8%. In Model 2 no module pins it.</li>
+      </ul>
+    </div>
+    <figure>
+      <div class="plate wide"><img src="figs/m2/nature_hysteresis.png" alt="Hysteresis from slow ramps of g. Top row: active fraction going down and back up for dwell times 50 to 3,200 at r = 1 and r = 0 in Model 2, r = 1 in Model 1, and the ORN-driven ramp; the loops close as dwell grows. Middle row: loop area against dwell time on log axes, falling steeply for every r, with the permutation noise floor dotted. Bottom: resource lag during the ramp, the ratio A(800)/A(200) by r staying below 0.7 except for one Model 1 driven case, and verdict tables."></div>
+      <figcaption><b>Figure 7. Hysteresis under slow ramps of g</b> (32 runs, the same runs going up and down). Panels E–H: loop area against the dwell time per g. Panel J: the pre-registered first-order rule needs A(800)/A(200) ≥ 0.7. Source: <code>figs/m2/nature_hysteresis.png</code>; <code>results/m2/nature/hyst.json</code>.</figcaption>
+    </figure>
+    <div class="col">
+      <ul>
+        <li><b>No first-order hysteresis.</b> All 14 Model 2 ramps (h = 0 and ORN-driven, 7 r each) are finite-rate effects. Loops shrink 11–90× from dwell 50 to 800 and reach the noise floor by 800–3,200. Driven ramps show no bimodal states. The one Model 1 case that tripped the rule (driven, r = 1) was noise: two extra seeds gave p = 0.74 and 0.57, and dwell 3,200 made it finite-rate.</li>
+        <li><b>No coexisting states and no left/right symmetry breaking.</b> Starts from all-active, quiet and partial states end in one cluster in all 96 h = 0 and 72 driven cells. No broken-symmetry point among 220 testable ones for the AL lobes and hemispheres, in M1, M2, M2s and M2 with TAU 30.</li>
+      </ul>
+    </div>
+    <figure>
+      <div class="plate wide"><img src="figs/m2/decay_lifetimes.png" alt="Slow-window lifetimes over 30,000 time units with 128 runs per coupling, for Model 2 at r = 0, 1, 4 and the configuration null at r = 1. Top: fraction of runs alive on a log axis, with a fast early drop before t = 200 and then straight exponential tails. Middle: death rate in log time bins, flat after the early drop rather than falling as 1/t. Bottom: mean activity against time with a dip and partial recovery near t = 50 to 200."></div>
+      <figcaption><b>Figure 8. Is there a Griffiths window in Model 2? No.</b> Survival (top), death rate (middle) and mean activity (bottom) over 30,000 units in the slow window. Many runs die early (t &lt; 200) while the resources used up by the fully active start recover; the rest die at a constant rate. Residual lifetimes after t = 200 pass an exponential test at 21 of 21 points (verifier's KS p = 0.15–0.41 at three long-run points). At r = 1, g = 1.57: 13.3% dead by t = 200, late lifetime 4,194 units. Source: <code>figs/m2/decay_lifetimes.png</code>; <code>results/m2/decay/lifetimes.json</code>.</figcaption>
+    </figure>
+    <div class="col">
+      <ul>
+        <li><b>Griffiths.</b> Exponential tails mean one metastable state dying at random, not a spread of rare regions. The pre-registered verdict was "exponential" at r = 4 and "inconclusive" at r = 0, 1 and the null because of the early deaths; separating early and late deaths (post hoc) resolves it. This is the same answer as Model 1, now without even the single AL rare region.</li>
+        <li><b>Oscillations are damped noise, not a phase.</b> On the real M2 graph, the oscillation flag fires only at r = 0, g = 1.15–1.31 (0.97–1.11× the onset), with period 73–83 units (0.73–0.83 s at 10 ms per unit). The flags are threshold-marginal: autocorrelation peaks of 0.10–0.15 against a threshold of 0.10. The one "strong" flag (7 runs) disappears with a different estimator. Uniform real subsamples give variance ∝ N<sup>−1.19</sup>, the signature of a noise-driven quasi-cycle; subsamples that keep the AL give −0.03 and +0.34, but they over-couple the AL 2–4×. Model 1 has no oscillation flags at all.</li>
+        <li><b>Module phases (de Candia).</b> At the first sustained g, 31 of the 34 modules are on (≥ 1% occupancy) at r = 0 and 4 at r = 6; in Model 1 it was always 3, the AL. Half the modules switch on within 1.0–1.4× the onset (Model 1: 1.7–3.0×). Every partial start, even a 221-neuron island or 1% of random neurons, survives like the all-active start. Cut out and simulated alone at r = 0, the AL needs g = 2.19, the central brain 1.42, the VNC 3.36 and the optic lobes 5.0, against 1.18 for the whole brain: no part sustains itself alone at the brain's onset.</li>
+      </ul>
+      <div class="note"><b>Verdict.</b> A continuous, strongly rounded onset with no first-order sign anywhere (no hysteresis that survives slow ramps, no coexistence, no symmetry breaking). Whether it sharpens into a true second-order transition as the brain grows is undetermined, because the real graph's width drifts slowly with size instead of either shrinking or staying fixed. There is no Griffiths window.</div>
+    </div>
+
+    <h2 id="soc" class="col"><span class="n">7</span>Does depression make the brain self-organize to criticality?</h2>
+    <div class="col">
+      <p>Levina, Herrmann &amp; Geisel (2007) showed that depressing synapses can tune a network to critical avalanches over a wide range of coupling. Model 2 has exactly that ingredient, so the program tested it with a pre-registered rule. In the pulse protocol (h = 0, one ORN kicked whenever the network falls silent), a coupling counts as <b>critical-like</b> if the avalanche-size exponent lies in 1.3–1.7 with a good power-law fit (KS ≤ 0.03, at least 1,000 avalanches in the tail, sizes spanning 100×). The Levina picture would be supported if Model 2's critical-like couplings spanned ≥ 1.5× in g while Model 1's spanned &lt; 1.2×.</p>
+    </div>
+    <figure>
+      <div class="plate wide"><img src="figs/m2/nature_avalanches.png" alt="Avalanche statistics. Size distributions for Model 2 and Model 1 at r = 1 against a slope of minus 3/2; Model 2 develops a bump of very large avalanches near the onset. Fitted size exponents cross the 1.3 to 1.7 band at low g, but the goodness-of-fit KS values stay above the 0.03 line there. Mean avalanche size rises toward the onset. Branching ratio per model time unit rises to at most about 0.97 in Model 2. The size-duration exponent gamma sits near 2 while the crackling prediction is 2.4 to 2.8. The ORN-driven branching ratio peaks at 0.94 per unit at r = 0 and lower for larger r."></div>
+      <figcaption><b>Figure 9. Avalanches.</b> A–B: size distributions at r = 1 (M2, M1). C–D: fitted size exponent and fit quality, with the critical-like band and the KS cut. E–F: mean size and branching ratio per model time unit. G: the size–duration exponent against the crackling-noise prediction. I–J: branching ratio under ORN drive. Source: <code>figs/m2/nature_avalanches.png</code>; <code>results/m2/nature/aval.json</code>, <code>driven_branch.json</code>.</figcaption>
+    </figure>
+    <div class="col">
+      <ul>
+        <li><b>Zero critical-like points</b> in either model, in all 21 cells (7 r × 3 pulse gaps). By the pre-registered rule the Levina test is therefore "inconclusive", since the rule needs at least one model to show critical-like points. In plain terms: there is no sign of self-organized criticality.</li>
+        <li><b>Near misses explained.</b> The fitted exponent passes through 1.3–1.7 at 0.16–0.32× the onset, but the fits fail (KS 0.031–0.080). From 0.5–0.68× the onset a bump of very large avalanches appears: population bursts, not scale-free cascades. The size–duration exponent is 1.96–2.24, while the crackling relation from the fitted exponents predicts 2.36–2.77, so the exponents are not mutually consistent.</li>
+        <li><b>Branching ratio.</b> In the pulse protocol it peaks at 0.977 per model time unit in Model 2, lower than Model 1's 0.992; depression does not push it toward 1. Under ORN drive the maximum is 0.942 per unit, which is 0.988 per simulation step. The pre-registered marker |1 − m| &lt; 0.01 is missed by a wide margin per unit and by only 0.002 per step, so the statement depends on the time base. Either way there is no stretch of g with m ≈ 1.</li>
+        <li><b>The theory expected this.</b> The stochastic lane predicted that the real graph never becomes critical-like, because depression confines the pulse response to a small AL-localized mode, which cuts any power law off at sizes of about 60–95. It also predicted critical-like avalanches on the configuration null (g = 0.91–3.0). That second prediction was not simulated.</li>
+      </ul>
+    </div>
+
+    <h2 id="old-new" class="col"><span class="n">8</span>Old model vs new</h2>
+    <figure>
+      <div class="plate"><img src="figs/m2/final_m1_vs_m2.png" alt="Four panels. (a) Model 1 phase diagram at h = 0: S and onset near g = 0.23 to 0.58, D from 1.5 at r = 0 rising beyond 30 at r of 1.75 and above. (b) Model 2: S and onset near g = 1 to 2, D from 6.3 at r = 0 out to 14 and back to 8 at r = 6, with Model 1's onset drawn for scale. (c) AL-module share of the first sustained state: about 45 to 50 percent in M1 and M1s, about 5 to 6 percent in M2 and M2s; inset: about 1,000 neurons carry it in M1 against 13,000 to 19,000 in M2. (d) ORN-driven data-allowed regions: M1 roughly 0.09 to 0.38 and M2 roughly 0.22 to 1.6, each ending below its own DT to SS line."></div>
+      <figcaption><b>Figure 10. Model 1 and Model 2 on the same axes.</b> (a, b) h = 0 diagrams. (c) Share of the first sustained activity in the 526-neuron AL module, and the number of neurons carrying it. (d) Where the real fly may sit under ORN drive, before the palps-intact test (which removes all of M2's region at r = 0 and 1). Source: <code>figs/m2/final_m1_vs_m2.png</code>.</figcaption>
+    </figure>
+    <div class="col">
+      <div class="tablewrap full"><table>
+        <tr><th>Question</th><th>Model 1 (old)</th><th>Model 2 (new)</th></tr>
+        <tr><td>Linear instability of silence, g_lin</td><td>0.1632</td><td>0.1632 (unchanged)</td></tr>
+        <tr><td>h = 0 S / onset / D at r = 0</td><td class="num">0.234 / 0.266 / 1.47</td><td class="num">0.981 / 1.18 / 6.29</td></tr>
+        <tr><td>Same at r = 1</td><td class="num">0.283 / 0.344 / 14.5</td><td class="num">1.21 / 1.57 / 13.9</td></tr>
+        <tr><td>Same at r = 6</td><td class="num">0.436 / 0.579 / none ≤ 30</td><td class="num">1.56 / 2.02 / 8.03</td></tr>
+        <tr><td>Onset relative to the other model</td><td>—</td><td>3.4–4.8× Model 1's</td></tr>
+        <tr><td>Who sustains first</td><td>The AL module: 40–50% of activity, about 1,000 neurons</td><td>Brain-wide: AL 5–6%, 13,600–19,100 neurons, mostly central brain and VNC</td></tr>
+        <tr><td>Modules on at the first sustained g (of 34)</td><td>3 (the AL)</td><td>31 (r = 0) down to 4 (r = 6)</td></tr>
+        <tr><td>Real onset vs configuration null</td><td>0.3–0.5× (real ignites far earlier)</td><td>0.74× at r = 0, 1.15–1.42× at r ≥ 1</td></tr>
+        <tr><td>The AL simulated alone</td><td>Same onset as the whole brain (within 1.8%)</td><td>Needs 2.19 vs 1.18 (r = 0); nothing sustains alone</td></tr>
+        <tr><td>de Candia-style phases</td><td>SL → metastable AL → AL-only (B1-like) → island cascade → D (r ≤ 1.5)</td><td>SL → slow window → brain-wide L → D at every r; under drive only the AL lobes are on below DT→SS</td></tr>
+        <tr><td>Finite-size behaviour of the onset</td><td>Fixed width, set by one module (K ≈ 70 at r = 0)</td><td>Width drifts slowly (about N<sup>−0.2</sup>); inconclusive</td></tr>
+        <tr><td>First-order lines, coexistence, L/R breaking</td><td>None</td><td>None</td></tr>
+        <tr><td>Griffiths window</td><td>No; one rare region (the AL) with exponential lifetimes</td><td>No; early deaths, then exponential</td></tr>
+        <tr><td>Oscillations</td><td>None flagged</td><td>Damped quasi-cycles at r = 0 near the onset only</td></tr>
+        <tr><td>Critical-like avalanches</td><td>0 points</td><td>0 points</td></tr>
+        <tr><td>Data-allowed g at ORN 0.04 (r = 0; r = 1)</td><td class="num">0.092–0.215; 0.114–0.279</td><td class="num">0.216–0.968; 0.317–1.23</td></tr>
+        <tr><td>Top of that range ÷ own h = 0 onset (r = 0; r = 1)</td><td class="num">0.81; 0.81</td><td class="num">0.82; 0.79</td></tr>
+        <tr><td>Palps-intact test</td><td>Passes in part of the range (up to g ≈ 0.17–0.19)</td><td>Fails everywhere in the range at r = 0 and 1 (limit ≈ 0.20, gain edge 0.216)</td></tr>
+        <tr><td>Best theory</td><td>Spectral onset theory, 5–9% at r = 0; overstates inhibition (1.8× at r = 1)</td><td>Brackets only at h = 0; LNA within 2–9% under drive at r = 0</td></tr>
+      </table></div>
+      <p class="small">Model 1 sources: <code>results/analysis2/phase_complete.md</code>, <code>results/pd3/REPORT.md</code>, <code>results/aldef/REPORT.md</code>. Model 2 sources: the lane files named in sections 3–7. The "top ÷ onset" row is computed here from the two tables above (0.215/0.266, 0.279/0.344, 0.968/1.18, 1.234/1.571).</p>
+    </div>
+    <figure>
+      <div class="plate"><img src="figs/m2/modules_phase_map.png" alt="Four heat maps of how many of the 34 modules are on (at least 1 percent occupancy) over coupling g and inhibition r. Model 1 at h = 0: a few modules switch on just right of the onset line near g = 0.3 and the count grows gradually up to g of several. Model 2 at h = 0: nothing until the onset near g = 1.2 to 2, then nearly all modules within a short stretch of g. With ORN drive: in Model 1 one to three modules are on from g = 0.1 on; in Model 2 one to three modules (the AL lobes) are on from about 0.25 until the DT to SS line, then nearly all."></div>
+      <figcaption><b>Figure 11. How many of the 34 modules are on.</b> Top: h = 0, M1 (left) and M2 (right). Bottom: ORN drive. In Model 2 the recruitment cascade of Model 1 collapses into a short stretch just above the onset. Source: <code>figs/m2/modules_phase_map.png</code>; <code>results/m2/modules/key_numbers.json</code>.</figcaption>
+    </figure>
+    <div class="col">
+      <div class="note"><b>What this does to the earlier reading.</b> Model 1's story was a single rare region, the antennal lobe, switching on alone and then recruiting islands one by one. With depression and ORN drive that story is gone. The AL is an ORN-driven amplifier held below its own ignition point, and when self-sustained activity does appear it appears across most of the brain at once. The real fly, if this model is right, sits below that onset, at most about 0.8 of it, in a regime whose fluctuation peaks mark no transition and whose avalanches are not critical. The palps-intact test says the model still has slightly too much lateral excitation onto PNs.</div>
+    </div>
+
+    <h2 id="open" class="col"><span class="n">9</span>Open problems</h2>
+    <div class="col">
+      <ul>
+        <li><b>The palp leak.</b> The palps-intact failure at r = 0 is firm but small: a late residual of 0.114 against a 0.10 threshold, with the palp limit 7% below the gain edge. The verdict depends on the 10% convention. The leak points at excitation onto PNs that is too strong; the real eLN→PN coupling is electrical, which no variant models fully (M2s only halves the leak).</li>
+        <li><b>Unmeasured synapses.</b> lLN1_bc onto lLN1_bc (42% of the old leading eigenvalue) and LN→LN depression have never been measured. Facilitation, electrical coupling, adaptation and neuromodulation are not in the model.</li>
+        <li><b>The time unit.</b> With a 50 ms unit (TAU 30) the onset drops to 0.49–0.71× and the AL holds 12–18% of the onset activity. Conclusions about how AL-led the onset is depend on this mapping.</li>
+        <li><b>Theory with inhibition.</b> No theory places the h = 0 onset. The mean field's D line errs in opposite directions at small and large r, and its oscillating regime for r &gt; 0 is not seen in simulation. The LNA has no r-dependence.</li>
+        <li><b>Finite size of the real brain.</b> The real graph's crossover width drifts as about N<sup>−0.2</sup>. Other subsample families, or larger synthetic graphs that keep the module structure, would be needed to say whether it sharpens.</li>
+        <li><b>Estimators to fix before reuse.</b> The oscillation flag counts depend on the autocorrelation estimator (9 vs 7 real points), and the branching-ratio marker on its time base (per unit or per step). Both should be fixed in the spec before they are used again.</li>
+        <li><b>Not independently recomputed.</b> The verifier did not recompute the autocorrelation-peak locations, avalanche exponents and KS values, the left/right counts, the multistability clusters, or the theory internals beyond their prediction files. These rest on the lane files and the synthesis recheck.</li>
+        <li><b>Untested prediction.</b> The stochastic theory's critical-like avalanches on the configuration null (g = 0.91–3.0) were not simulated.</li>
+        <li><b>The original question.</b> Neither model has a Griffiths phase, so the hypothesis linking a Griffiths phase to wakefulness has no model here to test it in.</li>
+      </ul>
+    </div>
+
+    <h2 id="glossary" class="col"><span class="n">10</span>Glossary</h2>
+    <div class="col">
+      <p class="small">Terms from the notebook's glossary (eigenvector, IPR, rare region, Griffiths phase, null model) are not repeated. Couplings g are dimensionless; one model time unit is taken as 10 ms.</p>
+    </div>
+    <p class="gloss-h col">Models and parameters</p>
+    <dl class="gloss">
+      <dt>M1, M2</dt><dd>Model 1, the original stochastic Wilson–Cowan model on the connectome. Model 2, the same plus per-spike depression on excitatory outputs and spontaneous ORN drive.</dd>
+      <dt>M2s, M1s</dt><dd>M2 or M1 with per-target signs for lLN1_bc: 0 onto PNs (a stand-in for electrical coupling), +1 onto LNs.</dd>
+      <dt>g, r, h</dt><dd>Global coupling; inhibition strength relative to excitation (inhibitory sign −r); external drive. In M2, h is 0.0379 on ORNs and 0 elsewhere, except in the h = 0 setting.</dd>
+      <dt>g_lin</dt><dd>The coupling where silence first becomes linearly unstable, 0.1632. Depression leaves it unchanged because a rested neuron transmits at full strength.</dd>
+      <dt>Resource x, U, TAU</dt><dd>A neuron's available transmitter (1 when rested); the fraction used per switch-on (0.25); the recovery time (157 units = 1.57 s).</dd>
+      <dt>ORN level</dt><dd>The activity an ORN would have on its own under its drive (0.04 = 3.6 Hz). Recurrent input lowers the measured rate.</dd>
+      <dt>KW09, N15, TAU 30, all-synapse</dt><dd>Sensitivity variants: Kazama &amp; Wilson 2009 values (U 0.28, TAU 240); Nagel et al. 2015 values (U 0.22, TAU 89); a 50 ms time unit; depression on every synapse, inhibitory ones included.</dd>
+    </dl>
+    <p class="gloss-h col">Phases at h = 0 (setting a)</p>
+    <dl class="gloss">
+      <dt>Q, quiescent</dt><dd>Activity from a fully active start dies with mean lifetime τ &lt; 200 units.</dd>
+      <dt>S, slow window</dt><dd>200 ≤ τ &lt; 3000: activity lingers but dies within the run.</dd>
+      <dt>L, localized sustained</dt><dd>Survives to T = 3000 and is carried by fewer than a quarter of the neurons (PR &lt; N/4). In M2 "localized" still means 13,600–19,100 neurons.</dd>
+      <dt>D, delocalized</dt><dd>Survives and is spread over at least a quarter of the neurons (PR ≥ N/4).</dd>
+      <dt>Onset</dt><dd>The S → L boundary, where the mean lifetime reaches 3,000.</dd>
+      <dt>O, oscillation flag</dt><dd>The activity's autocorrelation has a trough ≤ −0.10 and a later peak ≥ 0.10 within a period of at most 375 units. "Strong" if C(2P)/C(P) ≥ 0.7.</dd>
+      <dt>Quasi-cycle</dt><dd>Damped ringing kept alive by noise. Its amplitude shrinks as 1/√N; a true oscillation's does not.</dd>
+    </dl>
+    <p class="gloss-h col">Phases with ORN drive (setting b)</p>
+    <dl class="gloss">
+      <dt>Gain G</dt><dd>Antennal PN activity divided by measured ORN activity. 0.29–1.45 means PNs at 1–5 Hz for ORNs at 3.44 Hz.</dd>
+      <dt>Removal</dt><dd>At t = 1,500 every ORN is clamped off; τ<sub>post</sub> is how long non-ORN activity then survives.</dd>
+      <dt>DQ, driven-quiet</dt><dd>G &lt; 0.29 and silent after removal.</dd>
+      <dt>DA, driven-amplifying</dt><dd>G ≥ 0.29 and silent after removal: τ<sub>post</sub> &lt; 200, PNs below 10% of their driven level 100–300 units after removal, and at most 3 of 64 runs with AL activity at the end.</dd>
+      <dt>DT, driven-transient</dt><dd>Activity outlives removal by more than 200 units but dies within 3,000.</dd>
+      <dt>SS-L, SS-D</dt><dd>Activity survives removal (τ<sub>post</sub> ≥ 3,000), localized or delocalized over the non-ORN neurons.</dd>
+      <dt>-O, -D, -NS</dt><dd>Modifiers on any driven phase: oscillation flag, delocalized, not stationary.</dd>
+      <dt>Data-allowed region</dt><dd>0.29 ≤ G ≤ 1.45, PNs silent after all ORNs are removed, and at most 3 of 64 runs with AL activity at the end.</dd>
+      <dt>Palps-intact test</dt><dd>Remove only the antennal ORNs and keep the palp ORNs driven, as in Olsen et al. 2007. Passes if antennal PNs fall below 10% of their driven level, early (100–300 units) and late (1,000–3,000).</dd>
+    </dl>
+    <p class="gloss-h col">Tests of the transition</p>
+    <dl class="gloss">
+      <dt>Crossover width W</dt><dd>ln(onset/S). A true phase transition makes W shrink toward 0 as the network grows.</dd>
+      <dt>FSS</dt><dd>Finite-size scaling: repeat the measurement on smaller graphs (random nulls, or uniform subsamples of the real brain) and watch how it changes with size N.</dd>
+      <dt>Finite-rate hysteresis</dt><dd>A loop between the up and down ramps that shrinks as the ramp slows. A first-order transition would keep its loop.</dd>
+      <dt>Module on</dt><dd>One of the 34 spectral modules (from the pd3 partition) with at least 1% occupancy.</dd>
+      <dt>SL, B1, SH</dt><dd>de Candia et al.'s phases: all modules silent; one module on; all modules on.</dd>
+      <dt>Avalanche</dt><dd>In the pulse protocol, a run of consecutive steps with any activity; its size is the number of switch-ons.</dd>
+      <dt>Critical-like</dt><dd>Size exponent 1.3–1.7 with KS ≤ 0.03, at least 1,000 tail avalanches, and sizes spanning 100×.</dd>
+      <dt>Branching ratio m</dt><dd>Expected switch-ons caused per switch-on (multistep regression). m = 1 is critical. Per model time unit = (per step)<sup>5</sup>.</dd>
+      <dt>Crackling relation</dt><dd>At criticality the size–duration exponent equals (τ<sub>T</sub> − 1)/(τ<sub>S</sub> − 1). A mismatch means the power laws are not one critical family.</dd>
+      <dt>LHG test</dt><dd>The Levina–Herrmann–Geisel 2007 check: do depressing synapses widen the range of critical-like couplings?</dd>
+      <dt>CQMF, equal-size rule</dt><dd>The mean-field closure used here, and its heuristic for the h = 0 onset (see section 5).</dd>
+      <dt>Single mode, pooled, LNA</dt><dd>The stochastic theory's upper and lower lifetime estimates, and its linear-noise approximation of the driven state.</dd>
+    </dl>
+
+    <footer>
+      Program: workflow wf_aae614ed-511, Nov 9, 2026; lanes spec, decay, driven, nature, modules, meanfield, stochastic, synthesis and verification (<code>results/m2/&lt;lane&gt;/</code>, figures <code>figs/m2/</code>; plans with pre-registered criteria in each lane's <code>plan.md</code>). Simulator <code>code/ald_sim.py</code> (md5 61580c76; unit tests 29/29 and observable tests 11/11 on the live file). Verification: <code>results/m2/verify/</code> (recompute, 16/16 reruns with new seeds, 9 corrections, all applied on this page). References: Nagel &amp; Wilson 2016, <i>J Neurosci</i> 36:4325; Kazama &amp; Wilson 2009, <i>Nat Neurosci</i> 12:1136; Olsen, Bhandawat &amp; Wilson 2007, <i>Neuron</i> 54:89; Levina, Herrmann &amp; Geisel 2007, <i>Nat Phys</i> 3:857; Benayoun et al. 2010, <i>PLoS Comput Biol</i> 6:e1000846.
+    </footer>
+  </main>
+</div>
+</body>
+</html>

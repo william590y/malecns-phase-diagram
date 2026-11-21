@@ -1,0 +1,57 @@
+{
+ "fixes": {
+  "pd3_synthesis.py": [
+   [
+    "top=0.94, bottom=0.03)",
+    "top=0.915, bottom=0.03)"
+   ],
+   [
+    "fig.suptitle(\"MaleCNS stochastic Wilson-Cowan: de Candia-style (g, r) phase diagram.  Solid = continuous \"\n                 \"(second-order, finite-size rounded) line; dashed = first-order line; dotted = crossover\",\n                 fontsize=12, y=0.985)",
+    "fig.suptitle(\"MaleCNS stochastic Wilson-Cowan (Model 1): de Candia-style (g, r) diagram.\\n\"\n                 \"Solid = g_lin, the linear instability of silence (continuous in mean field; rounded by the \"\n                 \"finite AL module in simulation, not a sharp transition); dashed = first-order line (none found); \"\n                 \"dotted = crossover\", fontsize=11.5, y=0.993)"
+   ],
+   [
+    "label=\"g_lin = 0.1632: SL edge, the only critical line\"",
+    "label=\"g_lin = 0.1632: linear instability of silence (theory; r- and T-independent)\""
+   ],
+   [
+    "Patch(fc=C_B, label=\"B_AL (+ islands): localized, active\")",
+    "Patch(fc=C_B, label=\"B_AL (+ islands): PR < N/4; AL = 29-49% of activity\")"
+   ],
+   [
+    "label=\"M1 test inside a closure B1 window\"",
+    "label=\"M1 test inside the 2-module closure's B1 window\""
+   ],
+   [
+    "ax.plot(ISLMED[m], R[m], ls=(0, (1, 2)), lw=1.4, color=OK[\"green\"], marker=\".\", ms=4, zorder=4)",
+    "ax.plot(ISLMED, R, ls=(0, (1, 2)), lw=1.4, color=OK[\"green\"], marker=\".\", ms=6, zorder=4)"
+   ],
+   [
+    "ax.plot(REST[m], R[m], ls=(0, (1, 2)), lw=1.4, color=\"0.35\", marker=\".\", ms=4, zorder=4)",
+    "ax.plot(REST, R, ls=(0, (1, 2)), lw=1.4, color=\"0.35\", marker=\".\", ms=6, zorder=4)"
+   ],
+   [
+    "\"hatched rows (r = 2.25-5.5):\\nsimulated only to g = 2.6\"",
+    "\"hatched rows (r = 2.25-5.5):\\nsimulated only to g = 2.6;\\n1% lines broken where not measured\""
+   ]
+  ],
+  "pd3_redraw.py": [
+   [
+    "OUT = f\"{RES}/pd3/redraw\"",
+    "OUT = \"/MALECNS_ROOT/results/pd3/critic_regen\""
+   ],
+   [
+    "mean-field critical line\\n(silence loses stability; r-independent)",
+    "linear instability of silence\\n(exact linearisation; r-independent)"
+   ]
+  ]
+ },
+ "AL_share_in_B_AL": [
+  0.28865240398985204,
+  0.4867791676609776
+ ],
+ "heatmap_arrays_identical": {
+  "real": true,
+  "null": true,
+  "wnull": true
+ }
+}

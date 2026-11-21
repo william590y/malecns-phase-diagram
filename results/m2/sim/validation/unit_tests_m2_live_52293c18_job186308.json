@@ -1,0 +1,323 @@
+{
+ "module_file": "/MALECNS_ROOT/code/ald_sim.py",
+ "old_module_file": "/MALECNS_ROOT/code/ald_sim.py.bak-m2-pre",
+ "device": "cuda",
+ "U1_edge_sign_none": {
+  "pass": true,
+  "B_meas": 0.43805399537086487,
+  "B_exact": 0.4380202996390044,
+  "C_meas": 0.4401704668998718,
+  "C_exact": 0.4380202996390044,
+  "n_edges_per_override": []
+ },
+ "U1_edge_sign_PN0": {
+  "pass": true,
+  "B_meas": 0.0,
+  "B_exact": 0.0,
+  "C_meas": 0.4401704668998718,
+  "C_exact": 0.4380202996390044,
+  "n_edges_per_override": [
+   300
+  ]
+ },
+ "U1_edge_sign_PN0_LNm1_r0.25_hC0.5": {
+  "pass": true,
+  "B_meas": 0.0,
+  "B_exact": 0.0,
+  "C_meas": 0.2094365507364273,
+  "C_exact": 0.2086822030115601,
+  "n_edges_per_override": [
+   300,
+   300
+  ]
+ },
+ "U1_edge_sign_later_wins": {
+  "pass": true,
+  "B_meas": 0.43805399537086487,
+  "B_exact": 0.4380202996390044,
+  "C_meas": 0.4401704668998718,
+  "C_exact": 0.4380202996390044,
+  "n_edges_per_override": [
+   300,
+   600
+  ]
+ },
+ "U1_edge_sign_on_top_of_node_override": {
+  "pass": true,
+  "B_meas": 0.0,
+  "B_exact": 0.0,
+  "C_meas": 0.4401704668998718,
+  "C_exact": 0.4380202996390044,
+  "n_edges_per_override": [
+   300
+  ]
+ },
+ "U1_graph_file_c_used": {
+  "pass": true,
+  "rho_with_file_c": 0.4380202996390044,
+  "rho_if_c_recomputed": 0.2223854215275031,
+  "measured": 0.43805399537086487
+ },
+ "U2_null_seed": {
+  "pass": true,
+  "targets_ns5_s1": "169c24616dd4acc709f090a8fc9ffc18",
+  "targets_ns5_s2": "169c24616dd4acc709f090a8fc9ffc18",
+  "targets_s1": "0ad85d0956e1f6635d8196f229fdf040",
+  "targets_s2": "9ec7eff3e90225775377c4c651ab19ac",
+  "weights_ns5_s1": "1b8536003011ff05d1f0368955dd31b9",
+  "weights_ns5_s2": "1b8536003011ff05d1f0368955dd31b9",
+  "weights_s1": "f95cbe2c9d21bd370c312202939fc541",
+  "weights_s2": "e7d363371a3425ca9da83be1e6893fae",
+  "real": "c6f25cee27a176395a5b662d9401cd51"
+ },
+ "U3_counts_exact_identities": {
+  "pass": true,
+  "records_equal_rhoN": 1.0,
+  "regions_sum_to_total": 1.0,
+  "off_balance": 1.0,
+  "window_slice_equal": 1.0,
+  "rho_surv_occ_unchanged": 1.0
+ },
+ "U3_counts_statistics": {
+  "pass": true,
+  "z_off": 0.6984142860914669,
+  "z_on_isolated_driven": 0.20600855454728295
+ },
+ "U3_counts_plain_vs_general_bitwise": {
+  "pass": true,
+  "early_stop_steps": 76.0
+ },
+ "U4_pulse_renewal_gap0_ref0": {
+  "pass": true,
+  "rho_meas": 0.8466796875,
+  "rho_exact": 0.8465470531850858,
+  "mean_dur_steps": 5.513604893106572,
+  "E_L": 5.516655566126993,
+  "mean_silent_steps": 1.0,
+  "E_Q": 1.0,
+  "all_sizes_1": 1.0,
+  "n_av": 6281490.0
+ },
+ "U4_pulse_renewal_gap2_ref0": {
+  "pass": true,
+  "rho_meas": 0.343994140625,
+  "rho_exact": 0.3442533457435727,
+  "mean_dur_steps": 5.511097766118743,
+  "E_L": 5.516655566126993,
+  "mean_silent_steps": 10.503558248938717,
+  "E_Q": 10.508331944775044,
+  "all_sizes_1": 1.0,
+  "n_av": 2554433.0
+ },
+ "U4_pulse_renewal_gap0_ref3": {
+  "pass": true,
+  "rho_meas": 0.57958984375,
+  "rho_exact": 0.5796842733031805,
+  "mean_dur_steps": 5.512926550351276,
+  "E_L": 5.516655566126993,
+  "mean_silent_steps": 4.0,
+  "E_Q": 4.0,
+  "all_sizes_1": 1.0,
+  "n_av": 4300606.0
+ },
+ "U4_pulse_respects_clamp_off": {
+  "pass": true,
+  "occ": [
+   0.0,
+   0.0,
+   0.421875,
+   0.424560546875
+  ]
+ },
+ "U4_pulse_main_stream_untouched": {
+  "pass": true,
+  "identical": 1.0
+ },
+ "U4_pulse_seeds_deplete": {
+  "pass": true,
+  "x_meas": 0.0408562496304512,
+  "x_exact": 0.04085629116096306,
+  "rel_err": 1.0165022491220148e-06,
+  "mean_onsets": 31.255859375
+ },
+ "U5_ramp_carry_over_exact": {
+  "pass": true,
+  "max_abs_z": 0.6210174835841251,
+  "seg_B_meas": [
+   0.3455420136451721,
+   0.4212677776813507,
+   0.4773244261741638,
+   0.37579333782196045,
+   0.23500917851924896
+  ],
+  "seg_B_exact": [
+   0.34548675150475083,
+   0.42169637232327745,
+   0.4774808906813516,
+   0.3754933676916526,
+   0.23533960009447177
+  ],
+  "seg_x": [
+   0.825560986995697,
+   0.6937205195426941,
+   0.5940783023834229,
+   0.5187717080116272,
+   0.4618540406227112
+  ],
+  "x_exact": [
+   0.825559815325518,
+   0.6937207598920103,
+   0.5940789453064854,
+   0.5187712818735994,
+   0.46185497424400446
+  ]
+ },
+ "U5_ramp_main_schedule": {
+  "pass": true,
+  "schedule": [
+   0.3,
+   0.6,
+   1.2,
+   0.6,
+   0.3
+  ],
+  "T": 20.0
+ },
+ "U5_single_dwell_ramp_bitwise_plain": {
+  "pass": true
+ },
+ "U5_ramp_early_stop": {
+  "pass": true,
+  "seg_rho_mean": [
+   0.001516666729003191,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "seg_alive": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "U6_regression_old_vs_new_drive": {
+  "pass": true,
+  "keys": [
+   "occ",
+   "reg_rho",
+   "rho",
+   "sec_per_step",
+   "surv",
+   "t"
+  ]
+ },
+ "U6_regression_old_vs_new_std_rate": {
+  "pass": true,
+  "keys": [
+   "occ",
+   "reg_rho",
+   "res_x",
+   "res_x_act",
+   "rho",
+   "sec_per_step",
+   "surv",
+   "t"
+  ]
+ },
+ "U6_regression_old_vs_new_std_spike": {
+  "pass": true,
+  "keys": [
+   "occ",
+   "reg_rho",
+   "res_x",
+   "res_x_act",
+   "rho",
+   "sec_per_step",
+   "surv",
+   "t"
+  ]
+ },
+ "U6_regression_old_vs_new_adapt_ref": {
+  "pass": true,
+  "keys": [
+   "occ",
+   "reg_rho",
+   "res_theta",
+   "rho",
+   "sec_per_step",
+   "surv",
+   "t"
+  ]
+ },
+ "U6_regression_old_vs_new_clamp_on_std": {
+  "pass": true,
+  "keys": [
+   "occ",
+   "reg_rho",
+   "res_x",
+   "res_x_act",
+   "rho",
+   "sec_per_step",
+   "surv",
+   "t"
+  ]
+ },
+ "U6_regression_old_vs_new_switch_windows": {
+  "pass": true,
+  "keys": [
+   "occ",
+   "reg_last",
+   "reg_rho",
+   "res_x",
+   "res_x_act",
+   "rho",
+   "sec_per_step",
+   "surv",
+   "t",
+   "win_m2",
+   "win_mean"
+  ]
+ },
+ "U6_build_matrix_real_cache": {
+  "pass": true,
+  "nnz": 24562483.0,
+  "nnz_lLN1bc_PN0": 24555825.0,
+  "n_edges_lLN1bc_to_ALPN": 6658.0
+ },
+ "U7_real_cache_sets": {
+  "pass": true,
+  "n_exc_sign+1": 103746.0,
+  "n_inh_sign-1": 59273.0,
+  "n_mod_sign0": 4197.0,
+  "n_ORN_olfactory": 2639.0,
+  "n_lLN1_bc": 30.0,
+  "n_ALPN": 686.0,
+  "n_ALLN": 420.0,
+  "n_module": 526.0,
+  "lLN1_bc->ALPN_edges": 6658.0,
+  "lLN1_bc->ALPN_synapses": 79142.0,
+  "lLN1_bc->ALLN_edges": 4503.0,
+  "lLN1_bc->ALLN_synapses": 141119.0,
+  "lLN1_bc->other_edges": 4825.0,
+  "lLN1_bc->other_synapses": 8784.0,
+  "lLN1_bc->other_by_class_edges": {
+   "olfactory": 3539,
+   "hygrosensory": 381,
+   "": 320,
+   "thermosensory": 224,
+   "ALIN": 187,
+   "ALON": 165,
+   "CX": 3,
+   "MBON": 3,
+   "SEZPN": 3
+  }
+ },
+ "_meta": {
+  "n_pass": 28,
+  "n_tests": 28,
+  "gpu": "NVIDIA RTX A6000",
+  "wall_s": 57.48074507713318
+ },
+ "all_pass": true
+}

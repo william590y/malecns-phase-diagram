@@ -1,0 +1,116 @@
+{
+ "options": {
+  "exp": "decay",
+  "norm": "raw",
+  "g": [
+   0.3,
+   0.45
+  ],
+  "r": 1.0,
+  "h": 0.0,
+  "beta": 1.0,
+  "T": 300.0,
+  "dt": 0.2,
+  "B": 16,
+  "null": false,
+  "null_kind": "targets",
+  "seed_set": null,
+  "seed": 6,
+  "out": "/MALECNS_ROOT/results/aldef/depression/validation/v3_new_off.npz",
+  "drive": [],
+  "clamp_off": [],
+  "clamp_on": [],
+  "sign_override": [],
+  "sign_ensemble": 0,
+  "ens_unit": "neuron",
+  "ens_conf": "body",
+  "ens_gt": "ignore",
+  "ens_qmiss": 0.5,
+  "ens_seed": null,
+  "ens_only": null,
+  "wtransform": "linear",
+  "wnorm": "renorm",
+  "std": null,
+  "std_group": [],
+  "std_mode": "rate",
+  "adapt": null,
+  "adapt_group": [],
+  "refractory": 0,
+  "region": [
+   "X=module"
+  ],
+  "no_default_regions": false,
+  "no_occ": false,
+  "device": "cuda",
+  "engine": "spmm",
+  "push_max": 0.05,
+  "switch_at": null,
+  "sw_drive": [],
+  "sw_clamp_off": [],
+  "sw_clamp_on": [],
+  "rec_lin": 0.0,
+  "win": [],
+  "reg_last": false,
+  "occ_win": null
+ },
+ "device": "cuda",
+ "gpu": "NVIDIA RTX A5000",
+ "c_raw": 0.0013406440848484635,
+ "regions": {
+  "AL_module": {
+   "sel": "module",
+   "n": 526
+  },
+  "AL_rest": {
+   "sel": "al_rest",
+   "n": 3395
+  },
+  "CNS_rest": {
+   "sel": "cns_rest",
+   "n": 163295
+  },
+  "X": {
+   "sel": "module",
+   "n": 526
+  }
+ },
+ "N": 167216,
+ "nnz": [
+  24562483
+ ],
+ "steps": 1500,
+ "n_draws": 1,
+ "ms_per_step": [
+  [
+   4.721275329589844,
+   4.619344711303711
+  ]
+ ],
+ "rho_T_mean": [
+  0.00021117896540090442,
+  0.0010327212512493134
+ ],
+ "surv_T": [
+  0.4375,
+  1.0
+ ],
+ "wall_s": 64.70669102668762,
+ "reg_rho_T_mean": {
+  "AL_module": [
+   0.03588402643799782,
+   0.13450570404529572
+  ],
+  "AL_rest": [
+   0.0006443299353122711,
+   0.0028166421689093113
+  ],
+  "CNS_rest": [
+   8.726537635084242e-05,
+   0.0005656940047629178
+  ],
+  "X": [
+   0.03588402643799782,
+   0.13450570404529572
+  ]
+ }
+}

@@ -1,0 +1,2 @@
+multistart --model M2 --g 0.3,0.6,1.0,1.4,2.0,3.0 --iters 8000
+multistart --model M1 --g 0.2,0.3,0.45,0.8 --iters 8000

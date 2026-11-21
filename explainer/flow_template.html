@@ -1,0 +1,582 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Phase Flow Field</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Instrument layout. Row 1: the map (phase diagram) and the reduced dynamics at the chosen point. Row 2: the real module of the
+   connectome, simulated live, next to every run's activity over time. Definitions sit above the panels. */
+:root {
+  --paper: #f3f6f5; --panel: #ffffff; --ink: #14211f; --ink-soft: #4b5c59; --rule: #d3dcda; --grid: #e6ecea;
+  --accent: #1f7a5c; --accent-soft: #dcefe7; --amber: #a5650b; --amber-soft: #f6ead6;
+  --ph-q: #d5dbe0; --ph-s: #e8b25a; --ph-l: #5b9bd0; --ph-d: #9a63b0;
+  --line-q: #6b7a86; --line-s: #a5650b; --line-l: #1f5d93; --line-d: #6a2e82;
+  --stream: 31,122,92; --exc: #0f9b74; --inh: #d9622b; --mod: #8a96a3; --node-off: #c9d2d0; --edge: 20,33,31;
+  --run: #c2410c; --graph-run: #14211f; --fp: #14211f;
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Source Serif 4", Georgia, serif; --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #0f1716; --panel: #14201e; --ink: #e3ece9; --ink-soft: #9db1ac; --rule: #2a3a37; --grid: #1d2a28;
+    --accent: #6fd3a8; --accent-soft: #173229; --amber: #f0b45c; --amber-soft: #33270f;
+    --ph-q: #2a3533; --ph-s: #8a6424; --ph-l: #2d5f8a; --ph-d: #5e3a72;
+    --line-q: #9db1ac; --line-s: #f0b45c; --line-l: #8cc4f2; --line-d: #d6a3ea;
+    --stream: 111,211,168; --exc: #4fd1a5; --inh: #ff8a4c; --mod: #93a3a0; --node-off: #2f3d3a; --edge: 227,236,233;
+    --run: #fb923c; --graph-run: #e3ece9; --fp: #e3ece9;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #0f1716; --panel: #14201e; --ink: #e3ece9; --ink-soft: #9db1ac; --rule: #2a3a37; --grid: #1d2a28;
+  --accent: #6fd3a8; --accent-soft: #173229; --amber: #f0b45c; --amber-soft: #33270f;
+  --ph-q: #2a3533; --ph-s: #8a6424; --ph-l: #2d5f8a; --ph-d: #5e3a72;
+  --line-q: #9db1ac; --line-s: #f0b45c; --line-l: #8cc4f2; --line-d: #d6a3ea;
+  --stream: 111,211,168; --exc: #4fd1a5; --inh: #ff8a4c; --mod: #93a3a0; --node-off: #2f3d3a; --edge: 227,236,233;
+  --run: #fb923c; --graph-run: #e3ece9; --fp: #e3ece9;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { background: var(--paper); color: var(--ink); font: 16px/1.55 var(--body); }
+.wrap { max-width: 1240px; margin: 0 auto; padding: 28px max(16px, env(safe-area-inset-right, 0px)) 60px max(16px, env(safe-area-inset-left, 0px)); }
+.pages { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 20px; font: 600 13px/1 var(--display); }
+.pages a { padding: 9px 14px; border: 1px solid var(--rule); border-radius: 999px; text-decoration: none; color: var(--ink-soft); }
+.pages a:hover { border-color: var(--accent); color: var(--accent); }
+.pages a[aria-current="page"] { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+.eyebrow { font: 600 12px/1.3 var(--display); letter-spacing: .1em; text-transform: uppercase; color: var(--accent); }
+h1 { font: 700 clamp(26px, 4vw, 38px)/1.1 var(--display); margin: 6px 0 10px; letter-spacing: -0.01em; }
+.lede { max-width: 76ch; margin: 0 0 16px; font-size: 17px; }
+a { color: var(--accent); }
+.grid2 { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 18px; margin-top: 18px; }
+.card { background: var(--panel); border: 1px solid var(--rule); border-radius: 8px; padding: 12px 14px 12px; min-width: 0; }
+.card h2 { font: 600 13px/1.3 var(--display); letter-spacing: .07em; text-transform: uppercase; color: var(--ink-soft); margin: 0 0 4px; }
+.card .sub { font-size: 14px; color: var(--ink-soft); margin: 0 0 8px; }
+canvas { display: block; width: 100%; touch-action: pan-y; }
+.controls { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; margin: 14px 0 0; font: 500 13px/1.4 var(--display); color: var(--ink-soft);
+  position: sticky; bottom: 0; background: var(--paper); padding: 10px 0; border-top: 1px solid var(--rule); z-index: 3; }
+.controls label { display: flex; align-items: center; gap: 8px; }
+.controls input[type=range] { width: 150px; accent-color: var(--accent); }
+.controls .val { font-family: var(--mono); color: var(--ink); min-width: 3.6em; }
+button { font: 600 13px/1 var(--display); padding: 9px 12px; border-radius: 6px; border: 1px solid var(--rule); background: var(--panel); color: var(--ink); cursor: pointer; }
+button:hover { border-color: var(--accent); }
+button[aria-pressed="true"] { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 14px; font: 500 12.5px/1.4 var(--display); color: var(--ink-soft); margin-top: 8px; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.sw { width: 13px; height: 13px; border-radius: 3px; display: inline-block; }
+.ln { width: 18px; height: 0; border-top: 2px solid; display: inline-block; }
+.ln.dash { border-top-style: dashed; }
+.readout { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin-top: 8px; }
+.readout div { border-top: 1px solid var(--rule); padding-top: 5px; min-width: 0; }
+.readout b { display: block; font: 600 11px/1.3 var(--display); letter-spacing: .07em; text-transform: uppercase; color: var(--ink-soft); }
+.readout span { font: 500 16px/1.3 var(--mono); }
+.phase-name { font: 700 15px/1.3 var(--display) !important; }
+details.vars { margin: 0 0 4px; background: var(--panel); border: 1px solid var(--rule); border-radius: 8px; padding: 10px 14px; }
+details.vars summary { font: 600 14px/1.4 var(--display); cursor: pointer; }
+dl.defs { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 6px 16px; margin: 10px 0 2px; font-size: 15px; }
+dl.defs dt { font: 600 14.5px/1.5 var(--mono); color: var(--accent); }
+dl.defs dd { margin: 0; }
+dl.defs .grp { grid-column: 1 / -1; font: 600 12px/1.3 var(--display); letter-spacing: .07em; text-transform: uppercase; color: var(--ink-soft); margin-top: 8px; }
+.notes { max-width: 76ch; margin-top: 22px; font-size: 15.5px; }
+.notes h3 { font: 600 17px/1.3 var(--display); margin: 20px 0 6px; }
+.eq { font-family: var(--mono); font-size: 13px; background: var(--accent-soft); padding: 10px 14px; border-radius: 6px; overflow-x: auto; white-space: pre; }
+.note { border-left: 3px solid var(--amber); background: var(--amber-soft); padding: 10px 14px; margin: 14px 0; font-size: 15px; }
+.tip { position: fixed; pointer-events: none; background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; padding: 6px 9px; font: 500 12.5px/1.45 var(--display); color: var(--ink); box-shadow: 0 4px 14px rgba(0,0,0,.12); display: none; z-index: 5; max-width: 260px; }
+@media (max-width: 900px) { .grid2 { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 900px) { .controls { position: static; } }
+@media (max-width: 560px) { .readout { grid-template-columns: repeat(2, minmax(0, 1fr)); } dl.defs { grid-template-columns: minmax(0, 1fr); gap: 0 0; } dl.defs dd { margin-bottom: 8px; } .controls input[type=range] { width: 110px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="pages" aria-label="Pages"><a href="./">Notebook</a><a href="theory.html">Theory (derivation)</a><a href="flow.html" aria-current="page">Flow field (animated)</a><a href="model2.html">New model</a></nav>
+  <div class="eyebrow">MaleCNS · theory of the phase diagram · animated</div>
+  <h1>The flow behind each phase</h1>
+  <p class="lede">Pick a point on the phase diagram. The top right panel shows the theory's dynamics there as a flow, in a plane spanned by the activity of the antennal-lobe module (the connectome's leading eigenvector) and of the rest of the brain. The bottom row shows the real thing: the module's 526 neurons and their actual synapses, simulated live in your browser with the same stochastic Wilson–Cowan rules, and every run's activity over time.</p>
+
+  <details class="vars" open>
+    <summary>What the symbols mean</summary>
+    <dl class="defs">
+      <div class="grp">Knobs (the axes of the phase diagram)</div>
+      <dt>g</dt><dd>Coupling. One number that multiplies every synapse. Each synapse count is first divided by 742.7, the average number of input synapses per neuron.</dd>
+      <dt>r</dt><dd>Inhibition ratio. An inhibitory synapse (GABA, glutamate, histamine) counts as −r times an excitatory (acetylcholine) one.</dd>
+      <div class="grp">State (the axes of the flow panel)</div>
+      <dt>x</dt><dd>Module activity: the fraction of the 526 antennal-lobe neurons that are active. In the reduced model, activity takes the shape of the module's leading eigenvector, ρ_i ∝ v_i.</dd>
+      <dt>y</dt><dd>Rest-of-brain activity: the fraction of the other 166,690 neurons that are active.</dd>
+      <div class="grp">Rates and spectrum</div>
+      <dt>α</dt><dd>Switch-off rate of an active neuron: 1 per time unit (0.906 effective, because all neurons update together every Δt = 0.2).</dd>
+      <dt>λ_M</dt><dd>Leading eigenvalue of the module's excitatory wiring (5.54): how strongly the module amplifies its own activity.</dd>
+      <dt>R = gλ_M/α</dt><dd>The module's reproduction number: how many switch-ons one active module neuron causes, on average, before it switches off. Activity can grow only if R &gt; 1, that is above g_lin = α/λ_M ≈ 0.163.</dd>
+      <dt>K_eff</dt><dd>Effective number of independent units in the module (about 55 without inhibition). Chance fluctuations scale like 1/√K_eff, so a small K_eff means the module is easily silenced by bad luck.</dd>
+      <dt>δ(r)</dt><dd>Extra saturation from inhibitory and excitatory inputs arriving at the same neuron at once inside the module (0 at r = 0). It lowers the module's active level without moving g_lin.</dd>
+      <dt>τ(g)</dt><dd>Mean time until the module's activity dies out by chance: ln τ ≈ K_eff·(ln R − 1 + 1/R). It grows exponentially with K_eff.</dd>
+      <dt>T</dt><dd>Observation time of the simulations: 3,000 time units.</dd>
+      <dt>e_MB, e_BM</dt><dd>Measured couplings: the mean input a module neuron gets from a fully active rest of the brain (4.96), and the reverse (0.0083).</dd>
+      <dt>λ_B(r)</dt><dd>Gain of the lumped rest of the brain, set so that it switches on at the mean-field delocalization line.</dd>
+      <div class="grp">Phases</div>
+      <dt>Quiescent</dt><dd>τ &lt; 200: activity dies quickly.</dd>
+      <dt>Slow window</dt><dd>200 ≤ τ &lt; T: activity lingers, then dies. This is the Griffiths-like window.</dd>
+      <dt>Localized</dt><dd>τ ≥ T: activity lasts, carried by fewer than N/4 neurons (participation ratio).</dd>
+      <dt>Delocalized</dt><dd>Activity spread over N/4 or more neurons.</dd>
+    </dl>
+  </details>
+
+  <div class="grid2">
+    <div class="card">
+      <h2>Phase diagram</h2>
+      <p class="sub">Coloured regions and solid curves: theory. Points and dashed curves: simulation of the whole brain (23 inhibition levels, 32 runs per point), using the same lifetime criteria as the theory. Tap to choose a point.</p>
+      <canvas id="pd" data-h="340" aria-label="Phase diagram over coupling g and inhibition r: theory regions and curves with simulated boundaries overlaid"></canvas>
+      <div class="legend">
+        <span><i class="sw" style="background:var(--ph-q)"></i>Quiescent</span>
+        <span><i class="sw" style="background:var(--ph-s)"></i>Slow window</span>
+        <span><i class="sw" style="background:var(--ph-l)"></i>Localized active</span>
+        <span><i class="sw" style="background:var(--ph-d)"></i>Delocalized</span>
+        <span><i class="ln" style="border-color:var(--ink)"></i>theory</span>
+        <span><i class="ln dash" style="border-color:var(--ink)"></i>simulation: ● slow window starts, ▲ sustained onset, ◆ delocalization</span>
+      </div>
+      <h2 style="margin-top:14px">Predicted module lifetime τ at this r</h2>
+      <canvas id="life" data-h="140" aria-label="Predicted lifetime of the module's activity against coupling"></canvas>
+    </div>
+    <div class="card">
+      <h2>Flow of the reduced dynamics</h2>
+      <p class="sub">Arrows: where the noise-free state moves. Dashed lines: where x (blue) or y (purple) stops changing. Labelled dots: fixed points. Orange dots: noisy runs of the same equations.</p>
+      <canvas id="flow" data-h="400" aria-label="Flow field of module activity x against rest-of-brain activity y"></canvas>
+      <div class="readout">
+        <div><b>Phase (theory)</b><span class="phase-name" id="ro-phase">–</span></div>
+        <div><b>g · r</b><span id="ro-gr">–</span></div>
+        <div><b>R = gλ_M/α</b><span id="ro-R">–</span></div>
+        <div><b>Predicted τ</b><span id="ro-tau">–</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid2">
+    <div class="card">
+      <h2>On the connectome: the antennal-lobe module, live</h2>
+      <p class="sub">Each dot is one of the 526 module neurons at its soma (seen from above; left and right lobes). Lit = active: <span style="color:var(--exc)">●</span> excitatory, <span style="color:var(--inh)">●</span> inhibitory, <span style="color:var(--mod)">●</span> modulatory. Lines: the 1,500 strongest synapses. Simulated in your browser with the real synapse counts at the chosen g and r; the rest of the brain is held silent.</p>
+      <canvas id="graph" data-h="360" aria-label="Live simulation of the 526-neuron antennal-lobe module on soma positions"></canvas>
+      <div class="readout">
+        <div><b>Time</b><span id="ro-t">–</span></div>
+        <div><b>Active now</b><span id="ro-act">–</span></div>
+        <div><b>Real module</b><span id="ro-graph">–</span></div>
+        <div><b>Model runs alive</b><span id="ro-alive">–</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <h2>Activity over time</h2>
+      <p class="sub">Fraction of the module active, from a fully active start, on a log time axis. Thick line: the real module simulated on the left. Thin lines: noisy runs of the reduced model, which start at the module's capacity (the fully active state lies outside a one-mode model). × marks a run dying out. Each episode runs to T = 3,000, then restarts.</p>
+      <canvas id="trace" data-h="360" aria-label="Module activity against time for the real module and the reduced-model runs"></canvas>
+      <div class="legend">
+        <span><i class="ln" style="border-color:var(--graph-run);border-top-width:3px"></i>real module (526 neurons)</span>
+        <span><i class="ln" style="border-color:var(--run)"></i>reduced model, 8 runs</span>
+        <span><i class="ln dash" style="border-color:var(--ink-soft)"></i>T = 3000</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button id="play" aria-pressed="true">Pause sweep</button>
+    <label>g <input id="gs" type="range" min="0" max="1000" value="400" aria-label="Coupling g (log scale)"><span class="val" id="gv"></span></label>
+    <label>r <input id="rs" type="range" min="0" max="600" value="0" aria-label="Inhibition ratio r"><span class="val" id="rv"></span></label>
+    <label>s / decade <input id="sp" type="range" min="0" max="100" value="45" aria-label="Seconds of animation per decade of simulated time"><span class="val" id="spv"></span></label>
+    <button id="reset">Restart episode</button>
+  </div>
+
+  <div class="notes">
+    <h3>How to read it</h3>
+    <ul>
+      <li><b>Quiescent</b> (g &lt; g_lin): every arrow in the flow panel points to the silent corner, and in the bottom row the module goes dark within a few tens of time units.</li>
+      <li><b>Slow window</b>: a stable "module on" point has appeared (R &gt; 1), so the arrows now lead to it. But the module has only about 55 independent units, and chance runs of switch-offs keep dropping it into silence. In the bottom row the thick and thin lines fall to zero one by one, at times spread over decades. This is the Griffiths-like slowness.</li>
+      <li><b>Localized active</b>: the module's active level is deep enough that runs outlast T. The left and right antennal lobes stay lit while the rest of the brain is barely driven.</li>
+      <li><b>Delocalized</b>: the rest of the brain sustains itself and the stable point moves to large y. The live view shows the module only, so this phase appears there as a saturated module.</li>
+      <li><b>Inhibition (r)</b>: slide r up and watch the module's active level drop and the window widen. Inhibitory neurons inside the module light up together with the excitatory ones they cancel.</li>
+    </ul>
+    <h3>The reduced model behind the flow panel</h3>
+<div class="eq">dx/dt = α[(R − 1)x − R(1 + δ(r))x²] + g·e_MB·y·(1 − x)        R   = g·λ_M/α
+dy/dt = α[(R_B − 1)y − R_B·y²]           + g·e_BM·x·(1 − y)        R_B = g·λ_B(r)/α</div>
+    <p id="param-text"></p>
+    <div class="note"><b>What is computed and what is a caricature.</b> The phase diagram's curves come from the theory page: the onset from the branching eigenvalue, the window from the module's extinction time, the delocalization line from mean field. The module half of the flow uses the theory's numbers (λ_M, δ(r), K_eff). The rest of the brain is many small islands, not one population; here it is lumped into one variable. The live simulation is exact for the module's own synapses but ignores input from outside the module, which supplies about half of a module neuron's synapses.</div>
+  </div>
+</div>
+<div class="tip" id="tip"></div>
+
+<script>
+const DATA = /*DATA*/null;
+(() => {
+  let cssCache = {};
+  const css = n => (n in cssCache) ? cssCache[n] : (cssCache[n] = getComputedStyle(document.documentElement).getPropertyValue(n).trim());
+  const P = DATA.params, A = P.alpha_eff, G0 = 0.1, G1 = 30, RMAX = 6;
+  const lg = Math.log10;
+  const $ = id => document.getElementById(id);
+  let g = 0.2, r = 0, playing = !matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // ---------- monotone cubic (PCHIP) interpolation ----------
+  function pchip(xs, ys) {
+    const n = xs.length; if (n === 0) return () => NaN; if (n === 1) return () => ys[0];
+    const h = [], d = []; for (let i = 0; i < n - 1; i++) { h.push(xs[i + 1] - xs[i]); d.push((ys[i + 1] - ys[i]) / h[i]); }
+    const m = new Array(n).fill(0); m[0] = d[0]; m[n - 1] = d[n - 2];
+    for (let i = 1; i < n - 1; i++) { if (d[i - 1] * d[i] <= 0) m[i] = 0; else { const w1 = 2 * h[i] + h[i - 1], w2 = h[i] + 2 * h[i - 1]; m[i] = (w1 + w2) / (w1 / d[i - 1] + w2 / d[i]); } }
+    return x => {
+      if (x <= xs[0]) return ys[0] + m[0] * (x - xs[0]); if (x >= xs[n - 1]) return ys[n - 1] + m[n - 1] * (x - xs[n - 1]);
+      let i = 0; while (x > xs[i + 1]) i++;
+      const t = (x - xs[i]) / h[i], t2 = t * t, t3 = t2 * t;
+      return (2 * t3 - 3 * t2 + 1) * ys[i] + (t3 - 2 * t2 + t) * h[i] * m[i] + (-2 * t3 + 3 * t2) * ys[i + 1] + (t3 - t2) * h[i] * m[i + 1];
+    };
+  }
+  const curve = pts => { const q = pts.filter(p => p[1] != null && isFinite(p[1])); return { f: pchip(q.map(p => p[0]), q.map(p => lg(p[1]))), r0: q.length ? q[0][0] : 0, r1: q.length ? q[q.length - 1][0] : -1 }; };
+  const TH = DATA.theory;              // per dense r: {r, gS, gon, gD, delta}
+  const cS = curve(TH.map(t => [t.r, t.gS])), cOn = curve(TH.map(t => [t.r, t.gon])), cD = curve(TH.map(t => [t.r, t.gD]));
+  const dEl = pchip(TH.map(t => t.r), TH.map(t => t.delta));
+  const SIM = DATA.sim;                // per r: {r, on, D}
+  const sOn = curve(SIM.map(s => [s.r, s.on])), sD = curve(SIM.map(s => [s.r, s.D])), sSt = curve(SIM.map(s => [s.r, s.S]));
+  const at = (c, rr) => (rr < c.r0 - 1e-9 || rr > c.r1 + 1e-9) ? null : Math.pow(10, c.f(rr));
+  const gS = rr => { const v = at(cS, rr); return v == null ? DATA.g_lin : v; }, gOn = rr => at(cOn, rr), gD = rr => at(cD, rr);
+  const delta = rr => Math.max(0, dEl(Math.min(rr, RMAX)));
+  function phaseAt(gg, rr) {
+    const d = gD(rr), on = gOn(rr), s = gS(rr);
+    if (d && gg >= d) return 3; if (on && gg >= on) return 2; if (gg >= s) return 1; return 0;
+  }
+  const PH = ["Quiescent", "Slow window", "Localized active", "Delocalized"], PHV = ["--ph-q", "--ph-s", "--ph-l", "--ph-d"], PHL = ["--line-q", "--line-s", "--line-l", "--line-d"];
+  function lifeRows(rr) {             // log10 tau(g) at r, interpolated between the two nearest theory rows
+    const L = DATA.life, rs = L.r; let i = 0; while (i < rs.length - 2 && rr > rs[i + 1]) i++;
+    const w = Math.min(1, Math.max(0, (rr - rs[i]) / (rs[i + 1] - rs[i])));
+    return L.g.map((gg, k) => [gg, (1 - w) * L.v[i][k] + w * L.v[i + 1][k]]);
+  }
+  function tauAt(gg, rr) { const rows = lifeRows(rr); if (gg < rows[0][0]) return null; for (let k = 1; k < rows.length; k++) if (rows[k][0] >= gg) { const [g0, a] = rows[k - 1], [g1, b] = rows[k]; return a + (b - a) * (lg(gg) - lg(g0)) / (lg(g1) - lg(g0)); } return rows[rows.length - 1][1]; }
+
+  // ---------- reduced model ----------
+  const pars = () => { const d = gD(r); return { R: g * P.lambda_M / A, RB: d ? g / d : 0, d: delta(r) }; };
+  function drift(x, y, q) {
+    return [A * ((q.R - 1) * x - q.R * (1 + q.d) * x * x) + g * P.e_MB * y * (1 - x),
+            A * ((q.RB - 1) * y - q.RB * y * y) + g * P.e_BM * x * (1 - y)];
+  }
+
+  // ---------- canvases ----------
+  const dpr = Math.min(window.devicePixelRatio || 1, 2);
+  function fit(cv) { const w = Math.max(1, cv.clientWidth), h = +cv.dataset.h; cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr); cv.style.height = h + "px"; const c = cv.getContext("2d"); c.setTransform(dpr, 0, 0, dpr, 0, 0); return { c, w, h }; }
+  const C = {}; ["pd", "life", "flow", "graph", "trace"].forEach(id => C[id] = { cv: $(id) });
+  const font = (w = 500, s = 11) => `${w} ${s}px Archivo, sans-serif`;
+
+  // ---------- phase diagram ----------
+  const pdM = { l: 40, r: 10, t: 8, b: 32 };
+  const pdX = gg => pdM.l + (lg(gg) - lg(G0)) / (lg(G1) - lg(G0)) * (C.pd.w - pdM.l - pdM.r);
+  const pdY = rr => C.pd.h - pdM.b - rr / RMAX * (C.pd.h - pdM.t - pdM.b);
+  const pdInv = (px, py) => [Math.pow(10, lg(G0) + (px - pdM.l) / (C.pd.w - pdM.l - pdM.r) * (lg(G1) - lg(G0))), (C.pd.h - pdM.b - py) / (C.pd.h - pdM.t - pdM.b) * RMAX];
+  let pdBase = null;
+  function renderPDBase() {
+    const { w, h } = C.pd, off = document.createElement("canvas"); off.width = Math.round(w * dpr); off.height = Math.round(h * dpr);
+    const c = off.getContext("2d"); c.setTransform(dpr, 0, 0, dpr, 0, 0);
+    const yT = pdM.t, yB = h - pdM.b, xL = pdM.l, xR = w - pdM.r;
+    const clampX = gg => Math.min(xR, Math.max(xL, pdX(gg)));
+    for (let py = yT; py < yB; py += 1) {                 // one-pixel rows: region edges follow the curves smoothly
+      const rr = (yB - py - 0.5) / (yB - yT) * RMAX;
+      const s = clampX(gS(rr)), on = gOn(rr), d = gD(rr);
+      const xOn = on ? clampX(on) : xR, xD = d ? clampX(d) : xR;
+      const segs = [[xL, s, 0], [s, xOn, 1], [xOn, Math.max(xOn, xD), 2], [Math.max(xOn, xD), xR, 3]];
+      for (const [a, b, k] of segs) if (b > a) { c.fillStyle = css(PHV[k]); c.fillRect(a, py, b - a + 0.6, 1.2); }
+    }
+    const stroke = (fn, col, dash, width) => { c.strokeStyle = col; c.lineWidth = width; c.setLineDash(dash); c.beginPath(); let on = false;
+      for (let py = yB; py >= yT - 0.1; py -= 1.5) { const rr = Math.min(RMAX, (yB - py) / (yB - yT) * RMAX), gg = fn(rr); if (gg && gg >= G0 && gg <= G1) { const X = pdX(gg); on ? c.lineTo(X, py) : c.moveTo(X, py); on = true; } else on = false; }
+      c.stroke(); c.setLineDash([]); };
+    stroke(gS, css("--line-s"), [], 2); stroke(gOn, css("--line-l"), [], 2); stroke(gD, css("--line-d"), [], 2);
+    c.strokeStyle = css("--ink"); c.setLineDash([2, 3]); c.lineWidth = 1; c.beginPath(); c.moveTo(pdX(DATA.g_lin), yT); c.lineTo(pdX(DATA.g_lin), yB); c.stroke(); c.setLineDash([]);
+    stroke(rr => at(sSt, rr), css("--ink"), [5, 4], 1.4); stroke(rr => at(sOn, rr), css("--ink"), [5, 4], 1.4); stroke(rr => at(sD, rr), css("--ink"), [5, 4], 1.4);
+    c.fillStyle = css("--ink");
+    SIM.forEach(s => {
+      if (s.S) { const X = pdX(s.S), Y = pdY(s.r); c.beginPath(); c.arc(X, Y, 3.6, 0, 2 * Math.PI); c.fill(); }
+      if (s.on) { const X = pdX(s.on), Y = pdY(s.r); c.beginPath(); c.moveTo(X, Y - 5); c.lineTo(X + 5, Y + 4); c.lineTo(X - 5, Y + 4); c.closePath(); c.fill(); }
+      if (s.D && s.D <= G1) { const X = pdX(s.D), Y = pdY(s.r); c.beginPath(); c.moveTo(X, Y - 5); c.lineTo(X + 5, Y); c.lineTo(X, Y + 5); c.lineTo(X - 5, Y); c.closePath(); c.fill(); }
+    });
+    c.fillStyle = css("--ink-soft"); c.font = font(); c.textAlign = "center";
+    [0.1, 0.2, 0.5, 1, 2, 5, 10, 20].forEach(t => c.fillText(t, pdX(t), yB + 14));
+    c.fillText("coupling g (log scale)", (xL + xR) / 2, h - 3);
+    c.textAlign = "right"; [0, 1, 2, 3, 4, 5, 6].forEach(v => c.fillText(v, xL - 6, pdY(v) + 4));
+    c.save(); c.translate(11, (yT + yB) / 2); c.rotate(-Math.PI / 2); c.textAlign = "center"; c.fillText("inhibition r", 0, 0); c.restore();
+    c.textAlign = "left"; c.fillStyle = css("--ink"); c.font = font(600, 11); c.fillText("g_lin", pdX(DATA.g_lin) + 3, yT + 11);
+    pdBase = off;
+  }
+  function drawPD() {
+    const { c, w, h } = C.pd; c.clearRect(0, 0, w, h); if (pdBase) c.drawImage(pdBase, 0, 0, w, h);
+    const X = pdX(g), Y = pdY(r);
+    c.strokeStyle = css("--panel"); c.lineWidth = 4; c.beginPath(); c.arc(X, Y, 7, 0, 2 * Math.PI); c.stroke();
+    c.strokeStyle = css("--ink"); c.lineWidth = 2; c.beginPath(); c.arc(X, Y, 7, 0, 2 * Math.PI); c.stroke();
+  }
+  const tip = $("tip");
+  let down = null;
+  C.pd.cv.addEventListener("pointerdown", e => { down = [e.clientX, e.clientY, e.pointerType]; if (e.pointerType === "mouse") pick(e); });
+  C.pd.cv.addEventListener("pointerup", e => { if (down && down[2] !== "mouse" && Math.hypot(e.clientX - down[0], e.clientY - down[1]) < 10) pick(e); down = null; });
+  C.pd.cv.addEventListener("pointermove", e => { if (e.pointerType !== "mouse") return; if (e.buttons) pick(e); hover(e); });
+  C.pd.cv.addEventListener("pointerleave", () => tip.style.display = "none");
+  addEventListener("scroll", () => tip.style.display = "none", { passive: true });
+  const pdPos = e => { const R = C.pd.cv.getBoundingClientRect(); return [e.clientX - R.left, e.clientY - R.top]; };
+  function pick(e) { let [gg, rr] = pdInv(...pdPos(e)); gg = Math.min(G1, Math.max(G0, gg)); rr = Math.min(RMAX, Math.max(0, rr)); setPlaying(false); setPoint(gg, rr, true); }
+  function hover(e) {
+    const [px, py] = pdPos(e); if (px < pdM.l || py > C.pd.h - pdM.b) { tip.style.display = "none"; return; }
+    const [gg, rr] = pdInv(px, py), ph = phaseAt(gg, rr), lt = tauAt(gg, rr);
+    tip.innerHTML = `g = ${gg.toPrecision(3)}, r = ${rr.toFixed(2)}<br><b>${PH[ph]}</b> (theory)<br>predicted τ ${lt == null || !isFinite(lt) ? "–" : (lt > 6 ? "&gt; 10⁶" : "≈ " + Math.round(Math.pow(10, lt)).toLocaleString())}`;
+    tip.style.display = "block"; tip.style.left = Math.min(e.clientX + 14, innerWidth - 270) + "px"; tip.style.top = (e.clientY + 14) + "px";
+  }
+
+  // ---------- lifetime strip ----------
+  const lfM = { l: 40, r: 10, t: 8, b: 28 };
+  function drawLife() {
+    const { c, w, h } = C.life; c.clearRect(0, 0, w, h);
+    const gx = gg => lfM.l + (lg(gg) - lg(G0)) / (lg(G1) - lg(G0)) * (w - lfM.l - lfM.r), ymax = 6, gy = v => lfM.t + (1 - Math.min(Math.max(v, 0), ymax) / ymax) * (h - lfM.t - lfM.b);
+    c.strokeStyle = css("--grid"); c.lineWidth = 1; [0, 2, 4, 6].forEach(v => { c.beginPath(); c.moveTo(lfM.l, gy(v)); c.lineTo(w - lfM.r, gy(v)); c.stroke(); });
+    c.fillStyle = css("--ink-soft"); c.font = font(); c.textAlign = "right"; [0, 2, 4, 6].forEach(v => c.fillText("10" + ["⁰", "", "²", "", "⁴", "", "⁶"][v], lfM.l - 6, gy(v) + 4));
+    c.textAlign = "center"; [0.1, 0.2, 0.5, 1, 2, 5, 10, 20].forEach(t => c.fillText(t, gx(t), h - lfM.b + 14));
+    [[lg(200), "200"], [lg(3000), "T"]].forEach(([v, l]) => { c.strokeStyle = css("--ink-soft"); c.setLineDash([3, 3]); c.beginPath(); c.moveTo(lfM.l, gy(v)); c.lineTo(w - lfM.r, gy(v)); c.stroke(); c.setLineDash([]); c.textAlign = "left"; c.fillText(l, w - lfM.r - 24, gy(v) - 3); });
+    c.strokeStyle = css("--run"); c.lineWidth = 2; c.beginPath(); let on = false;
+    lifeRows(r).forEach(([gg, v]) => { if (v == null || !isFinite(v)) { on = false; return; } on ? c.lineTo(gx(gg), gy(v)) : c.moveTo(gx(gg), gy(v)); on = true; }); c.stroke();
+    c.strokeStyle = css("--ink"); c.lineWidth = 1.5; c.beginPath(); c.moveTo(gx(g), lfM.t); c.lineTo(gx(g), h - lfM.b); c.stroke();
+  }
+
+  // ---------- flow panel: evenly spaced streamlines, nullclines, labelled fixed points ----------
+  const flM = { l: 40, r: 12, t: 10, b: 34 };
+  const KAP = P.kappa;                  // capacity fraction -> fraction of the 526 module neurons active
+  const XMAX = () => Math.min(1 / KAP, 1.15 / (1 + delta(r)));
+  const fx = x => flM.l + x / XMAX() * (C.flow.w - flM.l - flM.r);
+  const fy = y => C.flow.h - flM.b - Math.sqrt(Math.max(y, 0)) * (C.flow.h - flM.t - flM.b);
+  const finv = (px, py) => [(px - flM.l) / (C.flow.w - flM.l - flM.r) * XMAX(), Math.pow(Math.max(0, (C.flow.h - flM.b - py) / (C.flow.h - flM.t - flM.b)), 2)];
+  let field = null;
+  function dispVel(px, py, q) {        // velocity in screen pixels per time unit, plus the raw speed
+    const [x, y] = finv(px, py), [a, b] = drift(x, y, q);
+    const W = C.flow.w - flM.l - flM.r, H = C.flow.h - flM.t - flM.b;
+    return [a / XMAX() * W, -b / (2 * Math.sqrt(Math.max(y, 1e-6))) * H, Math.hypot(a, b)];
+  }
+  function buildField() {
+    const q = pars(), { w, h } = C.flow, sep = Math.max(14, Math.min(22, w / 22)), cell = sep / 2;
+    const nx = Math.ceil(w / cell) + 1, ny = Math.ceil(h / cell) + 1, occ = new Uint8Array(nx * ny);
+    const inside = (px, py) => px >= flM.l && px <= w - flM.r && py >= flM.t && py <= h - flM.b;
+    const ci = (px, py) => Math.floor(px / cell) + nx * Math.floor(py / cell);
+    const lines = [];
+    const trace = (sx, sy, dir) => {
+      const pts = []; let px = sx, py = sy;
+      for (let k = 0; k < 900; k++) {
+        const [u, v] = dispVel(px, py, q), m = Math.hypot(u, v); if (m < 1e-9) break;
+        const [u2, v2] = dispVel(px + dir * u / m * 0.8, py + dir * v / m * 0.8, q), m2 = Math.hypot(u2, v2); if (m2 < 1e-9) break;
+        px += dir * u2 / m2 * 1.6; py += dir * v2 / m2 * 1.6;
+        if (!inside(px, py)) break;
+        if (occ[ci(px, py)] && k > 2) break;
+        pts.push([px, py]);
+      }
+      return pts;
+    };
+    const N = 14, seeds = [];
+    for (let j = 0; j < N; j++) for (let i = 0; i < N; i++) seeds.push([flM.l + (i + 0.5 + 0.3 * Math.sin(7 * j + i)) / N * (w - flM.l - flM.r), flM.t + (j + 0.5 + 0.3 * Math.cos(5 * i + j)) / N * (h - flM.t - flM.b)]);
+    for (const [sx, sy] of seeds) {
+      if (occ[ci(sx, sy)]) continue;
+      const pts = trace(sx, sy, -1).reverse().concat([[sx, sy]], trace(sx, sy, 1));
+      if (pts.length < 14) continue;
+      pts.forEach(([px, py]) => { const a = Math.floor(px / cell), b = Math.floor(py / cell); for (let da = -1; da <= 1; da++) for (let db = -1; db <= 1; db++) { const aa = a + da, bb = b + db; if (aa >= 0 && bb >= 0 && aa < nx && bb < ny) occ[aa + nx * bb] = 1; } });
+      let s = 0; pts.forEach(([px, py]) => s += Math.log10(1e-4 + dispVel(px, py, q)[2])); s /= pts.length;
+      lines.push({ pts, sp: s });
+    }
+    field = { q, lines, fps: fixedPoints(q), nc: nullclines(q) };
+  }
+  function fixedPoints(q) {
+    const F = (x, y) => drift(x, y, q), pts = [];
+    for (let i = 0; i <= 10; i++) for (let j = 0; j <= 10; j++) {
+      let x = (i / 10) * XMAX(), y = (j / 10) ** 2;
+      for (let it = 0; it < 80; it++) {
+        const [a, b] = F(x, y), e = 1e-7, [ax, bx] = F(x + e, y), [ay, by] = F(x, y + e);
+        const J = [(ax - a) / e, (ay - a) / e, (bx - b) / e, (by - b) / e], det = J[0] * J[3] - J[1] * J[2]; if (Math.abs(det) < 1e-14) break;
+        const dx = (J[3] * a - J[1] * b) / det, dy = (-J[2] * a + J[0] * b) / det; x -= dx; y -= dy;
+        if (x < -1e-6 || y < -1e-6 || x > 1.2 || y > 1.2) break; if (Math.abs(dx) + Math.abs(dy) < 1e-13) break;
+      }
+      if (x < -1e-9 || y < -1e-9 || x > 1 || y > 1) continue; const [a, b] = F(x, y); if (Math.abs(a) + Math.abs(b) > 1e-8) continue;
+      x = Math.max(0, x); y = Math.max(0, y); if (pts.some(p => Math.abs(p.x - x) + Math.abs(p.y - y) < 1e-6)) continue;
+      const e = 1e-7, [a0, b0] = F(x, y), [ax, bx] = F(x + e, y), [ay, by] = F(x, y + e);
+      const tr = (ax - a0) / e + (by - b0) / e, det = ((ax - a0) / e) * ((by - b0) / e) - ((ay - a0) / e) * ((bx - b0) / e), disc = tr * tr - 4 * det;
+      const l1 = disc >= 0 ? (tr + Math.sqrt(disc)) / 2 : tr / 2, l2 = disc >= 0 ? (tr - Math.sqrt(disc)) / 2 : tr / 2;
+      pts.push({ x, y, type: l1 < 0 && l2 < 0 ? "stable" : (l1 > 0 && l2 > 0 ? "unstable" : "saddle") });
+    }
+    return pts;
+  }
+  function nullclines(q) {
+    const n = 80, Fx = [], Fy = [];
+    for (let j = 0; j <= n; j++) { Fx.push([]); Fy.push([]); for (let i = 0; i <= n; i++) { const [a, b] = drift(i / n * XMAX(), (j / n) ** 2, q); Fx[j].push(a); Fy[j].push(b); } }
+    const segs = F => { const out = []; for (let j = 0; j < n; j++) for (let i = 0; i < n; i++) {
+      const v = [F[j][i], F[j][i + 1], F[j + 1][i + 1], F[j + 1][i]], p = [[i, j], [i + 1, j], [i + 1, j + 1], [i, j + 1]], cr = [];
+      for (let k = 0; k < 4; k++) { const a = v[k], b = v[(k + 1) % 4]; if ((a > 0) !== (b > 0)) { const t = a / (a - b); cr.push([p[k][0] + t * (p[(k + 1) % 4][0] - p[k][0]), p[k][1] + t * (p[(k + 1) % 4][1] - p[k][1])]); } }
+      if (cr.length >= 2) out.push([cr[0], cr[1]]); if (cr.length === 4) out.push([cr[2], cr[3]]); } return out; };
+    return { x: segs(Fx), y: segs(Fy), n };
+  }
+  let dashT = 0;
+  function drawFlow(dtReal) {
+    const { c, w, h } = C.flow; c.clearRect(0, 0, w, h);
+    c.strokeStyle = css("--grid"); c.lineWidth = 1; c.fillStyle = css("--ink-soft"); c.font = font();
+    const xmaxN = XMAX() * KAP, xstep = xmaxN > 0.3 ? 0.1 : (xmaxN > 0.12 ? 0.05 : 0.02);
+    for (let v = 0; v <= xmaxN + 1e-9; v += xstep) { const X = fx(v / KAP); c.beginPath(); c.moveTo(X, flM.t); c.lineTo(X, h - flM.b); c.stroke(); c.textAlign = "center"; c.fillText(+v.toFixed(2), X, h - flM.b + 14); }
+    [0, 0.01, 0.05, 0.2, 0.5, 1].forEach(v => { c.beginPath(); c.moveTo(flM.l, fy(v)); c.lineTo(w - flM.r, fy(v)); c.stroke(); c.textAlign = "right"; c.fillText(v, flM.l - 6, fy(v) + 4); });
+    c.textAlign = "center"; c.fillText("x: fraction of module neurons active", (flM.l + w - flM.r) / 2, h - 3);
+    c.save(); c.translate(11, (flM.t + h - flM.b) / 2); c.rotate(-Math.PI / 2); c.fillText("y: rest of brain (√ scale)", 0, 0); c.restore();
+    if (!field) return;
+    dashT += dtReal;                    // dashes march along each streamline, faster where the flow is faster
+    const col = css("--stream");
+    for (const L of field.lines) {
+      const k = Math.min(1, Math.max(0, (L.sp + 3) / 3.5));
+      c.strokeStyle = `rgba(${col},${0.3 + 0.5 * k})`; c.lineWidth = 1.2 + 0.6 * k;
+      c.setLineDash([7, 6]); c.lineDashOffset = -dashT * (6 + 30 * k);
+      c.beginPath(); L.pts.forEach(([px, py], i) => i ? c.lineTo(px, py) : c.moveTo(px, py)); c.stroke();
+      c.setLineDash([]);
+      const m = Math.floor(L.pts.length / 2); if (m > 2) {
+        const [x1, y1] = L.pts[m - 2], [x2, y2] = L.pts[m], an = Math.atan2(y2 - y1, x2 - x1);
+        c.fillStyle = `rgba(${col},${0.55 + 0.45 * k})`; c.beginPath(); c.moveTo(x2 + 5 * Math.cos(an), y2 + 5 * Math.sin(an));
+        c.lineTo(x2 + 5 * Math.cos(an + 2.5), y2 + 5 * Math.sin(an + 2.5)); c.lineTo(x2 + 5 * Math.cos(an - 2.5), y2 + 5 * Math.sin(an - 2.5)); c.closePath(); c.fill();
+      }
+    }
+    const n = field.nc.n, W = w - flM.l - flM.r, H = h - flM.t - flM.b, P2 = ([i, j]) => [flM.l + i / n * W, h - flM.b - j / n * H];
+    c.lineWidth = 1.6; c.setLineDash([5, 4]);
+    [[field.nc.x, css("--line-l")], [field.nc.y, css("--line-d")]].forEach(([segs, cc]) => { c.strokeStyle = cc; c.beginPath(); segs.forEach(([a, b]) => { const p = P2(a), qq = P2(b); c.moveTo(p[0], p[1]); c.lineTo(qq[0], qq[1]); }); c.stroke(); });
+    c.setLineDash([]);
+    runs.forEach(R => { c.fillStyle = R.alive ? css("--run") : css("--ink-soft"); c.globalAlpha = R.alive ? 0.9 : 0.5; c.beginPath(); c.arc(fx(R.x), fy(R.y), R.alive ? 4 : 2.5, 0, 2 * Math.PI); c.fill(); c.globalAlpha = 1; });
+    c.font = font(600, 11.5);
+    field.fps.forEach(p => {
+      const X = fx(p.x), Y = fy(p.y); c.lineWidth = 2; c.strokeStyle = css("--fp"); c.fillStyle = css("--fp");
+      c.beginPath(); c.arc(X, Y, 6, 0, 2 * Math.PI);
+      if (p.type === "stable") c.fill(); else { c.fillStyle = css("--panel"); c.fill(); c.stroke(); if (p.type === "saddle") { c.fillStyle = css("--fp"); c.beginPath(); c.arc(X, Y, 6, Math.PI / 2, 3 * Math.PI / 2); c.fill(); } }
+      const lab = p.x < 1e-6 && p.y < 1e-6 ? (p.type === "stable" ? "silent (stable)" : "silent (unstable)") : (p.y > 0.05 ? "whole brain on" : (p.type === "stable" ? "module on" : ""));
+      if (lab) { const right = X > w - 120; c.fillStyle = css("--ink"); c.textAlign = right ? "right" : "left"; c.fillText(lab, X + (right ? -10 : 10), Math.max(flM.t + 10, Y - 9)); }
+    });
+  }
+
+  // ---------- the real module, simulated live ----------
+  const Gd = DATA.graph, NM = Gd.n;
+  const b64 = (s, Tp) => { const bin = atob(s), u = new Uint8Array(bin.length); for (let i = 0; i < bin.length; i++) u[i] = bin.charCodeAt(i); return new Tp(u.buffer); };
+  const colptr = b64(Gd.colptr, Int32Array), rowi = b64(Gd.rows, Int16Array), wcnt = b64(Gd.w, Uint16Array), sgn = b64(Gd.sign, Int8Array);
+  const posx = b64(Gd.px, Float32Array), posy = b64(Gd.py, Float32Array), topE = b64(Gd.top, Int32Array);
+  const act = new Uint8Array(NM), inp = new Float32Array(NM), DT = 0.2, POFF = 1 - Math.exp(-DT);
+  let graphAlive = true, graphDeath = null, graphHist = [];
+  function graphReset() { act.fill(1); graphAlive = true; graphDeath = null; graphHist = [[0, 1]]; }
+  function graphStep() {
+    inp.fill(0);
+    for (let j = 0; j < NM; j++) { if (!act[j]) continue; const s = sgn[j]; if (s === 0) continue; const co = (s > 0 ? 1 : -r) * Gd.c;
+      for (let e = colptr[j]; e < colptr[j + 1]; e++) inp[rowi[e]] += co * wcnt[e]; }
+    let n = 0;
+    for (let i = 0; i < NM; i++) {
+      if (act[i]) { if (Math.random() < POFF) act[i] = 0; }
+      else { const s = g * inp[i]; if (s > 0 && Math.random() < 1 - Math.exp(-Math.tanh(s) * DT)) act[i] = 1; }
+      n += act[i];
+    }
+    return n;
+  }
+  let gGeom = null;
+  function graphGeom() {
+    const { w, h } = C.graph, pad = 12; let x0 = Infinity, x1 = -Infinity, y0 = Infinity, y1 = -Infinity;
+    for (let i = 0; i < NM; i++) { x0 = Math.min(x0, posx[i]); x1 = Math.max(x1, posx[i]); y0 = Math.min(y0, posy[i]); y1 = Math.max(y1, posy[i]); }
+    const top = 20, s = Math.min((w - 2 * pad) / (x1 - x0), (h - pad - top) / (y1 - y0)), ox = (w - s * (x1 - x0)) / 2, oy = top + (h - pad - top - s * (y1 - y0)) / 2;
+    const X = new Float32Array(NM), Y = new Float32Array(NM); for (let i = 0; i < NM; i++) { X[i] = ox + (posx[i] - x0) * s; Y[i] = oy + (posy[i] - y0) * s; }
+    const off = document.createElement("canvas"); off.width = Math.round(w * dpr); off.height = Math.round(h * dpr); const c = off.getContext("2d"); c.setTransform(dpr, 0, 0, dpr, 0, 0);
+    c.strokeStyle = `rgba(${css("--edge")},0.10)`; c.lineWidth = 0.6; c.beginPath();
+    for (let k = 0; k < topE.length; k += 2) { const a = topE[k], b = topE[k + 1]; c.moveTo(X[a], Y[a]); c.lineTo(X[b], Y[b]); } c.stroke();
+    c.fillStyle = css("--ink-soft"); c.font = font(600, 11.5); c.textAlign = "left"; c.fillText(Gd.leftLabel, 4, 13); c.textAlign = "right"; c.fillText(Gd.rightLabel, w - 4, 13);
+    gGeom = { X, Y, base: off };
+  }
+  function drawGraph() {
+    const { c, w, h } = C.graph; c.clearRect(0, 0, w, h); if (!gGeom) return; c.drawImage(gGeom.base, 0, 0, w, h);
+    const { X, Y } = gGeom; c.fillStyle = css("--node-off");
+    for (let i = 0; i < NM; i++) if (!act[i]) c.fillRect(X[i] - 1.5, Y[i] - 1.5, 3, 3);
+    const cols = [css("--inh"), css("--mod"), css("--exc")];
+    for (let k = 0; k < 3; k++) { c.fillStyle = cols[k]; c.beginPath(); for (let i = 0; i < NM; i++) if (act[i] && sgn[i] + 1 === k) { c.moveTo(X[i] + 3.6, Y[i]); c.arc(X[i], Y[i], 3.6, 0, 2 * Math.PI); } c.fill(); }
+  }
+
+  // ---------- reduced-model runs + shared episode clock (log time) ----------
+  let runs = [], simT = 0, holdUntil = 0;
+  const NR = 8, TEND = 3000;
+  function gauss() { let u = 0; while (!u) u = Math.random(); return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * Math.random()); }
+  function resetEpisode() { simT = 0; holdUntil = 0; const x0 = 1 / (1 + delta(r)); runs = Array.from({ length: NR }, () => ({ x: x0, y: 1, alive: true, hist: [[0, x0 * KAP]], death: null })); graphReset(); }
+  function advance(dtSim) {
+    const q = field ? field.q : pars(), K0 = P.K0, KB = 20000;
+    const n = Math.min(4000, Math.max(1, Math.ceil(dtSim / 0.1))), hh = dtSim / n;
+    for (const R of runs) {
+      if (!R.alive) continue;
+      for (let k = 0; k < n; k++) {
+        const x = R.x, y = R.y;
+        const bx = Math.max(0, A * q.R * x * (1 - (1 + q.d) * x) + g * P.e_MB * y * (1 - x)), dx = A * x;
+        const by = Math.max(0, A * q.RB * y * (1 - y) + g * P.e_BM * x * (1 - y)), dy = A * y;
+        const nx = x + (bx - dx) * hh + Math.sqrt((bx + dx) * hh / K0) * gauss(), ny = y + (by - dy) * hh + Math.sqrt((by + dy) * hh / KB) * gauss();
+        R.x = nx < 0.5 / K0 ? 0 : Math.min(nx, 1); R.y = ny < 0.5 / KB ? 0 : Math.min(ny, 1);
+        if (R.x === 0 && R.y === 0) { R.alive = false; R.death = simT + (k + 1) * hh; break; }
+      }
+      R.hist.push([simT + dtSim, R.x * KAP]);
+    }
+    if (graphAlive) {                      // the real module: integer steps of DT, capped per frame
+      const steps = Math.min(400, Math.max(1, Math.round(dtSim / DT))); let nAct = 0;
+      for (let s = 0; s < steps; s++) { nAct = graphStep(); if (nAct === 0) { graphAlive = false; graphDeath = simT + (s + 1) * DT; break; } }
+      graphHist.push([simT + dtSim, nAct / NM]);
+    }
+    simT += dtSim;
+  }
+
+  // ---------- trace panel ----------
+  const trM = { l: 40, r: 10, t: 10, b: 32 }, TMIN = 0.2;
+  function drawTrace() {
+    const { c, w, h } = C.trace; c.clearRect(0, 0, w, h);
+    const tx = t => trM.l + (lg(Math.max(t, TMIN)) - lg(TMIN)) / (lg(TEND) - lg(TMIN)) * (w - trM.l - trM.r);
+    const ty = v => h - trM.b - Math.min(v, 1) * (h - trM.t - trM.b);
+    c.strokeStyle = css("--grid"); c.lineWidth = 1; c.fillStyle = css("--ink-soft"); c.font = font();
+    [0.2, 1, 10, 100, 1000].forEach(t => { c.beginPath(); c.moveTo(tx(t), trM.t); c.lineTo(tx(t), h - trM.b); c.stroke(); c.textAlign = "center"; c.fillText(t, tx(t), h - trM.b + 14); });
+    [0, 0.25, 0.5, 0.75, 1].forEach(v => { c.beginPath(); c.moveTo(trM.l, ty(v)); c.lineTo(w - trM.r, ty(v)); c.stroke(); c.textAlign = "right"; c.fillText(v, trM.l - 6, ty(v) + 4); });
+    c.textAlign = "center"; c.fillText("time (log scale)", (trM.l + w - trM.r) / 2, h - 3);
+    c.save(); c.translate(11, (trM.t + h - trM.b) / 2); c.rotate(-Math.PI / 2); c.fillText("fraction of module active", 0, 0); c.restore();
+    c.strokeStyle = css("--ink-soft"); c.setLineDash([4, 4]); c.beginPath(); c.moveTo(tx(TEND), trM.t); c.lineTo(tx(TEND), h - trM.b); c.stroke(); c.setLineDash([]);
+    const mark = (X, Y, col) => { c.strokeStyle = col; c.lineWidth = 2; c.beginPath(); c.moveTo(X - 4, Y - 4); c.lineTo(X + 4, Y + 4); c.moveTo(X + 4, Y - 4); c.lineTo(X - 4, Y + 4); c.stroke(); };
+    const line = (hist, col, wd, alpha) => { c.strokeStyle = col; c.lineWidth = wd; c.globalAlpha = alpha; c.beginPath(); hist.forEach(([t, v], i) => { const X = tx(t), Y = ty(v); i ? c.lineTo(X, Y) : c.moveTo(X, Y); }); c.stroke(); c.globalAlpha = 1; };
+    runs.forEach(R => { line(R.hist, css("--run"), 1.2, 0.75); if (R.death) mark(tx(R.death), ty(0), css("--run")); });
+    line(graphHist, css("--graph-run"), 3, 1); if (graphDeath) mark(tx(graphDeath), ty(0), css("--graph-run"));
+  }
+
+  // ---------- controls ----------
+  const gs = $("gs"), rs = $("rs"), sp = $("sp"), playBtn = $("play");
+  const gFromS = s => G0 * Math.pow(G1 / G0, s / 1000), sFromG = gg => 1000 * lg(gg / G0) / lg(G1 / G0);
+  const secPerDecade = () => 0.6 * Math.pow(10, sp.value / 100);
+  function setPoint(gg, rr, reset) {
+    g = gg; r = rr; gs.value = sFromG(g); rs.value = Math.round(r * 100);
+    $("gv").textContent = g.toPrecision(3); $("rv").textContent = r.toFixed(2);
+    const ph = phaseAt(g, r), el = $("ro-phase"); el.textContent = PH[ph]; el.style.color = css(PHL[ph]);
+    $("ro-gr").textContent = `${g.toPrecision(3)} · ${r.toFixed(2)}`; $("ro-R").textContent = (g * P.lambda_M / A).toFixed(2);
+    const lt = tauAt(g, r); $("ro-tau").textContent = lt == null || !isFinite(lt) ? "–" : (lt > 6 ? "> 10⁶" : Math.round(Math.pow(10, lt)).toLocaleString());
+    buildField(); drawPD(); drawLife(); if (reset) resetEpisode();
+  }
+  function setPlaying(p) { playing = p; playBtn.textContent = p ? "Pause sweep" : "Play sweep"; playBtn.setAttribute("aria-pressed", p); }
+  playBtn.onclick = () => setPlaying(!playing);
+  gs.oninput = () => { setPlaying(false); setPoint(gFromS(+gs.value), r, true); };
+  rs.oninput = () => { setPlaying(false); setPoint(g, +rs.value / 100, true); };
+  sp.oninput = () => $("spv").textContent = secPerDecade().toFixed(1);
+  $("reset").onclick = () => resetEpisode();
+  $("param-text").textContent = `Values used: λ_M = ${P.lambda_M.toFixed(3)} (module of ${P.n_M} neurons), e_MB = ${P.e_MB.toFixed(2)}, e_BM = ${P.e_BM.toFixed(4)}, α = ${A.toFixed(3)}; noise from K_eff(r = 0) = ${P.K0.toFixed(1)}; δ(r) and λ_B(r) interpolated from the theory runs.`;
+
+  function layout() { for (const k in C) Object.assign(C[k], fit(C[k].cv)); renderPDBase(); graphGeom(); setPoint(g, r, false); drawGraph(); drawTrace(); }
+  const retheme = () => { cssCache = {}; layout(); };
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", retheme);
+  new MutationObserver(retheme).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  let lastW = 0;
+  new ResizeObserver(() => { const w = document.querySelector(".wrap").clientWidth; if (Math.abs(w - lastW) > 1) { lastW = w; layout(); } }).observe(document.querySelector(".wrap"));
+  sp.oninput(); setPlaying(playing);
+  layout(); resetEpisode();
+
+  // ---------- main loop: episodes in log time; the sweep steps g up by 12% after each episode ----------
+  let last = performance.now();
+  function loop(now) {
+    const dt = Math.min(0.1, (now - last) / 1000); last = now;
+    const allDead = !graphAlive && runs.every(R => !R.alive);
+    if (holdUntil) { if (now > holdUntil) { if (playing) { let ng = g * 1.12; if (ng > 20) ng = 0.12; setPoint(ng, r, false); } resetEpisode(); } }
+    else if (simT >= TEND || allDead) holdUntil = now + 1400;
+    else { const rate = Math.LN10 / secPerDecade(); advance(Math.max(0.05, simT) * (Math.exp(rate * dt) - 1) + 0.02); }
+    $("ro-t").textContent = simT < 10 ? simT.toFixed(1) : Math.round(simT).toLocaleString();
+    let nA = 0; for (let i = 0; i < NM; i++) nA += act[i]; $("ro-act").textContent = `${nA} / ${NM}`;
+    $("ro-graph").textContent = graphAlive ? "active" : `died at ${graphDeath < 10 ? graphDeath.toFixed(1) : Math.round(graphDeath)}`;
+    $("ro-alive").textContent = `${runs.filter(R => R.alive).length} / ${NR}`;
+    drawFlow(dt); drawGraph(); drawTrace();
+    requestAnimationFrame(loop);
+  }
+  requestAnimationFrame(loop);
+})();
+</script>
+</body>
+</html>

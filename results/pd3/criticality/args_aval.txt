@@ -1,0 +1,38 @@
+pd3_avalanche.py --graph real --r 0 --x 0.90 --nav 2000000 --cap 5000 --tag real_r0_x0.90 --rng 0
+pd3_avalanche.py --graph real --r 0 --x 0.95 --nav 2000000 --cap 5000 --tag real_r0_x0.95 --rng 1
+pd3_avalanche.py --graph real --r 0 --x 0.98 --nav 2000000 --cap 5000 --tag real_r0_x0.98 --rng 2
+pd3_avalanche.py --graph real --r 0 --x 1.00 --nav 2000000 --cap 5000 --tag real_r0_x1.00 --rng 3
+pd3_avalanche.py --graph real --r 0 --x 1.02 --nav 2000000 --cap 5000 --tag real_r0_x1.02 --rng 4
+pd3_avalanche.py --graph real --r 0 --x 1.05 --nav 2000000 --cap 5000 --tag real_r0_x1.05 --rng 5
+pd3_avalanche.py --graph real --r 0 --x 1.10 --nav 500000 --cap 5000 --tag real_r0_x1.10 --rng 6
+pd3_avalanche.py --graph real --r 0 --x 1.20 --nav 200000 --cap 2500 --tag real_r0_x1.20 --rng 7
+pd3_avalanche.py --graph real --r 0 --x 1.35 --nav 200000 --cap 2500 --tag real_r0_x1.35 --rng 8
+pd3_avalanche.py --graph real --r 0 --x 1.50 --nav 200000 --cap 2500 --tag real_r0_x1.50 --rng 9
+pd3_avalanche.py --graph real --r 1 --x 0.90 --nav 2000000 --cap 5000 --tag real_r1_x0.90 --rng 10
+pd3_avalanche.py --graph real --r 1 --x 0.95 --nav 2000000 --cap 5000 --tag real_r1_x0.95 --rng 11
+pd3_avalanche.py --graph real --r 1 --x 0.98 --nav 2000000 --cap 5000 --tag real_r1_x0.98 --rng 12
+pd3_avalanche.py --graph real --r 1 --x 1.00 --nav 2000000 --cap 5000 --tag real_r1_x1.00 --rng 13
+pd3_avalanche.py --graph real --r 1 --x 1.02 --nav 2000000 --cap 5000 --tag real_r1_x1.02 --rng 14
+pd3_avalanche.py --graph real --r 1 --x 1.05 --nav 2000000 --cap 5000 --tag real_r1_x1.05 --rng 15
+pd3_avalanche.py --graph real --r 1 --x 1.10 --nav 500000 --cap 5000 --tag real_r1_x1.10 --rng 16
+pd3_avalanche.py --graph real --r 1 --x 1.20 --nav 200000 --cap 2500 --tag real_r1_x1.20 --rng 17
+pd3_avalanche.py --graph real --r 1 --x 1.35 --nav 200000 --cap 2500 --tag real_r1_x1.35 --rng 18
+pd3_avalanche.py --graph real --r 1 --x 1.50 --nav 200000 --cap 2500 --tag real_r1_x1.50 --rng 19
+pd3_avalanche.py --graph real --r 0.5 --x 1.00 --nav 2000000 --tag real_r0.5_x1.00 --rng 20
+pd3_avalanche.py --graph real --r 2 --x 1.00 --nav 2000000 --tag real_r2_x1.00 --rng 21
+pd3_avalanche.py --graph real --r 4 --x 1.00 --nav 2000000 --tag real_r4_x1.00 --rng 22
+pd3_avalanche.py --graph real --r 6 --x 1.00 --nav 2000000 --tag real_r6_x1.00 --rng 23
+pd3_avalanche.py --graph real --r 6 --x 0.98 --nav 2000000 --tag real_r6_x0.98 --rng 24
+pd3_avalanche.py --graph real --r 6 --x 1.02 --nav 2000000 --tag real_r6_x1.02 --rng 25
+pd3_avalanche.py --graph module --r 0 --x 1.00 --nav 2000000 --tag module_r0_x1.00 --rng 26
+pd3_avalanche.py --graph module --r 1 --x 1.00 --nav 2000000 --tag module_r1_x1.00 --rng 27
+pd3_avalanche.py --graph cnull --N 167216 --gseed 0 --r 0 --x 0.98 --nav 1000000 --tag cnull_N167216_s0_r0_x0.98 --rng 28
+pd3_avalanche.py --graph cnull --N 167216 --gseed 0 --r 0 --x 1.00 --nav 1000000 --tag cnull_N167216_s0_r0_x1.00 --rng 29
+pd3_avalanche.py --graph cnull --N 167216 --gseed 0 --r 0 --x 1.02 --nav 1000000 --tag cnull_N167216_s0_r0_x1.02 --rng 30
+pd3_avalanche.py --graph cnull --N 167216 --gseed 0 --r 1 --x 1.00 --nav 1000000 --tag cnull_N167216_s0_r1_x1.00 --rng 31
+pd3_avalanche.py --graph cnull --N 5000 --gseed 1 --r 0 --x 1.00 --nav 1000000 --tag cnull_N5000_s1_r0_x1.00 --rng 32
+pd3_avalanche.py --graph cnull --N 20000 --gseed 1 --r 0 --x 1.00 --nav 1000000 --tag cnull_N20000_s1_r0_x1.00 --rng 33
+pd3_avalanche.py --graph cnull --N 80000 --gseed 1 --r 0 --x 1.00 --nav 1000000 --tag cnull_N80000_s1_r0_x1.00 --rng 34
+pd3_avalanche.py --graph complete --K 37 --r 0 --x 0.90 --nav 2000000 --cap 5000 --seed_min 8 --wall_min 10 --tag complete37_x0.90 --rng 1370 && /MALECNS_PYBIN/python /MALECNS_ROOT/code/pd3_avalanche.py --graph complete --K 37 --r 0 --x 0.95 --nav 2000000 --cap 5000 --seed_min 8 --wall_min 10 --tag complete37_x0.95 --rng 1371 && /MALECNS_PYBIN/python /MALECNS_ROOT/code/pd3_avalanche.py --graph complete --K 37 --r 0 --x 0.98 --nav 2000000 --cap 5000 --seed_min 8 --wall_min 10 --tag complete37_x0.98 --rng 1372 && /MALECNS_PYBIN/python /MALECNS_ROOT/code/pd3_avalanche.py --graph complete --K 37 --r 0 --x 1.00 --nav 2000000 --cap 5000 --seed_min 8 --wall_min 10 --tag complete37_x1.00 --rng 1373 && /MALECNS_PYBIN/python /MALECNS_ROOT/code/pd3_avalanche.py --graph complete --K 37 --r 0 --x 1.02 --nav 2000000 --cap 5000 --seed_min 8 --wall_min 10 --tag complete37_x1.02 --rng 1374 && /MALECNS_PYBIN/python /MALECNS_ROOT/code/pd3_avalanche.py --graph complete --K 37 --r 0 --x 1.05 --nav 2000000 --cap 5000 --seed_min 8 --wall_min 10 --tag complete37_x1.05 --rng 1375 && /MALECNS_PYBIN/python /MALECNS_ROOT/code/pd3_avalanche.py --graph complete --K 37 --r 0 --x 1.10 --nav 500000 --cap 5000 --seed_min 8 --wall_min 10 --tag complete37_x1.10 --rng 1376 && /MALECNS_PYBIN/python /MALECNS_ROOT/code/pd3_avalanche.py --graph complete --K 37 --r 0 --x 1.20 --nav 200000 --cap 2500 --seed_min 8 --wall_min 10 --tag complete37_x1.20 --rng 1377 && /MALECNS_PYBIN/python /MALECNS_ROOT/code/pd3_avalanche.py --graph complete --K 37 --r 0 --x 1.35 --nav 200000 --cap 2500 --seed_min 8 --wall_min 10 --tag complete37_x1.35 --rng 1378 && /MALECNS_PYBIN/python /MALECNS_ROOT/code/pd3_avalanche.py --graph complete --K 37 --r 0 --x 1.50 --nav 200000 --cap 2500 --seed_min 8 --wall_min 10 --tag complete37_x1.50 --rng 1379
+pd3_avalanche.py --graph complete --K 76 --r 0 --x 0.90 --nav 2000000 --cap 5000 --seed_min 8 --wall_min 10 --tag complete76_x0.90 --rng 1760 && /MALECNS_PYBIN/python /MALECNS_ROOT/code/pd3_avalanche.py --graph complete --K 76 --r 0 --x 0.95 --nav 2000000 --cap 5000 --seed_min 8 --wall_min 10 --tag complete76_x0.95 --rng 1761 && /MALECNS_PYBIN/python /MALECNS_ROOT/code/pd3_avalanche.py --graph complete --K 76 --r 0 --x 0.98 --nav 2000000 --cap 5000 --seed_min 8 --wall_min 10 --tag complete76_x0.98 --rng 1762 && /MALECNS_PYBIN/python /MALECNS_ROOT/code/pd3_avalanche.py --graph complete --K 76 --r 0 --x 1.00 --nav 2000000 --cap 5000 --seed_min 8 --wall_min 10 --tag complete76_x1.00 --rng 1763 && /MALECNS_PYBIN/python /MALECNS_ROOT/code/pd3_avalanche.py --graph complete --K 76 --r 0 --x 1.02 --nav 2000000 --cap 5000 --seed_min 8 --wall_min 10 --tag complete76_x1.02 --rng 1764 && /MALECNS_PYBIN/python /MALECNS_ROOT/code/pd3_avalanche.py --graph complete --K 76 --r 0 --x 1.05 --nav 2000000 --cap 5000 --seed_min 8 --wall_min 10 --tag complete76_x1.05 --rng 1765 && /MALECNS_PYBIN/python /MALECNS_ROOT/code/pd3_avalanche.py --graph complete --K 76 --r 0 --x 1.10 --nav 500000 --cap 5000 --seed_min 8 --wall_min 10 --tag complete76_x1.10 --rng 1766 && /MALECNS_PYBIN/python /MALECNS_ROOT/code/pd3_avalanche.py --graph complete --K 76 --r 0 --x 1.20 --nav 200000 --cap 2500 --seed_min 8 --wall_min 10 --tag complete76_x1.20 --rng 1767 && /MALECNS_PYBIN/python /MALECNS_ROOT/code/pd3_avalanche.py --graph complete --K 76 --r 0 --x 1.35 --nav 200000 --cap 2500 --seed_min 8 --wall_min 10 --tag complete76_x1.35 --rng 1768 && /MALECNS_PYBIN/python /MALECNS_ROOT/code/pd3_avalanche.py --graph complete --K 76 --r 0 --x 1.50 --nav 200000 --cap 2500 --seed_min 8 --wall_min 10 --tag complete76_x1.50 --rng 1769
+pd3_avalanche.py --graph complete --K 300 --r 0 --x 1.00 --nav 2000000 --seed_min 25 --wall_min 30 --tag complete300_x1.00 --rng 2300 && /MALECNS_PYBIN/python /MALECNS_ROOT/code/pd3_avalanche.py --graph complete --K 2000 --r 0 --x 1.00 --nav 2000000 --seed_min 25 --wall_min 30 --tag complete2000_x1.00 --rng 4000

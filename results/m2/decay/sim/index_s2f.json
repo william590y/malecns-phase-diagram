@@ -1,0 +1,222 @@
+[
+ {
+  "task": 0,
+  "stage": "s2",
+  "model": "M1",
+  "graph": "real",
+  "r": 4.0,
+  "boundary": "S",
+  "g": [
+   0.3645,
+   0.37121,
+   0.37804,
+   0.38499,
+   0.39207,
+   0.39928,
+   0.40662,
+   0.4141
+  ],
+  "seed": 19649438,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M1_real_r4_S.npz"
+ },
+ {
+  "task": 1,
+  "stage": "s2",
+  "model": "M1",
+  "graph": "real",
+  "r": 4.0,
+  "boundary": "on",
+  "g": [
+   0.42948,
+   0.43737,
+   0.44542,
+   0.45361,
+   0.46195,
+   0.47045,
+   0.4791,
+   0.48791
+  ],
+  "seed": 89615905,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M1_real_r4_on.npz"
+ },
+ {
+  "task": 2,
+  "stage": "s2",
+  "model": "M2_allsyn",
+  "graph": "real",
+  "r": 1.0,
+  "boundary": "S",
+  "g": [
+   0.97523,
+   0.99317,
+   1.01144,
+   1.03004,
+   1.04898,
+   1.06828,
+   1.08792,
+   1.10793
+  ],
+  "seed": 155291193,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M2_allsyn_real_r1_S.npz"
+ },
+ {
+  "task": 3,
+  "stage": "s2",
+  "model": "M2_allsyn",
+  "graph": "real",
+  "r": 1.0,
+  "boundary": "on",
+  "g": [
+   1.35387,
+   1.37877,
+   1.40413,
+   1.42995,
+   1.45625,
+   1.48304,
+   1.51031,
+   1.53809
+  ],
+  "seed": 127386786,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M2_allsyn_real_r1_on.npz"
+ },
+ {
+  "task": 4,
+  "stage": "s2",
+  "model": "M2_allsyn",
+  "graph": "real",
+  "r": 1.0,
+  "boundary": "D",
+  "g": [
+   13.45438,
+   13.70183,
+   13.95383,
+   14.21047,
+   14.47182,
+   14.73798,
+   15.00904,
+   15.28508
+  ],
+  "seed": 107832495,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M2_allsyn_real_r1_D.npz"
+ },
+ {
+  "task": 5,
+  "stage": "s2",
+  "model": "M2_tau30",
+  "graph": "real",
+  "r": 0.0,
+  "boundary": "S",
+  "g": [
+   0.42948,
+   0.43737,
+   0.44542,
+   0.45361,
+   0.46195,
+   0.47045,
+   0.4791,
+   0.48791
+  ],
+  "seed": 788555,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M2_tau30_real_r0_S.npz"
+ },
+ {
+  "task": 6,
+  "stage": "s2",
+  "model": "M2_tau30",
+  "graph": "real",
+  "r": 0.0,
+  "boundary": "on",
+  "g": [
+   0.50602,
+   0.51533,
+   0.5248,
+   0.53446,
+   0.54429,
+   0.5543,
+   0.56449,
+   0.57488
+  ],
+  "seed": 45645553,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M2_tau30_real_r0_on.npz"
+ },
+ {
+  "task": 7,
+  "stage": "s2",
+  "model": "M2_tau30",
+  "graph": "real",
+  "r": 0.0,
+  "boundary": "D",
+  "g": [
+   3.07433,
+   3.13087,
+   3.18846,
+   3.2471,
+   3.30682,
+   3.36764,
+   3.42958,
+   3.49265
+  ],
+  "seed": 187562322,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M2_tau30_real_r0_D.npz"
+ },
+ {
+  "task": 8,
+  "stage": "s2",
+  "model": "M2",
+  "graph": "wnull",
+  "r": 4.0,
+  "boundary": "S",
+  "g": [
+   1.35387,
+   1.37877,
+   1.40413,
+   1.42995,
+   1.45625,
+   1.48304,
+   1.51031,
+   1.53809
+  ],
+  "seed": 86146541,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M2_wnull_r4_S.npz"
+ },
+ {
+  "task": 9,
+  "stage": "s2",
+  "model": "M2",
+  "graph": "wnull",
+  "r": 4.0,
+  "boundary": "on",
+  "g": [
+   1.35387,
+   1.37877,
+   1.40413,
+   1.42995,
+   1.45625,
+   1.48304,
+   1.51031,
+   1.53809
+  ],
+  "seed": 53325537,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M2_wnull_r4_on.npz"
+ },
+ {
+  "task": 10,
+  "stage": "s2",
+  "model": "M2",
+  "graph": "wnull",
+  "r": 4.0,
+  "boundary": "D",
+  "g": [
+   5.0287,
+   5.12118,
+   5.21537,
+   5.31129,
+   5.40897,
+   5.50846,
+   5.60977,
+   5.71294
+  ],
+  "seed": 92076762,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M2_wnull_r4_D.npz"
+ }
+]

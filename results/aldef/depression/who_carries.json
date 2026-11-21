@@ -1,0 +1,538 @@
+{
+ "base_r1@0.378": {
+  "module_share": 0.4738511661101027,
+  "superclass_share": {
+   "cb_intrinsic": 0.9173756850927859,
+   "vnc_intrinsic": 0.026897866513100752,
+   "cb_sensory": 0.023635981031948184,
+   "descending_neuron": 0.013414683003775612,
+   "ascending_neuron": 0.004939992791264002
+  },
+  "top200_module": 200,
+  "top200_classes": [
+   [
+    "ALLN",
+    125
+   ],
+   [
+    "ALPN",
+    63
+   ],
+   [
+    "",
+    11
+   ],
+   [
+    "ALON",
+    1
+   ]
+  ],
+  "top200_types": [
+   [
+    "lLN1_bc",
+    30
+   ],
+   [
+    "lLN2P_b",
+    12
+   ],
+   [
+    "lLN2X12",
+    11
+   ],
+   [
+    "lLN2P_c",
+    9
+   ],
+   [
+    "lLN2P_a",
+    7
+   ],
+   [
+    "",
+    7
+   ],
+   [
+    "lLN2T_a",
+    5
+   ],
+   [
+    "lLN2R_a",
+    5
+   ]
+  ]
+ },
+ "base_r1@1.539": {
+  "module_share": 0.11435378054475169,
+  "superclass_share": {
+   "cb_intrinsic": 0.6462531847298256,
+   "vnc_intrinsic": 0.13408789260314527,
+   "ol_intrinsic": 0.10043864888736745,
+   "descending_neuron": 0.030760041834782727,
+   "vnc_motor": 0.02400797724283876
+  },
+  "top200_module": 186,
+  "top200_classes": [
+   [
+    "ALLN",
+    125
+   ],
+   [
+    "ALPN",
+    45
+   ],
+   [
+    "",
+    15
+   ],
+   [
+    "MBON",
+    10
+   ],
+   [
+    "DAN",
+    4
+   ],
+   [
+    "ALON",
+    1
+   ]
+  ],
+  "top200_types": [
+   [
+    "lLN1_bc",
+    30
+   ],
+   [
+    "lLN2P_b",
+    12
+   ],
+   [
+    "lLN2X12",
+    11
+   ],
+   [
+    "lLN2P_c",
+    9
+   ],
+   [
+    "lLN2P_a",
+    7
+   ],
+   [
+    "",
+    7
+   ],
+   [
+    "lLN2T_a",
+    5
+   ],
+   [
+    "lLN2R_a",
+    5
+   ]
+  ]
+ },
+ "sp_NW16_r1@1.539": {
+  "module_share": 0.07501756023306982,
+  "superclass_share": {
+   "cb_intrinsic": 0.5404516605590771,
+   "vnc_intrinsic": 0.2039948260930416,
+   "ol_intrinsic": 0.07864228049097861,
+   "descending_neuron": 0.05797776940634758,
+   "vnc_motor": 0.03831220883818382
+  },
+  "top200_module": 112,
+  "top200_classes": [
+   [
+    "ALLN",
+    101
+   ],
+   [
+    "",
+    83
+   ],
+   [
+    "MBON",
+    11
+   ],
+   [
+    "ALPN",
+    3
+   ],
+   [
+    "DAN",
+    2
+   ]
+  ],
+  "top200_types": [
+   [
+    "lLN1_bc",
+    30
+   ],
+   [
+    "lLN2P_b",
+    10
+   ],
+   [
+    "lLN2P_c",
+    9
+   ],
+   [
+    "lLN2P_a",
+    7
+   ],
+   [
+    "lLN2X12",
+    6
+   ],
+   [
+    "lLN2T_a",
+    5
+   ],
+   [
+    "lLN2X04",
+    4
+   ],
+   [
+    "lLN2F_b",
+    4
+   ]
+  ]
+ },
+ "sp_NW16_r1@3.119": {
+  "module_share": 0.05516508663346624,
+  "superclass_share": {
+   "cb_intrinsic": 0.5640147689730394,
+   "vnc_intrinsic": 0.17488126098776152,
+   "ol_intrinsic": 0.0987099856794904,
+   "descending_neuron": 0.04970808313737975,
+   "vnc_motor": 0.03157980783591404
+  },
+  "top200_module": 109,
+  "top200_classes": [
+   [
+    "ALLN",
+    99
+   ],
+   [
+    "",
+    77
+   ],
+   [
+    "MBON",
+    19
+   ],
+   [
+    "DAN",
+    4
+   ],
+   [
+    "ALPN",
+    1
+   ]
+  ],
+  "top200_types": [
+   [
+    "lLN1_bc",
+    30
+   ],
+   [
+    "lLN2P_b",
+    10
+   ],
+   [
+    "lLN2P_c",
+    9
+   ],
+   [
+    "lLN2P_a",
+    7
+   ],
+   [
+    "lLN2T_a",
+    5
+   ],
+   [
+    "MBON09",
+    4
+   ],
+   [
+    "lLN2X04",
+    4
+   ],
+   [
+    "lLN2F_b",
+    4
+   ]
+  ]
+ },
+ "sp_KW09_r1@1.948": {
+  "module_share": 0.0601330015265694,
+  "superclass_share": {
+   "cb_intrinsic": 0.5484556548605748,
+   "vnc_intrinsic": 0.19706219209450132,
+   "ol_intrinsic": 0.07717562291770912,
+   "descending_neuron": 0.0582454074855217,
+   "vnc_motor": 0.03751895340878033
+  },
+  "top200_module": 93,
+  "top200_classes": [
+   [
+    "",
+    98
+   ],
+   [
+    "ALLN",
+    86
+   ],
+   [
+    "MBON",
+    12
+   ],
+   [
+    "DAN",
+    4
+   ]
+  ],
+  "top200_types": [
+   [
+    "lLN1_bc",
+    30
+   ],
+   [
+    "lLN2P_c",
+    8
+   ],
+   [
+    "lLN2P_a",
+    7
+   ],
+   [
+    "lLN2T_a",
+    5
+   ],
+   [
+    "lLN2X04",
+    4
+   ],
+   [
+    "lLN2F_b",
+    4
+   ],
+   [
+    "lLN2F_a",
+    4
+   ],
+   [
+    "lLN2T_e",
+    4
+   ]
+  ]
+ },
+ "spg_lLN1bc_r1@0.961": {
+  "module_share": 0.12887280183592872,
+  "superclass_share": {
+   "cb_intrinsic": 0.5655696651433881,
+   "vnc_intrinsic": 0.18894137611413692,
+   "ol_intrinsic": 0.09013551849392949,
+   "descending_neuron": 0.04533051848991753,
+   "vnc_motor": 0.034230929977073866
+  },
+  "top200_module": 167,
+  "top200_classes": [
+   [
+    "ALLN",
+    120
+   ],
+   [
+    "",
+    42
+   ],
+   [
+    "ALPN",
+    34
+   ],
+   [
+    "DAN",
+    2
+   ],
+   [
+    "ALON",
+    1
+   ],
+   [
+    "MBON",
+    1
+   ]
+  ],
+  "top200_types": [
+   [
+    "lLN1_bc",
+    30
+   ],
+   [
+    "lLN2P_b",
+    12
+   ],
+   [
+    "lLN2X12",
+    11
+   ],
+   [
+    "lLN2P_c",
+    9
+   ],
+   [
+    "lLN2P_a",
+    7
+   ],
+   [
+    "lLN2T_a",
+    5
+   ],
+   [
+    "",
+    5
+   ],
+   [
+    "lLN2X04",
+    4
+   ]
+  ]
+ },
+ "ad_DT1_ta50_r1@1.216": {
+  "module_share": 0.1896214454195817,
+  "superclass_share": {
+   "cb_intrinsic": 0.6718460452527042,
+   "vnc_intrinsic": 0.13740599541700096,
+   "ol_intrinsic": 0.07052355974686976,
+   "descending_neuron": 0.034442543525726496,
+   "vnc_motor": 0.02276877189115239
+  },
+  "top200_module": 199,
+  "top200_classes": [
+   [
+    "ALLN",
+    125
+   ],
+   [
+    "ALPN",
+    60
+   ],
+   [
+    "",
+    13
+   ],
+   [
+    "ALON",
+    1
+   ],
+   [
+    "MBON",
+    1
+   ]
+  ],
+  "top200_types": [
+   [
+    "lLN1_bc",
+    30
+   ],
+   [
+    "lLN2P_b",
+    12
+   ],
+   [
+    "lLN2X12",
+    11
+   ],
+   [
+    "lLN2P_c",
+    9
+   ],
+   [
+    "lLN2P_a",
+    7
+   ],
+   [
+    "",
+    7
+   ],
+   [
+    "lLN2T_a",
+    5
+   ],
+   [
+    "lLN2R_a",
+    5
+   ]
+  ]
+ },
+ "ref25_r1@1.216": {
+  "module_share": 0.07494103475422652,
+  "superclass_share": {
+   "cb_intrinsic": 0.582419389683817,
+   "vnc_intrinsic": 0.1740032244503614,
+   "ol_intrinsic": 0.09536848186555318,
+   "descending_neuron": 0.040960225374912375,
+   "vnc_motor": 0.028180191091884636
+  },
+  "top200_module": 161,
+  "top200_classes": [
+   [
+    "ALLN",
+    120
+   ],
+   [
+    "",
+    33
+   ],
+   [
+    "ALPN",
+    32
+   ],
+   [
+    "MBON",
+    11
+   ],
+   [
+    "DAN",
+    4
+   ]
+  ],
+  "top200_types": [
+   [
+    "lLN1_bc",
+    30
+   ],
+   [
+    "lLN2P_b",
+    12
+   ],
+   [
+    "lLN2X12",
+    11
+   ],
+   [
+    "lLN2P_c",
+    9
+   ],
+   [
+    "lLN2P_a",
+    7
+   ],
+   [
+    "",
+    6
+   ],
+   [
+    "lLN2T_a",
+    5
+   ],
+   [
+    "lLN2X04",
+    4
+   ]
+  ]
+ }
+}

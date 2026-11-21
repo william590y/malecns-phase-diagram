@@ -1,0 +1,112 @@
+[
+ {
+  "arm": "rm_base_r1",
+  "task": 0,
+  "out": "/MALECNS_ROOT/results/aldef/depression/rm/rm_base_r1_t0.npz",
+  "seed": 4000,
+  "kind": "removal",
+  "r": 1,
+  "variant": "base",
+  "orn_rho_iso": 0.04,
+  "h_orn": 0.037926
+ },
+ {
+  "arm": "rm_base_r1",
+  "task": 1,
+  "out": "/MALECNS_ROOT/results/aldef/depression/rm/rm_base_r1_t1.npz",
+  "seed": 4001,
+  "kind": "removal",
+  "r": 1,
+  "variant": "base",
+  "orn_rho_iso": 0.04,
+  "h_orn": 0.037926
+ },
+ {
+  "arm": "rm_sp_NW16_r1",
+  "task": 0,
+  "out": "/MALECNS_ROOT/results/aldef/depression/rm/rm_sp_NW16_r1_t0.npz",
+  "seed": 4002,
+  "kind": "removal",
+  "r": 1,
+  "variant": "sp_NW16",
+  "orn_rho_iso": 0.04,
+  "h_orn": 0.037926
+ },
+ {
+  "arm": "rm_sp_NW16_r1",
+  "task": 1,
+  "out": "/MALECNS_ROOT/results/aldef/depression/rm/rm_sp_NW16_r1_t1.npz",
+  "seed": 4003,
+  "kind": "removal",
+  "r": 1,
+  "variant": "sp_NW16",
+  "orn_rho_iso": 0.04,
+  "h_orn": 0.037926
+ },
+ {
+  "arm": "rm_sp_KW09_r1",
+  "task": 0,
+  "out": "/MALECNS_ROOT/results/aldef/depression/rm/rm_sp_KW09_r1_t0.npz",
+  "seed": 4004,
+  "kind": "removal",
+  "r": 1,
+  "variant": "sp_KW09",
+  "orn_rho_iso": 0.04,
+  "h_orn": 0.037926
+ },
+ {
+  "arm": "rm_sp_KW09_r1",
+  "task": 1,
+  "out": "/MALECNS_ROOT/results/aldef/depression/rm/rm_sp_KW09_r1_t1.npz",
+  "seed": 4005,
+  "kind": "removal",
+  "r": 1,
+  "variant": "sp_KW09",
+  "orn_rho_iso": 0.04,
+  "h_orn": 0.037926
+ },
+ {
+  "arm": "rm_spg_exc_r1",
+  "task": 0,
+  "out": "/MALECNS_ROOT/results/aldef/depression/rm/rm_spg_exc_r1_t0.npz",
+  "seed": 4006,
+  "kind": "removal",
+  "r": 1,
+  "variant": "spg_exc",
+  "orn_rho_iso": 0.04,
+  "h_orn": 0.037926
+ },
+ {
+  "arm": "rm_spg_exc_r1",
+  "task": 1,
+  "out": "/MALECNS_ROOT/results/aldef/depression/rm/rm_spg_exc_r1_t1.npz",
+  "seed": 4007,
+  "kind": "removal",
+  "r": 1,
+  "variant": "spg_exc",
+  "orn_rho_iso": 0.04,
+  "h_orn": 0.037926
+ },
+ {
+  "arm": "rm_rt_NW16_r1",
+  "task": 0,
+  "out": "/MALECNS_ROOT/results/aldef/depression/rm/rm_rt_NW16_r1_t0.npz",
+  "seed": 4008,
+  "kind": "removal",
+  "r": 1,
+  "variant": "rt_NW16",
+  "orn_rho_iso": 0.04,
+  "h_orn": 0.037926
+ },
+ {
+  "arm": "rm_rt_NW16_r1",
+  "task": 1,
+  "out": "/MALECNS_ROOT/results/aldef/depression/rm/rm_rt_NW16_r1_t1.npz",
+  "seed": 4009,
+  "kind": "removal",
+  "r": 1,
+  "variant": "rt_NW16",
+  "orn_rho_iso": 0.04,
+  "h_orn": 0.037926
+ }
+]

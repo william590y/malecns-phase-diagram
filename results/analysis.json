@@ -1,0 +1,1553 @@
+{
+ "fine_decay_raw_r1": [
+  {
+   "g": 0.15,
+   "lifetime": 32.0,
+   "survive_T": 0.0,
+   "rho_T": 0.0,
+   "b_power": -5.461930152094116,
+   "r2_power": 0.9934985491674813,
+   "tau_exp": 2.417766562895144,
+   "r2_exp": 0.9266831807843396
+  },
+  {
+   "g": 0.165,
+   "lifetime": 32.0,
+   "survive_T": 0.0,
+   "rho_T": 0.0,
+   "b_power": -4.259939781130895,
+   "r2_power": 0.9753097845055445,
+   "tau_exp": 3.164672753011585,
+   "r2_exp": 0.8728972136924643
+  },
+  {
+   "g": 0.18,
+   "lifetime": 41.800000000000004,
+   "survive_T": 0.0,
+   "rho_T": 0.0,
+   "b_power": -4.012424844662735,
+   "r2_power": 0.9823915964379818,
+   "tau_exp": 3.9609083029391816,
+   "r2_exp": 0.879349882882878
+  },
+  {
+   "g": 0.195,
+   "lifetime": 71.4,
+   "survive_T": 0.0,
+   "rho_T": 0.0,
+   "b_power": -3.0404824564182262,
+   "r2_power": 0.9437919997996217,
+   "tau_exp": 7.85288843396878,
+   "r2_exp": 0.746227494217961
+  },
+  {
+   "g": 0.21,
+   "lifetime": 59.800000000000004,
+   "survive_T": 0.0,
+   "rho_T": 0.0,
+   "b_power": -3.643715922875337,
+   "r2_power": 0.9269433690827257,
+   "tau_exp": 5.2668643315453165,
+   "r2_exp": 0.8982425437773428
+  },
+  {
+   "g": 0.225,
+   "lifetime": 101.80000000000001,
+   "survive_T": 0.0,
+   "rho_T": 0.0,
+   "b_power": -2.1255813330260565,
+   "r2_power": 0.9298786196163178,
+   "tau_exp": 13.86356923842497,
+   "r2_exp": 0.7764414705833558
+  },
+  {
+   "g": 0.24,
+   "lifetime": 85.2,
+   "survive_T": 0.0,
+   "rho_T": 0.0,
+   "b_power": -2.038686182893217,
+   "r2_power": 0.9224829508531295,
+   "tau_exp": 12.682023209763466,
+   "r2_exp": 0.7876829548268165
+  },
+  {
+   "g": 0.255,
+   "lifetime": 248.20000000000002,
+   "survive_T": 0.0,
+   "rho_T": 0.0,
+   "b_power": -1.3598961116285944,
+   "r2_power": 0.889381622303578,
+   "tau_exp": 41.21285064250466,
+   "r2_exp": 0.711960712441156
+  },
+  {
+   "g": 0.27,
+   "lifetime": 423.6,
+   "survive_T": 0.0,
+   "rho_T": 0.0,
+   "b_power": -0.9779210185775054,
+   "r2_power": 0.8368656951441618,
+   "tau_exp": 84.98966876264876,
+   "r2_exp": 0.6635075267074196
+  },
+  {
+   "g": 0.285,
+   "lifetime": 1233.0,
+   "survive_T": 0.0,
+   "rho_T": 0.0,
+   "b_power": -0.9553733618121772,
+   "r2_power": 0.8414713977975345,
+   "tau_exp": 179.37073478576082,
+   "r2_exp": 0.791718142752558
+  },
+  {
+   "g": 0.3,
+   "lifetime": 944.0,
+   "survive_T": 0.0,
+   "rho_T": 0.0,
+   "b_power": -0.7493316091867086,
+   "r2_power": 0.8277574725514625,
+   "tau_exp": 199.06058801135455,
+   "r2_exp": 0.6811108395633511
+  },
+  {
+   "g": 0.315,
+   "lifetime": 1924.6000000000001,
+   "survive_T": 0.0,
+   "rho_T": 0.0,
+   "b_power": -0.5117709917506934,
+   "r2_power": 0.7353466954452172,
+   "tau_exp": 503.84526193620206,
+   "r2_exp": 0.6124091795982103
+  },
+  {
+   "g": 0.33,
+   "lifetime": 5125.400000000001,
+   "survive_T": 0.0,
+   "rho_T": 0.0,
+   "b_power": -0.44237522789397377,
+   "r2_power": 0.7128872888568705,
+   "tau_exp": 1177.79304363178,
+   "r2_exp": 0.695912893150196,
+   "PR_occ": 953.3566172058995,
+   "share_AL_module": 0.5187976293372998,
+   "share_top10modes": 0.4587983637794928,
+   "top_superclasses": {
+    "cb_intrinsic": 298,
+    "descending_neuron": 2
+   },
+   "top_types": {
+    "lLN1_bc": 30,
+    "lLN2P_b": 12,
+    "lLN2X12": 11,
+    "M_lPNm11D": 9,
+    "lLN2P_c": 9
+   }
+  },
+  {
+   "g": 0.345,
+   "lifetime": Infinity,
+   "survive_T": 0.09375,
+   "rho_T": 4.5786588998453226e-05,
+   "b_power": -0.3384133366519766,
+   "r2_power": 0.692363038822367,
+   "tau_exp": 2656.027635824966,
+   "r2_exp": 0.6291310950293663,
+   "PR_occ": 1029.3245003811612,
+   "share_AL_module": 0.5068090249685956,
+   "share_top10modes": 0.44700811956693054,
+   "top_superclasses": {
+    "cb_intrinsic": 298,
+    "descending_neuron": 2
+   },
+   "top_types": {
+    "lLN1_bc": 30,
+    "lLN2P_b": 12,
+    "lLN2X12": 11,
+    "M_lPNm11D": 10,
+    "lLN2P_c": 9
+   }
+  },
+  {
+   "g": 0.36,
+   "lifetime": Infinity,
+   "survive_T": 0.375,
+   "rho_T": 0.00025547047607688,
+   "b_power": -0.20060950457623214,
+   "r2_power": 0.510989147488736,
+   "tau_exp": 5949.751710667306,
+   "r2_exp": 0.2633166827188772,
+   "PR_occ": 1094.0573117583526,
+   "share_AL_module": 0.49432532978303506,
+   "share_top10modes": 0.43641856568830806,
+   "top_superclasses": {
+    "cb_intrinsic": 298,
+    "descending_neuron": 2
+   },
+   "top_types": {
+    "lLN1_bc": 30,
+    "lLN2P_b": 12,
+    "lLN2X12": 11,
+    "M_lPNm11D": 10,
+    "lLN2P_c": 9
+   }
+  },
+  {
+   "g": 0.375,
+   "lifetime": Infinity,
+   "survive_T": 0.6875,
+   "rho_T": 0.0004978590723112575,
+   "b_power": -0.14357767328395088,
+   "r2_power": 0.3429263381232347,
+   "tau_exp": 10420.656510897406,
+   "r2_exp": 0.11246159858686633,
+   "PR_occ": 1166.2778083472376,
+   "share_AL_module": 0.4820770048115451,
+   "share_top10modes": 0.42585808851649537,
+   "top_superclasses": {
+    "cb_intrinsic": 298,
+    "descending_neuron": 2
+   },
+   "top_types": {
+    "lLN1_bc": 30,
+    "lLN2P_b": 12,
+    "M_lPNm11D": 11,
+    "lLN2X12": 11,
+    "lLN2P_c": 9
+   }
+  },
+  {
+   "g": 0.39,
+   "lifetime": Infinity,
+   "survive_T": 0.875,
+   "rho_T": 0.0007243625368573703,
+   "b_power": -0.13547202231868868,
+   "r2_power": 0.32729092090778944,
+   "tau_exp": 12882.444478176045,
+   "r2_exp": 0.07888702275989035,
+   "PR_occ": 1236.774177807883,
+   "share_AL_module": 0.47078909486050197,
+   "share_top10modes": 0.41616235939298024,
+   "top_superclasses": {
+    "cb_intrinsic": 298,
+    "descending_neuron": 2
+   },
+   "top_types": {
+    "lLN1_bc": 30,
+    "lLN2P_b": 12,
+    "lLN2X12": 11,
+    "M_lPNm11D": 10,
+    "lLN2P_c": 9
+   }
+  },
+  {
+   "g": 0.405,
+   "lifetime": Infinity,
+   "survive_T": 0.9375,
+   "rho_T": 0.0008482666489726398,
+   "b_power": -0.1125240759739809,
+   "r2_power": 0.2541900988332423,
+   "tau_exp": 18999.1074827646,
+   "r2_exp": 0.04082899731314493,
+   "PR_occ": 1315.1784881970846,
+   "share_AL_module": 0.4590569483120529,
+   "share_top10modes": 0.4062084389499327,
+   "top_superclasses": {
+    "cb_intrinsic": 298,
+    "descending_neuron": 2
+   },
+   "top_types": {
+    "lLN1_bc": 30,
+    "lLN2P_b": 12,
+    "lLN2X12": 11,
+    "M_lPNm11D": 10,
+    "lLN2P_c": 9
+   }
+  },
+  {
+   "g": 0.42,
+   "lifetime": Infinity,
+   "survive_T": 1.0,
+   "rho_T": 0.0009536692377878353,
+   "b_power": -0.10873930660060413,
+   "r2_power": 0.24205668914731326,
+   "tau_exp": 20647.24144718789,
+   "r2_exp": 0.035252286558267176,
+   "PR_occ": 1395.31458387849,
+   "share_AL_module": 0.4477561876019783,
+   "share_top10modes": 0.39670663863310673,
+   "top_superclasses": {
+    "cb_intrinsic": 298,
+    "descending_neuron": 2
+   },
+   "top_types": {
+    "lLN1_bc": 30,
+    "lLN2P_b": 12,
+    "lLN2X12": 11,
+    "M_lPNm11D": 10,
+    "lLN2P_c": 9
+   }
+  },
+  {
+   "g": 0.435,
+   "lifetime": Infinity,
+   "survive_T": 0.96875,
+   "rho_T": 0.0009230202522303443,
+   "b_power": -0.10740952184770526,
+   "r2_power": 0.25282014190679425,
+   "tau_exp": 19665.119274441706,
+   "r2_exp": 0.04160067036160153,
+   "PR_occ": 1483.154842240536,
+   "share_AL_module": 0.43627173845228995,
+   "share_top10modes": 0.3872688556511891,
+   "top_superclasses": {
+    "cb_intrinsic": 298,
+    "descending_neuron": 2
+   },
+   "top_types": {
+    "lLN1_bc": 30,
+    "lLN2P_b": 12,
+    "M_lPNm11D": 11,
+    "lLN2X12": 11,
+    "lLN2P_c": 9
+   }
+  },
+  {
+   "g": 0.45,
+   "lifetime": Infinity,
+   "survive_T": 1.0,
+   "rho_T": 0.0010045017033917247,
+   "b_power": -0.10175169670248238,
+   "r2_power": 0.2378198257172729,
+   "tau_exp": 21584.52066278424,
+   "r2_exp": 0.036194894438523195,
+   "PR_occ": 1574.8420877010533,
+   "share_AL_module": 0.4251025156754737,
+   "share_top10modes": 0.3779831514475084,
+   "top_superclasses": {
+    "cb_intrinsic": 298,
+    "descending_neuron": 2
+   },
+   "top_types": {
+    "lLN1_bc": 30,
+    "lLN2P_b": 12,
+    "lLN2X12": 11,
+    "M_lPNm11D": 10,
+    "lLN2P_c": 9
+   }
+  },
+  {
+   "g": 0.465,
+   "lifetime": Infinity,
+   "survive_T": 1.0,
+   "rho_T": 0.0011244812521908898,
+   "b_power": -0.09860641598950916,
+   "r2_power": 0.22844259713235127,
+   "tau_exp": 22776.36321204398,
+   "r2_exp": 0.03324798851484756,
+   "PR_occ": 1670.9538258646985,
+   "share_AL_module": 0.4141600472744454,
+   "share_top10modes": 0.3692074804039501,
+   "top_superclasses": {
+    "cb_intrinsic": 298,
+    "descending_neuron": 2
+   },
+   "top_types": {
+    "lLN1_bc": 30,
+    "lLN2P_b": 12,
+    "lLN2X12": 11,
+    "M_lPNm11D": 10,
+    "lLN2P_c": 9
+   }
+  },
+  {
+   "g": 0.48,
+   "lifetime": Infinity,
+   "survive_T": 1.0,
+   "rho_T": 0.0012231560194777558,
+   "b_power": -0.09845396675637692,
+   "r2_power": 0.24111786362763743,
+   "tau_exp": 23883.17475912183,
+   "r2_exp": 0.03201446369958938,
+   "PR_occ": 1775.4167658104582,
+   "share_AL_module": 0.40321906282128767,
+   "share_top10modes": 0.36027648684750335,
+   "top_superclasses": {
+    "cb_intrinsic": 298,
+    "descending_neuron": 2
+   },
+   "top_types": {
+    "lLN1_bc": 30,
+    "lLN2P_b": 12,
+    "lLN2X12": 11,
+    "M_lPNm11D": 10,
+    "lLN2P_c": 9
+   }
+  },
+  {
+   "g": 0.495,
+   "lifetime": Infinity,
+   "survive_T": 1.0,
+   "rho_T": 0.0013066931933281012,
+   "b_power": -0.10005161186602717,
+   "r2_power": 0.2541403082910546,
+   "tau_exp": 23312.006188325526,
+   "r2_exp": 0.034295210128156284,
+   "PR_occ": 1878.330086226335,
+   "share_AL_module": 0.3931790114380011,
+   "share_top10modes": 0.3517981824773248,
+   "top_superclasses": {
+    "cb_intrinsic": 298,
+    "descending_neuron": 2
+   },
+   "top_types": {
+    "lLN1_bc": 30,
+    "lLN2P_b": 12,
+    "lLN2X12": 11,
+    "M_lPNm11D": 10,
+    "lLN2P_c": 9
+   }
+  },
+  {
+   "g": 0.51,
+   "lifetime": Infinity,
+   "survive_T": 1.0,
+   "rho_T": 0.0012381067444948712,
+   "b_power": -0.0944659962698621,
+   "r2_power": 0.23826402917686396,
+   "tau_exp": 23490.32160982001,
+   "r2_exp": 0.03552196092685733,
+   "PR_occ": 1994.6484107708582,
+   "share_AL_module": 0.3824437284955932,
+   "share_top10modes": 0.34335124204876344,
+   "top_superclasses": {
+    "cb_intrinsic": 298,
+    "descending_neuron": 2
+   },
+   "top_types": {
+    "lLN1_bc": 30,
+    "lLN2P_b": 12,
+    "lLN2X12": 11,
+    "M_lPNm11D": 10,
+    "lLN2P_c": 9
+   }
+  },
+  {
+   "g": 0.525,
+   "lifetime": Infinity,
+   "survive_T": 1.0,
+   "rho_T": 0.0014132170927041443,
+   "b_power": -0.09257644311674039,
+   "r2_power": 0.2378246595235105,
+   "tau_exp": 25100.295453409723,
+   "r2_exp": 0.03233446127792039,
+   "PR_occ": 2105.9912064468285,
+   "share_AL_module": 0.3731626037685506,
+   "share_top10modes": 0.3355310711588936,
+   "top_superclasses": {
+    "cb_intrinsic": 298,
+    "descending_neuron": 2
+   },
+   "top_types": {
+    "lLN1_bc": 30,
+    "lLN2P_b": 12,
+    "lLN2X12": 11,
+    "M_lPNm11D": 10,
+    "lLN2P_c": 9
+   }
+  },
+  {
+   "g": 0.54,
+   "lifetime": Infinity,
+   "survive_T": 1.0,
+   "rho_T": 0.001409292523021577,
+   "b_power": -0.09049316868749817,
+   "r2_power": 0.23586784011592543,
+   "tau_exp": 24442.248131062574,
+   "r2_exp": 0.035393396071142336,
+   "PR_occ": 2229.8354572564986,
+   "share_AL_module": 0.36330189585833345,
+   "share_top10modes": 0.3275880157611449,
+   "top_superclasses": {
+    "cb_intrinsic": 298,
+    "descending_neuron": 2
+   },
+   "top_types": {
+    "lLN1_bc": 30,
+    "lLN2P_b": 12,
+    "M_lPNm11D": 11,
+    "lLN2X12": 11,
+    "lLN2P_c": 9
+   }
+  },
+  {
+   "g": 0.555,
+   "lifetime": Infinity,
+   "survive_T": 1.0,
+   "rho_T": 0.0015089017106220126,
+   "b_power": -0.09060782162005414,
+   "r2_power": 0.24261929228699042,
+   "tau_exp": 25626.280053679104,
+   "r2_exp": 0.03303620949937469,
+   "PR_occ": 2360.067065906251,
+   "share_AL_module": 0.35380741003068267,
+   "share_top10modes": 0.3199883521596473,
+   "top_superclasses": {
+    "cb_intrinsic": 298,
+    "descending_neuron": 2
+   },
+   "top_types": {
+    "lLN1_bc": 30,
+    "lLN2P_b": 12,
+    "lLN2X12": 11,
+    "M_lPNm11D": 10,
+    "lLN2P_c": 9
+   }
+  },
+  {
+   "g": 0.57,
+   "lifetime": Infinity,
+   "survive_T": 1.0,
+   "rho_T": 0.0016107535047922283,
+   "b_power": -0.08709190264764836,
+   "r2_power": 0.23464246826634894,
+   "tau_exp": 26179.80243710661,
+   "r2_exp": 0.0331349047347439,
+   "PR_occ": 2495.7885191809482,
+   "share_AL_module": 0.34442897430525277,
+   "share_top10modes": 0.31251100047011426,
+   "top_superclasses": {
+    "cb_intrinsic": 298,
+    "descending_neuron": 2
+   },
+   "top_types": {
+    "lLN1_bc": 30,
+    "lLN2P_b": 12,
+    "M_lPNm11D": 11,
+    "lLN2X12": 11,
+    "lLN2P_c": 9
+   }
+  },
+  {
+   "g": 0.585,
+   "lifetime": Infinity,
+   "survive_T": 1.0,
+   "rho_T": 0.0015944945989758708,
+   "b_power": -0.08760957929849378,
+   "r2_power": 0.24287911691901876,
+   "tau_exp": 24540.538388935835,
+   "r2_exp": 0.038573247794747245,
+   "PR_occ": 2641.5143353087906,
+   "share_AL_module": 0.33515939295729413,
+   "share_top10modes": 0.30498709634257565,
+   "top_superclasses": {
+    "cb_intrinsic": 298,
+    "descending_neuron": 2
+   },
+   "top_types": {
+    "lLN1_bc": 30,
+    "lLN2P_b": 12,
+    "M_lPNm11D": 11,
+    "lLN2X12": 11,
+    "lLN2P_c": 9
+   }
+  },
+  {
+   "g": 0.6,
+   "lifetime": Infinity,
+   "survive_T": 1.0,
+   "rho_T": 0.0018146440052078106,
+   "b_power": -0.0831068239514712,
+   "r2_power": 0.22946562099964696,
+   "tau_exp": 26338.93636584527,
+   "r2_exp": 0.03515727332847407,
+   "PR_occ": 2782.3825545389573,
+   "share_AL_module": 0.3268843798562174,
+   "share_top10modes": 0.2982584544007792,
+   "top_superclasses": {
+    "cb_intrinsic": 298,
+    "descending_neuron": 2
+   },
+   "top_types": {
+    "lLN1_bc": 30,
+    "lLN2P_b": 12,
+    "M_lPNm11D": 11,
+    "lLN2X12": 11,
+    "lLN2P_c": 9
+   }
+  }
+ ],
+ "fine_decay_raw_r1_null": [
+  {
+   "g": 0.6,
+   "lifetime": 35.0,
+   "survive_T": 0.0,
+   "rho_T": 0.0,
+   "b_power": -4.727492068475627,
+   "r2_power": 0.9844416090796049,
+   "tau_exp": 2.84458153002133,
+   "r2_exp": 0.9857048896542596
+  },
+  {
+   "g": 0.6267,
+   "lifetime": 45.800000000000004,
+   "survive_T": 0.0,
+   "rho_T": 0.0,
+   "b_power": -4.494124306840312,
+   "r2_power": 0.9801958239024167,
+   "tau_exp": 3.574593313272631,
+   "r2_exp": 0.9603735254679666
+  },
+  {
+   "g": 0.6533,
+   "lifetime": 41.800000000000004,
+   "survive_T": 0.0,
+   "rho_T": 0.0,
+   "b_power": -4.367085226870515,
+   "r2_power": 0.991304828406816,
+   "tau_exp": 3.482865420574124,
+   "r2_exp": 0.968792948925688
+  },
+  {
+   "g": 0.68,
+   "lifetime": 38.2,
+   "survive_T": 0.0,
+   "rho_T": 0.0,
+   "b_power": -4.26878542013385,
+   "r2_power": 0.9941227450036157,
+   "tau_exp": 3.3794639430516376,
+   "r2_exp": 0.9658312367747797
+  },
+  {
+   "g": 0.7067,
+   "lifetime": 41.800000000000004,
+   "survive_T": 0.0,
+   "rho_T": 0.0,
+   "b_power": -3.954432039401821,
+   "r2_power": 0.9774311604813196,
+   "tau_exp": 3.80678093877462,
+   "r2_exp": 0.9751751943114583
+  },
+  {
+   "g": 0.7333,
+   "lifetime": 59.800000000000004,
+   "survive_T": 0.0,
+   "rho_T": 0.0,
+   "b_power": -3.9006419614912815,
+   "r2_power": 0.977398885295781,
+   "tau_exp": 4.863776770556988,
+   "r2_exp": 0.9691390586404762
+  },
+  {
+   "g": 0.76,
+   "lifetime": 54.6,
+   "survive_T": 0.0,
+   "rho_T": 0.0,
+   "b_power": -3.527970774935855,
+   "r2_power": 0.9847523810361796,
+   "tau_exp": 5.117064033045365,
+   "r2_exp": 0.9607342702208959
+  },
+  {
+   "g": 0.7867,
+   "lifetime": 54.6,
+   "survive_T": 0.0,
+   "rho_T": 0.0,
+   "b_power": -3.990475015342366,
+   "r2_power": 0.9614527071080026,
+   "tau_exp": 4.437552081896863,
+   "r2_exp": 0.9748991957044149
+  },
+  {
+   "g": 0.8133,
+   "lifetime": 85.2,
+   "survive_T": 0.0,
+   "rho_T": 0.0,
+   "b_power": -2.779348399016429,
+   "r2_power": 0.9866523984974355,
+   "tau_exp": 8.93215868426687,
+   "r2_exp": 0.9137687074623717
+  },
+  {
+   "g": 0.84,
+   "lifetime": 133.0,
+   "survive_T": 0.0,
+   "rho_T": 0.0,
+   "b_power": -2.767222368877132,
+   "r2_power": 0.9806441982885319,
+   "tau_exp": 12.721417219549792,
+   "r2_exp": 0.8268017121561542
+  },
+  {
+   "g": 0.8667,
+   "lifetime": 93.2,
+   "survive_T": 0.0,
+   "rho_T": 0.0,
+   "b_power": -2.19552952991877,
+   "r2_power": 0.9653308020061268,
+   "tau_exp": 12.262532365323784,
+   "r2_exp": 0.856569647372001
+  },
+  {
+   "g": 0.8933,
+   "lifetime": 85.2,
+   "survive_T": 0.0,
+   "rho_T": 0.0,
+   "b_power": -2.203653275019297,
+   "r2_power": 0.9894687968683528,
+   "tau_exp": 11.656140074684886,
+   "r2_exp": 0.8560063900641753
+  },
+  {
+   "g": 0.92,
+   "lifetime": 190.0,
+   "survive_T": 0.0,
+   "rho_T": 0.0,
+   "b_power": -2.0783013096398792,
+   "r2_power": 0.9659803641595425,
+   "tau_exp": 21.89510331890053,
+   "r2_exp": 0.8015604630036106
+  },
+  {
+   "g": 0.9467,
+   "lifetime": 190.0,
+   "survive_T": 0.0,
+   "rho_T": 0.0,
+   "b_power": -1.7036136518523624,
+   "r2_power": 0.9426112393179328,
+   "tau_exp": 26.43049462404157,
+   "r2_exp": 0.7988381893217876
+  },
+  {
+   "g": 0.9733,
+   "lifetime": 271.40000000000003,
+   "survive_T": 0.0,
+   "rho_T": 0.0,
+   "b_power": -1.3820152583313419,
+   "r2_power": 0.9610363273328526,
+   "tau_exp": 43.93817308673236,
+   "r2_exp": 0.7448945684681882
+  },
+  {
+   "g": 1.0,
+   "lifetime": 423.6,
+   "survive_T": 0.0,
+   "rho_T": 0.0,
+   "b_power": -1.3870999296372397,
+   "r2_power": 0.9093948195644714,
+   "tau_exp": 55.92937087705716,
+   "r2_exp": 0.8275362570529561
+  },
+  {
+   "g": 1.0267,
+   "lifetime": 722.6,
+   "survive_T": 0.0,
+   "rho_T": 0.0,
+   "b_power": -1.041504725204711,
+   "r2_power": 0.9151983323875779,
+   "tau_exp": 116.81619243399429,
+   "r2_exp": 0.7534178026033614
+  },
+  {
+   "g": 1.0533,
+   "lifetime": 1760.6000000000001,
+   "survive_T": 0.0,
+   "rho_T": 0.0,
+   "b_power": -0.7845777186131095,
+   "r2_power": 0.8772093960137405,
+   "tau_exp": 310.8149054970875,
+   "r2_exp": 0.7101569658182054
+  },
+  {
+   "g": 1.08,
+   "lifetime": 4289.2,
+   "survive_T": 0.0,
+   "rho_T": 0.0,
+   "b_power": -0.6005456265349489,
+   "r2_power": 0.8405760596095866,
+   "tau_exp": 817.1603953108188,
+   "r2_exp": 0.6934555450878883,
+   "PR_occ": 1319.986653280316,
+   "share_AL_module": 0.015616219267568432,
+   "share_top10modes": 0.029930752676731405,
+   "top_superclasses": {
+    "ol_intrinsic": 114,
+    "cb_intrinsic": 93,
+    "vnc_intrinsic": 41
+   },
+   "top_types": {
+    "KCg-m": 7,
+    "": 5,
+    "T5c": 5,
+    "TmY18": 5,
+    "T5b": 4
+   }
+  },
+  {
+   "g": 1.1067,
+   "lifetime": Infinity,
+   "survive_T": 0.0625,
+   "rho_T": 0.00011811071090050973,
+   "b_power": -0.42756892414893605,
+   "r2_power": 0.8013919713832616,
+   "tau_exp": 2269.4498078546803,
+   "r2_exp": 0.6248257963452455,
+   "PR_occ": 74783.97762515723,
+   "share_AL_module": 0.01136862949064942,
+   "share_top10modes": 0.03224573311457726,
+   "top_superclasses": {
+    "cb_intrinsic": 93,
+    "ol_intrinsic": 87,
+    "visual_projection": 54
+   },
+   "top_types": {
+    "ANXXX027": 8,
+    "MeVPMe1": 8,
+    "Li29": 7,
+    "MeLo8": 7,
+    "MeVPMe2": 6
+   }
+  },
+  {
+   "g": 1.1333,
+   "lifetime": Infinity,
+   "survive_T": 0.40625,
+   "rho_T": 0.0007834178741177311,
+   "b_power": -0.2531911973830546,
+   "r2_power": 0.6219934619342797,
+   "tau_exp": 5025.845694230538,
+   "r2_exp": 0.28199259737006876,
+   "PR_occ": 77913.3156330443,
+   "share_AL_module": 0.011153458535999194,
+   "share_top10modes": 0.031887205082402295,
+   "top_superclasses": {
+    "ol_intrinsic": 87,
+    "cb_intrinsic": 86,
+    "visual_projection": 57
+   },
+   "top_types": {
+    "ANXXX027": 9,
+    "Li29": 7,
+    "MeLo8": 7,
+    "MeVPMe1": 7,
+    "MeVPMe2": 6
+   }
+  },
+  {
+   "g": 1.16,
+   "lifetime": Infinity,
+   "survive_T": 0.84375,
+   "rho_T": 0.001952751299540978,
+   "b_power": -0.17070862445321403,
+   "r2_power": 0.40862228264708667,
+   "tau_exp": 10690.325294148959,
+   "r2_exp": 0.09007342424990494,
+   "PR_occ": 79197.49388872056,
+   "share_AL_module": 0.011143227947599322,
+   "share_top10modes": 0.031615293195295435,
+   "top_superclasses": {
+    "cb_intrinsic": 86,
+    "ol_intrinsic": 83,
+    "visual_projection": 57
+   },
+   "top_types": {
+    "Li29": 7,
+    "MeLo8": 7,
+    "MeVPMe1": 7,
+    "ANXXX027": 6,
+    "MeVPMe2": 5
+   }
+  },
+  {
+   "g": 1.1867,
+   "lifetime": Infinity,
+   "survive_T": 1.0,
+   "rho_T": 0.0022562509857380064,
+   "b_power": -0.1541396514165948,
+   "r2_power": 0.37758057873117146,
+   "tau_exp": 13596.827516014613,
+   "r2_exp": 0.06310635855387159,
+   "PR_occ": 80201.08963073576,
+   "share_AL_module": 0.011021133715555548,
+   "share_top10modes": 0.03117634894362013,
+   "top_superclasses": {
+    "cb_intrinsic": 91,
+    "ol_intrinsic": 88,
+    "visual_projection": 52
+   },
+   "top_types": {
+    "ANXXX027": 7,
+    "Li29": 7,
+    "MeVPMe1": 6,
+    "MeVPMe2": 6,
+    "MeLo8": 5
+   }
+  },
+  {
+   "g": 1.2133,
+   "lifetime": Infinity,
+   "survive_T": 1.0,
+   "rho_T": 0.0029394990087894257,
+   "b_power": -0.1456839848794949,
+   "r2_power": 0.3690634854758119,
+   "tau_exp": 14933.231059952119,
+   "r2_exp": 0.0572449630309938,
+   "PR_occ": 81081.52858042436,
+   "share_AL_module": 0.010931330056582813,
+   "share_top10modes": 0.030910605016521923,
+   "top_superclasses": {
+    "cb_intrinsic": 88,
+    "ol_intrinsic": 85,
+    "visual_projection": 53
+   },
+   "top_types": {
+    "ANXXX027": 7,
+    "Li29": 7,
+    "MeLo8": 7,
+    "MeVPMe2": 7,
+    "MeVPMe1": 6
+   }
+  },
+  {
+   "g": 1.24,
+   "lifetime": Infinity,
+   "survive_T": 1.0,
+   "rho_T": 0.0033343849863740616,
+   "b_power": -0.13825120663446172,
+   "r2_power": 0.36993476992281205,
+   "tau_exp": 15884.9088656633,
+   "r2_exp": 0.05630996154611578,
+   "PR_occ": 81976.11626106652,
+   "share_AL_module": 0.01087008296001116,
+   "share_top10modes": 0.030630559377643335,
+   "top_superclasses": {
+    "ol_intrinsic": 90,
+    "cb_intrinsic": 87,
+    "visual_projection": 51
+   },
+   "top_types": {
+    "MeLo8": 8,
+    "ANXXX027": 7,
+    "Li29": 7,
+    "MeVPMe1": 5,
+    "Dm17": 4
+   }
+  },
+  {
+   "g": 1.2667,
+   "lifetime": Infinity,
+   "survive_T": 1.0,
+   "rho_T": 0.003598639006668236,
+   "b_power": -0.1307547414425266,
+   "r2_power": 0.35007452418749707,
+   "tau_exp": 17244.197538244527,
+   "r2_exp": 0.0505506833434034,
+   "PR_occ": 82757.28991789542,
+   "share_AL_module": 0.010783065422577771,
+   "share_top10modes": 0.030316910233557877,
+   "top_superclasses": {
+    "cb_intrinsic": 89,
+    "ol_intrinsic": 89,
+    "visual_projection": 54
+   },
+   "top_types": {
+    "Li29": 7,
+    "MeLo8": 7,
+    "ANXXX027": 6,
+    "MeVPMe1": 6,
+    "MeVPMe2": 5
+   }
+  },
+  {
+   "g": 1.2933,
+   "lifetime": Infinity,
+   "survive_T": 1.0,
+   "rho_T": 0.003932040162908379,
+   "b_power": -0.12623988663672572,
+   "r2_power": 0.3517530727964848,
+   "tau_exp": 16657.47328968516,
+   "r2_exp": 0.05839744571270611,
+   "PR_occ": 83444.55686350934,
+   "share_AL_module": 0.010727132212368824,
+   "share_top10modes": 0.030088679583375334,
+   "top_superclasses": {
+    "cb_intrinsic": 90,
+    "ol_intrinsic": 89,
+    "visual_projection": 52
+   },
+   "top_types": {
+    "ANXXX027": 7,
+    "Li29": 7,
+    "MeLo8": 7,
+    "MeVPMe1": 5,
+    "MeVPMe2": 5
+   }
+  },
+  {
+   "g": 1.32,
+   "lifetime": Infinity,
+   "survive_T": 1.0,
+   "rho_T": 0.004031649375974666,
+   "b_power": -0.1210680452391875,
+   "r2_power": 0.357289538033549,
+   "tau_exp": 17824.98252308335,
+   "r2_exp": 0.05632100657117867,
+   "PR_occ": 84215.56054773617,
+   "share_AL_module": 0.010660194627449614,
+   "share_top10modes": 0.029824561919006964,
+   "top_superclasses": {
+    "cb_intrinsic": 89,
+    "ol_intrinsic": 88,
+    "visual_projection": 54
+   },
+   "top_types": {
+    "MeLo8": 8,
+    "Li29": 7,
+    "ANXXX027": 6,
+    "MeVPMe2": 6,
+    "MeVPMe1": 5
+   }
+  },
+  {
+   "g": 1.3467,
+   "lifetime": Infinity,
+   "survive_T": 1.0,
+   "rho_T": 0.004750779095047619,
+   "b_power": -0.11182184743952521,
+   "r2_power": 0.3425639736397611,
+   "tau_exp": 19127.946332653053,
+   "r2_exp": 0.054969155738330944,
+   "PR_occ": 84779.67701081418,
+   "share_AL_module": 0.0106068728536191,
+   "share_top10modes": 0.029580440375659798,
+   "top_superclasses": {
+    "cb_intrinsic": 91,
+    "ol_intrinsic": 90,
+    "visual_projection": 51
+   },
+   "top_types": {
+    "MeLo8": 9,
+    "ANXXX027": 6,
+    "Li29": 6,
+    "MeVPMe1": 5,
+    "MeVPMe2": 5
+   }
+  },
+  {
+   "g": 1.3733,
+   "lifetime": Infinity,
+   "survive_T": 1.0,
+   "rho_T": 0.004751339765789453,
+   "b_power": -0.10809055303974269,
+   "r2_power": 0.3313146026789767,
+   "tau_exp": 21014.032281268188,
+   "r2_exp": 0.047142618820074644,
+   "PR_occ": 85372.16899570716,
+   "share_AL_module": 0.01055333085103525,
+   "share_top10modes": 0.029329663720870917,
+   "top_superclasses": {
+    "ol_intrinsic": 92,
+    "cb_intrinsic": 90,
+    "visual_projection": 51
+   },
+   "top_types": {
+    "MeLo8": 10,
+    "Li29": 7,
+    "ANXXX027": 6,
+    "MeVPMe1": 5,
+    "Dm17": 4
+   }
+  },
+  {
+   "g": 1.4,
+   "lifetime": Infinity,
+   "survive_T": 1.0,
+   "rho_T": 0.0055805442680139095,
+   "b_power": -0.10704271015852174,
+   "r2_power": 0.34624015943287667,
+   "tau_exp": 19577.683422392878,
+   "r2_exp": 0.05787727002544485,
+   "PR_occ": 85941.08445705555,
+   "share_AL_module": 0.010495286528633813,
+   "share_top10modes": 0.029099639231716653,
+   "top_superclasses": {
+    "ol_intrinsic": 93,
+    "cb_intrinsic": 89,
+    "visual_projection": 48
+   },
+   "top_types": {
+    "MeLo8": 10,
+    "Li29": 6,
+    "ANXXX027": 5,
+    "MeVPMe1": 5,
+    "Dm17": 4
+   }
+  }
+ ],
+ "upper_decay_raw_r1": [
+  {
+   "g": 0.6,
+   "lifetime": Infinity,
+   "survive_T": 1.0,
+   "rho_T": 0.0016352352686226368,
+   "b_power": -0.10485859127996543,
+   "r2_power": 0.2603006244353402,
+   "tau_exp": 8651.385168137445,
+   "r2_exp": 0.0473169665630917,
+   "PR_occ": 2785.409290267621,
+   "share_AL_module": 0.32629590743615605,
+   "share_top10modes": 0.29842734554273975,
+   "top_superclasses": {
+    "cb_intrinsic": 298,
+    "descending_neuron": 2
+   },
+   "top_types": {
+    "lLN1_bc": 30,
+    "lLN2P_b": 12,
+    "lLN2X12": 11,
+    "M_lPNm11D": 10,
+    "CB3417": 9
+   }
+  },
+  {
+   "g": 0.681,
+   "lifetime": Infinity,
+   "survive_T": 1.0,
+   "rho_T": 0.0020766553934663534,
+   "b_power": -0.09521949342045478,
+   "r2_power": 0.257381202385089,
+   "tau_exp": 9208.012896583261,
+   "r2_exp": 0.050085762809989776,
+   "PR_occ": 3624.8814951755653,
+   "share_AL_module": 0.2863696627403029,
+   "share_top10modes": 0.2654791253121979,
+   "top_superclasses": {
+    "cb_intrinsic": 298,
+    "descending_neuron": 2
+   },
+   "top_types": {
+    "lLN1_bc": 30,
+    "lLN2P_b": 12,
+    "lLN2X12": 11,
+    "M_lPNm11D": 10,
+    "CB3417": 9
+   }
+  },
+  {
+   "g": 0.773,
+   "lifetime": Infinity,
+   "survive_T": 1.0,
+   "rho_T": 0.002804381772875786,
+   "b_power": -0.08373309857175931,
+   "r2_power": 0.23844319704455308,
+   "tau_exp": 11097.1524670889,
+   "r2_exp": 0.04131313780903245,
+   "PR_occ": 4732.645414308665,
+   "share_AL_module": 0.2485129785175996,
+   "share_top10modes": 0.23448930259112474,
+   "top_superclasses": {
+    "cb_intrinsic": 298,
+    "descending_neuron": 2
+   },
+   "top_types": {
+    "lLN1_bc": 30,
+    "lLN2P_b": 12,
+    "lLN2X12": 11,
+    "M_lPNm11D": 10,
+    "lLN2P_c": 9
+   }
+  },
+  {
+   "g": 0.877,
+   "lifetime": Infinity,
+   "survive_T": 1.0,
+   "rho_T": 0.0032390740234404802,
+   "b_power": -0.07681261609372407,
+   "r2_power": 0.24171267718556455,
+   "tau_exp": 11892.001155411139,
+   "r2_exp": 0.04333559517300989,
+   "PR_occ": 6103.066518903597,
+   "share_AL_module": 0.215541745915282,
+   "share_top10modes": 0.20677656059936886,
+   "top_superclasses": {
+    "cb_intrinsic": 298,
+    "descending_neuron": 2
+   },
+   "top_types": {
+    "lLN1_bc": 30,
+    "lLN2P_b": 12,
+    "lLN2X12": 11,
+    "M_lPNm11D": 10,
+    "lLN2P_c": 9
+   }
+  },
+  {
+   "g": 0.995,
+   "lifetime": Infinity,
+   "survive_T": 1.0,
+   "rho_T": 0.004149572923779488,
+   "b_power": -0.0703842733553993,
+   "r2_power": 0.2333823148310199,
+   "tau_exp": 13991.087379013605,
+   "r2_exp": 0.03600265290165916,
+   "PR_occ": 7694.430483320437,
+   "share_AL_module": 0.1872313704654222,
+   "share_top10modes": 0.1821885025451133,
+   "top_superclasses": {
+    "cb_intrinsic": 298,
+    "descending_neuron": 2
+   },
+   "top_types": {
+    "lLN1_bc": 30,
+    "lLN2P_b": 12,
+    "lLN2X12": 11,
+    "M_lPNm11D": 10,
+    "CB3417": 9
+   }
+  },
+  {
+   "g": 1.129,
+   "lifetime": Infinity,
+   "survive_T": 1.0,
+   "rho_T": 0.005152019206434488,
+   "b_power": -0.05591571292660916,
+   "r2_power": 0.17146950166759645,
+   "tau_exp": 19619.891086846168,
+   "r2_exp": 0.021313175898440062,
+   "PR_occ": 9484.053171324726,
+   "share_AL_module": 0.16334264239851173,
+   "share_top10modes": 0.16129597491894349,
+   "top_superclasses": {
+    "cb_intrinsic": 298,
+    "descending_neuron": 2
+   },
+   "top_types": {
+    "lLN1_bc": 30,
+    "lLN2P_b": 12,
+    "lLN2X12": 11,
+    "M_lPNm11D": 10,
+    "lLN2P_c": 9
+   }
+  },
+  {
+   "g": 1.281,
+   "lifetime": Infinity,
+   "survive_T": 1.0,
+   "rho_T": 0.005653989501297474,
+   "b_power": -0.05886478079564303,
+   "r2_power": 0.2325210828451858,
+   "tau_exp": 14751.523922397084,
+   "r2_exp": 0.04613157468713458,
+   "PR_occ": 11458.78655811098,
+   "share_AL_module": 0.1425895808560482,
+   "share_top10modes": 0.14227760790786048,
+   "top_superclasses": {
+    "cb_intrinsic": 298,
+    "descending_neuron": 2
+   },
+   "top_types": {
+    "lLN1_bc": 30,
+    "lLN2P_b": 12,
+    "lLN2X12": 11,
+    "M_lPNm11D": 10,
+    "CB3417": 9
+   }
+  },
+  {
+   "g": 1.454,
+   "lifetime": Infinity,
+   "survive_T": 1.0,
+   "rho_T": 0.007580016274005175,
+   "b_power": -0.04796771375569673,
+   "r2_power": 0.1808922474660365,
+   "tau_exp": 22150.371215883293,
+   "r2_exp": 0.023970750118346595,
+   "PR_occ": 13535.231149738018,
+   "share_AL_module": 0.12474985331499291,
+   "share_top10modes": 0.1258035137491628,
+   "top_superclasses": {
+    "cb_intrinsic": 297,
+    "descending_neuron": 2,
+    "visual_centrifugal": 1
+   },
+   "top_types": {
+    "lLN1_bc": 30,
+    "lLN2P_b": 12,
+    "lLN2X12": 11,
+    "M_lPNm11D": 9,
+    "lLN2P_c": 9
+   }
+  },
+  {
+   "g": 1.65,
+   "lifetime": Infinity,
+   "survive_T": 1.0,
+   "rho_T": 0.008953987620770931,
+   "b_power": -0.04941799516942349,
+   "r2_power": 0.23309866937756551,
+   "tau_exp": 17913.951941678417,
+   "r2_exp": 0.04449460985513631,
+   "PR_occ": 15601.813143276544,
+   "share_AL_module": 0.1097116862111508,
+   "share_top10modes": 0.11124957452899227,
+   "top_superclasses": {
+    "cb_intrinsic": 297,
+    "descending_neuron": 2,
+    "visual_centrifugal": 1
+   },
+   "top_types": {
+    "lLN1_bc": 30,
+    "lLN2P_b": 12,
+    "lLN2X12": 11,
+    "M_lPNm11D": 9,
+    "lLN2P_c": 9
+   }
+  },
+  {
+   "g": 1.873,
+   "lifetime": Infinity,
+   "survive_T": 1.0,
+   "rho_T": 0.010320857167243958,
+   "b_power": -0.04424612043095584,
+   "r2_power": 0.19951529202194274,
+   "tau_exp": 21573.264486442116,
+   "r2_exp": 0.032757811249726654,
+   "PR_occ": 17657.854208398057,
+   "share_AL_module": 0.09654219179519657,
+   "share_top10modes": 0.09866710995263246,
+   "top_superclasses": {
+    "cb_intrinsic": 297,
+    "descending_neuron": 2,
+    "visual_centrifugal": 1
+   },
+   "top_types": {
+    "lLN1_bc": 30,
+    "lLN2P_b": 12,
+    "lLN2X12": 11,
+    "CB3417": 9,
+    "M_lPNm11D": 9
+   }
+  },
+  {
+   "g": 2.125,
+   "lifetime": Infinity,
+   "survive_T": 1.0,
+   "rho_T": 0.011900401674211025,
+   "b_power": -0.04060606832678036,
+   "r2_power": 0.19625485443243662,
+   "tau_exp": 23998.640111515582,
+   "r2_exp": 0.030916234874923343,
+   "PR_occ": 19539.124097849235,
+   "share_AL_module": 0.08523951150276947,
+   "share_top10modes": 0.08756792203431399,
+   "top_superclasses": {
+    "cb_intrinsic": 296,
+    "descending_neuron": 2,
+    "visual_centrifugal": 2
+   },
+   "top_types": {
+    "lLN1_bc": 30,
+    "lLN2P_b": 12,
+    "lLN2X12": 11,
+    "lLN2P_c": 9,
+    "": 8
+   }
+  },
+  {
+   "g": 2.412,
+   "lifetime": Infinity,
+   "survive_T": 1.0,
+   "rho_T": 0.014443892985582352,
+   "b_power": -0.03622388526597447,
+   "r2_power": 0.1894640053011034,
+   "tau_exp": 33113.66990655515,
+   "r2_exp": 0.01969892981863497,
+   "PR_occ": 21131.468621739747,
+   "share_AL_module": 0.07534499203841627,
+   "share_top10modes": 0.07772216552669214,
+   "top_superclasses": {
+    "cb_intrinsic": 297,
+    "descending_neuron": 2,
+    "visual_centrifugal": 1
+   },
+   "top_types": {
+    "lLN1_bc": 30,
+    "lLN2P_b": 12,
+    "lLN2X12": 11,
+    "lLN2P_c": 9,
+    "": 8
+   }
+  },
+  {
+   "g": 2.737,
+   "lifetime": Infinity,
+   "survive_T": 1.0,
+   "rho_T": 0.01624881848692894,
+   "b_power": -0.03424210046347878,
+   "r2_power": 0.19987970114043896,
+   "tau_exp": 30004.721728804896,
+   "r2_exp": 0.028326245597973587,
+   "PR_occ": 22320.136491957386,
+   "share_AL_module": 0.06687759527630975,
+   "share_top10modes": 0.06912114076246872,
+   "top_superclasses": {
+    "cb_intrinsic": 297,
+    "descending_neuron": 2,
+    "visual_centrifugal": 1
+   },
+   "top_types": {
+    "lLN1_bc": 30,
+    "lLN2P_b": 12,
+    "lLN2X12": 11,
+    "lLN2P_c": 9,
+    "": 8
+   }
+  },
+  {
+   "g": 3.106,
+   "lifetime": Infinity,
+   "survive_T": 1.0,
+   "rho_T": 0.01951667293906212,
+   "b_power": -0.03343632104326957,
+   "r2_power": 0.21789397107277364,
+   "tau_exp": 28936.209080141372,
+   "r2_exp": 0.03482138785498379,
+   "PR_occ": 23160.048731477364,
+   "share_AL_module": 0.059469802677329035,
+   "share_top10modes": 0.06159402813903147,
+   "top_superclasses": {
+    "cb_intrinsic": 298,
+    "descending_neuron": 2
+   },
+   "top_types": {
+    "lLN1_bc": 30,
+    "lLN2P_b": 12,
+    "lLN2X12": 11,
+    "lLN2P_c": 9,
+    "": 8
+   }
+  },
+  {
+   "g": 3.525,
+   "lifetime": Infinity,
+   "survive_T": 1.0,
+   "rho_T": 0.023333966732025146,
+   "b_power": -0.027117344291936404,
+   "r2_power": 0.17319853357118054,
+   "tau_exp": 37353.63980371714,
+   "r2_exp": 0.025252568636085937,
+   "PR_occ": 23742.941062064026,
+   "share_AL_module": 0.05319389764584417,
+   "share_top10modes": 0.05510561233092925,
+   "top_superclasses": {
+    "cb_intrinsic": 298,
+    "descending_neuron": 2
+   },
+   "top_types": {
+    "lLN1_bc": 30,
+    "PAM08": 14,
+    "PAM10": 13,
+    "lLN2P_b": 12,
+    "lLN2X12": 11
+   }
+  },
+  {
+   "g": 4.0,
+   "lifetime": Infinity,
+   "survive_T": 1.0,
+   "rho_T": 0.026330091059207916,
+   "b_power": -0.028142702337113558,
+   "r2_power": 0.22668891465016028,
+   "tau_exp": 33723.8493495825,
+   "r2_exp": 0.037648375311139404,
+   "PR_occ": 24259.51189601766,
+   "share_AL_module": 0.04839172220512481,
+   "share_top10modes": 0.049962726664449016,
+   "top_superclasses": {
+    "cb_intrinsic": 298,
+    "descending_neuron": 2
+   },
+   "top_types": {
+    "lLN1_bc": 30,
+    "PAM08": 15,
+    "PAM10": 15,
+    "PAM01": 12,
+    "lLN2P_b": 12
+   }
+  }
+ ],
+ "spread_raw_r1": [
+  {
+   "g": 0.3,
+   "P_end": 0.0,
+   "delta": 0.5859359745235748,
+   "eta": -0.0134220232747169,
+   "N_end": 0.0
+  },
+  {
+   "g": 0.34,
+   "P_end": 0.0,
+   "delta": 2.2790910442951047,
+   "eta": -3.9861854880216017,
+   "N_end": 0.0
+  },
+  {
+   "g": 0.38,
+   "P_end": 0.0,
+   "delta": 2.2288272635361754,
+   "eta": -2.7082347559473705,
+   "N_end": 0.0
+  },
+  {
+   "g": 0.45,
+   "P_end": 0.001953125,
+   "delta": 0.18549726829198193,
+   "eta": -0.03459567410973965,
+   "N_end": 0.28125000325235305
+  },
+  {
+   "g": 0.6,
+   "P_end": 0.005859375,
+   "delta": 0.1649665299487582,
+   "eta": 0.0021967572228749842,
+   "N_end": 1.8535156923753675
+  }
+ ],
+ "spread_raw_r1_null": [
+  {
+   "g": 0.85,
+   "P_end": 0.0,
+   "delta": 1.7191139942024962,
+   "eta": -1.3858114271762827,
+   "N_end": 0.0
+  },
+  {
+   "g": 0.95,
+   "P_end": 0.0,
+   "delta": 1.1698358707429715,
+   "eta": -0.3935602339939236,
+   "N_end": 0.0
+  },
+  {
+   "g": 1.05,
+   "P_end": 0.0,
+   "delta": 0.5817581596300804,
+   "eta": -0.2950480744700524,
+   "N_end": 0.0
+  },
+  {
+   "g": 1.15,
+   "P_end": 0.046875,
+   "delta": 0.05190688262469346,
+   "eta": 0.14868835956263882,
+   "N_end": 16.455078684401087
+  },
+  {
+   "g": 1.25,
+   "P_end": 0.04296875,
+   "delta": 0.05520651636606245,
+   "eta": 0.20580297254517002,
+   "N_end": 24.39648540960843
+  }
+ ]
+}

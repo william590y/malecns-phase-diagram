@@ -1,0 +1,113 @@
+code/m2_mf_run.py --variant M1s --r 6 --proto driven --closure cqmf --ics quiet --out results/m2/theory/runs/driven_M1s_cqmf_r6.npz
+code/m2_mf_run.py --variant M2_allsyn --r 0.25 --proto driven --closure cqmf --ics quiet --out results/m2/theory/runs/driven_M2_allsyn_cqmf_r0.25.npz
+code/m2_mf_run.py --variant M2_allsyn --r 0.5 --proto driven --closure cqmf --ics quiet --out results/m2/theory/runs/driven_M2_allsyn_cqmf_r0.5.npz
+code/m2_mf_run.py --variant M2_allsyn --r 1 --proto driven --closure cqmf --ics quiet --out results/m2/theory/runs/driven_M2_allsyn_cqmf_r1.npz
+code/m2_mf_run.py --variant M2_allsyn --r 2 --proto driven --closure cqmf --ics quiet --out results/m2/theory/runs/driven_M2_allsyn_cqmf_r2.npz
+code/m2_mf_run.py --variant M2_allsyn --r 4 --proto driven --closure cqmf --ics quiet --out results/m2/theory/runs/driven_M2_allsyn_cqmf_r4.npz
+code/m2_mf_run.py --variant M2_allsyn --r 6 --proto driven --closure cqmf --ics quiet --out results/m2/theory/runs/driven_M2_allsyn_cqmf_r6.npz
+code/m2_mf_run.py --variant M2_KW09 --r 0.25 --proto driven --closure cqmf --ics quiet --out results/m2/theory/runs/driven_M2_KW09_cqmf_r0.25.npz
+code/m2_mf_run.py --variant M2_KW09 --r 0.5 --proto driven --closure cqmf --ics quiet --out results/m2/theory/runs/driven_M2_KW09_cqmf_r0.5.npz
+code/m2_mf_run.py --variant M2_KW09 --r 1 --proto driven --closure cqmf --ics quiet --out results/m2/theory/runs/driven_M2_KW09_cqmf_r1.npz
+code/m2_mf_run.py --variant M2_KW09 --r 2 --proto driven --closure cqmf --ics quiet --out results/m2/theory/runs/driven_M2_KW09_cqmf_r2.npz
+code/m2_mf_run.py --variant M2_KW09 --r 4 --proto driven --closure cqmf --ics quiet --out results/m2/theory/runs/driven_M2_KW09_cqmf_r4.npz
+code/m2_mf_run.py --variant M2_KW09 --r 6 --proto driven --closure cqmf --ics quiet --out results/m2/theory/runs/driven_M2_KW09_cqmf_r6.npz
+code/m2_mf_run.py --variant M2_N15 --r 0.25 --proto driven --closure cqmf --ics quiet --out results/m2/theory/runs/driven_M2_N15_cqmf_r0.25.npz
+code/m2_mf_run.py --variant M2_N15 --r 0.5 --proto driven --closure cqmf --ics quiet --out results/m2/theory/runs/driven_M2_N15_cqmf_r0.5.npz
+code/m2_mf_run.py --variant M2_N15 --r 1 --proto driven --closure cqmf --ics quiet --out results/m2/theory/runs/driven_M2_N15_cqmf_r1.npz
+code/m2_mf_run.py --variant M2_N15 --r 2 --proto driven --closure cqmf --ics quiet --out results/m2/theory/runs/driven_M2_N15_cqmf_r2.npz
+code/m2_mf_run.py --variant M2_N15 --r 4 --proto driven --closure cqmf --ics quiet --out results/m2/theory/runs/driven_M2_N15_cqmf_r4.npz
+code/m2_mf_run.py --variant M2_N15 --r 6 --proto driven --closure cqmf --ics quiet --out results/m2/theory/runs/driven_M2_N15_cqmf_r6.npz
+code/m2_mf_run.py --variant M2_tau30 --r 0.25 --proto driven --closure cqmf --ics quiet --out results/m2/theory/runs/driven_M2_tau30_cqmf_r0.25.npz
+code/m2_mf_run.py --variant M2_tau30 --r 0.5 --proto driven --closure cqmf --ics quiet --out results/m2/theory/runs/driven_M2_tau30_cqmf_r0.5.npz
+code/m2_mf_run.py --variant M2_tau30 --r 1 --proto driven --closure cqmf --ics quiet --out results/m2/theory/runs/driven_M2_tau30_cqmf_r1.npz
+code/m2_mf_run.py --variant M2_tau30 --r 2 --proto driven --closure cqmf --ics quiet --out results/m2/theory/runs/driven_M2_tau30_cqmf_r2.npz
+code/m2_mf_run.py --variant M2_tau30 --r 4 --proto driven --closure cqmf --ics quiet --out results/m2/theory/runs/driven_M2_tau30_cqmf_r4.npz
+code/m2_mf_run.py --variant M2_tau30 --r 6 --proto driven --closure cqmf --ics quiet --out results/m2/theory/runs/driven_M2_tau30_cqmf_r6.npz
+code/m2_mf_run.py --variant M2 --r 0.25 --proto driven --orn 0.01 --closure cqmf --ics quiet --out results/m2/theory/runs/driven_M2_cqmf_r0.25_orn0.01.npz
+code/m2_mf_run.py --variant M2 --r 0.5 --proto driven --orn 0.01 --closure cqmf --ics quiet --out results/m2/theory/runs/driven_M2_cqmf_r0.5_orn0.01.npz
+code/m2_mf_run.py --variant M2 --r 1 --proto driven --orn 0.01 --closure cqmf --ics quiet --out results/m2/theory/runs/driven_M2_cqmf_r1_orn0.01.npz
+code/m2_mf_run.py --variant M2 --r 2 --proto driven --orn 0.01 --closure cqmf --ics quiet --out results/m2/theory/runs/driven_M2_cqmf_r2_orn0.01.npz
+code/m2_mf_run.py --variant M2 --r 4 --proto driven --orn 0.01 --closure cqmf --ics quiet --out results/m2/theory/runs/driven_M2_cqmf_r4_orn0.01.npz
+code/m2_mf_run.py --variant M2 --r 6 --proto driven --orn 0.01 --closure cqmf --ics quiet --out results/m2/theory/runs/driven_M2_cqmf_r6_orn0.01.npz
+code/m2_mf_run.py --variant M2 --r 0.25 --proto driven --orn 0.02 --closure cqmf --ics quiet --out results/m2/theory/runs/driven_M2_cqmf_r0.25_orn0.02.npz
+code/m2_mf_run.py --variant M2 --r 0.5 --proto driven --orn 0.02 --closure cqmf --ics quiet --out results/m2/theory/runs/driven_M2_cqmf_r0.5_orn0.02.npz
+code/m2_mf_run.py --variant M2 --r 1 --proto driven --orn 0.02 --closure cqmf --ics quiet --out results/m2/theory/runs/driven_M2_cqmf_r1_orn0.02.npz
+code/m2_mf_run.py --variant M2 --r 2 --proto driven --orn 0.02 --closure cqmf --ics quiet --out results/m2/theory/runs/driven_M2_cqmf_r2_orn0.02.npz
+code/m2_mf_run.py --variant M2 --r 4 --proto driven --orn 0.02 --closure cqmf --ics quiet --out results/m2/theory/runs/driven_M2_cqmf_r4_orn0.02.npz
+code/m2_mf_run.py --variant M2 --r 6 --proto driven --orn 0.02 --closure cqmf --ics quiet --out results/m2/theory/runs/driven_M2_cqmf_r6_orn0.02.npz
+code/m2_mf_run.py --variant M2 --r 0.25 --proto driven --orn 0.07 --closure cqmf --ics quiet --out results/m2/theory/runs/driven_M2_cqmf_r0.25_orn0.07.npz
+code/m2_mf_run.py --variant M2 --r 0.5 --proto driven --orn 0.07 --closure cqmf --ics quiet --out results/m2/theory/runs/driven_M2_cqmf_r0.5_orn0.07.npz
+code/m2_mf_run.py --variant M2 --r 1 --proto driven --orn 0.07 --closure cqmf --ics quiet --out results/m2/theory/runs/driven_M2_cqmf_r1_orn0.07.npz
+code/m2_mf_run.py --variant M2 --r 2 --proto driven --orn 0.07 --closure cqmf --ics quiet --out results/m2/theory/runs/driven_M2_cqmf_r2_orn0.07.npz
+code/m2_mf_run.py --variant M2 --r 4 --proto driven --orn 0.07 --closure cqmf --ics quiet --out results/m2/theory/runs/driven_M2_cqmf_r4_orn0.07.npz
+code/m2_mf_run.py --variant M2 --r 6 --proto driven --orn 0.07 --closure cqmf --ics quiet --out results/m2/theory/runs/driven_M2_cqmf_r6_orn0.07.npz
+code/m2_mf_run.py --variant M2 --r 0.25 --proto driven --orn 0.1 --closure cqmf --ics quiet --out results/m2/theory/runs/driven_M2_cqmf_r0.25_orn0.1.npz
+code/m2_mf_run.py --variant M2 --r 0.5 --proto driven --orn 0.1 --closure cqmf --ics quiet --out results/m2/theory/runs/driven_M2_cqmf_r0.5_orn0.1.npz
+code/m2_mf_run.py --variant M2 --r 1 --proto driven --orn 0.1 --closure cqmf --ics quiet --out results/m2/theory/runs/driven_M2_cqmf_r1_orn0.1.npz
+code/m2_mf_run.py --variant M2 --r 2 --proto driven --orn 0.1 --closure cqmf --ics quiet --out results/m2/theory/runs/driven_M2_cqmf_r2_orn0.1.npz
+code/m2_mf_run.py --variant M2 --r 4 --proto driven --orn 0.1 --closure cqmf --ics quiet --out results/m2/theory/runs/driven_M2_cqmf_r4_orn0.1.npz
+code/m2_mf_run.py --variant M2 --r 6 --proto driven --orn 0.1 --closure cqmf --ics quiet --out results/m2/theory/runs/driven_M2_cqmf_r6_orn0.1.npz
+code/m2_mf_run.py --variant M2_allsyn --r 0 --proto driven --closure qmf --ics quiet --out results/m2/theory/runs/driven_M2_allsyn_qmf_r0.npz
+code/m2_mf_run.py --variant M2_KW09 --r 0 --proto driven --closure qmf --ics quiet --out results/m2/theory/runs/driven_M2_KW09_qmf_r0.npz
+code/m2_mf_run.py --variant M2_N15 --r 0 --proto driven --closure qmf --ics quiet --out results/m2/theory/runs/driven_M2_N15_qmf_r0.npz
+code/m2_mf_run.py --variant M2_tau30 --r 0 --proto driven --closure qmf --ics quiet --out results/m2/theory/runs/driven_M2_tau30_qmf_r0.npz
+code/m2_mf_run.py --variant M2 --r 0 --proto driven --orn 0.01 --closure qmf --ics quiet --out results/m2/theory/runs/driven_M2_qmf_r0_orn0.01.npz
+code/m2_mf_run.py --variant M2 --r 0 --proto driven --orn 0.02 --closure qmf --ics quiet --out results/m2/theory/runs/driven_M2_qmf_r0_orn0.02.npz
+code/m2_mf_run.py --variant M2 --r 0 --proto driven --orn 0.07 --closure qmf --ics quiet --out results/m2/theory/runs/driven_M2_qmf_r0_orn0.07.npz
+code/m2_mf_run.py --variant M2 --r 0 --proto driven --orn 0.1 --closure qmf --ics quiet --out results/m2/theory/runs/driven_M2_qmf_r0_orn0.1.npz
+code/m2_mf_run.py --variant M2s --r 0 --proto decay --closure cqmf --ics decay --out results/m2/theory/runs/decay_M2s_cqmf_r0.npz
+code/m2_mf_run.py --variant M2s --r 0.25 --proto decay --closure cqmf --ics decay --out results/m2/theory/runs/decay_M2s_cqmf_r0.25.npz
+code/m2_mf_run.py --variant M2s --r 0.5 --proto decay --closure cqmf --ics decay --out results/m2/theory/runs/decay_M2s_cqmf_r0.5.npz
+code/m2_mf_run.py --variant M2s --r 1 --proto decay --closure cqmf --ics decay --out results/m2/theory/runs/decay_M2s_cqmf_r1.npz
+code/m2_mf_run.py --variant M2s --r 2 --proto decay --closure cqmf --ics decay --out results/m2/theory/runs/decay_M2s_cqmf_r2.npz
+code/m2_mf_run.py --variant M2s --r 4 --proto decay --closure cqmf --ics decay --out results/m2/theory/runs/decay_M2s_cqmf_r4.npz
+code/m2_mf_run.py --variant M2s --r 6 --proto decay --closure cqmf --ics decay --out results/m2/theory/runs/decay_M2s_cqmf_r6.npz
+code/m2_mf_run.py --variant M1s --r 0 --proto decay --closure cqmf --ics decay --out results/m2/theory/runs/decay_M1s_cqmf_r0.npz
+code/m2_mf_run.py --variant M1s --r 0.25 --proto decay --closure cqmf --ics decay --out results/m2/theory/runs/decay_M1s_cqmf_r0.25.npz
+code/m2_mf_run.py --variant M1s --r 0.5 --proto decay --closure cqmf --ics decay --out results/m2/theory/runs/decay_M1s_cqmf_r0.5.npz
+code/m2_mf_run.py --variant M1s --r 1 --proto decay --closure cqmf --ics decay --out results/m2/theory/runs/decay_M1s_cqmf_r1.npz
+code/m2_mf_run.py --variant M1s --r 2 --proto decay --closure cqmf --ics decay --out results/m2/theory/runs/decay_M1s_cqmf_r2.npz
+code/m2_mf_run.py --variant M1s --r 4 --proto decay --closure cqmf --ics decay --out results/m2/theory/runs/decay_M1s_cqmf_r4.npz
+code/m2_mf_run.py --variant M1s --r 6 --proto decay --closure cqmf --ics decay --out results/m2/theory/runs/decay_M1s_cqmf_r6.npz
+code/m2_mf_run.py --variant M2_allsyn --r 0.25 --proto decay --closure cqmf --ics decay --out results/m2/theory/runs/decay_M2_allsyn_cqmf_r0.25.npz
+code/m2_mf_run.py --variant M2_allsyn --r 0.5 --proto decay --closure cqmf --ics decay --out results/m2/theory/runs/decay_M2_allsyn_cqmf_r0.5.npz
+code/m2_mf_run.py --variant M2_allsyn --r 1 --proto decay --closure cqmf --ics decay --out results/m2/theory/runs/decay_M2_allsyn_cqmf_r1.npz
+code/m2_mf_run.py --variant M2_allsyn --r 2 --proto decay --closure cqmf --ics decay --out results/m2/theory/runs/decay_M2_allsyn_cqmf_r2.npz
+code/m2_mf_run.py --variant M2_allsyn --r 4 --proto decay --closure cqmf --ics decay --out results/m2/theory/runs/decay_M2_allsyn_cqmf_r4.npz
+code/m2_mf_run.py --variant M2_allsyn --r 6 --proto decay --closure cqmf --ics decay --out results/m2/theory/runs/decay_M2_allsyn_cqmf_r6.npz
+code/m2_mf_run.py --variant M2_KW09 --r 0.25 --proto decay --closure cqmf --ics decay --out results/m2/theory/runs/decay_M2_KW09_cqmf_r0.25.npz
+code/m2_mf_run.py --variant M2_KW09 --r 0.5 --proto decay --closure cqmf --ics decay --out results/m2/theory/runs/decay_M2_KW09_cqmf_r0.5.npz
+code/m2_mf_run.py --variant M2_KW09 --r 1 --proto decay --closure cqmf --ics decay --out results/m2/theory/runs/decay_M2_KW09_cqmf_r1.npz
+code/m2_mf_run.py --variant M2_KW09 --r 2 --proto decay --closure cqmf --ics decay --out results/m2/theory/runs/decay_M2_KW09_cqmf_r2.npz
+code/m2_mf_run.py --variant M2_KW09 --r 4 --proto decay --closure cqmf --ics decay --out results/m2/theory/runs/decay_M2_KW09_cqmf_r4.npz
+code/m2_mf_run.py --variant M2_KW09 --r 6 --proto decay --closure cqmf --ics decay --out results/m2/theory/runs/decay_M2_KW09_cqmf_r6.npz
+code/m2_mf_run.py --variant M2_N15 --r 0.25 --proto decay --closure cqmf --ics decay --out results/m2/theory/runs/decay_M2_N15_cqmf_r0.25.npz
+code/m2_mf_run.py --variant M2_N15 --r 0.5 --proto decay --closure cqmf --ics decay --out results/m2/theory/runs/decay_M2_N15_cqmf_r0.5.npz
+code/m2_mf_run.py --variant M2_N15 --r 1 --proto decay --closure cqmf --ics decay --out results/m2/theory/runs/decay_M2_N15_cqmf_r1.npz
+code/m2_mf_run.py --variant M2_N15 --r 2 --proto decay --closure cqmf --ics decay --out results/m2/theory/runs/decay_M2_N15_cqmf_r2.npz
+code/m2_mf_run.py --variant M2_N15 --r 4 --proto decay --closure cqmf --ics decay --out results/m2/theory/runs/decay_M2_N15_cqmf_r4.npz
+code/m2_mf_run.py --variant M2_N15 --r 6 --proto decay --closure cqmf --ics decay --out results/m2/theory/runs/decay_M2_N15_cqmf_r6.npz
+code/m2_mf_run.py --variant M2_tau30 --r 0.25 --proto decay --closure cqmf --ics decay --out results/m2/theory/runs/decay_M2_tau30_cqmf_r0.25.npz
+code/m2_mf_run.py --variant M2_tau30 --r 0.5 --proto decay --closure cqmf --ics decay --out results/m2/theory/runs/decay_M2_tau30_cqmf_r0.5.npz
+code/m2_mf_run.py --variant M2_tau30 --r 1 --proto decay --closure cqmf --ics decay --out results/m2/theory/runs/decay_M2_tau30_cqmf_r1.npz
+code/m2_mf_run.py --variant M2_tau30 --r 2 --proto decay --closure cqmf --ics decay --out results/m2/theory/runs/decay_M2_tau30_cqmf_r2.npz
+code/m2_mf_run.py --variant M2_tau30 --r 4 --proto decay --closure cqmf --ics decay --out results/m2/theory/runs/decay_M2_tau30_cqmf_r4.npz
+code/m2_mf_run.py --variant M2_tau30 --r 6 --proto decay --closure cqmf --ics decay --out results/m2/theory/runs/decay_M2_tau30_cqmf_r6.npz
+code/m2_mf_run.py --variant M2 --r 0.25 --proto decay --null targets --null_seed 0 --closure cqmf --ics decay --out results/m2/theory/runs/decay_M2_cqmf_r0.25_nulltargets.npz
+code/m2_mf_run.py --variant M2 --r 0.5 --proto decay --null targets --null_seed 0 --closure cqmf --ics decay --out results/m2/theory/runs/decay_M2_cqmf_r0.5_nulltargets.npz
+code/m2_mf_run.py --variant M2 --r 1 --proto decay --null targets --null_seed 0 --closure cqmf --ics decay --out results/m2/theory/runs/decay_M2_cqmf_r1_nulltargets.npz
+code/m2_mf_run.py --variant M2 --r 2 --proto decay --null targets --null_seed 0 --closure cqmf --ics decay --out results/m2/theory/runs/decay_M2_cqmf_r2_nulltargets.npz
+code/m2_mf_run.py --variant M2 --r 4 --proto decay --null targets --null_seed 0 --closure cqmf --ics decay --out results/m2/theory/runs/decay_M2_cqmf_r4_nulltargets.npz
+code/m2_mf_run.py --variant M2 --r 6 --proto decay --null targets --null_seed 0 --closure cqmf --ics decay --out results/m2/theory/runs/decay_M2_cqmf_r6_nulltargets.npz
+code/m2_mf_run.py --variant M2 --r 0.25 --proto decay --null weights --null_seed 0 --closure cqmf --ics decay --out results/m2/theory/runs/decay_M2_cqmf_r0.25_nullweights.npz
+code/m2_mf_run.py --variant M2 --r 0.5 --proto decay --null weights --null_seed 0 --closure cqmf --ics decay --out results/m2/theory/runs/decay_M2_cqmf_r0.5_nullweights.npz
+code/m2_mf_run.py --variant M2 --r 1 --proto decay --null weights --null_seed 0 --closure cqmf --ics decay --out results/m2/theory/runs/decay_M2_cqmf_r1_nullweights.npz
+code/m2_mf_run.py --variant M2 --r 2 --proto decay --null weights --null_seed 0 --closure cqmf --ics decay --out results/m2/theory/runs/decay_M2_cqmf_r2_nullweights.npz
+code/m2_mf_run.py --variant M2 --r 4 --proto decay --null weights --null_seed 0 --closure cqmf --ics decay --out results/m2/theory/runs/decay_M2_cqmf_r4_nullweights.npz
+code/m2_mf_run.py --variant M2 --r 6 --proto decay --null weights --null_seed 0 --closure cqmf --ics decay --out results/m2/theory/runs/decay_M2_cqmf_r6_nullweights.npz
+code/m2_mf_run.py --variant M2_allsyn --r 0 --proto decay --closure qmf --ics decay --out results/m2/theory/runs/decay_M2_allsyn_qmf_r0.npz
+code/m2_mf_run.py --variant M2_KW09 --r 0 --proto decay --closure qmf --ics decay --out results/m2/theory/runs/decay_M2_KW09_qmf_r0.npz
+code/m2_mf_run.py --variant M2_N15 --r 0 --proto decay --closure qmf --ics decay --out results/m2/theory/runs/decay_M2_N15_qmf_r0.npz
+code/m2_mf_run.py --variant M2_tau30 --r 0 --proto decay --closure qmf --ics decay --out results/m2/theory/runs/decay_M2_tau30_qmf_r0.npz
+code/m2_mf_run.py --variant M2 --r 0 --proto decay --null targets --null_seed 0 --closure qmf --ics decay --out results/m2/theory/runs/decay_M2_qmf_r0_nulltargets.npz
+code/m2_mf_run.py --variant M2 --r 0 --proto decay --null weights --null_seed 0 --closure qmf --ics decay --out results/m2/theory/runs/decay_M2_qmf_r0_nullweights.npz

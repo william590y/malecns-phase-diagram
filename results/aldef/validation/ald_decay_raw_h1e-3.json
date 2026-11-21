@@ -1,0 +1,88 @@
+{
+ "options": {
+  "exp": "decay",
+  "norm": "raw",
+  "g": [
+   0.2
+  ],
+  "r": 1.0,
+  "h": 0.001,
+  "beta": 1.0,
+  "T": 100.0,
+  "dt": 0.2,
+  "B": 8,
+  "null": false,
+  "null_kind": "targets",
+  "seed_set": null,
+  "seed": 2,
+  "out": "/MALECNS_ROOT/results/aldef/validation/ald_decay_raw_h1e-3.npz",
+  "drive": [],
+  "clamp_off": [],
+  "clamp_on": [],
+  "sign_override": [],
+  "sign_ensemble": 0,
+  "ens_unit": "neuron",
+  "ens_conf": "body",
+  "ens_gt": "ignore",
+  "ens_qmiss": 0.5,
+  "ens_seed": null,
+  "ens_only": null,
+  "wtransform": "linear",
+  "wnorm": "renorm",
+  "std": null,
+  "std_group": [],
+  "adapt": null,
+  "adapt_group": [],
+  "refractory": 0,
+  "region": [],
+  "no_default_regions": false,
+  "no_occ": false,
+  "device": "cuda"
+ },
+ "device": "cuda",
+ "gpu": "NVIDIA GeForce RTX 3090",
+ "c_raw": 0.0013406440848484635,
+ "regions": {
+  "AL_module": {
+   "sel": "module",
+   "n": 526
+  },
+  "AL_rest": {
+   "sel": "al_rest",
+   "n": 3395
+  },
+  "CNS_rest": {
+   "sel": "cns_rest",
+   "n": 163295
+  }
+ },
+ "N": 167216,
+ "nnz": [
+  24562483
+ ],
+ "steps": 500,
+ "n_draws": 1,
+ "ms_per_step": [
+  [
+   3.450221061706543
+  ]
+ ],
+ "rho_T_mean": [
+  0.0012917425483465195
+ ],
+ "surv_T": [
+  1.0
+ ],
+ "wall_s": 3.6832549571990967,
+ "reg_rho_T_mean": {
+  "AL_module": [
+   0.008555132895708084
+  ],
+  "AL_rest": [
+   0.001067746663466096
+  ],
+  "CNS_rest": [
+   0.0012730028247460723
+  ]
+ }
+}

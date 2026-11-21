@@ -1,0 +1,3 @@
+code/m2_mf_run.py --variant M2 --r 1 --proto decay --closure cqmf --g 0.15 0.5 1.6 3.2 --ring --ring_T 300 --out results/m2/theory/runs/smoke2_decay_M2_cqmf_r1.npz
+code/m2_mf_run.py --variant M2 --r 1 --proto driven --closure cqmf --ics quiet,decay --g 0.15 0.5 1.5 3.0 --ring --ring_T 300 --out results/m2/theory/runs/smoke2_driven_M2_cqmf_r1.npz
+code/m2_mf_run.py --variant M1 --r 1 --proto decay --closure cqmf --ics decay,eps --out results/m2/theory/runs/smoke2_decay_M1_cqmf_r1_full.npz

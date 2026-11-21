@@ -1,0 +1,232 @@
+{
+ "options": {
+  "exp": "decay",
+  "norm": "raw",
+  "g": [
+   1.5,
+   1.55,
+   1.61,
+   1.67,
+   1.73
+  ],
+  "r": 0.0,
+  "h": 0.0,
+  "beta": 1.0,
+  "T": 3000.0,
+  "dt": 0.2,
+  "B": 64,
+  "null": true,
+  "null_kind": "targets",
+  "seed_set": null,
+  "seed": 7706055,
+  "out": "/MALECNS_ROOT/results/m2/verify/sim/V7_cnull0_r0_on.npz",
+  "drive": [],
+  "clamp_off": [],
+  "clamp_on": [],
+  "sign_override": [],
+  "sign_ensemble": 0,
+  "ens_unit": "neuron",
+  "ens_conf": "body",
+  "ens_gt": "ignore",
+  "ens_qmiss": 0.5,
+  "ens_seed": null,
+  "ens_only": null,
+  "wtransform": "linear",
+  "wnorm": "renorm",
+  "std": null,
+  "std_group": [
+   "sign:1=0.25,157"
+  ],
+  "std_mode": "spike",
+  "adapt": null,
+  "adapt_group": [],
+  "refractory": 0,
+  "region": [
+   "ORN=olfactory",
+   "nonORN=~olfactory",
+   "uPN_ant=/MALECNS_ROOT/results/aldef/drive/groups/uPN_ant.npz",
+   "ALsys=/MALECNS_ROOT/results/aldef/drive/groups/ALsys.npz",
+   "lLN1_bc=type:lLN1_bc"
+  ],
+  "no_default_regions": false,
+  "no_occ": false,
+  "device": "cuda",
+  "engine": "push",
+  "push_max": 0.012,
+  "switch_at": null,
+  "sw_drive": [],
+  "sw_clamp_off": [],
+  "sw_clamp_on": [],
+  "rec_lin": 0.0,
+  "win": [
+   "1500:3000"
+  ],
+  "reg_last": true,
+  "occ_win": null,
+  "edge_sign": [],
+  "null_seed": 0,
+  "graph": null,
+  "rec_counts": false,
+  "counts_win": null,
+  "counts_reg": false,
+  "pulse": null,
+  "pulse_gap": 0.0,
+  "ramp": 0.0,
+  "ramp_loop": false,
+  "ramp_avg": 0.5,
+  "init": [],
+  "init_frac": 1.0
+ },
+ "device": "cuda",
+ "gpu": "NVIDIA RTX A6000",
+ "null_edges_md5": "b36e55e753cdd65d88ee7888f90f84b9",
+ "c_raw": 0.0013406440848484635,
+ "std": {
+  "default": null,
+  "groups": [
+   {
+    "sel": "sign:1",
+    "U": 0.25,
+    "tau": 157.0,
+    "n": 103746
+   }
+  ],
+  "n_depressing": 103746,
+  "mode": "spike"
+ },
+ "windows_steps": [
+  [
+   7500,
+   15000
+  ]
+ ],
+ "regions": {
+  "AL_module": {
+   "sel": "module",
+   "n": 526
+  },
+  "AL_rest": {
+   "sel": "al_rest",
+   "n": 3395
+  },
+  "CNS_rest": {
+   "sel": "cns_rest",
+   "n": 163295
+  },
+  "ORN": {
+   "sel": "olfactory",
+   "n": 2639
+  },
+  "nonORN": {
+   "sel": "~olfactory",
+   "n": 164577
+  },
+  "uPN_ant": {
+   "sel": "/MALECNS_ROOT/results/aldef/drive/groups/uPN_ant.npz",
+   "n": 220
+  },
+  "ALsys": {
+   "sel": "/MALECNS_ROOT/results/aldef/drive/groups/ALsys.npz",
+   "n": 1282
+  },
+  "lLN1_bc": {
+   "sel": "type:lLN1_bc",
+   "n": 30
+  }
+ },
+ "engine_steps": [
+  {
+   "push": 66877,
+   "spmm": 8123,
+   "zero": 0
+  }
+ ],
+ "N": 167216,
+ "nnz": [
+  14747427
+ ],
+ "steps": 15000,
+ "n_draws": 1,
+ "ms_per_step": [
+  [
+   4.999141486485799,
+   5.766299772262573,
+   7.373652712504069,
+   7.45638952255249,
+   8.42958410580953
+  ]
+ ],
+ "rho_T_mean": [
+  0.0018539831507951021,
+  0.003080690046772361,
+  0.005203692242503166,
+  0.004981767851859331,
+  0.0072350287809967995
+ ],
+ "surv_T": [
+  0.28125,
+  0.40625,
+  0.65625,
+  0.609375,
+  0.828125
+ ],
+ "wall_s": 517.3267171382904,
+ "reg_rho_T_mean": {
+  "AL_module": [
+   0.00656487699598074,
+   0.010218631476163864,
+   0.01915993168950081,
+   0.018328186124563217,
+   0.025665398687124252
+  ],
+  "AL_rest": [
+   0.0008468335727229714,
+   0.001527982298284769,
+   0.0028120398055762053,
+   0.0023932254407554865,
+   0.003990243189036846
+  ],
+  "CNS_rest": [
+   0.0018597476882860065,
+   0.0030899790581315756,
+   0.0052084606140851974,
+   0.004992594011127949,
+   0.007243121974170208
+  ],
+  "ORN": [
+   0.0006276051281020045,
+   0.0011249526869505644,
+   0.0021492517553269863,
+   0.0018472905503585935,
+   0.0029367185197770596
+  ],
+  "nonORN": [
+   0.0018736481433734298,
+   0.003112050238996744,
+   0.005252670496702194,
+   0.005032029002904892,
+   0.007303952239453793
+  ],
+  "uPN_ant": [
+   0.0036221593618392944,
+   0.005752841010689735,
+   0.009730113670229912,
+   0.00859374925494194,
+   0.011860795319080353
+  ],
+  "ALsys": [
+   0.003644208423793316,
+   0.005923361983150244,
+   0.010883872397243977,
+   0.010055089369416237,
+   0.01505216397345066
+  ],
+  "lLN1_bc": [
+   0.0078125,
+   0.006250000558793545,
+   0.014062500558793545,
+   0.01458333432674408,
+   0.02500000223517418
+  ]
+ }
+}

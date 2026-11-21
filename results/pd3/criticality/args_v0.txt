@@ -1,0 +1,5 @@
+pd3_avalanche.py --graph real --r 1 --g 0.20 --B 16384 --cap 3000 --nav 200000 --seed_min 60 --wall_min 100 --tag v0_real_r1_g0.20 --outdir /MALECNS_ROOT/results/pd3/criticality/v0
+pd3_avalanche.py --graph real --r 1 --g 0.36 --B 4096 --cap 3000 --nav 10000 --seed_min 60 --wall_min 100 --tag v0_real_r1_g0.36 --outdir /MALECNS_ROOT/results/pd3/criticality/v0
+swc.py --exp spread --norm raw --g 0.20 --r 1 --B 512 --T 600 --dt 0.2 --seed_set /MALECNS_ROOT/results/pd3/criticality/seeds_module_exc366.npz --seed 11 --out /MALECNS_ROOT/results/pd3/criticality/v0/v0_swc_r1_g0.20.npz
+swc.py --exp spread --norm raw --g 0.36 --r 1 --B 512 --T 600 --dt 0.2 --seed_set /MALECNS_ROOT/results/pd3/criticality/seeds_module_exc366.npz --seed 12 --out /MALECNS_ROOT/results/pd3/criticality/v0/v0_swc_r1_g0.36.npz
+pd3_avalanche.py --graph complete --K 76 --r 0 --x 1.0 --B 4096 --nav 20000 --seed_min 3 --wall_min 5 --tag smoke_complete76_x1.00 --outdir /MALECNS_ROOT/results/pd3/criticality/smoke

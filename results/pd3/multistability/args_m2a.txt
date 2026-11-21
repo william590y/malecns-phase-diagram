@@ -1,0 +1,42 @@
+pd3_multistab.py sweep --r 0 --h 1e-05 --D 50 --seed 1000
+pd3_multistab.py sweep --r 0 --h 1e-05 --D 200 --seed 1001
+pd3_multistab.py sweep --r 0 --h 1e-05 --D 800 --seed 1002
+pd3_multistab.py sweep --r 0 --h 0.0001 --D 50 --seed 1003
+pd3_multistab.py sweep --r 0 --h 0.0001 --D 200 --seed 1004
+pd3_multistab.py sweep --r 0 --h 0.0001 --D 800 --seed 1005
+pd3_multistab.py sweep --r 0.5 --h 1e-05 --D 50 --seed 1006
+pd3_multistab.py sweep --r 0.5 --h 1e-05 --D 200 --seed 1007
+pd3_multistab.py sweep --r 0.5 --h 1e-05 --D 800 --seed 1008
+pd3_multistab.py sweep --r 0.5 --h 0.0001 --D 50 --seed 1009
+pd3_multistab.py sweep --r 0.5 --h 0.0001 --D 200 --seed 1010
+pd3_multistab.py sweep --r 0.5 --h 0.0001 --D 800 --seed 1011
+pd3_multistab.py sweep --r 1 --h 1e-05 --D 50 --seed 1012
+pd3_multistab.py sweep --r 1 --h 1e-05 --D 200 --seed 1013
+pd3_multistab.py sweep --r 1 --h 1e-05 --D 800 --seed 1014
+pd3_multistab.py sweep --r 1 --h 0.0001 --D 50 --seed 1015
+pd3_multistab.py sweep --r 1 --h 0.0001 --D 200 --seed 1016
+pd3_multistab.py sweep --r 1 --h 0.0001 --D 800 --seed 1017
+pd3_multistab.py sweep --r 2 --h 1e-05 --D 50 --seed 1018
+pd3_multistab.py sweep --r 2 --h 1e-05 --D 200 --seed 1019
+pd3_multistab.py sweep --r 2 --h 1e-05 --D 800 --seed 1020
+pd3_multistab.py sweep --r 2 --h 0.0001 --D 50 --seed 1021
+pd3_multistab.py sweep --r 2 --h 0.0001 --D 200 --seed 1022
+pd3_multistab.py sweep --r 2 --h 0.0001 --D 800 --seed 1023
+pd3_multistab.py sweep --r 4 --h 1e-05 --D 50 --seed 1024
+pd3_multistab.py sweep --r 4 --h 1e-05 --D 200 --seed 1025
+pd3_multistab.py sweep --r 4 --h 1e-05 --D 800 --seed 1026
+pd3_multistab.py sweep --r 4 --h 0.0001 --D 50 --seed 1027
+pd3_multistab.py sweep --r 4 --h 0.0001 --D 200 --seed 1028
+pd3_multistab.py sweep --r 4 --h 0.0001 --D 800 --seed 1029
+pd3_multistab.py sweep --r 6 --h 1e-05 --D 50 --seed 1030
+pd3_multistab.py sweep --r 6 --h 1e-05 --D 200 --seed 1031
+pd3_multistab.py sweep --r 6 --h 1e-05 --D 800 --seed 1032
+pd3_multistab.py sweep --r 6 --h 0.0001 --D 50 --seed 1033
+pd3_multistab.py sweep --r 6 --h 0.0001 --D 200 --seed 1034
+pd3_multistab.py sweep --r 6 --h 0.0001 --D 800 --seed 1035
+pd3_multistab.py sweep --r 0 --h 0 --D 200 --down_only --seed 1036
+pd3_multistab.py sweep --r 0.5 --h 0 --D 200 --down_only --seed 1037
+pd3_multistab.py sweep --r 1 --h 0 --D 200 --down_only --seed 1038
+pd3_multistab.py sweep --r 2 --h 0 --D 200 --down_only --seed 1039
+pd3_multistab.py sweep --r 4 --h 0 --D 200 --down_only --seed 1040
+pd3_multistab.py sweep --r 6 --h 0 --D 200 --down_only --seed 1041

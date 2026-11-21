@@ -1,0 +1,27 @@
+{
+ "/MALECNS_ROOT/results/m2/decay/graphs/cnull_N20000_s1.npz": {
+  "N": 20000,
+  "n_edges": 3044264,
+  "c": 0.001348084314946976
+ },
+ "/MALECNS_ROOT/results/m2/decay/graphs/cnull_N40000_s1.npz": {
+  "N": 40000,
+  "n_edges": 6090158,
+  "c": 0.0013489228121959201
+ },
+ "/MALECNS_ROOT/results/m2/decay/graphs/cnull_N80000_s1.npz": {
+  "N": 80000,
+  "n_edges": 12221805,
+  "c": 0.0013403528898263373
+ },
+ "/MALECNS_ROOT/results/m2/decay/graphs/realsub_N40000_s1.npz": {
+  "N": 40000,
+  "n_edges": 1598693,
+  "c": 0.0013406441635011774
+ },
+ "/MALECNS_ROOT/results/m2/decay/graphs/realsub_N80000_s1.npz": {
+  "N": 80000,
+  "n_edges": 5905333,
+  "c": 0.0013406441635011774
+ }
+}

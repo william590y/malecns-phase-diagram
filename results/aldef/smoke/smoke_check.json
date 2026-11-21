@@ -1,0 +1,634 @@
+{
+ "s0_baseline.npz": {
+  "keys": [
+   "g",
+   "meta",
+   "occ",
+   "reg_names",
+   "reg_rho",
+   "reg_sizes",
+   "rho",
+   "sec_per_step",
+   "surv",
+   "t"
+  ],
+  "rho": [
+   2,
+   90,
+   16
+  ],
+  "reg_rho": [
+   2,
+   90,
+   3,
+   16
+  ],
+  "reg_names": [
+   "AL_module",
+   "AL_rest",
+   "CNS_rest"
+  ],
+  "rho_T_mean": [
+   0.00014726462541148067,
+   0.001033468754030764
+  ],
+  "surv_T": [
+   0.4375,
+   1.0
+  ],
+  "reg_rho_T_mean": {
+   "AL_module": [
+    0.025665398687124252,
+    0.1402091234922409
+   ],
+   "AL_rest": [
+    0.0004234167863614857,
+    0.0032032402232289314
+   ],
+   "CNS_rest": [
+    5.932514613959938e-05,
+    0.0005400502122938633
+   ]
+  },
+  "ms_per_step": [
+   [
+    3.473066171010335,
+    3.329749266306559
+   ]
+  ],
+  "gpu": "NVIDIA GeForce RTX 3090"
+ },
+ "s1_lLN1bc_inh.npz": {
+  "keys": [
+   "g",
+   "meta",
+   "occ",
+   "reg_names",
+   "reg_rho",
+   "reg_sizes",
+   "rho",
+   "sec_per_step",
+   "surv",
+   "t"
+  ],
+  "rho": [
+   2,
+   90,
+   16
+  ],
+  "reg_rho": [
+   2,
+   90,
+   3,
+   16
+  ],
+  "reg_names": [
+   "AL_module",
+   "AL_rest",
+   "CNS_rest"
+  ],
+  "rho_T_mean": [
+   0.0,
+   0.0
+  ],
+  "surv_T": [
+   0.0,
+   0.0
+  ],
+  "reg_rho_T_mean": {
+   "AL_module": [
+    0.0,
+    0.0
+   ],
+   "AL_rest": [
+    0.0,
+    0.0
+   ],
+   "CNS_rest": [
+    0.0,
+    0.0
+   ]
+  },
+  "ms_per_step": [
+   [
+    5.62913179397583,
+    3.367136264669484
+   ]
+  ],
+  "gpu": "NVIDIA GeForce RTX 3090",
+  "sign_override": [
+   {
+    "sel": "lLN1_bc",
+    "V": -1.0,
+    "n": 30,
+    "consensus_signs": {
+     "1.0": 30
+    }
+   }
+  ]
+ },
+ "s2_lLN1bc_zero.npz": {
+  "keys": [
+   "g",
+   "meta",
+   "occ",
+   "reg_names",
+   "reg_rho",
+   "reg_sizes",
+   "rho",
+   "sec_per_step",
+   "surv",
+   "t"
+  ],
+  "rho": [
+   2,
+   90,
+   16
+  ],
+  "reg_rho": [
+   2,
+   90,
+   3,
+   16
+  ],
+  "reg_names": [
+   "AL_module",
+   "AL_rest",
+   "CNS_rest"
+  ],
+  "rho_T_mean": [
+   0.0,
+   0.0
+  ],
+  "surv_T": [
+   0.0,
+   0.0
+  ],
+  "reg_rho_T_mean": {
+   "AL_module": [
+    0.0,
+    0.0
+   ],
+   "AL_rest": [
+    0.0,
+    0.0
+   ],
+   "CNS_rest": [
+    0.0,
+    0.0
+   ]
+  },
+  "ms_per_step": [
+   [
+    4.697059762888941,
+    3.4881159445982286
+   ]
+  ],
+  "gpu": "NVIDIA RTX A6000",
+  "sign_override": [
+   {
+    "sel": "lLN1_bc",
+    "V": 0.0,
+    "n": 30,
+    "consensus_signs": {
+     "1.0": 30
+    }
+   }
+  ]
+ },
+ "s3_orn_drive.npz": {
+  "keys": [
+   "g",
+   "meta",
+   "occ",
+   "reg_names",
+   "reg_rho",
+   "reg_sizes",
+   "rho",
+   "sec_per_step",
+   "surv",
+   "t"
+  ],
+  "rho": [
+   3,
+   90,
+   16
+  ],
+  "reg_rho": [
+   3,
+   90,
+   6,
+   16
+  ],
+  "reg_names": [
+   "AL_module",
+   "AL_rest",
+   "CNS_rest",
+   "ORN",
+   "PN",
+   "LN"
+  ],
+  "rho_T_mean": [
+   0.00035059446236118674,
+   0.0004971115267835557,
+   0.0007875292794778943
+  ],
+  "surv_T": [
+   1.0,
+   1.0,
+   1.0
+  ],
+  "reg_rho_T_mean": {
+   "AL_module": [
+    0.0,
+    0.03125,
+    0.08626425266265869
+   ],
+   "AL_rest": [
+    0.017268041148781776,
+    0.016863033175468445,
+    0.01699190028011799
+   ],
+   "CNS_rest": [
+    0.0,
+    5.779417551821098e-05,
+    0.00017529624165035784
+   ],
+   "ORN": [
+    0.022214854136109352,
+    0.021196473389863968,
+    0.020367562770843506
+   ],
+   "PN": [
+    0.0,
+    0.0076530613005161285,
+    0.024416908621788025
+   ],
+   "LN": [
+    0.0,
+    0.02723214402794838,
+    0.07083334028720856
+   ]
+  },
+  "ms_per_step": [
+   [
+    3.820451577504476,
+    3.7250657081604004,
+    3.7334314982096357
+   ]
+  ],
+  "gpu": "NVIDIA A40",
+  "drive": [
+   {
+    "sel": "olfactory",
+    "h": 0.02,
+    "n": 2639
+   }
+  ]
+ },
+ "s4_clamp_std_adapt_ref.npz": {
+  "keys": [
+   "g",
+   "meta",
+   "occ",
+   "reg_names",
+   "reg_rho",
+   "reg_sizes",
+   "res_theta",
+   "res_x",
+   "res_x_act",
+   "rho",
+   "sec_per_step",
+   "surv",
+   "t"
+  ],
+  "rho": [
+   2,
+   90,
+   16
+  ],
+  "reg_rho": [
+   2,
+   90,
+   4,
+   16
+  ],
+  "reg_names": [
+   "AL_module",
+   "AL_rest",
+   "CNS_rest",
+   "ORN"
+  ],
+  "rho_T_mean": [
+   0.0,
+   0.0
+  ],
+  "surv_T": [
+   0.0,
+   0.0
+  ],
+  "reg_rho_T_mean": {
+   "AL_module": [
+    0.0,
+    0.0
+   ],
+   "AL_rest": [
+    0.0,
+    0.0
+   ],
+   "CNS_rest": [
+    0.0,
+    0.0
+   ],
+   "ORN": [
+    0.0,
+    0.0
+   ]
+  },
+  "ms_per_step": [
+   [
+    5.974710657355491,
+    1.9210260125655163
+   ]
+  ],
+  "gpu": "NVIDIA RTX 6000 Ada Generation",
+  "res_x": [
+   1,
+   2,
+   90,
+   4
+  ],
+  "res_x_act": [
+   1,
+   2,
+   90,
+   4
+  ],
+  "res_theta": [
+   1,
+   2,
+   90,
+   4
+  ],
+  "clamp_off": [
+   {
+    "sel": "class:olfactory&~type:ORN_(VA4|VC1|VC2|VA7l|VM7d|VM7v)",
+    "n": 2454
+   }
+  ],
+  "std": {
+   "default": [
+    0.5,
+    20.0
+   ],
+   "groups": [
+    {
+     "sel": "sign:-1",
+     "U": 0.0,
+     "tau": 1.0,
+     "n": 59273
+    }
+   ],
+   "n_depressing": 107943
+  },
+  "adapt": {
+   "default": [
+    0.02,
+    50.0
+   ],
+   "groups": [],
+   "n_adapting": 167216
+  }
+ },
+ "s5_sign_ens_type.npz": {
+  "keys": [
+   "ens_draw",
+   "g",
+   "meta",
+   "occ",
+   "occ_ens",
+   "reg_names",
+   "reg_rho",
+   "reg_sizes",
+   "rho",
+   "sec_per_step",
+   "signs_ens",
+   "surv",
+   "t"
+  ],
+  "rho": [
+   1,
+   87,
+   32
+  ],
+  "reg_rho": [
+   1,
+   87,
+   3,
+   32
+  ],
+  "reg_names": [
+   "AL_module",
+   "AL_rest",
+   "CNS_rest"
+  ],
+  "rho_T_mean": [
+   0.0003216274253645679
+  ],
+  "surv_T": [
+   0.4375
+  ],
+  "reg_rho_T_mean": {
+   "AL_module": [
+    0.04705323278903961
+   ],
+   "AL_rest": [
+    0.0010493372101336718
+   ],
+   "CNS_rest": [
+    0.0001559677330078557
+   ]
+  },
+  "ms_per_step": [
+   [
+    4.850950531179914
+   ],
+   [
+    3.4932377338409424
+   ]
+  ],
+  "gpu": "NVIDIA RTX A6000",
+  "signs_ens": [
+   2,
+   167216
+  ],
+  "ens_draw": [
+   32
+  ],
+  "ensemble": {
+   "P_mean": [
+    0.6314681618201708,
+    0.349506829758985,
+    0.019025008420979494
+   ],
+   "q_mean": 0.8706826332074635,
+   "draws": [
+    {
+     "draw": 0,
+     "n_changed": 20749,
+     "n_changed_module": 109,
+     "lLN1_bc_signs": {
+      "-1.0": 30
+     }
+    },
+    {
+     "draw": 1,
+     "n_changed": 23176,
+     "n_changed_module": 61,
+     "lLN1_bc_signs": {
+      "1.0": 30
+     }
+    }
+   ]
+  }
+ },
+ "s6_sqrt_renorm.npz": {
+  "keys": [
+   "g",
+   "meta",
+   "occ",
+   "reg_names",
+   "reg_rho",
+   "reg_sizes",
+   "rho",
+   "sec_per_step",
+   "surv",
+   "t"
+  ],
+  "rho": [
+   2,
+   90,
+   16
+  ],
+  "reg_rho": [
+   2,
+   90,
+   3,
+   16
+  ],
+  "reg_names": [
+   "AL_module",
+   "AL_rest",
+   "CNS_rest"
+  ],
+  "rho_T_mean": [
+   0.0,
+   0.002164117162465118
+  ],
+  "surv_T": [
+   0.0,
+   0.9375
+  ],
+  "reg_rho_T_mean": {
+   "AL_module": [
+    0.0,
+    0.15981464087963104
+   ],
+   "AL_rest": [
+    0.0,
+    0.012739323079586029
+   ],
+   "CNS_rest": [
+    0.0,
+    0.0014364339876919985
+   ]
+  },
+  "ms_per_step": [
+   [
+    6.821738912704143,
+    4.7169270515441895
+   ]
+  ],
+  "gpu": "NVIDIA RTX A5000",
+  "mean_in_strength_model_units": 1.0000000444087238
+ },
+ "s7_cap20_norenorm.npz": {
+  "keys": [
+   "g",
+   "meta",
+   "occ",
+   "reg_names",
+   "reg_rho",
+   "reg_sizes",
+   "rho",
+   "sec_per_step",
+   "surv",
+   "t"
+  ],
+  "rho": [
+   1,
+   90,
+   16
+  ],
+  "reg_rho": [
+   1,
+   90,
+   3,
+   16
+  ],
+  "reg_names": [
+   "AL_module",
+   "AL_rest",
+   "CNS_rest"
+  ],
+  "rho_T_mean": [
+   0.0
+  ],
+  "surv_T": [
+   0.0
+  ],
+  "reg_rho_T_mean": {
+   "AL_module": [
+    0.0
+   ],
+   "AL_rest": [
+    0.0
+   ],
+   "CNS_rest": [
+    0.0
+   ]
+  },
+  "ms_per_step": [
+   [
+    5.268754277910505
+   ]
+  ],
+  "gpu": "NVIDIA RTX A6000",
+  "mean_in_strength_model_units": 0.810348262519786
+ },
+ "check_drive_only_g0": {
+  "ORN_occ_mean": 0.02150765636194019,
+  "exact": 0.021545200717307766,
+  "se": 8.075153296896012e-05,
+  "z": -0.46493675088505987,
+  "max_occ_nonORN": 0.0,
+  "pass": true
+ },
+ "check_clamp_off": {
+  "n_clamped": 2454,
+  "max_occ_clamped": 0.0,
+  "pass": true
+ },
+ "check_ensemble": {
+  "rho_shape": [
+   1,
+   87,
+   32
+  ],
+  "ens_draw": [
+   0,
+   1
+  ],
+  "pass": true
+ }
+}

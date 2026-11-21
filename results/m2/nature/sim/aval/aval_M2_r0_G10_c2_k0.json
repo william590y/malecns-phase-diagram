@@ -1,0 +1,176 @@
+{
+ "options": {
+  "exp": "quiet",
+  "norm": "raw",
+  "g": [
+   0.58545,
+   0.6898,
+   0.81275,
+   0.95762,
+   1.12831
+  ],
+  "r": 0.0,
+  "h": 0.0,
+  "beta": 1.0,
+  "T": 3000.0,
+  "dt": 0.2,
+  "B": 64,
+  "null": false,
+  "null_kind": "targets",
+  "seed_set": null,
+  "seed": 393151098,
+  "out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r0_G10_c2_k0.npz",
+  "drive": [],
+  "clamp_off": [],
+  "clamp_on": [],
+  "sign_override": [],
+  "sign_ensemble": 0,
+  "ens_unit": "neuron",
+  "ens_conf": "body",
+  "ens_gt": "ignore",
+  "ens_qmiss": 0.5,
+  "ens_seed": null,
+  "ens_only": null,
+  "wtransform": "linear",
+  "wnorm": "renorm",
+  "std": null,
+  "std_group": [
+   "sign:1=0.25,157"
+  ],
+  "std_mode": "spike",
+  "adapt": null,
+  "adapt_group": [],
+  "refractory": 0,
+  "region": [],
+  "no_default_regions": false,
+  "no_occ": true,
+  "device": "cuda",
+  "engine": "push",
+  "push_max": 0.012,
+  "switch_at": null,
+  "sw_drive": [],
+  "sw_clamp_off": [],
+  "sw_clamp_on": [],
+  "rec_lin": 0.0,
+  "win": [],
+  "reg_last": false,
+  "occ_win": null,
+  "edge_sign": [],
+  "null_seed": null,
+  "graph": null,
+  "rec_counts": true,
+  "counts_win": null,
+  "counts_reg": false,
+  "pulse": "olfactory",
+  "pulse_gap": 10.0,
+  "ramp": 0.0,
+  "ramp_loop": false,
+  "ramp_avg": 0.5,
+  "init": [],
+  "init_frac": 1.0
+ },
+ "device": "cuda",
+ "gpu": "NVIDIA GeForce RTX 3090",
+ "c_raw": 0.0013406440848484635,
+ "std": {
+  "default": null,
+  "groups": [
+   {
+    "sel": "sign:1",
+    "U": 0.25,
+    "tau": 157.0,
+    "n": 103746
+   }
+  ],
+  "n_depressing": 103746,
+  "mode": "spike"
+ },
+ "counts": {
+  "steps": [
+   0,
+   15000
+  ],
+  "reg": false
+ },
+ "pulse": {
+  "sel": "olfactory",
+  "n": 2639,
+  "gap": 10.0,
+  "p_per_silent_step": 0.019801326693244747,
+  "mean_silent_interval": 10.100333331111107
+ },
+ "regions": {
+  "AL_module": {
+   "sel": "module",
+   "n": 526
+  },
+  "AL_rest": {
+   "sel": "al_rest",
+   "n": 3395
+  },
+  "CNS_rest": {
+   "sel": "cns_rest",
+   "n": 163295
+  }
+ },
+ "engine_steps": [
+  {
+   "push": 74846,
+   "spmm": 148,
+   "zero": 6
+  }
+ ],
+ "N": 167216,
+ "nnz": [
+  14747427
+ ],
+ "steps": 15000,
+ "n_draws": 1,
+ "ms_per_step": [
+  [
+   3.6404334863026935,
+   3.860546859105428,
+   4.211592562993367,
+   4.808657884597778,
+   5.635036770502726
+  ]
+ ],
+ "rho_T_mean": [
+  0.00036619926686398685,
+  0.0004553429316729307,
+  0.0009963721968233585,
+  0.001973588950932026,
+  0.0028714730869978666
+ ],
+ "surv_T": [
+  0.46875,
+  0.421875,
+  0.625,
+  0.8125,
+  0.96875
+ ],
+ "wall_s": 334.330447435379,
+ "reg_rho_T_mean": {
+  "AL_module": [
+   0.023645436391234398,
+   0.013872385956346989,
+   0.026021864265203476,
+   0.02792300470173359,
+   0.047469109296798706
+  ],
+  "AL_rest": [
+   0.0009388807229697704,
+   0.0006029086653143167,
+   0.0011045655701309443,
+   0.0009480853914283216,
+   0.001877761329524219
+  ],
+  "CNS_rest": [
+   0.0002793066087178886,
+   0.0004090564325451851,
+   0.0009135116124525666,
+   0.0019113222369924188,
+   0.0027484765741974115
+  ]
+ }
+}

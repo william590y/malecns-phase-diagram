@@ -1,0 +1,3 @@
+/MALECNS_ROOT/results/pd3/multistab/rsweep_g0.6.npz
+/MALECNS_ROOT/results/pd3/multistab/rsweep_g2.npz
+/MALECNS_ROOT/results/pd3/multistab/rsweep_g8.npz

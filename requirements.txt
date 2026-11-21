@@ -1,0 +1,9 @@
+# Versions the results were produced with (Python 3.13). Nearby versions should work.
+numpy==2.3.3
+scipy==1.16.2
+torch==2.11.0        # CUDA build for the simulators; CPU works but is slow at 167k neurons
+matplotlib==3.10.6
+pandas==2.3.2
+pyarrow==25.0.1      # reads the Janelia .feather files
+gdown                # only for tools/fetch_results.py
+pytest               # only for data_pipeline/tests

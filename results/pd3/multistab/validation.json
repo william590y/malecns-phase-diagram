@@ -1,0 +1,384 @@
+{
+ "source_pooled": "results/analysis2/phase_complete.json sim.real['1'].points",
+ "runs": {
+  "fast": {
+   "file": "results/pd3/multistab/validate_r1.npz",
+   "gpu": "NVIDIA RTX 6000 Ada Generation",
+   "seconds": 223.41321110725403,
+   "rows": [
+    {
+     "g": 0.3,
+     "B": 64,
+     "deaths": 64,
+     "tau_exact": 357.65,
+     "tau_snapped": 372.753125,
+     "tau_ci_snapped": [
+      291.90261682489927,
+      484.01837176032916
+     ],
+     "alive_T": 0.0,
+     "pooled": {
+      "g": 0.3,
+      "B": 64,
+      "deaths": 64,
+      "tau_sim": 301.0875,
+      "tau_ci": [
+       235.78133420951696,
+       390.9608578261767
+      ],
+      "src": "fine_decay_raw_r1.npz+pd/long_real.npz"
+     },
+     "inside_pooled_ci": true,
+     "lr_p_equal_rate": 0.22755487508892744,
+     "comparison": "same-g pooled point"
+    },
+    {
+     "g": 0.344,
+     "B": 64,
+     "deaths": 43,
+     "tau_exact": 2824.4325581395346,
+     "tau_snapped": 2883.6837209302325,
+     "tau_ci_snapped": [
+      2140.829821998,
+      3984.6123581003517
+     ],
+     "alive_T": 0.328125,
+     "neighbours": [
+      {
+       "g": 0.34,
+       "tau_sim": 1706.4,
+       "tau_ci": [
+        1180.6721588440762,
+        2567.9738891996335
+       ],
+       "src": "pd/long_real.npz"
+      },
+      {
+       "g": 0.345,
+       "tau_sim": 3170.863157894737,
+       "tau_ci": [
+        2030.4909615979234,
+        5266.643052134237
+       ],
+       "src": "fine_decay_raw_r1.npz"
+      }
+     ],
+     "envelope": [
+      1180.6721588440762,
+      5266.643052134237
+     ],
+     "inside_pooled_ci": true,
+     "comparison": "envelope of the CIs of the two neighbouring pooled points"
+    },
+    {
+     "g": 0.345,
+     "B": 64,
+     "deaths": 36,
+     "tau_exact": 3632.211111111111,
+     "tau_snapped": 3683.4555555555553,
+     "tau_ci_snapped": [
+      2660.6459950222225,
+      5259.1664927987995
+     ],
+     "alive_T": 0.4375,
+     "pooled": {
+      "g": 0.345,
+      "B": 32,
+      "deaths": 19,
+      "tau_sim": 3170.863157894737,
+      "tau_ci": [
+       2030.4909615979234,
+       5266.643052134237
+      ],
+      "src": "fine_decay_raw_r1.npz"
+     },
+     "inside_pooled_ci": true,
+     "lr_p_equal_rate": 0.6001563275521535,
+     "comparison": "same-g pooled point"
+    },
+    {
+     "g": 0.39,
+     "B": 64,
+     "deaths": 6,
+     "tau_exact": 30662.5,
+     "tau_snapped": 30719.899999999994,
+     "tau_ci_snapped": [
+      14113.84560221757,
+      83709.4695659352
+     ],
+     "alive_T": 0.90625,
+     "pooled": {
+      "g": 0.39,
+      "B": 32,
+      "deaths": 4,
+      "tau_sim": 20702.25,
+      "tau_ci": [
+       8085.56197915612,
+       75980.94407244852
+      ],
+      "src": "fine_decay_raw_r1.npz"
+     },
+     "inside_pooled_ci": true,
+     "lr_p_equal_rate": 0.5473865046296632,
+     "comparison": "same-g pooled point"
+    },
+    {
+     "g": 0.4,
+     "B": 64,
+     "deaths": 4,
+     "tau_exact": 46417.1,
+     "tau_snapped": 46459.7,
+     "tau_ci_snapped": [
+      18145.505144754778,
+      170515.37235434487
+     ],
+     "alive_T": 0.9375,
+     "neighbours": [
+      {
+       "g": 0.39,
+       "tau_sim": 20702.25,
+       "tau_ci": [
+        8085.56197915612,
+        75980.94407244852
+       ],
+       "src": "fine_decay_raw_r1.npz"
+      },
+      {
+       "g": 0.405,
+       "tau_sim": 87701.8,
+       "tau_ci": [
+        15740.74179668937,
+        3464036.0671990416
+       ],
+       "src": "fine_decay_raw_r1.npz"
+      }
+     ],
+     "envelope": [
+      8085.56197915612,
+      3464036.0671990416
+     ],
+     "inside_pooled_ci": true,
+     "comparison": "envelope of the CIs of the two neighbouring pooled points"
+    },
+    {
+     "g": 0.405,
+     "B": 64,
+     "deaths": 3,
+     "tau_exact": 63520.6,
+     "tau_snapped": 63707.13333333333,
+     "tau_ci_snapped": [
+      21799.412255060193,
+      308921.9522377785
+     ],
+     "alive_T": 0.953125,
+     "pooled": {
+      "g": 0.405,
+      "B": 32,
+      "deaths": 1,
+      "tau_sim": 87701.8,
+      "tau_ci": [
+       15740.74179668937,
+       3464036.0671990416
+      ],
+      "src": "fine_decay_raw_r1.npz"
+     },
+     "inside_pooled_ci": true,
+     "lr_p_equal_rate": 0.7764803626677986,
+     "comparison": "same-g pooled point"
+    }
+   ],
+   "pass_spec_points": true,
+   "pass_all_points": true
+  },
+  "split": {
+   "file": "results/pd3/multistab/validate_r1_split.npz",
+   "gpu": "NVIDIA RTX A6000",
+   "seconds": 718.509468793869,
+   "rows": [
+    {
+     "g": 0.3,
+     "B": 64,
+     "deaths": 64,
+     "tau_exact": 291.15312500000005,
+     "tau_snapped": 303.42499999999995,
+     "tau_ci_snapped": [
+      237.61182823107129,
+      393.9960917869645
+     ],
+     "alive_T": 0.0,
+     "pooled": {
+      "g": 0.3,
+      "B": 64,
+      "deaths": 64,
+      "tau_sim": 301.0875,
+      "tau_ci": [
+       235.78133420951696,
+       390.9608578261767
+      ],
+      "src": "fine_decay_raw_r1.npz+pd/long_real.npz"
+     },
+     "inside_pooled_ci": true,
+     "lr_p_equal_rate": 0.9651056998084268,
+     "comparison": "same-g pooled point"
+    },
+    {
+     "g": 0.344,
+     "B": 64,
+     "deaths": 36,
+     "tau_exact": 3651.005555555556,
+     "tau_snapped": 3704.0666666666666,
+     "tau_ci_snapped": [
+      2675.5338820629727,
+      5288.594638001045
+     ],
+     "alive_T": 0.4375,
+     "neighbours": [
+      {
+       "g": 0.34,
+       "tau_sim": 1706.4,
+       "tau_ci": [
+        1180.6721588440762,
+        2567.9738891996335
+       ],
+       "src": "pd/long_real.npz"
+      },
+      {
+       "g": 0.345,
+       "tau_sim": 3170.863157894737,
+       "tau_ci": [
+        2030.4909615979234,
+        5266.643052134237
+       ],
+       "src": "fine_decay_raw_r1.npz"
+      }
+     ],
+     "envelope": [
+      1180.6721588440762,
+      5266.643052134237
+     ],
+     "inside_pooled_ci": true,
+     "comparison": "envelope of the CIs of the two neighbouring pooled points"
+    },
+    {
+     "g": 0.345,
+     "B": 64,
+     "deaths": 42,
+     "tau_exact": 2689.77619047619,
+     "tau_snapped": 2728.9333333333334,
+     "tau_ci_snapped": [
+      2018.8756119424688,
+      3786.4405992194793
+     ],
+     "alive_T": 0.34375,
+     "pooled": {
+      "g": 0.345,
+      "B": 32,
+      "deaths": 19,
+      "tau_sim": 3170.863157894737,
+      "tau_ci": [
+       2030.4909615979234,
+       5266.643052134237
+      ],
+      "src": "fine_decay_raw_r1.npz"
+     },
+     "inside_pooled_ci": true,
+     "lr_p_equal_rate": 0.5838194454273378,
+     "comparison": "same-g pooled point"
+    },
+    {
+     "g": 0.39,
+     "B": 64,
+     "deaths": 6,
+     "tau_exact": 30179.7,
+     "tau_snapped": 30235.933333333334,
+     "tau_ci_snapped": [
+      13891.493615070702,
+      82390.69597115592
+     ],
+     "alive_T": 0.90625,
+     "pooled": {
+      "g": 0.39,
+      "B": 32,
+      "deaths": 4,
+      "tau_sim": 20702.25,
+      "tau_ci": [
+       8085.56197915612,
+       75980.94407244852
+      ],
+      "src": "fine_decay_raw_r1.npz"
+     },
+     "inside_pooled_ci": true,
+     "lr_p_equal_rate": 0.5633270554499445,
+     "comparison": "same-g pooled point"
+    },
+    {
+     "g": 0.4,
+     "B": 64,
+     "deaths": 4,
+     "tau_exact": 46572.600000000006,
+     "tau_snapped": 46680.5,
+     "tau_ci_snapped": [
+      18231.74176565336,
+      171325.74767351052
+     ],
+     "alive_T": 0.9375,
+     "neighbours": [
+      {
+       "g": 0.39,
+       "tau_sim": 20702.25,
+       "tau_ci": [
+        8085.56197915612,
+        75980.94407244852
+       ],
+       "src": "fine_decay_raw_r1.npz"
+      },
+      {
+       "g": 0.405,
+       "tau_sim": 87701.8,
+       "tau_ci": [
+        15740.74179668937,
+        3464036.0671990416
+       ],
+       "src": "fine_decay_raw_r1.npz"
+      }
+     ],
+     "envelope": [
+      8085.56197915612,
+      3464036.0671990416
+     ],
+     "inside_pooled_ci": true,
+     "comparison": "envelope of the CIs of the two neighbouring pooled points"
+    },
+    {
+     "g": 0.405,
+     "B": 64,
+     "deaths": 2,
+     "tau_exact": 95617.9,
+     "tau_snapped": 95776.2,
+     "tau_ci_snapped": [
+      26513.589072611907,
+      790854.9216260932
+     ],
+     "alive_T": 0.96875,
+     "pooled": {
+      "g": 0.405,
+      "B": 32,
+      "deaths": 1,
+      "tau_sim": 87701.8,
+      "tau_ci": [
+       15740.74179668937,
+       3464036.0671990416
+      ],
+      "src": "fine_decay_raw_r1.npz"
+     },
+     "inside_pooled_ci": true,
+     "lr_p_equal_rate": 0.9429599912815254,
+     "comparison": "same-g pooled point"
+    }
+   ],
+   "pass_spec_points": true,
+   "pass_all_points": true
+  }
+ },
+ "pass": true
+}

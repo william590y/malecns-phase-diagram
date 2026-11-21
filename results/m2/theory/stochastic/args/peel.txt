@@ -1,0 +1,1 @@
+decay --model M2 --gmin 0.5 --gmax 4 --ng 22 --peel 8 --tag _peel

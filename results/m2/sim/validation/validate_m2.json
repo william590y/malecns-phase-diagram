@@ -1,0 +1,311 @@
+{
+ "new": "/MALECNS_ROOT/code/ald_sim.py",
+ "old": "/MALECNS_ROOT/code/ald_sim.py.bak-m2-pre",
+ "V1": {
+  "decay_raw_r1": {
+   "args": "--exp decay --norm raw --r 1 --g 0.25 0.35 --T 300 --B 16 --seed 3",
+   "identical": true,
+   "keys": {
+    "t": true,
+    "g": true,
+    "rho": true,
+    "surv": true,
+    "occ": true
+   }
+  },
+  "spread_raw_module": {
+   "args": "--exp spread --norm raw --r 1 --g 0.45 --T 200 --B 64 --seed 5 --seed_set /MALECNS_ROOT/results/seeds_module_real.npz",
+   "identical": true,
+   "keys": {
+    "t": true,
+    "g": true,
+    "rho": true,
+    "surv": true,
+    "occ": true
+   }
+  },
+  "decay_in_wnull": {
+   "args": "--exp decay --norm in --r 0.5 --g 2.0 --T 100 --B 8 --null --null_kind weights --seed 1",
+   "identical": true,
+   "keys": {
+    "t": true,
+    "g": true,
+    "rho": true,
+    "surv": true,
+    "occ": true
+   }
+  },
+  "decay_raw_h1e-3": {
+   "args": "--exp decay --norm raw --r 1 --h 1e-3 --g 0.2 --T 100 --B 8 --seed 2",
+   "identical": true,
+   "keys": {
+    "t": true,
+    "g": true,
+    "rho": true,
+    "surv": true,
+    "occ": true
+   }
+  },
+  "general_path_trivial": {
+   "args": "--exp decay --norm raw --r 1 --g 0.25 0.35 --T 300 --B 16 --seed 3 --drive all=0 --std 0 inf --region ORN=olfactory",
+   "identical": true,
+   "keys": {
+    "t": true,
+    "g": true,
+    "rho": true,
+    "surv": true,
+    "occ": true
+   }
+  }
+ },
+ "V2": {
+  "E1_drive_switch_spike_group": {
+   "args": "--exp quiet --norm raw --T 60 --B 16 --switch_at 30 --win 10:30 --win 30:60 --reg_last --rec_lin 5 --drive olfactory=0.037926 --sw_clamp_off olfactory --r 1 --g 0.3 1.2 --region ORN=olfactory --region uPN_ant=/MALECNS_ROOT/results/aldef/drive/groups/uPN_ant.npz --std_group sign:1=0.25,157 --std_mode spike --occ_win 10:30 --seed 4",
+   "identical": true,
+   "keys": {
+    "g": true,
+    "occ": true,
+    "reg_last": true,
+    "reg_names": true,
+    "reg_rho": true,
+    "reg_sizes": true,
+    "res_x": true,
+    "res_x_act": true,
+    "rho": true,
+    "surv": true,
+    "t": true,
+    "win_bounds": true,
+    "win_m2": true,
+    "win_mean": true
+   },
+   "wall_old": 7.517620801925659,
+   "wall_new": 7.432836294174194
+  },
+  "E3_decay_spike_all": {
+   "args": "--exp decay --norm raw --T 60 --B 16 --r 1 --g 1.2 2.0 --std 0.25 157 --std_mode spike --region PN=class:ALPN --win 30:60 --reg_last --seed 5",
+   "identical": true,
+   "keys": {
+    "g": true,
+    "occ": true,
+    "reg_last": true,
+    "reg_names": true,
+    "reg_rho": true,
+    "reg_sizes": true,
+    "res_x": true,
+    "res_x_act": true,
+    "rho": true,
+    "surv": true,
+    "t": true,
+    "win_bounds": true,
+    "win_m2": true,
+    "win_mean": true
+   },
+   "wall_old": 6.902027368545532,
+   "wall_new": 6.983272314071655
+  },
+  "E3_rate_adapt_ref_clamp": {
+   "args": "--exp quiet --norm raw --T 40 --B 8 --r 1 --g 0.5 --std 0.29 157 --adapt 0.02 50 --refractory 2 --clamp_off type:ORN_DA1 --drive olfactory=0.05 --clamp_on type:lLN1_bc --seed 6",
+   "identical": true,
+   "keys": {
+    "g": true,
+    "occ": true,
+    "reg_names": true,
+    "reg_rho": true,
+    "reg_sizes": true,
+    "res_theta": true,
+    "res_x": true,
+    "res_x_act": true,
+    "rho": true,
+    "surv": true,
+    "t": true
+   },
+   "wall_old": 5.55319881439209,
+   "wall_new": 5.533351421356201
+  },
+  "E2_sign_wtransform": {
+   "args": "--exp decay --norm raw --T 40 --B 8 --r 1 --g 0.5 --sign_override lLN1_bc=0 --wtransform sqrt --seed 7",
+   "identical": true,
+   "keys": {
+    "g": true,
+    "occ": true,
+    "reg_names": true,
+    "reg_rho": true,
+    "reg_sizes": true,
+    "rho": true,
+    "surv": true,
+    "t": true
+   },
+   "wall_old": 5.496283769607544,
+   "wall_new": 5.420238018035889
+  },
+  "ensemble_type": {
+   "args": "--exp decay --norm raw --T 20 --B 8 --r 1 --g 0.4 --sign_ensemble 2 --ens_unit type --seed 8",
+   "identical": true,
+   "keys": {
+    "ens_draw": true,
+    "g": true,
+    "occ": true,
+    "occ_ens": true,
+    "reg_names": true,
+    "reg_rho": true,
+    "reg_sizes": true,
+    "rho": true,
+    "signs_ens": true,
+    "surv": true,
+    "t": true
+   },
+   "wall_old": 6.1151721477508545,
+   "wall_new": 6.48433518409729
+  }
+ },
+ "V3": {
+  "edge_sign_identity": {
+   "identical": true,
+   "keys": {
+    "t": true,
+    "g": true,
+    "rho": true,
+    "surv": true,
+    "occ": true,
+    "reg_rho": true
+   }
+  },
+  "rec_counts": {
+   "identical": true,
+   "keys": {
+    "t": true,
+    "g": true,
+    "rho": true,
+    "surv": true,
+    "occ": true,
+    "reg_rho": true
+   },
+   "counts_equal_rhoN_at_records": true
+  },
+  "null_seed0_equals_seed0": {
+   "identical": true,
+   "keys": {
+    "t": true,
+    "g": true,
+    "rho": true,
+    "surv": true,
+    "occ": true,
+    "reg_rho": true
+   },
+   "md5": [
+    "b36e55e753cdd65d88ee7888f90f84b9",
+    "b36e55e753cdd65d88ee7888f90f84b9"
+   ]
+  },
+  "single_dwell_ramp": {
+   "identical": true,
+   "keys": {
+    "t": true,
+    "g": true,
+    "rho": true,
+    "surv": true,
+    "occ": true,
+    "reg_rho": true
+   }
+  },
+  "pulse_never_silent": {
+   "identical": true,
+   "keys": {
+    "t": true,
+    "g": true,
+    "rho": true,
+    "surv": true,
+    "occ": true,
+    "reg_rho": true
+   },
+   "min_surv": 1.0
+  }
+ },
+ "prev_m2": "/MALECNS_ROOT/results/m2/sim/dev/ald_sim_m2v1_52293c18.py",
+ "V4": {
+  "decay_M2s_counts_nullseed": {
+   "args": "--exp decay --norm raw --T 40 --B 8 --r 1 --g 1.6 --std_group sign:1=0.25,157 --std_mode spike --edge_sign lLN1_bc->ALPN=0 --edge_sign lLN1_bc->ALLN=1 --rec_counts --counts_reg --seed 12",
+   "identical": true,
+   "keys": {
+    "cnt_act": true,
+    "cnt_on": true,
+    "cnt_reg_act": true,
+    "cnt_reg_on": true,
+    "cnt_t": true,
+    "g": true,
+    "occ": true,
+    "reg_names": true,
+    "reg_rho": true,
+    "reg_sizes": true,
+    "res_x": true,
+    "res_x_act": true,
+    "rho": true,
+    "surv": true,
+    "t": true
+   }
+  },
+  "null_seed_counts": {
+   "args": "--exp decay --norm raw --T 20 --B 8 --r 1 --g 1.2 --null --null_seed 3 --rec_counts --seed 13",
+   "identical": true,
+   "keys": {
+    "cnt_act": true,
+    "cnt_on": true,
+    "cnt_t": true,
+    "g": true,
+    "occ": true,
+    "reg_names": true,
+    "reg_rho": true,
+    "reg_sizes": true,
+    "rho": true,
+    "surv": true,
+    "t": true
+   }
+  },
+  "pulse_counts_spike": {
+   "args": "--exp quiet --norm raw --T 60 --B 8 --r 1 --g 0.5 --pulse olfactory --pulse_gap 2 --rec_counts --std_group sign:1=0.25,157 --std_mode spike --seed 14",
+   "identical": true,
+   "keys": {
+    "cnt_act": true,
+    "cnt_on": true,
+    "cnt_t": true,
+    "g": true,
+    "occ": true,
+    "reg_names": true,
+    "reg_rho": true,
+    "reg_sizes": true,
+    "res_x": true,
+    "res_x_act": true,
+    "rho": true,
+    "surv": true,
+    "t": true
+   }
+  },
+  "ramp_loop_driven": {
+   "args": "--exp quiet --norm raw --r 1 --g 0.4 0.8 1.6 --ramp 10 --ramp_loop --drive olfactory=0.037926 --std_group sign:1=0.25,157 --std_mode spike --B 8 --seed 15",
+   "identical": true,
+   "keys": {
+    "g": true,
+    "occ": true,
+    "reg_names": true,
+    "reg_rho": true,
+    "reg_sizes": true,
+    "res_x": true,
+    "res_x_act": true,
+    "rho": true,
+    "seg_alive": true,
+    "seg_g": true,
+    "seg_reg": true,
+    "seg_reg2": true,
+    "seg_rho": true,
+    "seg_rho2": true,
+    "seg_x": true,
+    "seg_xa": true,
+    "surv": true,
+    "t": true
+   }
+  }
+ },
+ "gpu": "NVIDIA GeForce RTX 3090",
+ "host": "nikola-compute-12.cs.cornell.edu",
+ "all_pass": true
+}

@@ -1,0 +1,120 @@
+{
+ "options": {
+  "exp": "decay",
+  "norm": "raw",
+  "g": [
+   0.32,
+   0.34,
+   0.36
+  ],
+  "r": 1.0,
+  "h": 0.0,
+  "beta": 1.0,
+  "T": 3000.0,
+  "dt": 0.2,
+  "B": 128,
+  "null": false,
+  "null_kind": "targets",
+  "seed_set": null,
+  "seed": 7202,
+  "out": "/MALECNS_ROOT/results/aldef/verify/sim/eng_push.npz",
+  "drive": [],
+  "clamp_off": [],
+  "clamp_on": [],
+  "sign_override": [],
+  "sign_ensemble": 0,
+  "ens_unit": "neuron",
+  "ens_conf": "body",
+  "ens_gt": "ignore",
+  "ens_qmiss": 0.5,
+  "ens_seed": null,
+  "ens_only": null,
+  "wtransform": "linear",
+  "wnorm": "renorm",
+  "std": null,
+  "std_group": [],
+  "std_mode": "rate",
+  "adapt": null,
+  "adapt_group": [],
+  "refractory": 0,
+  "region": [],
+  "no_default_regions": false,
+  "no_occ": false,
+  "device": "cuda",
+  "engine": "push",
+  "push_max": 0.012,
+  "switch_at": null,
+  "sw_drive": [],
+  "sw_clamp_off": [],
+  "sw_clamp_on": [],
+  "rec_lin": 0.0,
+  "win": [],
+  "reg_last": false,
+  "occ_win": null
+ },
+ "device": "cuda",
+ "gpu": "NVIDIA L4",
+ "c_raw": 0.0013406440848484635,
+ "regions": {
+  "AL_module": {
+   "sel": "module",
+   "n": 526
+  },
+  "AL_rest": {
+   "sel": "al_rest",
+   "n": 3395
+  },
+  "CNS_rest": {
+   "sel": "cns_rest",
+   "n": 163295
+  }
+ },
+ "engine_steps": [
+  {
+   "push": 44914,
+   "spmm": 86,
+   "zero": 0
+  }
+ ],
+ "N": 167216,
+ "nnz": [
+  24562483
+ ],
+ "steps": 15000,
+ "n_draws": 1,
+ "ms_per_step": [
+  [
+   12.043089326222738,
+   13.471193218231202,
+   15.647277196248373
+  ]
+ ],
+ "rho_T_mean": [
+  1.2567951671371702e-05,
+  0.00015983256162144244,
+  0.0004485216923058033
+ ],
+ "surv_T": [
+  0.0234375,
+  0.2578125,
+  0.640625
+ ],
+ "wall_s": 618.7150909900665,
+ "reg_rho_T_mean": {
+  "AL_module": [
+   0.0019754040986299515,
+   0.02477423846721649,
+   0.06850047409534454
+  ],
+  "AL_rest": [
+   5.2927098295185715e-05,
+   0.0004970545414835215,
+   0.0014612481463700533
+  ],
+  "CNS_rest": [
+   5.406242962635588e-06,
+   7.353448017966002e-05,
+   0.00020825996762141585
+  ]
+ }
+}

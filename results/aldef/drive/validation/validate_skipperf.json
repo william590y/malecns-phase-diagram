@@ -1,0 +1,223 @@
+{
+ "cases": {
+  "decay_raw_r1": {
+   "args": "--exp decay --norm raw --r 1 --g 0.25 0.35 --T 300 --B 16 --seed 3",
+   "t": {
+    "shape_equal": true,
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "g": {
+    "shape_equal": true,
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "rho": {
+    "shape_equal": true,
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "surv": {
+    "shape_equal": true,
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "occ": {
+    "shape_equal": true,
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "all_identical": true,
+   "rho_T_mean_swc": [
+    0.0,
+    0.0005748552957811626
+   ],
+   "rho_T_mean_ald": [
+    0.0,
+    0.0005748552957811626
+   ]
+  },
+  "spread_raw_module": {
+   "args": "--exp spread --norm raw --r 1 --g 0.45 --T 200 --B 64 --seed 5 --seed_set /MALECNS_ROOT/results/seeds_module_real.npz",
+   "t": {
+    "shape_equal": true,
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "g": {
+    "shape_equal": true,
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "rho": {
+    "shape_equal": true,
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "surv": {
+    "shape_equal": true,
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "occ": {
+    "shape_equal": true,
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "all_identical": true,
+   "rho_T_mean_swc": [
+    0.0006073730764910579
+   ],
+   "rho_T_mean_ald": [
+    0.0006073730764910579
+   ]
+  },
+  "decay_in_wnull": {
+   "args": "--exp decay --norm in --r 0.5 --g 2.0 --T 100 --B 8 --null --null_kind weights --seed 1",
+   "t": {
+    "shape_equal": true,
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "g": {
+    "shape_equal": true,
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "rho": {
+    "shape_equal": true,
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "surv": {
+    "shape_equal": true,
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "occ": {
+    "shape_equal": true,
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "all_identical": true,
+   "rho_T_mean_swc": [
+    0.02259727194905281
+   ],
+   "rho_T_mean_ald": [
+    0.02259727194905281
+   ]
+  },
+  "decay_raw_h1e-3": {
+   "args": "--exp decay --norm raw --r 1 --h 1e-3 --g 0.2 --T 100 --B 8 --seed 2",
+   "t": {
+    "shape_equal": true,
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "g": {
+    "shape_equal": true,
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "rho": {
+    "shape_equal": true,
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "surv": {
+    "shape_equal": true,
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "occ": {
+    "shape_equal": true,
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "all_identical": true,
+   "rho_T_mean_swc": [
+    0.0013463125796988606
+   ],
+   "rho_T_mean_ald": [
+    0.0013463125796988606
+   ]
+  },
+  "swc_self_repeat": {
+   "args": "--exp decay --norm raw --r 1 --g 0.25 0.35 --T 300 --B 16 --seed 3",
+   "t": {
+    "shape_equal": true,
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "g": {
+    "shape_equal": true,
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "rho": {
+    "shape_equal": true,
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "surv": {
+    "shape_equal": true,
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "occ": {
+    "shape_equal": true,
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "all_identical": true,
+   "rho_T_mean_swc": [
+    0.0,
+    0.0005748552957811626
+   ],
+   "rho_T_mean_ald": [
+    0.0,
+    0.0005748552957811626
+   ]
+  },
+  "general_path_trivial": {
+   "args": "--exp decay --norm raw --r 1 --g 0.25 0.35 --T 300 --B 16 --seed 3 --drive all=0 --std 0 inf --region ORN=olfactory",
+   "t": {
+    "shape_equal": true,
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "g": {
+    "shape_equal": true,
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "rho": {
+    "shape_equal": true,
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "surv": {
+    "shape_equal": true,
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "occ": {
+    "shape_equal": true,
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "all_identical": true,
+   "rho_T_mean_swc": [
+    0.0,
+    0.0005748552957811626
+   ],
+   "rho_T_mean_ald": [
+    0.0,
+    0.0005748552957811626
+   ]
+  }
+ },
+ "perf": {},
+ "gpu": "NVIDIA A40",
+ "host": "taylor-compute-01.tech.cornell.edu"
+}

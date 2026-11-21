@@ -1,0 +1,103 @@
+{
+ "kind": "null",
+ "alpha_eff": 0.9063462346100909,
+ "T": 3000.0,
+ "rows": [
+  {
+   "r": 0.0,
+   "mu": 1.101799222361692,
+   "lam_left": 1.101799222361692,
+   "iters": [
+    101,
+    101
+   ],
+   "K": 5539.364852238347,
+   "K_sym": 5466.798209190544,
+   "inv_ipr": 1957.928610206165,
+   "PR_L1": 55709.72765728281,
+   "AL_share_v": 0.012992692652636193,
+   "u_neg_mass": -0.0,
+   "g_QMF": 0.8226056219819704,
+   "R_on": NaN,
+   "R_on_sym": NaN,
+   "superclasses": {
+    "ol_intrinsic": 71,
+    "cb_intrinsic": 52,
+    "visual_projection": 41,
+    "visual_centrifugal": 26
+   },
+   "types": {
+    "Li29": 7,
+    "MeVPMe1": 7,
+    "MeVPMe2": 6,
+    "Cm31a": 4,
+    "LPi12": 4
+   },
+   "g_on_pred": NaN
+  },
+  {
+   "r": 1.0,
+   "mu": 0.2643274852536274,
+   "lam_left": 0.2643274504851448,
+   "iters": [
+    296,
+    479
+   ],
+   "K": 67.46229980049429,
+   "K_sym": 4596.244034279435,
+   "inv_ipr": 2502.3493961095614,
+   "PR_L1": 27412.50048102231,
+   "AL_share_v": 0.009312987852091946,
+   "u_neg_mass": 0.45568285125488356,
+   "g_QMF": 3.4288762431967066,
+   "R_on": NaN,
+   "R_on_sym": NaN,
+   "superclasses": {
+    "ol_intrinsic": 75,
+    "cb_intrinsic": 67,
+    "vnc_intrinsic": 24,
+    "visual_projection": 22
+   },
+   "types": {
+    "TmY14": 4,
+    "": 3,
+    "KCab-m": 3,
+    "T2a": 3,
+    "Tm12": 3
+   },
+   "g_on_pred": NaN
+  },
+  {
+   "r": 4.0,
+   "mu": 0.14354040984629846,
+   "lam_left": 0.1804328156025644,
+   "iters": [
+    5999,
+    5999
+   ],
+   "K": -0.004723781113815741,
+   "K_sym": 169.364127092022,
+   "inv_ipr": 99.16790365939742,
+   "PR_L1": 4111.60950440536,
+   "AL_share_v": 0.006595345138651701,
+   "u_neg_mass": 0.49483995226673244,
+   "g_QMF": 6.314223538727504,
+   "R_on": NaN,
+   "R_on_sym": NaN,
+   "superclasses": {
+    "ol_intrinsic": 77,
+    "cb_intrinsic": 69,
+    "vnc_intrinsic": 24,
+    "visual_projection": 18
+   },
+   "types": {
+    "TmY4": 4,
+    "KCab-s": 3,
+    "T3": 3,
+    "": 2,
+    "C3": 2
+   },
+   "g_on_pred": NaN
+  }
+ ]
+}

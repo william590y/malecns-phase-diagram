@@ -1,0 +1,1 @@
+pd3_qs.py --mode qs --graph real --r 6 --xs 2.63603 2.78980 2.95255 3.12479 3.30708 3.50000 --rng 163 --tag real_r6_p3

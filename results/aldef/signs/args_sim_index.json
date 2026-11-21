@@ -1,0 +1,965 @@
+{
+ "g": [
+  0.12,
+  0.1373,
+  0.1571,
+  0.1797,
+  0.2056,
+  0.2353,
+  0.2692,
+  0.308,
+  0.3524,
+  0.4032,
+  0.4614,
+  0.5279,
+  0.604,
+  0.691,
+  0.7907,
+  0.9046,
+  1.035,
+  1.184,
+  1.355,
+  1.55,
+  1.774,
+  2.03,
+  2.322,
+  2.657,
+  3.04,
+  3.478,
+  3.979,
+  4.553,
+  5.21,
+  5.961,
+  6.82,
+  7.803,
+  8.928,
+  10.21,
+  11.69,
+  13.37,
+  15.3,
+  17.51,
+  20.03,
+  22.92,
+  26.22,
+  30.0
+ ],
+ "tasks": [
+  {
+   "task": 0,
+   "cond": "base",
+   "r": 0,
+   "draw": null,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/base_r0.npz"
+  },
+  {
+   "task": 1,
+   "cond": "base",
+   "r": 1,
+   "draw": null,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/base_r1.npz"
+  },
+  {
+   "task": 2,
+   "cond": "base",
+   "r": 3,
+   "draw": null,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/base_r3.npz"
+  },
+  {
+   "task": 3,
+   "cond": "lLN1bc_inh",
+   "r": 1,
+   "draw": null,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/lLN1bc_inh_r1.npz"
+  },
+  {
+   "task": 4,
+   "cond": "lLN1bc_inh",
+   "r": 3,
+   "draw": null,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/lLN1bc_inh_r3.npz"
+  },
+  {
+   "task": 5,
+   "cond": "lLN1bc_zero",
+   "r": 0,
+   "draw": null,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/lLN1bc_zero_r0.npz"
+  },
+  {
+   "task": 6,
+   "cond": "lLN1bc_zero",
+   "r": 1,
+   "draw": null,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/lLN1bc_zero_r1.npz"
+  },
+  {
+   "task": 7,
+   "cond": "lLN1bc_zero",
+   "r": 3,
+   "draw": null,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/lLN1bc_zero_r3.npz"
+  },
+  {
+   "task": 8,
+   "cond": "lLN1bc_lLN2_inh",
+   "r": 0,
+   "draw": null,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/lLN1bc_lLN2_inh_r0.npz"
+  },
+  {
+   "task": 9,
+   "cond": "lLN1bc_lLN2_inh",
+   "r": 1,
+   "draw": null,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/lLN1bc_lLN2_inh_r1.npz"
+  },
+  {
+   "task": 10,
+   "cond": "lLN1bc_lLN2_inh",
+   "r": 3,
+   "draw": null,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/lLN1bc_lLN2_inh_r3.npz"
+  },
+  {
+   "task": 11,
+   "cond": "ens_type",
+   "r": 0,
+   "draw": 0,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d00_r0.npz"
+  },
+  {
+   "task": 12,
+   "cond": "ens_type",
+   "r": 0,
+   "draw": 1,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d01_r0.npz"
+  },
+  {
+   "task": 13,
+   "cond": "ens_type",
+   "r": 0,
+   "draw": 2,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d02_r0.npz"
+  },
+  {
+   "task": 14,
+   "cond": "ens_type",
+   "r": 0,
+   "draw": 3,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d03_r0.npz"
+  },
+  {
+   "task": 15,
+   "cond": "ens_type",
+   "r": 0,
+   "draw": 4,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d04_r0.npz"
+  },
+  {
+   "task": 16,
+   "cond": "ens_type",
+   "r": 0,
+   "draw": 5,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d05_r0.npz"
+  },
+  {
+   "task": 17,
+   "cond": "ens_type",
+   "r": 0,
+   "draw": 6,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d06_r0.npz"
+  },
+  {
+   "task": 18,
+   "cond": "ens_type",
+   "r": 0,
+   "draw": 7,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d07_r0.npz"
+  },
+  {
+   "task": 19,
+   "cond": "ens_type",
+   "r": 0,
+   "draw": 8,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d08_r0.npz"
+  },
+  {
+   "task": 20,
+   "cond": "ens_type",
+   "r": 0,
+   "draw": 9,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d09_r0.npz"
+  },
+  {
+   "task": 21,
+   "cond": "ens_type",
+   "r": 0,
+   "draw": 10,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d10_r0.npz"
+  },
+  {
+   "task": 22,
+   "cond": "ens_type",
+   "r": 0,
+   "draw": 11,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d11_r0.npz"
+  },
+  {
+   "task": 23,
+   "cond": "ens_type",
+   "r": 0,
+   "draw": 12,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d12_r0.npz"
+  },
+  {
+   "task": 24,
+   "cond": "ens_type",
+   "r": 0,
+   "draw": 13,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d13_r0.npz"
+  },
+  {
+   "task": 25,
+   "cond": "ens_type",
+   "r": 0,
+   "draw": 14,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d14_r0.npz"
+  },
+  {
+   "task": 26,
+   "cond": "ens_type",
+   "r": 0,
+   "draw": 15,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d15_r0.npz"
+  },
+  {
+   "task": 27,
+   "cond": "ens_type",
+   "r": 0,
+   "draw": 16,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d16_r0.npz"
+  },
+  {
+   "task": 28,
+   "cond": "ens_type",
+   "r": 0,
+   "draw": 17,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d17_r0.npz"
+  },
+  {
+   "task": 29,
+   "cond": "ens_type",
+   "r": 0,
+   "draw": 18,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d18_r0.npz"
+  },
+  {
+   "task": 30,
+   "cond": "ens_type",
+   "r": 0,
+   "draw": 19,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d19_r0.npz"
+  },
+  {
+   "task": 31,
+   "cond": "ens_type",
+   "r": 0,
+   "draw": 20,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d20_r0.npz"
+  },
+  {
+   "task": 32,
+   "cond": "ens_type",
+   "r": 0,
+   "draw": 21,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d21_r0.npz"
+  },
+  {
+   "task": 33,
+   "cond": "ens_type",
+   "r": 0,
+   "draw": 22,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d22_r0.npz"
+  },
+  {
+   "task": 34,
+   "cond": "ens_type",
+   "r": 0,
+   "draw": 23,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d23_r0.npz"
+  },
+  {
+   "task": 35,
+   "cond": "ens_type",
+   "r": 1,
+   "draw": 0,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d00_r1.npz"
+  },
+  {
+   "task": 36,
+   "cond": "ens_type",
+   "r": 1,
+   "draw": 1,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d01_r1.npz"
+  },
+  {
+   "task": 37,
+   "cond": "ens_type",
+   "r": 1,
+   "draw": 2,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d02_r1.npz"
+  },
+  {
+   "task": 38,
+   "cond": "ens_type",
+   "r": 1,
+   "draw": 3,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d03_r1.npz"
+  },
+  {
+   "task": 39,
+   "cond": "ens_type",
+   "r": 1,
+   "draw": 4,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d04_r1.npz"
+  },
+  {
+   "task": 40,
+   "cond": "ens_type",
+   "r": 1,
+   "draw": 5,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d05_r1.npz"
+  },
+  {
+   "task": 41,
+   "cond": "ens_type",
+   "r": 1,
+   "draw": 6,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d06_r1.npz"
+  },
+  {
+   "task": 42,
+   "cond": "ens_type",
+   "r": 1,
+   "draw": 7,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d07_r1.npz"
+  },
+  {
+   "task": 43,
+   "cond": "ens_type",
+   "r": 1,
+   "draw": 8,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d08_r1.npz"
+  },
+  {
+   "task": 44,
+   "cond": "ens_type",
+   "r": 1,
+   "draw": 9,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d09_r1.npz"
+  },
+  {
+   "task": 45,
+   "cond": "ens_type",
+   "r": 1,
+   "draw": 10,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d10_r1.npz"
+  },
+  {
+   "task": 46,
+   "cond": "ens_type",
+   "r": 1,
+   "draw": 11,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d11_r1.npz"
+  },
+  {
+   "task": 47,
+   "cond": "ens_type",
+   "r": 1,
+   "draw": 12,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d12_r1.npz"
+  },
+  {
+   "task": 48,
+   "cond": "ens_type",
+   "r": 1,
+   "draw": 13,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d13_r1.npz"
+  },
+  {
+   "task": 49,
+   "cond": "ens_type",
+   "r": 1,
+   "draw": 14,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d14_r1.npz"
+  },
+  {
+   "task": 50,
+   "cond": "ens_type",
+   "r": 1,
+   "draw": 15,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d15_r1.npz"
+  },
+  {
+   "task": 51,
+   "cond": "ens_type",
+   "r": 1,
+   "draw": 16,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d16_r1.npz"
+  },
+  {
+   "task": 52,
+   "cond": "ens_type",
+   "r": 1,
+   "draw": 17,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d17_r1.npz"
+  },
+  {
+   "task": 53,
+   "cond": "ens_type",
+   "r": 1,
+   "draw": 18,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d18_r1.npz"
+  },
+  {
+   "task": 54,
+   "cond": "ens_type",
+   "r": 1,
+   "draw": 19,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d19_r1.npz"
+  },
+  {
+   "task": 55,
+   "cond": "ens_type",
+   "r": 1,
+   "draw": 20,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d20_r1.npz"
+  },
+  {
+   "task": 56,
+   "cond": "ens_type",
+   "r": 1,
+   "draw": 21,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d21_r1.npz"
+  },
+  {
+   "task": 57,
+   "cond": "ens_type",
+   "r": 1,
+   "draw": 22,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d22_r1.npz"
+  },
+  {
+   "task": 58,
+   "cond": "ens_type",
+   "r": 1,
+   "draw": 23,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d23_r1.npz"
+  },
+  {
+   "task": 59,
+   "cond": "ens_type",
+   "r": 3,
+   "draw": 0,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d00_r3.npz"
+  },
+  {
+   "task": 60,
+   "cond": "ens_type",
+   "r": 3,
+   "draw": 1,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d01_r3.npz"
+  },
+  {
+   "task": 61,
+   "cond": "ens_type",
+   "r": 3,
+   "draw": 2,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d02_r3.npz"
+  },
+  {
+   "task": 62,
+   "cond": "ens_type",
+   "r": 3,
+   "draw": 3,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d03_r3.npz"
+  },
+  {
+   "task": 63,
+   "cond": "ens_type",
+   "r": 3,
+   "draw": 4,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d04_r3.npz"
+  },
+  {
+   "task": 64,
+   "cond": "ens_type",
+   "r": 3,
+   "draw": 5,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d05_r3.npz"
+  },
+  {
+   "task": 65,
+   "cond": "ens_type",
+   "r": 3,
+   "draw": 6,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d06_r3.npz"
+  },
+  {
+   "task": 66,
+   "cond": "ens_type",
+   "r": 3,
+   "draw": 7,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d07_r3.npz"
+  },
+  {
+   "task": 67,
+   "cond": "ens_type",
+   "r": 3,
+   "draw": 8,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d08_r3.npz"
+  },
+  {
+   "task": 68,
+   "cond": "ens_type",
+   "r": 3,
+   "draw": 9,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d09_r3.npz"
+  },
+  {
+   "task": 69,
+   "cond": "ens_type",
+   "r": 3,
+   "draw": 10,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d10_r3.npz"
+  },
+  {
+   "task": 70,
+   "cond": "ens_type",
+   "r": 3,
+   "draw": 11,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d11_r3.npz"
+  },
+  {
+   "task": 71,
+   "cond": "ens_type",
+   "r": 3,
+   "draw": 12,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d12_r3.npz"
+  },
+  {
+   "task": 72,
+   "cond": "ens_type",
+   "r": 3,
+   "draw": 13,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d13_r3.npz"
+  },
+  {
+   "task": 73,
+   "cond": "ens_type",
+   "r": 3,
+   "draw": 14,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d14_r3.npz"
+  },
+  {
+   "task": 74,
+   "cond": "ens_type",
+   "r": 3,
+   "draw": 15,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d15_r3.npz"
+  },
+  {
+   "task": 75,
+   "cond": "ens_type",
+   "r": 3,
+   "draw": 16,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d16_r3.npz"
+  },
+  {
+   "task": 76,
+   "cond": "ens_type",
+   "r": 3,
+   "draw": 17,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d17_r3.npz"
+  },
+  {
+   "task": 77,
+   "cond": "ens_type",
+   "r": 3,
+   "draw": 18,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d18_r3.npz"
+  },
+  {
+   "task": 78,
+   "cond": "ens_type",
+   "r": 3,
+   "draw": 19,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d19_r3.npz"
+  },
+  {
+   "task": 79,
+   "cond": "ens_type",
+   "r": 3,
+   "draw": 20,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d20_r3.npz"
+  },
+  {
+   "task": 80,
+   "cond": "ens_type",
+   "r": 3,
+   "draw": 21,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d21_r3.npz"
+  },
+  {
+   "task": 81,
+   "cond": "ens_type",
+   "r": 3,
+   "draw": 22,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d22_r3.npz"
+  },
+  {
+   "task": 82,
+   "cond": "ens_type",
+   "r": 3,
+   "draw": 23,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_type_d23_r3.npz"
+  },
+  {
+   "task": 83,
+   "cond": "ens_neuron",
+   "r": 0,
+   "draw": 0,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_neuron_d00_r0.npz"
+  },
+  {
+   "task": 84,
+   "cond": "ens_neuron",
+   "r": 0,
+   "draw": 1,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_neuron_d01_r0.npz"
+  },
+  {
+   "task": 85,
+   "cond": "ens_neuron",
+   "r": 0,
+   "draw": 2,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_neuron_d02_r0.npz"
+  },
+  {
+   "task": 86,
+   "cond": "ens_neuron",
+   "r": 0,
+   "draw": 3,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_neuron_d03_r0.npz"
+  },
+  {
+   "task": 87,
+   "cond": "ens_neuron",
+   "r": 0,
+   "draw": 4,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_neuron_d04_r0.npz"
+  },
+  {
+   "task": 88,
+   "cond": "ens_neuron",
+   "r": 0,
+   "draw": 5,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_neuron_d05_r0.npz"
+  },
+  {
+   "task": 89,
+   "cond": "ens_neuron",
+   "r": 0,
+   "draw": 6,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_neuron_d06_r0.npz"
+  },
+  {
+   "task": 90,
+   "cond": "ens_neuron",
+   "r": 0,
+   "draw": 7,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_neuron_d07_r0.npz"
+  },
+  {
+   "task": 91,
+   "cond": "ens_neuron",
+   "r": 0,
+   "draw": 8,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_neuron_d08_r0.npz"
+  },
+  {
+   "task": 92,
+   "cond": "ens_neuron",
+   "r": 0,
+   "draw": 9,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_neuron_d09_r0.npz"
+  },
+  {
+   "task": 93,
+   "cond": "ens_neuron",
+   "r": 0,
+   "draw": 10,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_neuron_d10_r0.npz"
+  },
+  {
+   "task": 94,
+   "cond": "ens_neuron",
+   "r": 0,
+   "draw": 11,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_neuron_d11_r0.npz"
+  },
+  {
+   "task": 95,
+   "cond": "ens_neuron",
+   "r": 0,
+   "draw": 12,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_neuron_d12_r0.npz"
+  },
+  {
+   "task": 96,
+   "cond": "ens_neuron",
+   "r": 0,
+   "draw": 13,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_neuron_d13_r0.npz"
+  },
+  {
+   "task": 97,
+   "cond": "ens_neuron",
+   "r": 0,
+   "draw": 14,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_neuron_d14_r0.npz"
+  },
+  {
+   "task": 98,
+   "cond": "ens_neuron",
+   "r": 0,
+   "draw": 15,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_neuron_d15_r0.npz"
+  },
+  {
+   "task": 99,
+   "cond": "ens_neuron",
+   "r": 1,
+   "draw": 0,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_neuron_d00_r1.npz"
+  },
+  {
+   "task": 100,
+   "cond": "ens_neuron",
+   "r": 1,
+   "draw": 1,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_neuron_d01_r1.npz"
+  },
+  {
+   "task": 101,
+   "cond": "ens_neuron",
+   "r": 1,
+   "draw": 2,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_neuron_d02_r1.npz"
+  },
+  {
+   "task": 102,
+   "cond": "ens_neuron",
+   "r": 1,
+   "draw": 3,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_neuron_d03_r1.npz"
+  },
+  {
+   "task": 103,
+   "cond": "ens_neuron",
+   "r": 1,
+   "draw": 4,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_neuron_d04_r1.npz"
+  },
+  {
+   "task": 104,
+   "cond": "ens_neuron",
+   "r": 1,
+   "draw": 5,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_neuron_d05_r1.npz"
+  },
+  {
+   "task": 105,
+   "cond": "ens_neuron",
+   "r": 1,
+   "draw": 6,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_neuron_d06_r1.npz"
+  },
+  {
+   "task": 106,
+   "cond": "ens_neuron",
+   "r": 1,
+   "draw": 7,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_neuron_d07_r1.npz"
+  },
+  {
+   "task": 107,
+   "cond": "ens_neuron",
+   "r": 1,
+   "draw": 8,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_neuron_d08_r1.npz"
+  },
+  {
+   "task": 108,
+   "cond": "ens_neuron",
+   "r": 1,
+   "draw": 9,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_neuron_d09_r1.npz"
+  },
+  {
+   "task": 109,
+   "cond": "ens_neuron",
+   "r": 1,
+   "draw": 10,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_neuron_d10_r1.npz"
+  },
+  {
+   "task": 110,
+   "cond": "ens_neuron",
+   "r": 1,
+   "draw": 11,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_neuron_d11_r1.npz"
+  },
+  {
+   "task": 111,
+   "cond": "ens_neuron",
+   "r": 1,
+   "draw": 12,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_neuron_d12_r1.npz"
+  },
+  {
+   "task": 112,
+   "cond": "ens_neuron",
+   "r": 1,
+   "draw": 13,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_neuron_d13_r1.npz"
+  },
+  {
+   "task": 113,
+   "cond": "ens_neuron",
+   "r": 1,
+   "draw": 14,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_neuron_d14_r1.npz"
+  },
+  {
+   "task": 114,
+   "cond": "ens_neuron",
+   "r": 1,
+   "draw": 15,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_neuron_d15_r1.npz"
+  },
+  {
+   "task": 115,
+   "cond": "ens_neuron",
+   "r": 3,
+   "draw": 0,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_neuron_d00_r3.npz"
+  },
+  {
+   "task": 116,
+   "cond": "ens_neuron",
+   "r": 3,
+   "draw": 1,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_neuron_d01_r3.npz"
+  },
+  {
+   "task": 117,
+   "cond": "ens_neuron",
+   "r": 3,
+   "draw": 2,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_neuron_d02_r3.npz"
+  },
+  {
+   "task": 118,
+   "cond": "ens_neuron",
+   "r": 3,
+   "draw": 3,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_neuron_d03_r3.npz"
+  },
+  {
+   "task": 119,
+   "cond": "ens_neuron",
+   "r": 3,
+   "draw": 4,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_neuron_d04_r3.npz"
+  },
+  {
+   "task": 120,
+   "cond": "ens_neuron",
+   "r": 3,
+   "draw": 5,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_neuron_d05_r3.npz"
+  },
+  {
+   "task": 121,
+   "cond": "ens_neuron",
+   "r": 3,
+   "draw": 6,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_neuron_d06_r3.npz"
+  },
+  {
+   "task": 122,
+   "cond": "ens_neuron",
+   "r": 3,
+   "draw": 7,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_neuron_d07_r3.npz"
+  },
+  {
+   "task": 123,
+   "cond": "ens_neuron",
+   "r": 3,
+   "draw": 8,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_neuron_d08_r3.npz"
+  },
+  {
+   "task": 124,
+   "cond": "ens_neuron",
+   "r": 3,
+   "draw": 9,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_neuron_d09_r3.npz"
+  },
+  {
+   "task": 125,
+   "cond": "ens_neuron",
+   "r": 3,
+   "draw": 10,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_neuron_d10_r3.npz"
+  },
+  {
+   "task": 126,
+   "cond": "ens_neuron",
+   "r": 3,
+   "draw": 11,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_neuron_d11_r3.npz"
+  },
+  {
+   "task": 127,
+   "cond": "ens_neuron",
+   "r": 3,
+   "draw": 12,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_neuron_d12_r3.npz"
+  },
+  {
+   "task": 128,
+   "cond": "ens_neuron",
+   "r": 3,
+   "draw": 13,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_neuron_d13_r3.npz"
+  },
+  {
+   "task": 129,
+   "cond": "ens_neuron",
+   "r": 3,
+   "draw": 14,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_neuron_d14_r3.npz"
+  },
+  {
+   "task": 130,
+   "cond": "ens_neuron",
+   "r": 3,
+   "draw": 15,
+   "out": "/MALECNS_ROOT/results/aldef/signs/sim/ens_neuron_d15_r3.npz"
+  }
+ ]
+}

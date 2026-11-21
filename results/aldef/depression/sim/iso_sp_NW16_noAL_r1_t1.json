@@ -1,0 +1,266 @@
+{
+ "options": {
+  "exp": "decay",
+  "norm": "raw",
+  "g": [
+   0.1645,
+   0.2171,
+   0.2865,
+   0.378,
+   0.4987,
+   0.7593,
+   1.539,
+   3.119,
+   6.322,
+   13.8
+  ],
+  "r": 1.0,
+  "h": 0.0,
+  "beta": 1.0,
+  "T": 3000.0,
+  "dt": 0.2,
+  "B": 64,
+  "null": false,
+  "null_kind": "targets",
+  "seed_set": null,
+  "seed": 6007,
+  "out": "/MALECNS_ROOT/results/aldef/depression/sim/iso_sp_NW16_noAL_r1_t1.npz",
+  "drive": [],
+  "clamp_off": [
+   "al;module"
+  ],
+  "clamp_on": [],
+  "sign_override": [],
+  "sign_ensemble": 0,
+  "ens_unit": "neuron",
+  "ens_conf": "body",
+  "ens_gt": "ignore",
+  "ens_qmiss": 0.5,
+  "ens_seed": null,
+  "ens_only": null,
+  "wtransform": "linear",
+  "wnorm": "renorm",
+  "std": [
+   0.25,
+   157.0
+  ],
+  "std_group": [],
+  "std_mode": "spike",
+  "adapt": null,
+  "adapt_group": [],
+  "refractory": 0,
+  "region": [
+   "lLN1_bc=type:lLN1_bc",
+   "PN=class:ALPN",
+   "LN=class:ALLN",
+   "ORN=class:olfactory"
+  ],
+  "no_default_regions": false,
+  "no_occ": false,
+  "device": "cuda",
+  "engine": "push",
+  "push_max": 0.012,
+  "switch_at": null,
+  "sw_drive": [],
+  "sw_clamp_off": [],
+  "sw_clamp_on": [],
+  "rec_lin": 100.0,
+  "win": [
+   "1500:3000"
+  ],
+  "reg_last": true,
+  "occ_win": null
+ },
+ "device": "cuda",
+ "gpu": "NVIDIA RTX A6000",
+ "c_raw": 0.0013406440848484635,
+ "clamp_off": [
+  {
+   "sel": "al;module",
+   "n": 3921
+  }
+ ],
+ "std": {
+  "default": [
+   0.25,
+   157.0
+  ],
+  "groups": [],
+  "n_depressing": 167216,
+  "mode": "spike"
+ },
+ "windows_steps": [
+  [
+   7500,
+   15000
+  ]
+ ],
+ "regions": {
+  "AL_module": {
+   "sel": "module",
+   "n": 526
+  },
+  "AL_rest": {
+   "sel": "al_rest",
+   "n": 3395
+  },
+  "CNS_rest": {
+   "sel": "cns_rest",
+   "n": 163295
+  },
+  "lLN1_bc": {
+   "sel": "type:lLN1_bc",
+   "n": 30
+  },
+  "PN": {
+   "sel": "class:ALPN",
+   "n": 686
+  },
+  "LN": {
+   "sel": "class:ALLN",
+   "n": 420
+  },
+  "ORN": {
+   "sel": "class:olfactory",
+   "n": 2639
+  }
+ },
+ "engine_steps": [
+  {
+   "push": 15604,
+   "spmm": 45204,
+   "zero": 29
+  }
+ ],
+ "N": 167216,
+ "nnz": [
+  24562483
+ ],
+ "steps": 15000,
+ "n_draws": 1,
+ "ms_per_step": [
+  [
+   10.997684001922607,
+   6.348001956939697,
+   6.054340782812086,
+   6.16712287320929,
+   5.545861341736533,
+   5.3547922770182295,
+   5.917162386576335,
+   9.65894357363383,
+   9.67395749092102,
+   9.67598032951355
+  ]
+ ],
+ "rho_T_mean": [
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0009210579810314812,
+  0.005222194122325163,
+  0.012910323071992025,
+  0.029565241711679846
+ ],
+ "surv_T": [
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.59375,
+  1.0,
+  1.0,
+  1.0
+ ],
+ "wall_s": 531.8920748233795,
+ "reg_rho_T_mean": {
+  "AL_module": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "AL_rest": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "CNS_rest": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0009431741782464087,
+   0.00534758809953928,
+   0.01322032231837511,
+   0.03027515299618244
+  ],
+  "lLN1_bc": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "PN": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "LN": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "ORN": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ }
+}

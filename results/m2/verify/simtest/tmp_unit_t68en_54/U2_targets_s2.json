@@ -1,0 +1,95 @@
+{
+ "options": {
+  "exp": "decay",
+  "norm": "raw",
+  "g": [
+   0.5
+  ],
+  "r": 1.0,
+  "h": 0.0,
+  "beta": 1.0,
+  "T": 2.0,
+  "dt": 0.2,
+  "B": 2,
+  "null": true,
+  "null_kind": "targets",
+  "seed_set": null,
+  "seed": 2,
+  "out": "/MALECNS_ROOT/results/m2/verify/simtest/tmp_unit_t68en_54/U2_targets_s2.npz",
+  "drive": [],
+  "clamp_off": [],
+  "clamp_on": [],
+  "sign_override": [],
+  "sign_ensemble": 0,
+  "ens_unit": "neuron",
+  "ens_conf": "body",
+  "ens_gt": "ignore",
+  "ens_qmiss": 0.5,
+  "ens_seed": null,
+  "ens_only": null,
+  "wtransform": "linear",
+  "wnorm": "renorm",
+  "std": null,
+  "std_group": [],
+  "std_mode": "rate",
+  "adapt": null,
+  "adapt_group": [],
+  "refractory": 0,
+  "region": [],
+  "no_default_regions": false,
+  "no_occ": false,
+  "device": "cuda",
+  "engine": "spmm",
+  "push_max": 0.05,
+  "switch_at": null,
+  "sw_drive": [],
+  "sw_clamp_off": [],
+  "sw_clamp_on": [],
+  "rec_lin": 0.0,
+  "win": [],
+  "reg_last": false,
+  "occ_win": null,
+  "edge_sign": [],
+  "null_seed": null,
+  "graph": "/MALECNS_ROOT/results/m2/verify/simtest/tmp_unit_t68en_54/rand.npz",
+  "rec_counts": false,
+  "counts_win": null,
+  "counts_reg": false,
+  "pulse": null,
+  "pulse_gap": 0.0,
+  "ramp": 0.0,
+  "ramp_loop": false,
+  "ramp_avg": 0.5,
+  "init": [],
+  "init_frac": 1.0
+ },
+ "device": "cuda",
+ "gpu": "NVIDIA RTX A5500",
+ "graph": {
+  "file": "/MALECNS_ROOT/results/m2/verify/simtest/tmp_unit_t68en_54/rand.npz",
+  "N": 400,
+  "n_edges": 4000,
+  "sub": false,
+  "c": null
+ },
+ "null_edges_md5": "9ec7eff3e90225775377c4c651ab19ac",
+ "c_raw": 0.009964625351130962,
+ "N": 400,
+ "nnz": [
+  2622
+ ],
+ "steps": 10,
+ "n_draws": 1,
+ "ms_per_step": [
+  [
+   0.6279230117797852
+  ]
+ ],
+ "rho_T_mean": [
+  0.16374999284744263
+ ],
+ "surv_T": [
+  1.0
+ ],
+ "wall_s": 0.01060342788696289
+}

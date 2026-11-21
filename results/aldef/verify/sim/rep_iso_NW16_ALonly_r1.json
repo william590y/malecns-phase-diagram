@@ -1,0 +1,148 @@
+{
+ "options": {
+  "exp": "decay",
+  "norm": "raw",
+  "g": [
+   2.75,
+   3.0,
+   3.25
+  ],
+  "r": 1.0,
+  "h": 0.0,
+  "beta": 1.0,
+  "T": 3000.0,
+  "dt": 0.2,
+  "B": 64,
+  "null": false,
+  "null_kind": "targets",
+  "seed_set": null,
+  "seed": 7501,
+  "out": "/MALECNS_ROOT/results/aldef/verify/sim/rep_iso_NW16_ALonly_r1.npz",
+  "drive": [],
+  "clamp_off": [
+   "cns_rest"
+  ],
+  "clamp_on": [],
+  "sign_override": [],
+  "sign_ensemble": 0,
+  "ens_unit": "neuron",
+  "ens_conf": "body",
+  "ens_gt": "ignore",
+  "ens_qmiss": 0.5,
+  "ens_seed": null,
+  "ens_only": null,
+  "wtransform": "linear",
+  "wnorm": "renorm",
+  "std": [
+   0.25,
+   157.0
+  ],
+  "std_group": [],
+  "std_mode": "spike",
+  "adapt": null,
+  "adapt_group": [],
+  "refractory": 0,
+  "region": [],
+  "no_default_regions": false,
+  "no_occ": false,
+  "device": "cuda",
+  "engine": "push",
+  "push_max": 0.012,
+  "switch_at": null,
+  "sw_drive": [],
+  "sw_clamp_off": [],
+  "sw_clamp_on": [],
+  "rec_lin": 100.0,
+  "win": [
+   "1500:3000"
+  ],
+  "reg_last": true,
+  "occ_win": null
+ },
+ "device": "cuda",
+ "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "c_raw": 0.0013406440848484635,
+ "clamp_off": [
+  {
+   "sel": "cns_rest",
+   "n": 163295
+  }
+ ],
+ "std": {
+  "default": [
+   0.25,
+   157.0
+  ],
+  "groups": [],
+  "n_depressing": 167216,
+  "mode": "spike"
+ },
+ "windows_steps": [
+  [
+   7500,
+   15000
+  ]
+ ],
+ "regions": {
+  "AL_module": {
+   "sel": "module",
+   "n": 526
+  },
+  "AL_rest": {
+   "sel": "al_rest",
+   "n": 3395
+  },
+  "CNS_rest": {
+   "sel": "cns_rest",
+   "n": 163295
+  }
+ },
+ "engine_steps": [
+  {
+   "push": 44982,
+   "spmm": 18,
+   "zero": 0
+  }
+ ],
+ "N": 167216,
+ "nnz": [
+  24562483
+ ],
+ "steps": 15000,
+ "n_draws": 1,
+ "ms_per_step": [
+  [
+   3.754710292816162,
+   3.789661677678426,
+   3.8191314379374184
+  ]
+ ],
+ "rho_T_mean": [
+  6.38208948657848e-05,
+  0.00018426765745971352,
+  0.0002935013617388904
+ ],
+ "surv_T": [
+  0.1875,
+  0.453125,
+  0.625
+ ],
+ "wall_s": 171.7685399055481,
+ "reg_rho_T_mean": {
+  "AL_module": [
+   0.017080560326576233,
+   0.04797409847378731,
+   0.07536240667104721
+  ],
+  "AL_rest": [
+   0.0004970545414835215,
+   0.0016430411487817764,
+   0.002779823262244463
+  ],
+  "CNS_rest": [
+   0.0,
+   0.0,
+   0.0
+  ]
+ }
+}

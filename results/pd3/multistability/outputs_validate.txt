@@ -1,0 +1,2 @@
+/MALECNS_ROOT/results/pd3/multistab/validate_r1.npz
+/MALECNS_ROOT/results/pd3/multistab/validate_r1_split.npz

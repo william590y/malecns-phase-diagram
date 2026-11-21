@@ -1,0 +1,284 @@
+{
+ "options": {
+  "exp": "quiet",
+  "norm": "raw",
+  "g": [
+   2.17454,
+   2.56213,
+   3.01881,
+   3.55689,
+   4.19088,
+   4.93788,
+   5.81801,
+   6.85503,
+   8.07689,
+   9.51653,
+   11.2128
+  ],
+  "r": 0.0,
+  "h": 0.0,
+  "beta": 1.0,
+  "T": 4500.0,
+  "dt": 0.2,
+  "B": 64,
+  "null": false,
+  "null_kind": "targets",
+  "seed_set": null,
+  "seed": 212657307,
+  "out": "/MALECNS_ROOT/results/m2/nature/sim/dfss/dfss_realsubu_N20000_s1_r0_c1.npz",
+  "drive": [
+   "olfactory=0.037926"
+  ],
+  "clamp_off": [],
+  "clamp_on": [],
+  "sign_override": [],
+  "sign_ensemble": 0,
+  "ens_unit": "neuron",
+  "ens_conf": "body",
+  "ens_gt": "ignore",
+  "ens_qmiss": 0.5,
+  "ens_seed": null,
+  "ens_only": null,
+  "wtransform": "linear",
+  "wnorm": "renorm",
+  "std": null,
+  "std_group": [
+   "sign:1=0.25,157"
+  ],
+  "std_mode": "spike",
+  "adapt": null,
+  "adapt_group": [],
+  "refractory": 0,
+  "region": [
+   "ORN=olfactory",
+   "nonORN=~olfactory"
+  ],
+  "no_default_regions": false,
+  "no_occ": false,
+  "device": "cuda",
+  "engine": "push",
+  "push_max": 0.012,
+  "switch_at": 1500.0,
+  "sw_drive": [],
+  "sw_clamp_off": [
+   "olfactory"
+  ],
+  "sw_clamp_on": [],
+  "rec_lin": 10.0,
+  "win": [
+   "500:1500",
+   "1600:1800",
+   "2500:4500"
+  ],
+  "reg_last": true,
+  "occ_win": "500:1500",
+  "edge_sign": [],
+  "null_seed": null,
+  "graph": "/MALECNS_ROOT/results/m2/nature/graphs/realsubu_N20000_s1.npz",
+  "rec_counts": false,
+  "counts_win": null,
+  "counts_reg": false,
+  "pulse": null,
+  "pulse_gap": 0.0,
+  "ramp": 0.0,
+  "ramp_loop": false,
+  "ramp_avg": 0.5,
+  "init": [],
+  "init_frac": 1.0
+ },
+ "device": "cuda",
+ "gpu": "NVIDIA RTX 6000 Ada Generation",
+ "graph": {
+  "file": "/MALECNS_ROOT/results/m2/nature/graphs/realsubu_N20000_s1.npz",
+  "N": 20000,
+  "n_edges": 369664,
+  "sub": true,
+  "c": null
+ },
+ "c_raw": 0.010933395475149155,
+ "drive": [
+  {
+   "sel": "olfactory",
+   "h": 0.037926,
+   "n": 301
+  }
+ ],
+ "std": {
+  "default": null,
+  "groups": [
+   {
+    "sel": "sign:1",
+    "U": 0.25,
+    "tau": 157.0,
+    "n": 12408
+   }
+  ],
+  "n_depressing": 12408,
+  "mode": "spike"
+ },
+ "sw_clamp_off": [
+  {
+   "sel": "olfactory",
+   "n": 301
+  }
+ ],
+ "switch_step": 7500,
+ "windows_steps": [
+  [
+   2500,
+   7500
+  ],
+  [
+   8000,
+   9000
+  ],
+  [
+   12500,
+   22500
+  ]
+ ],
+ "regions": {
+  "AL_module": {
+   "sel": "module",
+   "n": 73
+  },
+  "AL_rest": {
+   "sel": "al_rest",
+   "n": 400
+  },
+  "CNS_rest": {
+   "sel": "cns_rest",
+   "n": 19527
+  },
+  "ORN": {
+   "sel": "olfactory",
+   "n": 301
+  },
+  "nonORN": {
+   "sel": "~olfactory",
+   "n": 19699
+  }
+ },
+ "engine_steps": [
+  {
+   "push": 21147,
+   "spmm": 176614,
+   "zero": 49739
+  }
+ ],
+ "N": 20000,
+ "nnz": [
+  211821
+ ],
+ "steps": 22500,
+ "n_draws": 1,
+ "ms_per_step": [
+  [
+   0.3305694156222873,
+   0.30548264185587565,
+   0.3150458335876465,
+   0.34080003102620443,
+   0.40825034247504344,
+   0.3332545598347981,
+   0.33719266255696617,
+   0.34118828243679467,
+   0.34086454179551867,
+   0.3435630480448405,
+   0.3417252434624566
+  ]
+ ],
+ "rho_T_mean": [
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0002734375011641532,
+  0.011617187410593033,
+  0.021647654473781586,
+  0.026121873408555984,
+  0.0328914076089859,
+  0.04002734273672104,
+  0.04723827913403511
+ ],
+ "surv_T": [
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.015625,
+  0.65625,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0
+ ],
+ "wall_s": 84.61916971206665,
+ "reg_rho_T_mean": {
+  "AL_module": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.00021404109429568052,
+   0.04516267031431198,
+   0.08069349825382233,
+   0.11258561909198761,
+   0.1453339159488678,
+   0.18878425657749176,
+   0.22217465937137604
+  ],
+  "AL_rest": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.003281249897554517,
+   0.005937499925494194,
+   0.007109375204890966,
+   0.009765625,
+   0.014140624552965164,
+   0.016289062798023224
+  ],
+  "CNS_rest": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.00027926077018491924,
+   0.011662538163363934,
+   0.021748732775449753,
+   0.026188097894191742,
+   0.03294476866722107,
+   0.04000150412321091,
+   0.04721827432513237
+  ],
+  "ORN": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "nonORN": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.00027761561796069145,
+   0.011794697493314743,
+   0.021978430449962616,
+   0.026521015912294388,
+   0.0333939827978611,
+   0.040638960897922516,
+   0.047960080206394196
+  ]
+ }
+}

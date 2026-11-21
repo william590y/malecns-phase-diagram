@@ -1,0 +1,12 @@
+pd3_fss_fine.py cnull 20000 1 0 --xlo 1.073352 --xhi 1.193004 --nx 16
+pd3_fss_fine.py cnull 20000 1 1 --xlo 1.680126 --xhi 2.156659 --nx 16
+pd3_fss_fine.py cnull 20000 2 0 --xlo 1.073352 --xhi 1.151707 --nx 16
+pd3_fss_fine.py cnull 20000 2 1 --xlo 1.578454 --xhi 1.903538 --nx 16
+pd3_fss_fine.py cnull 20000 3 0 --xlo 1.073352 --xhi 1.151707 --nx 16
+pd3_fss_fine.py cnull 40000 1 0 --xlo 1.073352 --xhi 1.151707 --nx 16
+pd3_fss_fine.py cnull 40000 1 1 --xlo 1.482934 --xhi 1.788347 --nx 16
+pd3_fss_fine.py cnull 40000 2 0 --xlo 1.036197 --xhi 1.111839 --nx 16
+pd3_fss_fine.py cnull 40000 3 0 --xlo 1.036197 --xhi 1.151707 --nx 16
+pd3_fss_fine.py cnull 80000 1 0 --xlo 1.036197 --xhi 1.111839 --nx 16
+pd3_fss_fine.py cnull 80000 2 0 --xlo 1.036197 --xhi 1.111839 --nx 16
+pd3_fss_fine.py cnull 80000 3 0 --xlo 1.000328 --xhi 1.111839 --nx 16

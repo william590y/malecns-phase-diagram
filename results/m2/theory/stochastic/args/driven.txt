@@ -1,0 +1,19 @@
+driven --model M2 --r 0 --orn 0.04 --lna --glist 0.05,0.09892,0.19569,0.38713,0.76587,1.51514,2.99742 --tag _part0 --smax 60000
+driven --model M2 --r 0 --orn 0.04 --lna --glist 0.0593,0.11731,0.23208,0.45913,0.9083,1.79691,3.55485 --tag _part1 --smax 60000
+driven --model M2 --r 0 --orn 0.04 --lna --glist 0.07033,0.13913,0.27524,0.54451,1.07722,2.13108,4.21595 --tag _part2 --smax 60000
+driven --model M2 --r 0 --orn 0.04 --lna --glist 0.08341,0.165,0.32643,0.64577,1.27755,2.5274,5 --tag _part3 --smax 60000
+driven --model M2 --r 0 --orn 0.01 --lna --glist 0.05,0.10155,0.20623,0.41884,0.85063,1.72755,3.50852 --tag _part0 --smax 60000
+driven --model M2 --r 0 --orn 0.01 --lna --glist 0.07126,0.14471,0.2939,0.59689,1.21223,2.46194,5 --tag _part1 --smax 60000
+driven --model M2 --r 0 --orn 0.02 --lna --glist 0.05,0.10155,0.20623,0.41884,0.85063,1.72755,3.50852 --tag _part0 --smax 60000
+driven --model M2 --r 0 --orn 0.02 --lna --glist 0.07126,0.14471,0.2939,0.59689,1.21223,2.46194,5 --tag _part1 --smax 60000
+driven --model M2 --r 0 --orn 0.07 --lna --glist 0.05,0.10155,0.20623,0.41884,0.85063,1.72755,3.50852 --tag _part0 --smax 60000
+driven --model M2 --r 0 --orn 0.07 --lna --glist 0.07126,0.14471,0.2939,0.59689,1.21223,2.46194,5 --tag _part1 --smax 60000
+driven --model M2 --r 0 --orn 0.1 --lna --glist 0.05,0.10155,0.20623,0.41884,0.85063,1.72755,3.50852 --tag _part0 --smax 60000
+driven --model M2 --r 0 --orn 0.1 --lna --glist 0.07126,0.14471,0.2939,0.59689,1.21223,2.46194,5 --tag _part1 --smax 60000
+driven --model M1 --r 0 --orn 0.04 --lna --glist 0.05,0.07152,0.10232,0.14636,0.20937,0.2995,0.42844,0.61288,0.87672,1.25415 --tag _part0 --smax 60000
+driven --model M1 --r 0 --orn 0.04 --lna --glist 0.0598,0.08555,0.12237,0.17505,0.25041,0.35822,0.51243,0.73302,1.04859,1.5 --tag _part1 --smax 60000
+driven --model M2_tau30 --r 0 --orn 0.04 --lna --glist 0.05,0.10155,0.20623,0.41884,0.85063,1.72755,3.50852 --tag _part0 --smax 60000
+driven --model M2_tau30 --r 0 --orn 0.04 --lna --glist 0.07126,0.14471,0.2939,0.59689,1.21223,2.46194,5 --tag _part1 --smax 60000
+driven --model M2 --r 0 --orn 0.04 --gmin 0.05 --gmax 8 --ng 40 --tag _sweep
+driven --model M1 --r 0 --orn 0.04 --gmin 0.05 --gmax 8 --ng 40 --tag _sweep
+driven --model M2 --r 0 --orn 0.1 --gmin 0.05 --gmax 8 --ng 40 --tag _sweep

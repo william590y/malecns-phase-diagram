@@ -1,0 +1,3242 @@
+{
+ "per_r": {
+  "0.5": {
+   "n_g": 11,
+   "pairs": [
+    {
+     "g": 0.9107949611656839,
+     "A": "all",
+     "B": "AL",
+     "mean_A": 0.003905052147444561,
+     "mean_B": 0.003799186726831941,
+     "mean_check_A": 1.6099455102391858e-11,
+     "mean_check_B": 4.820244203784796e-11,
+     "resid_A": 5.551115123125783e-17,
+     "resid_B": 5.551115123125783e-17,
+     "n_diff_0.05": 107,
+     "n_diff_0.01": 360,
+     "sum_diff_neurons": 17.702392173159907,
+     "max_abs_diff": 0.33945767649791053,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 107,
+     "component_sizes_top10": [
+      107
+     ],
+     "by_module": {
+      "isl2": 75,
+      "rest": 12,
+      "isl1": 7,
+      "isl17": 5,
+      "isl18": 4,
+      "isl4": 3,
+      "isl9": 1
+     },
+     "by_superclass": {
+      "vnc_intrinsic": 57,
+      "vnc_efferent": 30,
+      "vnc_motor": 13,
+      "ascending_neuron": 5,
+      "cb_intrinsic": 2
+     },
+     "by_sign": {
+      "exc": 37,
+      "inh": 20,
+      "mod": 50
+     },
+     "A_higher_count": 107,
+     "B_higher_count": 0
+    },
+    {
+     "g": 1.0194799859615649,
+     "A": "all",
+     "B": "AL",
+     "mean_A": 0.004780091750601727,
+     "mean_B": 0.004649820387340917,
+     "mean_check_A": 1.2680079208848838e-11,
+     "mean_check_B": 6.2874150330571865e-12,
+     "resid_A": 5.551115123125783e-17,
+     "resid_B": 5.551115123125783e-17,
+     "n_diff_0.05": 147,
+     "n_diff_0.01": 484,
+     "sum_diff_neurons": 21.783456279019568,
+     "max_abs_diff": 0.3924646317427024,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 147,
+     "component_sizes_top10": [
+      147
+     ],
+     "by_module": {
+      "isl2": 75,
+      "rest": 37,
+      "isl1": 12,
+      "isl17": 7,
+      "isl18": 6,
+      "isl4": 5,
+      "isl14": 3,
+      "isl24": 1
+     },
+     "by_superclass": {
+      "vnc_intrinsic": 87,
+      "vnc_efferent": 30,
+      "vnc_motor": 20,
+      "ascending_neuron": 8,
+      "cb_intrinsic": 2
+     },
+     "by_sign": {
+      "exc": 50,
+      "inh": 37,
+      "mod": 60
+     },
+     "A_higher_count": 147,
+     "B_higher_count": 0
+    },
+    {
+     "g": 1.1411343783083632,
+     "A": "all",
+     "B": "AL",
+     "mean_A": 0.00585113477569443,
+     "mean_B": 0.00570328190199813,
+     "mean_check_A": 1.0720757614990362e-11,
+     "mean_check_B": 4.445332990599127e-13,
+     "resid_A": 5.551115123125783e-17,
+     "resid_B": 5.551115123125783e-17,
+     "n_diff_0.05": 166,
+     "n_diff_0.01": 645,
+     "sum_diff_neurons": 24.72336612800063,
+     "max_abs_diff": 0.4306731815821607,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 166,
+     "component_sizes_top10": [
+      166
+     ],
+     "by_module": {
+      "isl2": 75,
+      "rest": 48,
+      "isl1": 14,
+      "isl17": 8,
+      "isl18": 7,
+      "isl4": 6,
+      "isl14": 4,
+      "isl24": 2
+     },
+     "by_superclass": {
+      "vnc_intrinsic": 99,
+      "vnc_efferent": 31,
+      "vnc_motor": 23,
+      "ascending_neuron": 11,
+      "cb_intrinsic": 2
+     },
+     "by_sign": {
+      "exc": 57,
+      "inh": 44,
+      "mod": 65
+     },
+     "A_higher_count": 166,
+     "B_higher_count": 0
+    },
+    {
+     "g": 1.2773057708720024,
+     "A": "all",
+     "B": "AL",
+     "mean_A": 0.007154876522475654,
+     "mean_B": 0.006999696787670227,
+     "mean_check_A": 2.0758950114441177e-12,
+     "mean_check_B": 2.8100854976287337e-11,
+     "resid_A": 1.5332873859463803e-13,
+     "resid_B": 9.783840404509192e-16,
+     "n_diff_0.05": 195,
+     "n_diff_0.01": 894,
+     "sum_diff_neurons": 25.94853453522459,
+     "max_abs_diff": 0.4571772629387838,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 195,
+     "component_sizes_top10": [
+      195
+     ],
+     "by_module": {
+      "isl2": 75,
+      "rest": 61,
+      "isl1": 18,
+      "isl4": 12,
+      "isl18": 10,
+      "isl17": 9,
+      "isl14": 5,
+      "isl24": 2
+     },
+     "by_superclass": {
+      "vnc_intrinsic": 112,
+      "vnc_motor": 35,
+      "vnc_efferent": 32,
+      "ascending_neuron": 13,
+      "cb_intrinsic": 3
+     },
+     "by_sign": {
+      "exc": 61,
+      "inh": 56,
+      "mod": 78
+     },
+     "A_higher_count": 193,
+     "B_higher_count": 2
+    },
+    {
+     "g": 2.005059267196398,
+     "A": "all",
+     "B": "AL-R",
+     "mean_A": 0.01999847576946841,
+     "mean_B": 0.017209998572199632,
+     "mean_check_A": 7.766711718204533e-10,
+     "mean_check_B": 6.214950776239903e-11,
+     "resid_A": 1.63202784619898e-14,
+     "resid_B": 1.0707262160236652e-10,
+     "n_diff_0.05": 3464,
+     "n_diff_0.01": 11948,
+     "sum_diff_neurons": 466.2780030184959,
+     "max_abs_diff": 0.4980739831822837,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 3464,
+     "component_sizes_top10": [
+      3464
+     ],
+     "by_module": {
+      "isl1": 1155,
+      "rest": 962,
+      "isl9": 239,
+      "isl5": 220,
+      "isl3": 95,
+      "isl22": 79,
+      "isl20": 76,
+      "isl2": 75
+     },
+     "by_superclass": {
+      "cb_intrinsic": 1442,
+      "vnc_intrinsic": 1121,
+      "descending_neuron": 283,
+      "vnc_motor": 223,
+      "ascending_neuron": 181,
+      "visual_centrifugal": 73
+     },
+     "by_sign": {
+      "exc": 1435,
+      "inh": 1627,
+      "mod": 402
+     },
+     "A_higher_count": 2942,
+     "B_higher_count": 522
+    },
+    {
+     "g": 2.005059267196398,
+     "A": "all",
+     "B": "isl2",
+     "mean_A": 0.01999847576946841,
+     "mean_B": 0.017337632755578716,
+     "mean_check_A": 7.766711718204533e-10,
+     "mean_check_B": 8.070211166000263e-12,
+     "resid_A": 1.63202784619898e-14,
+     "resid_B": 9.909815051889481e-10,
+     "n_diff_0.05": 3251,
+     "n_diff_0.01": 11823,
+     "sum_diff_neurons": 444.935525410579,
+     "max_abs_diff": 0.4980739831822837,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 3251,
+     "component_sizes_top10": [
+      3251
+     ],
+     "by_module": {
+      "isl1": 1140,
+      "rest": 886,
+      "isl9": 234,
+      "isl5": 220,
+      "isl3": 97,
+      "isl22": 82,
+      "isl20": 80,
+      "isl26": 64
+     },
+     "by_superclass": {
+      "cb_intrinsic": 1452,
+      "vnc_intrinsic": 994,
+      "descending_neuron": 283,
+      "vnc_motor": 173,
+      "ascending_neuron": 164,
+      "visual_centrifugal": 77
+     },
+     "by_sign": {
+      "exc": 1378,
+      "inh": 1568,
+      "mod": 305
+     },
+     "A_higher_count": 2774,
+     "B_higher_count": 477
+    },
+    {
+     "g": 2.005059267196398,
+     "A": "all",
+     "B": "isl5",
+     "mean_A": 0.01999847576946841,
+     "mean_B": 0.019894076436060636,
+     "mean_check_A": 7.766711718204533e-10,
+     "mean_check_B": 6.873146496388927e-11,
+     "resid_A": 1.63202784619898e-14,
+     "resid_B": 5.093268029554565e-10,
+     "n_diff_0.05": 611,
+     "n_diff_0.01": 2725,
+     "sum_diff_neurons": 17.457238935114407,
+     "max_abs_diff": 0.4980739831822837,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 611,
+     "component_sizes_top10": [
+      611
+     ],
+     "by_module": {
+      "isl1": 161,
+      "rest": 120,
+      "isl3": 96,
+      "isl2": 75,
+      "isl4": 69,
+      "isl18": 32,
+      "isl17": 19,
+      "isl14": 7
+     },
+     "by_superclass": {
+      "vnc_intrinsic": 283,
+      "vnc_motor": 96,
+      "cb_intrinsic": 89,
+      "descending_neuron": 45,
+      "vnc_efferent": 39,
+      "ascending_neuron": 25
+     },
+     "by_sign": {
+      "exc": 204,
+      "inh": 237,
+      "mod": 170
+     },
+     "A_higher_count": 397,
+     "B_higher_count": 214
+    },
+    {
+     "g": 2.005059267196398,
+     "A": "AL-R",
+     "B": "isl2",
+     "mean_A": 0.017209998572199632,
+     "mean_B": 0.017337632755578716,
+     "mean_check_A": 6.214950776239903e-11,
+     "mean_check_B": 8.070211166000263e-12,
+     "resid_A": 1.0707262160236652e-10,
+     "resid_B": 9.909815051889481e-10,
+     "n_diff_0.05": 337,
+     "n_diff_0.01": 1552,
+     "sum_diff_neurons": -21.34247760791686,
+     "max_abs_diff": 0.4959898056486013,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 337,
+     "component_sizes_top10": [
+      337
+     ],
+     "by_module": {
+      "rest": 98,
+      "isl2": 75,
+      "isl1": 46,
+      "isl18": 38,
+      "isl17": 25,
+      "isl4": 22,
+      "isl21": 10,
+      "isl14": 7
+     },
+     "by_superclass": {
+      "vnc_intrinsic": 196,
+      "vnc_motor": 69,
+      "vnc_efferent": 36,
+      "ascending_neuron": 26,
+      "cb_intrinsic": 9,
+      "descending_neuron": 1
+     },
+     "by_sign": {
+      "exc": 85,
+      "inh": 120,
+      "mod": 132
+     },
+     "A_higher_count": 32,
+     "B_higher_count": 305
+    },
+    {
+     "g": 2.005059267196398,
+     "A": "AL-R",
+     "B": "isl5",
+     "mean_A": 0.017209998572199632,
+     "mean_B": 0.019894076436060636,
+     "mean_check_A": 6.214950776239903e-11,
+     "mean_check_B": 6.873146496388927e-11,
+     "resid_A": 1.0707262160236652e-10,
+     "resid_B": 5.093268029554565e-10,
+     "n_diff_0.05": 3336,
+     "n_diff_0.01": 11688,
+     "sum_diff_neurons": -448.82076408338145,
+     "max_abs_diff": 0.49537657010563707,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 3336,
+     "component_sizes_top10": [
+      3336
+     ],
+     "by_module": {
+      "isl1": 1193,
+      "rest": 887,
+      "isl9": 243,
+      "isl5": 220,
+      "isl22": 86,
+      "isl4": 86,
+      "isl20": 85,
+      "isl26": 66
+     },
+     "by_superclass": {
+      "cb_intrinsic": 1453,
+      "vnc_intrinsic": 1088,
+      "descending_neuron": 263,
+      "vnc_motor": 202,
+      "ascending_neuron": 167,
+      "visual_centrifugal": 75
+     },
+     "by_sign": {
+      "exc": 1410,
+      "inh": 1595,
+      "mod": 331
+     },
+     "A_higher_count": 479,
+     "B_higher_count": 2857
+    },
+    {
+     "g": 2.005059267196398,
+     "A": "isl2",
+     "B": "isl5",
+     "mean_A": 0.017337632755578716,
+     "mean_B": 0.019894076436060636,
+     "mean_check_A": 8.070211166000263e-12,
+     "mean_check_B": 6.873146496388927e-11,
+     "resid_A": 9.909815051889481e-10,
+     "resid_B": 5.093268029554565e-10,
+     "n_diff_0.05": 3553,
+     "n_diff_0.01": 12135,
+     "sum_diff_neurons": -427.4782864754646,
+     "max_abs_diff": 0.4959898056486013,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 3553,
+     "component_sizes_top10": [
+      3553
+     ],
+     "by_module": {
+      "isl1": 1197,
+      "rest": 1007,
+      "isl9": 243,
+      "isl5": 220,
+      "isl20": 88,
+      "isl22": 86,
+      "isl18": 82,
+      "isl2": 75
+     },
+     "by_superclass": {
+      "cb_intrinsic": 1472,
+      "vnc_intrinsic": 1237,
+      "descending_neuron": 269,
+      "vnc_motor": 197,
+      "ascending_neuron": 184,
+      "visual_centrifugal": 78
+     },
+     "by_sign": {
+      "exc": 1489,
+      "inh": 1687,
+      "mod": 377
+     },
+     "A_higher_count": 669,
+     "B_higher_count": 2884
+    },
+    {
+     "g": 2.2443226859284753,
+     "A": "all",
+     "B": "isl3",
+     "mean_A": 0.024496908919421186,
+     "mean_B": 0.02099860193423539,
+     "mean_check_A": 8.371058290990163e-10,
+     "mean_check_B": 1.1992518089698478e-11,
+     "resid_A": 1.3506597923429453e-10,
+     "resid_B": 3.338789661411212e-11,
+     "n_diff_0.05": 5064,
+     "n_diff_0.01": 14833,
+     "sum_diff_neurons": 584.9729008348284,
+     "max_abs_diff": 0.4997650980319554,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 5064,
+     "component_sizes_top10": [
+      5064
+     ],
+     "by_module": {
+      "rest": 1889,
+      "isl1": 1345,
+      "isl9": 307,
+      "isl5": 221,
+      "isl22": 134,
+      "isl20": 121,
+      "isl26": 121,
+      "isl18": 109
+     },
+     "by_superclass": {
+      "cb_intrinsic": 2052,
+      "vnc_intrinsic": 1828,
+      "descending_neuron": 434,
+      "vnc_motor": 294,
+      "ascending_neuron": 243,
+      "visual_centrifugal": 77
+     },
+     "by_sign": {
+      "exc": 2138,
+      "inh": 2446,
+      "mod": 480
+     },
+     "A_higher_count": 4223,
+     "B_higher_count": 841
+    },
+    {
+     "g": 2.2443226859284753,
+     "A": "all",
+     "B": "isl7",
+     "mean_A": 0.024496908919421186,
+     "mean_B": 0.023659230821817884,
+     "mean_check_A": 8.371058290990163e-10,
+     "mean_check_B": 7.757146036624363e-10,
+     "resid_A": 1.3506597923429453e-10,
+     "resid_B": 4.763910585459108e-10,
+     "n_diff_0.05": 874,
+     "n_diff_0.01": 3522,
+     "sum_diff_neurons": 140.07318076883325,
+     "max_abs_diff": 0.4995342556238259,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 874,
+     "component_sizes_top10": [
+      874
+     ],
+     "by_module": {
+      "rest": 241,
+      "isl5": 179,
+      "isl3": 93,
+      "isl2": 75,
+      "isl1": 69,
+      "isl4": 60,
+      "isl18": 39,
+      "isl17": 21
+     },
+     "by_superclass": {
+      "cb_intrinsic": 428,
+      "vnc_intrinsic": 198,
+      "vnc_motor": 92,
+      "descending_neuron": 59,
+      "vnc_efferent": 39,
+      "ascending_neuron": 26
+     },
+     "by_sign": {
+      "exc": 350,
+      "inh": 317,
+      "mod": 207
+     },
+     "A_higher_count": 740,
+     "B_higher_count": 134
+    },
+    {
+     "g": 2.2443226859284753,
+     "A": "isl3",
+     "B": "isl7",
+     "mean_A": 0.02099860193423539,
+     "mean_B": 0.023659230821817884,
+     "mean_check_A": 1.1992518089698478e-11,
+     "mean_check_B": 7.757146036624363e-10,
+     "resid_A": 3.338789661411212e-11,
+     "resid_B": 4.763910585459108e-10,
+     "n_diff_0.05": 4741,
+     "n_diff_0.01": 13592,
+     "sum_diff_neurons": -444.899720065995,
+     "max_abs_diff": 0.4997595168659811,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 4741,
+     "component_sizes_top10": [
+      4741
+     ],
+     "by_module": {
+      "rest": 1760,
+      "isl1": 1334,
+      "isl9": 309,
+      "isl3": 148,
+      "isl22": 132,
+      "isl20": 126,
+      "isl5": 112,
+      "isl25": 103
+     },
+     "by_superclass": {
+      "cb_intrinsic": 1830,
+      "vnc_intrinsic": 1790,
+      "descending_neuron": 441,
+      "vnc_motor": 262,
+      "ascending_neuron": 226,
+      "visual_centrifugal": 69
+     },
+     "by_sign": {
+      "exc": 2050,
+      "inh": 2310,
+      "mod": 381
+     },
+     "A_higher_count": 974,
+     "B_higher_count": 3767
+    },
+    {
+     "g": 2.5121373721866287,
+     "A": "all",
+     "B": "AL",
+     "mean_A": 0.02928343206131292,
+     "mean_B": 0.025284239694329334,
+     "mean_check_A": 3.0326907651812007e-10,
+     "mean_check_B": 6.976752509046946e-12,
+     "resid_A": 3.402139681085714e-14,
+     "resid_B": 7.154806191955743e-10,
+     "n_diff_0.05": 5253,
+     "n_diff_0.01": 14061,
+     "sum_diff_neurons": 668.7289508375293,
+     "max_abs_diff": 0.4999957174903772,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 5253,
+     "component_sizes_top10": [
+      5253
+     ],
+     "by_module": {
+      "rest": 2265,
+      "isl1": 1294,
+      "isl9": 326,
+      "isl22": 137,
+      "isl20": 129,
+      "isl25": 115,
+      "isl26": 110,
+      "isl3": 107
+     },
+     "by_superclass": {
+      "vnc_intrinsic": 2082,
+      "cb_intrinsic": 1905,
+      "descending_neuron": 375,
+      "ascending_neuron": 327,
+      "vnc_motor": 308,
+      "vnc_efferent": 72
+     },
+     "by_sign": {
+      "exc": 2207,
+      "inh": 2536,
+      "mod": 510
+     },
+     "A_higher_count": 4635,
+     "B_higher_count": 618
+    },
+    {
+     "g": 2.811910344401277,
+     "A": "all",
+     "B": "AL-L",
+     "mean_A": 0.034682327341566455,
+     "mean_B": 0.029375887849425075,
+     "mean_check_A": 7.364251430885815e-10,
+     "mean_check_B": 6.34874375293748e-11,
+     "resid_A": 2.0539125955565396e-15,
+     "resid_B": 4.133499098557536e-13,
+     "n_diff_0.05": 6652,
+     "n_diff_0.01": 16134,
+     "sum_diff_neurons": 887.3215861179137,
+     "max_abs_diff": 0.49999999780159904,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 6652,
+     "component_sizes_top10": [
+      6652
+     ],
+     "by_module": {
+      "rest": 3312,
+      "isl1": 1404,
+      "isl9": 324,
+      "isl26": 165,
+      "isl22": 161,
+      "isl20": 156,
+      "isl18": 138,
+      "isl25": 137
+     },
+     "by_superclass": {
+      "vnc_intrinsic": 2656,
+      "cb_intrinsic": 2541,
+      "descending_neuron": 436,
+      "ascending_neuron": 435,
+      "vnc_motor": 297,
+      "vnc_efferent": 77
+     },
+     "by_sign": {
+      "exc": 2842,
+      "inh": 3276,
+      "mod": 534
+     },
+     "A_higher_count": 5973,
+     "B_higher_count": 679
+    },
+    {
+     "g": 3.523040530011778,
+     "A": "all",
+     "B": "AL-L",
+     "mean_A": 0.04704528194238803,
+     "mean_B": 0.03896649069521705,
+     "mean_check_A": 1.2882361843935541e-11,
+     "mean_check_B": 6.831490928504991e-11,
+     "resid_A": 5.551115123125783e-17,
+     "resid_B": 1.1102230246251565e-16,
+     "n_diff_0.05": 9274,
+     "n_diff_0.01": 19635,
+     "sum_diff_neurons": 1350.9031571869427,
+     "max_abs_diff": 0.4999999999990481,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 9274,
+     "component_sizes_top10": [
+      9274
+     ],
+     "by_module": {
+      "rest": 5850,
+      "isl1": 1251,
+      "isl9": 293,
+      "isl26": 225,
+      "isl20": 200,
+      "isl22": 177,
+      "isl25": 166,
+      "isl18": 157
+     },
+     "by_superclass": {
+      "cb_intrinsic": 4277,
+      "vnc_intrinsic": 3336,
+      "descending_neuron": 560,
+      "ascending_neuron": 516,
+      "vnc_motor": 252,
+      "visual_centrifugal": 93
+     },
+     "by_sign": {
+      "exc": 4249,
+      "inh": 4498,
+      "mod": 527
+     },
+     "A_higher_count": 8431,
+     "B_higher_count": 843
+    },
+    {
+     "g": 3.943444422970479,
+     "A": "all",
+     "B": "isl5",
+     "mean_A": 0.05327714886413895,
+     "mean_B": 0.05135365966470717,
+     "mean_check_A": 2.87247337027452e-10,
+     "mean_check_B": 1.8410484248221337e-10,
+     "resid_A": 1.2717604747081168e-13,
+     "resid_B": 5.551115123125783e-17,
+     "n_diff_0.05": 2197,
+     "n_diff_0.01": 7450,
+     "sum_diff_neurons": 321.6381699721849,
+     "max_abs_diff": 0.4999422310163846,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 2197,
+     "component_sizes_top10": [
+      2197
+     ],
+     "by_module": {
+      "rest": 1229,
+      "isl1": 189,
+      "isl3": 126,
+      "isl18": 92,
+      "isl17": 75,
+      "isl2": 72,
+      "isl9": 63,
+      "isl25": 51
+     },
+     "by_superclass": {
+      "vnc_intrinsic": 1012,
+      "cb_intrinsic": 573,
+      "descending_neuron": 205,
+      "ascending_neuron": 172,
+      "vnc_motor": 116,
+      "vnc_efferent": 58
+     },
+     "by_sign": {
+      "exc": 981,
+      "inh": 944,
+      "mod": 272
+     },
+     "A_higher_count": 1871,
+     "B_higher_count": 326
+    },
+    {
+     "g": 5.530316408565332,
+     "A": "all",
+     "B": "AL",
+     "mean_A": 0.07699149228503029,
+     "mean_B": 0.07034260894441181,
+     "mean_check_A": 3.724132113802625e-12,
+     "mean_check_B": 1.2736922627709646e-11,
+     "resid_A": 1.2698175844150228e-15,
+     "resid_B": 1.1102230246251565e-16,
+     "n_diff_0.05": 5889,
+     "n_diff_0.01": 15698,
+     "sum_diff_neurons": 1111.7996766848562,
+     "max_abs_diff": 0.4999999999401151,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 5889,
+     "component_sizes_top10": [
+      5889
+     ],
+     "by_module": {
+      "rest": 4856,
+      "isl3": 153,
+      "isl26": 128,
+      "isl17": 105,
+      "isl1": 91,
+      "isl18": 80,
+      "isl20": 79,
+      "isl2": 70
+     },
+     "by_superclass": {
+      "cb_intrinsic": 3933,
+      "vnc_intrinsic": 1166,
+      "descending_neuron": 214,
+      "ascending_neuron": 154,
+      "visual_projection": 129,
+      "vnc_motor": 113
+     },
+     "by_sign": {
+      "exc": 3323,
+      "inh": 2249,
+      "mod": 317
+     },
+     "A_higher_count": 5695,
+     "B_higher_count": 194
+    }
+   ],
+   "median_n_diff_0.05": 3293.5,
+   "max_n_diff_0.05": 9274,
+   "max_mean_check": 8.371058290990163e-10
+  },
+  "1.5": {
+   "n_g": 2,
+   "pairs": [
+    {
+     "g": 2.5121373721866287,
+     "A": "isl2",
+     "B": "isl7",
+     "mean_A": 0.0022085739145205614,
+     "mean_B": 0.002073792377272759,
+     "mean_check_A": 2.3737456444905547e-11,
+     "mean_check_B": 1.417754802446325e-12,
+     "resid_A": 1.649042261249456e-10,
+     "resid_B": 1.31564176220067e-10,
+     "n_diff_0.05": 262,
+     "n_diff_0.01": 1028,
+     "sum_diff_neurons": 22.53762953242855,
+     "max_abs_diff": 0.46079614773573124,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 262,
+     "component_sizes_top10": [
+      262
+     ],
+     "by_module": {
+      "isl2": 60,
+      "rest": 50,
+      "isl1": 48,
+      "isl12": 38,
+      "isl18": 25,
+      "isl4": 14,
+      "isl17": 10,
+      "isl14": 8
+     },
+     "by_superclass": {
+      "vnc_intrinsic": 99,
+      "cb_intrinsic": 62,
+      "vnc_motor": 46,
+      "vnc_efferent": 27,
+      "ascending_neuron": 20,
+      "descending_neuron": 6
+     },
+     "by_sign": {
+      "exc": 84,
+      "inh": 82,
+      "mod": 96
+     },
+     "A_higher_count": 200,
+     "B_higher_count": 62
+    },
+    {
+     "g": 2.5121373721866287,
+     "A": "isl2",
+     "B": "isl9",
+     "mean_A": 0.0022085739145205614,
+     "mean_B": 0.0029709841136399094,
+     "mean_check_A": 2.3737456444905547e-11,
+     "mean_check_B": 4.035882739117369e-12,
+     "resid_A": 1.649042261249456e-10,
+     "resid_B": 4.857503288491216e-12,
+     "n_diff_0.05": 790,
+     "n_diff_0.01": 5082,
+     "sum_diff_neurons": -127.48718385594083,
+     "max_abs_diff": 0.46079614773573124,
+     "n_components_0.05": 2,
+     "largest_component_0.05": 789,
+     "component_sizes_top10": [
+      789,
+      1
+     ],
+     "by_module": {
+      "rest": 279,
+      "isl1": 206,
+      "isl3": 66,
+      "isl2": 60,
+      "isl18": 36,
+      "isl17": 22,
+      "isl12": 22,
+      "isl4": 14
+     },
+     "by_superclass": {
+      "vnc_intrinsic": 216,
+      "cb_intrinsic": 144,
+      "ol_intrinsic": 120,
+      "descending_neuron": 114,
+      "vnc_motor": 75,
+      "ascending_neuron": 44
+     },
+     "by_sign": {
+      "exc": 250,
+      "inh": 410,
+      "mod": 130
+     },
+     "A_higher_count": 227,
+     "B_higher_count": 563
+    },
+    {
+     "g": 2.5121373721866287,
+     "A": "isl7",
+     "B": "isl9",
+     "mean_A": 0.002073792377272759,
+     "mean_B": 0.0029709841136399094,
+     "mean_check_A": 1.417754802446325e-12,
+     "mean_check_B": 4.035882739117369e-12,
+     "resid_A": 1.31564176220067e-10,
+     "resid_B": 4.857503288491216e-12,
+     "n_diff_0.05": 607,
+     "n_diff_0.01": 4651,
+     "sum_diff_neurons": -150.02481338836935,
+     "max_abs_diff": 0.4578400647685208,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 607,
+     "component_sizes_top10": [
+      607
+     ],
+     "by_module": {
+      "rest": 235,
+      "isl1": 187,
+      "isl3": 66,
+      "isl12": 19,
+      "isl20": 15,
+      "isl18": 13,
+      "isl17": 12,
+      "isl9": 11
+     },
+     "by_superclass": {
+      "vnc_intrinsic": 133,
+      "cb_intrinsic": 125,
+      "ol_intrinsic": 119,
+      "descending_neuron": 115,
+      "vnc_motor": 33,
+      "visual_centrifugal": 30
+     },
+     "by_sign": {
+      "exc": 203,
+      "inh": 356,
+      "mod": 48
+     },
+     "A_higher_count": 72,
+     "B_higher_count": 535
+    },
+    {
+     "g": 2.811910344401277,
+     "A": "AL",
+     "B": "isl9",
+     "mean_A": 0.0022366841666898373,
+     "mean_B": 0.0033159084332449297,
+     "mean_check_A": 2.30202390483214e-09,
+     "mean_check_B": 6.865519264209752e-11,
+     "resid_A": 9.686902946448583e-10,
+     "resid_B": 6.478756541666852e-10,
+     "n_diff_0.05": 821,
+     "n_diff_0.01": 6195,
+     "sum_diff_neurons": -180.46356495627634,
+     "max_abs_diff": 0.475587129033169,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 821,
+     "component_sizes_top10": [
+      821
+     ],
+     "by_module": {
+      "rest": 342,
+      "isl1": 255,
+      "isl3": 67,
+      "isl9": 23,
+      "isl20": 21,
+      "isl12": 20,
+      "isl17": 18,
+      "isl22": 14
+     },
+     "by_superclass": {
+      "cb_intrinsic": 179,
+      "ol_intrinsic": 178,
+      "vnc_intrinsic": 174,
+      "descending_neuron": 128,
+      "vnc_motor": 58,
+      "ascending_neuron": 36
+     },
+     "by_sign": {
+      "exc": 278,
+      "inh": 473,
+      "mod": 70
+     },
+     "A_higher_count": 132,
+     "B_higher_count": 689
+    }
+   ],
+   "median_n_diff_0.05": 698.5,
+   "max_n_diff_0.05": 821,
+   "max_mean_check": 2.30202390483214e-09
+  },
+  "2": {
+   "n_g": 1,
+   "pairs": [
+    {
+     "g": 2.005059267196398,
+     "A": "all",
+     "B": "isl14",
+     "mean_A": 0.0014091665327463274,
+     "mean_B": 0.0014881301978765858,
+     "mean_check_A": 5.577094341902011e-12,
+     "mean_check_B": 3.7831804355903387e-10,
+     "resid_A": 1.042499420123022e-13,
+     "resid_B": 1.9912680115918846e-09,
+     "n_diff_0.05": 78,
+     "n_diff_0.01": 308,
+     "sum_diff_neurons": -13.203988228421258,
+     "max_abs_diff": 0.39317366522120745,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 78,
+     "component_sizes_top10": [
+      78
+     ],
+     "by_module": {
+      "isl2": 43,
+      "isl1": 11,
+      "isl18": 7,
+      "rest": 7,
+      "isl17": 5,
+      "isl4": 3,
+      "isl14": 2
+     },
+     "by_superclass": {
+      "vnc_intrinsic": 34,
+      "vnc_efferent": 20,
+      "vnc_motor": 15,
+      "ascending_neuron": 7,
+      "cb_intrinsic": 2
+     },
+     "by_sign": {
+      "exc": 27,
+      "inh": 15,
+      "mod": 36
+     },
+     "A_higher_count": 1,
+     "B_higher_count": 77
+    }
+   ],
+   "median_n_diff_0.05": 78.0,
+   "max_n_diff_0.05": 78,
+   "max_mean_check": 3.7831804355903387e-10
+  },
+  "3": {
+   "n_g": 3,
+   "pairs": [
+    {
+     "g": 0.8136966617371871,
+     "A": "all",
+     "B": "AL",
+     "mean_A": 0.0005597427061305738,
+     "mean_B": 0.000588195709919715,
+     "mean_check_A": 1.3996137582239498e-11,
+     "mean_check_B": 8.817588881271377e-10,
+     "resid_A": 7.474706617549565e-12,
+     "resid_B": 3.321386568555518e-11,
+     "n_diff_0.05": 80,
+     "n_diff_0.01": 322,
+     "sum_diff_neurons": -4.757797481605039,
+     "max_abs_diff": 0.489106315942268,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 80,
+     "component_sizes_top10": [
+      80
+     ],
+     "by_module": {
+      "AL-L": 66,
+      "rest": 8,
+      "AL-R": 6
+     },
+     "by_superclass": {
+      "cb_intrinsic": 72,
+      "cb_sensory": 8
+     },
+     "by_sign": {
+      "exc": 54,
+      "inh": 19,
+      "mod": 7
+     },
+     "A_higher_count": 26,
+     "B_higher_count": 54
+    },
+    {
+     "g": 1.1411343783083632,
+     "A": "all",
+     "B": "AL",
+     "mean_A": 0.0006949276591635875,
+     "mean_B": 0.0007269683642213721,
+     "mean_check_A": 1.3148560018549915e-10,
+     "mean_check_B": 1.5160317445861438e-10,
+     "resid_A": 1.9493898521501327e-10,
+     "resid_B": 8.651181984328793e-13,
+     "n_diff_0.05": 106,
+     "n_diff_0.01": 460,
+     "sum_diff_neurons": -5.357718536942496,
+     "max_abs_diff": 0.49839532909697354,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 106,
+     "component_sizes_top10": [
+      106
+     ],
+     "by_module": {
+      "AL-L": 78,
+      "rest": 17,
+      "AL-R": 8,
+      "isl26": 2,
+      "AL-mid": 1
+     },
+     "by_superclass": {
+      "cb_intrinsic": 94,
+      "cb_sensory": 12
+     },
+     "by_sign": {
+      "exc": 76,
+      "inh": 19,
+      "mod": 11
+     },
+     "A_higher_count": 40,
+     "B_higher_count": 66
+    },
+    {
+     "g": 1.2773057708720024,
+     "A": "all",
+     "B": "AL",
+     "mean_A": 0.0007471950669410524,
+     "mean_B": 0.0007838873422830857,
+     "mean_check_A": 9.181988502859895e-12,
+     "mean_check_B": 3.913991353243773e-10,
+     "resid_A": 5.805686877427552e-13,
+     "resid_B": 9.983666595056472e-10,
+     "n_diff_0.05": 109,
+     "n_diff_0.01": 547,
+     "sum_diff_neurons": -6.13553551359346,
+     "max_abs_diff": 0.4992793629526705,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 109,
+     "component_sizes_top10": [
+      109
+     ],
+     "by_module": {
+      "AL-L": 75,
+      "rest": 22,
+      "AL-R": 9,
+      "isl26": 2,
+      "AL-mid": 1
+     },
+     "by_superclass": {
+      "cb_intrinsic": 97,
+      "cb_sensory": 12
+     },
+     "by_sign": {
+      "exc": 77,
+      "inh": 21,
+      "mod": 11
+     },
+     "A_higher_count": 43,
+     "B_higher_count": 66
+    }
+   ],
+   "median_n_diff_0.05": 106.0,
+   "max_n_diff_0.05": 109,
+   "max_mean_check": 8.817588881271377e-10
+  },
+  "4": {
+   "n_g": 8,
+   "pairs": [
+    {
+     "g": 0.7269498466206363,
+     "A": "all",
+     "B": "isl3",
+     "mean_A": 0.00044145652934826467,
+     "mean_B": 0.0004160857534300472,
+     "mean_check_A": 4.476863324498481e-12,
+     "mean_check_B": 1.6357026844104894e-11,
+     "resid_A": 5.551115123125783e-17,
+     "resid_B": 5.551115123125783e-17,
+     "n_diff_0.05": 88,
+     "n_diff_0.01": 357,
+     "sum_diff_neurons": 4.242399665940659,
+     "max_abs_diff": 0.46452570432626533,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 88,
+     "component_sizes_top10": [
+      88
+     ],
+     "by_module": {
+      "AL-R": 68,
+      "AL-L": 13,
+      "rest": 6,
+      "AL-mid": 1
+     },
+     "by_superclass": {
+      "cb_intrinsic": 74,
+      "cb_sensory": 14
+     },
+     "by_sign": {
+      "exc": 56,
+      "inh": 24,
+      "mod": 8
+     },
+     "A_higher_count": 59,
+     "B_higher_count": 29
+    },
+    {
+     "g": 0.8136966617371871,
+     "A": "all",
+     "B": "isl3",
+     "mean_A": 0.0004689653968454602,
+     "mean_B": 0.00043924500259941016,
+     "mean_check_A": 4.1034620146263023e-11,
+     "mean_check_B": 6.324329948625973e-09,
+     "resid_A": 9.484316848865863e-16,
+     "resid_B": 6.487865800153259e-16,
+     "n_diff_0.05": 102,
+     "n_diff_0.01": 402,
+     "sum_diff_neurons": 4.9697254442475085,
+     "max_abs_diff": 0.4765368956917895,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 102,
+     "component_sizes_top10": [
+      102
+     ],
+     "by_module": {
+      "AL-R": 77,
+      "AL-L": 17,
+      "rest": 7,
+      "AL-mid": 1
+     },
+     "by_superclass": {
+      "cb_intrinsic": 86,
+      "cb_sensory": 15,
+      "descending_neuron": 1
+     },
+     "by_sign": {
+      "exc": 66,
+      "inh": 26,
+      "mod": 10
+     },
+     "A_higher_count": 66,
+     "B_higher_count": 36
+    },
+    {
+     "g": 0.8136966617371871,
+     "A": "all",
+     "B": "half2",
+     "mean_A": 0.0004689653968454602,
+     "mean_B": 0.00037935990321884787,
+     "mean_check_A": 4.1034620146263023e-11,
+     "mean_check_B": 9.588263516491224e-10,
+     "resid_A": 9.484316848865863e-16,
+     "resid_B": 5.449467675444359e-15,
+     "n_diff_0.05": 186,
+     "n_diff_0.01": 646,
+     "sum_diff_neurons": 14.983472222267594,
+     "max_abs_diff": 0.47913594314884855,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 186,
+     "component_sizes_top10": [
+      186
+     ],
+     "by_module": {
+      "AL-R": 88,
+      "AL-L": 80,
+      "rest": 17,
+      "AL-mid": 1
+     },
+     "by_superclass": {
+      "cb_intrinsic": 163,
+      "cb_sensory": 22,
+      "descending_neuron": 1
+     },
+     "by_sign": {
+      "exc": 125,
+      "inh": 45,
+      "mod": 16
+     },
+     "A_higher_count": 129,
+     "B_higher_count": 57
+    },
+    {
+     "g": 0.8136966617371871,
+     "A": "isl3",
+     "B": "half2",
+     "mean_A": 0.00043924500259941016,
+     "mean_B": 0.00037935990321884787,
+     "mean_check_A": 6.324329948625973e-09,
+     "mean_check_B": 9.588263516491224e-10,
+     "resid_A": 6.487865800153259e-16,
+     "resid_B": 5.449467675444359e-15,
+     "n_diff_0.05": 96,
+     "n_diff_0.01": 363,
+     "sum_diff_neurons": 10.013746778020089,
+     "max_abs_diff": 0.48522835113784624,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 96,
+     "component_sizes_top10": [
+      96
+     ],
+     "by_module": {
+      "AL-L": 84,
+      "rest": 7,
+      "AL-R": 5
+     },
+     "by_superclass": {
+      "cb_intrinsic": 88,
+      "cb_sensory": 6,
+      "descending_neuron": 2
+     },
+     "by_sign": {
+      "exc": 66,
+      "inh": 22,
+      "mod": 8
+     },
+     "A_higher_count": 72,
+     "B_higher_count": 24
+    },
+    {
+     "g": 0.9107949611656839,
+     "A": "all",
+     "B": "isl3",
+     "mean_A": 0.0004972047753325197,
+     "mean_B": 0.0003991107867497127,
+     "mean_check_A": 9.541700762838445e-12,
+     "mean_check_B": 7.952906111441393e-10,
+     "resid_A": 2.0720162307382058e-16,
+     "resid_B": 4.3923198411732756e-15,
+     "n_diff_0.05": 210,
+     "n_diff_0.01": 735,
+     "sum_diff_neurons": 16.402884394862642,
+     "max_abs_diff": 0.4869178547826227,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 210,
+     "component_sizes_top10": [
+      210
+     ],
+     "by_module": {
+      "AL-R": 93,
+      "AL-L": 91,
+      "rest": 24,
+      "AL-mid": 1,
+      "isl26": 1
+     },
+     "by_superclass": {
+      "cb_intrinsic": 185,
+      "cb_sensory": 24,
+      "descending_neuron": 1
+     },
+     "by_sign": {
+      "exc": 138,
+      "inh": 54,
+      "mod": 18
+     },
+     "A_higher_count": 143,
+     "B_higher_count": 67
+    },
+    {
+     "g": 1.0194799859615649,
+     "A": "all",
+     "B": "isl2",
+     "mean_A": 0.0005264566826661514,
+     "mean_B": 0.0005349581880981897,
+     "mean_check_A": 2.3657076297922686e-11,
+     "mean_check_B": 9.021361435657127e-11,
+     "resid_A": 5.551115123125783e-17,
+     "resid_B": 9.860343877526488e-10,
+     "n_diff_0.05": 8,
+     "n_diff_0.01": 33,
+     "sum_diff_neurons": -1.4215877323237138,
+     "max_abs_diff": 0.10168621987222665,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 8,
+     "component_sizes_top10": [
+      8
+     ],
+     "by_module": {
+      "isl8": 6,
+      "isl1": 2
+     },
+     "by_superclass": {
+      "ascending_neuron": 5,
+      "descending_neuron": 2,
+      "vnc_intrinsic": 1
+     },
+     "by_sign": {
+      "exc": 2,
+      "inh": 0,
+      "mod": 6
+     },
+     "A_higher_count": 0,
+     "B_higher_count": 8
+    },
+    {
+     "g": 1.0194799859615649,
+     "A": "all",
+     "B": "isl3",
+     "mean_A": 0.0005264566826661514,
+     "mean_B": 0.0004223702875543324,
+     "mean_check_A": 2.3657076297922686e-11,
+     "mean_check_B": 2.1715453879522784e-09,
+     "resid_A": 5.551115123125783e-17,
+     "resid_B": 5.551115123125783e-17,
+     "n_diff_0.05": 242,
+     "n_diff_0.01": 849,
+     "sum_diff_neurons": 17.404910645017925,
+     "max_abs_diff": 0.49215289708299714,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 242,
+     "component_sizes_top10": [
+      242
+     ],
+     "by_module": {
+      "AL-R": 99,
+      "AL-L": 97,
+      "rest": 33,
+      "isl8": 9,
+      "isl1": 2,
+      "AL-mid": 1,
+      "isl26": 1
+     },
+     "by_superclass": {
+      "cb_intrinsic": 205,
+      "cb_sensory": 25,
+      "ascending_neuron": 8,
+      "descending_neuron": 3,
+      "vnc_intrinsic": 1
+     },
+     "by_sign": {
+      "exc": 152,
+      "inh": 60,
+      "mod": 30
+     },
+     "A_higher_count": 160,
+     "B_higher_count": 82
+    },
+    {
+     "g": 1.0194799859615649,
+     "A": "isl2",
+     "B": "isl3",
+     "mean_A": 0.0005349581880981897,
+     "mean_B": 0.0004223702875543324,
+     "mean_check_A": 9.021361435657127e-11,
+     "mean_check_B": 2.1715453879522784e-09,
+     "resid_A": 9.860343877526488e-10,
+     "resid_B": 5.551115123125783e-17,
+     "n_diff_0.05": 231,
+     "n_diff_0.01": 815,
+     "sum_diff_neurons": 18.826498377341636,
+     "max_abs_diff": 0.4921527107942872,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 231,
+     "component_sizes_top10": [
+      231
+     ],
+     "by_module": {
+      "AL-R": 99,
+      "AL-L": 97,
+      "rest": 33,
+      "AL-mid": 1,
+      "isl26": 1
+     },
+     "by_superclass": {
+      "cb_intrinsic": 205,
+      "cb_sensory": 25,
+      "descending_neuron": 1
+     },
+     "by_sign": {
+      "exc": 150,
+      "inh": 60,
+      "mod": 21
+     },
+     "A_higher_count": 160,
+     "B_higher_count": 71
+    },
+    {
+     "g": 1.1411343783083632,
+     "A": "all",
+     "B": "isl2",
+     "mean_A": 0.0005573622168706431,
+     "mean_B": 0.0005738263944561025,
+     "mean_check_A": 3.744560217455728e-12,
+     "mean_check_B": 3.5846647872261883e-10,
+     "resid_A": 5.551115123125783e-17,
+     "resid_B": 1.9648453870868554e-16,
+     "n_diff_0.05": 22,
+     "n_diff_0.01": 48,
+     "sum_diff_neurons": -2.753073919130176,
+     "max_abs_diff": 0.18220742978692117,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 22,
+     "component_sizes_top10": [
+      22
+     ],
+     "by_module": {
+      "isl8": 20,
+      "isl1": 2
+     },
+     "by_superclass": {
+      "ascending_neuron": 14,
+      "vnc_intrinsic": 4,
+      "descending_neuron": 2,
+      "efferent_ascending": 2
+     },
+     "by_sign": {
+      "exc": 2,
+      "inh": 0,
+      "mod": 20
+     },
+     "A_higher_count": 0,
+     "B_higher_count": 22
+    },
+    {
+     "g": 1.1411343783083632,
+     "A": "all",
+     "B": "isl3",
+     "mean_A": 0.0005573622168706431,
+     "mean_B": 0.00044585022939801715,
+     "mean_check_A": 3.744560217455728e-12,
+     "mean_check_B": 2.3050744646369026e-09,
+     "resid_A": 5.551115123125783e-17,
+     "resid_B": 3.887583072299805e-15,
+     "n_diff_0.05": 281,
+     "n_diff_0.01": 956,
+     "sum_diff_neurons": 18.64658849722261,
+     "max_abs_diff": 0.4955279769597542,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 281,
+     "component_sizes_top10": [
+      281
+     ],
+     "by_module": {
+      "AL-R": 107,
+      "AL-L": 103,
+      "rest": 44,
+      "isl8": 20,
+      "isl1": 5,
+      "AL-mid": 1,
+      "isl26": 1
+     },
+     "by_superclass": {
+      "cb_intrinsic": 231,
+      "cb_sensory": 26,
+      "ascending_neuron": 15,
+      "vnc_intrinsic": 4,
+      "descending_neuron": 3,
+      "efferent_ascending": 2
+     },
+     "by_sign": {
+      "exc": 166,
+      "inh": 73,
+      "mod": 42
+     },
+     "A_higher_count": 175,
+     "B_higher_count": 106
+    },
+    {
+     "g": 1.1411343783083632,
+     "A": "isl2",
+     "B": "isl3",
+     "mean_A": 0.0005738263944561025,
+     "mean_B": 0.00044585022939801715,
+     "mean_check_A": 3.5846647872261883e-10,
+     "mean_check_B": 2.3050744646369026e-09,
+     "resid_A": 1.9648453870868554e-16,
+     "resid_B": 3.887583072299805e-15,
+     "n_diff_0.05": 259,
+     "n_diff_0.01": 907,
+     "sum_diff_neurons": 21.399662416352783,
+     "max_abs_diff": 0.4955276756749368,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 259,
+     "component_sizes_top10": [
+      259
+     ],
+     "by_module": {
+      "AL-R": 107,
+      "AL-L": 103,
+      "rest": 44,
+      "isl1": 3,
+      "isl26": 1,
+      "AL-mid": 1
+     },
+     "by_superclass": {
+      "cb_intrinsic": 231,
+      "cb_sensory": 26,
+      "ascending_neuron": 1,
+      "descending_neuron": 1
+     },
+     "by_sign": {
+      "exc": 164,
+      "inh": 73,
+      "mod": 22
+     },
+     "A_higher_count": 175,
+     "B_higher_count": 84
+    },
+    {
+     "g": 1.2773057708720024,
+     "A": "all",
+     "B": "isl2",
+     "mean_A": 0.000590458272925909,
+     "mean_B": 0.0006146370424013382,
+     "mean_check_A": 2.1943780126321144e-10,
+     "mean_check_B": 1.1153944434738605e-10,
+     "resid_A": 5.551115123125783e-17,
+     "resid_B": 5.551115123125783e-17,
+     "n_diff_0.05": 24,
+     "n_diff_0.01": 61,
+     "sum_diff_neurons": -4.043077116603397,
+     "max_abs_diff": 0.2492278678494007,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 24,
+     "component_sizes_top10": [
+      24
+     ],
+     "by_module": {
+      "isl8": 22,
+      "isl1": 2
+     },
+     "by_superclass": {
+      "ascending_neuron": 15,
+      "vnc_intrinsic": 5,
+      "descending_neuron": 2,
+      "efferent_ascending": 2
+     },
+     "by_sign": {
+      "exc": 2,
+      "inh": 0,
+      "mod": 22
+     },
+     "A_higher_count": 0,
+     "B_higher_count": 24
+    },
+    {
+     "g": 1.2773057708720024,
+     "A": "all",
+     "B": "isl3",
+     "mean_A": 0.000590458272925909,
+     "mean_B": 0.00046919998923384545,
+     "mean_check_A": 2.1943780126321144e-10,
+     "mean_check_B": 1.7087764536682926e-10,
+     "resid_A": 5.551115123125783e-17,
+     "resid_B": 5.551115123125783e-17,
+     "n_diff_0.05": 304,
+     "n_diff_0.01": 1025,
+     "sum_diff_neurons": 20.276325165852075,
+     "max_abs_diff": 0.497600851682575,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 304,
+     "component_sizes_top10": [
+      304
+     ],
+     "by_module": {
+      "AL-R": 112,
+      "AL-L": 101,
+      "rest": 61,
+      "isl8": 22,
+      "isl1": 5,
+      "isl26": 2,
+      "AL-mid": 1
+     },
+     "by_superclass": {
+      "cb_intrinsic": 250,
+      "cb_sensory": 28,
+      "ascending_neuron": 16,
+      "vnc_intrinsic": 5,
+      "descending_neuron": 3,
+      "efferent_ascending": 2
+     },
+     "by_sign": {
+      "exc": 172,
+      "inh": 86,
+      "mod": 46
+     },
+     "A_higher_count": 193,
+     "B_higher_count": 111
+    },
+    {
+     "g": 1.2773057708720024,
+     "A": "isl2",
+     "B": "isl3",
+     "mean_A": 0.0006146370424013382,
+     "mean_B": 0.00046919998923384545,
+     "mean_check_A": 1.1153944434738605e-10,
+     "mean_check_B": 1.7087764536682926e-10,
+     "resid_A": 5.551115123125783e-17,
+     "resid_B": 5.551115123125783e-17,
+     "n_diff_0.05": 280,
+     "n_diff_0.01": 962,
+     "sum_diff_neurons": 24.31940228245547,
+     "max_abs_diff": 0.49760046780811795,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 280,
+     "component_sizes_top10": [
+      280
+     ],
+     "by_module": {
+      "AL-R": 112,
+      "AL-L": 101,
+      "rest": 61,
+      "isl1": 3,
+      "isl26": 2,
+      "AL-mid": 1
+     },
+     "by_superclass": {
+      "cb_intrinsic": 250,
+      "cb_sensory": 28,
+      "ascending_neuron": 1,
+      "descending_neuron": 1
+     },
+     "by_sign": {
+      "exc": 170,
+      "inh": 86,
+      "mod": 24
+     },
+     "A_higher_count": 193,
+     "B_higher_count": 87
+    },
+    {
+     "g": 1.4297264750900744,
+     "A": "all",
+     "B": "isl3",
+     "mean_A": 0.0006283250727578147,
+     "mean_B": 0.0004938297707206892,
+     "mean_check_A": 5.598692620623069e-10,
+     "mean_check_B": 1.2460234621869404e-08,
+     "resid_A": 9.891735461330445e-17,
+     "resid_B": 1.448494102440634e-16,
+     "n_diff_0.05": 336,
+     "n_diff_0.01": 1137,
+     "sum_diff_neurons": 22.48976642543999,
+     "max_abs_diff": 0.498802675271544,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 336,
+     "component_sizes_top10": [
+      336
+     ],
+     "by_module": {
+      "AL-R": 114,
+      "AL-L": 103,
+      "rest": 79,
+      "isl8": 27,
+      "isl1": 6,
+      "isl26": 2,
+      "isl17": 1,
+      "isl2": 1
+     },
+     "by_superclass": {
+      "cb_intrinsic": 274,
+      "cb_sensory": 29,
+      "ascending_neuron": 19,
+      "vnc_intrinsic": 7,
+      "descending_neuron": 4,
+      "efferent_ascending": 2
+     },
+     "by_sign": {
+      "exc": 183,
+      "inh": 98,
+      "mod": 55
+     },
+     "A_higher_count": 212,
+     "B_higher_count": 124
+    },
+    {
+     "g": 1.4297264750900744,
+     "A": "all",
+     "B": "isl8",
+     "mean_A": 0.0006283250727578147,
+     "mean_B": 0.0006599913355003604,
+     "mean_check_A": 5.598692620623069e-10,
+     "mean_check_B": 3.780931123742448e-11,
+     "resid_A": 9.891735461330445e-17,
+     "resid_B": 5.551115123125783e-17,
+     "n_diff_0.05": 30,
+     "n_diff_0.01": 72,
+     "sum_diff_neurons": -5.295105790757547,
+     "max_abs_diff": 0.3045896886032628,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 30,
+     "component_sizes_top10": [
+      30
+     ],
+     "by_module": {
+      "isl8": 27,
+      "isl1": 2,
+      "isl2": 1
+     },
+     "by_superclass": {
+      "ascending_neuron": 18,
+      "vnc_intrinsic": 7,
+      "descending_neuron": 2,
+      "efferent_ascending": 2,
+      "vnc_efferent": 1
+     },
+     "by_sign": {
+      "exc": 3,
+      "inh": 0,
+      "mod": 27
+     },
+     "A_higher_count": 0,
+     "B_higher_count": 30
+    },
+    {
+     "g": 1.4297264750900744,
+     "A": "isl3",
+     "B": "isl8",
+     "mean_A": 0.0004938297707206892,
+     "mean_B": 0.0006599913355003604,
+     "mean_check_A": 1.2460234621869404e-08,
+     "mean_check_B": 3.780931123742448e-11,
+     "resid_A": 1.448494102440634e-16,
+     "resid_B": 5.551115123125783e-17,
+     "n_diff_0.05": 306,
+     "n_diff_0.01": 1063,
+     "sum_diff_neurons": -27.784872216197538,
+     "max_abs_diff": 0.49880243598765556,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 306,
+     "component_sizes_top10": [
+      306
+     ],
+     "by_module": {
+      "AL-R": 114,
+      "AL-L": 103,
+      "rest": 79,
+      "isl1": 4,
+      "isl26": 2,
+      "isl27": 1,
+      "isl17": 1,
+      "isl22": 1
+     },
+     "by_superclass": {
+      "cb_intrinsic": 274,
+      "cb_sensory": 29,
+      "descending_neuron": 2,
+      "ascending_neuron": 1
+     },
+     "by_sign": {
+      "exc": 180,
+      "inh": 98,
+      "mod": 28
+     },
+     "A_higher_count": 94,
+     "B_higher_count": 212
+    },
+    {
+     "g": 1.6003355188616997,
+     "A": "isl3",
+     "B": "isl12",
+     "mean_A": 0.0005217911016820556,
+     "mean_B": 0.0006683149858673318,
+     "mean_check_A": 1.937262350537594e-09,
+     "mean_check_B": 6.541322927766657e-09,
+     "resid_A": 1.1735751259678295e-13,
+     "resid_B": 3.1961933100177475e-13,
+     "n_diff_0.05": 362,
+     "n_diff_0.01": 1254,
+     "sum_diff_neurons": -24.501137817925137,
+     "max_abs_diff": 0.4994268321440712,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 362,
+     "component_sizes_top10": [
+      362
+     ],
+     "by_module": {
+      "AL-R": 115,
+      "AL-L": 102,
+      "rest": 88,
+      "isl8": 28,
+      "isl12": 12,
+      "isl1": 6,
+      "isl29": 2,
+      "isl4": 2
+     },
+     "by_superclass": {
+      "cb_intrinsic": 295,
+      "cb_sensory": 29,
+      "ascending_neuron": 19,
+      "vnc_intrinsic": 10,
+      "descending_neuron": 4,
+      "efferent_ascending": 2
+     },
+     "by_sign": {
+      "exc": 201,
+      "inh": 101,
+      "mod": 60
+     },
+     "A_higher_count": 136,
+     "B_higher_count": 226
+    }
+   ],
+   "median_n_diff_0.05": 220.5,
+   "max_n_diff_0.05": 362,
+   "max_mean_check": 1.2460234621869404e-08
+  },
+  "6": {
+   "n_g": 15,
+   "pairs": [
+    {
+     "g": 0.33021580366950254,
+     "A": "all",
+     "B": "isl3",
+     "mean_A": 0.00017388122725211515,
+     "mean_B": 0.00016618010929358786,
+     "mean_check_A": 3.5715874702191286e-13,
+     "mean_check_B": 7.880363028789361e-13,
+     "resid_A": 5.551115123125783e-17,
+     "resid_B": 5.551115123125783e-17,
+     "n_diff_0.05": 20,
+     "n_diff_0.01": 176,
+     "sum_diff_neurons": 1.2877501405530984,
+     "max_abs_diff": 0.20646481376722134,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 20,
+     "component_sizes_top10": [
+      20
+     ],
+     "by_module": {
+      "AL-R": 19,
+      "AL-L": 1
+     },
+     "by_superclass": {
+      "cb_intrinsic": 20
+     },
+     "by_sign": {
+      "exc": 7,
+      "inh": 10,
+      "mod": 3
+     },
+     "A_higher_count": 15,
+     "B_higher_count": 5
+    },
+    {
+     "g": 0.36962040551740727,
+     "A": "all",
+     "B": "isl3",
+     "mean_A": 0.0002022343354886783,
+     "mean_B": 0.00019405548427968398,
+     "mean_check_A": 3.0042635046356736e-13,
+     "mean_check_B": 1.1937117960769683e-12,
+     "resid_A": 5.551115123125783e-17,
+     "resid_B": 5.551115123125783e-17,
+     "n_diff_0.05": 27,
+     "n_diff_0.01": 216,
+     "sum_diff_neurons": 1.3676347837631941,
+     "max_abs_diff": 0.24763946949236104,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 27,
+     "component_sizes_top10": [
+      27
+     ],
+     "by_module": {
+      "AL-R": 26,
+      "AL-L": 1
+     },
+     "by_superclass": {
+      "cb_intrinsic": 27
+     },
+     "by_sign": {
+      "exc": 10,
+      "inh": 14,
+      "mod": 3
+     },
+     "A_higher_count": 22,
+     "B_higher_count": 5
+    },
+    {
+     "g": 0.41372715253685544,
+     "A": "all",
+     "B": "isl3",
+     "mean_A": 0.00022806882612830815,
+     "mean_B": 0.0002195122669731157,
+     "mean_check_A": 7.693845560652335e-14,
+     "mean_check_B": 1.7208456881689926e-14,
+     "resid_A": 5.551115123125783e-17,
+     "resid_B": 5.551115123125783e-17,
+     "n_diff_0.05": 41,
+     "n_diff_0.01": 256,
+     "sum_diff_neurons": 1.430793595694659,
+     "max_abs_diff": 0.2857052576836714,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 41,
+     "component_sizes_top10": [
+      41
+     ],
+     "by_module": {
+      "AL-R": 37,
+      "AL-L": 4
+     },
+     "by_superclass": {
+      "cb_intrinsic": 41
+     },
+     "by_sign": {
+      "exc": 19,
+      "inh": 19,
+      "mod": 3
+     },
+     "A_higher_count": 31,
+     "B_higher_count": 10
+    },
+    {
+     "g": 0.4630971509991302,
+     "A": "all",
+     "B": "isl3",
+     "mean_A": 0.0002519436898167567,
+     "mean_B": 0.0002411430088685005,
+     "mean_check_A": 1.8740564655672642e-13,
+     "mean_check_B": 6.661338147750939e-15,
+     "resid_A": 5.551115123125783e-17,
+     "resid_B": 5.551115123125783e-17,
+     "n_diff_0.05": 51,
+     "n_diff_0.01": 274,
+     "sum_diff_neurons": 1.8060466654436043,
+     "max_abs_diff": 0.32078327343549873,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 51,
+     "component_sizes_top10": [
+      51
+     ],
+     "by_module": {
+      "AL-R": 44,
+      "AL-L": 7
+     },
+     "by_superclass": {
+      "cb_intrinsic": 51
+     },
+     "by_sign": {
+      "exc": 26,
+      "inh": 22,
+      "mod": 3
+     },
+     "A_higher_count": 35,
+     "B_higher_count": 16
+    },
+    {
+     "g": 0.5183584639018992,
+     "A": "all",
+     "B": "isl3",
+     "mean_A": 0.000274192562036488,
+     "mean_B": 0.0002608573608120798,
+     "mean_check_A": 7.008837954458613e-13,
+     "mean_check_B": 4.286015986565417e-12,
+     "resid_A": 5.551115123125783e-17,
+     "resid_B": 5.551115123125783e-17,
+     "n_diff_0.05": 58,
+     "n_diff_0.01": 298,
+     "sum_diff_neurons": 2.2298590079406355,
+     "max_abs_diff": 0.3528769664147995,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 58,
+     "component_sizes_top10": [
+      58
+     ],
+     "by_module": {
+      "AL-R": 48,
+      "AL-L": 10
+     },
+     "by_superclass": {
+      "cb_intrinsic": 57,
+      "cb_sensory": 1
+     },
+     "by_sign": {
+      "exc": 32,
+      "inh": 23,
+      "mod": 3
+     },
+     "A_higher_count": 37,
+     "B_higher_count": 21
+    },
+    {
+     "g": 0.5183584639018992,
+     "A": "all",
+     "B": "isl8",
+     "mean_A": 0.000274192562036488,
+     "mean_B": 0.00026085766477370757,
+     "mean_check_A": 7.008837954458613e-13,
+     "mean_check_B": 2.1036505870597466e-12,
+     "resid_A": 5.551115123125783e-17,
+     "resid_B": 5.551115123125783e-17,
+     "n_diff_0.05": 51,
+     "n_diff_0.01": 237,
+     "sum_diff_neurons": 2.229808180693093,
+     "max_abs_diff": 0.3527715404341269,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 51,
+     "component_sizes_top10": [
+      51
+     ],
+     "by_module": {
+      "AL-L": 45,
+      "AL-R": 6
+     },
+     "by_superclass": {
+      "cb_intrinsic": 51
+     },
+     "by_sign": {
+      "exc": 28,
+      "inh": 20,
+      "mod": 3
+     },
+     "A_higher_count": 37,
+     "B_higher_count": 14
+    },
+    {
+     "g": 0.5183584639018992,
+     "A": "isl3",
+     "B": "isl8",
+     "mean_A": 0.0002608573608120798,
+     "mean_B": 0.00026085766477370757,
+     "mean_check_A": 4.286015986565417e-12,
+     "mean_check_B": 2.1036505870597466e-12,
+     "resid_A": 5.551115123125783e-17,
+     "resid_B": 5.551115123125783e-17,
+     "n_diff_0.05": 99,
+     "n_diff_0.01": 380,
+     "sum_diff_neurons": -5.0827247541795906e-05,
+     "max_abs_diff": 0.3798741887706051,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 99,
+     "component_sizes_top10": [
+      99
+     ],
+     "by_module": {
+      "AL-L": 55,
+      "AL-R": 44
+     },
+     "by_superclass": {
+      "cb_intrinsic": 99
+     },
+     "by_sign": {
+      "exc": 54,
+      "inh": 38,
+      "mod": 7
+     },
+     "A_higher_count": 50,
+     "B_higher_count": 49
+    },
+    {
+     "g": 0.5802141009052358,
+     "A": "all",
+     "B": "isl3",
+     "mean_A": 0.0002952439505270518,
+     "mean_B": 0.00027943519325536806,
+     "mean_check_A": 7.112088695748753e-13,
+     "mean_check_B": 1.6679990721968352e-12,
+     "resid_A": 5.551115123125783e-17,
+     "resid_B": 1.6383422438867004e-15,
+     "n_diff_0.05": 71,
+     "n_diff_0.01": 325,
+     "sum_diff_neurons": 2.6434771559418637,
+     "max_abs_diff": 0.38173927509156225,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 71,
+     "component_sizes_top10": [
+      71
+     ],
+     "by_module": {
+      "AL-R": 58,
+      "AL-L": 13
+     },
+     "by_superclass": {
+      "cb_intrinsic": 66,
+      "cb_sensory": 5
+     },
+     "by_sign": {
+      "exc": 45,
+      "inh": 23,
+      "mod": 3
+     },
+     "A_higher_count": 44,
+     "B_higher_count": 27
+    },
+    {
+     "g": 0.5802141009052358,
+     "A": "all",
+     "B": "isl8",
+     "mean_A": 0.0002952439505270518,
+     "mean_B": 0.0002801705219132971,
+     "mean_check_A": 7.112088695748753e-13,
+     "mean_check_B": 1.5189294266804154e-11,
+     "resid_A": 5.551115123125783e-17,
+     "resid_B": 5.551115123125783e-17,
+     "n_diff_0.05": 67,
+     "n_diff_0.01": 282,
+     "sum_diff_neurons": 2.5205184390776103,
+     "max_abs_diff": 0.38207853162332905,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 67,
+     "component_sizes_top10": [
+      67
+     ],
+     "by_module": {
+      "AL-L": 52,
+      "AL-R": 15
+     },
+     "by_superclass": {
+      "cb_intrinsic": 66,
+      "descending_neuron": 1
+     },
+     "by_sign": {
+      "exc": 41,
+      "inh": 21,
+      "mod": 5
+     },
+     "A_higher_count": 40,
+     "B_higher_count": 27
+    },
+    {
+     "g": 0.5802141009052358,
+     "A": "isl3",
+     "B": "isl8",
+     "mean_A": 0.00027943519325536806,
+     "mean_B": 0.0002801705219132971,
+     "mean_check_A": 1.6679990721968352e-12,
+     "mean_check_B": 1.5189294266804154e-11,
+     "resid_A": 1.6383422438867004e-15,
+     "resid_B": 5.551115123125783e-17,
+     "n_diff_0.05": 111,
+     "n_diff_0.01": 398,
+     "sum_diff_neurons": -0.12295871686425441,
+     "max_abs_diff": 0.40871512284455824,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 111,
+     "component_sizes_top10": [
+      111
+     ],
+     "by_module": {
+      "AL-L": 60,
+      "AL-R": 51
+     },
+     "by_superclass": {
+      "cb_intrinsic": 108,
+      "cb_sensory": 2,
+      "descending_neuron": 1
+     },
+     "by_sign": {
+      "exc": 65,
+      "inh": 39,
+      "mod": 7
+     },
+     "A_higher_count": 53,
+     "B_higher_count": 58
+    },
+    {
+     "g": 0.6494509617054944,
+     "A": "all",
+     "B": "isl3",
+     "mean_A": 0.0003149841764131064,
+     "mean_B": 0.0002958297204701435,
+     "mean_check_A": 1.1779799358180298e-11,
+     "mean_check_B": 6.9544370262519806e-12,
+     "resid_A": 5.551115123125783e-17,
+     "resid_B": 5.551115123125783e-17,
+     "n_diff_0.05": 83,
+     "n_diff_0.01": 347,
+     "sum_diff_neurons": 3.202931504958494,
+     "max_abs_diff": 0.4072841556118482,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 83,
+     "component_sizes_top10": [
+      83
+     ],
+     "by_module": {
+      "AL-R": 66,
+      "AL-L": 15,
+      "rest": 2
+     },
+     "by_superclass": {
+      "cb_intrinsic": 74,
+      "cb_sensory": 9
+     },
+     "by_sign": {
+      "exc": 54,
+      "inh": 26,
+      "mod": 3
+     },
+     "A_higher_count": 49,
+     "B_higher_count": 34
+    },
+    {
+     "g": 0.6494509617054944,
+     "A": "all",
+     "B": "isl8",
+     "mean_A": 0.0003149841764131064,
+     "mean_B": 0.0002987909588894894,
+     "mean_check_A": 1.1779799358180298e-11,
+     "mean_check_B": 3.3636204932463443e-10,
+     "resid_A": 5.551115123125783e-17,
+     "resid_B": 2.706168622523819e-16,
+     "n_diff_0.05": 89,
+     "n_diff_0.01": 343,
+     "sum_diff_neurons": 2.7077650614291517,
+     "max_abs_diff": 0.40746653788326087,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 89,
+     "component_sizes_top10": [
+      89
+     ],
+     "by_module": {
+      "AL-L": 61,
+      "AL-R": 28
+     },
+     "by_superclass": {
+      "cb_intrinsic": 87,
+      "cb_sensory": 1,
+      "descending_neuron": 1
+     },
+     "by_sign": {
+      "exc": 57,
+      "inh": 25,
+      "mod": 7
+     },
+     "A_higher_count": 45,
+     "B_higher_count": 44
+    },
+    {
+     "g": 0.6494509617054944,
+     "A": "isl3",
+     "B": "isl8",
+     "mean_A": 0.0002958297204701435,
+     "mean_B": 0.0002987909588894894,
+     "mean_check_A": 6.9544370262519806e-12,
+     "mean_check_B": 3.3636204932463443e-10,
+     "resid_A": 5.551115123125783e-17,
+     "resid_B": 2.706168622523819e-16,
+     "n_diff_0.05": 125,
+     "n_diff_0.01": 417,
+     "sum_diff_neurons": -0.49516644352934314,
+     "max_abs_diff": 0.4368116660113008,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 125,
+     "component_sizes_top10": [
+      125
+     ],
+     "by_module": {
+      "AL-L": 63,
+      "AL-R": 60,
+      "rest": 2
+     },
+     "by_superclass": {
+      "cb_intrinsic": 120,
+      "cb_sensory": 4,
+      "descending_neuron": 1
+     },
+     "by_sign": {
+      "exc": 75,
+      "inh": 40,
+      "mod": 10
+     },
+     "A_higher_count": 56,
+     "B_higher_count": 69
+    },
+    {
+     "g": 0.7269498466206363,
+     "A": "all",
+     "B": "isl3",
+     "mean_A": 0.0003342873260651926,
+     "mean_B": 0.00031101835933303575,
+     "mean_check_A": 7.642775301519578e-13,
+     "mean_check_B": 4.43391989790598e-11,
+     "resid_A": 5.551115123125783e-17,
+     "resid_B": 5.551115123125783e-17,
+     "n_diff_0.05": 97,
+     "n_diff_0.01": 356,
+     "sum_diff_neurons": 3.8909435410843365,
+     "max_abs_diff": 0.42953679320456567,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 97,
+     "component_sizes_top10": [
+      97
+     ],
+     "by_module": {
+      "AL-R": 76,
+      "AL-L": 17,
+      "rest": 4
+     },
+     "by_superclass": {
+      "cb_intrinsic": 86,
+      "cb_sensory": 11
+     },
+     "by_sign": {
+      "exc": 65,
+      "inh": 27,
+      "mod": 5
+     },
+     "A_higher_count": 56,
+     "B_higher_count": 41
+    },
+    {
+     "g": 0.7269498466206363,
+     "A": "all",
+     "B": "isl8",
+     "mean_A": 0.0003342873260651926,
+     "mean_B": 0.0003143063759717696,
+     "mean_check_A": 7.642775301519578e-13,
+     "mean_check_B": 1.3393730569077889e-12,
+     "resid_A": 5.551115123125783e-17,
+     "resid_B": 5.551115123125783e-17,
+     "n_diff_0.05": 108,
+     "n_diff_0.01": 382,
+     "sum_diff_neurons": 3.3411345508218266,
+     "max_abs_diff": 0.42939628015864795,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 108,
+     "component_sizes_top10": [
+      108
+     ],
+     "by_module": {
+      "AL-L": 73,
+      "AL-R": 34,
+      "rest": 1
+     },
+     "by_superclass": {
+      "cb_intrinsic": 104,
+      "cb_sensory": 2,
+      "descending_neuron": 2
+     },
+     "by_sign": {
+      "exc": 71,
+      "inh": 27,
+      "mod": 10
+     },
+     "A_higher_count": 53,
+     "B_higher_count": 55
+    },
+    {
+     "g": 0.7269498466206363,
+     "A": "isl3",
+     "B": "isl8",
+     "mean_A": 0.00031101835933303575,
+     "mean_B": 0.0003143063759717696,
+     "mean_check_A": 4.43391989790598e-11,
+     "mean_check_B": 1.3393730569077889e-12,
+     "resid_A": 5.551115123125783e-17,
+     "resid_B": 5.551115123125783e-17,
+     "n_diff_0.05": 144,
+     "n_diff_0.01": 428,
+     "sum_diff_neurons": -0.5498089902625097,
+     "max_abs_diff": 0.4548435922859044,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 144,
+     "component_sizes_top10": [
+      144
+     ],
+     "by_module": {
+      "AL-L": 73,
+      "AL-R": 67,
+      "rest": 4
+     },
+     "by_superclass": {
+      "cb_intrinsic": 136,
+      "cb_sensory": 7,
+      "descending_neuron": 1
+     },
+     "by_sign": {
+      "exc": 90,
+      "inh": 42,
+      "mod": 12
+     },
+     "A_higher_count": 65,
+     "B_higher_count": 79
+    },
+    {
+     "g": 0.8136966617371871,
+     "A": "all",
+     "B": "isl3",
+     "mean_A": 0.00035355030027285465,
+     "mean_B": 0.00032445154152540385,
+     "mean_check_A": 2.546796107338878e-11,
+     "mean_check_B": 2.2230650653654038e-10,
+     "resid_A": 5.551115123125783e-17,
+     "resid_B": 1.3877787807814457e-16,
+     "n_diff_0.05": 107,
+     "n_diff_0.01": 377,
+     "sum_diff_neurons": 4.865778042713744,
+     "max_abs_diff": 0.4484546279919441,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 107,
+     "component_sizes_top10": [
+      107
+     ],
+     "by_module": {
+      "AL-R": 87,
+      "AL-L": 15,
+      "rest": 5
+     },
+     "by_superclass": {
+      "cb_intrinsic": 95,
+      "cb_sensory": 11,
+      "descending_neuron": 1
+     },
+     "by_sign": {
+      "exc": 71,
+      "inh": 29,
+      "mod": 7
+     },
+     "A_higher_count": 64,
+     "B_higher_count": 43
+    },
+    {
+     "g": 0.8136966617371871,
+     "A": "all",
+     "B": "isl8",
+     "mean_A": 0.00035355030027285465,
+     "mean_B": 0.00032854830332801983,
+     "mean_check_A": 2.546796107338878e-11,
+     "mean_check_B": 5.775071088010009e-09,
+     "resid_A": 5.551115123125783e-17,
+     "resid_B": 5.551115123125783e-17,
+     "n_diff_0.05": 117,
+     "n_diff_0.01": 416,
+     "sum_diff_neurons": 4.180733921127507,
+     "max_abs_diff": 0.44791217552770646,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 117,
+     "component_sizes_top10": [
+      117
+     ],
+     "by_module": {
+      "AL-L": 79,
+      "AL-R": 34,
+      "rest": 4
+     },
+     "by_superclass": {
+      "cb_intrinsic": 111,
+      "cb_sensory": 4,
+      "descending_neuron": 2
+     },
+     "by_sign": {
+      "exc": 80,
+      "inh": 27,
+      "mod": 10
+     },
+     "A_higher_count": 57,
+     "B_higher_count": 60
+    },
+    {
+     "g": 0.8136966617371871,
+     "A": "isl3",
+     "B": "isl8",
+     "mean_A": 0.00032445154152540385,
+     "mean_B": 0.00032854830332801983,
+     "mean_check_A": 2.2230650653654038e-10,
+     "mean_check_B": 5.775071088010009e-09,
+     "resid_A": 1.3877787807814457e-16,
+     "resid_B": 5.551115123125783e-17,
+     "n_diff_0.05": 154,
+     "n_diff_0.01": 438,
+     "sum_diff_neurons": -0.6850441215862374,
+     "max_abs_diff": 0.46714552613360394,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 154,
+     "component_sizes_top10": [
+      154
+     ],
+     "by_module": {
+      "AL-L": 78,
+      "AL-R": 72,
+      "rest": 4
+     },
+     "by_superclass": {
+      "cb_intrinsic": 146,
+      "cb_sensory": 7,
+      "descending_neuron": 1
+     },
+     "by_sign": {
+      "exc": 99,
+      "inh": 42,
+      "mod": 13
+     },
+     "A_higher_count": 70,
+     "B_higher_count": 84
+    },
+    {
+     "g": 0.9107949611656839,
+     "A": "all",
+     "B": "isl3",
+     "mean_A": 0.0003744224226767277,
+     "mean_B": 0.00034032914401258956,
+     "mean_check_A": 1.839608465559195e-10,
+     "mean_check_B": 1.4777568946300335e-08,
+     "resid_A": 5.551115123125783e-17,
+     "resid_B": 7.174816296640074e-15,
+     "n_diff_0.05": 107,
+     "n_diff_0.01": 402,
+     "sum_diff_neurons": 5.700941685102524,
+     "max_abs_diff": 0.4643434918168563,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 107,
+     "component_sizes_top10": [
+      107
+     ],
+     "by_module": {
+      "AL-R": 90,
+      "AL-L": 10,
+      "rest": 7
+     },
+     "by_superclass": {
+      "cb_intrinsic": 94,
+      "cb_sensory": 12,
+      "descending_neuron": 1
+     },
+     "by_sign": {
+      "exc": 71,
+      "inh": 28,
+      "mod": 8
+     },
+     "A_higher_count": 68,
+     "B_higher_count": 39
+    },
+    {
+     "g": 0.9107949611656839,
+     "A": "all",
+     "B": "isl8",
+     "mean_A": 0.0003744224226767277,
+     "mean_B": 0.00034287764328489194,
+     "mean_check_A": 1.839608465559195e-10,
+     "mean_check_B": 1.4605315179494482e-08,
+     "resid_A": 5.551115123125783e-17,
+     "resid_B": 2.3742119381608973e-13,
+     "n_diff_0.05": 120,
+     "n_diff_0.01": 439,
+     "sum_diff_neurons": 5.274791830785205,
+     "max_abs_diff": 0.4637161718536793,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 120,
+     "component_sizes_top10": [
+      120
+     ],
+     "by_module": {
+      "AL-L": 82,
+      "AL-R": 29,
+      "rest": 9
+     },
+     "by_superclass": {
+      "cb_intrinsic": 114,
+      "cb_sensory": 4,
+      "descending_neuron": 2
+     },
+     "by_sign": {
+      "exc": 81,
+      "inh": 30,
+      "mod": 9
+     },
+     "A_higher_count": 62,
+     "B_higher_count": 58
+    },
+    {
+     "g": 0.9107949611656839,
+     "A": "isl3",
+     "B": "isl8",
+     "mean_A": 0.00034032914401258956,
+     "mean_B": 0.00034287764328489194,
+     "mean_check_A": 1.4777568946300335e-08,
+     "mean_check_B": 1.4605315179494482e-08,
+     "resid_A": 7.174816296640074e-15,
+     "resid_B": 2.3742119381608973e-13,
+     "n_diff_0.05": 165,
+     "n_diff_0.01": 457,
+     "sum_diff_neurons": -0.42614985431732133,
+     "max_abs_diff": 0.47656963677438724,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 165,
+     "component_sizes_top10": [
+      165
+     ],
+     "by_module": {
+      "AL-L": 83,
+      "AL-R": 75,
+      "rest": 7
+     },
+     "by_superclass": {
+      "cb_intrinsic": 156,
+      "cb_sensory": 8,
+      "descending_neuron": 1
+     },
+     "by_sign": {
+      "exc": 107,
+      "inh": 46,
+      "mod": 12
+     },
+     "A_higher_count": 72,
+     "B_higher_count": 93
+    },
+    {
+     "g": 1.0194799859615649,
+     "A": "all",
+     "B": "isl3",
+     "mean_A": 0.0003913235072848929,
+     "mean_B": 0.00035978350558600234,
+     "mean_check_A": 3.0517510740679654e-10,
+     "mean_check_B": 1.060510346206911e-09,
+     "resid_A": 1.3426247383161892e-09,
+     "resid_B": 5.551115123125783e-17,
+     "n_diff_0.05": 126,
+     "n_diff_0.01": 427,
+     "sum_diff_neurons": 5.2739929240816865,
+     "max_abs_diff": 0.47583780523780184,
+     "n_components_0.05": 2,
+     "largest_component_0.05": 115,
+     "component_sizes_top10": [
+      115,
+      11
+     ],
+     "by_module": {
+      "AL-R": 96,
+      "rest": 10,
+      "isl8": 9,
+      "AL-L": 9,
+      "isl1": 2
+     },
+     "by_superclass": {
+      "cb_intrinsic": 103,
+      "cb_sensory": 11,
+      "ascending_neuron": 8,
+      "descending_neuron": 3,
+      "vnc_intrinsic": 1
+     },
+     "by_sign": {
+      "exc": 76,
+      "inh": 32,
+      "mod": 18
+     },
+     "A_higher_count": 73,
+     "B_higher_count": 53
+    },
+    {
+     "g": 1.0194799859615649,
+     "A": "all",
+     "B": "isl8",
+     "mean_A": 0.0003913235072848929,
+     "mean_B": 0.00036100656666489527,
+     "mean_check_A": 3.0517510740679654e-10,
+     "mean_check_B": 7.381644184789593e-10,
+     "resid_A": 1.3426247383161892e-09,
+     "resid_B": 5.551115123125783e-17,
+     "n_diff_0.05": 134,
+     "n_diff_0.01": 475,
+     "sum_diff_neurons": 5.069477542713513,
+     "max_abs_diff": 0.4743441263016773,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 134,
+     "component_sizes_top10": [
+      134
+     ],
+     "by_module": {
+      "AL-L": 82,
+      "AL-R": 30,
+      "rest": 12,
+      "isl8": 8,
+      "isl1": 2
+     },
+     "by_superclass": {
+      "cb_intrinsic": 118,
+      "ascending_neuron": 7,
+      "cb_sensory": 4,
+      "descending_neuron": 4,
+      "vnc_intrinsic": 1
+     },
+     "by_sign": {
+      "exc": 82,
+      "inh": 33,
+      "mod": 19
+     },
+     "A_higher_count": 66,
+     "B_higher_count": 68
+    },
+    {
+     "g": 1.0194799859615649,
+     "A": "isl3",
+     "B": "isl8",
+     "mean_A": 0.00035978350558600234,
+     "mean_B": 0.00036100656666489527,
+     "mean_check_A": 1.060510346206911e-09,
+     "mean_check_B": 7.381644184789593e-10,
+     "resid_A": 5.551115123125783e-17,
+     "resid_B": 5.551115123125783e-17,
+     "n_diff_0.05": 173,
+     "n_diff_0.01": 490,
+     "sum_diff_neurons": -0.2045153813681726,
+     "max_abs_diff": 0.4836513923161617,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 173,
+     "component_sizes_top10": [
+      173
+     ],
+     "by_module": {
+      "AL-L": 86,
+      "AL-R": 77,
+      "rest": 10
+     },
+     "by_superclass": {
+      "cb_intrinsic": 162,
+      "cb_sensory": 10,
+      "descending_neuron": 1
+     },
+     "by_sign": {
+      "exc": 114,
+      "inh": 46,
+      "mod": 13
+     },
+     "A_higher_count": 77,
+     "B_higher_count": 96
+    },
+    {
+     "g": 1.1411343783083632,
+     "A": "AL",
+     "B": "rest_only",
+     "mean_A": 0.00042259734132743445,
+     "mean_B": 0.0004061728051219859,
+     "mean_check_A": 4.033307021700239e-11,
+     "mean_check_B": 2.005728916287808e-12,
+     "resid_A": 5.551115123125783e-17,
+     "resid_B": 5.551115123125783e-17,
+     "n_diff_0.05": 22,
+     "n_diff_0.01": 48,
+     "sum_diff_neurons": 2.7464452461302953,
+     "max_abs_diff": 0.18244999658524672,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 22,
+     "component_sizes_top10": [
+      22
+     ],
+     "by_module": {
+      "isl8": 20,
+      "isl1": 2
+     },
+     "by_superclass": {
+      "ascending_neuron": 14,
+      "vnc_intrinsic": 4,
+      "descending_neuron": 2,
+      "efferent_ascending": 2
+     },
+     "by_sign": {
+      "exc": 2,
+      "inh": 0,
+      "mod": 20
+     },
+     "A_higher_count": 22,
+     "B_higher_count": 0
+    },
+    {
+     "g": 1.1411343783083632,
+     "A": "AL",
+     "B": "isl3",
+     "mean_A": 0.00042259734132743445,
+     "mean_B": 0.00037810610011344863,
+     "mean_check_A": 4.033307021700239e-11,
+     "mean_check_B": 1.4497059108720123e-10,
+     "resid_A": 5.551115123125783e-17,
+     "resid_B": 5.551115123125783e-17,
+     "n_diff_0.05": 123,
+     "n_diff_0.01": 446,
+     "sum_diff_neurons": 7.43964739083786,
+     "max_abs_diff": 0.4840655159316519,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 123,
+     "component_sizes_top10": [
+      123
+     ],
+     "by_module": {
+      "AL-R": 100,
+      "rest": 13,
+      "AL-L": 10
+     },
+     "by_superclass": {
+      "cb_intrinsic": 110,
+      "cb_sensory": 12,
+      "descending_neuron": 1
+     },
+     "by_sign": {
+      "exc": 77,
+      "inh": 36,
+      "mod": 10
+     },
+     "A_higher_count": 77,
+     "B_higher_count": 46
+    },
+    {
+     "g": 1.1411343783083632,
+     "A": "AL",
+     "B": "isl8",
+     "mean_A": 0.00042259734132743445,
+     "mean_B": 0.00037947229103863276,
+     "mean_check_A": 4.033307021700239e-11,
+     "mean_check_B": 5.984637230227463e-10,
+     "resid_A": 5.551115123125783e-17,
+     "resid_B": 5.551115123125783e-17,
+     "n_diff_0.05": 135,
+     "n_diff_0.01": 471,
+     "sum_diff_neurons": 7.211198409092274,
+     "max_abs_diff": 0.4817106758999402,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 135,
+     "component_sizes_top10": [
+      135
+     ],
+     "by_module": {
+      "AL-L": 87,
+      "AL-R": 33,
+      "rest": 14,
+      "isl26": 1
+     },
+     "by_superclass": {
+      "cb_intrinsic": 127,
+      "cb_sensory": 6,
+      "descending_neuron": 2
+     },
+     "by_sign": {
+      "exc": 84,
+      "inh": 37,
+      "mod": 14
+     },
+     "A_higher_count": 74,
+     "B_higher_count": 61
+    },
+    {
+     "g": 1.1411343783083632,
+     "A": "rest_only",
+     "B": "isl3",
+     "mean_A": 0.0004061728051219859,
+     "mean_B": 0.00037810610011344863,
+     "mean_check_A": 2.005728916287808e-12,
+     "mean_check_B": 1.4497059108720123e-10,
+     "resid_A": 5.551115123125783e-17,
+     "resid_B": 5.551115123125783e-17,
+     "n_diff_0.05": 145,
+     "n_diff_0.01": 494,
+     "sum_diff_neurons": 4.693202144707564,
+     "max_abs_diff": 0.48406387506070625,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 145,
+     "component_sizes_top10": [
+      145
+     ],
+     "by_module": {
+      "AL-R": 100,
+      "isl8": 20,
+      "rest": 13,
+      "AL-L": 10,
+      "isl1": 2
+     },
+     "by_superclass": {
+      "cb_intrinsic": 110,
+      "ascending_neuron": 14,
+      "cb_sensory": 12,
+      "vnc_intrinsic": 4,
+      "descending_neuron": 3,
+      "efferent_ascending": 2
+     },
+     "by_sign": {
+      "exc": 79,
+      "inh": 36,
+      "mod": 30
+     },
+     "A_higher_count": 77,
+     "B_higher_count": 68
+    },
+    {
+     "g": 1.1411343783083632,
+     "A": "rest_only",
+     "B": "isl8",
+     "mean_A": 0.0004061728051219859,
+     "mean_B": 0.00037947229103863276,
+     "mean_check_A": 2.005728916287808e-12,
+     "mean_check_B": 5.984637230227463e-10,
+     "resid_A": 5.551115123125783e-17,
+     "resid_B": 5.551115123125783e-17,
+     "n_diff_0.05": 157,
+     "n_diff_0.01": 521,
+     "sum_diff_neurons": 4.464753162961978,
+     "max_abs_diff": 0.4817126550499391,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 157,
+     "component_sizes_top10": [
+      157
+     ],
+     "by_module": {
+      "AL-L": 87,
+      "AL-R": 33,
+      "isl8": 20,
+      "rest": 14,
+      "isl1": 2,
+      "isl26": 1
+     },
+     "by_superclass": {
+      "cb_intrinsic": 127,
+      "ascending_neuron": 14,
+      "cb_sensory": 6,
+      "descending_neuron": 4,
+      "vnc_intrinsic": 4,
+      "efferent_ascending": 2
+     },
+     "by_sign": {
+      "exc": 86,
+      "inh": 37,
+      "mod": 34
+     },
+     "A_higher_count": 74,
+     "B_higher_count": 83
+    },
+    {
+     "g": 1.1411343783083632,
+     "A": "isl3",
+     "B": "isl8",
+     "mean_A": 0.00037810610011344863,
+     "mean_B": 0.00037947229103863276,
+     "mean_check_A": 1.4497059108720123e-10,
+     "mean_check_B": 5.984637230227463e-10,
+     "resid_A": 5.551115123125783e-17,
+     "resid_B": 5.551115123125783e-17,
+     "n_diff_0.05": 185,
+     "n_diff_0.01": 534,
+     "sum_diff_neurons": -0.22844898174558645,
+     "max_abs_diff": 0.4888006735963188,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 185,
+     "component_sizes_top10": [
+      185
+     ],
+     "by_module": {
+      "AL-L": 91,
+      "AL-R": 79,
+      "rest": 15
+     },
+     "by_superclass": {
+      "cb_intrinsic": 174,
+      "cb_sensory": 10,
+      "descending_neuron": 1
+     },
+     "by_sign": {
+      "exc": 121,
+      "inh": 51,
+      "mod": 13
+     },
+     "A_higher_count": 83,
+     "B_higher_count": 102
+    },
+    {
+     "g": 1.2773057708720024,
+     "A": "AL",
+     "B": "AL-L",
+     "mean_A": 0.00044656460035873196,
+     "mean_B": 0.00044434939119260785,
+     "mean_check_A": 4.614686410775448e-11,
+     "mean_check_B": 1.0125233984581428e-12,
+     "resid_A": 5.551115123125783e-17,
+     "resid_B": 5.551115123125783e-17,
+     "n_diff_0.05": 41,
+     "n_diff_0.01": 289,
+     "sum_diff_neurons": 0.3704184159226046,
+     "max_abs_diff": 0.24847654893268317,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 41,
+     "component_sizes_top10": [
+      41
+     ],
+     "by_module": {
+      "AL-R": 28,
+      "AL-L": 6,
+      "rest": 5,
+      "AL-mid": 2
+     },
+     "by_superclass": {
+      "cb_intrinsic": 39,
+      "cb_sensory": 1,
+      "descending_neuron": 1
+     },
+     "by_sign": {
+      "exc": 19,
+      "inh": 13,
+      "mod": 9
+     },
+     "A_higher_count": 23,
+     "B_higher_count": 18
+    },
+    {
+     "g": 1.2773057708720024,
+     "A": "AL",
+     "B": "isl3",
+     "mean_A": 0.00044656460035873196,
+     "mean_B": 0.0003921324938888822,
+     "mean_check_A": 4.614686410775448e-11,
+     "mean_check_B": 1.3456791236876597e-11,
+     "resid_A": 5.551115123125783e-17,
+     "resid_B": 5.551115123125783e-17,
+     "n_diff_0.05": 98,
+     "n_diff_0.01": 369,
+     "sum_diff_neurons": 9.101919115462394,
+     "max_abs_diff": 0.4929475887192886,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 98,
+     "component_sizes_top10": [
+      98
+     ],
+     "by_module": {
+      "AL-R": 85,
+      "rest": 7,
+      "AL-L": 4,
+      "AL-mid": 2
+     },
+     "by_superclass": {
+      "cb_intrinsic": 90,
+      "cb_sensory": 8
+     },
+     "by_sign": {
+      "exc": 63,
+      "inh": 25,
+      "mod": 10
+     },
+     "A_higher_count": 66,
+     "B_higher_count": 32
+    },
+    {
+     "g": 1.2773057708720024,
+     "A": "AL-L",
+     "B": "isl3",
+     "mean_A": 0.00044434939119260785,
+     "mean_B": 0.0003921324938888822,
+     "mean_check_A": 1.0125233984581428e-12,
+     "mean_check_B": 1.3456791236876597e-11,
+     "resid_A": 5.551115123125783e-17,
+     "resid_B": 5.551115123125783e-17,
+     "n_diff_0.05": 127,
+     "n_diff_0.01": 494,
+     "sum_diff_neurons": 8.731500699539787,
+     "max_abs_diff": 0.49019554908403534,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 127,
+     "component_sizes_top10": [
+      127
+     ],
+     "by_module": {
+      "AL-R": 98,
+      "rest": 20,
+      "AL-L": 9
+     },
+     "by_superclass": {
+      "cb_intrinsic": 115,
+      "cb_sensory": 11,
+      "descending_neuron": 1
+     },
+     "by_sign": {
+      "exc": 75,
+      "inh": 43,
+      "mod": 9
+     },
+     "A_higher_count": 80,
+     "B_higher_count": 47
+    },
+    {
+     "g": 1.4297264750900744,
+     "A": "all",
+     "B": "isl3",
+     "mean_A": 0.0004625062773915185,
+     "mean_B": 0.00040724338468690516,
+     "mean_check_A": 3.8814662595143545e-10,
+     "mean_check_B": 1.5182743950958866e-11,
+     "resid_A": 5.28656979303932e-16,
+     "resid_B": 5.551115123125783e-17,
+     "n_diff_0.05": 111,
+     "n_diff_0.01": 387,
+     "sum_diff_neurons": 9.240839866494632,
+     "max_abs_diff": 0.4954063644187737,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 111,
+     "component_sizes_top10": [
+      111
+     ],
+     "by_module": {
+      "AL-R": 93,
+      "rest": 12,
+      "AL-L": 4,
+      "AL-mid": 2
+     },
+     "by_superclass": {
+      "cb_intrinsic": 103,
+      "cb_sensory": 8
+     },
+     "by_sign": {
+      "exc": 69,
+      "inh": 31,
+      "mod": 11
+     },
+     "A_higher_count": 72,
+     "B_higher_count": 39
+    },
+    {
+     "g": 1.6003355188616997,
+     "A": "rest_only",
+     "B": "half2",
+     "mean_A": 0.0004787849699694057,
+     "mean_B": 0.00042303088512516155,
+     "mean_check_A": 9.094169861612045e-12,
+     "mean_check_B": 9.743972295694903e-11,
+     "resid_A": 5.551115123125783e-17,
+     "resid_B": 1.0419201995322605e-09,
+     "n_diff_0.05": 122,
+     "n_diff_0.01": 422,
+     "sum_diff_neurons": 9.322975051315119,
+     "max_abs_diff": 0.4970867214791958,
+     "n_components_0.05": 1,
+     "largest_component_0.05": 122,
+     "component_sizes_top10": [
+      122
+     ],
+     "by_module": {
+      "AL-R": 95,
+      "rest": 21,
+      "AL-L": 4,
+      "AL-mid": 2
+     },
+     "by_superclass": {
+      "cb_intrinsic": 113,
+      "cb_sensory": 9
+     },
+     "by_sign": {
+      "exc": 74,
+      "inh": 37,
+      "mod": 11
+     },
+     "A_higher_count": 76,
+     "B_higher_count": 46
+    }
+   ],
+   "median_n_diff_0.05": 109.5,
+   "max_n_diff_0.05": 185,
+   "max_mean_check": 1.4777568946300335e-08
+  }
+ }
+}

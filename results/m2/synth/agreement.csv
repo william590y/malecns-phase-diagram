@@ -1,0 +1,334 @@
+setting,boundary,graph,r,sim,sim_lo,sim_hi,lane,variant,theory,lo,hi,ratio,bracket_width,grade,source,note
+a,S,real,0,0.980756834868847,0.956114572432402,1.0136473437777127,meanfield,"CQMF equal-size (A1, heuristic)",0.5712303581437149,,,0.5824383148143989,,fail,theory/meanfield_predictions.json P3_decay_M2.<r>.primary,
+a,S,real,0,0.980756834868847,0.956114572432402,1.0136473437777127,stochastic,single mode 2-D chain (PF),1.178942345952592,,,1.2020740555025013,,fail,theory/stochastic_onset.json models.M2.boundaries.single_*_lt_2D,pre-registered primary
+a,S,real,0,0.980756834868847,0.956114572432402,1.0136473437777127,stochastic,"bracket [pooled 2D, single 2-D]",,0.5758307817021606,1.178942345952592,,2.04737638802085,holds,stochastic_onset.json pooled_* / single_*,
+a,on,real,0,1.1817934057471797,1.1687232502640117,1.2021250551610323,meanfield,"CQMF equal-size (A1, heuristic)",0.6294755621500333,,,0.5326443345248252,,fail,theory/meanfield_predictions.json P3_decay_M2.<r>.primary,
+a,on,real,0,1.1817934057471797,1.1687232502640117,1.2021250551610323,meanfield,"bracket [cutoff, AL-chain adiabatic]",,0.3222233287436956,1.3275843621580194,,4.12007525132984,holds,P3 primary.on / chain_AL_mode.frozen_kcal.on_adiabatic,
+a,on,real,0,1.1817934057471797,1.1687232502640117,1.2021250551610323,meanfield,"bracket [cutoff, AL-chain frozen]",,0.3222233287436956,2.930036179721155,,9.09318450388109,holds,P3 primary.on / chain_AL_mode.frozen_kcal.on_frozen,
+a,on,real,0,1.1817934057471797,1.1687232502640117,1.2021250551610323,stochastic,single mode 2-D chain (PF),1.6605137281887945,,,1.4050795343023152,,fail,theory/stochastic_onset.json models.M2.boundaries.single_*_lt_2D,pre-registered primary
+a,on,real,0,1.1817934057471797,1.1687232502640117,1.2021250551610323,stochastic,"bracket [pooled 2D, single 2-D]",,0.7347257648158443,1.6605137281887945,,2.2600455948417637,holds,stochastic_onset.json pooled_* / single_*,
+a,D,real,0,6.294266290343673,6.25798,6.37308,meanfield,CQMF PR = N/4,6.080300422897391,,,0.9660062257336431,,agree,P3 primary.D,
+a,S,real,0.125,1.091432035015576,1.076076784054737,1.10793,meanfield,"CQMF equal-size (A1, heuristic)",0.6401575188114672,,,0.5865298967537923,,fail,theory/meanfield_predictions.json P3_decay_M2.<r>.primary,
+a,on,real,0.125,1.3194722535351038,1.3000319732446355,1.3437689337636283,meanfield,"CQMF equal-size (A1, heuristic)",0.7288043480132896,,,0.5523453381158199,,fail,theory/meanfield_predictions.json P3_decay_M2.<r>.primary,
+a,on,real,0.125,1.3194722535351038,1.3000319732446355,1.3437689337636283,meanfield,"bracket [cutoff, AL-chain adiabatic]",,0.3222573486360185,1.2800665559619184,,3.9721873259986418,fails,P3 primary.on / chain_AL_mode.frozen_kcal.on_adiabatic,
+a,on,real,0.125,1.3194722535351038,1.3000319732446355,1.3437689337636283,meanfield,"bracket [cutoff, AL-chain frozen]",,0.3222573486360185,2.737392733511579,,8.494430755723105,holds,P3 primary.on / chain_AL_mode.frozen_kcal.on_frozen,
+a,D,real,0.125,11.574523297914883,11.419,11.629,meanfield,CQMF PR = N/4,22.668251571989234,,,1.9584609221939062,,fail,P3 primary.D,
+a,S,real,0.25,1.099806010611955,1.0858826337737668,1.132565585663432,meanfield,"CQMF equal-size (A1, heuristic)",0.706226669383457,,,0.6421374884017026,,fail,theory/meanfield_predictions.json P3_decay_M2.<r>.primary,
+a,S,real,0.25,1.099806010611955,1.0858826337737668,1.132565585663432,stochastic,single mode 2-D chain (CAL),1.3233819018147086,,,1.2032866605978552,,fail,theory/stochastic_onset.json models.M2.boundaries.single_*_lt_2D,pre-registered primary
+a,S,real,0.25,1.099806010611955,1.0858826337737668,1.132565585663432,stochastic,"bracket [pooled F, single 2-D]",,0.627878677915782,1.3233819018147086,,2.1077032050325735,holds,stochastic_onset.json pooled_* / single_*,
+a,on,real,0.25,1.3312749417510852,1.304867439448342,1.3561137284195277,meanfield,"CQMF equal-size (A1, heuristic)",0.8334315504312262,,,0.6260401396386058,,fail,theory/meanfield_predictions.json P3_decay_M2.<r>.primary,
+a,on,real,0.25,1.3312749417510852,1.304867439448342,1.3561137284195277,meanfield,"bracket [cutoff, AL-chain adiabatic]",,0.32224029261909515,1.2834805233233526,,3.9829920488574455,fails,P3 primary.on / chain_AL_mode.frozen_kcal.on_adiabatic,
+a,on,real,0.25,1.3312749417510852,1.304867439448342,1.3561137284195277,meanfield,"bracket [cutoff, AL-chain frozen]",,0.32224029261909515,2.711278642709311,,8.41384117632423,holds,P3 primary.on / chain_AL_mode.frozen_kcal.on_frozen,
+a,on,real,0.25,1.3312749417510852,1.304867439448342,1.3561137284195277,stochastic,single mode 2-D chain (CAL),1.8713835279616982,,,1.4057077687499955,,fail,theory/stochastic_onset.json models.M2.boundaries.single_*_lt_2D,pre-registered primary
+a,on,real,0.25,1.3312749417510852,1.304867439448342,1.3561137284195277,stochastic,"bracket [pooled F, single 2-D]",,0.9175850137188827,1.8713835279616982,,2.0394660984895157,holds,stochastic_onset.json pooled_* / single_*,
+a,D,real,0.25,13.072897052931488,12.9728,13.2114,meanfield,CQMF PR = N/4,,,,,,fail (theory: none <= 30),P3 primary.D,
+a,S,real,0.375,1.1408072965292528,1.1140066339937642,1.1933223645429618,meanfield,"CQMF equal-size (A1, heuristic)",0.7747532457294861,,,0.6791271830804071,,fail,theory/meanfield_predictions.json P3_decay_M2.<r>.primary,
+a,on,real,0.375,1.3823332293383381,1.3524443677376357,1.4267281125344462,meanfield,"CQMF equal-size (A1, heuristic)",0.945301678122707,,,0.6838450078894373,,fail,theory/meanfield_predictions.json P3_decay_M2.<r>.primary,
+a,on,real,0.375,1.3823332293383381,1.3524443677376357,1.4267281125344462,meanfield,"bracket [cutoff, AL-chain adiabatic]",,0.3221729792255346,1.2913336097018377,,4.008199610054355,fails,P3 primary.on / chain_AL_mode.frozen_kcal.on_adiabatic,
+a,on,real,0.375,1.3823332293383381,1.3524443677376357,1.4267281125344462,meanfield,"bracket [cutoff, AL-chain frozen]",,0.3221729792255346,2.704008698001332,,8.393033781111768,holds,P3 primary.on / chain_AL_mode.frozen_kcal.on_frozen,
+a,D,real,0.375,13.74487908924936,13.7018,13.9538,meanfield,CQMF PR = N/4,,,,,,fail (theory: none <= 30),P3 primary.D,
+a,S,real,0.5,1.1822589442889926,1.163125756658306,1.2164574865946258,meanfield,"CQMF equal-size (A1, heuristic)",0.8339795320581392,,,0.7054119032778325,,fail,theory/meanfield_predictions.json P3_decay_M2.<r>.primary,
+a,S,real,0.5,1.1822589442889926,1.163125756658306,1.2164574865946258,stochastic,single mode 2-D chain (CAL),1.4635435010252558,,,1.2379212761257028,,fail,theory/stochastic_onset.json models.M2.boundaries.single_*_lt_2D,pre-registered primary
+a,S,real,0.5,1.1822589442889926,1.163125756658306,1.2164574865946258,stochastic,"bracket [pooled F, single 2-D]",,0.6582317793277732,1.4635435010252558,,2.223447039460654,holds,stochastic_onset.json pooled_* / single_*,
+a,on,real,0.5,1.4332402406451292,1.3999573082167536,1.45625,meanfield,"CQMF equal-size (A1, heuristic)",1.0455300441270048,,,0.7294869446704841,,fail,theory/meanfield_predictions.json P3_decay_M2.<r>.primary,
+a,on,real,0.5,1.4332402406451292,1.3999573082167536,1.45625,meanfield,"bracket [cutoff, AL-chain adiabatic]",,0.32205852862673257,1.3100689638880085,,4.067797767921821,fails,P3 primary.on / chain_AL_mode.frozen_kcal.on_adiabatic,
+a,on,real,0.5,1.4332402406451292,1.3999573082167536,1.45625,meanfield,"bracket [cutoff, AL-chain frozen]",,0.32205852862673257,2.719578008147806,,8.4443595384484,holds,P3 primary.on / chain_AL_mode.frozen_kcal.on_frozen,
+a,on,real,0.5,1.4332402406451292,1.3999573082167536,1.45625,stochastic,single mode 2-D chain (CAL),2.0803592158697692,,,1.451507679503444,,fail,theory/stochastic_onset.json models.M2.boundaries.single_*_lt_2D,pre-registered primary
+a,on,real,0.5,1.4332402406451292,1.3999573082167536,1.45625,stochastic,"bracket [pooled F, single 2-D]",,0.960247871778454,2.0803592158697692,,2.1664814648500927,holds,stochastic_onset.json pooled_* / single_*,
+a,D,real,0.5,14.08004171343703,13.9538,14.2105,meanfield,CQMF PR = N/4,,,,,,fail (theory: none <= 30),P3 primary.D,
+a,S,real,0.625,1.2170411422592513,1.187869936676168,1.23596,meanfield,"CQMF equal-size (A1, heuristic)",0.8828049613874804,,,0.7253698586957279,,fail,theory/meanfield_predictions.json P3_decay_M2.<r>.primary,
+a,on,real,0.625,1.4714421477434718,1.4496517059922427,1.4967484554363197,meanfield,"CQMF equal-size (A1, heuristic)",1.1187575213818697,,,0.7603136304730287,,fail,theory/meanfield_predictions.json P3_decay_M2.<r>.primary,
+a,on,real,0.625,1.4714421477434718,1.4496517059922427,1.4967484554363197,meanfield,"bracket [cutoff, AL-chain adiabatic]",,0.3218714305990021,1.3331064109612678,,4.141735749831414,fails,P3 primary.on / chain_AL_mode.frozen_kcal.on_adiabatic,
+a,on,real,0.625,1.4714421477434718,1.4496517059922427,1.4967484554363197,meanfield,"bracket [cutoff, AL-chain frozen]",,0.3218714305990021,2.7447122082236195,,8.527355792701812,holds,P3 primary.on / chain_AL_mode.frozen_kcal.on_frozen,
+a,D,real,0.625,14.19483058824502,13.9538,14.2105,meanfield,CQMF PR = N/4,,,,,,fail (theory: none <= 30),P3 primary.D,
+a,S,real,0.75,1.2087992482117453,1.1859415148205488,1.2365390746221552,meanfield,"CQMF equal-size (A1, heuristic)",0.9168193725833043,,,0.7584546184485259,,fail,theory/meanfield_predictions.json P3_decay_M2.<r>.primary,
+a,on,real,0.75,1.500966976804081,1.455297986113964,1.5325326721516137,meanfield,"CQMF equal-size (A1, heuristic)",1.1746300723408791,,,0.7825822223230711,,fail,theory/meanfield_predictions.json P3_decay_M2.<r>.primary,
+a,on,real,0.75,1.500966976804081,1.455297986113964,1.5325326721516137,meanfield,"bracket [cutoff, AL-chain adiabatic]",,0.2742017880624725,1.362816282894346,,4.970121794332902,fails,P3 primary.on / chain_AL_mode.frozen_kcal.on_adiabatic,
+a,on,real,0.75,1.500966976804081,1.455297986113964,1.5325326721516137,meanfield,"bracket [cutoff, AL-chain frozen]",,0.2742017880624725,2.782753667282513,,10.148561345808975,holds,P3 primary.on / chain_AL_mode.frozen_kcal.on_frozen,
+a,D,real,0.75,14.197595508408062,13.9538,14.2105,meanfield,CQMF PR = N/4,,,,,,fail (theory: none <= 30),P3 primary.D,
+a,S,real,0.875,1.2401634347399029,1.2274683773382928,1.25869,meanfield,"CQMF equal-size (A1, heuristic)",0.9395990521524402,,,0.757641312291634,,fail,theory/meanfield_predictions.json P3_decay_M2.<r>.primary,
+a,on,real,0.875,1.5057217366605642,1.48304,1.5687001282006525,meanfield,"CQMF equal-size (A1, heuristic)",1.2100860032593999,,,0.8036584541464917,,fail,theory/meanfield_predictions.json P3_decay_M2.<r>.primary,
+a,on,real,0.875,1.5057217366605642,1.48304,1.5687001282006525,meanfield,"bracket [cutoff, AL-chain adiabatic]",,0.27418289864351103,1.3901545772955888,,5.070172443916896,fails,P3 primary.on / chain_AL_mode.frozen_kcal.on_adiabatic,
+a,on,real,0.875,1.5057217366605642,1.48304,1.5687001282006525,meanfield,"bracket [cutoff, AL-chain frozen]",,0.27418289864351103,2.8188630457543438,,10.280958658254583,holds,P3 primary.on / chain_AL_mode.frozen_kcal.on_frozen,
+a,D,real,0.875,14.04387160504611,13.9538,14.2105,meanfield,CQMF PR = N/4,,,,,,fail (theory: none <= 30),P3 primary.D,
+a,S,real,1,1.210267444273344,1.19172,1.2594764179397178,meanfield,"CQMF equal-size (A1, heuristic)",0.953710917662834,,,0.7880166670396154,,fail,theory/meanfield_predictions.json P3_decay_M2.<r>.primary,
+a,S,real,1,1.210267444273344,1.19172,1.2594764179397178,stochastic,single mode 2-D chain (CAL),1.7400267135323553,,,1.43772082919828,,fail,theory/stochastic_onset.json models.M2.boundaries.single_*_lt_2D,pre-registered primary
+a,S,real,1,1.210267444273344,1.19172,1.2594764179397178,stochastic,"bracket [pooled 2D, single 2-D]",,0.6737059092745123,1.7400267135323553,,2.582768964289065,holds,stochastic_onset.json pooled_* / single_*,
+a,on,real,1,1.5710050264436486,1.5378161853875356,1.5997139628522672,meanfield,"CQMF equal-size (A1, heuristic)",1.22892008939917,,,0.7822508959001419,,fail,theory/meanfield_predictions.json P3_decay_M2.<r>.primary,
+a,on,real,1,1.5710050264436486,1.5378161853875356,1.5997139628522672,meanfield,"bracket [cutoff, AL-chain adiabatic]",,0.27416414895607316,1.3936736850701428,,5.083354954966918,fails,P3 primary.on / chain_AL_mode.frozen_kcal.on_adiabatic,
+a,on,real,1,1.5710050264436486,1.5378161853875356,1.5997139628522672,meanfield,"bracket [cutoff, AL-chain frozen]",,0.27416414895607316,2.8156178357571893,,10.26982501715901,holds,P3 primary.on / chain_AL_mode.frozen_kcal.on_frozen,
+a,on,real,1,1.5710050264436486,1.5378161853875356,1.5997139628522672,stochastic,single mode 2-D chain (CAL),2.4902303388278364,,,1.5851192688193223,,fail,theory/stochastic_onset.json models.M2.boundaries.single_*_lt_2D,pre-registered primary
+a,on,real,1,1.5710050264436486,1.5378161853875356,1.5997139628522672,stochastic,"bracket [pooled 2D, single 2-D]",,0.8764337632460386,2.4902303388278364,,2.841321778390641,holds,stochastic_onset.json pooled_* / single_*,
+a,D,real,1,13.87706896365452,13.7018,13.9538,meanfield,CQMF PR = N/4,,,,,,fail (theory: none <= 30),P3 primary.D,
+a,S,real,1.25,1.2824397373431609,1.2620325067259417,1.3113138758238,meanfield,"CQMF equal-size (A1, heuristic)",0.96595658647383,,,0.7532179160909415,,fail,theory/meanfield_predictions.json P3_decay_M2.<r>.primary,
+a,on,real,1.25,1.5899109726804244,1.56638,1.6311104189405514,meanfield,"CQMF equal-size (A1, heuristic)",1.2401793107215995,,,0.7800306633715385,,fail,theory/meanfield_predictions.json P3_decay_M2.<r>.primary,
+a,on,real,1.25,1.5899109726804244,1.56638,1.6311104189405514,meanfield,"bracket [cutoff, AL-chain adiabatic]",,0.2741087161572324,1.423865182970434,,5.1945272041392725,fails,P3 primary.on / chain_AL_mode.frozen_kcal.on_adiabatic,
+a,on,real,1.25,1.5899109726804244,1.56638,1.6311104189405514,meanfield,"bracket [cutoff, AL-chain frozen]",,0.2741087161572324,2.8515241853882483,,10.402894973075485,holds,P3 primary.on / chain_AL_mode.frozen_kcal.on_frozen,
+a,D,real,1.25,13.404737695477618,13.2114,13.4544,meanfield,CQMF PR = N/4,,,,,,fail (theory: none <= 30),P3 primary.D,
+a,S,real,1.5,1.3069657724253911,1.2559920817731784,1.3295661420174343,meanfield,"CQMF equal-size (A1, heuristic)",0.9662133381601374,,,0.7392797566282817,,fail,theory/meanfield_predictions.json P3_decay_M2.<r>.primary,
+a,on,real,1.5,1.6439981142629503,1.6217575377077262,1.666255632389373,meanfield,"CQMF equal-size (A1, heuristic)",1.2353438673521497,,,0.7514265719860563,,fail,theory/meanfield_predictions.json P3_decay_M2.<r>.primary,
+a,on,real,1.5,1.6439981142629503,1.6217575377077262,1.666255632389373,meanfield,"bracket [cutoff, AL-chain adiabatic]",,0.27403663216596585,1.501753958861776,,5.480121204935343,fails,P3 primary.on / chain_AL_mode.frozen_kcal.on_adiabatic,
+a,on,real,1.5,1.6439981142629503,1.6217575377077262,1.666255632389373,meanfield,"bracket [cutoff, AL-chain frozen]",,0.27403663216596585,2.9750744262680824,,10.856484415070014,holds,P3 primary.on / chain_AL_mode.frozen_kcal.on_frozen,
+a,D,real,1.5,12.851422636527081,12.7385,12.9728,meanfield,CQMF PR = N/4,,,,,,fail (theory: none <= 30),P3 primary.D,
+a,S,real,1.75,1.3211555673257471,1.3024348056080897,1.3463430340988873,meanfield,"CQMF equal-size (A1, heuristic)",0.9649195846561597,,,0.7303603061744862,,fail,theory/meanfield_predictions.json P3_decay_M2.<r>.primary,
+a,on,real,1.75,1.7203509037817457,1.6836294157715015,1.7513538523355672,meanfield,"CQMF equal-size (A1, heuristic)",1.2301264396576992,,,0.7150439116540613,,fail,theory/meanfield_predictions.json P3_decay_M2.<r>.primary,
+a,on,real,1.75,1.7203509037817457,1.6836294157715015,1.7513538523355672,meanfield,"bracket [cutoff, AL-chain adiabatic]",,0.27394928792418466,1.5100550355785232,,5.512169960435999,fails,P3 primary.on / chain_AL_mode.frozen_kcal.on_adiabatic,
+a,on,real,1.75,1.7203509037817457,1.6836294157715015,1.7513538523355672,meanfield,"bracket [cutoff, AL-chain frozen]",,0.27394928792418466,2.976785613743068,,10.866192193085357,holds,P3 primary.on / chain_AL_mode.frozen_kcal.on_frozen,
+a,D,real,1.75,12.377281128805622,12.2826,12.5085,meanfield,CQMF PR = N/4,29.243816519734597,,,2.362701163155737,,fail,P3 primary.D,
+a,S,real,2,1.3425411420991453,1.3228097418348816,1.3635228481267627,meanfield,"CQMF equal-size (A1, heuristic)",0.962202357916026,,,0.7167023249742378,,fail,theory/meanfield_predictions.json P3_decay_M2.<r>.primary,
+a,S,real,2,1.3425411420991453,1.3228097418348816,1.3635228481267627,stochastic,single mode 2-D chain (CAL),2.167290831902698,,,1.614319862491518,,fail,theory/stochastic_onset.json models.M2.boundaries.single_*_lt_2D,pre-registered primary
+a,S,real,2,1.3425411420991453,1.3228097418348816,1.3635228481267627,stochastic,"bracket [pooled F, single 2-D]",,0.784029324010023,2.167290831902698,,2.764298178055125,holds,stochastic_onset.json pooled_* / single_*,
+a,on,real,2,1.7216114012104105,1.701724160131673,1.74738,meanfield,"CQMF equal-size (A1, heuristic)",1.2225950514199673,,,0.7101457684123138,,fail,theory/meanfield_predictions.json P3_decay_M2.<r>.primary,
+a,on,real,2,1.7216114012104105,1.701724160131673,1.74738,meanfield,"bracket [cutoff, AL-chain adiabatic]",,0.27384823544685616,1.533283898810198,,5.59902785682821,fails,P3 primary.on / chain_AL_mode.frozen_kcal.on_adiabatic,
+a,on,real,2,1.7216114012104105,1.701724160131673,1.74738,meanfield,"bracket [cutoff, AL-chain frozen]",,0.27384823544685616,3.006739250701138,,10.979582343464234,holds,P3 primary.on / chain_AL_mode.frozen_kcal.on_frozen,
+a,on,real,2,1.7216114012104105,1.701724160131673,1.74738,stochastic,single mode 2-D chain (CAL),3.0897399127806557,,,1.7946790492955365,,fail,theory/stochastic_onset.json models.M2.boundaries.single_*_lt_2D,pre-registered primary
+a,on,real,2,1.7216114012104105,1.701724160131673,1.74738,stochastic,"bracket [pooled F, single 2-D]",,1.1475568940750198,3.0897399127806557,,2.692450307896167,holds,stochastic_onset.json pooled_* / single_*,
+a,D,real,2,11.868146770598164,11.8429,12.0607,meanfield,CQMF PR = N/4,19.570517467802603,,,1.6489952345623236,,fail,P3 primary.D,
+a,S,real,2.25,1.349198724244002,1.329127954168558,1.3806131593275865,meanfield,"CQMF equal-size (A1, heuristic)",0.9598637287845284,,,0.711432431365787,,fail,theory/meanfield_predictions.json P3_decay_M2.<r>.primary,
+a,on,real,2.25,1.790172737091074,1.7297744195458318,1.823636131378946,meanfield,"CQMF equal-size (A1, heuristic)",1.2157915766947838,,,0.6791476327979242,,fail,theory/meanfield_predictions.json P3_decay_M2.<r>.primary,
+a,on,real,2.25,1.790172737091074,1.7297744195458318,1.823636131378946,meanfield,"bracket [cutoff, AL-chain adiabatic]",,0.2737351034549237,1.577958416782065,,5.764545346453564,fails,P3 primary.on / chain_AL_mode.frozen_kcal.on_adiabatic,
+a,on,real,2.25,1.790172737091074,1.7297744195458318,1.823636131378946,meanfield,"bracket [cutoff, AL-chain frozen]",,0.2737351034549237,3.0756923453475764,,11.236017253644103,holds,P3 primary.on / chain_AL_mode.frozen_kcal.on_frozen,
+a,D,real,2.25,11.388518157069136,11.2128,11.419,meanfield,CQMF PR = N/4,15.2017960102641,,,1.3348352964453034,,fail,P3 primary.D,
+a,S,real,2.5,1.3742565947084175,1.349310950571492,1.4105474907563926,meanfield,"CQMF equal-size (A1, heuristic)",0.9579709227401096,,,0.6970830094094377,,fail,theory/meanfield_predictions.json P3_decay_M2.<r>.primary,
+a,on,real,2.5,1.778766313121542,1.74738,1.8465600817357948,meanfield,"CQMF equal-size (A1, heuristic)",1.209891048910744,,,0.6801854970974328,,fail,theory/meanfield_predictions.json P3_decay_M2.<r>.primary,
+a,on,real,2.5,1.778766313121542,1.74738,1.8465600817357948,meanfield,"bracket [cutoff, AL-chain adiabatic]",,0.2736115236823247,1.653724896389071,,6.044061573624069,fails,P3 primary.on / chain_AL_mode.frozen_kcal.on_adiabatic,
+a,on,real,2.5,1.778766313121542,1.74738,1.8465600817357948,meanfield,"bracket [cutoff, AL-chain frozen]",,0.2736115236823247,3.205209274223206,,11.714452779936995,holds,P3 primary.on / chain_AL_mode.frozen_kcal.on_frozen,
+a,D,real,2.5,11.009339118628455,10.8115,11.0103,meanfield,CQMF PR = N/4,11.250415779128373,,,1.0218974688582352,,agree,P3 primary.D,
+a,S,real,2.75,1.4015339395211504,1.3773239577829983,1.4360449202921726,meanfield,"CQMF equal-size (A1, heuristic)",0.9576949085541647,,,0.6833190988449211,,fail,theory/meanfield_predictions.json P3_decay_M2.<r>.primary,
+a,on,real,2.75,1.8229014746353651,1.776171092311144,1.84558,meanfield,"CQMF equal-size (A1, heuristic)",1.205196780669384,,,0.6611420295825146,,fail,theory/meanfield_predictions.json P3_decay_M2.<r>.primary,
+a,on,real,2.75,1.8229014746353651,1.776171092311144,1.84558,meanfield,"bracket [cutoff, AL-chain adiabatic]",,0.27347907224065665,1.642428160872704,,6.005681339402076,fails,P3 primary.on / chain_AL_mode.frozen_kcal.on_adiabatic,
+a,on,real,2.75,1.8229014746353651,1.776171092311144,1.84558,meanfield,"bracket [cutoff, AL-chain frozen]",,0.27347907224065665,3.172546347930427,,11.600691496929766,holds,P3 primary.on / chain_AL_mode.frozen_kcal.on_frozen,
+a,D,real,2.75,10.622352475404794,10.6162,10.8115,meanfield,CQMF PR = N/4,9.638510534700425,,,0.9073800325321179,,agree,P3 primary.D,
+a,S,real,3,1.4196979273849852,1.3989986586283207,1.4427456800673657,meanfield,"CQMF equal-size (A1, heuristic)",0.9579484117583332,,,0.6747550963343504,,fail,theory/meanfield_predictions.json P3_decay_M2.<r>.primary,
+a,on,real,3,1.8328563981447081,1.81225,1.8562627417634825,meanfield,"CQMF equal-size (A1, heuristic)",1.2027309013614877,,,0.6562057467125854,,fail,theory/meanfield_predictions.json P3_decay_M2.<r>.primary,
+a,on,real,3,1.8328563981447081,1.81225,1.8562627417634825,meanfield,"bracket [cutoff, AL-chain adiabatic]",,0.27331211101766184,1.6803190490394042,,6.147986061732989,fails,P3 primary.on / chain_AL_mode.frozen_kcal.on_adiabatic,
+a,on,real,3,1.8328563981447081,1.81225,1.8562627417634825,meanfield,"bracket [cutoff, AL-chain frozen]",,0.27331211101766184,3.2337910812540263,,11.831861636914633,holds,P3 primary.on / chain_AL_mode.frozen_kcal.on_frozen,
+a,D,real,3,10.333664879951963,10.2362,10.4245,meanfield,CQMF PR = N/4,8.362792538325527,,,0.8092765379444357,,fail,P3 primary.D,
+a,S,real,3.5,1.4599579435770413,1.4063514810903937,1.48304,meanfield,"CQMF equal-size (A1, heuristic)",0.9593614916348714,,,0.6571158408058939,,fail,theory/meanfield_predictions.json P3_decay_M2.<r>.primary,
+a,on,real,3.5,1.9292864926368933,1.8842468722475052,1.9537834283894222,meanfield,"CQMF equal-size (A1, heuristic)",1.2022957288452365,,,0.6231815406544278,,fail,theory/meanfield_predictions.json P3_decay_M2.<r>.primary,
+a,on,real,3.5,1.9292864926368933,1.8842468722475052,1.9537834283894222,meanfield,"bracket [cutoff, AL-chain adiabatic]",,0.2331112821002884,1.7205708015434669,,7.380898882462705,fails,P3 primary.on / chain_AL_mode.frozen_kcal.on_adiabatic,
+a,on,real,3.5,1.9292864926368933,1.8842468722475052,1.9537834283894222,meanfield,"bracket [cutoff, AL-chain frozen]",,0.2331112821002884,3.2885524123925602,,14.107221163915051,holds,P3 primary.on / chain_AL_mode.frozen_kcal.on_frozen,
+a,D,real,3.5,9.708164235876861,9.69156,9.86981,meanfield,CQMF PR = N/4,7.200148664110268,,,0.7416591323725104,,fail,P3 primary.D,
+a,S,real,4,1.4733583072618768,1.4517067173349294,1.5151021108720821,meanfield,"CQMF equal-size (A1, heuristic)",0.9612243675625747,,,0.652403670461489,,fail,theory/meanfield_predictions.json P3_decay_M2.<r>.primary,
+a,S,real,4,1.4733583072618768,1.4517067173349294,1.5151021108720821,stochastic,single mode 2-D chain (CAL),2.6898129958823924,,,1.8256339836853421,,fail,theory/stochastic_onset.json models.M2.boundaries.single_*_lt_2D,pre-registered primary
+a,S,real,4,1.4733583072618768,1.4517067173349294,1.5151021108720821,stochastic,"bracket [pooled 2D, single 2-D]",,0.8072014906720579,2.6898129958823924,,3.3322696092185287,holds,stochastic_onset.json pooled_* / single_*,
+a,on,real,4,1.9422301930966004,1.910788383675967,1.9683949014805637,meanfield,"CQMF equal-size (A1, heuristic)",1.2043913997646627,,,0.62010744351803,,fail,theory/meanfield_predictions.json P3_decay_M2.<r>.primary,
+a,on,real,4,1.9422301930966004,1.910788383675967,1.9683949014805637,meanfield,"bracket [cutoff, AL-chain adiabatic]",,0.2330920411173402,1.8254932663047054,,7.831641344569715,fails,P3 primary.on / chain_AL_mode.frozen_kcal.on_adiabatic,
+a,on,real,4,1.9422301930966004,1.910788383675967,1.9683949014805637,meanfield,"bracket [cutoff, AL-chain frozen]",,0.2330920411173402,3.464246533300794,,14.862139937059744,holds,P3 primary.on / chain_AL_mode.frozen_kcal.on_frozen,
+a,on,real,4,1.9422301930966004,1.910788383675967,1.9683949014805637,stochastic,single mode 2-D chain (CAL),3.9659489081079835,,,2.041956160605691,,fail,theory/stochastic_onset.json models.M2.boundaries.single_*_lt_2D,pre-registered primary
+a,on,real,4,1.9422301930966004,1.910788383675967,1.9683949014805637,stochastic,"bracket [pooled 2D, single 2-D]",,1.0635569053048253,3.9659489081079835,,3.7289484825180144,holds,stochastic_onset.json pooled_* / single_*,
+a,D,real,4,9.288702508983057,9.1759,9.34466,meanfield,CQMF PR = N/4,6.377397839004551,,,0.68657574433426,,fail,P3 primary.D,
+a,S,real,4.5,1.5399398072802601,1.4922580850652358,1.56638,meanfield,"CQMF equal-size (A1, heuristic)",0.9631876573578669,,,0.625470978024125,,fail,theory/meanfield_predictions.json P3_decay_M2.<r>.primary,
+a,on,real,4.5,1.989236415741816,1.9415541442097588,2.02166,meanfield,"CQMF equal-size (A1, heuristic)",1.2067599745994406,,,0.6066448236367228,,fail,theory/meanfield_predictions.json P3_decay_M2.<r>.primary,
+a,on,real,4.5,1.989236415741816,1.9415541442097588,2.02166,meanfield,"bracket [cutoff, AL-chain adiabatic]",,0.2330920411173402,1.8511339638218176,,7.941643802801244,fails,P3 primary.on / chain_AL_mode.frozen_kcal.on_adiabatic,
+a,on,real,4.5,1.989236415741816,1.9415541442097588,2.02166,meanfield,"bracket [cutoff, AL-chain frozen]",,0.2330920411173402,3.4970576083368403,,15.002904395935152,holds,P3 primary.on / chain_AL_mode.frozen_kcal.on_frozen,
+a,D,real,4.5,8.86979001635902,8.84747,9.01019,meanfield,CQMF PR = N/4,5.762877896766663,,,0.6497197663234286,,fail,P3 primary.D,
+a,S,real,5,1.567346702877522,1.5203408407852985,1.59519,meanfield,"CQMF equal-size (A1, heuristic)",0.9651738163744391,,,0.6158010953176204,,fail,theory/meanfield_predictions.json P3_decay_M2.<r>.primary,
+a,on,real,5,2.0004022243523942,1.9488169997729452,2.0342084077528937,meanfield,"CQMF equal-size (A1, heuristic)",1.2091744049286814,,,0.6044656370646343,,fail,theory/meanfield_predictions.json P3_decay_M2.<r>.primary,
+a,on,real,5,2.0004022243523942,1.9488169997729452,2.0342084077528937,meanfield,"bracket [cutoff, AL-chain adiabatic]",,0.2330920411173402,1.9346451003030256,,8.299919169394169,fails,P3 primary.on / chain_AL_mode.frozen_kcal.on_adiabatic,
+a,on,real,5,2.0004022243523942,1.9488169997729452,2.0342084077528937,meanfield,"bracket [cutoff, AL-chain frozen]",,0.2330920411173402,3.635163340909837,,15.595398811063953,holds,P3 primary.on / chain_AL_mode.frozen_kcal.on_frozen,
+a,D,real,5,8.546855985651023,8.53078,8.68768,meanfield,CQMF PR = N/4,5.574430138910323,,,0.6522199681694664,,fail,P3 primary.D,
+a,S,real,5.5,1.5477957980902415,1.505669349349247,1.5797072341678045,meanfield,"CQMF equal-size (A1, heuristic)",0.9670695987082132,,,0.6248043830468067,,fail,theory/meanfield_predictions.json P3_decay_M2.<r>.primary,
+a,on,real,5.5,2.0026321655116672,1.9778749827246944,2.0502111659751407,meanfield,"CQMF equal-size (A1, heuristic)",1.2116007300114193,,,0.6050041295036618,,fail,theory/meanfield_predictions.json P3_decay_M2.<r>.primary,
+a,on,real,5.5,2.0026321655116672,1.9778749827246944,2.0502111659751407,meanfield,"bracket [cutoff, AL-chain adiabatic]",,0.2331112821002884,2.049939427389526,,8.793823314427174,holds,P3 primary.on / chain_AL_mode.frozen_kcal.on_adiabatic,
+a,on,real,5.5,2.0026321655116672,1.9778749827246944,2.0502111659751407,meanfield,"bracket [cutoff, AL-chain frozen]",,0.2331112821002884,3.84067706192804,,16.475723642906807,holds,P3 primary.on / chain_AL_mode.frozen_kcal.on_frozen,
+a,D,real,5.5,8.284415720741688,8.22544,8.37672,meanfield,CQMF PR = N/4,5.378638366914172,,,0.6492477620899296,,fail,P3 primary.D,
+a,S,real,6,1.5567553414209276,1.53809,1.5953584368681457,meanfield,"CQMF equal-size (A1, heuristic)",0.9689987690506611,,,0.6224476918551685,,fail,theory/meanfield_predictions.json P3_decay_M2.<r>.primary,
+a,S,real,6,1.5567553414209276,1.53809,1.5953584368681457,stochastic,single mode 2-D chain (CAL),3.0835224265602053,,,1.98073669286127,,fail,theory/stochastic_onset.json models.M2.boundaries.single_*_lt_2D,pre-registered primary
+a,S,real,6,1.5567553414209276,1.53809,1.5953584368681457,stochastic,"bracket [pooled F, single 2-D]",,0.9282282936450501,3.0835224265602053,,3.3219440170817816,holds,stochastic_onset.json pooled_* / single_*,
+a,on,real,6,2.018157276778613,1.98515,2.100489333624019,meanfield,"CQMF equal-size (A1, heuristic)",1.2138679314421186,,,0.6014734061656964,,fail,theory/meanfield_predictions.json P3_decay_M2.<r>.primary,
+a,on,real,6,2.018157276778613,1.98515,2.100489333624019,meanfield,"bracket [cutoff, AL-chain adiabatic]",,0.2331112821002884,2.017991164775901,,8.656771764087022,fails,P3 primary.on / chain_AL_mode.frozen_kcal.on_adiabatic,
+a,on,real,6,2.018157276778613,1.98515,2.100489333624019,meanfield,"bracket [cutoff, AL-chain frozen]",,0.2331112821002884,3.764051655662542,,16.14701623082826,holds,P3 primary.on / chain_AL_mode.frozen_kcal.on_frozen,
+a,on,real,6,2.018157276778613,1.98515,2.100489333624019,stochastic,single mode 2-D chain (CAL),4.596195520790659,,,2.277421870770705,,fail,theory/stochastic_onset.json models.M2.boundaries.single_*_lt_2D,pre-registered primary
+a,on,real,6,2.018157276778613,1.98515,2.100489333624019,stochastic,"bracket [pooled F, single 2-D]",,1.357964029180109,4.596195520790659,,3.3846224362553117,holds,stochastic_onset.json pooled_* / single_*,
+a,D,real,6,8.031635392057101,7.93102,8.07689,meanfield,CQMF PR = N/4,5.2172561996582125,,,0.6495882774780621,,fail,P3 primary.D,
+a,on,cnull,0,1.607391222299354,1.5795442403033186,1.6316292105233583,meanfield,CQMF equal-size (M1-real calibration),1.3235817033456128,,,0.8234346965340802,,fail,P8_variants_nulls decay|M2_nulltargets|r0,calibration from the real M1 graph
+a,on,cnull,0,1.607391222299354,1.5795442403033186,1.6316292105233583,meanfield,CQMF cutoff (lower bound),,1.1926492845579362,,,,holds (open above),P8 .on,
+a,D,cnull,0,1.607391222299354,1.5795442403033186,1.6316292105233583,meanfield,CQMF PR = N/4,1.2582221570618688,,,0.7827728182203191,,fail,P8 decay|M2_nulltargets|r0.D,
+a,on,wnull,0,1.5088854574654493,1.4807566482423786,1.561360405131844,meanfield,CQMF equal-size (M1-real calibration),1.1253712159860954,,,0.745829453400948,,fail,P8_variants_nulls decay|M2_nullweights|r0,calibration from the real M1 graph
+a,on,wnull,0,1.5088854574654493,1.4807566482423786,1.561360405131844,meanfield,CQMF cutoff (lower bound),,1.0132139447108544,,,,holds (open above),P8 .on,
+a,D,wnull,0,2.7694194455202386,2.75588,2.80657,meanfield,CQMF PR = N/4,2.6530401227139104,,,0.9579769965887323,,agree,P8 decay|M2_nullweights|r0.D,
+a,S,M2s,0,1.0253769874506304,1.01144,1.0513030455639754,meanfield,CQMF equal-size,0.5861277739558565,,,0.5716217363265891,,fail,P8 decay|M2s|r0,
+a,on,M2s,0,1.2547362448351214,1.2342369345078084,1.2700915497977876,meanfield,CQMF equal-size,0.6441139950909863,,,0.5133461297084202,,fail,P8 decay|M2s|r0,
+a,D,M2s,0,6.294853947032125,6.25798,6.37308,meanfield,CQMF PR = N/4,6.078777603232541,,,0.9656741291191578,,agree,P8 decay|M2s|r0.D,
+a,on,cnull,0.25,1.4793565846282704,1.4504786322792125,1.5134848612631304,meanfield,CQMF equal-size (M1-real calibration),1.3257650418379487,,,0.8961767944346455,,fail,P8_variants_nulls decay|M2_nulltargets|r0.25,calibration from the real M1 graph
+a,on,cnull,0.25,1.4793565846282704,1.4504786322792125,1.5134848612631304,meanfield,CQMF cutoff (lower bound),,1.1908332498597074,,,,holds (open above),P8 .on,
+a,D,cnull,0.25,1.4793565846282704,1.4504786322792125,1.5134848612631304,meanfield,CQMF PR = N/4,1.24458022301066,,,0.8412983292485872,,fail,P8 decay|M2_nulltargets|r0.25.D,
+a,on,wnull,0.25,1.4289144209961855,1.40413,1.4859257172988187,meanfield,CQMF equal-size (M1-real calibration),1.1267414149566715,,,0.7885296686775333,,fail,P8_variants_nulls decay|M2_nullweights|r0.25,calibration from the real M1 graph
+a,on,wnull,0.25,1.4289144209961855,1.40413,1.4859257172988187,meanfield,CQMF cutoff (lower bound),,1.012887990943422,,,,holds (open above),P8 .on,
+a,D,wnull,0.25,4.049299456538344,4.04087,4.11519,meanfield,CQMF PR = N/4,,,,,,fail (theory: none <= 30),P8 decay|M2_nullweights|r0.25.D,
+a,S,M2s,0.25,1.1485760256932545,1.12831,1.1723832206374207,meanfield,CQMF equal-size,0.7401578590034107,,,0.6444134671509169,,fail,P8 decay|M2s|r0.25,
+a,on,M2s,0.25,1.3924515748185844,1.373096070558745,1.4319426013624892,meanfield,CQMF equal-size,0.8719739828320018,,,0.6262149424805721,,fail,P8 decay|M2s|r0.25,
+a,D,M2s,0.25,13.005194191589949,12.9728,13.2114,meanfield,CQMF PR = N/4,,,,,,fail (theory: none <= 30),P8 decay|M2s|r0.25.D,
+a,on,cnull,0.5,1.4377332914765215,1.4113136135543782,1.4584529663789585,meanfield,CQMF equal-size (M1-real calibration),1.1276452827271728,,,0.7843216049960873,,fail,P8_variants_nulls decay|M2_nulltargets|r0.5,calibration from the real M1 graph
+a,on,cnull,0.5,1.4377332914765215,1.4113136135543782,1.4584529663789585,meanfield,CQMF cutoff (lower bound),,1.0156821993837637,,,,holds (open above),P8 .on,
+a,D,cnull,0.5,1.4377332914765215,1.4113136135543782,1.4584529663789585,meanfield,CQMF PR = N/4,1.0492036621682193,,,0.7297623755312151,,fail,P8 decay|M2_nulltargets|r0.5.D,
+a,on,wnull,0.5,1.4147789602716887,1.39879803504818,1.4370049134556677,meanfield,CQMF equal-size (M1-real calibration),1.1276595327412062,,,0.7970570417054088,,fail,P8_variants_nulls decay|M2_nullweights|r0.5,calibration from the real M1 graph
+a,on,wnull,0.5,1.4147789602716887,1.39879803504818,1.4370049134556677,meanfield,CQMF cutoff (lower bound),,1.0112212123362068,,,,holds (open above),P8 .on,
+a,D,wnull,0.5,4.440848647807643,4.4264,4.50781,meanfield,CQMF PR = N/4,,,,,,fail (theory: none <= 30),P8 decay|M2_nullweights|r0.5.D,
+a,S,M2s,0.5,1.2039089350790853,1.144502482493478,1.2177597024969924,meanfield,CQMF equal-size,0.8786424404976584,,,0.7298246693716415,,fail,P8 decay|M2s|r0.5,
+a,on,M2s,0.5,1.4283696338612433,1.40413,1.458683638896721,meanfield,CQMF equal-size,1.0970706458400528,,,0.7680579451093441,,fail,P8 decay|M2s|r0.5,
+a,D,M2s,0.5,13.964184687114294,13.9538,14.2105,meanfield,CQMF PR = N/4,,,,,,fail (theory: none <= 30),P8 decay|M2s|r0.5.D,
+a,on,cnull,1,1.3732229930536328,1.35387,1.3948311660800743,meanfield,CQMF equal-size (M1-real calibration),1.162949837477216,,,0.8468761762364372,,fail,P8_variants_nulls decay|M2_nulltargets|r1,calibration from the real M1 graph
+a,on,cnull,1,1.3732229930536328,1.35387,1.3948311660800743,meanfield,CQMF cutoff (lower bound),,1.0145840147725556,,,,holds (open above),P8 .on,
+a,D,cnull,1,1.3732229930536328,1.35387,1.3948311660800743,meanfield,CQMF PR = N/4,1.0420811947642998,,,0.7588579568180884,,fail,P8 decay|M2_nulltargets|r1.D,
+a,on,wnull,1,1.4218267929774258,1.4024515467488314,1.4488227692850018,meanfield,CQMF equal-size (M1-real calibration),1.1739716271431895,,,0.8256783688010221,,fail,P8_variants_nulls decay|M2_nullweights|r1,calibration from the real M1 graph
+a,on,wnull,1,1.4218267929774258,1.4024515467488314,1.4488227692850018,meanfield,CQMF cutoff (lower bound),,0.8621646117090319,,,,holds (open above),P8 .on,
+a,D,wnull,1,4.795066908472746,4.76113,4.8487,meanfield,CQMF PR = N/4,,,,,,fail (theory: none <= 30),P8 decay|M2_nullweights|r1.D,
+a,S,M2s,1,1.2206483804463013,1.2071620443600009,1.2829048298733678,meanfield,CQMF equal-size,0.9989869356214375,,,0.8184068005367618,,fail,P8 decay|M2s|r1,
+a,on,M2s,1,1.5797189165341736,1.5587816210978995,1.59519,meanfield,CQMF equal-size,1.2759350220898122,,,0.8076975015841119,,fail,P8 decay|M2s|r1,
+a,D,M2s,1,13.67879096756122,13.4544,13.7018,meanfield,CQMF PR = N/4,,,,,,fail (theory: none <= 30),P8 decay|M2s|r1.D,
+a,on,cnull,2,1.3716061608415553,1.35387,1.3857139143701407,meanfield,CQMF equal-size (M1-real calibration),1.193429750120058,,,0.8700965220131583,,fail,P8_variants_nulls decay|M2_nulltargets|r2,calibration from the real M1 graph
+a,on,cnull,2,1.3716061608415553,1.35387,1.3857139143701407,meanfield,CQMF cutoff (lower bound),,1.0120035380239365,,,,holds (open above),P8 .on,
+a,D,cnull,2,1.3716061608415553,1.35387,1.3857139143701407,meanfield,CQMF PR = N/4,1.040784980521231,,,0.7588074552557074,,fail,P8 decay|M2_nulltargets|r2.D,
+a,on,wnull,2,1.4905552506409672,1.4743353811138635,1.51031,meanfield,CQMF equal-size (M1-real calibration),1.2239448299993292,,,0.8211334866473481,,fail,P8_variants_nulls decay|M2_nullweights|r2,calibration from the real M1 graph
+a,on,wnull,2,1.4905552506409672,1.4743353811138635,1.51031,meanfield,CQMF cutoff (lower bound),,0.8612591939892768,,,,holds (open above),P8 .on,
+a,D,wnull,2,5.085007959985595,5.0287,5.12118,meanfield,CQMF PR = N/4,8.774967445943739,,,1.7256546135217057,,fail,P8 decay|M2_nullweights|r2.D,
+a,S,M2s,2,1.384730835699959,1.3500576969869513,1.40413,meanfield,CQMF equal-size,1.003226516388637,,,0.7244920749392586,,fail,P8 decay|M2s|r2,
+a,on,M2s,2,1.738049529786496,1.7099151833856074,1.8136142972001275,meanfield,CQMF equal-size,1.264370594834371,,,0.727465226488504,,fail,P8 decay|M2s|r2,
+a,D,M2s,2,11.73353005562642,11.629,11.8429,meanfield,CQMF PR = N/4,18.889303741110968,,,1.6098568505437318,,fail,P8 decay|M2s|r2.D,
+a,on,cnull,4,1.4023780620122743,1.37877,1.4305767308299768,meanfield,CQMF equal-size (M1-real calibration),1.1950779254845572,,,0.8521795640255083,,fail,P8_variants_nulls decay|M2_nulltargets|r4,calibration from the real M1 graph
+a,on,cnull,4,1.4023780620122743,1.37877,1.4305767308299768,meanfield,CQMF cutoff (lower bound),,1.0117124075638813,,,,holds (open above),P8 .on,
+a,D,cnull,4,1.4023780620122743,1.37877,1.4305767308299768,meanfield,CQMF PR = N/4,1.0407411862115112,,,0.7421259747304876,,fail,P8 decay|M2_nulltargets|r4.D,
+a,on,wnull,4,1.547642747790841,1.5328981235927288,1.5742033952566203,meanfield,CQMF equal-size (M1-real calibration),1.229539215086004,,,0.7944593265087121,,fail,P8_variants_nulls decay|M2_nullweights|r4,calibration from the real M1 graph
+a,on,wnull,4,1.547642747790841,1.5328981235927288,1.5742033952566203,meanfield,CQMF cutoff (lower bound),,0.8607432360889753,,,,holds (open above),P8 .on,
+a,D,wnull,4,5.2976032300665885,5.21537,5.31129,meanfield,CQMF PR = N/4,6.484167860824291,,,1.223981408049464,,fail,P8 decay|M2_nullweights|r4.D,
+a,S,M2s,4,1.5031441754389372,1.4467557745206552,1.527062937600711,meanfield,CQMF equal-size,1.0016624834842662,,,0.666378182380122,,fail,P8 decay|M2s|r4,
+a,on,M2s,4,1.9361738377333888,1.9132889094058805,1.9894084687888012,meanfield,CQMF equal-size,1.247656155752343,,,0.6443926322302395,,fail,P8 decay|M2s|r4,
+a,D,M2s,4,9.139459151036531,9.01019,9.1759,meanfield,CQMF PR = N/4,6.240442070403506,,,0.6828021185143938,,fail,P8 decay|M2s|r4.D,
+a,on,cnull,6,1.4204211012473844,1.40413,1.4341414250753857,meanfield,CQMF equal-size (M1-real calibration),1.1951959489182173,,,0.8414377594564182,,fail,P8_variants_nulls decay|M2_nulltargets|r6,calibration from the real M1 graph
+a,on,cnull,6,1.4204211012473844,1.40413,1.4341414250753857,meanfield,CQMF cutoff (lower bound),,1.0117124075638813,,,,holds (open above),P8 .on,
+a,D,cnull,6,1.4204211012473844,1.40413,1.4341414250753857,meanfield,CQMF PR = N/4,1.0407260685499713,,,0.7326884032038297,,fail,P8 decay|M2_nulltargets|r6.D,
+a,on,wnull,6,1.592551029098458,1.56638,1.6304634843383536,meanfield,CQMF equal-size (M1-real calibration),1.2254208691683726,,,0.7694703948432237,,fail,P8_variants_nulls decay|M2_nullweights|r6,calibration from the real M1 graph
+a,on,wnull,6,1.592551029098458,1.56638,1.6304634843383536,meanfield,CQMF cutoff (lower bound),,0.8605527031549876,,,,holds (open above),P8 .on,
+a,D,wnull,6,5.360450522895624,5.31129,5.40897,meanfield,CQMF PR = N/4,6.191842488756768,,,1.1550974050240912,,fail,P8 decay|M2_nullweights|r6.D,
+a,S,M2s,6,1.552625888175596,1.5281203317495966,1.595159981548434,meanfield,CQMF equal-size,1.0073931203925752,,,0.6488318454977628,,fail,P8 decay|M2s|r6,
+a,on,M2s,6,2.0885612701966716,2.0528473610416205,2.1065688102921056,meanfield,CQMF equal-size,1.254901792528078,,,0.6008450939099856,,fail,P8 decay|M2s|r6,
+a,D,M2s,6,7.9318858588400625,7.93102,8.07689,meanfield,CQMF PR = N/4,5.087615620823456,,,0.6414131155396449,,fail,P8 decay|M2s|r6.D,
+a,S,cnull,0,1.4125412816393126,1.3750802502705535,1.4585647572301768,stochastic,"single mode 2-D chain, own 167k null",1.0771953868697348,,,0.7625939155701028,,fail,theory/stochastic_fss.json graphs.M2_cnull_N167216_s0.single_PF_r0_lt_2D,
+a,on,cnull,0,1.607391222299354,1.5795442403033186,1.6316292105233583,stochastic,"single mode 2-D chain, own 167k null",1.2833603032377405,,,0.7984119145567492,,fail,theory/stochastic_fss.json graphs.M2_cnull_N167216_s0.single_PF_r0_lt_2D,
+a,S,cnull,1,1.264675953155682,1.2529404222003122,1.2881117996215627,stochastic,"single mode 2-D chain, own 167k null",1.2067422829734973,,,0.9541908976464479,,agree,theory/stochastic_fss.json graphs.M2_cnull_N167216_s0.single_CAL_r1_lt_2D,
+a,on,cnull,1,1.3732229930536328,1.35387,1.3948311660800743,stochastic,"single mode 2-D chain, own 167k null",1.4766547212455705,,,1.0753204167969375,,agree,theory/stochastic_fss.json graphs.M2_cnull_N167216_s0.single_CAL_r1_lt_2D,
+a,S,cnull,4,1.3007488864799723,1.28184,1.315672301997869,stochastic,"single mode 2-D chain, own 167k null",1.3820518501703802,,,1.0625047344152847,,agree,theory/stochastic_fss.json graphs.M2_cnull_N167216_s0.single_CAL_r4_lt_2D,
+a,on,cnull,4,1.4023780620122743,1.37877,1.4305767308299768,stochastic,"single mode 2-D chain, own 167k null",1.734963672609958,,,1.237158309593389,,fail,theory/stochastic_fss.json graphs.M2_cnull_N167216_s0.single_CAL_r4_lt_2D,
+a,on,M2_KW09,0,1.6635934320006474,1.619798894080158,1.691124909943388,meanfield,CQMF equal-size,0.7337560730257393,,,0.4410669451509675,,fail,P8 decay|M2_KW09|r0,
+a,on,M2_KW09,0,1.6635934320006474,1.619798894080158,1.691124909943388,stochastic,single mode 2-D chain (PF),2.4977303214704163,,,1.5014066979494087,,fail,stochastic_onset.json models.M2_KW09.single_PF_r0_lt_2D,
+a,on,M2_KW09,1,1.8862515385415213,1.8389678556356548,1.91409,meanfield,CQMF equal-size,1.3976808360238488,,,0.7409832715654441,,fail,P8 decay|M2_KW09|r1,
+a,on,M2_KW09,1,1.8862515385415213,1.8389678556356548,1.91409,stochastic,single mode 2-D chain (CAL),3.7983990178375944,,,2.0137287844306146,,fail,stochastic_onset.json models.M2_KW09.single_CAL_r1_lt_2D,
+a,on,M2_KW09,4,2.2590238143079335,2.2088446653207523,2.2990431272393597,meanfield,CQMF equal-size,1.3535426884499513,,,0.5991715004848756,,fail,P8 decay|M2_KW09|r4,
+a,on,M2_KW09,4,2.2590238143079335,2.2088446653207523,2.2990431272393597,stochastic,single mode 2-D chain (CAL),6.175409525086203,,,2.7336628706493205,,fail,stochastic_onset.json models.M2_KW09.single_CAL_r4_lt_2D,
+a,on,M2_N15,0,0.8621121842792013,0.8546291602932631,0.87421,meanfield,CQMF equal-size,0.5342754289532671,,,0.6197284282671013,,fail,P8 decay|M2_N15|r0,
+a,on,M2_N15,0,0.8621121842792013,0.8546291602932631,0.87421,stochastic,single mode 2-D chain (PF),1.0349502270697608,,,1.2004820787158539,,fail,stochastic_onset.json models.M2_N15.single_PF_r0_lt_2D,
+a,on,M2_N15,1,1.2861065484755492,1.272757175188608,1.30541,meanfield,CQMF equal-size,1.0419182931124906,,,0.8101337283038482,,fail,P8 decay|M2_N15|r1,
+a,on,M2_N15,1,1.2861065484755492,1.272757175188608,1.30541,stochastic,single mode 2-D chain (CAL),1.523874631692206,,,1.1848743274797011,,fail,stochastic_onset.json models.M2_N15.single_CAL_r1_lt_2D,
+a,on,M2_N15,4,1.6417170238181755,1.6211312216698326,1.7161960020263023,meanfield,CQMF equal-size,1.0630215212530207,,,0.6475059378873524,,fail,P8 decay|M2_N15|r4,
+a,on,M2_N15,4,1.6417170238181755,1.6211312216698326,1.7161960020263023,stochastic,single mode 2-D chain (CAL),2.38218419909569,,,1.451032159948853,,fail,stochastic_onset.json models.M2_N15.single_CAL_r4_lt_2D,
+a,on,M2_allsyn,0,1.2036914287099785,1.19172,1.2150675915535745,meanfield,CQMF equal-size,0.6294755644673076,,,0.5229542634044755,,fail,P8 decay|M2_allsyn|r0,
+a,on,M2_allsyn,1,1.3697503916377776,1.35387,1.385007531066323,meanfield,CQMF equal-size,1.1019471067397653,,,0.8044875281416738,,fail,P8 decay|M2_allsyn|r1,
+a,on,M2_allsyn,4,1.7578328285978226,1.7425075720491923,1.77952,meanfield,CQMF equal-size,1.2035845329015296,,,0.6846979492706354,,fail,P8 decay|M2_allsyn|r4,
+a,on,M2_tau30,0,0.5741751701505782,0.56449,0.5868377796614652,meanfield,CQMF equal-size,0.43587148614935445,,,0.759126323827355,,fail,P8 decay|M2_tau30|r0,
+a,on,M2_tau30,0,0.5741751701505782,0.56449,0.5868377796614652,stochastic,single mode 2-D chain (PF),0.5854679087260063,,,1.0196677584864329,,agree,stochastic_onset.json models.M2_tau30.single_PF_r0_lt_2D,
+a,on,M2_tau30,1,0.9978573310338348,0.9742548257788612,1.0127833722487791,meanfield,CQMF equal-size,0.7952016992000693,,,0.7969092118371239,,fail,P8 decay|M2_tau30|r1,
+a,on,M2_tau30,1,0.9978573310338348,0.9742548257788612,1.0127833722487791,stochastic,single mode 2-D chain (CAL),0.8401002817325657,,,0.8419042037424086,,fail,stochastic_onset.json models.M2_tau30.single_CAL_r1_lt_2D,
+a,on,M2_tau30,4,1.3733073590751639,1.35387,1.4096678805822191,meanfield,CQMF equal-size,0.9190749860051558,,,0.6692420163131544,,fail,P8 decay|M2_tau30|r4,
+a,on,M2_tau30,4,1.3733073590751639,1.35387,1.4096678805822191,stochastic,single mode 2-D chain (CAL),1.2854327110414077,,,0.9360123955842381,,agree,stochastic_onset.json models.M2_tau30.single_CAL_r4_lt_2D,
+b,DQ->DA (G = 0.29),real,0,0.21616927246937784,0.21487,0.21882,meanfield,CQMF,0.2131621956741887,,,0.9860892495920524,,agree,P6_driven_M2_ORN0.04.<r>.primary.DQ_DA_G029,
+b,DT->SS (removal self-sustained),real,0,1.2105550967516716,1.19172,1.2266291073096822,meanfield,CQMF equal-size (A1),0.6360654480578627,,,0.5254328776646691,,fail,P6 primary.SS_equal_size,
+b,allowed top,real,0,0.9680008496760478,0.95762,0.9778126315390516,meanfield,CQMF A1 window top (grid point),0.58545,,,0.6048031881334891,,fail,P6 primary.allowed_A1_intervals[0].to,grid value; MF strict allowed region (S1 and S2) is empty at every r > 0
+b,DQ->DA (G = 0.29),real,0.125,0.22792612389025121,0.21882,0.25782,meanfield,CQMF,0.22585039714570154,,,0.9908929844937425,,agree,P6_driven_M2_ORN0.04.<r>.primary.DQ_DA_G029,
+b,DT->SS (removal self-sustained),real,0.125,1.32469681960268,1.12831,1.3510739793761666,meanfield,CQMF equal-size (A1),0.7336760912953388,,,0.5538445329063236,,fail,P6 primary.SS_equal_size,
+b,allowed top,real,0.125,1.0221072016460455,0.95762,1.12831,meanfield,CQMF A1 window top (grid point),0.6898,,,0.6748802854427758,,fail,P6 primary.allowed_A1_intervals[0].to,grid value; MF strict allowed region (S1 and S2) is empty at every r > 0
+b,DQ->DA (G = 0.29),real,0.25,0.2406402498347534,0.2390606099465554,0.2441,meanfield,CQMF,0.24040489528524717,,,0.9990219651547575,,agree,P6_driven_M2_ORN0.04.<r>.primary.DQ_DA_G029,
+b,DT->SS (removal self-sustained),real,0.25,1.3226329142215492,1.30541,1.3426619292147255,meanfield,CQMF equal-size (A1),0.8395301831362872,,,0.634741638522131,,fail,P6 primary.SS_equal_size,
+b,allowed top,real,0.25,1.078570875318433,1.0277038875812015,1.0913705754073313,meanfield,CQMF A1 window top (grid point),0.81275,,,0.7535434328875669,,fail,P6 primary.allowed_A1_intervals[0].to,grid value; MF strict allowed region (S1 and S2) is empty at every r > 0
+b,DQ->DA (G = 0.29),real,0.375,0.2540025845729063,0.21882,0.25782,meanfield,CQMF,0.25841866141462877,,,1.0173859523876416,,agree,P6_driven_M2_ORN0.04.<r>.primary.DQ_DA_G029,
+b,DT->SS (removal self-sustained),real,0.375,1.3670986067722295,1.32942,1.56638,meanfield,CQMF equal-size (A1),0.953295730975857,,,0.6973130732878322,,fail,P6 primary.SS_equal_size,
+b,allowed top,real,0.375,1.111105912313901,0.95762,1.1516492694731681,meanfield,CQMF A1 window top (grid point),0.81275,,,0.731478422527184,,fail,P6 primary.allowed_A1_intervals[0].to,grid value; MF strict allowed region (S1 and S2) is empty at every r > 0
+b,DQ->DA (G = 0.29),real,0.5,0.2666385323621361,0.26256,0.2682102594037146,meanfield,CQMF,0.27910290132586046,,,1.0467463155205035,,agree,P6_driven_M2_ORN0.04.<r>.primary.DQ_DA_G029,
+b,DT->SS (removal self-sustained),real,0.5,1.4326259396886016,1.3988704804800525,1.45625,meanfield,CQMF equal-size (A1),1.0560726762779338,,,0.7371587006916012,,fail,P6 primary.SS_equal_size,
+b,allowed top,real,0.5,1.125415942614885,1.08471662999687,1.1576967336552493,meanfield,CQMF A1 window top (grid point),0.95762,,,0.8509031760959295,,fail,P6 primary.allowed_A1_intervals[0].to,grid value; MF strict allowed region (S1 and S2) is empty at every r > 0
+b,DQ->DA (G = 0.29),real,0.625,0.278689025826416,0.25782,0.30377,meanfield,CQMF,0.3043715245330313,,,1.0921546825550708,,agree,P6_driven_M2_ORN0.04.<r>.primary.DQ_DA_G029,
+b,DT->SS (removal self-sustained),real,0.625,1.4682914889274434,1.32942,1.56638,meanfield,CQMF equal-size (A1),1.1374871541428744,,,0.7747011834644532,,fail,P6 primary.SS_equal_size,
+b,allowed top,real,0.625,1.138504606510089,1.0942369992365846,1.32942,meanfield,CQMF A1 window top (grid point),1.12831,,,0.9910456168101602,,agree,P6 primary.allowed_A1_intervals[0].to,grid value; MF strict allowed region (S1 and S2) is empty at every r > 0
+b,DQ->DA (G = 0.29),real,0.75,0.29163715876150653,0.25782,0.30377,meanfield,CQMF,0.334320973820509,,,1.1463593159399423,,fail,P6_driven_M2_ORN0.04.<r>.primary.DQ_DA_G029,
+b,DT->SS (removal self-sustained),real,0.75,1.5073302580545493,1.32942,1.56638,meanfield,CQMF equal-size (A1),1.1776036158942085,,,0.7812512285224701,,fail,P6 primary.SS_equal_size,
+b,allowed top,real,0.75,1.1693680729983797,1.12831,1.32942,meanfield,CQMF A1 window top (grid point),1.12831,,,0.9648886659842673,,agree,P6 primary.allowed_A1_intervals[0].to,grid value; MF strict allowed region (S1 and S2) is empty at every r > 0
+b,DQ->DA (G = 0.29),real,0.875,0.30410704784092896,0.30157225968931134,0.35792,meanfield,CQMF,0.3715540645660433,,,1.2217870884741686,,fail,P6_driven_M2_ORN0.04.<r>.primary.DQ_DA_G029,
+b,DT->SS (removal self-sustained),real,0.875,1.4941960595095785,1.32942,1.56638,meanfield,CQMF equal-size (A1),1.21489586540395,,,0.813076609104899,,fail,P6 primary.SS_equal_size,
+b,allowed top,real,0.875,1.2049835569951572,1.12831,1.32942,meanfield,CQMF A1 window top (grid point),1.12831,,,0.9363696238425389,,agree,P6 primary.allowed_A1_intervals[0].to,grid value; MF strict allowed region (S1 and S2) is empty at every r > 0
+b,DQ->DA (G = 0.29),real,1,0.31664153197230904,0.31431048752402707,0.32084,meanfield,CQMF,0.41492729134331824,,,1.3104007195733391,,fail,P6_driven_M2_ORN0.04.<r>.primary.DQ_DA_G029,
+b,DT->SS (removal self-sustained),real,1,1.569700661740707,1.5343085694138878,1.59519,meanfield,CQMF equal-size (A1),1.2444265143142785,,,0.7927795054467784,,fail,P6 primary.SS_equal_size,
+b,allowed top,real,1,1.2340204241210098,1.1835541156408533,1.2625816150104232,meanfield,CQMF A1 window top (grid point),1.12831,,,0.9143365684597099,,agree,P6 primary.allowed_A1_intervals[0].to,grid value; MF strict allowed region (S1 and S2) is empty at every r > 0
+b,DQ->DA (G = 0.29),real,1.25,0.3396829170878591,0.30377,0.35792,meanfield,CQMF,0.5382379199236298,,,1.584530433670335,,fail,P6_driven_M2_ORN0.04.<r>.primary.DQ_DA_G029,
+b,DT->SS (removal self-sustained),real,1.25,1.6010033398884407,1.5604871565543037,1.84558,meanfield,CQMF equal-size (A1),1.238297305470898,,,0.7734507946480509,,fail,P6 primary.SS_equal_size,
+b,allowed top,real,1.25,1.2242136896963889,1.12831,1.32942,meanfield,CQMF A1 window top (grid point),1.12831,,,0.9216609890057891,,agree,P6 primary.allowed_A1_intervals[0].to,grid value; MF strict allowed region (S1 and S2) is empty at every r > 0
+b,DQ->DA (G = 0.29),real,1.5,0.36157934047577844,0.35792,0.42172,meanfield,CQMF,0.7530646229058907,,,2.0827092109714638,,fail,P6_driven_M2_ORN0.04.<r>.primary.DQ_DA_G029,
+b,DT->SS (removal self-sustained),real,1.5,1.6514698823222291,1.56638,1.84558,meanfield,CQMF equal-size (A1),1.2528735303202785,,,0.7586414646318219,,fail,P6 primary.SS_equal_size,
+b,allowed top,real,1.5,1.2735503799001284,1.12831,1.32942,meanfield,CQMF A1 window top (grid point),1.12831,,,0.8859563137882945,,agree,P6 primary.allowed_A1_intervals[0].to,grid value; MF strict allowed region (S1 and S2) is empty at every r > 0
+b,DQ->DA (G = 0.29),real,1.75,0.38223319056146815,0.35792,0.42172,meanfield,CQMF,0.9560281716945029,,,2.501164721698235,,fail,P6_driven_M2_ORN0.04.<r>.primary.DQ_DA_G029,
+b,DT->SS (removal self-sustained),real,1.75,1.6695341477751588,1.56638,1.84558,meanfield,CQMF equal-size (A1),1.2473122194096318,,,0.7471019512070567,,fail,P6 primary.SS_equal_size,
+b,allowed top,real,1.75,1.3273889390489781,1.12831,1.369585631719674,meanfield,CQMF A1 window top (grid point),1.12831,,,0.850022150108008,,agree,P6 primary.allowed_A1_intervals[0].to,grid value; MF strict allowed region (S1 and S2) is empty at every r > 0
+b,DQ->DA (G = 0.29),real,2,0.4002898356767973,0.39649117971186265,0.40662,meanfield,CQMF,0.8921245652116474,,,2.2286965236158736,,fail,P6_driven_M2_ORN0.04.<r>.primary.DQ_DA_G029,
+b,DT->SS (removal self-sustained),real,2,1.7294402453234525,1.7054517851453548,1.7553319988602452,meanfield,CQMF equal-size (A1),1.2396619709513976,,,0.7167995392171223,,fail,P6 primary.SS_equal_size,
+b,allowed top,real,2,1.369598581409479,1.350536476308573,1.3927723782849626,meanfield,CQMF A1 window top (grid point),1.12831,,,0.8238253275925822,,fail,P6 primary.allowed_A1_intervals[0].to,grid value; MF strict allowed region (S1 and S2) is empty at every r > 0
+b,DQ->DA (G = 0.29),real,2.25,0.41712134208864443,0.35792,0.42232362803879636,meanfield,CQMF,0.7999078785303262,,,1.9176862888984807,,fail,P6_driven_M2_ORN0.04.<r>.primary.DQ_DA_G029,
+b,DT->SS (removal self-sustained),real,2.25,1.7792646630306526,1.56638,1.84558,meanfield,CQMF equal-size (A1),1.2326347160661335,,,0.692777607332776,,fail,P6 primary.SS_equal_size,
+b,allowed top,real,2.25,1.3832560105044283,1.32942,1.56638,meanfield,CQMF A1 window top (grid point),1.12831,,,0.8156913770347849,,fail,P6 primary.allowed_A1_intervals[0].to,grid value; MF strict allowed region (S1 and S2) is empty at every r > 0
+b,DQ->DA (G = 0.29),real,2.5,0.4305193791418129,0.42172,0.49688,meanfield,CQMF,0.7173525100626649,,,1.6662490582714728,,fail,P6_driven_M2_ORN0.04.<r>.primary.DQ_DA_G029,
+b,DT->SS (removal self-sustained),real,2.5,1.7802502440618528,1.56638,1.84558,meanfield,CQMF equal-size (A1),1.2264249171990464,,,0.6889059115648888,,fail,P6 primary.SS_equal_size,
+b,allowed top,real,2.5,1.3692944015097186,1.3042944602815842,1.56638,meanfield,CQMF A1 window top (grid point),1.12831,,,0.8240083350636497,,fail,P6 primary.allowed_A1_intervals[0].to,grid value; MF strict allowed region (S1 and S2) is empty at every r > 0
+b,DQ->DA (G = 0.29),real,2.75,0.4366527390632727,0.42172,0.49688,meanfield,CQMF,0.6618285679415769,,,1.515686285081737,,fail,P6_driven_M2_ORN0.04.<r>.primary.DQ_DA_G029,
+b,DT->SS (removal self-sustained),real,2.75,1.8203564568881005,1.56638,1.8579374480949102,meanfield,CQMF equal-size (A1),1.2216507213677044,,,0.6711052204885829,,fail,P6 primary.SS_equal_size,
+b,allowed top,real,2.75,1.39595154307415,1.32942,1.56638,meanfield,CQMF A1 window top (grid point),1.12831,,,0.8082730418530484,,fail,P6 primary.allowed_A1_intervals[0].to,grid value; MF strict allowed region (S1 and S2) is empty at every r > 0
+b,DQ->DA (G = 0.29),real,3,0.4437266942709732,0.42172,0.49688,meanfield,CQMF,0.6263586283378352,,,1.4115865383463566,,fail,P6_driven_M2_ORN0.04.<r>.primary.DQ_DA_G029,
+b,DT->SS (removal self-sustained),real,3,1.835032873306922,1.56638,1.8805834422882222,meanfield,CQMF equal-size (A1),1.2190516451406488,,,0.6643214205442487,,fail,P6 primary.SS_equal_size,
+b,allowed top,real,3,1.4667139521989763,1.32942,1.56638,meanfield,CQMF A1 window top (grid point),1.12831,,,0.7692774711172393,,fail,P6 primary.allowed_A1_intervals[0].to,grid value; MF strict allowed region (S1 and S2) is empty at every r > 0
+b,DQ->DA (G = 0.29),real,3.5,0.45660691751944127,0.42172,0.49688,meanfield,CQMF,0.575891071212234,,,1.261240356017414,,fail,P6_driven_M2_ORN0.04.<r>.primary.DQ_DA_G029,
+b,DT->SS (removal self-sustained),real,3.5,1.9014871143223857,1.84558,2.17454,meanfield,CQMF equal-size (A1),1.2185443332456285,,,0.6408375445025665,,fail,P6 primary.SS_equal_size,
+b,allowed top,real,3.5,1.4245471905957379,1.32942,1.56638,meanfield,CQMF A1 window top (grid point),1.12831,,,0.7920481732361192,,fail,P6 primary.allowed_A1_intervals[0].to,grid value; MF strict allowed region (S1 and S2) is empty at every r > 0
+b,DQ->DA (G = 0.29),real,4,0.4626585701321409,0.4581349413367934,0.4710087539261383,meanfield,CQMF,0.5374309175043391,,,1.1616145300212257,,fail,P6_driven_M2_ORN0.04.<r>.primary.DQ_DA_G029,
+b,DT->SS (removal self-sustained),real,4,1.9547827326105023,1.9302497599198893,1.98515,meanfield,CQMF equal-size (A1),1.2205395369755039,,,0.6243862893885613,,fail,P6 primary.SS_equal_size,
+b,allowed top,real,4,1.478829421289821,1.4481672133662187,1.5136605407649244,meanfield,CQMF A1 window top (grid point),1.12831,,,0.7629750826947294,,fail,P6 primary.allowed_A1_intervals[0].to,grid value; MF strict allowed region (S1 and S2) is empty at every r > 0
+b,DQ->DA (G = 0.29),real,4.5,0.46565754781442376,0.42172,0.49688,meanfield,CQMF,0.5094177851237376,,,1.093975148721853,,agree,P6_driven_M2_ORN0.04.<r>.primary.DQ_DA_G029,
+b,DT->SS (removal self-sustained),real,4.5,1.934664999562041,1.84558,2.17454,meanfield,CQMF equal-size (A1),1.222811313509958,,,0.6320532566551684,,fail,P6 primary.SS_equal_size,
+b,allowed top,real,4.5,1.4953407314696363,1.32942,1.5730674281996704,meanfield,CQMF A1 window top (grid point),1.12831,,,0.7545504353988173,,fail,P6 primary.allowed_A1_intervals[0].to,grid value; MF strict allowed region (S1 and S2) is empty at every r > 0
+b,DQ->DA (G = 0.29),real,5,0.46565289774453544,0.42172,0.49688,meanfield,CQMF,0.487274821197469,,,1.0464335636214503,,agree,P6_driven_M2_ORN0.04.<r>.primary.DQ_DA_G029,
+b,DT->SS (removal self-sustained),real,5,2.014464035287923,1.84558,2.17454,meanfield,CQMF equal-size (A1),1.2251379705145105,,,0.6081706841390216,,fail,P6 primary.SS_equal_size,
+b,allowed top,real,5,1.5465727144432915,1.32942,1.6032783220790734,meanfield,CQMF A1 window top (grid point),1.12831,,,0.7295550926657525,,fail,P6 primary.allowed_A1_intervals[0].to,grid value; MF strict allowed region (S1 and S2) is empty at every r > 0
+b,DQ->DA (G = 0.29),real,5.5,0.4691212091240664,0.42172,0.49688,meanfield,CQMF,0.4724198180589393,,,1.0070314640879954,,agree,P6_driven_M2_ORN0.04.<r>.primary.DQ_DA_G029,
+b,DT->SS (removal self-sustained),real,5.5,2.012066702238235,1.84558,2.17454,meanfield,CQMF equal-size (A1),1.2274270895477482,,,0.6100330014816859,,fail,P6 primary.SS_equal_size,
+b,allowed top,real,5.5,1.5743025716225583,1.5102400069499748,1.84558,meanfield,CQMF A1 window top (grid point),1.12831,,,0.7167046667764156,,fail,P6 primary.allowed_A1_intervals[0].to,grid value; MF strict allowed region (S1 and S2) is empty at every r > 0
+b,DQ->DA (G = 0.29),real,6,0.47421502616494926,0.4613258084829541,0.4805386047352449,meanfield,CQMF,0.46578940767647425,,,0.9822324936503715,,agree,P6_driven_M2_ORN0.04.<r>.primary.DQ_DA_G029,
+b,DT->SS (removal self-sustained),real,6,2.0732701768213007,2.0130316494624783,2.105913168523763,meanfield,CQMF equal-size (A1),1.2296741054867506,,,0.5931084714545328,,fail,P6 primary.SS_equal_size,
+b,allowed top,real,6,1.5680232474073117,1.5022063164096824,1.608130203062781,meanfield,CQMF A1 window top (grid point),1.12831,,,0.719574790658004,,fail,P6 primary.allowed_A1_intervals[0].to,grid value; MF strict allowed region (S1 and S2) is empty at every r > 0
+b,DQ->DA (G = 0.29),real,0,0.21616927246937784,0.21487,0.21882,stochastic,"LNA, r-independent",0.2127551347521634,,,0.9842061839862182,,agree,theory/stochastic_driven.json M2_orn0.04.rows G_gain,
+b,G = 1.45,real,0,1.0499289245411874,,,stochastic,"LNA, r-independent",1.028710489923305,,,0.9797905990377829,,agree,stochastic_driven.json; sim from synth/recheck.json (own crossing),
+b,DQ->DA (G = 0.29),real,1,0.31664153197230904,0.31431048752402707,0.32084,stochastic,"LNA, r-independent (r = 0 closure)",0.2127551347521634,,,0.671911651724731,,fail,stochastic_driven.json,theory has no r-dependence at first order
+b,DQ->DA (G = 0.29),real,4,0.4626585701321409,0.4581349413367934,0.4710087539261383,stochastic,"LNA, r-independent (r = 0 closure)",0.2127551347521634,,,0.45985343941947937,,fail,stochastic_driven.json,theory has no r-dependence at first order
+b,DQ->DA (G = 0.29),real,6,0.47421502616494926,0.4613258084829541,0.4805386047352449,stochastic,"LNA, r-independent (r = 0 closure)",0.2127551347521634,,,0.44864697028423434,,fail,stochastic_driven.json,theory has no r-dependence at first order
+b,nonORN Fano peak height,real,0,55.195355892284674,,,stochastic,LNA,59.34232167208007,,,1.0751325127405342,,agree,stochastic_driven.json rows; sim driven/curves.json peaks,"sim at g 0.991, theory at g 0.908"
+b,nonORN Fano peak location g,real,0,0.9913589655402746,0.8972723438018526,1.1852834912191361,stochastic,LNA,0.9083,,,0.9162170632158365,,agree,stochastic_driven.json rows; sim curves.json peaks.ci,
+b,tau_int peak height,real,0,10.146774956090614,,,stochastic,LNA,11.023554698892724,,,1.0864096963415772,,agree,stochastic_driven.json rows; sim driven/curves.json peaks,"sim at g 0.740, theory at g 0.646"
+b,tau_int peak location g,real,0,0.7399681880783877,0.7143256140998481,0.795372244664738,stochastic,LNA,0.64577,,,0.8726996787213115,,fail,stochastic_driven.json rows; sim curves.json peaks.ci,
+b,AL Fano peak height,real,0,2.1863739249835006,,,stochastic,LNA,2.2009651695169206,,,1.0066737186931691,,agree,stochastic_driven.json rows; sim driven/curves.json peaks,"sim at g 0.467, theory at g 0.387"
+b,AL Fano peak location g,real,0,0.46652629183050287,0.39071140586571,0.5270332373570288,stochastic,LNA,0.38713,,,0.8298138964066167,,fail,stochastic_driven.json rows; sim curves.json peaks.ci,
+b,tau_int peak height,real,1,5.389422178110214,,,stochastic,LNA (r-independent),11.023554698892724,,,2.0454056732957784,,fail,stochastic_driven.json; curves.json,theory has no r-dependence
+b,tau_int peak height,real,4,4.702198571585413,,,stochastic,LNA (r-independent),11.023554698892724,,,2.344340531577333,,fail,stochastic_driven.json; curves.json,theory has no r-dependence
+a-module,on (module alone),AL,0,2.1888621279096707,2.17454,2.56213,stochastic,single mode 2-D chain (PF),2.0831508192380155,,,0.9517049030527072,,agree,stochastic_fss.json graphs.M2_mod_AL; sim modules/iso.json M2_r0_AL,"N sim 526, theory 526; pooled 1.7036685544692736"
+a-module,on (module alone),AL_L,0,3.477664523952762,3.01881,3.55689,stochastic,single mode 2-D chain (PF),3.721756441686867,,,1.0701884601153728,,agree,stochastic_fss.json graphs.M2_mod_ALL; sim modules/iso.json M2_r0_AL_L,"N sim 248, theory 248; pooled 2.950002329790172"
+a-module,on (module alone),AL_R,0,3.3118561006601293,3.01881,3.55689,stochastic,single mode 2-D chain (PF),3.6609915124743586,,,1.1054198616131414,,fail,stochastic_fss.json graphs.M2_mod_ALR; sim modules/iso.json M2_r0_AL_R,"N sim 275, theory 275; pooled 2.874397307261162"
+a-module,on (module alone),CB,0,1.4164280775079117,1.32942,1.56638,stochastic,single mode 2-D chain (PF),1.6696820247888011,,,1.17879760455361,,fail,stochastic_fss.json graphs.M2_mod_CB; sim modules/iso.json M2_r0_CB,"N sim 38545, theory 37229; pooled 0.9312485683123604"
+a-module,on (module alone),VNC,0,3.3625792488853445,3.01881,3.55689,stochastic,single mode 2-D chain (PF),24.13862099060113,,,7.178602853331352,,fail,stochastic_fss.json graphs.M2_mod_VNC; sim modules/iso.json M2_r0_VNC,"N sim 22822, theory 20429; pooled 1.860537575242148"
+a-module,on (module alone),OL,0,5.004764688576997,4.93788,5.81801,stochastic,single mode 2-D chain (PF),5.222355334261202,,,1.0434766985510506,,agree,stochastic_fss.json graphs.M2_mod_OL; sim modules/iso.json M2_r0_OL,"N sim 105267, theory 105267; pooled 2.7478748027977007"
+a-FSS,null onset,cnull N=5000,0,3.7265269585626224,,,stochastic,"single mode 2-D chain (PF), own graphs",3.6525515510161544,,,0.9801489675590589,,agree,nature/summary.json T1_onset.r0.cnull; theory/stochastic_fss.json,rule +-15%
+a-FSS,width W,cnull N=5000,0,0.2709840825752156,,,stochastic,single mode 2-D chain (PF),0.3094057268896392,,,1.1417856131965207,,(descriptive),same,
+a-FSS,null onset,cnull N=10000,0,2.8826301945670356,,,stochastic,"single mode 2-D chain (PF), own graphs",2.907743599310538,,,1.008711975886062,,agree,nature/summary.json T1_onset.r0.cnull; theory/stochastic_fss.json,rule +-15%
+a-FSS,width W,cnull N=10000,0,0.23284113028025252,,,stochastic,single mode 2-D chain (PF),0.2856098304322056,,,1.2266296340704048,,(descriptive),same,
+a-FSS,null onset,cnull N=20000,0,2.3132178096802996,,,stochastic,"single mode 2-D chain (PF), own graphs",2.304443425334325,,,0.9962068490441084,,agree,nature/summary.json T1_onset.r0.cnull; theory/stochastic_fss.json,rule +-15%
+a-FSS,width W,cnull N=20000,0,0.1903427356287691,,,stochastic,single mode 2-D chain (PF),0.2536999204931313,,,1.3328584337882456,,(descriptive),same,
+a-FSS,null onset,cnull N=40000,0,1.936337689990664,,,stochastic,"single mode 2-D chain (PF), own graphs",1.7588430615392783,,,0.9083348791024971,,agree,nature/summary.json T1_onset.r0.cnull; theory/stochastic_fss.json,rule +-15%
+a-FSS,width W,cnull N=40000,0,0.14349049218398216,,,stochastic,single mode 2-D chain (PF),0.22925602376330056,,,1.5977088117402973,,(descriptive),same,
+a-FSS,null onset,cnull N=80000,0,1.7341373913694929,,,stochastic,"single mode 2-D chain (PF), own graphs",1.5032649652042824,,,0.8668661276123661,,agree,nature/summary.json T1_onset.r0.cnull; theory/stochastic_fss.json,rule +-15%
+a-FSS,width W,cnull N=80000,0,0.14790236694173609,,,stochastic,single mode 2-D chain (PF),0.2020409381000333,,,1.3660426285106329,,(descriptive),same,
+a-FSS,null onset,cnull N=167216,0,1.59968873096102,,,stochastic,"single mode 2-D chain (PF), own graphs",1.2833603032377405,,,0.8022562629835844,,fail,nature/summary.json T1_onset.r0.cnull; theory/stochastic_fss.json,rule +-15%
+a-FSS,width W,cnull N=167216,0,0.1359330827065573,,,stochastic,single mode 2-D chain (PF),0.17512107549429257,,,1.2882888551297813,,(descriptive),same,

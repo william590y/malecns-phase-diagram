@@ -1,0 +1,5 @@
+pd3_fss_fine.py cnull 167216 0 0 --xlo 1.000328 --xhi 1.073352 --nx 16
+pd3_fss_fine.py cnull 167216 1 0 --xlo 1.000328 --xhi 1.073352 --nx 16
+pd3_fss_fine.py cnull 167216 2 0 --xlo 1.000328 --xhi 1.073352 --nx 16
+pd3_fss_fine.py cnull 80000 2 1 --xlo 1.308887 --xhi 1.482934 --nx 16
+pd3_fss_fine.py cnull 80000 3 1 --xlo 1.308887 --xhi 1.482934 --nx 16

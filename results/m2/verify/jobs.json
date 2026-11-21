@@ -1,0 +1,4 @@
+{"m2-verify-sim": {"job": 219854, "tasks": 15, "args": "results/m2/verify/sim/args_V.txt", "index": "results/m2/verify/sim/index_V.json",
+  "simulator_md5": "61580c76", "gpu_hours": 2.87, "state": "15/15 COMPLETED"},
+ "m2-verify-tests": {"job": 219855, "what": "live copies of code/m2_sim_test.py and m2_obs_test.py on code/ald_sim.py md5 61580c76",
+  "outputs": "results/m2/verify/simtest/{unit_tests_m2.json, obs_tests.json, unit.log, obs.log}", "result": "unit 29/29 PASS, obs 11/11 PASS"}}

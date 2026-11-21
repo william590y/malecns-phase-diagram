@@ -1,0 +1,103 @@
+
+== fine_decay_raw_r1
+ g       life    sustained  b(power)  R2pow  tau(exp)  R2exp   rho(T)    PR(occ)  share_AL  share_top10modes  top superclasses
+ 0.150       32     0.00     -5.46   0.993       2.4   0.927  0.00e+00       nan      nan      nan   
+ 0.165       32     0.00     -4.26   0.975       3.2   0.873  0.00e+00       nan      nan      nan   
+ 0.180       42     0.00     -4.01   0.982       4.0   0.879  0.00e+00       nan      nan      nan   
+ 0.195       71     0.00     -3.04   0.944       7.9   0.746  0.00e+00       nan      nan      nan   
+ 0.210       60     0.00     -3.64   0.927       5.3   0.898  0.00e+00       nan      nan      nan   
+ 0.225      102     0.00     -2.13   0.930      13.9   0.776  0.00e+00       nan      nan      nan   
+ 0.240       85     0.00     -2.04   0.922      12.7   0.788  0.00e+00       nan      nan      nan   
+ 0.255      248     0.00     -1.36   0.889      41.2   0.712  0.00e+00       nan      nan      nan   
+ 0.270      424     0.00     -0.98   0.837      85.0   0.664  0.00e+00       nan      nan      nan   
+ 0.285     1233     0.00     -0.96   0.841     179.4   0.792  0.00e+00       nan      nan      nan   
+ 0.300      944     0.00     -0.75   0.828     199.1   0.681  0.00e+00       nan      nan      nan   
+ 0.315     1925     0.00     -0.51   0.735     503.8   0.612  0.00e+00       nan      nan      nan   
+ 0.330     5125     0.00     -0.44   0.713    1177.8   0.696  0.00e+00       953     0.52     0.46   {'cb_intrinsic': 298, 'descending_neuron': 2}
+ 0.345      inf     0.09     -0.34   0.692    2656.0   0.629  4.58e-05      1029     0.51     0.45   {'cb_intrinsic': 298, 'descending_neuron': 2}
+ 0.360      inf     0.38     -0.20   0.511    5949.8   0.263  2.55e-04      1094     0.49     0.44   {'cb_intrinsic': 298, 'descending_neuron': 2}
+ 0.375      inf     0.69     -0.14   0.343   10420.7   0.112  4.98e-04      1166     0.48     0.43   {'cb_intrinsic': 298, 'descending_neuron': 2}
+ 0.390      inf     0.88     -0.14   0.327   12882.4   0.079  7.24e-04      1237     0.47     0.42   {'cb_intrinsic': 298, 'descending_neuron': 2}
+ 0.405      inf     0.94     -0.11   0.254   18999.1   0.041  8.48e-04      1315     0.46     0.41   {'cb_intrinsic': 298, 'descending_neuron': 2}
+ 0.420      inf     1.00     -0.11   0.242   20647.2   0.035  9.54e-04      1395     0.45     0.40   {'cb_intrinsic': 298, 'descending_neuron': 2}
+ 0.435      inf     0.97     -0.11   0.253   19665.1   0.042  9.23e-04      1483     0.44     0.39   {'cb_intrinsic': 298, 'descending_neuron': 2}
+ 0.450      inf     1.00     -0.10   0.238   21584.5   0.036  1.00e-03      1575     0.43     0.38   {'cb_intrinsic': 298, 'descending_neuron': 2}
+ 0.465      inf     1.00     -0.10   0.228   22776.4   0.033  1.12e-03      1671     0.41     0.37   {'cb_intrinsic': 298, 'descending_neuron': 2}
+ 0.480      inf     1.00     -0.10   0.241   23883.2   0.032  1.22e-03      1775     0.40     0.36   {'cb_intrinsic': 298, 'descending_neuron': 2}
+ 0.495      inf     1.00     -0.10   0.254   23312.0   0.034  1.31e-03      1878     0.39     0.35   {'cb_intrinsic': 298, 'descending_neuron': 2}
+ 0.510      inf     1.00     -0.09   0.238   23490.3   0.036  1.24e-03      1995     0.38     0.34   {'cb_intrinsic': 298, 'descending_neuron': 2}
+ 0.525      inf     1.00     -0.09   0.238   25100.3   0.032  1.41e-03      2106     0.37     0.34   {'cb_intrinsic': 298, 'descending_neuron': 2}
+ 0.540      inf     1.00     -0.09   0.236   24442.2   0.035  1.41e-03      2230     0.36     0.33   {'cb_intrinsic': 298, 'descending_neuron': 2}
+ 0.555      inf     1.00     -0.09   0.243   25626.3   0.033  1.51e-03      2360     0.35     0.32   {'cb_intrinsic': 298, 'descending_neuron': 2}
+ 0.570      inf     1.00     -0.09   0.235   26179.8   0.033  1.61e-03      2496     0.34     0.31   {'cb_intrinsic': 298, 'descending_neuron': 2}
+ 0.585      inf     1.00     -0.09   0.243   24540.5   0.039  1.59e-03      2642     0.34     0.30   {'cb_intrinsic': 298, 'descending_neuron': 2}
+ 0.600      inf     1.00     -0.08   0.229   26338.9   0.035  1.81e-03      2782     0.33     0.30   {'cb_intrinsic': 298, 'descending_neuron': 2}
+
+== fine_decay_raw_r1_null
+ g       life    sustained  b(power)  R2pow  tau(exp)  R2exp   rho(T)    PR(occ)  share_AL  share_top10modes  top superclasses
+ 0.600       35     0.00     -4.73   0.984       2.8   0.986  0.00e+00       nan      nan      nan   
+ 0.627       46     0.00     -4.49   0.980       3.6   0.960  0.00e+00       nan      nan      nan   
+ 0.653       42     0.00     -4.37   0.991       3.5   0.969  0.00e+00       nan      nan      nan   
+ 0.680       38     0.00     -4.27   0.994       3.4   0.966  0.00e+00       nan      nan      nan   
+ 0.707       42     0.00     -3.95   0.977       3.8   0.975  0.00e+00       nan      nan      nan   
+ 0.733       60     0.00     -3.90   0.977       4.9   0.969  0.00e+00       nan      nan      nan   
+ 0.760       55     0.00     -3.53   0.985       5.1   0.961  0.00e+00       nan      nan      nan   
+ 0.787       55     0.00     -3.99   0.961       4.4   0.975  0.00e+00       nan      nan      nan   
+ 0.813       85     0.00     -2.78   0.987       8.9   0.914  0.00e+00       nan      nan      nan   
+ 0.840      133     0.00     -2.77   0.981      12.7   0.827  0.00e+00       nan      nan      nan   
+ 0.867       93     0.00     -2.20   0.965      12.3   0.857  0.00e+00       nan      nan      nan   
+ 0.893       85     0.00     -2.20   0.989      11.7   0.856  0.00e+00       nan      nan      nan   
+ 0.920      190     0.00     -2.08   0.966      21.9   0.802  0.00e+00       nan      nan      nan   
+ 0.947      190     0.00     -1.70   0.943      26.4   0.799  0.00e+00       nan      nan      nan   
+ 0.973      271     0.00     -1.38   0.961      43.9   0.745  0.00e+00       nan      nan      nan   
+ 1.000      424     0.00     -1.39   0.909      55.9   0.828  0.00e+00       nan      nan      nan   
+ 1.027      723     0.00     -1.04   0.915     116.8   0.753  0.00e+00       nan      nan      nan   
+ 1.053     1761     0.00     -0.78   0.877     310.8   0.710  0.00e+00       nan      nan      nan   
+ 1.080     4289     0.00     -0.60   0.841     817.2   0.693  0.00e+00      1320     0.02     0.03   {'ol_intrinsic': 114, 'cb_intrinsic': 93, 'vnc_intrinsic': 41}
+ 1.107      inf     0.06     -0.43   0.801    2269.4   0.625  1.18e-04     74784     0.01     0.03   {'cb_intrinsic': 93, 'ol_intrinsic': 87, 'visual_projection': 54}
+ 1.133      inf     0.41     -0.25   0.622    5025.8   0.282  7.83e-04     77913     0.01     0.03   {'ol_intrinsic': 87, 'cb_intrinsic': 86, 'visual_projection': 57}
+ 1.160      inf     0.84     -0.17   0.409   10690.3   0.090  1.95e-03     79197     0.01     0.03   {'cb_intrinsic': 86, 'ol_intrinsic': 83, 'visual_projection': 57}
+ 1.187      inf     1.00     -0.15   0.378   13596.8   0.063  2.26e-03     80201     0.01     0.03   {'cb_intrinsic': 91, 'ol_intrinsic': 88, 'visual_projection': 52}
+ 1.213      inf     1.00     -0.15   0.369   14933.2   0.057  2.94e-03     81082     0.01     0.03   {'cb_intrinsic': 88, 'ol_intrinsic': 85, 'visual_projection': 53}
+ 1.240      inf     1.00     -0.14   0.370   15884.9   0.056  3.33e-03     81976     0.01     0.03   {'ol_intrinsic': 90, 'cb_intrinsic': 87, 'visual_projection': 51}
+ 1.267      inf     1.00     -0.13   0.350   17244.2   0.051  3.60e-03     82757     0.01     0.03   {'cb_intrinsic': 89, 'ol_intrinsic': 89, 'visual_projection': 54}
+ 1.293      inf     1.00     -0.13   0.352   16657.5   0.058  3.93e-03     83445     0.01     0.03   {'cb_intrinsic': 90, 'ol_intrinsic': 89, 'visual_projection': 52}
+ 1.320      inf     1.00     -0.12   0.357   17825.0   0.056  4.03e-03     84216     0.01     0.03   {'cb_intrinsic': 89, 'ol_intrinsic': 88, 'visual_projection': 54}
+ 1.347      inf     1.00     -0.11   0.343   19127.9   0.055  4.75e-03     84780     0.01     0.03   {'cb_intrinsic': 91, 'ol_intrinsic': 90, 'visual_projection': 51}
+ 1.373      inf     1.00     -0.11   0.331   21014.0   0.047  4.75e-03     85372     0.01     0.03   {'ol_intrinsic': 92, 'cb_intrinsic': 90, 'visual_projection': 51}
+ 1.400      inf     1.00     -0.11   0.346   19577.7   0.058  5.58e-03     85941     0.01     0.03   {'ol_intrinsic': 93, 'cb_intrinsic': 89, 'visual_projection': 48}
+
+== upper_decay_raw_r1
+ g       life    sustained  b(power)  R2pow  tau(exp)  R2exp   rho(T)    PR(occ)  share_AL  share_top10modes  top superclasses
+ 0.600      inf     1.00     -0.10   0.260    8651.4   0.047  1.64e-03      2785     0.33     0.30   {'cb_intrinsic': 298, 'descending_neuron': 2}
+ 0.681      inf     1.00     -0.10   0.257    9208.0   0.050  2.08e-03      3625     0.29     0.27   {'cb_intrinsic': 298, 'descending_neuron': 2}
+ 0.773      inf     1.00     -0.08   0.238   11097.2   0.041  2.80e-03      4733     0.25     0.23   {'cb_intrinsic': 298, 'descending_neuron': 2}
+ 0.877      inf     1.00     -0.08   0.242   11892.0   0.043  3.24e-03      6103     0.22     0.21   {'cb_intrinsic': 298, 'descending_neuron': 2}
+ 0.995      inf     1.00     -0.07   0.233   13991.1   0.036  4.15e-03      7694     0.19     0.18   {'cb_intrinsic': 298, 'descending_neuron': 2}
+ 1.129      inf     1.00     -0.06   0.171   19619.9   0.021  5.15e-03      9484     0.16     0.16   {'cb_intrinsic': 298, 'descending_neuron': 2}
+ 1.281      inf     1.00     -0.06   0.233   14751.5   0.046  5.65e-03     11459     0.14     0.14   {'cb_intrinsic': 298, 'descending_neuron': 2}
+ 1.454      inf     1.00     -0.05   0.181   22150.4   0.024  7.58e-03     13535     0.12     0.13   {'cb_intrinsic': 297, 'descending_neuron': 2, 'visual_centrifugal': 1}
+ 1.650      inf     1.00     -0.05   0.233   17914.0   0.044  8.95e-03     15602     0.11     0.11   {'cb_intrinsic': 297, 'descending_neuron': 2, 'visual_centrifugal': 1}
+ 1.873      inf     1.00     -0.04   0.200   21573.3   0.033  1.03e-02     17658     0.10     0.10   {'cb_intrinsic': 297, 'descending_neuron': 2, 'visual_centrifugal': 1}
+ 2.125      inf     1.00     -0.04   0.196   23998.6   0.031  1.19e-02     19539     0.09     0.09   {'cb_intrinsic': 296, 'descending_neuron': 2, 'visual_centrifugal': 2}
+ 2.412      inf     1.00     -0.04   0.189   33113.7   0.020  1.44e-02     21131     0.08     0.08   {'cb_intrinsic': 297, 'descending_neuron': 2, 'visual_centrifugal': 1}
+ 2.737      inf     1.00     -0.03   0.200   30004.7   0.028  1.62e-02     22320     0.07     0.07   {'cb_intrinsic': 297, 'descending_neuron': 2, 'visual_centrifugal': 1}
+ 3.106      inf     1.00     -0.03   0.218   28936.2   0.035  1.95e-02     23160     0.06     0.06   {'cb_intrinsic': 298, 'descending_neuron': 2}
+ 3.525      inf     1.00     -0.03   0.173   37353.6   0.025  2.33e-02     23743     0.05     0.06   {'cb_intrinsic': 298, 'descending_neuron': 2}
+ 4.000      inf     1.00     -0.03   0.227   33723.8   0.038  2.63e-02     24260     0.05     0.05   {'cb_intrinsic': 298, 'descending_neuron': 2}
+
+== spread_raw_r1
+g=0.300  P(T)=0.0000  delta=0.59  eta(N)=-0.01  N(T)=0.0
+g=0.340  P(T)=0.0000  delta=2.28  eta(N)=-3.99  N(T)=0.0
+g=0.380  P(T)=0.0000  delta=2.23  eta(N)=-2.71  N(T)=0.0
+g=0.450  P(T)=0.0020  delta=0.19  eta(N)=-0.03  N(T)=0.3
+g=0.600  P(T)=0.0059  delta=0.16  eta(N)=0.00  N(T)=1.9
+
+== spread_raw_r1_null
+g=0.850  P(T)=0.0000  delta=1.72  eta(N)=-1.39  N(T)=0.0
+g=0.950  P(T)=0.0000  delta=1.17  eta(N)=-0.39  N(T)=0.0
+g=1.050  P(T)=0.0000  delta=0.58  eta(N)=-0.30  N(T)=0.0
+g=1.150  P(T)=0.0469  delta=0.05  eta(N)=0.15  N(T)=16.5
+g=1.250  P(T)=0.0430  delta=0.06  eta(N)=0.21  N(T)=24.4
+
+saved /MALECNS_ROOT/results/analysis.json

@@ -1,0 +1,2 @@
+pd3_multistab.py validate --r 1 --seed 11
+pd3_multistab.py validate --r 1 --seed 12 --force_split

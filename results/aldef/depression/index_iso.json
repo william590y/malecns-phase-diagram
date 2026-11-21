@@ -1,0 +1,200 @@
+[
+ {
+  "arm": "iso_base_noAL_r1",
+  "task": 0,
+  "out": "/MALECNS_ROOT/results/aldef/depression/sim/iso_base_noAL_r1_t0.npz",
+  "seed": 6000,
+  "r": 1,
+  "extra": " --clamp_off \"al;module\"",
+  "kind": "isolation",
+  "variant": "base",
+  "clamp": "al;module"
+ },
+ {
+  "arm": "iso_base_noAL_r1",
+  "task": 1,
+  "out": "/MALECNS_ROOT/results/aldef/depression/sim/iso_base_noAL_r1_t1.npz",
+  "seed": 6001,
+  "r": 1,
+  "extra": " --clamp_off \"al;module\"",
+  "kind": "isolation",
+  "variant": "base",
+  "clamp": "al;module"
+ },
+ {
+  "arm": "iso_base_noAL_r1",
+  "task": 2,
+  "out": "/MALECNS_ROOT/results/aldef/depression/sim/iso_base_noAL_r1_t2.npz",
+  "seed": 6002,
+  "r": 1,
+  "extra": " --clamp_off \"al;module\"",
+  "kind": "isolation",
+  "variant": "base",
+  "clamp": "al;module"
+ },
+ {
+  "arm": "iso_base_ALonly_r1",
+  "task": 0,
+  "out": "/MALECNS_ROOT/results/aldef/depression/sim/iso_base_ALonly_r1_t0.npz",
+  "seed": 6003,
+  "r": 1,
+  "extra": " --clamp_off \"cns_rest\"",
+  "kind": "isolation",
+  "variant": "base",
+  "clamp": "cns_rest"
+ },
+ {
+  "arm": "iso_base_ALonly_r1",
+  "task": 1,
+  "out": "/MALECNS_ROOT/results/aldef/depression/sim/iso_base_ALonly_r1_t1.npz",
+  "seed": 6004,
+  "r": 1,
+  "extra": " --clamp_off \"cns_rest\"",
+  "kind": "isolation",
+  "variant": "base",
+  "clamp": "cns_rest"
+ },
+ {
+  "arm": "iso_base_ALonly_r1",
+  "task": 2,
+  "out": "/MALECNS_ROOT/results/aldef/depression/sim/iso_base_ALonly_r1_t2.npz",
+  "seed": 6005,
+  "r": 1,
+  "extra": " --clamp_off \"cns_rest\"",
+  "kind": "isolation",
+  "variant": "base",
+  "clamp": "cns_rest"
+ },
+ {
+  "arm": "iso_sp_NW16_noAL_r1",
+  "task": 0,
+  "out": "/MALECNS_ROOT/results/aldef/depression/sim/iso_sp_NW16_noAL_r1_t0.npz",
+  "seed": 6006,
+  "r": 1,
+  "extra": "--std 0.25 157 --std_mode spike --clamp_off \"al;module\"",
+  "kind": "isolation",
+  "variant": "sp_NW16",
+  "clamp": "al;module"
+ },
+ {
+  "arm": "iso_sp_NW16_noAL_r1",
+  "task": 1,
+  "out": "/MALECNS_ROOT/results/aldef/depression/sim/iso_sp_NW16_noAL_r1_t1.npz",
+  "seed": 6007,
+  "r": 1,
+  "extra": "--std 0.25 157 --std_mode spike --clamp_off \"al;module\"",
+  "kind": "isolation",
+  "variant": "sp_NW16",
+  "clamp": "al;module"
+ },
+ {
+  "arm": "iso_sp_NW16_noAL_r1",
+  "task": 2,
+  "out": "/MALECNS_ROOT/results/aldef/depression/sim/iso_sp_NW16_noAL_r1_t2.npz",
+  "seed": 6008,
+  "r": 1,
+  "extra": "--std 0.25 157 --std_mode spike --clamp_off \"al;module\"",
+  "kind": "isolation",
+  "variant": "sp_NW16",
+  "clamp": "al;module"
+ },
+ {
+  "arm": "iso_sp_NW16_ALonly_r1",
+  "task": 0,
+  "out": "/MALECNS_ROOT/results/aldef/depression/sim/iso_sp_NW16_ALonly_r1_t0.npz",
+  "seed": 6009,
+  "r": 1,
+  "extra": "--std 0.25 157 --std_mode spike --clamp_off \"cns_rest\"",
+  "kind": "isolation",
+  "variant": "sp_NW16",
+  "clamp": "cns_rest"
+ },
+ {
+  "arm": "iso_sp_NW16_ALonly_r1",
+  "task": 1,
+  "out": "/MALECNS_ROOT/results/aldef/depression/sim/iso_sp_NW16_ALonly_r1_t1.npz",
+  "seed": 6010,
+  "r": 1,
+  "extra": "--std 0.25 157 --std_mode spike --clamp_off \"cns_rest\"",
+  "kind": "isolation",
+  "variant": "sp_NW16",
+  "clamp": "cns_rest"
+ },
+ {
+  "arm": "iso_sp_NW16_ALonly_r1",
+  "task": 2,
+  "out": "/MALECNS_ROOT/results/aldef/depression/sim/iso_sp_NW16_ALonly_r1_t2.npz",
+  "seed": 6011,
+  "r": 1,
+  "extra": "--std 0.25 157 --std_mode spike --clamp_off \"cns_rest\"",
+  "kind": "isolation",
+  "variant": "sp_NW16",
+  "clamp": "cns_rest"
+ },
+ {
+  "arm": "iso_sp_KW09_noAL_r1",
+  "task": 0,
+  "out": "/MALECNS_ROOT/results/aldef/depression/sim/iso_sp_KW09_noAL_r1_t0.npz",
+  "seed": 6012,
+  "r": 1,
+  "extra": "--std 0.28 240 --std_mode spike --clamp_off \"al;module\"",
+  "kind": "isolation",
+  "variant": "sp_KW09",
+  "clamp": "al;module"
+ },
+ {
+  "arm": "iso_sp_KW09_noAL_r1",
+  "task": 1,
+  "out": "/MALECNS_ROOT/results/aldef/depression/sim/iso_sp_KW09_noAL_r1_t1.npz",
+  "seed": 6013,
+  "r": 1,
+  "extra": "--std 0.28 240 --std_mode spike --clamp_off \"al;module\"",
+  "kind": "isolation",
+  "variant": "sp_KW09",
+  "clamp": "al;module"
+ },
+ {
+  "arm": "iso_sp_KW09_noAL_r1",
+  "task": 2,
+  "out": "/MALECNS_ROOT/results/aldef/depression/sim/iso_sp_KW09_noAL_r1_t2.npz",
+  "seed": 6014,
+  "r": 1,
+  "extra": "--std 0.28 240 --std_mode spike --clamp_off \"al;module\"",
+  "kind": "isolation",
+  "variant": "sp_KW09",
+  "clamp": "al;module"
+ },
+ {
+  "arm": "iso_sp_KW09_ALonly_r1",
+  "task": 0,
+  "out": "/MALECNS_ROOT/results/aldef/depression/sim/iso_sp_KW09_ALonly_r1_t0.npz",
+  "seed": 6015,
+  "r": 1,
+  "extra": "--std 0.28 240 --std_mode spike --clamp_off \"cns_rest\"",
+  "kind": "isolation",
+  "variant": "sp_KW09",
+  "clamp": "cns_rest"
+ },
+ {
+  "arm": "iso_sp_KW09_ALonly_r1",
+  "task": 1,
+  "out": "/MALECNS_ROOT/results/aldef/depression/sim/iso_sp_KW09_ALonly_r1_t1.npz",
+  "seed": 6016,
+  "r": 1,
+  "extra": "--std 0.28 240 --std_mode spike --clamp_off \"cns_rest\"",
+  "kind": "isolation",
+  "variant": "sp_KW09",
+  "clamp": "cns_rest"
+ },
+ {
+  "arm": "iso_sp_KW09_ALonly_r1",
+  "task": 2,
+  "out": "/MALECNS_ROOT/results/aldef/depression/sim/iso_sp_KW09_ALonly_r1_t2.npz",
+  "seed": 6017,
+  "r": 1,
+  "extra": "--std 0.28 240 --std_mode spike --clamp_off \"cns_rest\"",
+  "kind": "isolation",
+  "variant": "sp_KW09",
+  "clamp": "cns_rest"
+ }
+]

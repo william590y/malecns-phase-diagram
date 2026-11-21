@@ -1,0 +1,1 @@
+pulse --model M2 --gaps 0 --gmin 0.15 --gmax 1.5 --ng 5 --iters 60 --eta 0.3 --tag _smoke3

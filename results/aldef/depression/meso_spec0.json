@@ -1,0 +1,38 @@
+{
+ "kappa": {
+  "0": 1.3566306316884222,
+  "1": 2.1884360656043635
+ },
+ "arms": {
+  "base_r0": {
+   "r": 0,
+   "U": 0.0,
+   "TAU": 1e+30,
+   "group": null
+  },
+  "sp_NW16_r1": {
+   "r": 1,
+   "U": 0.25,
+   "TAU": 157,
+   "group": null
+  },
+  "sp_U25_tau30_r1": {
+   "r": 1,
+   "U": 0.25,
+   "TAU": 30,
+   "group": null
+  },
+  "spg_AL_r1": {
+   "r": 1,
+   "U": 0.25,
+   "TAU": 157,
+   "group": "al;module"
+  },
+  "spg_ORN_r1": {
+   "r": 1,
+   "U": 0.25,
+   "TAU": 157,
+   "group": "class:olfactory"
+  }
+ }
+}

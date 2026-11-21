@@ -1,0 +1,7 @@
+/MALECNS_ROOT/results/pd3/multistab/al_sym_r0.npz
+/MALECNS_ROOT/results/pd3/multistab/al_sym_r0.5.npz
+/MALECNS_ROOT/results/pd3/multistab/al_sym_r1.npz
+/MALECNS_ROOT/results/pd3/multistab/al_sym_r2.npz
+/MALECNS_ROOT/results/pd3/multistab/al_sym_r3.npz
+/MALECNS_ROOT/results/pd3/multistab/al_sym_r4.npz
+/MALECNS_ROOT/results/pd3/multistab/al_sym_r6.npz

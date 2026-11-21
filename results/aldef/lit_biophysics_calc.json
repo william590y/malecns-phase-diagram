@@ -1,0 +1,377 @@
+{
+ "model": {
+  "dt": 0.2,
+  "p_off": 0.18126924692201818,
+  "alpha_eff": 0.9063462346100909,
+  "mean_active_epoch_units": 1.103331113225399,
+  "c_raw": 0.0013464386697185943,
+  "rho_max_saturated_drive": 0.5
+ },
+ "mapping": {
+  "A_10ms_Benayoun": {
+   "tau_u_ms": 10.0,
+   "max_rate_Hz_at_rho_0.5": 45.31731173050454,
+   "h_1e-5": {
+    "rho": 1.1033178365911309e-05,
+    "rate_Hz": 0.000999987966772523
+   },
+   "h_1e-3": {
+    "rho": 0.0011020046657157206,
+    "rate_Hz": 0.09987977792941952
+   },
+   "ORN DM4 3.44 Hz": {
+    "rho": 0.03795459029495372,
+    "h_isolated_unit": 0.03590103426967425
+   },
+   "ORN VM7 10 Hz": {
+    "rho": 0.11033311132253988,
+    "h_isolated_unit": 0.11417788228164477
+   },
+   "palp ORN 3-13 Hz (low)": {
+    "rho": 0.03309993339676196,
+    "h_isolated_unit": 0.031133714369988748
+   },
+   "palp ORN 3-13 Hz (high)": {
+    "rho": 0.14343304471930185,
+    "h_isolated_unit": 0.15535766191869352
+   },
+   "PN 1 Hz": {
+    "rho": 0.011033311132253988,
+    "h_isolated_unit": 0.010122147894008204
+   },
+   "PN 5 Hz": {
+    "rho": 0.05516655566126994,
+    "h_isolated_unit": 0.053251696811363304
+   },
+   "LN 2.3 Hz": {
+    "rho": 0.02537661560418417,
+    "h_isolated_unit": 0.023659139098691762
+   },
+   "LN 4.6 Hz": {
+    "rho": 0.05075323120836834,
+    "h_isolated_unit": 0.0487343808483114
+   },
+   "tau_rec_in_model_units": {
+    "ORN->PN DM4, Kazama&Wilson 2009 (alpha=0.72, tau=2.4 s)": 240.0,
+    "ORN->PN DM6/VM2 10 Hz, Nagel et al. 2015 (f=0.78, tau=893 ms)": 89.3,
+    "ORN->PN fast IMI-resistant component, Nagel 2015 (f=0.77, tau=1006 ms)": 100.6,
+    "ORN->PN slow curare-resistant component, Nagel 2015 (f=0.91, tau=629 ms)": 62.9,
+    "ORN->LN (GABAergic LNs), Nagel&Wilson 2016 (f=0.75, tau=1566 ms)": 156.6
+   }
+  },
+  "B_50ms_uEPSP": {
+   "tau_u_ms": 50.0,
+   "max_rate_Hz_at_rho_0.5": 9.06346234610091,
+   "h_1e-5": {
+    "rho": 1.1033178365911309e-05,
+    "rate_Hz": 0.0001999975933545046
+   },
+   "h_1e-3": {
+    "rho": 0.0011020046657157206,
+    "rate_Hz": 0.019975955585883904
+   },
+   "ORN DM4 3.44 Hz": {
+    "rho": 0.1897729514747686,
+    "h_isolated_unit": 0.22042644523091393
+   },
+   "ORN VM7 10 Hz": {
+    "rho": 0.5516655566126993,
+    "h_isolated_unit": Infinity
+   },
+   "palp ORN 3-13 Hz (low)": {
+    "rho": 0.16549966698380983,
+    "h_isolated_unit": 0.18514573187168373
+   },
+   "palp ORN 3-13 Hz (high)": {
+    "rho": 0.7171652235965092,
+    "h_isolated_unit": Infinity
+   },
+   "PN 1 Hz": {
+    "rho": 0.05516655566126994,
+    "h_isolated_unit": 0.053251696811363304
+   },
+   "PN 5 Hz": {
+    "rho": 0.27583277830634967,
+    "h_isolated_unit": 0.37426974568108223
+   },
+   "LN 2.3 Hz": {
+    "rho": 0.12688307802092083,
+    "h_isolated_unit": 0.13427919382658923
+   },
+   "LN 4.6 Hz": {
+    "rho": 0.25376615604184166,
+    "h_isolated_unit": 0.3295577770059552
+   },
+   "tau_rec_in_model_units": {
+    "ORN->PN DM4, Kazama&Wilson 2009 (alpha=0.72, tau=2.4 s)": 48.0,
+    "ORN->PN DM6/VM2 10 Hz, Nagel et al. 2015 (f=0.78, tau=893 ms)": 17.86,
+    "ORN->PN fast IMI-resistant component, Nagel 2015 (f=0.77, tau=1006 ms)": 20.12,
+    "ORN->PN slow curare-resistant component, Nagel 2015 (f=0.91, tau=629 ms)": 12.58,
+    "ORN->LN (GABAergic LNs), Nagel&Wilson 2016 (f=0.75, tau=1566 ms)": 31.32
+   }
+  }
+ },
+ "U_from_f": {
+  "ORN->PN DM4, Kazama&Wilson 2009 (alpha=0.72, tau=2.4 s)": {
+   "f": 0.72,
+   "tau_s": 2.4,
+   "U_geometric_epoch": 0.34059923400995096,
+   "U_naive_-lnf": 0.3285040669720361
+  },
+  "ORN->PN DM6/VM2 10 Hz, Nagel et al. 2015 (f=0.78, tau=893 ms)": {
+   "f": 0.78,
+   "tau_s": 0.893,
+   "U_geometric_epoch": 0.24931567256278897,
+   "U_naive_-lnf": 0.2484613592984996
+  },
+  "ORN->PN fast IMI-resistant component, Nagel 2015 (f=0.77, tau=1006 ms)": {
+   "f": 0.77,
+   "tau_s": 1.006,
+   "U_geometric_epoch": 0.26365176410492175,
+   "U_naive_-lnf": 0.2613647641344075
+  },
+  "ORN->PN slow curare-resistant component, Nagel 2015 (f=0.91, tau=629 ms)": {
+   "f": 0.91,
+   "tau_s": 0.629,
+   "U_geometric_epoch": 0.08884460612288175,
+   "U_naive_-lnf": 0.09431067947124129
+  },
+  "ORN->LN (GABAergic LNs), Nagel&Wilson 2016 (f=0.75, tau=1566 ms)": {
+   "f": 0.75,
+   "tau_s": 1.566,
+   "U_geometric_epoch": 0.2933398137164793,
+   "U_naive_-lnf": 0.2876820724517809
+  }
+ },
+ "steady_state_A": {
+  "ORN->PN DM4, Kazama&Wilson 2009 (alpha=0.72, tau=2.4 s)": {
+   "DM4 ORN spont 3.44 Hz (K&W 2009)": {
+    "periodic": 0.3150096884317861,
+    "poisson": 0.3019615421779882
+   },
+   "VM7 ORN spont ~10 Hz (Olsen&Wilson 2008)": {
+    "periodic": 0.13190920298841433,
+    "poisson": 0.12953367875647676
+   },
+   "LN spont 4.6 Hz (Nagel 2015/2016)": {
+    "periodic": 0.2529523819376959,
+    "poisson": 0.2444270629644114
+   },
+   "20 Hz": {
+    "periodic": 0.06992769284037983,
+    "poisson": 0.06925207756232693
+   },
+   "50 Hz (odor-evoked ORN)": {
+    "periodic": 0.029018988898007983,
+    "poisson": 0.028901734104046145
+   }
+  },
+  "ORN->PN DM6/VM2 10 Hz, Nagel et al. 2015 (f=0.78, tau=893 ms)": {
+   "DM4 ORN spont 3.44 Hz (K&W 2009)": {
+    "periodic": 0.6362213851378493,
+    "poisson": 0.5967219438050237
+   },
+   "VM7 ORN spont ~10 Hz (Olsen&Wilson 2008)": {
+    "periodic": 0.35006006975975174,
+    "poisson": 0.337313634217095
+   },
+   "LN spont 4.6 Hz (Nagel 2015/2016)": {
+    "periodic": 0.5561195064518979,
+    "poisson": 0.5252884358801418
+   },
+   "20 Hz": {
+    "periodic": 0.20745913301435612,
+    "poisson": 0.2028726771078473
+   },
+   "50 Hz (odor-evoked ORN)": {
+    "periodic": 0.09334095719525676,
+    "poisson": 0.09239582370876842
+   }
+  },
+  "ORN->PN fast IMI-resistant component, Nagel 2015 (f=0.77, tau=1006 ms)": {
+   "DM4 ORN spont 3.44 Hz (K&W 2009)": {
+    "periodic": 0.5929517079886392,
+    "poisson": 0.5568092424988884
+   },
+   "VM7 ORN spont ~10 Hz (Olsen&Wilson 2008)": {
+    "periodic": 0.31243117516458807,
+    "poisson": 0.30176836260486445
+   },
+   "LN spont 4.6 Hz (Nagel 2015/2016)": {
+    "periodic": 0.5119052273633856,
+    "poisson": 0.48441444950173135
+   },
+   "20 Hz": {
+    "periodic": 0.18137126394983355,
+    "poisson": 0.17769564290283607
+   },
+   "50 Hz (odor-evoked ORN)": {
+    "periodic": 0.08029303073542345,
+    "poisson": 0.07956082425013924
+   }
+  },
+  "ORN->PN slow curare-resistant component, Nagel 2015 (f=0.91, tau=629 ms)": {
+   "DM4 ORN spont 3.44 Hz (K&W 2009)": {
+    "periodic": 0.8671580531245785,
+    "poisson": 0.8370033138635202
+   },
+   "VM7 ORN spont ~10 Hz (Olsen&Wilson 2008)": {
+    "periodic": 0.6569042519230861,
+    "poisson": 0.6385288295766554
+   },
+   "LN spont 4.6 Hz (Nagel 2015/2016)": {
+    "periodic": 0.8210228076187451,
+    "poisson": 0.7933951441043602
+   },
+   "20 Hz": {
+    "periodic": 0.4789739714686965,
+    "poisson": 0.46899915580151946
+   },
+   "50 Hz (odor-evoked ORN)": {
+    "periodic": 0.2641492559485058,
+    "poisson": 0.26106252447461203
+   }
+  },
+  "ORN->LN (GABAergic LNs), Nagel&Wilson 2016 (f=0.75, tau=1566 ms)": {
+   "DM4 ORN spont 3.44 Hz (K&W 2009)": {
+    "periodic": 0.44931197344923024,
+    "poisson": 0.42611941570505724
+   },
+   "VM7 ORN spont ~10 Hz (Olsen&Wilson 2008)": {
+    "periodic": 0.2087103048886777,
+    "poisson": 0.20345879959308252
+   },
+   "LN spont 4.6 Hz (Nagel 2015/2016)": {
+    "periodic": 0.3733027123927039,
+    "poisson": 0.35702809811132136
+   },
+   "20 Hz": {
+    "periodic": 0.11486773049553092,
+    "poisson": 0.1132502831257079
+   },
+   "50 Hz (odor-evoked ORN)": {
+    "periodic": 0.04889911928674921,
+    "poisson": 0.048602673147023163
+   }
+  }
+ },
+ "meanfield_x_star": {
+  "A_10ms_Benayoun": {
+   "ORN->PN DM4, Kazama&Wilson 2009 (alpha=0.72, tau=2.4 s)": {
+    "rho=0.01": 0.550225048155971,
+    "rho=0.04": 0.23420560458479173,
+    "rho=0.1": 0.10899917202375599,
+    "rho=0.2": 0.05764099645604454,
+    "rho=0.3": 0.03918012478193058,
+    "rho=0.5": 0.023882360413595028
+   },
+   "ORN->PN DM6/VM2 10 Hz, Nagel et al. 2015 (f=0.78, tau=893 ms)": {
+    "rho=0.01": 0.8179029831293134,
+    "rho=0.04": 0.5289450409776137,
+    "rho=0.1": 0.30994403143637295,
+    "rho=0.2": 0.18339276166090127,
+    "rho=0.3": 0.13022245996147097,
+    "rho=0.5": 0.08242701546535487
+   },
+   "ORN->PN fast IMI-resistant component, Nagel 2015 (f=0.77, tau=1006 ms)": {
+    "rho=0.01": 0.790367834815469,
+    "rho=0.04": 0.4852167322926533,
+    "rho=0.1": 0.27379731643036487,
+    "rho=0.2": 0.15861249610861228,
+    "rho=0.3": 0.1116443961912175,
+    "rho=0.5": 0.07011794810612046
+   },
+   "ORN->PN slow curare-resistant component, Nagel 2015 (f=0.91, tau=629 ms)": {
+    "rho=0.01": 0.9470743977920726,
+    "rho=0.04": 0.8173052760276357,
+    "rho=0.1": 0.6415057124370602,
+    "rho=0.2": 0.47221818914519276,
+    "rho=0.3": 0.3736225865044143,
+    "rho=0.5": 0.26356275052570066
+   },
+   "ORN->LN (GABAergic LNs), Nagel&Wilson 2016 (f=0.75, tau=1566 ms)": {
+    "rho=0.01": 0.685227117451036,
+    "rho=0.04": 0.35242531787694936,
+    "rho=0.1": 0.17877250029785738,
+    "rho=0.2": 0.098160444165869,
+    "rho=0.3": 0.06765394314686904,
+    "rho=0.5": 0.04172141313296323
+   }
+  },
+  "B_50ms_uEPSP": {
+   "ORN->PN DM4, Kazama&Wilson 2009 (alpha=0.72, tau=2.4 s)": {
+    "rho=0.01": 0.8594848558913255,
+    "rho=0.04": 0.6046130052171329,
+    "rho=0.1": 0.37952445478252805,
+    "rho=0.2": 0.23420560458479173,
+    "rho=0.3": 0.16935865151294605,
+    "rho=0.5": 0.108999172023756
+   },
+   "ORN->PN DM6/VM2 10 Hz, Nagel et al. 2015 (f=0.78, tau=893 ms)": {
+    "rho=0.01": 0.9573704213427044,
+    "rho=0.04": 0.8488163688572978,
+    "rho=0.1": 0.6919085078943114,
+    "rho=0.2": 0.5289450409776137,
+    "rho=0.3": 0.42811272897538316,
+    "rho=0.5": 0.30994403143637295
+   },
+   "ORN->PN fast IMI-resistant component, Nagel 2015 (f=0.77, tau=1006 ms)": {
+    "rho=0.01": 0.9496254694327142,
+    "rho=0.04": 0.8249552665572235,
+    "rho=0.1": 0.6533951870359674,
+    "rho=0.2": 0.4852167322926533,
+    "rho=0.3": 0.3858914909474572,
+    "rho=0.5": 0.2737973164303648
+   },
+   "ORN->PN slow curare-resistant component, Nagel 2015 (f=0.91, tau=629 ms)": {
+    "rho=0.01": 0.9889468853595179,
+    "rho=0.04": 0.9572065443515071,
+    "rho=0.1": 0.8994694362128809,
+    "rho=0.2": 0.8173052760276357,
+    "rho=0.3": 0.7488956353366654,
+    "rho=0.5": 0.6415057124370602
+   },
+   "ORN->LN (GABAergic LNs), Nagel&Wilson 2016 (f=0.75, tau=1566 ms)": {
+    "rho=0.01": 0.9158565666362204,
+    "rho=0.04": 0.7312635015053751,
+    "rho=0.1": 0.5211752741070983,
+    "rho=0.2": 0.3524253178769493,
+    "rho=0.3": 0.2662250249306242,
+    "rho=0.5": 0.17877250029785738
+   }
+  }
+ },
+ "PN_drive_estimate": {
+  "inputs": {
+   "n_ORN_presyn": 34.8,
+   "synapses_per_ORN_PN_connection": 23.0,
+   "ORN_rate_Hz": 3.44
+  },
+  "A_10ms_Benayoun": {
+   "g=0.163": {
+    "s_from_ORNs": 0.00666723200989524,
+    "PN_rho": 0.00729750821605263,
+    "PN_rate_Hz": 0.6614069093655502
+   },
+   "g=0.3": {
+    "s_from_ORNs": 0.012270979159316393,
+    "PN_rho": 0.013341278774428247,
+    "PN_rate_Hz": 1.209181778208657
+   },
+   "rho_ORN": 0.03795459029495372
+  },
+  "B_50ms_uEPSP": {
+   "g=0.163": {
+    "s_from_ORNs": 0.033336160049476204,
+    "PN_rho": 0.03534956984765254,
+    "PN_rate_Hz": 0.6407789905301257
+   },
+   "g=0.3": {
+    "s_from_ORNs": 0.061354895796581974,
+    "PN_rho": 0.06296617684675583,
+    "PN_rate_Hz": 1.1413831458570045
+   },
+   "rho_ORN": 0.1897729514747686
+  }
+ }
+}

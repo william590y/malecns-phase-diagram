@@ -1,0 +1,7 @@
+/MALECNS_ROOT/results/pd3/multistab/m2b_r0_h1e-05_D800_g0.2255.npz
+/MALECNS_ROOT/results/pd3/multistab/m2b_r2_h0.0001_D800_g0.2583.npz
+/MALECNS_ROOT/results/pd3/multistab/m2b_r2_h1e-05_D800_g1.9820.npz
+/MALECNS_ROOT/results/pd3/multistab/m2b_r4_h0.0001_D800_g0.3882.npz
+/MALECNS_ROOT/results/pd3/multistab/m2b_r6_h0.0001_D800_g0.2959.npz
+/MALECNS_ROOT/results/pd3/multistab/m2b_r6_h0.0001_D800_g5.8764.npz
+/MALECNS_ROOT/results/pd3/multistab/m2b_r6_h1e-05_D800_g2.6008.npz

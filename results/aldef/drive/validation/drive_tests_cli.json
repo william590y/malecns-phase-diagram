@@ -1,0 +1,161 @@
+{
+ "D1_switch_clampA_zero": {
+  "pass": true,
+  "max_A_after": 0.0
+ },
+ "D1_switch_B_decay": {
+  "pass": true,
+  "checks": [
+   {
+    "k": 1,
+    "expected": 0.26814429189501815,
+    "measured": 0.26927733421325684,
+    "z": 0.5787408006770375
+   },
+   {
+    "k": 2,
+    "expected": 0.2195379780367704,
+    "measured": 0.22126951813697815,
+    "z": 0.9465353036644015
+   },
+   {
+    "k": 5,
+    "expected": 0.12048499691113437,
+    "measured": 0.11960937827825546,
+    "z": -0.608641923726888
+   },
+   {
+    "k": 10,
+    "expected": 0.044323953333211055,
+    "measured": 0.04496093839406967,
+    "z": 0.7003088788427178
+   },
+   {
+    "k": 20,
+    "expected": 0.00599859477851652,
+    "measured": 0.006054686848074198,
+    "z": 0.16436834512044363
+   },
+   {
+    "k": 40,
+    "expected": 0.00010986809580315485,
+    "measured": 0.00011718749010469764,
+    "z": 0.1580149522176847
+   }
+  ]
+ },
+ "D1_switch_C_unchanged": {
+  "pass": true,
+  "expected": 0.32751217770548086,
+  "measured": 0.327053964138031,
+  "se": 0.0007085969179653653
+ },
+ "D2_window_mean_phase1": {
+  "pass": true,
+  "expected": 0.32751217770548086,
+  "measured": [
+   0.3276174068450928,
+   0.3276439309120178,
+   0.3280017375946045
+  ],
+  "se": 0.0005255095390975391
+ },
+ "D2_window_m2_phase1": {
+  "pass": true,
+  "expected": 0.10836546630118694,
+  "measured": 0.10851102322340012,
+  "se": 0.00019597416913752697
+ },
+ "D2_window_A_after_zero": {
+  "pass": true
+ },
+ "D3_reg_last_A_equals_T1": {
+  "pass": true,
+  "values": [
+   40.0
+  ]
+ },
+ "D3_reg_last_C_equals_T": {
+  "pass": true,
+  "values": [
+   60.0
+  ]
+ },
+ "D3_reg_last_B_extinction": {
+  "pass": true,
+  "expected": 4.661800907356838,
+  "measured": 4.69921875,
+  "se": 0.08466383814811707
+ },
+ "D6_occ_window": {
+  "pass": true,
+  "expected": 0.32751217770548086,
+  "measured": [
+   0.327618408203125,
+   0.327645263671875,
+   0.328001708984375
+  ]
+ },
+ "D4_early_stop_absorbing": {
+  "pass": true,
+  "window_mean_expected": 0.0008218109446710185,
+  "window_mean_measured": 0.0008166413754224777,
+  "max_last": 52.0
+ },
+ "D5_no_early_stop_before_driven_phase2": {
+  "pass": true,
+  "expected": 0.32751217770548086,
+  "measured": 0.32770678400993347
+ },
+ "CLI_ORN_isolated_rate_g0": {
+  "pass": true,
+  "expected": 0.037954590294953953,
+  "measured": 0.037973664700984955,
+  "se": 0.00023543391364806943
+ },
+ "CLI_nonORN_silent_g0": {
+  "pass": true
+ },
+ "CLI_ORN_zero_after_removal": {
+  "pass": true,
+  "reg_last_ORN": [
+   40.0
+  ]
+ },
+ "CLI_PN_activity_g0.3": {
+  "pass": true,
+  "PN_driven": 0.02944181300699711,
+  "PN_after": 0.021430393680930138
+ },
+ "EQ_swc_vs_ald_extra_outputs_g0.25": {
+  "pass": true,
+  "same_record_times": 1.0,
+  "identical": {
+   "rho": true,
+   "surv": true,
+   "occ": true
+  },
+  "died_early": 1.0,
+  "n_t_swc": 90.0,
+  "n_t_ald": 234.0
+ },
+ "EQ_swc_vs_ald_extra_outputs_g0.35": {
+  "pass": true,
+  "same_record_times": 1.0,
+  "identical": {
+   "rho": true,
+   "surv": true,
+   "occ": true
+  },
+  "died_early": 0.0,
+  "n_t_swc": 90.0,
+  "n_t_ald": 234.0
+ },
+ "_meta": {
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 3090",
+  "seconds": 38.64606261253357,
+  "n_pass": 18,
+  "n_tests": 18
+ }
+}

@@ -1,0 +1,15 @@
+#!/bin/bash
+#SBATCH -J m2-nature-py
+#SBATCH -p gpu,ellis
+#SBATCH --gres=gpu:1
+#SBATCH --constraint="ampere|ada|hopper|blackwell"
+#SBATCH --exclude=ma-compute-02,kuleshov-compute-01,badfellow,sun-compute-01
+#SBATCH -c 4
+#SBATCH --mem=64G
+#SBATCH -t 03:00:00
+#SBATCH --nice=500
+#SBATCH -o /MALECNS_ROOT/logs/%x_%j.out
+# lane m2/nature: run one python script (args = script + its arguments) on a GPU node.
+echo "host $(hostname)"; nvidia-smi --query-gpu=name --format=csv,noheader
+cd /MALECNS_ROOT/code
+/MALECNS_PYBIN/python "$@"

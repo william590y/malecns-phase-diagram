@@ -1,0 +1,9 @@
+pd3_qmf_ic.py --r 0 --chunk 512
+pd3_qmf_ic.py --r 0.25 --chunk 512
+pd3_qmf_ic.py --r 0.5 --chunk 512
+pd3_qmf_ic.py --r 1 --chunk 512
+pd3_qmf_ic.py --r 1.5 --chunk 512
+pd3_qmf_ic.py --r 2 --chunk 512
+pd3_qmf_ic.py --r 3 --chunk 512
+pd3_qmf_ic.py --r 4 --chunk 512
+pd3_qmf_ic.py --r 6 --chunk 512

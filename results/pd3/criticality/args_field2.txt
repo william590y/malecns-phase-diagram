@@ -1,0 +1,6 @@
+pd3_qs.py --mode field --graph real --r 0 --xs 0.90 --hs 1e-7 3e-7 1e-6 3e-6 1e-5 3e-5 1e-4 3e-4 1e-3 3e-3 1e-2 3e-2 --B 128 --burn 500 --meas 2000 --rng 500 --tag real_r0_x0.90
+pd3_qs.py --mode field --graph real --r 0 --xs 1.00 --hs 1e-7 3e-7 1e-6 3e-6 1e-5 3e-5 1e-4 3e-4 1e-3 3e-3 1e-2 3e-2 --B 128 --burn 500 --meas 2000 --rng 500 --tag real_r0_x1.00
+pd3_qs.py --mode field --graph real --r 0 --xs 1.10 --hs 1e-7 3e-7 1e-6 3e-6 1e-5 3e-5 1e-4 3e-4 1e-3 3e-3 1e-2 3e-2 --B 128 --burn 500 --meas 2000 --rng 500 --tag real_r0_x1.10
+pd3_qs.py --mode field --graph real --r 1 --xs 0.90 --hs 1e-7 3e-7 1e-6 3e-6 1e-5 3e-5 1e-4 3e-4 1e-3 3e-3 1e-2 3e-2 --B 128 --burn 500 --meas 2000 --rng 510 --tag real_r1_x0.90
+pd3_qs.py --mode field --graph real --r 1 --xs 1.00 --hs 1e-7 3e-7 1e-6 3e-6 1e-5 3e-5 1e-4 3e-4 1e-3 3e-3 1e-2 3e-2 --B 128 --burn 500 --meas 2000 --rng 510 --tag real_r1_x1.00
+pd3_qs.py --mode field --graph real --r 1 --xs 1.10 --hs 1e-7 3e-7 1e-6 3e-6 1e-5 3e-5 1e-4 3e-4 1e-3 3e-3 1e-2 3e-2 --B 128 --burn 500 --meas 2000 --rng 510 --tag real_r1_x1.10

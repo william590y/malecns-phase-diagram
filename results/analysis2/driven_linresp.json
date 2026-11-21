@@ -1,0 +1,589 @@
+{
+ "definitions": "Linear response of the driven network below the linear threshold g_lin (r = 1, raw norm), computed on the real graph.\n\nCompanion of code/analysis2_driven.py (which reads the cache written here). CPU, scipy sparse; about 10 minutes.\n\nWith drive h > 0 every silent neuron switches on spontaneously with per-step probability q0 = 1 - exp(-tanh(h) dt);\nbaseline density rho0 = q0 / (q0 + p_off), p_off = 1 - exp(-dt). To first order in the input densities (independent\ninputs, i.e. the closure of section 2 of explainer/theory.html but with EXACT single-input increments), neuron i switches\non with probability\n    Q_i = q0 + sum_j a_ij rho_j ,   a_ij = exp(-F(h) dt) - exp(-F(h + g W~_ij) dt),   F(s) = tanh(s)_+ ,\nand the stationary density solves rho_i = Q_i / (Q_i + p_off) (Q_i clipped at 0). Variants (all r = 1):\n  exact   : a_ij over excitatory AND inhibitory inputs. An inhibitory input onto a silent neuron removes at most the\n            spontaneous rate (a_ij >= -q0): for g c w_ij >> h it is clipped (acts as -q0), for g c w_ij << h it acts\n            linearly (-g c w_ij). So the drive itself decides how much inhibition counts.\n  B_only  : inhibitory a_ij = 0 and excitatory a_ij = 1 - exp(-F(g E_ij) dt) = dt * B_ij(g): the h -> 0 limit, the\n            branching operator B(g) of theory section 3 (lambda_PF(B(g_lin)) = alpha_eff); evaluated with the\n            h = 1e-5 baseline q0 (its relative excess rho_bar/rho0 - 1 is then h-independent to O(h)).\nLeading-mode pole: right/left Perron vectors v, u of B(g_lin) (shifted power iteration), <u, v> = 1; for h -> 0,\n    rho_bar - rho0 ~= rho0 (sum v)(sum u) / N * lam/(alpha_eff - lam),   lam(g) = alpha_eff g / g_lin\n(lambda_PF(B(g)) is proportional to g to within the 0.34% tanh saturation at g <= g_lin; dense theory row at g = 0.1751\ngives lam 0.97263 vs alpha_eff g/g_lin = 0.97275).\nOutput: results/analysis2/driven_linresp.json\n",
+ "g_lin": 0.16315274988719286,
+ "alpha_eff": 0.9063462346100909,
+ "h": [
+  1e-05,
+  0.0001,
+  0.001,
+  0.01
+ ],
+ "g": [
+  0.08,
+  0.1,
+  0.1091,
+  0.1191,
+  0.1202,
+  0.1299,
+  0.1417,
+  0.1445,
+  0.1547,
+  0.158,
+  0.1615
+ ],
+ "rows": [
+  {
+   "g": 0.08,
+   "h": 1e-05,
+   "variant": "B_only",
+   "rho0": 1.1033178366523766e-05,
+   "rho_bar": 1.1706218409391348e-05,
+   "excess_rel": 0.0610014649006021,
+   "iters": 25,
+   "converged": true
+  },
+  {
+   "g": 0.08,
+   "h": 1e-05,
+   "variant": "exact",
+   "rho0": 1.1033178366523766e-05,
+   "rho_bar": 1.1695816730865207e-05,
+   "excess_rel": 0.060058701339586795,
+   "iters": 25,
+   "converged": true
+  },
+  {
+   "g": 0.08,
+   "h": 0.0001,
+   "variant": "exact",
+   "rho0": 0.00011031983582234444,
+   "rho_bar": 0.00011602535964537681,
+   "excess_rel": 0.0517180231506178,
+   "iters": 25,
+   "converged": true
+  },
+  {
+   "g": 0.08,
+   "h": 0.001,
+   "variant": "exact",
+   "rho0": 0.0011020046657163316,
+   "rho_bar": 0.0011339421003475523,
+   "excess_rel": 0.028981215438376173,
+   "iters": 24,
+   "converged": true
+  },
+  {
+   "g": 0.08,
+   "h": 0.01,
+   "variant": "exact",
+   "rho0": 0.010901759840829613,
+   "rho_bar": 0.01104029191170093,
+   "excess_rel": 0.01270731266272107,
+   "iters": 21,
+   "converged": true
+  },
+  {
+   "g": 0.1,
+   "h": 1e-05,
+   "variant": "B_only",
+   "rho0": 1.1033178366523766e-05,
+   "rho_bar": 1.1920897247825748e-05,
+   "excess_rel": 0.08045903472343441,
+   "iters": 36,
+   "converged": true
+  },
+  {
+   "g": 0.1,
+   "h": 1e-05,
+   "variant": "exact",
+   "rho0": 1.1033178366523766e-05,
+   "rho_bar": 1.1909360513070598e-05,
+   "excess_rel": 0.07941339453056373,
+   "iters": 36,
+   "converged": true
+  },
+  {
+   "g": 0.1,
+   "h": 0.0001,
+   "variant": "exact",
+   "rho0": 0.00011031983582234444,
+   "rho_bar": 0.0001180601374775217,
+   "excess_rel": 0.07016237467613706,
+   "iters": 36,
+   "converged": true
+  },
+  {
+   "g": 0.1,
+   "h": 0.001,
+   "variant": "exact",
+   "rho0": 0.0011020046657163316,
+   "rho_bar": 0.0011456670778952844,
+   "excess_rel": 0.03962089593383977,
+   "iters": 34,
+   "converged": true
+  },
+  {
+   "g": 0.1,
+   "h": 0.01,
+   "variant": "exact",
+   "rho0": 0.010901759840829613,
+   "rho_bar": 0.011063948077164059,
+   "excess_rel": 0.014877252728225931,
+   "iters": 27,
+   "converged": true
+  },
+  {
+   "g": 0.1091,
+   "h": 1e-05,
+   "variant": "B_only",
+   "rho0": 1.1033178366523766e-05,
+   "rho_bar": 1.2029752829927695e-05,
+   "excess_rel": 0.09032523814059568,
+   "iters": 44,
+   "converged": true
+  },
+  {
+   "g": 0.1091,
+   "h": 1e-05,
+   "variant": "exact",
+   "rho0": 1.1033178366523766e-05,
+   "rho_bar": 1.2017623313129642e-05,
+   "excess_rel": 0.08922587072396304,
+   "iters": 44,
+   "converged": true
+  },
+  {
+   "g": 0.1091,
+   "h": 0.0001,
+   "variant": "exact",
+   "rho0": 0.00011031983582234444,
+   "rho_bar": 0.00011908999187400686,
+   "excess_rel": 0.07949754444690793,
+   "iters": 44,
+   "converged": true
+  },
+  {
+   "g": 0.1091,
+   "h": 0.001,
+   "variant": "exact",
+   "rho0": 0.0011020046657163316,
+   "rho_bar": 0.0011516920421772447,
+   "excess_rel": 0.04508817249754116,
+   "iters": 40,
+   "converged": true
+  },
+  {
+   "g": 0.1091,
+   "h": 0.01,
+   "variant": "exact",
+   "rho0": 0.010901759840829613,
+   "rho_bar": 0.011074718894963588,
+   "excess_rel": 0.015865241636144223,
+   "iters": 31,
+   "converged": true
+  },
+  {
+   "g": 0.1191,
+   "h": 1e-05,
+   "variant": "B_only",
+   "rho0": 1.1033178366523766e-05,
+   "rho_bar": 1.2161448334126395e-05,
+   "excess_rel": 0.10226155420689653,
+   "iters": 56,
+   "converged": true
+  },
+  {
+   "g": 0.1191,
+   "h": 1e-05,
+   "variant": "exact",
+   "rho0": 1.1033178366523766e-05,
+   "rho_bar": 1.214858520647788e-05,
+   "excess_rel": 0.10109569544696373,
+   "iters": 56,
+   "converged": true
+  },
+  {
+   "g": 0.1191,
+   "h": 0.0001,
+   "variant": "exact",
+   "rho0": 0.00011031983582234444,
+   "rho_bar": 0.00012033378487172657,
+   "excess_rel": 0.09077197200971443,
+   "iters": 56,
+   "converged": true
+  },
+  {
+   "g": 0.1191,
+   "h": 0.001,
+   "variant": "exact",
+   "rho0": 0.0011020046657163316,
+   "rho_bar": 0.0011590622889766974,
+   "excess_rel": 0.05177620842764474,
+   "iters": 50,
+   "converged": true
+  },
+  {
+   "g": 0.1191,
+   "h": 0.01,
+   "variant": "exact",
+   "rho0": 0.010901759840829613,
+   "rho_bar": 0.01108722729648209,
+   "excess_rel": 0.017012616161095284,
+   "iters": 36,
+   "converged": true
+  },
+  {
+   "g": 0.1202,
+   "h": 1e-05,
+   "variant": "B_only",
+   "rho0": 1.1033178366523766e-05,
+   "rho_bar": 1.2176950434604948e-05,
+   "excess_rel": 0.10366659815376034,
+   "iters": 58,
+   "converged": true
+  },
+  {
+   "g": 0.1202,
+   "h": 1e-05,
+   "variant": "exact",
+   "rho0": 1.1033178366523766e-05,
+   "rho_bar": 1.216399964777654e-05,
+   "excess_rel": 0.10249279434146064,
+   "iters": 58,
+   "converged": true
+  },
+  {
+   "g": 0.1202,
+   "h": 0.0001,
+   "variant": "exact",
+   "rho0": 0.00011031983582234444,
+   "rho_bar": 0.00012048000026887452,
+   "excess_rel": 0.09209734922821755,
+   "iters": 57,
+   "converged": true
+  },
+  {
+   "g": 0.1202,
+   "h": 0.001,
+   "variant": "exact",
+   "rho0": 0.0011020046657163316,
+   "rho_bar": 0.001159922644579827,
+   "excess_rel": 0.05255692708510207,
+   "iters": 51,
+   "converged": true
+  },
+  {
+   "g": 0.1202,
+   "h": 0.01,
+   "variant": "exact",
+   "rho0": 0.010901759840829613,
+   "rho_bar": 0.011088666405074136,
+   "excess_rel": 0.01714462315932841,
+   "iters": 36,
+   "converged": true
+  },
+  {
+   "g": 0.1299,
+   "h": 1e-05,
+   "variant": "B_only",
+   "rho0": 1.1033178366523766e-05,
+   "rho_bar": 1.2326323586364669e-05,
+   "excess_rel": 0.11720514043029429,
+   "iters": 78,
+   "converged": true
+  },
+  {
+   "g": 0.1299,
+   "h": 1e-05,
+   "variant": "exact",
+   "rho0": 1.1033178366523766e-05,
+   "rho_bar": 1.2312510533604104e-05,
+   "excess_rel": 0.11595318452949277,
+   "iters": 78,
+   "converged": true
+  },
+  {
+   "g": 0.1299,
+   "h": 0.0001,
+   "variant": "exact",
+   "rho0": 0.00011031983582234444,
+   "rho_bar": 0.00012188579036259445,
+   "excess_rel": 0.10484020805538052,
+   "iters": 76,
+   "converged": true
+  },
+  {
+   "g": 0.1299,
+   "h": 0.001,
+   "variant": "exact",
+   "rho0": 0.0011020046657163316,
+   "rho_bar": 0.001168277552333114,
+   "excess_rel": 0.060138480968865426,
+   "iters": 65,
+   "converged": true
+  },
+  {
+   "g": 0.1299,
+   "h": 0.01,
+   "variant": "exact",
+   "rho0": 0.010901759840829613,
+   "rho_bar": 0.011102237874411416,
+   "excess_rel": 0.018389511098104272,
+   "iters": 41,
+   "converged": true
+  },
+  {
+   "g": 0.1417,
+   "h": 1e-05,
+   "variant": "B_only",
+   "rho0": 1.1033178366523766e-05,
+   "rho_bar": 1.2564235451588221e-05,
+   "excess_rel": 0.13876845222677625,
+   "iters": 125,
+   "converged": true
+  },
+  {
+   "g": 0.1417,
+   "h": 1e-05,
+   "variant": "exact",
+   "rho0": 1.1033178366523766e-05,
+   "rho_bar": 1.2548939117749426e-05,
+   "excess_rel": 0.13738205808624415,
+   "iters": 125,
+   "converged": true
+  },
+  {
+   "g": 0.1417,
+   "h": 0.0001,
+   "variant": "exact",
+   "rho0": 0.00011031983582234444,
+   "rho_bar": 0.0001241012529789137,
+   "excess_rel": 0.1249223863853679,
+   "iters": 120,
+   "converged": true
+  },
+  {
+   "g": 0.1417,
+   "h": 0.001,
+   "variant": "exact",
+   "rho0": 0.0011020046657163316,
+   "rho_bar": 0.0011810145506541316,
+   "excess_rel": 0.07169650673524286,
+   "iters": 92,
+   "converged": true
+  },
+  {
+   "g": 0.1417,
+   "h": 0.01,
+   "variant": "exact",
+   "rho0": 0.010901759840829613,
+   "rho_bar": 0.011121421421236672,
+   "excess_rel": 0.020149185417236426,
+   "iters": 48,
+   "converged": true
+  },
+  {
+   "g": 0.1445,
+   "h": 1e-05,
+   "variant": "B_only",
+   "rho0": 1.1033178366523766e-05,
+   "rho_bar": 1.2640016709945359e-05,
+   "excess_rel": 0.14563694069307975,
+   "iters": 145,
+   "converged": true
+  },
+  {
+   "g": 0.1445,
+   "h": 1e-05,
+   "variant": "exact",
+   "rho0": 1.1033178366523766e-05,
+   "rho_bar": 1.2624197407813904e-05,
+   "excess_rel": 0.14420314694789282,
+   "iters": 145,
+   "converged": true
+  },
+  {
+   "g": 0.1445,
+   "h": 0.0001,
+   "variant": "exact",
+   "rho0": 0.00011031983582234444,
+   "rho_bar": 0.00012479458354611685,
+   "excess_rel": 0.13120711806607543,
+   "iters": 138,
+   "converged": true
+  },
+  {
+   "g": 0.1445,
+   "h": 0.001,
+   "variant": "exact",
+   "rho0": 0.0011020046657163316,
+   "rho_bar": 0.0011847141934247514,
+   "excess_rel": 0.07505370011719181,
+   "iters": 101,
+   "converged": true
+  },
+  {
+   "g": 0.1445,
+   "h": 0.01,
+   "variant": "exact",
+   "rho0": 0.010901759840829613,
+   "rho_bar": 0.01112651688419685,
+   "excess_rel": 0.020616583620331586,
+   "iters": 50,
+   "converged": true
+  },
+  {
+   "g": 0.1547,
+   "h": 1e-05,
+   "variant": "B_only",
+   "rho0": 1.1033178366523766e-05,
+   "rho_bar": 1.314657709006758e-05,
+   "excess_rel": 0.19154940247827112,
+   "iters": 326,
+   "converged": true
+  },
+  {
+   "g": 0.1547,
+   "h": 1e-05,
+   "variant": "exact",
+   "rho0": 1.1033178366523766e-05,
+   "rho_bar": 1.3125988030647141e-05,
+   "excess_rel": 0.18968329837513154,
+   "iters": 325,
+   "converged": true
+  },
+  {
+   "g": 0.1547,
+   "h": 0.0001,
+   "variant": "exact",
+   "rho0": 0.00011031983582234444,
+   "rho_bar": 0.00012905741263073177,
+   "excess_rel": 0.1698477582813096,
+   "iters": 274,
+   "converged": true
+  },
+  {
+   "g": 0.1547,
+   "h": 0.001,
+   "variant": "exact",
+   "rho0": 0.0011020046657163316,
+   "rho_bar": 0.0012027247630379714,
+   "excess_rel": 0.09139716051580327,
+   "iters": 143,
+   "converged": true
+  },
+  {
+   "g": 0.1547,
+   "h": 0.01,
+   "variant": "exact",
+   "rho0": 0.010901759840829613,
+   "rho_bar": 0.011147252484889573,
+   "excess_rel": 0.022518625216869426,
+   "iters": 56,
+   "converged": true
+  },
+  {
+   "g": 0.158,
+   "h": 1e-05,
+   "variant": "B_only",
+   "rho0": 1.1033178366523766e-05,
+   "rho_bar": 1.3614038872728935e-05,
+   "excess_rel": 0.23391813496243885,
+   "iters": 524,
+   "converged": true
+  },
+  {
+   "g": 0.158,
+   "h": 1e-05,
+   "variant": "exact",
+   "rho0": 1.1033178366523766e-05,
+   "rho_bar": 1.358640370864924e-05,
+   "excess_rel": 0.23141340213191186,
+   "iters": 520,
+   "converged": true
+  },
+  {
+   "g": 0.158,
+   "h": 0.0001,
+   "variant": "exact",
+   "rho0": 0.00011031983582234444,
+   "rho_bar": 0.00013215128089323427,
+   "excess_rel": 0.19789229115647422,
+   "iters": 373,
+   "converged": true
+  },
+  {
+   "g": 0.158,
+   "h": 0.001,
+   "variant": "exact",
+   "rho0": 0.0011020046657163316,
+   "rho_bar": 0.0012109320512481557,
+   "excess_rel": 0.09884475893849176,
+   "iters": 158,
+   "converged": true
+  },
+  {
+   "g": 0.158,
+   "h": 0.01,
+   "variant": "exact",
+   "rho0": 0.010901759840829613,
+   "rho_bar": 0.011154774937723634,
+   "excess_rel": 0.023208647098097,
+   "iters": 58,
+   "converged": true
+  },
+  {
+   "g": 0.1615,
+   "h": 1e-05,
+   "variant": "B_only",
+   "rho0": 1.1033178366523766e-05,
+   "rho_bar": 1.5461835536135085e-05,
+   "excess_rel": 0.40139450505472607,
+   "iters": 1221,
+   "converged": true
+  },
+  {
+   "g": 0.1615,
+   "h": 1e-05,
+   "variant": "exact",
+   "rho0": 1.1033178366523766e-05,
+   "rho_bar": 1.5384634998753714e-05,
+   "excess_rel": 0.3943973792205595,
+   "iters": 1205,
+   "converged": true
+  },
+  {
+   "g": 0.1615,
+   "h": 0.0001,
+   "variant": "exact",
+   "rho0": 0.00011031983582234444,
+   "rho_bar": 0.0001386734943467608,
+   "excess_rel": 0.25701324075641474,
+   "iters": 515,
+   "converged": true
+  },
+  {
+   "g": 0.1615,
+   "h": 0.001,
+   "variant": "exact",
+   "rho0": 0.0011020046657163316,
+   "rho_bar": 0.0012215271250239873,
+   "excess_rel": 0.1084591227478724,
+   "iters": 172,
+   "converged": true
+  },
+  {
+   "g": 0.1615,
+   "h": 0.01,
+   "variant": "exact",
+   "rho0": 0.010901759840829613,
+   "rho_bar": 0.011163233557801848,
+   "excess_rel": 0.02398454201797362,
+   "iters": 59,
+   "converged": true
+  }
+ ],
+ "pole": {
+  "lam_at_g_lin": 0.9063470176498213,
+  "lam_left": 0.9063476703882624,
+  "iters": [
+   550,
+   219
+  ],
+  "sum_v": 22.199399327699403,
+  "sum_u": 24.293444247817664,
+  "amp_sumv_sumu_over_N": 0.003225169062186073,
+  "inv_ipr_v": 72.73585488638521,
+  "note": "rho_bar/rho0 - 1 (pole part) = amp * x/(1-x), x = g/g_lin"
+ }
+}

@@ -1,0 +1,136 @@
+{
+ "options": {
+  "exp": "quiet",
+  "norm": "raw",
+  "g": [
+   1.0
+  ],
+  "r": 1.0,
+  "h": 0.0,
+  "beta": 1.0,
+  "T": 0.4,
+  "dt": 0.2,
+  "B": 256,
+  "null": false,
+  "null_kind": "targets",
+  "seed_set": null,
+  "seed": 3,
+  "out": "/MALECNS_ROOT/results/m2/verify/simtest/tmp_unit_t68en_54/U8_init_1.0.npz",
+  "drive": [],
+  "clamp_off": [],
+  "clamp_on": [],
+  "sign_override": [],
+  "sign_ensemble": 0,
+  "ens_unit": "neuron",
+  "ens_conf": "body",
+  "ens_gt": "ignore",
+  "ens_qmiss": 0.5,
+  "ens_seed": null,
+  "ens_only": null,
+  "wtransform": "linear",
+  "wnorm": "renorm",
+  "std": [
+   0.25,
+   Infinity
+  ],
+  "std_group": [],
+  "std_mode": "spike",
+  "adapt": null,
+  "adapt_group": [],
+  "refractory": 0,
+  "region": [
+   "A=idx:/MALECNS_ROOT/results/m2/verify/simtest/tmp_unit_t68en_54/half.npz",
+   "B=~idx:/MALECNS_ROOT/results/m2/verify/simtest/tmp_unit_t68en_54/half.npz"
+  ],
+  "no_default_regions": false,
+  "no_occ": false,
+  "device": "cuda",
+  "engine": "spmm",
+  "push_max": 0.05,
+  "switch_at": null,
+  "sw_drive": [],
+  "sw_clamp_off": [],
+  "sw_clamp_on": [],
+  "rec_lin": 0.0,
+  "win": [],
+  "reg_last": false,
+  "occ_win": null,
+  "edge_sign": [],
+  "null_seed": null,
+  "graph": "/MALECNS_ROOT/results/m2/verify/simtest/tmp_unit_t68en_54/iso.npz",
+  "rec_counts": false,
+  "counts_win": null,
+  "counts_reg": false,
+  "pulse": null,
+  "pulse_gap": 0.0,
+  "ramp": 0.0,
+  "ramp_loop": false,
+  "ramp_avg": 0.5,
+  "init": [
+   "idx:/MALECNS_ROOT/results/m2/verify/simtest/tmp_unit_t68en_54/half.npz"
+  ],
+  "init_frac": 1.0
+ },
+ "device": "cuda",
+ "gpu": "NVIDIA RTX A5500",
+ "graph": {
+  "file": "/MALECNS_ROOT/results/m2/verify/simtest/tmp_unit_t68en_54/iso.npz",
+  "N": 1000,
+  "n_edges": 1,
+  "sub": false,
+  "c": null
+ },
+ "c_raw": 1.0,
+ "std": {
+  "default": [
+   0.25,
+   Infinity
+  ],
+  "groups": [],
+  "n_depressing": 1000,
+  "mode": "spike"
+ },
+ "init": {
+  "sel": [
+   "idx:/MALECNS_ROOT/results/m2/verify/simtest/tmp_unit_t68en_54/half.npz"
+  ],
+  "n": 500,
+  "frac": 1.0
+ },
+ "regions": {
+  "A": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/verify/simtest/tmp_unit_t68en_54/half.npz",
+   "n": 500
+  },
+  "B": {
+   "sel": "~idx:/MALECNS_ROOT/results/m2/verify/simtest/tmp_unit_t68en_54/half.npz",
+   "n": 500
+  }
+ },
+ "N": 1000,
+ "nnz": [
+  1
+ ],
+ "steps": 2,
+ "n_draws": 1,
+ "ms_per_step": [
+  [
+   1.2732744216918945
+  ]
+ ],
+ "rho_T_mean": [
+  0.33591407537460327
+ ],
+ "surv_T": [
+  1.0
+ ],
+ "wall_s": 0.006104469299316406,
+ "reg_rho_T_mean": {
+  "A": [
+   0.6718280911445618
+  ],
+  "B": [
+   0.0
+  ]
+ }
+}

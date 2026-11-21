@@ -1,0 +1,11 @@
+pd3_multistab.py m2b --sweep /MALECNS_ROOT/results/pd3/multistab/sweep_r0_h0.0001_D800.npz --seg 2 --T 5000 --seed 5000  # r0_h0.0001_area_all_PR
+pd3_multistab.py m2b --sweep /MALECNS_ROOT/results/pd3/multistab/sweep_r0_h1e-05_D800.npz --seg 3 --T 5000 --seed 5001  # control_largest_loop_h1e-05
+pd3_multistab.py m2b --sweep /MALECNS_ROOT/results/pd3/multistab/sweep_r2_h0.0001_D800.npz --seg 4 --T 5000 --seed 5002  # r2_h0.0001_area_all,r2_h0.0001_area_onset_window,control_largest_loop_h0.0001
+pd3_multistab.py m2b --sweep /MALECNS_ROOT/results/pd3/multistab/sweep_r2_h1e-05_D800.npz --seg 19 --T 5000 --seed 5003  # r2_h1e-05_area_above_window
+pd3_multistab.py m2b --sweep /MALECNS_ROOT/results/pd3/multistab/sweep_r4_h0.0001_D800.npz --seg 7 --T 5000 --seed 5004  # r4_h0.0001_area_all,r4_h0.0001_area_onset_window
+pd3_multistab.py m2b --sweep /MALECNS_ROOT/results/pd3/multistab/sweep_r6_h0.0001_D800.npz --seg 5 --T 5000 --seed 5005  # r6_h0.0001_area_all,r6_h0.0001_area_onset_window
+pd3_multistab.py m2b --sweep /MALECNS_ROOT/results/pd3/multistab/sweep_r6_h0.0001_D800.npz --seg 27 --T 5000 --seed 5006  # r6_h0.0001_area_above_window
+pd3_multistab.py m2b --sweep /MALECNS_ROOT/results/pd3/multistab/sweep_r6_h0.0001_D800.npz --seg 37 --T 5000 --seed 5007  # r6_h0.0001_area_above_window_PR
+pd3_multistab.py m2b --sweep /MALECNS_ROOT/results/pd3/multistab/sweep_r6_h1e-05_D800.npz --seg 5 --T 5000 --seed 5008  # r6_h1e-05_area_all_PR
+pd3_multistab.py m2b --sweep /MALECNS_ROOT/results/pd3/multistab/sweep_r6_h1e-05_D800.npz --seg 21 --T 5000 --seed 5009  # r6_h1e-05_area_above_window
+pd3_multistab.py m2b --sweep /MALECNS_ROOT/results/pd3/multistab/sweep_r6_h1e-05_D800.npz --seg 30 --T 5000 --seed 5010  # r6_h1e-05_area_above_window_PR

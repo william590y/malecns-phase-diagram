@@ -1,0 +1,143 @@
+{
+ "new": "/MALECNS_ROOT/code/ald_sim_e3_work.py",
+ "old": "/MALECNS_ROOT/results/aldef/depression/ald_sim_before_e3.py",
+ "cases": {
+  "V1_swc_vs_new_off": {
+   "t": {
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "g": {
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "rho": {
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "surv": {
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "occ": {
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "all_identical": true
+  },
+  "V2_old_vs_new_rate_mode_features": {
+   "t": {
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "g": {
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "rho": {
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "surv": {
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "occ": {
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "reg_rho": {
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "res_x": {
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "res_x_act": {
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "res_theta": {
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "all_identical": true
+  },
+  "V3_spike_U0_vs_off": {
+   "t": {
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "g": {
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "rho": {
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "surv": {
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "occ": {
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "reg_rho": {
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "all_identical": true
+  },
+  "V4_spike_instant_recovery_vs_off": {
+   "t": {
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "g": {
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "rho": {
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "surv": {
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "occ": {
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "reg_rho": {
+    "bit_identical": true,
+    "max_abs_diff": 0.0
+   },
+   "all_identical": true
+  },
+  "V5_spike_sanity": {
+   "finite_rho": true,
+   "x_range": [
+    0.47538524866104126,
+    0.8601449728012085
+   ],
+   "e_range": [
+    0.24966458976268768,
+    1.0
+   ],
+   "ok": true,
+   "surv_T": [
+    0.0,
+    0.0
+   ],
+   "AL_module_T": [
+    0.0,
+    0.0
+   ]
+  }
+ },
+ "all_pass": true
+}

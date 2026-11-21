@@ -1,0 +1,547 @@
+{
+ "generated_by": "code/pd3_synthesis.py",
+ "date": "2026-11-09",
+ "numbers": {
+  "g_lin_real": {
+   "value": 0.16315274988719286,
+   "source": "results/analysis2/phase_complete.json g_lin.real"
+  },
+  "sim_S_r0": {
+   "value": 0.23358007842770617,
+   "source": "phase_complete.json sim.real['0'].S.g"
+  },
+  "sim_on_r0": {
+   "value": 0.2662165730857347,
+   "source": "phase_complete.json sim.real['0'].on.g"
+  },
+  "sim_xon_r0": {
+   "value": 1.631701416432161,
+   "source": "computed: sim on / g_lin (phase_complete.json)"
+  },
+  "sim_xS_r0": {
+   "value": 1.4316649801441177,
+   "source": "computed: sim S / g_lin (phase_complete.json)"
+  },
+  "sim_S_r1": {
+   "value": 0.2828486392918696,
+   "source": "phase_complete.json sim.real['1'].S.g"
+  },
+  "sim_on_r1": {
+   "value": 0.34432505332955005,
+   "source": "phase_complete.json sim.real['1'].on.g"
+  },
+  "sim_xon_r1": {
+   "value": 2.110445907700749,
+   "source": "computed: sim on / g_lin (phase_complete.json)"
+  },
+  "sim_xS_r1": {
+   "value": 1.7336431012498221,
+   "source": "computed: sim S / g_lin (phase_complete.json)"
+  },
+  "sim_S_r6": {
+   "value": 0.4364765022800213,
+   "source": "phase_complete.json sim.real['6'].S.g"
+  },
+  "sim_on_r6": {
+   "value": 0.5785358895419409,
+   "source": "phase_complete.json sim.real['6'].on.g"
+  },
+  "sim_xon_r6": {
+   "value": 3.545976944562396,
+   "source": "computed: sim on / g_lin (phase_complete.json)"
+  },
+  "sim_xS_r6": {
+   "value": 2.6752629212919183,
+   "source": "computed: sim S / g_lin (phase_complete.json)"
+  },
+  "sim_D_by_r": {
+   "value": {
+    "0": 1.471,
+    "0.125": 1.914,
+    "0.25": 2.499,
+    "0.375": 3.293,
+    "0.5": 4.441,
+    "0.625": 6.047,
+    "0.75": 8.326,
+    "0.875": 11.037,
+    "1": 14.47,
+    "1.25": 21.773,
+    "1.5": 28.855,
+    "1.75": null,
+    "2": null,
+    "2.25": null,
+    "2.5": null,
+    "2.75": null,
+    "3": null,
+    "3.5": null,
+    "4": null,
+    "4.5": null,
+    "5": null,
+    "5.5": null,
+    "6": null
+   },
+   "source": "phase_complete.json sim.real[r].D.g (None = PR < N/4 up to the largest simulated g)"
+  },
+  "sim_gmax_by_r": {
+   "value": {
+    "0": 30.0,
+    "0.125": 30.0,
+    "0.25": 30.0,
+    "0.375": 30.0,
+    "0.5": 30.0,
+    "0.625": 30.0,
+    "0.75": 30.0,
+    "0.875": 30.0,
+    "1": 30.0,
+    "1.25": 30.0,
+    "1.5": 30.0,
+    "1.75": 30.0,
+    "2": 30.0,
+    "2.25": 2.6,
+    "2.5": 2.6,
+    "2.75": 2.6,
+    "3": 30.0,
+    "3.5": 2.6,
+    "4": 30.0,
+    "4.5": 2.6,
+    "5": 2.6,
+    "5.5": 2.6,
+    "6": 30.0
+   },
+   "source": "phase_complete.json sim.real[r].g_range[1]"
+  },
+  "on_over_S_window_r0_r1": {
+   "value": [
+    1.1397229373228832,
+    1.2173473918474231
+   ],
+   "source": "computed from phase_complete.json"
+  },
+  "isl1_1pct_r0_r1_r6": {
+   "value": [
+    0.381930624033203,
+    0.5587582009815758,
+    0.9485049615708129
+   ],
+   "source": "results/pd3/modules/module_occ_P0.json sim[r].cross_1pct_survivors.isl1"
+  },
+  "rest_1pct_r0_r1_r6": {
+   "value": [
+    0.7010367780047358,
+    2.371824641130901,
+    7.448527046918475
+   ],
+   "source": "results/pd3/modules/module_occ_P0.json sim[r].cross_1pct_survivors.rest"
+  },
+  "m3b_cells_any_coexistence": {
+   "value": [
+    40,
+    false
+   ],
+   "source": "results/pd3/multistab/analysis_m3b.json"
+  },
+  "m1_summary": {
+   "value": {
+    "any_broken_symmetry": false,
+    "n_points": 48,
+    "max_frac_Lonly_keep": 0,
+    "max_t_sym_median": 7.0,
+    "n_c1": 0,
+    "n_c2": 0,
+    "n_c3": 0
+   },
+   "source": "results/pd3/multistab/analysis_m1.json summary"
+  },
+  "m1_n_closure_window_points": {
+   "value": 21,
+   "source": "results/pd3/multistab/analysis_m1.json rows[].closure_predicts_B1"
+  },
+  "closure_P0_cells_by_category": {
+   "value": {
+    "SL": 514,
+    "single_active_Bm": 441,
+    "SH": 111,
+    "multistable_islands": 1058,
+    "B1L_B1R_AL_lobes": 1426,
+    "no_stable_fixed_point": 450
+   },
+   "source": "computed here from results/pd3/modules/coarse_post_P0.npz labels_corr / n_attr_corr (4000 cells)"
+  },
+  "closure_P0_B1_first_g": {
+   "value": {
+    "2.5": 0.2242,
+    "4": 0.2859,
+    "6": 0.4337
+   },
+   "source": "results/pd3/module_theory.json MT2.P0.corrected.AL_lobe_broken_first_g_by_r"
+  },
+  "closure_P0_SL_edge_r0_r6": {
+   "value": [
+    0.1645138789493894,
+    0.3863266848225714
+   ],
+   "source": "results/pd3/modules/coarse_post_P0.json g_SL_edge"
+  },
+  "closure_P0_n_hysteresis_intervals": {
+   "value": 46,
+   "source": "results/pd3/modules/coarse_post_P0.json"
+  },
+  "xstar_real_r0": {
+   "value": [
+    1.1865,
+    1.1836,
+    1.1896
+   ],
+   "source": "results/pd3/criticality/aval_analysis.json critical_point.families.real_r0.x_star(_ci)"
+  },
+  "xstar_real_r1": {
+   "value": [
+    1.3448,
+    1.341,
+    1.3489
+   ],
+   "source": "results/pd3/criticality/aval_analysis.json critical_point.families.real_r1.x_star(_ci)"
+  },
+  "xstar_real_r6": {
+   "value": [
+    1.7222,
+    1.7167,
+    1.7278
+   ],
+   "source": "results/pd3/criticality/aval_analysis.json critical_point.families.real_r6.x_star(_ci)"
+  },
+  "xstar_real_r0_vw": {
+   "value": [
+    1.123,
+    1.12,
+    1.1262
+   ],
+   "source": "results/pd3/criticality/aval_analysis.json critical_point.families.real_r0_vw.x_star(_ci)"
+  },
+  "xstar_real_r1_vw": {
+   "value": [
+    1.2711,
+    1.2662,
+    1.2759
+   ],
+   "source": "results/pd3/criticality/aval_analysis.json critical_point.families.real_r1_vw.x_star(_ci)"
+  },
+  "xstar_real_r6_vw": {
+   "value": [
+    1.6274,
+    1.6197,
+    1.6347
+   ],
+   "source": "results/pd3/criticality/aval_analysis.json critical_point.families.real_r6_vw.x_star(_ci)"
+  },
+  "xstar_complete37": {
+   "value": [
+    1.2731,
+    1.271,
+    1.2753
+   ],
+   "source": "results/pd3/criticality/aval_analysis.json critical_point.families.complete37.x_star(_ci)"
+  },
+  "xstar_complete76": {
+   "value": [
+    1.1261,
+    1.1247,
+    1.1275
+   ],
+   "source": "results/pd3/criticality/aval_analysis.json critical_point.families.complete76.x_star(_ci)"
+  },
+  "xstar_cnull_N167216_s0_r0": {
+   "value": [
+    1.0182,
+    1.0164,
+    1.0197
+   ],
+   "source": "results/pd3/criticality/aval_analysis.json critical_point.families.cnull_N167216_s0_r0.x_star(_ci)"
+  },
+  "xstar_chain_K75.8_real": {
+   "value": 1.1376,
+   "source": "aval_analysis.json critical_point.chain_pred.K75.8_real.x_star"
+  },
+  "xstar_chain_K36.6_real": {
+   "value": 1.291,
+   "source": "aval_analysis.json critical_point.chain_pred.K36.6_real.x_star"
+  },
+  "xstar_chain_K16.2_real": {
+   "value": 1.7573,
+   "source": "aval_analysis.json critical_point.chain_pred.K16.2_real.x_star"
+  },
+  "xstar_chain_K36.6_real_netinput_closure_r1": {
+   "value": 1.418,
+   "source": "aval_analysis.json critical_point.chain_pred.K36.6_real_netinput_closure_r1.x_star"
+  },
+  "xstar_chain_K16.2_real_netinput_closure_r6": {
+   "value": 2.1018,
+   "source": "aval_analysis.json critical_point.chain_pred.K16.2_real_netinput_closure_r6.x_star"
+  },
+  "xstar_chain_K37_complete": {
+   "value": 1.2869,
+   "source": "aval_analysis.json critical_point.chain_pred.K37_complete.x_star"
+  },
+  "xstar_chain_K76_complete": {
+   "value": 1.1371,
+   "source": "aval_analysis.json critical_point.chain_pred.K76_complete.x_star"
+  },
+  "xstar_chain_K300": {
+   "value": 1.0355,
+   "source": "aval_analysis.json critical_point.chain_pred.K300.x_star"
+  },
+  "xstar_chain_K2000": {
+   "value": 1.0054,
+   "source": "aval_analysis.json critical_point.chain_pred.K2000.x_star"
+  },
+  "ST_peak_real_r0_x1.00": {
+   "value": 2.349,
+   "source": "aval_analysis.json runs.real_r0_x1.00.ST.peak"
+  },
+  "ST_peak_real_r1_x1.00": {
+   "value": 2.242,
+   "source": "aval_analysis.json runs.real_r1_x1.00.ST.peak"
+  },
+  "ST_peak_real_r6_x1.00": {
+   "value": 2.101,
+   "source": "aval_analysis.json runs.real_r6_x1.00.ST.peak"
+  },
+  "ST_peak_module_r0_x1.00": {
+   "value": 2.166,
+   "source": "aval_analysis.json runs.module_r0_x1.00.ST.peak"
+  },
+  "ST_peak_cnull_N167216_s0_r0_x1.00": {
+   "value": 2.624,
+   "source": "aval_analysis.json runs.cnull_N167216_s0_r0_x1.00.ST.peak"
+  },
+  "ST_peak_complete37_x1.00": {
+   "value": 1.57,
+   "source": "aval_analysis.json runs.complete37_x1.00.ST.peak"
+  },
+  "ST_peak_complete76_x1.00": {
+   "value": 1.679,
+   "source": "aval_analysis.json runs.complete76_x1.00.ST.peak"
+  },
+  "ST_peak_complete300_x1.00": {
+   "value": 1.804,
+   "source": "aval_analysis.json runs.complete300_x1.00.ST.peak"
+  },
+  "ST_peak_complete2000_x1.00": {
+   "value": 1.922,
+   "source": "aval_analysis.json runs.complete2000_x1.00.ST.peak"
+  },
+  "QS_real_r0": {
+   "value": {
+    "chi_AL_peak_g": 0.208,
+    "chain_chi_peak_g": 0.1948,
+    "beta": 1.2,
+    "beta_chain": 0.79,
+    "all_unimodal": true,
+    "K": 75.8
+   },
+   "source": "results/pd3/criticality/qs_analysis.json C2.real_r0"
+  },
+  "QS_real_r1": {
+   "value": {
+    "chi_AL_peak_g": 0.2473,
+    "chain_chi_peak_g": 0.2094,
+    "beta": 1.278,
+    "beta_chain": 0.683,
+    "all_unimodal": true,
+    "K": 36.9
+   },
+   "source": "results/pd3/criticality/qs_analysis.json C2.real_r1"
+  },
+  "QS_real_r6": {
+   "value": {
+    "chi_AL_peak_g": 0.3362,
+    "chain_chi_peak_g": 0.2332,
+    "beta": 1.153,
+    "beta_chain": 0.534,
+    "all_unimodal": true,
+    "K": 16.2
+   },
+   "source": "results/pd3/criticality/qs_analysis.json C2.real_r6"
+  },
+  "fss_seed_means_cnull_r0": {
+   "value": {
+    "2500": 1.3357,
+    "5000": 1.2819,
+    "10000": 1.2111,
+    "20000": 1.1452,
+    "40000": 1.1221,
+    "80000": 1.0794,
+    "167216": 1.0609
+   },
+   "source": "results/pd3/redraw_fss/fss_analysis.json seed_means.cnull_r0[].x_on_mean"
+  },
+  "fss_chi_win_slope_cnull_r0": {
+   "value": [
+    0.652,
+    0.015
+   ],
+   "source": "fss_analysis.json supplementary_chi_win.cnull_r0"
+  },
+  "fss_seed_means_cnull_r1": {
+   "value": {
+    "2500": 3.7131,
+    "5000": 2.7616,
+    "10000": 2.3935,
+    "20000": 1.8978,
+    "40000": 1.7453,
+    "80000": 1.4743,
+    "167216": 1.3361
+   },
+   "source": "results/pd3/redraw_fss/fss_analysis.json seed_means.cnull_r1[].x_on_mean"
+  },
+  "fss_chi_win_slope_cnull_r1": {
+   "value": [
+    0.194,
+    0.022
+   ],
+   "source": "fss_analysis.json supplementary_chi_win.cnull_r1"
+  },
+  "fss_seed_means_realsub_r0": {
+   "value": {
+    "5000": 1.6444,
+    "20000": 1.6398,
+    "80000": 1.6314
+   },
+   "source": "results/pd3/redraw_fss/fss_analysis.json seed_means.realsub_r0[].x_on_mean"
+  },
+  "fss_chi_win_slope_realsub_r0": {
+   "value": [
+    0.152,
+    0.061
+   ],
+   "source": "fss_analysis.json supplementary_chi_win.realsub_r0"
+  },
+  "fss_seed_means_realsub_r1": {
+   "value": {
+    "5000": 2.1059,
+    "20000": 2.1009,
+    "80000": 2.119
+   },
+   "source": "results/pd3/redraw_fss/fss_analysis.json seed_means.realsub_r1[].x_on_mean"
+  },
+  "fss_chi_win_slope_realsub_r1": {
+   "value": [
+    0.103,
+    0.033
+   ],
+   "source": "fss_analysis.json supplementary_chi_win.realsub_r1"
+  },
+  "AL_alone_x_tau3000_r0": {
+   "value": 1.6518,
+   "source": "results/pd3/module_theory/island_lifetimes.json AL_r0.x_tau3000"
+  },
+  "AL_alone_tau_x1_r0": {
+   "value": 19.89,
+   "source": "island_lifetimes.json AL_r0.tau_x1"
+  },
+  "AL_alone_x_tau3000_r1": {
+   "value": 2.0723,
+   "source": "results/pd3/module_theory/island_lifetimes.json AL_r1.x_tau3000"
+  },
+  "AL_alone_tau_x1_r1": {
+   "value": 16.5,
+   "source": "island_lifetimes.json AL_r1.tau_x1"
+  },
+  "m2a_loop_r0_h1e-5": {
+   "value": {
+    "A50": 1.708,
+    "A200": 0.728,
+    "A800": 0.263,
+    "SE800": 0.055,
+    "floor800": 0.08,
+    "fold_50_to_800": 6.5
+   },
+   "source": "results/pd3/multistab/analysis_m2a.json decisions.r0_h1e-05_area_all"
+  },
+  "m2a_loop_r0.5_h1e-5": {
+   "value": {
+    "A50": 1.547,
+    "A200": 0.398,
+    "A800": 0.167,
+    "SE800": 0.043,
+    "floor800": 0.087,
+    "fold_50_to_800": 9.3
+   },
+   "source": "results/pd3/multistab/analysis_m2a.json decisions.r0.5_h1e-05_area_all"
+  },
+  "m2a_loop_r1_h1e-5": {
+   "value": {
+    "A50": 1.757,
+    "A200": 0.486,
+    "A800": 0.119,
+    "SE800": 0.048,
+    "floor800": 0.106,
+    "fold_50_to_800": 14.8
+   },
+   "source": "results/pd3/multistab/analysis_m2a.json decisions.r1_h1e-05_area_all"
+  },
+  "m2a_loop_r2_h1e-5": {
+   "value": {
+    "A50": 1.389,
+    "A200": 0.351,
+    "A800": 0.139,
+    "SE800": 0.046,
+    "floor800": 0.128,
+    "fold_50_to_800": 10.0
+   },
+   "source": "results/pd3/multistab/analysis_m2a.json decisions.r2_h1e-05_area_all"
+  },
+  "m2a_loop_r4_h1e-5": {
+   "value": {
+    "A50": 1.233,
+    "A200": 0.489,
+    "A800": 0.081,
+    "SE800": 0.039,
+    "floor800": 0.13,
+    "fold_50_to_800": 15.2
+   },
+   "source": "results/pd3/multistab/analysis_m2a.json decisions.r4_h1e-05_area_all"
+  },
+  "m2a_loop_r6_h1e-5": {
+   "value": {
+    "A50": 1.571,
+    "A200": 0.182,
+    "A800": 0.101,
+    "SE800": 0.038,
+    "floor800": 0.132,
+    "fold_50_to_800": 15.5
+   },
+   "source": "results/pd3/multistab/analysis_m2a.json decisions.r6_h1e-05_area_all"
+  },
+  "qmf_SL_edge_up_sweep": {
+   "value": {
+    "0": 0.1608,
+    "0.25": 0.1699,
+    "0.5": 0.1747,
+    "1": 0.1796,
+    "1.5": 0.1847,
+    "2": 0.1847,
+    "3": 0.1899,
+    "4": 0.1899,
+    "6": 0.1952
+   },
+   "source": "results/pd3/module_theory/qmf_analysis.json per_r[r].SL_edge_up_sweep"
+  },
+  "theory_onset_P2_r0_r1_r6": {
+   "value": [
+    0.2905,
+    0.6127,
+    2.3627
+   ],
+   "source": "phase_complete.json theory.real[r].on.g"
+  },
+  "theory_on_over_sim_on_r0_r1_r6": {
+   "value": [
+    1.091,
+    1.779,
+    4.084
+   ],
+   "source": "computed from phase_complete.json theory/sim on"
+  }
+ }
+}

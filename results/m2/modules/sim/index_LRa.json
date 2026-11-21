@@ -1,0 +1,1242 @@
+[
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M2",
+  "r": 0,
+  "start": "all",
+  "g": [
+   1.1818,
+   1.4772,
+   1.8909,
+   2.9545,
+   4.7272,
+   9.4543
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61000,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M2_r0_all.npz",
+  "name": "M2_r0_all"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M2",
+  "r": 0,
+  "start": "AL_L",
+  "g": [
+   1.1818,
+   1.4772,
+   1.8909,
+   2.9545,
+   4.7272,
+   9.4543
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61001,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M2_r0_AL_L.npz",
+  "name": "M2_r0_AL_L"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M2",
+  "r": 0,
+  "start": "AL_R",
+  "g": [
+   1.1818,
+   1.4772,
+   1.8909,
+   2.9545,
+   4.7272,
+   9.4543
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61002,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M2_r0_AL_R.npz",
+  "name": "M2_r0_AL_R"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M2",
+  "r": 0,
+  "start": "hemiL",
+  "g": [
+   1.1818,
+   1.4772,
+   1.8909,
+   2.9545,
+   4.7272,
+   9.4543
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61003,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M2_r0_hemiL.npz",
+  "name": "M2_r0_hemiL"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M2",
+  "r": 0,
+  "start": "hemiR",
+  "g": [
+   1.1818,
+   1.4772,
+   1.8909,
+   2.9545,
+   4.7272,
+   9.4543
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61004,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M2_r0_hemiR.npz",
+  "name": "M2_r0_hemiR"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M2",
+  "r": 0.25,
+  "start": "all",
+  "g": [
+   1.3313,
+   1.6641,
+   2.13,
+   3.3282,
+   5.3251,
+   10.65
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61005,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M2_r0.25_all.npz",
+  "name": "M2_r0.25_all"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M2",
+  "r": 0.25,
+  "start": "AL_L",
+  "g": [
+   1.3313,
+   1.6641,
+   2.13,
+   3.3282,
+   5.3251,
+   10.65
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61006,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M2_r0.25_AL_L.npz",
+  "name": "M2_r0.25_AL_L"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M2",
+  "r": 0.25,
+  "start": "AL_R",
+  "g": [
+   1.3313,
+   1.6641,
+   2.13,
+   3.3282,
+   5.3251,
+   10.65
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61007,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M2_r0.25_AL_R.npz",
+  "name": "M2_r0.25_AL_R"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M2",
+  "r": 0.25,
+  "start": "hemiL",
+  "g": [
+   1.3313,
+   1.6641,
+   2.13,
+   3.3282,
+   5.3251,
+   10.65
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61008,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M2_r0.25_hemiL.npz",
+  "name": "M2_r0.25_hemiL"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M2",
+  "r": 0.25,
+  "start": "hemiR",
+  "g": [
+   1.3313,
+   1.6641,
+   2.13,
+   3.3282,
+   5.3251,
+   10.65
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61009,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M2_r0.25_hemiR.npz",
+  "name": "M2_r0.25_hemiR"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M2",
+  "r": 0.5,
+  "start": "all",
+  "g": [
+   1.4332,
+   1.7916,
+   2.2932,
+   3.5831,
+   5.733,
+   11.466
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61010,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M2_r0.5_all.npz",
+  "name": "M2_r0.5_all"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M2",
+  "r": 0.5,
+  "start": "AL_L",
+  "g": [
+   1.4332,
+   1.7916,
+   2.2932,
+   3.5831,
+   5.733,
+   11.466
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61011,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M2_r0.5_AL_L.npz",
+  "name": "M2_r0.5_AL_L"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M2",
+  "r": 0.5,
+  "start": "AL_R",
+  "g": [
+   1.4332,
+   1.7916,
+   2.2932,
+   3.5831,
+   5.733,
+   11.466
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61012,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M2_r0.5_AL_R.npz",
+  "name": "M2_r0.5_AL_R"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M2",
+  "r": 0.5,
+  "start": "hemiL",
+  "g": [
+   1.4332,
+   1.7916,
+   2.2932,
+   3.5831,
+   5.733,
+   11.466
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61013,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M2_r0.5_hemiL.npz",
+  "name": "M2_r0.5_hemiL"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M2",
+  "r": 0.5,
+  "start": "hemiR",
+  "g": [
+   1.4332,
+   1.7916,
+   2.2932,
+   3.5831,
+   5.733,
+   11.466
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61014,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M2_r0.5_hemiR.npz",
+  "name": "M2_r0.5_hemiR"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M2",
+  "r": 1,
+  "start": "all",
+  "g": [
+   1.571,
+   1.9638,
+   2.5136,
+   3.9275,
+   6.284,
+   12.568
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61015,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M2_r1_all.npz",
+  "name": "M2_r1_all"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M2",
+  "r": 1,
+  "start": "AL_L",
+  "g": [
+   1.571,
+   1.9638,
+   2.5136,
+   3.9275,
+   6.284,
+   12.568
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61016,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M2_r1_AL_L.npz",
+  "name": "M2_r1_AL_L"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M2",
+  "r": 1,
+  "start": "AL_R",
+  "g": [
+   1.571,
+   1.9638,
+   2.5136,
+   3.9275,
+   6.284,
+   12.568
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61017,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M2_r1_AL_R.npz",
+  "name": "M2_r1_AL_R"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M2",
+  "r": 1,
+  "start": "hemiL",
+  "g": [
+   1.571,
+   1.9638,
+   2.5136,
+   3.9275,
+   6.284,
+   12.568
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61018,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M2_r1_hemiL.npz",
+  "name": "M2_r1_hemiL"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M2",
+  "r": 1,
+  "start": "hemiR",
+  "g": [
+   1.571,
+   1.9638,
+   2.5136,
+   3.9275,
+   6.284,
+   12.568
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61019,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M2_r1_hemiR.npz",
+  "name": "M2_r1_hemiR"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M2",
+  "r": 2,
+  "start": "all",
+  "g": [
+   1.7216,
+   2.152,
+   2.7546,
+   4.304,
+   6.8864,
+   13.773
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61020,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M2_r2_all.npz",
+  "name": "M2_r2_all"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M2",
+  "r": 2,
+  "start": "AL_L",
+  "g": [
+   1.7216,
+   2.152,
+   2.7546,
+   4.304,
+   6.8864,
+   13.773
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61021,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M2_r2_AL_L.npz",
+  "name": "M2_r2_AL_L"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M2",
+  "r": 2,
+  "start": "AL_R",
+  "g": [
+   1.7216,
+   2.152,
+   2.7546,
+   4.304,
+   6.8864,
+   13.773
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61022,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M2_r2_AL_R.npz",
+  "name": "M2_r2_AL_R"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M2",
+  "r": 2,
+  "start": "hemiL",
+  "g": [
+   1.7216,
+   2.152,
+   2.7546,
+   4.304,
+   6.8864,
+   13.773
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61023,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M2_r2_hemiL.npz",
+  "name": "M2_r2_hemiL"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M2",
+  "r": 2,
+  "start": "hemiR",
+  "g": [
+   1.7216,
+   2.152,
+   2.7546,
+   4.304,
+   6.8864,
+   13.773
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61024,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M2_r2_hemiR.npz",
+  "name": "M2_r2_hemiR"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M2",
+  "r": 4,
+  "start": "all",
+  "g": [
+   1.9422,
+   2.4278,
+   3.1076,
+   4.8556,
+   7.7689,
+   15.538
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61025,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M2_r4_all.npz",
+  "name": "M2_r4_all"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M2",
+  "r": 4,
+  "start": "AL_L",
+  "g": [
+   1.9422,
+   2.4278,
+   3.1076,
+   4.8556,
+   7.7689,
+   15.538
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61026,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M2_r4_AL_L.npz",
+  "name": "M2_r4_AL_L"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M2",
+  "r": 4,
+  "start": "AL_R",
+  "g": [
+   1.9422,
+   2.4278,
+   3.1076,
+   4.8556,
+   7.7689,
+   15.538
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61027,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M2_r4_AL_R.npz",
+  "name": "M2_r4_AL_R"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M2",
+  "r": 4,
+  "start": "hemiL",
+  "g": [
+   1.9422,
+   2.4278,
+   3.1076,
+   4.8556,
+   7.7689,
+   15.538
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61028,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M2_r4_hemiL.npz",
+  "name": "M2_r4_hemiL"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M2",
+  "r": 4,
+  "start": "hemiR",
+  "g": [
+   1.9422,
+   2.4278,
+   3.1076,
+   4.8556,
+   7.7689,
+   15.538
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61029,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M2_r4_hemiR.npz",
+  "name": "M2_r4_hemiR"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M2",
+  "r": 6,
+  "start": "all",
+  "g": [
+   2.0182,
+   2.5227,
+   3.2291,
+   5.0454,
+   8.0726,
+   16.145
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61030,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M2_r6_all.npz",
+  "name": "M2_r6_all"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M2",
+  "r": 6,
+  "start": "AL_L",
+  "g": [
+   2.0182,
+   2.5227,
+   3.2291,
+   5.0454,
+   8.0726,
+   16.145
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61031,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M2_r6_AL_L.npz",
+  "name": "M2_r6_AL_L"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M2",
+  "r": 6,
+  "start": "AL_R",
+  "g": [
+   2.0182,
+   2.5227,
+   3.2291,
+   5.0454,
+   8.0726,
+   16.145
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61032,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M2_r6_AL_R.npz",
+  "name": "M2_r6_AL_R"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M2",
+  "r": 6,
+  "start": "hemiL",
+  "g": [
+   2.0182,
+   2.5227,
+   3.2291,
+   5.0454,
+   8.0726,
+   16.145
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61033,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M2_r6_hemiL.npz",
+  "name": "M2_r6_hemiL"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M2",
+  "r": 6,
+  "start": "hemiR",
+  "g": [
+   2.0182,
+   2.5227,
+   3.2291,
+   5.0454,
+   8.0726,
+   16.145
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61034,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M2_r6_hemiR.npz",
+  "name": "M2_r6_hemiR"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M2s",
+  "r": 0,
+  "start": "AL_L",
+  "g": [
+   1.2547,
+   1.5684,
+   2.0076,
+   3.1368,
+   5.0189,
+   10.038
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61035,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M2s_r0_AL_L.npz",
+  "name": "M2s_r0_AL_L"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M2s",
+  "r": 0,
+  "start": "AL_R",
+  "g": [
+   1.2547,
+   1.5684,
+   2.0076,
+   3.1368,
+   5.0189,
+   10.038
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61036,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M2s_r0_AL_R.npz",
+  "name": "M2s_r0_AL_R"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M2s",
+  "r": 1,
+  "start": "AL_L",
+  "g": [
+   1.5797,
+   1.9746,
+   2.5276,
+   3.9493,
+   6.3189,
+   12.638
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61037,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M2s_r1_AL_L.npz",
+  "name": "M2s_r1_AL_L"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M2s",
+  "r": 1,
+  "start": "AL_R",
+  "g": [
+   1.5797,
+   1.9746,
+   2.5276,
+   3.9493,
+   6.3189,
+   12.638
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61038,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M2s_r1_AL_R.npz",
+  "name": "M2s_r1_AL_R"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M2s",
+  "r": 4,
+  "start": "AL_L",
+  "g": [
+   1.9362,
+   2.4202,
+   3.0979,
+   4.8404,
+   7.7447,
+   15.489
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61039,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M2s_r4_AL_L.npz",
+  "name": "M2s_r4_AL_L"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M2s",
+  "r": 4,
+  "start": "AL_R",
+  "g": [
+   1.9362,
+   2.4202,
+   3.0979,
+   4.8404,
+   7.7447,
+   15.489
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61040,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M2s_r4_AL_R.npz",
+  "name": "M2s_r4_AL_R"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M2_tau30",
+  "r": 0,
+  "start": "AL_L",
+  "g": [
+   0.57418,
+   0.71772,
+   0.91868,
+   1.4354,
+   2.2967,
+   4.5934
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61041,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M2_tau30_r0_AL_L.npz",
+  "name": "M2_tau30_r0_AL_L"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M2_tau30",
+  "r": 0,
+  "start": "AL_R",
+  "g": [
+   0.57418,
+   0.71772,
+   0.91868,
+   1.4354,
+   2.2967,
+   4.5934
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61042,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M2_tau30_r0_AL_R.npz",
+  "name": "M2_tau30_r0_AL_R"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M2_tau30",
+  "r": 1,
+  "start": "AL_L",
+  "g": [
+   0.99786,
+   1.2473,
+   1.5966,
+   2.4946,
+   3.9914,
+   7.9829
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61043,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M2_tau30_r1_AL_L.npz",
+  "name": "M2_tau30_r1_AL_L"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M2_tau30",
+  "r": 1,
+  "start": "AL_R",
+  "g": [
+   0.99786,
+   1.2473,
+   1.5966,
+   2.4946,
+   3.9914,
+   7.9829
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61044,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M2_tau30_r1_AL_R.npz",
+  "name": "M2_tau30_r1_AL_R"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M2_tau30",
+  "r": 4,
+  "start": "AL_L",
+  "g": [
+   1.3733,
+   1.7166,
+   2.1973,
+   3.4333,
+   5.4932,
+   10.986
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61045,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M2_tau30_r4_AL_L.npz",
+  "name": "M2_tau30_r4_AL_L"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M2_tau30",
+  "r": 4,
+  "start": "AL_R",
+  "g": [
+   1.3733,
+   1.7166,
+   2.1973,
+   3.4333,
+   5.4932,
+   10.986
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61046,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M2_tau30_r4_AL_R.npz",
+  "name": "M2_tau30_r4_AL_R"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M1",
+  "r": 0,
+  "start": "all",
+  "g": [
+   0.266,
+   0.3325,
+   0.4256,
+   0.665,
+   1.064,
+   2.128
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61047,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M1_r0_all.npz",
+  "name": "M1_r0_all"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M1",
+  "r": 0,
+  "start": "AL_L",
+  "g": [
+   0.266,
+   0.3325,
+   0.4256,
+   0.665,
+   1.064,
+   2.128
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61048,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M1_r0_AL_L.npz",
+  "name": "M1_r0_AL_L"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M1",
+  "r": 0,
+  "start": "AL_R",
+  "g": [
+   0.266,
+   0.3325,
+   0.4256,
+   0.665,
+   1.064,
+   2.128
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61049,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M1_r0_AL_R.npz",
+  "name": "M1_r0_AL_R"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M1",
+  "r": 0,
+  "start": "hemiL",
+  "g": [
+   0.266,
+   0.3325,
+   0.4256,
+   0.665,
+   1.064,
+   2.128
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61050,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M1_r0_hemiL.npz",
+  "name": "M1_r0_hemiL"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M1",
+  "r": 0,
+  "start": "hemiR",
+  "g": [
+   0.266,
+   0.3325,
+   0.4256,
+   0.665,
+   1.064,
+   2.128
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61051,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M1_r0_hemiR.npz",
+  "name": "M1_r0_hemiR"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M1",
+  "r": 1,
+  "start": "all",
+  "g": [
+   0.344,
+   0.43,
+   0.5504,
+   0.86,
+   1.376,
+   2.752
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61052,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M1_r1_all.npz",
+  "name": "M1_r1_all"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M1",
+  "r": 1,
+  "start": "AL_L",
+  "g": [
+   0.344,
+   0.43,
+   0.5504,
+   0.86,
+   1.376,
+   2.752
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61053,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M1_r1_AL_L.npz",
+  "name": "M1_r1_AL_L"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M1",
+  "r": 1,
+  "start": "AL_R",
+  "g": [
+   0.344,
+   0.43,
+   0.5504,
+   0.86,
+   1.376,
+   2.752
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61054,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M1_r1_AL_R.npz",
+  "name": "M1_r1_AL_R"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M1",
+  "r": 1,
+  "start": "hemiL",
+  "g": [
+   0.344,
+   0.43,
+   0.5504,
+   0.86,
+   1.376,
+   2.752
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61055,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M1_r1_hemiL.npz",
+  "name": "M1_r1_hemiL"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M1",
+  "r": 1,
+  "start": "hemiR",
+  "g": [
+   0.344,
+   0.43,
+   0.5504,
+   0.86,
+   1.376,
+   2.752
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61056,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M1_r1_hemiR.npz",
+  "name": "M1_r1_hemiR"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M1",
+  "r": 4,
+  "start": "all",
+  "g": [
+   0.508,
+   0.635,
+   0.8128,
+   1.27,
+   2.032,
+   4.064
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61057,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M1_r4_all.npz",
+  "name": "M1_r4_all"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M1",
+  "r": 4,
+  "start": "AL_L",
+  "g": [
+   0.508,
+   0.635,
+   0.8128,
+   1.27,
+   2.032,
+   4.064
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61058,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M1_r4_AL_L.npz",
+  "name": "M1_r4_AL_L"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M1",
+  "r": 4,
+  "start": "AL_R",
+  "g": [
+   0.508,
+   0.635,
+   0.8128,
+   1.27,
+   2.032,
+   4.064
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61059,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M1_r4_AL_R.npz",
+  "name": "M1_r4_AL_R"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M1",
+  "r": 4,
+  "start": "hemiL",
+  "g": [
+   0.508,
+   0.635,
+   0.8128,
+   1.27,
+   2.032,
+   4.064
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61060,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M1_r4_hemiL.npz",
+  "name": "M1_r4_hemiL"
+ },
+ {
+  "set": "LRa",
+  "setting": "a",
+  "model": "M1",
+  "r": 4,
+  "start": "hemiR",
+  "g": [
+   0.508,
+   0.635,
+   0.8128,
+   1.27,
+   2.032,
+   4.064
+  ],
+  "B": 64,
+  "T": 2000,
+  "seed": 61061,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/LRa/M1_r4_hemiR.npz",
+  "name": "M1_r4_hemiR"
+ }
+]

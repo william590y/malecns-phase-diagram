@@ -1,0 +1,4 @@
+pd3_fss_sim.py cnull 10000 1 0 --ng 2 --T 600 --outdir /MALECNS_ROOT/results/pd3/redraw_fss/smoke
+pd3_fss_sim.py realsub 5000 1 1 --ng 2 --T 600 --outdir /MALECNS_ROOT/results/pd3/redraw_fss/smoke
+pd3_fss_sim.py cnull 167216 0 0 --ng 2 --T 600 --outdir /MALECNS_ROOT/results/pd3/redraw_fss/smoke
+pd3_fss_sim.py cnull 167216 1 1 --ng 2 --T 600 --outdir /MALECNS_ROOT/results/pd3/redraw_fss/smoke

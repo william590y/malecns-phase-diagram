@@ -1,0 +1,38 @@
+[
+{
+"part": "aval",
+"model": "M2",
+"r": 0.5,
+"G": 0,
+"rep": 0,
+"g": [
+0.25782,
+0.30377,
+0.35792,
+0.42172,
+0.49688
+],
+"g_on": 1.4332402406451292,
+"seed": 299460202,
+"name": "aval_M2_r0.5_G0_c1_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r0.5_G0_c1_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 0.5,
+"G": 10,
+"rep": 0,
+"g": [
+0.25782,
+0.30377,
+0.35792,
+0.42172,
+0.49688
+],
+"g_on": 1.4332402406451292,
+"seed": 17894413,
+"name": "aval_M2_r0.5_G10_c1_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r0.5_G10_c1_k0.npz"
+}
+]

@@ -1,0 +1,1082 @@
+[
+ {
+  "task": 0,
+  "stage": "s2",
+  "model": "M1",
+  "graph": "real",
+  "r": 0.0,
+  "boundary": "S",
+  "g": [
+   0.22284,
+   0.22694,
+   0.23112,
+   0.23537,
+   0.2397,
+   0.2441,
+   0.24859,
+   0.25316
+  ],
+  "seed": 190502614,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M1_real_r0_S.npz"
+ },
+ {
+  "task": 1,
+  "stage": "s2",
+  "model": "M1",
+  "graph": "real",
+  "r": 0.0,
+  "boundary": "on",
+  "g": [
+   0.26256,
+   0.26739,
+   0.27231,
+   0.27732,
+   0.28242,
+   0.28761,
+   0.2929,
+   0.29828
+  ],
+  "seed": 268072902,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M1_real_r0_on.npz"
+ },
+ {
+  "task": 2,
+  "stage": "s2",
+  "model": "M1",
+  "graph": "real",
+  "r": 0.0,
+  "boundary": "D",
+  "g": [
+   1.35387,
+   1.37877,
+   1.40413,
+   1.42995,
+   1.45625,
+   1.48304,
+   1.51031,
+   1.53809
+  ],
+  "seed": 25734038,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M1_real_r0_D.npz"
+ },
+ {
+  "task": 3,
+  "stage": "s2",
+  "model": "M1",
+  "graph": "real",
+  "r": 1.0,
+  "boundary": "S",
+  "g": [
+   0.26256,
+   0.26739,
+   0.27231,
+   0.27732,
+   0.28242,
+   0.28761,
+   0.2929,
+   0.29828
+  ],
+  "seed": 135847836,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M1_real_r1_S.npz"
+ },
+ {
+  "task": 4,
+  "stage": "s2",
+  "model": "M1",
+  "graph": "real",
+  "r": 1.0,
+  "boundary": "on",
+  "g": [
+   0.30936,
+   0.31505,
+   0.32084,
+   0.32674,
+   0.33275,
+   0.33887,
+   0.34511,
+   0.35146
+  ],
+  "seed": 122818710,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M1_real_r1_on.npz"
+ },
+ {
+  "task": 5,
+  "stage": "s2",
+  "model": "M1",
+  "graph": "real",
+  "r": 1.0,
+  "boundary": "D",
+  "g": [
+   13.45438,
+   13.70183,
+   13.95383,
+   14.21047,
+   14.47182,
+   14.73798,
+   15.00904,
+   15.28508
+  ],
+  "seed": 243919284,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M1_real_r1_D.npz"
+ },
+ {
+  "task": 6,
+  "stage": "s2",
+  "model": "M1s",
+  "graph": "real",
+  "r": 0.0,
+  "boundary": "S",
+  "g": [
+   0.26256,
+   0.26739,
+   0.27231,
+   0.27732,
+   0.28242,
+   0.28761,
+   0.2929,
+   0.29828
+  ],
+  "seed": 105076700,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M1s_real_r0_S.npz"
+ },
+ {
+  "task": 7,
+  "stage": "s2",
+  "model": "M1s",
+  "graph": "real",
+  "r": 0.0,
+  "boundary": "on",
+  "g": [
+   0.30936,
+   0.31505,
+   0.32084,
+   0.32674,
+   0.33275,
+   0.33887,
+   0.34511,
+   0.35146
+  ],
+  "seed": 159285757,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M1s_real_r0_on.npz"
+ },
+ {
+  "task": 8,
+  "stage": "s2",
+  "model": "M1s",
+  "graph": "real",
+  "r": 0.0,
+  "boundary": "D",
+  "g": [
+   1.35387,
+   1.37877,
+   1.40413,
+   1.42995,
+   1.45625,
+   1.48304,
+   1.51031,
+   1.53809
+  ],
+  "seed": 157430643,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M1s_real_r0_D.npz"
+ },
+ {
+  "task": 9,
+  "stage": "s2",
+  "model": "M1s",
+  "graph": "real",
+  "r": 1.0,
+  "boundary": "S",
+  "g": [
+   0.3645,
+   0.37121,
+   0.37804,
+   0.38499,
+   0.39207,
+   0.39928,
+   0.40662,
+   0.4141
+  ],
+  "seed": 25137163,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M1s_real_r1_S.npz"
+ },
+ {
+  "task": 10,
+  "stage": "s2",
+  "model": "M1s",
+  "graph": "real",
+  "r": 1.0,
+  "boundary": "on",
+  "g": [
+   0.42948,
+   0.43737,
+   0.44542,
+   0.45361,
+   0.46195,
+   0.47045,
+   0.4791,
+   0.48791
+  ],
+  "seed": 97561772,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M1s_real_r1_on.npz"
+ },
+ {
+  "task": 11,
+  "stage": "s2",
+  "model": "M1s",
+  "graph": "real",
+  "r": 1.0,
+  "boundary": "D",
+  "g": [
+   13.45438,
+   13.70183,
+   13.95383,
+   14.21047,
+   14.47182,
+   14.73798,
+   15.00904,
+   15.28508
+  ],
+  "seed": 35524588,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M1s_real_r1_D.npz"
+ },
+ {
+  "task": 12,
+  "stage": "s2",
+  "model": "M1s",
+  "graph": "real",
+  "r": 4.0,
+  "boundary": "S",
+  "g": [
+   0.42948,
+   0.43737,
+   0.44542,
+   0.45361,
+   0.46195,
+   0.47045,
+   0.4791,
+   0.48791
+  ],
+  "seed": 262694839,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M1s_real_r4_S.npz"
+ },
+ {
+  "task": 13,
+  "stage": "s2",
+  "model": "M1s",
+  "graph": "real",
+  "r": 4.0,
+  "boundary": "on",
+  "g": [
+   0.59622,
+   0.60718,
+   0.61835,
+   0.62972,
+   0.6413,
+   0.6531,
+   0.66511,
+   0.67734
+  ],
+  "seed": 101696561,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M1s_real_r4_on.npz"
+ },
+ {
+  "task": 14,
+  "stage": "s2",
+  "model": "M2_N15",
+  "graph": "real",
+  "r": 0.0,
+  "boundary": "S",
+  "g": [
+   0.70249,
+   0.71541,
+   0.72856,
+   0.74196,
+   0.75561,
+   0.76951,
+   0.78366,
+   0.79807
+  ],
+  "seed": 166505568,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M2_N15_real_r0_S.npz"
+ },
+ {
+  "task": 15,
+  "stage": "s2",
+  "model": "M2_N15",
+  "graph": "real",
+  "r": 0.0,
+  "boundary": "on",
+  "g": [
+   0.8277,
+   0.84292,
+   0.85843,
+   0.87421,
+   0.89029,
+   0.90667,
+   0.92334,
+   0.94033
+  ],
+  "seed": 144404634,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M2_N15_real_r0_on.npz"
+ },
+ {
+  "task": 16,
+  "stage": "s2",
+  "model": "M2_N15",
+  "graph": "real",
+  "r": 0.0,
+  "boundary": "D",
+  "g": [
+   4.26796,
+   4.34646,
+   4.4264,
+   4.50781,
+   4.59072,
+   4.67515,
+   4.76113,
+   4.8487
+  ],
+  "seed": 249541120,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M2_N15_real_r0_D.npz"
+ },
+ {
+  "task": 17,
+  "stage": "s2",
+  "model": "M2_N15",
+  "graph": "real",
+  "r": 1.0,
+  "boundary": "S",
+  "g": [
+   0.97523,
+   0.99317,
+   1.01144,
+   1.03004,
+   1.04898,
+   1.06828,
+   1.08792,
+   1.10793
+  ],
+  "seed": 263213172,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M2_N15_real_r1_S.npz"
+ },
+ {
+  "task": 18,
+  "stage": "s2",
+  "model": "M2_N15",
+  "graph": "real",
+  "r": 1.0,
+  "boundary": "on",
+  "g": [
+   1.14906,
+   1.17019,
+   1.19172,
+   1.21363,
+   1.23596,
+   1.25869,
+   1.28184,
+   1.30541
+  ],
+  "seed": 165980995,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M2_N15_real_r1_on.npz"
+ },
+ {
+  "task": 19,
+  "stage": "s2",
+  "model": "M2_N15",
+  "graph": "real",
+  "r": 1.0,
+  "boundary": "D",
+  "g": [
+   13.45438,
+   13.70183,
+   13.95383,
+   14.21047,
+   14.47182,
+   14.73798,
+   15.00904,
+   15.28508
+  ],
+  "seed": 67589864,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M2_N15_real_r1_D.npz"
+ },
+ {
+  "task": 20,
+  "stage": "s2",
+  "model": "M2_N15",
+  "graph": "real",
+  "r": 4.0,
+  "boundary": "S",
+  "g": [
+   1.14906,
+   1.17019,
+   1.19172,
+   1.21363,
+   1.23596,
+   1.25869,
+   1.28184,
+   1.30541
+  ],
+  "seed": 36474219,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M2_N15_real_r4_S.npz"
+ },
+ {
+  "task": 21,
+  "stage": "s2",
+  "model": "M2_N15",
+  "graph": "real",
+  "r": 4.0,
+  "boundary": "on",
+  "g": [
+   1.59519,
+   1.62453,
+   1.65441,
+   1.68484,
+   1.71582,
+   1.74738,
+   1.77952,
+   1.81225
+  ],
+  "seed": 171708978,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M2_N15_real_r4_on.npz"
+ },
+ {
+  "task": 22,
+  "stage": "s2",
+  "model": "M2_N15",
+  "graph": "real",
+  "r": 4.0,
+  "boundary": "D",
+  "g": [
+   9.69156,
+   9.86981,
+   10.05134,
+   10.2362,
+   10.42447,
+   10.6162,
+   10.81145,
+   11.0103
+  ],
+  "seed": 202692695,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M2_N15_real_r4_D.npz"
+ },
+ {
+  "task": 23,
+  "stage": "s2",
+  "model": "M2",
+  "graph": "cnull",
+  "r": 0.5,
+  "boundary": "S",
+  "g": [
+   1.14906,
+   1.17019,
+   1.19172,
+   1.21363,
+   1.23596,
+   1.25869,
+   1.28184,
+   1.30541
+  ],
+  "seed": 172266364,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M2_cnull_r0.5_S.npz"
+ },
+ {
+  "task": 24,
+  "stage": "s2",
+  "model": "M2",
+  "graph": "cnull",
+  "r": 0.5,
+  "boundary": "on",
+  "g": [
+   1.35387,
+   1.37877,
+   1.40413,
+   1.42995,
+   1.45625,
+   1.48304,
+   1.51031,
+   1.53809
+  ],
+  "seed": 97866068,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M2_cnull_r0.5_on.npz"
+ },
+ {
+  "task": 25,
+  "stage": "s2",
+  "model": "M2",
+  "graph": "cnull",
+  "r": 1.0,
+  "boundary": "S",
+  "g": [
+   1.14906,
+   1.17019,
+   1.19172,
+   1.21363,
+   1.23596,
+   1.25869,
+   1.28184,
+   1.30541
+  ],
+  "seed": 161978080,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M2_cnull_r1_S.npz"
+ },
+ {
+  "task": 26,
+  "stage": "s2",
+  "model": "M2",
+  "graph": "cnull",
+  "r": 1.0,
+  "boundary": "on",
+  "g": [
+   1.35387,
+   1.37877,
+   1.40413,
+   1.42995,
+   1.45625,
+   1.48304,
+   1.51031,
+   1.53809
+  ],
+  "seed": 251092837,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M2_cnull_r1_on.npz"
+ },
+ {
+  "task": 27,
+  "stage": "s2",
+  "model": "M2",
+  "graph": "real",
+  "r": 0.125,
+  "boundary": "S",
+  "g": [
+   0.97523,
+   0.99317,
+   1.01144,
+   1.03004,
+   1.04898,
+   1.06828,
+   1.08792,
+   1.10793
+  ],
+  "seed": 172322848,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M2_real_r0.125_S.npz"
+ },
+ {
+  "task": 28,
+  "stage": "s2",
+  "model": "M2",
+  "graph": "real",
+  "r": 0.125,
+  "boundary": "on",
+  "g": [
+   1.14906,
+   1.17019,
+   1.19172,
+   1.21363,
+   1.23596,
+   1.25869,
+   1.28184,
+   1.30541
+  ],
+  "seed": 118045938,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M2_real_r0.125_on.npz"
+ },
+ {
+  "task": 29,
+  "stage": "s2",
+  "model": "M2",
+  "graph": "real",
+  "r": 0.125,
+  "boundary": "D",
+  "g": [
+   11.41903,
+   11.62904,
+   11.84293,
+   12.06074,
+   12.28256,
+   12.50846,
+   12.73852,
+   12.9728
+  ],
+  "seed": 16294076,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M2_real_r0.125_D.npz"
+ },
+ {
+  "task": 30,
+  "stage": "s2",
+  "model": "M2",
+  "graph": "real",
+  "r": 0.5,
+  "boundary": "S",
+  "g": [
+   1.14906,
+   1.17019,
+   1.19172,
+   1.21363,
+   1.23596,
+   1.25869,
+   1.28184,
+   1.30541
+  ],
+  "seed": 64570043,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M2_real_r0.5_S.npz"
+ },
+ {
+  "task": 31,
+  "stage": "s2",
+  "model": "M2",
+  "graph": "real",
+  "r": 0.5,
+  "boundary": "on",
+  "g": [
+   1.35387,
+   1.37877,
+   1.40413,
+   1.42995,
+   1.45625,
+   1.48304,
+   1.51031,
+   1.53809
+  ],
+  "seed": 162604580,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M2_real_r0.5_on.npz"
+ },
+ {
+  "task": 32,
+  "stage": "s2",
+  "model": "M2",
+  "graph": "real",
+  "r": 0.5,
+  "boundary": "D",
+  "g": [
+   13.45438,
+   13.70183,
+   13.95383,
+   14.21047,
+   14.47182,
+   14.73798,
+   15.00904,
+   15.28508
+  ],
+  "seed": 33923863,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M2_real_r0.5_D.npz"
+ },
+ {
+  "task": 33,
+  "stage": "s2",
+  "model": "M2",
+  "graph": "real",
+  "r": 3.0,
+  "boundary": "S",
+  "g": [
+   1.35387,
+   1.37877,
+   1.40413,
+   1.42995,
+   1.45625,
+   1.48304,
+   1.51031,
+   1.53809
+  ],
+  "seed": 18480041,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M2_real_r3_S.npz"
+ },
+ {
+  "task": 34,
+  "stage": "s2",
+  "model": "M2",
+  "graph": "real",
+  "r": 3.0,
+  "boundary": "on",
+  "g": [
+   1.59519,
+   1.62453,
+   1.65441,
+   1.68484,
+   1.71582,
+   1.74738,
+   1.77952,
+   1.81225
+  ],
+  "seed": 132982250,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M2_real_r3_on.npz"
+ },
+ {
+  "task": 35,
+  "stage": "s2",
+  "model": "M2",
+  "graph": "real",
+  "r": 3.0,
+  "boundary": "D",
+  "g": [
+   9.69156,
+   9.86981,
+   10.05134,
+   10.2362,
+   10.42447,
+   10.6162,
+   10.81145,
+   11.0103
+  ],
+  "seed": 100671878,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M2_real_r3_D.npz"
+ },
+ {
+  "task": 36,
+  "stage": "s2",
+  "model": "M2",
+  "graph": "real",
+  "r": 5.0,
+  "boundary": "S",
+  "g": [
+   1.59519,
+   1.62453,
+   1.65441,
+   1.68484,
+   1.71582,
+   1.74738,
+   1.77952,
+   1.81225
+  ],
+  "seed": 109949586,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M2_real_r5_S.npz"
+ },
+ {
+  "task": 37,
+  "stage": "s2",
+  "model": "M2",
+  "graph": "real",
+  "r": 5.0,
+  "boundary": "on",
+  "g": [
+   1.87952,
+   1.91409,
+   1.9493,
+   1.98515,
+   2.02166,
+   2.05884,
+   2.09671,
+   2.13527
+  ],
+  "seed": 42716601,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M2_real_r5_on.npz"
+ },
+ {
+  "task": 38,
+  "stage": "s2",
+  "model": "M2",
+  "graph": "real",
+  "r": 5.0,
+  "boundary": "D",
+  "g": [
+   8.22544,
+   8.37672,
+   8.53078,
+   8.68768,
+   8.84747,
+   9.01019,
+   9.1759,
+   9.34466
+  ],
+  "seed": 226027431,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M2_real_r5_D.npz"
+ },
+ {
+  "task": 39,
+  "stage": "s2",
+  "model": "M2",
+  "graph": "real",
+  "r": 5.5,
+  "boundary": "S",
+  "g": [
+   1.35387,
+   1.37877,
+   1.40413,
+   1.42995,
+   1.45625,
+   1.48304,
+   1.51031,
+   1.53809
+  ],
+  "seed": 198727251,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M2_real_r5.5_S.npz"
+ },
+ {
+  "task": 40,
+  "stage": "s2",
+  "model": "M2",
+  "graph": "real",
+  "r": 5.5,
+  "boundary": "on",
+  "g": [
+   1.87952,
+   1.91409,
+   1.9493,
+   1.98515,
+   2.02166,
+   2.05884,
+   2.09671,
+   2.13527
+  ],
+  "seed": 23048586,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M2_real_r5.5_on.npz"
+ },
+ {
+  "task": 41,
+  "stage": "s2",
+  "model": "M2",
+  "graph": "real",
+  "r": 5.5,
+  "boundary": "D",
+  "g": [
+   8.22544,
+   8.37672,
+   8.53078,
+   8.68768,
+   8.84747,
+   9.01019,
+   9.1759,
+   9.34466
+  ],
+  "seed": 102553347,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M2_real_r5.5_D.npz"
+ },
+ {
+  "task": 42,
+  "stage": "s2",
+  "model": "M2_tau30",
+  "graph": "real",
+  "r": 4.0,
+  "boundary": "S",
+  "g": [
+   0.97523,
+   0.99317,
+   1.01144,
+   1.03004,
+   1.04898,
+   1.06828,
+   1.08792,
+   1.10793
+  ],
+  "seed": 60947199,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M2_tau30_real_r4_S.npz"
+ },
+ {
+  "task": 43,
+  "stage": "s2",
+  "model": "M2_tau30",
+  "graph": "real",
+  "r": 4.0,
+  "boundary": "on",
+  "g": [
+   1.35387,
+   1.37877,
+   1.40413,
+   1.42995,
+   1.45625,
+   1.48304,
+   1.51031,
+   1.53809
+  ],
+  "seed": 84591346,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M2_tau30_real_r4_on.npz"
+ },
+ {
+  "task": 44,
+  "stage": "s2",
+  "model": "M2_tau30",
+  "graph": "real",
+  "r": 4.0,
+  "boundary": "D",
+  "g": [
+   18.67812,
+   19.02165,
+   19.37149,
+   19.72777,
+   20.0906,
+   20.46011,
+   20.83641,
+   21.21963
+  ],
+  "seed": 218289817,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M2_tau30_real_r4_D.npz"
+ },
+ {
+  "task": 45,
+  "stage": "s2",
+  "model": "M2",
+  "graph": "wnull",
+  "r": 0.25,
+  "boundary": "S",
+  "g": [
+   1.14906,
+   1.17019,
+   1.19172,
+   1.21363,
+   1.23596,
+   1.25869,
+   1.28184,
+   1.30541
+  ],
+  "seed": 7542484,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M2_wnull_r0.25_S.npz"
+ },
+ {
+  "task": 46,
+  "stage": "s2",
+  "model": "M2",
+  "graph": "wnull",
+  "r": 0.25,
+  "boundary": "on",
+  "g": [
+   1.35387,
+   1.37877,
+   1.40413,
+   1.42995,
+   1.45625,
+   1.48304,
+   1.51031,
+   1.53809
+  ],
+  "seed": 129647644,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M2_wnull_r0.25_on.npz"
+ },
+ {
+  "task": 47,
+  "stage": "s2",
+  "model": "M2",
+  "graph": "wnull",
+  "r": 0.25,
+  "boundary": "D",
+  "g": [
+   3.62231,
+   3.68893,
+   3.75678,
+   3.82587,
+   3.89624,
+   3.9679,
+   4.04087,
+   4.11519
+  ],
+  "seed": 67820384,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M2_wnull_r0.25_D.npz"
+ },
+ {
+  "task": 48,
+  "stage": "s2",
+  "model": "M2s",
+  "graph": "real",
+  "r": 0.25,
+  "boundary": "S",
+  "g": [
+   1.14906,
+   1.17019,
+   1.19172,
+   1.21363,
+   1.23596,
+   1.25869,
+   1.28184,
+   1.30541
+  ],
+  "seed": 85449498,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M2s_real_r0.25_S.npz"
+ },
+ {
+  "task": 49,
+  "stage": "s2",
+  "model": "M2s",
+  "graph": "real",
+  "r": 0.25,
+  "boundary": "on",
+  "g": [
+   1.35387,
+   1.37877,
+   1.40413,
+   1.42995,
+   1.45625,
+   1.48304,
+   1.51031,
+   1.53809
+  ],
+  "seed": 267965847,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M2s_real_r0.25_on.npz"
+ },
+ {
+  "task": 50,
+  "stage": "s2",
+  "model": "M2s",
+  "graph": "real",
+  "r": 0.25,
+  "boundary": "D",
+  "g": [
+   11.41903,
+   11.62904,
+   11.84293,
+   12.06074,
+   12.28256,
+   12.50846,
+   12.73852,
+   12.9728
+  ],
+  "seed": 264901302,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M2s_real_r0.25_D.npz"
+ },
+ {
+  "task": 51,
+  "stage": "s2",
+  "model": "M2s",
+  "graph": "real",
+  "r": 4.0,
+  "boundary": "S",
+  "g": [
+   1.35387,
+   1.37877,
+   1.40413,
+   1.42995,
+   1.45625,
+   1.48304,
+   1.51031,
+   1.53809
+  ],
+  "seed": 257436066,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M2s_real_r4_S.npz"
+ },
+ {
+  "task": 52,
+  "stage": "s2",
+  "model": "M2s",
+  "graph": "real",
+  "r": 4.0,
+  "boundary": "on",
+  "g": [
+   1.87952,
+   1.91409,
+   1.9493,
+   1.98515,
+   2.02166,
+   2.05884,
+   2.09671,
+   2.13527
+  ],
+  "seed": 113683735,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M2s_real_r4_on.npz"
+ },
+ {
+  "task": 53,
+  "stage": "s2",
+  "model": "M2s",
+  "graph": "real",
+  "r": 4.0,
+  "boundary": "D",
+  "g": [
+   8.22544,
+   8.37672,
+   8.53078,
+   8.68768,
+   8.84747,
+   9.01019,
+   9.1759,
+   9.34466
+  ],
+  "seed": 93137674,
+  "out": "/MALECNS_ROOT/results/m2/decay/sim/s2_M2s_real_r4_D.npz"
+ }
+]

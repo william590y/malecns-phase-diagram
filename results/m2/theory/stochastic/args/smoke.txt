@@ -1,0 +1,4 @@
+decay --model M2 --r 1 --gmin 0.3 --gmax 6 --ng 12 --transient --tag _smoke
+decay --model M1 --r 0 --gmin 0.17 --gmax 0.6 --ng 10 --tag _smoke
+driven --model M2 --r 1 --gmin 0.1 --gmax 3 --ng 4 --lna --tag _smoke
+pulse --model M2 --gaps 0,100 --gmin 0.15 --gmax 1.5 --ng 4 --tag _smoke

@@ -1,0 +1,116 @@
+{
+ "O1_tau_mle": {
+  "pass": true,
+  "est": 498.0208179673185,
+  "true": 500.0,
+  "se": 7.883274212527847,
+  "deaths": 3991.0
+ },
+ "O2_crossing": {
+  "pass": true,
+  "g_cross": 0.6065306597126334,
+  "iso": [
+   1.0,
+   2.5,
+   2.5,
+   4.0
+  ]
+ },
+ "O3_PR": {
+  "pass": true,
+  "pr": [
+   1000.0,
+   1.0,
+   93.07692307692308
+  ]
+ },
+ "O4_osc_AR2": {
+  "pass": true,
+  "period": 50.0,
+  "c_peak": 0.2188868160623584,
+  "c_min": -0.468241868614386,
+  "coh_ratio": 0.18875658406172155,
+  "f_peak": 0.020375,
+  "peak_ratio": 5.467268821924813,
+  "osc": 1.0,
+  "osc_strong": 0.0
+ },
+ "O4_osc_sustained_noisy": {
+  "pass": true,
+  "period": 39.0,
+  "c_peak": 0.33790884573601165,
+  "c_min": -0.3357765457105691,
+  "coh_ratio": 1.0047830737002663,
+  "osc": 1.0,
+  "osc_strong": 1.0
+ },
+ "O4_white_noise_no_osc": {
+  "pass": true,
+  "c_min": -0.009583389364566005,
+  "c_peak": 0.008890745070406044,
+  "osc": 0.0
+ },
+ "O4_noosc_AR1": {
+  "pass": true,
+  "tau_int": 20.167479970411662,
+  "true": 19.499999999999982,
+  "tau_e": 20.0,
+  "true_e": 19.495725746223673,
+  "osc": 0.0,
+  "c_min": -0.012849320395287278,
+  "c_peak": 0.019417078741245933
+ },
+ "O5_avalanche_extraction": {
+  "pass": true,
+  "sizes": [
+   1,
+   3,
+   4,
+   1
+  ],
+  "durs": [
+   2,
+   2,
+   1,
+   2
+  ],
+  "thr_sizes": [
+   3,
+   3
+  ]
+ },
+ "O6_critical_GW_exponents": {
+  "pass": true,
+  "alpha_S": 1.5109570697080295,
+  "xmin_S": 67.0,
+  "ks_S": 0.008197414777470463,
+  "alpha_T": 2.023909581142303,
+  "xmin_T": 50.0,
+  "gamma": 1.8937381977580718,
+  "n_av": 199925.0
+ },
+ "O6_subcritical_not_powerlaw": {
+  "pass": true,
+  "ks_sub": 0.0734922664469081,
+  "ks_crit": 0.008197414777470463,
+  "n_tail_sub": 926.0,
+  "max_size_sub": 289.0
+ },
+ "O7_MR_branching": {
+  "pass": true,
+  "m0.9": {
+   "mr": 0.8995868377222825,
+   "mr_subsampled_10pct": 0.8983993185162197,
+   "naive_ratio": 0.9949961808410264
+  },
+  "m0.98": {
+   "mr": 0.9795774514033656,
+   "mr_subsampled_10pct": 0.9798870219733863,
+   "naive_ratio": 0.9990342150116338
+  }
+ },
+ "_meta": {
+  "n_pass": 11,
+  "n_tests": 11
+ }
+}

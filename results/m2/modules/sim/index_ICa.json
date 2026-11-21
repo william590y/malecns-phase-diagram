@@ -1,0 +1,1040 @@
+[
+ {
+  "set": "ICa",
+  "setting": "a",
+  "model": "M2",
+  "r": 0,
+  "start": "AL",
+  "g": [
+   1.1818,
+   1.4772,
+   1.8909,
+   2.9545,
+   4.7272,
+   9.4543
+  ],
+  "B": 32,
+  "T": 2000,
+  "seed": 62000,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/ICa/M2_r0_AL.npz",
+  "name": "M2_r0_AL"
+ },
+ {
+  "set": "ICa",
+  "setting": "a",
+  "model": "M2",
+  "r": 0,
+  "start": "nonAL",
+  "g": [
+   1.1818,
+   1.4772,
+   1.8909,
+   2.9545,
+   4.7272,
+   9.4543
+  ],
+  "B": 32,
+  "T": 2000,
+  "seed": 62001,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/ICa/M2_r0_nonAL.npz",
+  "name": "M2_r0_nonAL"
+ },
+ {
+  "set": "ICa",
+  "setting": "a",
+  "model": "M2",
+  "r": 0,
+  "start": "CB",
+  "g": [
+   1.1818,
+   1.4772,
+   1.8909,
+   2.9545,
+   4.7272,
+   9.4543
+  ],
+  "B": 32,
+  "T": 2000,
+  "seed": 62002,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/ICa/M2_r0_CB.npz",
+  "name": "M2_r0_CB"
+ },
+ {
+  "set": "ICa",
+  "setting": "a",
+  "model": "M2",
+  "r": 0,
+  "start": "VNC",
+  "g": [
+   1.1818,
+   1.4772,
+   1.8909,
+   2.9545,
+   4.7272,
+   9.4543
+  ],
+  "B": 32,
+  "T": 2000,
+  "seed": 62003,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/ICa/M2_r0_VNC.npz",
+  "name": "M2_r0_VNC"
+ },
+ {
+  "set": "ICa",
+  "setting": "a",
+  "model": "M2",
+  "r": 0,
+  "start": "OL",
+  "g": [
+   1.1818,
+   1.4772,
+   1.8909,
+   2.9545,
+   4.7272,
+   9.4543
+  ],
+  "B": 32,
+  "T": 2000,
+  "seed": 62004,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/ICa/M2_r0_OL.npz",
+  "name": "M2_r0_OL"
+ },
+ {
+  "set": "ICa",
+  "setting": "a",
+  "model": "M2",
+  "r": 0,
+  "start": "isl1",
+  "g": [
+   1.1818,
+   1.4772,
+   1.8909,
+   2.9545,
+   4.7272,
+   9.4543
+  ],
+  "B": 32,
+  "T": 2000,
+  "seed": 62005,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/ICa/M2_r0_isl1.npz",
+  "name": "M2_r0_isl1"
+ },
+ {
+  "set": "ICa",
+  "setting": "a",
+  "model": "M2",
+  "r": 0,
+  "start": "isl3",
+  "g": [
+   1.1818,
+   1.4772,
+   1.8909,
+   2.9545,
+   4.7272,
+   9.4543
+  ],
+  "B": 32,
+  "T": 2000,
+  "seed": 62006,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/ICa/M2_r0_isl3.npz",
+  "name": "M2_r0_isl3"
+ },
+ {
+  "set": "ICa",
+  "setting": "a",
+  "model": "M2",
+  "r": 0,
+  "start": "isl5",
+  "g": [
+   1.1818,
+   1.4772,
+   1.8909,
+   2.9545,
+   4.7272,
+   9.4543
+  ],
+  "B": 32,
+  "T": 2000,
+  "seed": 62007,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/ICa/M2_r0_isl5.npz",
+  "name": "M2_r0_isl5"
+ },
+ {
+  "set": "ICa",
+  "setting": "a",
+  "model": "M2",
+  "r": 0,
+  "start": "rand10",
+  "g": [
+   1.1818,
+   1.4772,
+   1.8909,
+   2.9545,
+   4.7272,
+   9.4543
+  ],
+  "B": 32,
+  "T": 2000,
+  "seed": 62008,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/ICa/M2_r0_rand10.npz",
+  "name": "M2_r0_rand10"
+ },
+ {
+  "set": "ICa",
+  "setting": "a",
+  "model": "M2",
+  "r": 0,
+  "start": "rand1",
+  "g": [
+   1.1818,
+   1.4772,
+   1.8909,
+   2.9545,
+   4.7272,
+   9.4543
+  ],
+  "B": 32,
+  "T": 2000,
+  "seed": 62009,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/ICa/M2_r0_rand1.npz",
+  "name": "M2_r0_rand1"
+ },
+ {
+  "set": "ICa",
+  "setting": "a",
+  "model": "M2",
+  "r": 1,
+  "start": "AL",
+  "g": [
+   1.571,
+   1.9638,
+   2.5136,
+   3.9275,
+   6.284,
+   12.568
+  ],
+  "B": 32,
+  "T": 2000,
+  "seed": 62010,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/ICa/M2_r1_AL.npz",
+  "name": "M2_r1_AL"
+ },
+ {
+  "set": "ICa",
+  "setting": "a",
+  "model": "M2",
+  "r": 1,
+  "start": "nonAL",
+  "g": [
+   1.571,
+   1.9638,
+   2.5136,
+   3.9275,
+   6.284,
+   12.568
+  ],
+  "B": 32,
+  "T": 2000,
+  "seed": 62011,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/ICa/M2_r1_nonAL.npz",
+  "name": "M2_r1_nonAL"
+ },
+ {
+  "set": "ICa",
+  "setting": "a",
+  "model": "M2",
+  "r": 1,
+  "start": "CB",
+  "g": [
+   1.571,
+   1.9638,
+   2.5136,
+   3.9275,
+   6.284,
+   12.568
+  ],
+  "B": 32,
+  "T": 2000,
+  "seed": 62012,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/ICa/M2_r1_CB.npz",
+  "name": "M2_r1_CB"
+ },
+ {
+  "set": "ICa",
+  "setting": "a",
+  "model": "M2",
+  "r": 1,
+  "start": "VNC",
+  "g": [
+   1.571,
+   1.9638,
+   2.5136,
+   3.9275,
+   6.284,
+   12.568
+  ],
+  "B": 32,
+  "T": 2000,
+  "seed": 62013,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/ICa/M2_r1_VNC.npz",
+  "name": "M2_r1_VNC"
+ },
+ {
+  "set": "ICa",
+  "setting": "a",
+  "model": "M2",
+  "r": 1,
+  "start": "OL",
+  "g": [
+   1.571,
+   1.9638,
+   2.5136,
+   3.9275,
+   6.284,
+   12.568
+  ],
+  "B": 32,
+  "T": 2000,
+  "seed": 62014,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/ICa/M2_r1_OL.npz",
+  "name": "M2_r1_OL"
+ },
+ {
+  "set": "ICa",
+  "setting": "a",
+  "model": "M2",
+  "r": 1,
+  "start": "isl1",
+  "g": [
+   1.571,
+   1.9638,
+   2.5136,
+   3.9275,
+   6.284,
+   12.568
+  ],
+  "B": 32,
+  "T": 2000,
+  "seed": 62015,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/ICa/M2_r1_isl1.npz",
+  "name": "M2_r1_isl1"
+ },
+ {
+  "set": "ICa",
+  "setting": "a",
+  "model": "M2",
+  "r": 1,
+  "start": "isl3",
+  "g": [
+   1.571,
+   1.9638,
+   2.5136,
+   3.9275,
+   6.284,
+   12.568
+  ],
+  "B": 32,
+  "T": 2000,
+  "seed": 62016,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/ICa/M2_r1_isl3.npz",
+  "name": "M2_r1_isl3"
+ },
+ {
+  "set": "ICa",
+  "setting": "a",
+  "model": "M2",
+  "r": 1,
+  "start": "isl5",
+  "g": [
+   1.571,
+   1.9638,
+   2.5136,
+   3.9275,
+   6.284,
+   12.568
+  ],
+  "B": 32,
+  "T": 2000,
+  "seed": 62017,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/ICa/M2_r1_isl5.npz",
+  "name": "M2_r1_isl5"
+ },
+ {
+  "set": "ICa",
+  "setting": "a",
+  "model": "M2",
+  "r": 1,
+  "start": "rand10",
+  "g": [
+   1.571,
+   1.9638,
+   2.5136,
+   3.9275,
+   6.284,
+   12.568
+  ],
+  "B": 32,
+  "T": 2000,
+  "seed": 62018,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/ICa/M2_r1_rand10.npz",
+  "name": "M2_r1_rand10"
+ },
+ {
+  "set": "ICa",
+  "setting": "a",
+  "model": "M2",
+  "r": 1,
+  "start": "rand1",
+  "g": [
+   1.571,
+   1.9638,
+   2.5136,
+   3.9275,
+   6.284,
+   12.568
+  ],
+  "B": 32,
+  "T": 2000,
+  "seed": 62019,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/ICa/M2_r1_rand1.npz",
+  "name": "M2_r1_rand1"
+ },
+ {
+  "set": "ICa",
+  "setting": "a",
+  "model": "M2",
+  "r": 2,
+  "start": "AL",
+  "g": [
+   1.7216,
+   2.152,
+   2.7546,
+   4.304,
+   6.8864,
+   13.773
+  ],
+  "B": 32,
+  "T": 2000,
+  "seed": 62020,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/ICa/M2_r2_AL.npz",
+  "name": "M2_r2_AL"
+ },
+ {
+  "set": "ICa",
+  "setting": "a",
+  "model": "M2",
+  "r": 2,
+  "start": "nonAL",
+  "g": [
+   1.7216,
+   2.152,
+   2.7546,
+   4.304,
+   6.8864,
+   13.773
+  ],
+  "B": 32,
+  "T": 2000,
+  "seed": 62021,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/ICa/M2_r2_nonAL.npz",
+  "name": "M2_r2_nonAL"
+ },
+ {
+  "set": "ICa",
+  "setting": "a",
+  "model": "M2",
+  "r": 2,
+  "start": "CB",
+  "g": [
+   1.7216,
+   2.152,
+   2.7546,
+   4.304,
+   6.8864,
+   13.773
+  ],
+  "B": 32,
+  "T": 2000,
+  "seed": 62022,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/ICa/M2_r2_CB.npz",
+  "name": "M2_r2_CB"
+ },
+ {
+  "set": "ICa",
+  "setting": "a",
+  "model": "M2",
+  "r": 2,
+  "start": "VNC",
+  "g": [
+   1.7216,
+   2.152,
+   2.7546,
+   4.304,
+   6.8864,
+   13.773
+  ],
+  "B": 32,
+  "T": 2000,
+  "seed": 62023,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/ICa/M2_r2_VNC.npz",
+  "name": "M2_r2_VNC"
+ },
+ {
+  "set": "ICa",
+  "setting": "a",
+  "model": "M2",
+  "r": 2,
+  "start": "OL",
+  "g": [
+   1.7216,
+   2.152,
+   2.7546,
+   4.304,
+   6.8864,
+   13.773
+  ],
+  "B": 32,
+  "T": 2000,
+  "seed": 62024,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/ICa/M2_r2_OL.npz",
+  "name": "M2_r2_OL"
+ },
+ {
+  "set": "ICa",
+  "setting": "a",
+  "model": "M2",
+  "r": 2,
+  "start": "isl1",
+  "g": [
+   1.7216,
+   2.152,
+   2.7546,
+   4.304,
+   6.8864,
+   13.773
+  ],
+  "B": 32,
+  "T": 2000,
+  "seed": 62025,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/ICa/M2_r2_isl1.npz",
+  "name": "M2_r2_isl1"
+ },
+ {
+  "set": "ICa",
+  "setting": "a",
+  "model": "M2",
+  "r": 2,
+  "start": "isl3",
+  "g": [
+   1.7216,
+   2.152,
+   2.7546,
+   4.304,
+   6.8864,
+   13.773
+  ],
+  "B": 32,
+  "T": 2000,
+  "seed": 62026,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/ICa/M2_r2_isl3.npz",
+  "name": "M2_r2_isl3"
+ },
+ {
+  "set": "ICa",
+  "setting": "a",
+  "model": "M2",
+  "r": 2,
+  "start": "isl5",
+  "g": [
+   1.7216,
+   2.152,
+   2.7546,
+   4.304,
+   6.8864,
+   13.773
+  ],
+  "B": 32,
+  "T": 2000,
+  "seed": 62027,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/ICa/M2_r2_isl5.npz",
+  "name": "M2_r2_isl5"
+ },
+ {
+  "set": "ICa",
+  "setting": "a",
+  "model": "M2",
+  "r": 2,
+  "start": "rand10",
+  "g": [
+   1.7216,
+   2.152,
+   2.7546,
+   4.304,
+   6.8864,
+   13.773
+  ],
+  "B": 32,
+  "T": 2000,
+  "seed": 62028,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/ICa/M2_r2_rand10.npz",
+  "name": "M2_r2_rand10"
+ },
+ {
+  "set": "ICa",
+  "setting": "a",
+  "model": "M2",
+  "r": 2,
+  "start": "rand1",
+  "g": [
+   1.7216,
+   2.152,
+   2.7546,
+   4.304,
+   6.8864,
+   13.773
+  ],
+  "B": 32,
+  "T": 2000,
+  "seed": 62029,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/ICa/M2_r2_rand1.npz",
+  "name": "M2_r2_rand1"
+ },
+ {
+  "set": "ICa",
+  "setting": "a",
+  "model": "M2",
+  "r": 4,
+  "start": "AL",
+  "g": [
+   1.9422,
+   2.4278,
+   3.1076,
+   4.8556,
+   7.7689,
+   15.538
+  ],
+  "B": 32,
+  "T": 2000,
+  "seed": 62030,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/ICa/M2_r4_AL.npz",
+  "name": "M2_r4_AL"
+ },
+ {
+  "set": "ICa",
+  "setting": "a",
+  "model": "M2",
+  "r": 4,
+  "start": "nonAL",
+  "g": [
+   1.9422,
+   2.4278,
+   3.1076,
+   4.8556,
+   7.7689,
+   15.538
+  ],
+  "B": 32,
+  "T": 2000,
+  "seed": 62031,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/ICa/M2_r4_nonAL.npz",
+  "name": "M2_r4_nonAL"
+ },
+ {
+  "set": "ICa",
+  "setting": "a",
+  "model": "M2",
+  "r": 4,
+  "start": "CB",
+  "g": [
+   1.9422,
+   2.4278,
+   3.1076,
+   4.8556,
+   7.7689,
+   15.538
+  ],
+  "B": 32,
+  "T": 2000,
+  "seed": 62032,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/ICa/M2_r4_CB.npz",
+  "name": "M2_r4_CB"
+ },
+ {
+  "set": "ICa",
+  "setting": "a",
+  "model": "M2",
+  "r": 4,
+  "start": "VNC",
+  "g": [
+   1.9422,
+   2.4278,
+   3.1076,
+   4.8556,
+   7.7689,
+   15.538
+  ],
+  "B": 32,
+  "T": 2000,
+  "seed": 62033,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/ICa/M2_r4_VNC.npz",
+  "name": "M2_r4_VNC"
+ },
+ {
+  "set": "ICa",
+  "setting": "a",
+  "model": "M2",
+  "r": 4,
+  "start": "OL",
+  "g": [
+   1.9422,
+   2.4278,
+   3.1076,
+   4.8556,
+   7.7689,
+   15.538
+  ],
+  "B": 32,
+  "T": 2000,
+  "seed": 62034,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/ICa/M2_r4_OL.npz",
+  "name": "M2_r4_OL"
+ },
+ {
+  "set": "ICa",
+  "setting": "a",
+  "model": "M2",
+  "r": 4,
+  "start": "isl1",
+  "g": [
+   1.9422,
+   2.4278,
+   3.1076,
+   4.8556,
+   7.7689,
+   15.538
+  ],
+  "B": 32,
+  "T": 2000,
+  "seed": 62035,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/ICa/M2_r4_isl1.npz",
+  "name": "M2_r4_isl1"
+ },
+ {
+  "set": "ICa",
+  "setting": "a",
+  "model": "M2",
+  "r": 4,
+  "start": "isl3",
+  "g": [
+   1.9422,
+   2.4278,
+   3.1076,
+   4.8556,
+   7.7689,
+   15.538
+  ],
+  "B": 32,
+  "T": 2000,
+  "seed": 62036,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/ICa/M2_r4_isl3.npz",
+  "name": "M2_r4_isl3"
+ },
+ {
+  "set": "ICa",
+  "setting": "a",
+  "model": "M2",
+  "r": 4,
+  "start": "isl5",
+  "g": [
+   1.9422,
+   2.4278,
+   3.1076,
+   4.8556,
+   7.7689,
+   15.538
+  ],
+  "B": 32,
+  "T": 2000,
+  "seed": 62037,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/ICa/M2_r4_isl5.npz",
+  "name": "M2_r4_isl5"
+ },
+ {
+  "set": "ICa",
+  "setting": "a",
+  "model": "M2",
+  "r": 4,
+  "start": "rand10",
+  "g": [
+   1.9422,
+   2.4278,
+   3.1076,
+   4.8556,
+   7.7689,
+   15.538
+  ],
+  "B": 32,
+  "T": 2000,
+  "seed": 62038,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/ICa/M2_r4_rand10.npz",
+  "name": "M2_r4_rand10"
+ },
+ {
+  "set": "ICa",
+  "setting": "a",
+  "model": "M2",
+  "r": 4,
+  "start": "rand1",
+  "g": [
+   1.9422,
+   2.4278,
+   3.1076,
+   4.8556,
+   7.7689,
+   15.538
+  ],
+  "B": 32,
+  "T": 2000,
+  "seed": 62039,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/ICa/M2_r4_rand1.npz",
+  "name": "M2_r4_rand1"
+ },
+ {
+  "set": "ICa",
+  "setting": "a",
+  "model": "M1",
+  "r": 0,
+  "start": "AL",
+  "g": [
+   0.3325,
+   0.665,
+   2.128
+  ],
+  "B": 32,
+  "T": 2000,
+  "seed": 62040,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/ICa/M1_r0_AL.npz",
+  "name": "M1_r0_AL"
+ },
+ {
+  "set": "ICa",
+  "setting": "a",
+  "model": "M1",
+  "r": 0,
+  "start": "nonAL",
+  "g": [
+   0.3325,
+   0.665,
+   2.128
+  ],
+  "B": 32,
+  "T": 2000,
+  "seed": 62041,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/ICa/M1_r0_nonAL.npz",
+  "name": "M1_r0_nonAL"
+ },
+ {
+  "set": "ICa",
+  "setting": "a",
+  "model": "M1",
+  "r": 0,
+  "start": "CB",
+  "g": [
+   0.3325,
+   0.665,
+   2.128
+  ],
+  "B": 32,
+  "T": 2000,
+  "seed": 62042,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/ICa/M1_r0_CB.npz",
+  "name": "M1_r0_CB"
+ },
+ {
+  "set": "ICa",
+  "setting": "a",
+  "model": "M1",
+  "r": 0,
+  "start": "VNC",
+  "g": [
+   0.3325,
+   0.665,
+   2.128
+  ],
+  "B": 32,
+  "T": 2000,
+  "seed": 62043,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/ICa/M1_r0_VNC.npz",
+  "name": "M1_r0_VNC"
+ },
+ {
+  "set": "ICa",
+  "setting": "a",
+  "model": "M1",
+  "r": 0,
+  "start": "OL",
+  "g": [
+   0.3325,
+   0.665,
+   2.128
+  ],
+  "B": 32,
+  "T": 2000,
+  "seed": 62044,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/ICa/M1_r0_OL.npz",
+  "name": "M1_r0_OL"
+ },
+ {
+  "set": "ICa",
+  "setting": "a",
+  "model": "M1",
+  "r": 0,
+  "start": "isl1",
+  "g": [
+   0.3325,
+   0.665,
+   2.128
+  ],
+  "B": 32,
+  "T": 2000,
+  "seed": 62045,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/ICa/M1_r0_isl1.npz",
+  "name": "M1_r0_isl1"
+ },
+ {
+  "set": "ICa",
+  "setting": "a",
+  "model": "M1",
+  "r": 0,
+  "start": "rand10",
+  "g": [
+   0.3325,
+   0.665,
+   2.128
+  ],
+  "B": 32,
+  "T": 2000,
+  "seed": 62046,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/ICa/M1_r0_rand10.npz",
+  "name": "M1_r0_rand10"
+ },
+ {
+  "set": "ICa",
+  "setting": "a",
+  "model": "M1",
+  "r": 1,
+  "start": "AL",
+  "g": [
+   0.43,
+   0.86,
+   2.752
+  ],
+  "B": 32,
+  "T": 2000,
+  "seed": 62047,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/ICa/M1_r1_AL.npz",
+  "name": "M1_r1_AL"
+ },
+ {
+  "set": "ICa",
+  "setting": "a",
+  "model": "M1",
+  "r": 1,
+  "start": "nonAL",
+  "g": [
+   0.43,
+   0.86,
+   2.752
+  ],
+  "B": 32,
+  "T": 2000,
+  "seed": 62048,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/ICa/M1_r1_nonAL.npz",
+  "name": "M1_r1_nonAL"
+ },
+ {
+  "set": "ICa",
+  "setting": "a",
+  "model": "M1",
+  "r": 1,
+  "start": "CB",
+  "g": [
+   0.43,
+   0.86,
+   2.752
+  ],
+  "B": 32,
+  "T": 2000,
+  "seed": 62049,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/ICa/M1_r1_CB.npz",
+  "name": "M1_r1_CB"
+ },
+ {
+  "set": "ICa",
+  "setting": "a",
+  "model": "M1",
+  "r": 1,
+  "start": "VNC",
+  "g": [
+   0.43,
+   0.86,
+   2.752
+  ],
+  "B": 32,
+  "T": 2000,
+  "seed": 62050,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/ICa/M1_r1_VNC.npz",
+  "name": "M1_r1_VNC"
+ },
+ {
+  "set": "ICa",
+  "setting": "a",
+  "model": "M1",
+  "r": 1,
+  "start": "OL",
+  "g": [
+   0.43,
+   0.86,
+   2.752
+  ],
+  "B": 32,
+  "T": 2000,
+  "seed": 62051,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/ICa/M1_r1_OL.npz",
+  "name": "M1_r1_OL"
+ },
+ {
+  "set": "ICa",
+  "setting": "a",
+  "model": "M1",
+  "r": 1,
+  "start": "isl1",
+  "g": [
+   0.43,
+   0.86,
+   2.752
+  ],
+  "B": 32,
+  "T": 2000,
+  "seed": 62052,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/ICa/M1_r1_isl1.npz",
+  "name": "M1_r1_isl1"
+ },
+ {
+  "set": "ICa",
+  "setting": "a",
+  "model": "M1",
+  "r": 1,
+  "start": "rand10",
+  "g": [
+   0.43,
+   0.86,
+   2.752
+  ],
+  "B": 32,
+  "T": 2000,
+  "seed": 62053,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/ICa/M1_r1_rand10.npz",
+  "name": "M1_r1_rand10"
+ }
+]

@@ -1,0 +1,136 @@
+{
+ "options": {
+  "exp": "decay",
+  "norm": "raw",
+  "g": [
+   1.2,
+   2.0
+  ],
+  "r": 1.0,
+  "h": 0.0,
+  "beta": 1.0,
+  "T": 60.0,
+  "dt": 0.2,
+  "B": 16,
+  "null": false,
+  "null_kind": "targets",
+  "seed_set": null,
+  "seed": 5,
+  "out": "/MALECNS_ROOT/results/m2/sim/validation/runs/V2_old_E3_decay_spike_all.npz",
+  "drive": [],
+  "clamp_off": [],
+  "clamp_on": [],
+  "sign_override": [],
+  "sign_ensemble": 0,
+  "ens_unit": "neuron",
+  "ens_conf": "body",
+  "ens_gt": "ignore",
+  "ens_qmiss": 0.5,
+  "ens_seed": null,
+  "ens_only": null,
+  "wtransform": "linear",
+  "wnorm": "renorm",
+  "std": [
+   0.25,
+   157.0
+  ],
+  "std_group": [],
+  "std_mode": "spike",
+  "adapt": null,
+  "adapt_group": [],
+  "refractory": 0,
+  "region": [
+   "PN=class:ALPN"
+  ],
+  "no_default_regions": false,
+  "no_occ": false,
+  "device": "cuda",
+  "engine": "spmm",
+  "push_max": 0.05,
+  "switch_at": null,
+  "sw_drive": [],
+  "sw_clamp_off": [],
+  "sw_clamp_on": [],
+  "rec_lin": 0.0,
+  "win": [
+   "30:60"
+  ],
+  "reg_last": true,
+  "occ_win": null
+ },
+ "device": "cuda",
+ "gpu": "NVIDIA GeForce RTX 3090",
+ "c_raw": 0.0013406440848484635,
+ "std": {
+  "default": [
+   0.25,
+   157.0
+  ],
+  "groups": [],
+  "n_depressing": 167216,
+  "mode": "spike"
+ },
+ "windows_steps": [
+  [
+   150,
+   300
+  ]
+ ],
+ "regions": {
+  "AL_module": {
+   "sel": "module",
+   "n": 526
+  },
+  "AL_rest": {
+   "sel": "al_rest",
+   "n": 3395
+  },
+  "CNS_rest": {
+   "sel": "cns_rest",
+   "n": 163295
+  },
+  "PN": {
+   "sel": "class:ALPN",
+   "n": 686
+  }
+ },
+ "N": 167216,
+ "nnz": [
+  24562483
+ ],
+ "steps": 300,
+ "n_draws": 1,
+ "ms_per_step": [
+  [
+   4.572144349416097,
+   3.7753756841023765
+  ]
+ ],
+ "rho_T_mean": [
+  0.0006163435755297542,
+  0.003323545679450035
+ ],
+ "surv_T": [
+  0.8125,
+  1.0
+ ],
+ "wall_s": 4.254103183746338,
+ "reg_rho_T_mean": {
+  "AL_module": [
+   0.010575095191597939,
+   0.05679657682776451
+  ],
+  "AL_rest": [
+   0.0004418262396939099,
+   0.0016384389018639922
+  ],
+  "CNS_rest": [
+   0.0005878930678591132,
+   0.0031863346230238676
+  ],
+  "PN": [
+   0.0025510205887258053,
+   0.013939503580331802
+  ]
+ }
+}

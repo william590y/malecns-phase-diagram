@@ -1,0 +1,12 @@
+pd3_island_sim.py --module AL --r 0
+pd3_island_sim.py --module AL --r 1
+pd3_island_sim.py --module isl1 --r 0
+pd3_island_sim.py --module isl1 --r 1
+pd3_island_sim.py --module isl2 --r 0
+pd3_island_sim.py --module isl2 --r 1
+pd3_island_sim.py --module isl3 --r 0
+pd3_island_sim.py --module isl3 --r 1
+pd3_island_sim.py --module isl4 --r 0
+pd3_island_sim.py --module isl4 --r 1
+pd3_island_sim.py --module isl5 --r 0
+pd3_island_sim.py --module isl5 --r 1

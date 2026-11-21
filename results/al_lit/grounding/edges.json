@@ -1,0 +1,1906 @@
+{
+ "c": 0.0013406441635011774,
+ "regions": {
+  "AL": {
+   "stats": {
+    "n_neurons": 3874,
+    "n_edges": 465373,
+    "n_synapses": 3477471.0,
+    "density": 0.031008585092254227,
+    "edges_per_neuron": 120.12725864739288,
+    "syn_per_edge_mean": 7.472438237714694,
+    "syn_per_edge_median": 2.0,
+    "syn_per_edge_p90": 16.0,
+    "syn_per_edge_p99": 84.0,
+    "syn_per_edge_max": 1250.0,
+    "frac_edges_ge50": 0.023316780303111698,
+    "frac_syn_in_edges_ge50": 0.32319004241875776,
+    "frac_edges_ge100": 0.007516551239543334,
+    "reciprocity_unweighted": 0.565058565924538,
+    "reciprocity_weighted": 0.4056108591559786,
+    "exc_frac_of_syn": 0.7860482517323653,
+    "exc_in_within_mean_c": 0.9459466172338483,
+    "exc_in_within_p90_c": 2.1226419040714175,
+    "exc_in_within_max_c": 60.32496542506248,
+    "exc_in_within_frac_of_exc_in": 0.9788713253291631,
+    "in_strength_total_mean_syn": 952.8394424367578
+   },
+   "perron": {
+    "lam": 5.57290861856344,
+    "g_on_naive": 0.16263432556403998,
+    "inv_ipr": 70.25023765016375,
+    "n": 3874,
+    "top_types": {
+     "lLN1_bc": 0.5153379683201362,
+     "lLN2T_a": 0.057742951016179316,
+     "v2LN30": 0.03810795653672883,
+     "lLN2F_a": 0.03470853171663498,
+     "lLN2F_b": 0.0344846031014648
+    }
+   },
+   "perron_cap50": {
+    "lam": 3.336387500158179,
+    "g_on_naive": 0.2716549665070741,
+    "inv_ipr": 164.61990813250145,
+    "n": 3874,
+    "top_types": {
+     "lLN1_bc": 0.2563782641034941,
+     "lLN2T_a": 0.05580649428946466,
+     "lLN2X12": 0.044095423190790496,
+     "lLN2P_c": 0.03654588487589472,
+     "lLN2X04": 0.03604999334349345
+    }
+   },
+   "perron_binary": {
+    "lam": 0.24891773992036068,
+    "g_on_naive": 3.641147613264002,
+    "inv_ipr": 248.97041205353602,
+    "n": 3874,
+    "top_types": {
+     "lLN2F_b": 0.04944622305707364,
+     "lLN1_bc": 0.04704193486477983,
+     "lLN2F_a": 0.04497185940936877,
+     "lLN2T_b": 0.04183024427885322,
+     "lLN2X12": 0.03891267582877539
+    }
+   }
+  },
+  "MB": {
+   "stats": {
+    "n_neurons": 4505,
+    "n_edges": 1018725,
+    "n_synapses": 2794887.0,
+    "density": 0.05019579921680313,
+    "edges_per_neuron": 226.1320754716981,
+    "syn_per_edge_mean": 2.7435146874769933,
+    "syn_per_edge_median": 1.0,
+    "syn_per_edge_p90": 4.0,
+    "syn_per_edge_p99": 30.0,
+    "syn_per_edge_max": 1878.0,
+    "frac_edges_ge50": 0.004720606640653759,
+    "frac_syn_in_edges_ge50": 0.1157281135158595,
+    "frac_edges_ge100": 0.00017767307173182165,
+    "reciprocity_unweighted": 0.6306648015902231,
+    "reciprocity_weighted": 0.5257253692188629,
+    "exc_frac_of_syn": 0.7930585386815281,
+    "exc_in_within_mean_c": 0.6596115103657783,
+    "exc_in_within_p90_c": 0.5107854262939486,
+    "exc_in_within_max_c": 145.29901444025762,
+    "exc_in_within_frac_of_exc_in": 0.784861945946903,
+    "in_strength_total_mean_syn": 800.0705882352942
+   },
+   "perron": {
+    "lam": 0.4669612696321176,
+    "g_on_naive": 1.940945199425491,
+    "inv_ipr": 3.0587936017572397,
+    "n": 4505,
+    "top_types": {
+     "APL": 0.5499760351386462,
+     "DPM": 0.10096508508279792,
+     "MBON01": 0.06986237587836121,
+     "MBON05": 0.06528384456143545,
+     "MBON11": 0.06402075912165839
+    }
+   },
+   "perron_cap50": {
+    "lam": 0.46692151549898786,
+    "g_on_naive": 1.9411104533092685,
+    "inv_ipr": 4.17635212504332,
+    "n": 4505,
+    "top_types": {
+     "APL": 0.4482277442840644,
+     "DPM": 0.12644485648416576,
+     "MBON01": 0.0873379834341048,
+     "MBON11": 0.0808241154706503,
+     "MBON05": 0.07894188133112524
+    }
+   },
+   "perron_binary": {
+    "lam": 0.27858753103865574,
+    "g_on_naive": 3.2533625292954325,
+    "inv_ipr": 315.5758645253825,
+    "n": 4505,
+    "top_types": {
+     "KCg-m": 0.5881175817273715,
+     "PAM08": 0.0625505458133981,
+     "PAM01": 0.054281417765578224,
+     "PAM07": 0.023030601519066267,
+     "PPL101": 0.02213751238711028
+    }
+   }
+  },
+  "CX": {
+   "stats": {
+    "n_neurons": 2950,
+    "n_edges": 439500,
+    "n_synapses": 2791696.0,
+    "density": 0.050502729100833095,
+    "edges_per_neuron": 148.98305084745763,
+    "syn_per_edge_mean": 6.351981797497156,
+    "syn_per_edge_median": 2.0,
+    "syn_per_edge_p90": 15.0,
+    "syn_per_edge_p99": 58.0,
+    "syn_per_edge_max": 600.0,
+    "frac_edges_ge50": 0.01445278725824801,
+    "frac_syn_in_edges_ge50": 0.18184823849015078,
+    "frac_edges_ge100": 0.0026393629124004552,
+    "reciprocity_unweighted": 0.45726052332195677,
+    "reciprocity_weighted": 0.37200253895839663,
+    "exc_frac_of_syn": 0.390204377554003,
+    "exc_in_within_mean_c": 0.4950530806491744,
+    "exc_in_within_p90_c": 1.165019778082523,
+    "exc_in_within_max_c": 8.899195957320815,
+    "exc_in_within_frac_of_exc_in": 0.8039071707475829,
+    "in_strength_total_mean_syn": 1104.5766101694915
+   },
+   "perron": {
+    "lam": 1.2840419622979138,
+    "g_on_naive": 0.7058540618003629,
+    "inv_ipr": 18.833141576288316,
+    "n": 2950,
+    "top_types": {
+     "ExR6": 0.2675043229377697,
+     "ExR4": 0.17345827805928246,
+     "EPG": 0.15079151391959705,
+     "EL": 0.08534055651687683,
+     "PEN_a(PEN1)": 0.0514847805491539
+    }
+   },
+   "perron_cap50": {
+    "lam": 1.1836117951169722,
+    "g_on_naive": 0.765746200189328,
+    "inv_ipr": 61.47960698833892,
+    "n": 2950,
+    "top_types": {
+     "EPG": 0.21842113624941778,
+     "ExR6": 0.1344851482116609,
+     "ExR4": 0.08641802840222847,
+     "PEN_a(PEN1)": 0.08510998356701532,
+     "EL": 0.08118853610528529
+    }
+   },
+   "perron_binary": {
+    "lam": 0.09813970736816081,
+    "g_on_naive": 9.235265306121487,
+    "inv_ipr": 524.6373479116562,
+    "n": 2950,
+    "top_types": {
+     "FB5A": 0.035004284726906025,
+     "FC2B": 0.03159501752105405,
+     "FB4Y": 0.030645735383454734,
+     "PFL3": 0.02784551842993557,
+     "PFNp_b": 0.02542850504795556
+    }
+   }
+  },
+  "LH": {
+   "stats": {
+    "n_neurons": 2026,
+    "n_edges": 140659,
+    "n_synapses": 558704.0,
+    "density": 0.03426799094496131,
+    "edges_per_neuron": 69.42694965449161,
+    "syn_per_edge_mean": 3.972045869798591,
+    "syn_per_edge_median": 2.0,
+    "syn_per_edge_p90": 8.0,
+    "syn_per_edge_p99": 34.0,
+    "syn_per_edge_max": 1097.0,
+    "frac_edges_ge50": 0.004535792235121819,
+    "frac_syn_in_edges_ge50": 0.09699232509522036,
+    "frac_edges_ge100": 0.000817580105076817,
+    "reciprocity_unweighted": 0.2937814146268635,
+    "reciprocity_weighted": 0.19638842750365132,
+    "exc_frac_of_syn": 0.42437319224490966,
+    "exc_in_within_mean_c": 0.15689308515398107,
+    "exc_in_within_p90_c": 0.2962823601337602,
+    "exc_in_within_max_c": 7.618880781177191,
+    "exc_in_within_frac_of_exc_in": 0.234125142440718,
+    "in_strength_total_mean_syn": 902.0597235932872
+   },
+   "perron": {
+    "lam": 0.490530631119381,
+    "g_on_naive": 1.8476852965161974,
+    "inv_ipr": 8.675516620450882,
+    "n": 2026,
+    "top_types": {
+     "LHPV6o1": 0.31449972761354017,
+     "LHPV1c2": 0.2448663443473648,
+     "LHPV7a2": 0.1686161921510465,
+     "LHPV2a1_a": 0.05347080356372746,
+     "LHPD5f1": 0.0513596302267402
+    }
+   },
+   "perron_cap50": {
+    "lam": 0.27861414450343813,
+    "g_on_naive": 3.253051765284323,
+    "inv_ipr": 42.33479898494644,
+    "n": 2026,
+    "top_types": {
+     "LHPV7a2": 0.12436292195093385,
+     "LHPV6o1": 0.10399997939957459,
+     "LHPV1c2": 0.09942418286460734,
+     "LHPD5f1": 0.05148634378011077,
+     "LHPV2a1_a": 0.045322071064144556
+    }
+   },
+   "perron_binary": {
+    "lam": 0.049863411071606835,
+    "g_on_naive": 18.176579081373387,
+    "inv_ipr": 116.42884741760494,
+    "n": 2026,
+    "top_types": {
+     "LHPV12a1": 0.06066378377081197,
+     "LHCENT2": 0.058395448560766956,
+     "LHCENT9": 0.04089610335620083,
+     "LHCENT6": 0.028197971180398667,
+     "LHCENT1": 0.02796542967697995
+    }
+   }
+  },
+  "OL intrinsic": {
+   "stats": {
+    "n_neurons": 89403,
+    "n_edges": 8799556,
+    "n_synapses": 35691182.0,
+    "density": 0.0011009220625068656,
+    "edges_per_neuron": 98.42573515430131,
+    "syn_per_edge_mean": 4.056020781048498,
+    "syn_per_edge_median": 2.0,
+    "syn_per_edge_p90": 9.0,
+    "syn_per_edge_p99": 31.0,
+    "syn_per_edge_max": 2591.0,
+    "frac_edges_ge50": 0.0033168718967184255,
+    "frac_syn_in_edges_ge50": 0.06347290487605595,
+    "frac_edges_ge100": 0.0005370725522969568,
+    "reciprocity_unweighted": 0.328361112765235,
+    "reciprocity_weighted": 0.2082250736330335,
+    "exc_frac_of_syn": 0.5908163534623202,
+    "exc_in_within_mean_c": 0.31620946716815473,
+    "exc_in_within_p90_c": 0.4973789846589368,
+    "exc_in_within_max_c": 101.6892004457278,
+    "exc_in_within_frac_of_exc_in": 0.9386989850427351,
+    "in_strength_total_mean_syn": 437.00618547476034
+   },
+   "perron": {
+    "lam": 0.5226250416289544,
+    "g_on_naive": 1.734218918758901,
+    "inv_ipr": 2.5424135869630398,
+    "n": 89403,
+    "top_types": {
+     "Li39": 0.64265693349764,
+     "TmY17": 0.09360160901745732,
+     "Li32": 0.08420306753175219,
+     "Cm34": 0.0606797105259463,
+     "Li14": 0.01784295793944302
+    }
+   },
+   "perron_cap50": {
+    "lam": 0.4880636607646749,
+    "g_on_naive": 1.8570246209071801,
+    "inv_ipr": 5.341894436893862,
+    "n": 89403,
+    "top_types": {
+     "Li39": 0.4465732099994947,
+     "TmY17": 0.13357576928997603,
+     "Cm34": 0.10578755638457682,
+     "Li32": 0.05667628632249477,
+     "Li33": 0.036953018828985794
+    }
+   },
+   "perron_binary": {
+    "lam": 0.09069622274661394,
+    "g_on_naive": 9.99320817518752,
+    "inv_ipr": 103.77503777298674,
+    "n": 89403,
+    "top_types": {
+     "Li39": 0.08054932057729855,
+     "Li16": 0.046217966862645316,
+     "Li12": 0.038889291125292366,
+     "TmY5a": 0.03330564056052764,
+     "Li38": 0.028506247646001286
+    }
+   }
+  },
+  "VPN/VCN": {
+   "stats": {
+    "n_neurons": 9766,
+    "n_edges": 709266,
+    "n_synapses": 2383914.0,
+    "density": 0.007436621908631672,
+    "edges_per_neuron": 72.62604955969691,
+    "syn_per_edge_mean": 3.361100066829652,
+    "syn_per_edge_median": 2.0,
+    "syn_per_edge_p90": 7.0,
+    "syn_per_edge_p99": 27.0,
+    "syn_per_edge_max": 707.0,
+    "frac_edges_ge50": 0.002843784983348983,
+    "frac_syn_in_edges_ge50": 0.07801665664113722,
+    "frac_edges_ge100": 0.0006711163371711037,
+    "reciprocity_unweighted": 0.401273993114008,
+    "reciprocity_weighted": 0.27256604055347633,
+    "exc_frac_of_syn": 0.7206723900274926,
+    "exc_in_within_mean_c": 0.23584423780692773,
+    "exc_in_within_p90_c": 0.45045643893639564,
+    "exc_in_within_max_c": 27.46309568932162,
+    "exc_in_within_frac_of_exc_in": 0.23202684995933504,
+    "in_strength_total_mean_syn": 1213.4835142330535
+   },
+   "perron": {
+    "lam": 0.4119125561261401,
+    "g_on_naive": 2.2003365062087115,
+    "inv_ipr": 2.4255773008516672,
+    "n": 9766,
+    "top_types": {
+     "LoVC16": 0.9051945169062702,
+     "LC17": 0.09455571573597435,
+     "LoVCLo3": 0.00013156119269252585,
+     "LT56": 5.8874370954549575e-05,
+     "LT83": 9.754687267134906e-06
+    }
+   },
+   "perron_cap50": {
+    "lam": 0.4118951485220077,
+    "g_on_naive": 2.20042949731821,
+    "inv_ipr": 2.5828354651126992,
+    "n": 9766,
+    "top_types": {
+     "LoVC16": 0.879453462009382,
+     "LC17": 0.12031082170731267,
+     "LoVCLo3": 0.0001622023037238813,
+     "LT56": 2.099183788128753e-05,
+     "LT83": 1.1214844203527652e-05
+    }
+   },
+   "perron_binary": {
+    "lam": 0.15983143271545536,
+    "g_on_naive": 5.670638241875993,
+    "inv_ipr": 169.2186293313956,
+    "n": 9766,
+    "top_types": {
+     "LC17": 0.9710420658289031,
+     "LoVC16": 0.02514069689314627,
+     "LoVCLo3": 0.0026797329143652287,
+     "LC12": 0.00035860534815329115,
+     "LT56": 0.00015655494327719688
+    }
+   }
+  },
+  "VNC": {
+   "stats": {
+    "n_neurons": 20429,
+    "n_edges": 2602602,
+    "n_synapses": 16288935.0,
+    "density": 0.006236106771199831,
+    "edges_per_neuron": 127.39742522884136,
+    "syn_per_edge_mean": 6.258711474132426,
+    "syn_per_edge_median": 2.0,
+    "syn_per_edge_p90": 13.0,
+    "syn_per_edge_p99": 69.0,
+    "syn_per_edge_max": 1032.0,
+    "frac_edges_ge50": 0.01740258402936753,
+    "frac_syn_in_edges_ge50": 0.26302990342830884,
+    "frac_edges_ge100": 0.004900864596277111,
+    "reciprocity_unweighted": 0.26690020218227756,
+    "reciprocity_weighted": 0.12763056639368994,
+    "exc_frac_of_syn": 0.5338515992604795,
+    "exc_in_within_mean_c": 0.5706629166695207,
+    "exc_in_within_p90_c": 1.4023137950222315,
+    "exc_in_within_max_c": 18.41240694152517,
+    "exc_in_within_frac_of_exc_in": 0.766267830348523,
+    "in_strength_total_mean_syn": 993.7652846443781
+   },
+   "perron": {
+    "lam": 1.7022046127135917,
+    "g_on_naive": 0.5324543405890713,
+    "inv_ipr": 29.799715378522524,
+    "n": 20429,
+    "top_types": {
+     "INXXX149": 0.2527341480025153,
+     "": 0.12372494607383917,
+     "INXXX137": 0.1156213708227546,
+     "MNad64": 0.04652389993249054,
+     "INXXX197": 0.04526097146213255
+    }
+   },
+   "perron_cap50": {
+    "lam": 0.7842002461494205,
+    "g_on_naive": 1.1557586714113284,
+    "inv_ipr": 346.4211669688869,
+    "n": 20429,
+    "top_types": {
+     "IN19A002": 0.03376784496111512,
+     "Sternal posterior rotator MN": 0.032658141372732256,
+     "Sternotrochanter MN": 0.03174411406860273,
+     "Pleural remotor/abductor MN": 0.02409810054111412,
+     "IN08A002": 0.020850480603059114
+    }
+   },
+   "perron_binary": {
+    "lam": 0.11753619316727353,
+    "g_on_naive": 7.711209714953161,
+    "inv_ipr": 1494.7103064191804,
+    "n": 20429,
+    "top_types": {
+     "IN20A.22A001": 0.014440698534113039,
+     "Sternal posterior rotator MN": 0.012565934482891068,
+     "Sternotrochanter MN": 0.012357948979659555,
+     "IN19A002": 0.011078208331051137,
+     "Pleural remotor/abductor MN": 0.010591680731160739
+    }
+   }
+  },
+  "CB other": {
+   "stats": {
+    "n_neurons": 21512,
+    "n_edges": 4109518,
+    "n_synapses": 21936720.0,
+    "density": 0.008880334167228967,
+    "edges_per_neuron": 191.03374860542954,
+    "syn_per_edge_mean": 5.338027476701647,
+    "syn_per_edge_median": 2.0,
+    "syn_per_edge_p90": 11.0,
+    "syn_per_edge_p99": 56.0,
+    "syn_per_edge_max": 1193.0,
+    "frac_edges_ge50": 0.012535046689173766,
+    "frac_syn_in_edges_ge50": 0.2146715188049991,
+    "frac_edges_ge100": 0.003256586295521762,
+    "reciprocity_unweighted": 0.28566683489401923,
+    "reciprocity_weighted": 0.15822921567125806,
+    "exc_frac_of_syn": 0.5405466724286949,
+    "exc_in_within_mean_c": 0.7389884025423809,
+    "exc_in_within_p90_c": 1.6341111708915872,
+    "exc_in_within_max_c": 51.45526363933869,
+    "exc_in_within_frac_of_exc_in": 0.6267494332319427,
+    "in_strength_total_mean_syn": 1444.63020639643
+   },
+   "perron": {
+    "lam": 1.467437450097603,
+    "g_on_naive": 0.6176387515187155,
+    "inv_ipr": 26.110648541435545,
+    "n": 21512,
+    "top_types": {
+     "AVLP016": 0.20397149242968,
+     "AVLP079": 0.09959450173479698,
+     "AVLP076": 0.09750618846665315,
+     "AVLP001": 0.04413298070542133,
+     "AVLP080": 0.04340717374849801
+    }
+   },
+   "perron_cap50": {
+    "lam": 1.2127892522857158,
+    "g_on_naive": 0.7473237686613079,
+    "inv_ipr": 95.77312642257772,
+    "n": 21512,
+    "top_types": {
+     "AVLP016": 0.09730568887795703,
+     "AVLP076": 0.054214392922897967,
+     "CL001": 0.03789519917711022,
+     "AVLP001": 0.0376165980605933,
+     "AVLP215": 0.03102211237107672
+    }
+   },
+   "perron_binary": {
+    "lam": 0.23810553895787398,
+    "g_on_naive": 3.8064895028353085,
+    "inv_ipr": 916.0255096592563,
+    "n": 21512,
+    "top_types": {
+     "": 0.018375284157777894,
+     "AVLP016": 0.01529972923260373,
+     "AVLP076": 0.01290290499855264,
+     "AVLP001": 0.012292611091717774,
+     "AVLP215": 0.0095040662062451
+    }
+   }
+  },
+  "JO/mechano (brain)": {
+   "stats": {
+    "n_neurons": 1744,
+    "n_edges": 18585,
+    "n_synapses": 41636.0,
+    "density": 0.006110399482366804,
+    "edges_per_neuron": 10.656536697247706,
+    "syn_per_edge_mean": 2.24030131826742,
+    "syn_per_edge_median": 1.0,
+    "syn_per_edge_p90": 4.0,
+    "syn_per_edge_p99": 15.0,
+    "syn_per_edge_max": 105.0,
+    "frac_edges_ge50": 0.0008071025020177562,
+    "frac_syn_in_edges_ge50": 0.02529061389182438,
+    "frac_edges_ge100": 5.380683346785042e-05,
+    "reciprocity_unweighted": 0.5569007263922519,
+    "reciprocity_weighted": 0.5406859448554135,
+    "exc_frac_of_syn": 0.9988951868575271,
+    "exc_in_within_mean_c": 0.03197098094037498,
+    "exc_in_within_p90_c": 0.07065194741651211,
+    "exc_in_within_max_c": 0.5268731562559628,
+    "exc_in_within_frac_of_exc_in": 0.914146298575699,
+    "in_strength_total_mean_syn": 76.56135321100918
+   },
+   "perron": {
+    "lam": 0.24996936144096715,
+    "g_on_naive": 3.6258292991804675,
+    "inv_ipr": 6.458183378486817,
+    "n": 1744,
+    "top_types": {
+     "BM_Vt_PoOc": 0.8437957006489233,
+     "BM": 0.12137914291808635,
+     "": 0.03276426332123234,
+     "BM_InOm": 0.0014636204484779513,
+     "JO-FV": 0.0003105543295832594
+    }
+   },
+   "perron_cap50": {
+    "lam": 0.21312303226451673,
+    "g_on_naive": 4.252690218320389,
+    "inv_ipr": 9.203770670118729,
+    "n": 1744,
+    "top_types": {
+     "BM_Vt_PoOc": 0.746413253235039,
+     "BM": 0.20695184870080707,
+     "": 0.04353955719592669,
+     "BM_InOm": 0.0019444731129664395,
+     "JO-FV": 0.0006659661874301913
+    }
+   },
+   "perron_binary": {
+    "lam": 0.03248726791924484,
+    "g_on_naive": 27.89850586583763,
+    "inv_ipr": 41.252248858552214,
+    "n": 1744,
+    "top_types": {
+     "TPMN1": 0.9715398568611762,
+     "TPMN2": 0.02560095612056558,
+     "GNG642": 0.00274396586845697,
+     "": 7.868976080630332e-05,
+     "aPhM2a": 2.2799474326017807e-05
+    }
+   }
+  },
+  "AL minus ORN/HRN/TRN": {
+   "stats": {
+    "n_neurons": 1144,
+    "n_edges": 146044,
+    "n_synapses": 1758394.0,
+    "density": 0.11159164262311115,
+    "edges_per_neuron": 127.66083916083916,
+    "syn_per_edge_mean": 12.040165977376681,
+    "syn_per_edge_median": 3.0,
+    "syn_per_edge_p90": 28.0,
+    "syn_per_edge_p99": 149.0,
+    "syn_per_edge_max": 1250.0,
+    "frac_edges_ge50": 0.04864972200158856,
+    "frac_syn_in_edges_ge50": 0.45526201750005973,
+    "frac_edges_ge100": 0.017926104461669087,
+    "reciprocity_unweighted": 0.5569691325901783,
+    "reciprocity_weighted": 0.5065940852846404,
+    "exc_frac_of_syn": 0.680482303738525,
+    "exc_in_within_mean_c": 1.4022341063831423,
+    "exc_in_within_p90_c": 4.219275311370911,
+    "exc_in_within_max_c": 17.987422741695298,
+    "exc_in_within_frac_of_exc_in": 0.47580695508536885,
+    "in_strength_total_mean_syn": 2823.355769230769
+   },
+   "perron": {
+    "lam": 5.5392702184801745,
+    "g_on_naive": 0.1636219572004862,
+    "inv_ipr": 67.52377132221676,
+    "n": 1144,
+    "top_types": {
+     "lLN1_bc": 0.5267965644916908,
+     "lLN2T_a": 0.05780225968177823,
+     "v2LN30": 0.038101529667347415,
+     "lLN2F_a": 0.033023679309967816,
+     "lLN2F_b": 0.03221750768047363
+    }
+   }
+  },
+  "MB KC only": {
+   "stats": {
+    "n_neurons": 4064,
+    "n_edges": 642933,
+    "n_synapses": 1153845.0,
+    "density": 0.03892766183969868,
+    "edges_per_neuron": 158.20201771653544,
+    "syn_per_edge_mean": 1.7946582303288212,
+    "syn_per_edge_median": 1.0,
+    "syn_per_edge_p90": 3.0,
+    "syn_per_edge_p99": 7.0,
+    "syn_per_edge_max": 62.0,
+    "frac_edges_ge50": 4.666116064971e-06,
+    "frac_syn_in_edges_ge50": 0.0001438668105334772,
+    "frac_edges_ge100": 0.0,
+    "reciprocity_unweighted": 0.6668082055206375,
+    "reciprocity_weighted": 0.6131854798521466,
+    "exc_frac_of_syn": 1.0,
+    "exc_in_within_mean_c": 0.3806337511897185,
+    "exc_in_within_p90_c": 0.4692254572254121,
+    "exc_in_within_max_c": 1.835341859833112,
+    "exc_in_within_frac_of_exc_in": 0.7337133809399661,
+    "in_strength_total_mean_syn": 512.3686023622047
+   },
+   "perron": {
+    "lam": 0.46339961327965673,
+    "g_on_naive": 1.9558631656930636,
+    "inv_ipr": 283.64825418634604,
+    "n": 4064,
+    "top_types": {
+     "KCg-m": 0.5735096872698342,
+     "KCg-d": 0.3772046709871459,
+     "KCg-s2": 0.021900329067135387,
+     "KCg-s1": 0.019073831520902335,
+     "KCg-s3": 0.004367315893790308
+    }
+   }
+  },
+  "PN->KC (calyx input) + KC": {
+   "stats": {
+    "n_neurons": 4750,
+    "n_edges": 694225,
+    "n_synapses": 1691212.0,
+    "density": 0.030768975069252077,
+    "edges_per_neuron": 146.15263157894736,
+    "syn_per_edge_mean": 2.4361150923691888,
+    "syn_per_edge_median": 1.0,
+    "syn_per_edge_p90": 4.0,
+    "syn_per_edge_p99": 24.0,
+    "syn_per_edge_max": 358.0,
+    "frac_edges_ge50": 0.0007908098959271129,
+    "frac_syn_in_edges_ge50": 0.024535067158936906,
+    "frac_edges_ge100": 0.00012820051136159025,
+    "reciprocity_unweighted": 0.6375368216356369,
+    "reciprocity_weighted": 0.43846188413989495,
+    "exc_frac_of_syn": 0.9937506356388199,
+    "exc_in_within_mean_c": 0.47434615344823355,
+    "exc_in_within_p90_c": 0.6582562842790781,
+    "exc_in_within_max_c": 5.308950887464663,
+    "exc_in_within_frac_of_exc_in": 0.6699018251826577,
+    "in_strength_total_mean_syn": 715.6762105263158
+   },
+   "perron": {
+    "lam": 0.4749337569271718,
+    "g_on_naive": 1.9083634746752136,
+    "inv_ipr": 420.2559041693084,
+    "n": 4750,
+    "top_types": {
+     "KCg-m": 0.6617940721972175,
+     "KCg-d": 0.27054818364836813,
+     "KCg-s2": 0.016733577028886892,
+     "KCg-s1": 0.015622687336606047,
+     "KCa'b'-ap2": 0.00796597660668506
+    }
+   }
+  },
+  "CNS minus AL": {
+   "stats": {
+    "n_neurons": 163342,
+    "n_edges": 24901410,
+    "n_synapses": 119223876.0,
+    "density": 0.0009333149042287355,
+    "edges_per_neuron": 152.4495230865301,
+    "syn_per_edge_mean": 4.787836351435521,
+    "syn_per_edge_median": 2.0,
+    "syn_per_edge_p90": 10.0,
+    "syn_per_edge_p99": 46.0,
+    "syn_per_edge_max": 2591.0,
+    "frac_edges_ge50": 0.008616700821359112,
+    "frac_syn_in_edges_ge50": 0.16024470635395213,
+    "frac_edges_ge100": 0.0020674331292886627,
+    "reciprocity_unweighted": 0.29455412364199457,
+    "reciprocity_weighted": 0.16799600610199925,
+    "exc_frac_of_syn": 0.5838420317755816,
+    "exc_in_within_mean_c": 0.5713131850657837,
+    "exc_in_within_p90_c": 1.2414364954020902,
+    "exc_in_within_max_c": 145.56580262879436,
+    "exc_in_within_frac_of_exc_in": 0.9844666412987882,
+    "in_strength_total_mean_syn": 737.7280981009171
+   }
+  },
+  "whole CNS": {
+   "stats": {
+    "n_neurons": 167216,
+    "n_edges": 25587572,
+    "n_synapses": 124193283.0,
+    "density": 0.0009151102438661473,
+    "edges_per_neuron": 153.0210745383217,
+    "syn_per_edge_mean": 4.853656415700559,
+    "syn_per_edge_median": 2.0,
+    "syn_per_edge_p90": 10.0,
+    "syn_per_edge_p99": 46.0,
+    "syn_per_edge_max": 2591.0,
+    "frac_edges_ge50": 0.008910341317261363,
+    "frac_syn_in_edges_ge50": 0.1646224860647254,
+    "frac_edges_ge100": 0.0021691389866924458,
+    "reciprocity_unweighted": 0.29891675536858286,
+    "reciprocity_weighted": 0.1740326890303721,
+    "exc_frac_of_syn": 0.5918087856651636,
+    "exc_in_within_mean_c": 0.5892711881905085,
+    "exc_in_within_p90_c": 1.2602055136911068,
+    "exc_in_within_max_c": 148.87853435680574,
+    "exc_in_within_frac_of_exc_in": 1.0,
+    "in_strength_total_mean_syn": 742.7117201703186
+   }
+  },
+  "edges PN->KC": {
+   "stats": {
+    "n_neurons": 4064,
+    "n_edges": 22586,
+    "n_synapses": 390928.0,
+    "density": 0.0013675144537789075,
+    "edges_per_neuron": 5.5575787401574805,
+    "syn_per_edge_mean": 17.30842114584256,
+    "syn_per_edge_median": 16.0,
+    "syn_per_edge_p90": 31.0,
+    "syn_per_edge_p99": 47.0,
+    "syn_per_edge_max": 89.0,
+    "frac_edges_ge50": 0.007393960860710175,
+    "frac_syn_in_edges_ge50": 0.024257663815331724,
+    "frac_edges_ge100": 0.0,
+    "reciprocity_unweighted": 0.10360400247941202,
+    "reciprocity_weighted": 0.00706268161912168,
+    "exc_frac_of_syn": 0.9984472844104285,
+    "exc_in_within_mean_c": 0.12876022897193481,
+    "exc_in_within_p90_c": 0.2077998453426825,
+    "exc_in_within_max_c": 0.3391829733657979,
+    "exc_in_within_frac_of_exc_in": 0.24819949001977604,
+    "in_strength_total_mean_syn": 512.3686023622047
+   }
+  },
+  "edges KC->KC": {
+   "stats": {
+    "n_neurons": 4064,
+    "n_edges": 642933,
+    "n_synapses": 1153845.0,
+    "density": 0.03892766183969868,
+    "edges_per_neuron": 158.20201771653544,
+    "syn_per_edge_mean": 1.7946582303288212,
+    "syn_per_edge_median": 1.0,
+    "syn_per_edge_p90": 3.0,
+    "syn_per_edge_p99": 7.0,
+    "syn_per_edge_max": 62.0,
+    "frac_edges_ge50": 4.666116064971e-06,
+    "frac_syn_in_edges_ge50": 0.0001438668105334772,
+    "frac_edges_ge100": 0.0,
+    "reciprocity_unweighted": 0.6668082055206375,
+    "reciprocity_weighted": 0.6131854798521466,
+    "exc_frac_of_syn": 1.0,
+    "exc_in_within_mean_c": 0.3806337511897185,
+    "exc_in_within_p90_c": 0.4692254572254121,
+    "exc_in_within_max_c": 1.835341859833112,
+    "exc_in_within_frac_of_exc_in": 0.7337133809399661,
+    "in_strength_total_mean_syn": 512.3686023622047
+   }
+  }
+ },
+ "decomposition": {
+  "v_min": -7.499456554779605e-21,
+  "u_min": -2.1457865497010385e-20,
+  "lam_check": 5.573931333858748,
+  "by_group": [
+   {
+    "pair": "LN > LN",
+    "lam_contrib": 3.604621800795908,
+    "share": 0.6466928967889677,
+    "exc_synapses": 395526.0
+   },
+   {
+    "pair": "PN > LN",
+    "lam_contrib": 0.9355595811740167,
+    "share": 0.16784555193404993,
+    "exc_synapses": 402003.0
+   },
+   {
+    "pair": "LN > PN",
+    "lam_contrib": 0.9217832314313573,
+    "share": 0.16537398403744252,
+    "exc_synapses": 216510.0
+   },
+   {
+    "pair": "PN > PN",
+    "lam_contrib": 0.02334982154784151,
+    "share": 0.004189111804446429,
+    "exc_synapses": 130323.0
+   },
+   {
+    "pair": "LN > ORN",
+    "lam_contrib": 0.022227566268674094,
+    "share": 0.0039877718144199475,
+    "exc_synapses": 68296.0
+   },
+   {
+    "pair": "ORN > PN",
+    "lam_contrib": 0.012659456399255007,
+    "share": 0.0022711898731789825,
+    "exc_synapses": 502874.0
+   },
+   {
+    "pair": "ORN > LN",
+    "lam_contrib": 0.011138635696566548,
+    "share": 0.0019983446205921306,
+    "exc_synapses": 633253.0
+   },
+   {
+    "pair": "LN > HRN/TRN",
+    "lam_contrib": 0.009947315585326117,
+    "share": 0.0017846139447218023,
+    "exc_synapses": 10806.0
+   },
+   {
+    "pair": "IN/ON > LN",
+    "lam_contrib": 0.007945228808045266,
+    "share": 0.001425426387975416,
+    "exc_synapses": 23385.0
+   },
+   {
+    "pair": "LN > IN/ON",
+    "lam_contrib": 0.006991951833654557,
+    "share": 0.0012544022189835866,
+    "exc_synapses": 7193.0
+   },
+   {
+    "pair": "HRN/TRN > LN",
+    "lam_contrib": 0.006278699122395165,
+    "share": 0.0011264399839759987,
+    "exc_synapses": 53189.0
+   },
+   {
+    "pair": "HRN/TRN > PN",
+    "lam_contrib": 0.003733632023181753,
+    "share": 0.0006698381805498519,
+    "exc_synapses": 45805.0
+   },
+   {
+    "pair": "PN > IN/ON",
+    "lam_contrib": 0.0016788884808962064,
+    "share": 0.00030120365328109225,
+    "exc_synapses": 12372.0
+   },
+   {
+    "pair": "PN > ORN",
+    "lam_contrib": 0.0015899118146032694,
+    "share": 0.00028524065320743695,
+    "exc_synapses": 8671.0
+   },
+   {
+    "pair": "IN/ON > PN",
+    "lam_contrib": 0.001004631347782792,
+    "share": 0.00018023748187929344,
+    "exc_synapses": 7829.0
+   },
+   {
+    "pair": "ORN > ORN",
+    "lam_contrib": 0.0009134264292529116,
+    "share": 0.00016387471867554572,
+    "exc_synapses": 184577.0
+   },
+   {
+    "pair": "PN > nonAL",
+    "lam_contrib": 0.0008585422643605129,
+    "share": 0.00015402813794014882,
+    "exc_synapses": 1060731.0
+   },
+   {
+    "pair": "nonAL > PN",
+    "lam_contrib": 0.0005905575257907545,
+    "share": 0.00010594991047044716,
+    "exc_synapses": 32839.0
+   },
+   {
+    "pair": "nonAL > IN/ON",
+    "lam_contrib": 0.0002645727416105431,
+    "share": 4.746609273842335e-05,
+    "exc_synapses": 22551.0
+   },
+   {
+    "pair": "nonAL > LN",
+    "lam_contrib": 0.00016745522627330394,
+    "share": 3.0042570717744603e-05,
+    "exc_synapses": 3511.0
+   },
+   {
+    "pair": "nonAL > nonAL",
+    "lam_contrib": 0.00015184968076056426,
+    "share": 2.7242833050015533e-05,
+    "exc_synapses": 69607910.0
+   },
+   {
+    "pair": "LN > nonAL",
+    "lam_contrib": 0.0001395349082768334,
+    "share": 2.503348174191366e-05,
+    "exc_synapses": 3999.0
+   },
+   {
+    "pair": "HRN/TRN > HRN/TRN",
+    "lam_contrib": 0.00010189346656428606,
+    "share": 1.828035913276075e-05,
+    "exc_synapses": 4382.0
+   },
+   {
+    "pair": "PN > HRN/TRN",
+    "lam_contrib": 8.458499349909633e-05,
+    "share": 1.5175105043954574e-05,
+    "exc_synapses": 452.0
+   },
+   {
+    "pair": "IN/ON > IN/ON",
+    "lam_contrib": 5.2504176129560214e-05,
+    "share": 9.419595072982783e-06,
+    "exc_synapses": 1415.0
+   },
+   {
+    "pair": "ORN > IN/ON",
+    "lam_contrib": 3.305472177021951e-05,
+    "share": 5.930234836125301e-06,
+    "exc_synapses": 23751.0
+   },
+   {
+    "pair": "IN/ON > nonAL",
+    "lam_contrib": 2.260953440952894e-05,
+    "share": 4.056299415134112e-06,
+    "exc_synapses": 26106.0
+   },
+   {
+    "pair": "HRN/TRN > IN/ON",
+    "lam_contrib": 2.0377652453104437e-05,
+    "share": 3.6558850894557575e-06,
+    "exc_synapses": 464.0
+   },
+   {
+    "pair": "IN/ON > ORN",
+    "lam_contrib": 1.5153229303175338e-05,
+    "share": 2.718589160065054e-06,
+    "exc_synapses": 243.0
+   },
+   {
+    "pair": "ORN > nonAL",
+    "lam_contrib": 1.3630718957583957e-06,
+    "share": 2.445440774410764e-07,
+    "exc_synapses": 5611.0
+   }
+  ],
+  "by_cat": [
+   {
+    "pair": "AL lLN1 > AL lLN1",
+    "lam_contrib": 2.4497799820799226,
+    "share": 0.4395066669011111,
+    "exc_synapses": 93428.0
+   },
+   {
+    "pair": "AL lLN1 > AL uPN",
+    "lam_contrib": 0.5295312898405966,
+    "share": 0.09500140172591795,
+    "exc_synapses": 71466.0
+   },
+   {
+    "pair": "AL uPN > AL lLN1",
+    "lam_contrib": 0.4743964421440915,
+    "share": 0.08510984684407191,
+    "exc_synapses": 87598.0
+   },
+   {
+    "pair": "AL lLN2 > AL lLN1",
+    "lam_contrib": 0.43070455458424706,
+    "share": 0.07727123439213178,
+    "exc_synapses": 36511.0
+   },
+   {
+    "pair": "AL lLN1 > AL lLN2",
+    "lam_contrib": 0.36361573123014235,
+    "share": 0.06523505752956894,
+    "exc_synapses": 39129.0
+   },
+   {
+    "pair": "AL uPN > AL lLN2",
+    "lam_contrib": 0.3525063832322276,
+    "share": 0.06324196731504994,
+    "exc_synapses": 209676.0
+   },
+   {
+    "pair": "AL lLN2 > AL uPN",
+    "lam_contrib": 0.2893862460621031,
+    "share": 0.05191779889792173,
+    "exc_synapses": 79917.0
+   },
+   {
+    "pair": "AL lLN2 > AL lLN2",
+    "lam_contrib": 0.2812603193988247,
+    "share": 0.050459954124356325,
+    "exc_synapses": 118541.0
+   },
+   {
+    "pair": "AL lLN1 > AL mPN",
+    "lam_contrib": 0.06248531856446844,
+    "share": 0.011210277777356616,
+    "exc_synapses": 16733.0
+   },
+   {
+    "pair": "AL mPN > AL lLN1",
+    "lam_contrib": 0.05952545514801463,
+    "share": 0.010679258782114573,
+    "exc_synapses": 12786.0
+   },
+   {
+    "pair": "AL mPN > AL lLN2",
+    "lam_contrib": 0.03830677700966108,
+    "share": 0.0068724881444030776,
+    "exc_synapses": 36728.0
+   },
+   {
+    "pair": "AL lLN2 > AL mPN",
+    "lam_contrib": 0.031764276709174144,
+    "share": 0.005698720491266658,
+    "exc_synapses": 20767.0
+   },
+   {
+    "pair": "AL lLN1 > AL LN other",
+    "lam_contrib": 0.020604012913109,
+    "share": 0.0036964956471476937,
+    "exc_synapses": 7501.0
+   },
+   {
+    "pair": "AL lLN2 > AL ORN",
+    "lam_contrib": 0.018002439553450652,
+    "share": 0.0032297562483583446,
+    "exc_synapses": 59774.0
+   },
+   {
+    "pair": "AL LN other > AL lLN1",
+    "lam_contrib": 0.016517652409081304,
+    "share": 0.0029633756535078063,
+    "exc_synapses": 3969.0
+   },
+   {
+    "pair": "AL ORN > AL uPN",
+    "lam_contrib": 0.012437424282898206,
+    "share": 0.002231355848850755,
+    "exc_synapses": 426990.0
+   },
+   {
+    "pair": "AL LN other > AL lLN2",
+    "lam_contrib": 0.012433766535057544,
+    "share": 0.002230699624792442,
+    "exc_synapses": 9399.0
+   },
+   {
+    "pair": "AL ORN > AL lLN2",
+    "lam_contrib": 0.009587677385564857,
+    "share": 0.0017200924825400484,
+    "exc_synapses": 421607.0
+   },
+   {
+    "pair": "AL uPN > AL uPN",
+    "lam_contrib": 0.009203408174983089,
+    "share": 0.0016511520547583978,
+    "exc_synapses": 23705.0
+   },
+   {
+    "pair": "AL lLN2 > AL LN other",
+    "lam_contrib": 0.007789660160879397,
+    "share": 0.0013975163478533083,
+    "exc_synapses": 9981.0
+   },
+   {
+    "pair": "AL uPN > AL LN other",
+    "lam_contrib": 0.007159870004541766,
+    "share": 0.0012845278450147495,
+    "exc_synapses": 14525.0
+   },
+   {
+    "pair": "AL v/il3LN > AL lLN2",
+    "lam_contrib": 0.007029596856052305,
+    "share": 0.0012611559839912528,
+    "exc_synapses": 23884.0
+   },
+   {
+    "pair": "AL uPN > AL mPN",
+    "lam_contrib": 0.006652711844339622,
+    "share": 0.0011935403301306998,
+    "exc_synapses": 60435.0
+   },
+   {
+    "pair": "AL LN other > AL uPN",
+    "lam_contrib": 0.006595339079711609,
+    "share": 0.0011832472782088896,
+    "exc_synapses": 9233.0
+   },
+   {
+    "pair": "AL lLN1 > AL v/il3LN",
+    "lam_contrib": 0.005454995480079293,
+    "share": 0.0009786621243327881,
+    "exc_synapses": 10143.0
+   },
+   {
+    "pair": "AL lLN2 > AL HRN/TRN",
+    "lam_contrib": 0.004911489106506653,
+    "share": 0.0008811535005233916,
+    "exc_synapses": 6813.0
+   },
+   {
+    "pair": "AL lLN1 > AL HRN/TRN",
+    "lam_contrib": 0.004861042979454201,
+    "share": 0.0008721031330124003,
+    "exc_synapses": 2598.0
+   },
+   {
+    "pair": "AL IN/ON > AL lLN1",
+    "lam_contrib": 0.004673074056157037,
+    "share": 0.0008383802699130021,
+    "exc_synapses": 2606.0
+   },
+   {
+    "pair": "AL v/il3LN > AL lLN1",
+    "lam_contrib": 0.0046522716038478835,
+    "share": 0.0008346481729309691,
+    "exc_synapses": 3939.0
+   },
+   {
+    "pair": "AL lLN2 > AL v/il3LN",
+    "lam_contrib": 0.0042339045158045875,
+    "share": 0.0007595903613103034,
+    "exc_synapses": 25497.0
+   }
+  ],
+  "by_type": [
+   {
+    "pair": "lLN1_bc > lLN1_bc",
+    "lam_contrib": 2.3495090307489805,
+    "share": 0.42151739768965746,
+    "exc_synapses": 86864.0
+   },
+   {
+    "pair": "lLN2T_c > lLN1_bc",
+    "lam_contrib": 0.1384152696773314,
+    "share": 0.02483261120145673,
+    "exc_synapses": 8911.0
+   },
+   {
+    "pair": "lLN1_bc > lLN2T_a",
+    "lam_contrib": 0.08645397332603005,
+    "share": 0.015510412336956308,
+    "exc_synapses": 6907.0
+   },
+   {
+    "pair": "lLN1_bc > lLN2X12",
+    "lam_contrib": 0.08410304744485896,
+    "share": 0.015088640746967311,
+    "exc_synapses": 6450.0
+   },
+   {
+    "pair": "lLN2X12 > lLN1_bc",
+    "lam_contrib": 0.07728380723247903,
+    "share": 0.013865224130591618,
+    "exc_synapses": 9200.0
+   },
+   {
+    "pair": "lLN1_bc > DP1m_adPN",
+    "lam_contrib": 0.05935925217364229,
+    "share": 0.01064944087363717,
+    "exc_synapses": 2786.0
+   },
+   {
+    "pair": "lLN1_bc > lLN2T_c",
+    "lam_contrib": 0.05741185646802534,
+    "share": 0.010300065255428969,
+    "exc_synapses": 2362.0
+   },
+   {
+    "pair": "lLN1_bc > lLN1_a",
+    "lam_contrib": 0.0514353082481353,
+    "share": 0.009227833133804937,
+    "exc_synapses": 3012.0
+   },
+   {
+    "pair": "DP1m_adPN > lLN1_bc",
+    "lam_contrib": 0.051265882876041814,
+    "share": 0.009197437105948563,
+    "exc_synapses": 3093.0
+   },
+   {
+    "pair": "lLN1_a > lLN1_bc",
+    "lam_contrib": 0.04878972618409462,
+    "share": 0.008753198283538637,
+    "exc_synapses": 2875.0
+   },
+   {
+    "pair": "lLN2T_a > lLN1_bc",
+    "lam_contrib": 0.04620995761830165,
+    "share": 0.008290370808409511,
+    "exc_synapses": 2080.0
+   },
+   {
+    "pair": "lLN1_bc > lLN2X11",
+    "lam_contrib": 0.03733847672167726,
+    "share": 0.0066987686939854,
+    "exc_synapses": 2131.0
+   },
+   {
+    "pair": "lLN2T_e > lLN1_bc",
+    "lam_contrib": 0.036828216248984705,
+    "share": 0.0066072246038038455,
+    "exc_synapses": 3139.0
+   },
+   {
+    "pair": "lLN2X11 > lLN1_bc",
+    "lam_contrib": 0.03595210730294127,
+    "share": 0.006450044887447901,
+    "exc_synapses": 3564.0
+   },
+   {
+    "pair": "lLN2X04 > lLN1_bc",
+    "lam_contrib": 0.035501137212204305,
+    "share": 0.006369137882369176,
+    "exc_synapses": 2490.0
+   },
+   {
+    "pair": "lLN2X05 > lLN1_bc",
+    "lam_contrib": 0.03546189301683712,
+    "share": 0.0063620972151961185,
+    "exc_synapses": 2641.0
+   },
+   {
+    "pair": "VP1m_l2PN > lLN1_bc",
+    "lam_contrib": 0.03544280119677125,
+    "share": 0.006358672016907452,
+    "exc_synapses": 3870.0
+   },
+   {
+    "pair": "lLN1_bc > VP1m_l2PN",
+    "lam_contrib": 0.03539428506351295,
+    "share": 0.006349967902997116,
+    "exc_synapses": 1914.0
+   },
+   {
+    "pair": "lLN1_bc > DM1_lPN",
+    "lam_contrib": 0.0351993972773972,
+    "share": 0.006315003750329518,
+    "exc_synapses": 2054.0
+   },
+   {
+    "pair": "lLN1_bc > DP1l_adPN",
+    "lam_contrib": 0.03443487569873573,
+    "share": 0.006177843542772349,
+    "exc_synapses": 2382.0
+   },
+   {
+    "pair": "lLN1_bc > VL2p_adPN",
+    "lam_contrib": 0.03026248620124838,
+    "share": 0.00542928938098312,
+    "exc_synapses": 1904.0
+   },
+   {
+    "pair": "DM1_lPN > lLN1_bc",
+    "lam_contrib": 0.029125372113699838,
+    "share": 0.00522528362284951,
+    "exc_synapses": 2830.0
+   },
+   {
+    "pair": "VL2p_adPN > lLN1_bc",
+    "lam_contrib": 0.028685869527068444,
+    "share": 0.0051464339635504,
+    "exc_synapses": 2702.0
+   },
+   {
+    "pair": "DP1l_adPN > lLN1_bc",
+    "lam_contrib": 0.027933464650550167,
+    "share": 0.005011447572177438,
+    "exc_synapses": 2373.0
+   },
+   {
+    "pair": "lLN1_bc > lLN2X04",
+    "lam_contrib": 0.026739494722619744,
+    "share": 0.004797241501737051,
+    "exc_synapses": 2044.0
+   },
+   {
+    "pair": "lLN1_bc > V_ilPN",
+    "lam_contrib": 0.02638662020749508,
+    "share": 0.004733933489135401,
+    "exc_synapses": 1963.0
+   },
+   {
+    "pair": "lLN1_bc > lLN2X05",
+    "lam_contrib": 0.025526756377146586,
+    "share": 0.004579668253551089,
+    "exc_synapses": 1950.0
+   },
+   {
+    "pair": "lLN2T_c > lLN2T_a",
+    "lam_contrib": 0.02291780977474555,
+    "share": 0.004111606046441892,
+    "exc_synapses": 3299.0
+   },
+   {
+    "pair": "lLN1_bc > VP1d+VP4_l2PN2",
+    "lam_contrib": 0.02247270901295925,
+    "share": 0.004031752037641579,
+    "exc_synapses": 1614.0
+   },
+   {
+    "pair": "DP1m_adPN > lLN2T_c",
+    "lam_contrib": 0.022382139096860158,
+    "share": 0.004015503198057042,
+    "exc_synapses": 1518.0
+   }
+  ],
+  "by_group_mode2": [
+   {
+    "pair": "LN > LN",
+    "share": 0.6855945006998402
+   },
+   {
+    "pair": "PN > LN",
+    "share": 0.1538866786303219
+   },
+   {
+    "pair": "LN > PN",
+    "share": 0.15322101896622808
+   },
+   {
+    "pair": "PN > PN",
+    "share": 0.0025324939481254113
+   },
+   {
+    "pair": "LN > HRN/TRN",
+    "share": 0.0014098544475438463
+   },
+   {
+    "pair": "HRN/TRN > LN",
+    "share": 0.000972064472449254
+   },
+   {
+    "pair": "HRN/TRN > PN",
+    "share": 0.0004472937573990237
+   },
+   {
+    "pair": "LN > ORN",
+    "share": 0.0003905010322306917
+   },
+   {
+    "pair": "IN/ON > LN",
+    "share": 0.00037166696591933165
+   },
+   {
+    "pair": "LN > IN/ON",
+    "share": 0.00033486270984623166
+   },
+   {
+    "pair": "ORN > PN",
+    "share": 0.00029457799806339676
+   },
+   {
+    "pair": "ORN > LN",
+    "share": 0.00012008162658344612
+   }
+  ],
+  "lam2_check": 5.389145910228027
+ },
+ "al_subgraphs": {
+  "lLN1_bc only": {
+   "lam": 3.9209636019453646,
+   "g_on_naive": 0.23115395260502092,
+   "inv_ipr": 14.479322198821457,
+   "n": 30,
+   "top_types": {
+    "lLN1_bc": 1.0
+   }
+  },
+  "lLN1 (all) only": {
+   "lam": 3.983099386907144,
+   "g_on_naive": 0.22754798376092344,
+   "inv_ipr": 14.886734106452321,
+   "n": 59,
+   "top_types": {
+    "lLN1_bc": 0.9847111172703017,
+    "lLN1_a": 0.015165201030492601,
+    "lLN10": 0.00010304264229683259,
+    "lLN15": 9.947525414187858e-06,
+    "lLN13": 8.99756149750772e-06
+   }
+  },
+  "lLN1 + lLN2": {
+   "lam": 4.427150814269286,
+   "g_on_naive": 0.20472449948820773,
+   "inv_ipr": 22.365586555189946,
+   "n": 151,
+   "top_types": {
+    "lLN1_bc": 0.7789670829601103,
+    "lLN2T_a": 0.05018868849403548,
+    "lLN2F_a": 0.0335590230866005,
+    "lLN2F_b": 0.030310171048900204,
+    "lLN2X12": 0.019217906536670364
+   }
+  },
+  "all AL LNs": {
+   "lam": 4.4642017308659705,
+   "g_on_naive": 0.20302537592410208,
+   "inv_ipr": 24.83094282018028,
+   "n": 420,
+   "top_types": {
+    "lLN1_bc": 0.7331082737610379,
+    "lLN2T_a": 0.04889709694641221,
+    "lLN2F_a": 0.03481838125045704,
+    "lLN2F_b": 0.03063870639945839,
+    "v2LN30": 0.024951795323049218
+   }
+  },
+  "AL PNs only": {
+   "lam": 0.3897781127778087,
+   "g_on_naive": 2.325287656997687,
+   "inv_ipr": 19.500762186517214,
+   "n": 686,
+   "top_types": {
+    "M_l2PNm16": 0.18098022519644333,
+    "MZ_lv2PN": 0.17671038529463318,
+    "VP1d_il2PN": 0.17300945879613272,
+    "M_vPNml50": 0.0885862902695829,
+    "M_l2PN10t19": 0.0671748645863747
+   }
+  },
+  "AL LNs + PNs": {
+   "lam": 5.530634208108876,
+   "g_on_naive": 0.16387745066944204,
+   "inv_ipr": 66.29230111090835,
+   "n": 1106,
+   "top_types": {
+    "lLN1_bc": 0.5297878394440613,
+    "lLN2T_a": 0.057951153289407545,
+    "v2LN30": 0.03832610005795048,
+    "lLN2F_a": 0.03319004100747141,
+    "lLN2F_b": 0.031423996282225336
+   }
+  },
+  "AL ORNs only": {
+   "lam": 0.43804444520473307,
+   "g_on_naive": 2.069073685403049,
+   "inv_ipr": 25.221431464095645,
+   "n": 2639,
+   "top_types": {
+    "ORN_DP1m": 0.9996815001665222,
+    "ORN_DP1l": 0.00011638430355910029,
+    "ORN_DC4": 6.586274599209789e-05,
+    "ORN_DM1": 5.881690780988243e-05,
+    "ORN_VL2a": 3.518895536676348e-05
+   }
+  },
+  "AL minus lLN1_bc": {
+   "lam": 3.170443862124732,
+   "g_on_naive": 0.28587361077028695,
+   "inv_ipr": 53.780654170838744,
+   "n": 3844,
+   "top_types": {
+    "lLN2F_b": 0.13429764807558664,
+    "lLN2F_a": 0.1010711234478037,
+    "lLN2P_a": 0.09691115506786313,
+    "v2LN30": 0.09267979241791449,
+    "lLN2T_a": 0.08200600910544069
+   }
+  },
+  "AL minus lLN1": {
+   "lam": 3.095919201099242,
+   "g_on_naive": 0.29275513207459747,
+   "inv_ipr": 52.56159406189219,
+   "n": 3815,
+   "top_types": {
+    "lLN2F_b": 0.1384834884724766,
+    "lLN2F_a": 0.10251682589961866,
+    "lLN2P_a": 0.10007958378959655,
+    "v2LN30": 0.09263474367984634,
+    "lLN2T_a": 0.08128170034843243
+   }
+  },
+  "AL minus lLN1, lLN2": {
+   "lam": 0.6549699510546126,
+   "g_on_naive": 1.3837981928036849,
+   "inv_ipr": 27.28026706920718,
+   "n": 3723,
+   "top_types": {
+    "DP1m_adPN": 0.17919138293543518,
+    "M_vPNml50": 0.12746625661883276,
+    "il3LN6": 0.09086485870655397,
+    "v2LN30": 0.08864629430958634,
+    "M_imPNl92": 0.07953259498237847
+   }
+  },
+  "AL minus all LNs": {
+   "lam": 0.6338040109577878,
+   "g_on_naive": 1.43001025386451,
+   "inv_ipr": 8.473742210839017,
+   "n": 3454,
+   "top_types": {
+    "DP1m_adPN": 0.43892104198739745,
+    "M_vPNml50": 0.13737131812199602,
+    "M_spPN4t9": 0.1090369553551511,
+    "M_imPNl92": 0.09771312005263388,
+    "M_l2PNl20": 0.057115534440605284
+   }
+  },
+  "whole AL": {
+   "lam": 5.572908618563441,
+   "g_on_naive": 0.16263432556403995,
+   "inv_ipr": 70.25023765016519,
+   "n": 3874,
+   "top_types": {
+    "lLN1_bc": 0.515337968320135,
+    "lLN2T_a": 0.05774295101617935,
+    "v2LN30": 0.03810795653672876,
+    "lLN2F_a": 0.03470853171663514,
+    "lLN2F_b": 0.034484603101464825
+   }
+  },
+  "lLN1_bc_wiring": {
+   "n": 30,
+   "sides": {
+    "L": 15,
+    "R": 15
+   },
+   "nt": {
+    "acetylcholine": 30
+   },
+   "edges": 420,
+   "frac_pairs_connected": 0.4666666666666667,
+   "mean_syn_same_side_pair": 206.8190476190476,
+   "mean_syn_cross_side_pair": 0.0,
+   "max_edge": 347.0,
+   "median_nonzero_edge": 203.5,
+   "exc_in_from_lLN1bc_mean_c": 3.881790487278876,
+   "exc_in_total_mean_c": 10.476955385206569
+  }
+ },
+ "strong": {
+  "top200_exc_edges_by_region_pair": {
+   "VPN/VCN > CB other": 11,
+   "VPN/VCN > OL intrinsic": 25,
+   "OL intrinsic > OL intrinsic": 3,
+   "CB other > CB other": 54,
+   "AL > AL": 12,
+   "VNC > VNC": 40,
+   "AN/DN > CB other": 6,
+   "CB other > CB motor/endocrine": 10,
+   "VPN/VCN > AN/DN": 5,
+   "AN/DN > AN/DN": 9,
+   "VPN/VCN > VPN/VCN": 6,
+   "CB other > AN/DN": 11,
+   "AN/DN > VPN/VCN": 1,
+   "MB > CB other": 1,
+   "AN/DN > VNC": 3,
+   "CB other > CX": 1,
+   "CB other > VPN/VCN": 2
+  },
+  "top20": [
+   {
+    "pre": "LT1b",
+    "post": "PVLP106",
+    "w": 1439.0,
+    "rev_w": 57.0,
+    "pre_nt": "acetylcholine",
+    "post_nt": "unclear"
+   },
+   {
+    "pre": "LT1b",
+    "post": "PVLP106",
+    "w": 1367.0,
+    "rev_w": 65.0,
+    "pre_nt": "acetylcholine",
+    "post_nt": "unclear"
+   },
+   {
+    "pre": "MeVC4b",
+    "post": "Pm13",
+    "w": 1281.0,
+    "rev_w": 3.0,
+    "pre_nt": "acetylcholine",
+    "post_nt": "glutamate"
+   },
+   {
+    "pre": "OLVC3",
+    "post": "CT1",
+    "w": 1228.0,
+    "rev_w": 13.0,
+    "pre_nt": "acetylcholine",
+    "post_nt": "gaba"
+   },
+   {
+    "pre": "MeVC4b",
+    "post": "Pm13",
+    "w": 1186.0,
+    "rev_w": 8.0,
+    "pre_nt": "acetylcholine",
+    "post_nt": "glutamate"
+   },
+   {
+    "pre": "MeVC1",
+    "post": "Dm17",
+    "w": 1086.0,
+    "rev_w": 21.0,
+    "pre_nt": "acetylcholine",
+    "post_nt": "glutamate"
+   },
+   {
+    "pre": "MeVC11",
+    "post": "Pm12",
+    "w": 1078.0,
+    "rev_w": 516.0,
+    "pre_nt": "acetylcholine",
+    "post_nt": "gaba"
+   },
+   {
+    "pre": "LT1a",
+    "post": "AVLP535",
+    "w": 1056.0,
+    "rev_w": 89.0,
+    "pre_nt": "acetylcholine",
+    "post_nt": "gaba"
+   },
+   {
+    "pre": "MeVC1",
+    "post": "Dm17",
+    "w": 1055.0,
+    "rev_w": 15.0,
+    "pre_nt": "acetylcholine",
+    "post_nt": "glutamate"
+   },
+   {
+    "pre": "MeVC1",
+    "post": "Dm17",
+    "w": 1004.0,
+    "rev_w": 23.0,
+    "pre_nt": "acetylcholine",
+    "post_nt": "glutamate"
+   },
+   {
+    "pre": "Li33",
+    "post": "Li39",
+    "w": 975.0,
+    "rev_w": 4.0,
+    "pre_nt": "acetylcholine",
+    "post_nt": "gaba"
+   },
+   {
+    "pre": "GNG117",
+    "post": "GNG117",
+    "w": 973.0,
+    "rev_w": 914.0,
+    "pre_nt": "acetylcholine",
+    "post_nt": "acetylcholine"
+   },
+   {
+    "pre": "lLN2T_c",
+    "post": "v2LN30",
+    "w": 953.0,
+    "rev_w": 517.0,
+    "pre_nt": "acetylcholine",
+    "post_nt": "unclear"
+   },
+   {
+    "pre": "LT1a",
+    "post": "AVLP535",
+    "w": 951.0,
+    "rev_w": 92.0,
+    "pre_nt": "acetylcholine",
+    "post_nt": "gaba"
+   },
+   {
+    "pre": "MeVC1",
+    "post": "Dm17",
+    "w": 934.0,
+    "rev_w": 17.0,
+    "pre_nt": "acetylcholine",
+    "post_nt": "glutamate"
+   },
+   {
+    "pre": "INXXX052",
+    "post": "EN00B003",
+    "w": 930.0,
+    "rev_w": 2.0,
+    "pre_nt": "acetylcholine",
+    "post_nt": "octopamine"
+   },
+   {
+    "pre": "AVLP442",
+    "post": "AVLP016",
+    "w": 928.0,
+    "rev_w": 23.0,
+    "pre_nt": "acetylcholine",
+    "post_nt": "glutamate"
+   },
+   {
+    "pre": "lLN2T_c",
+    "post": "v2LN30",
+    "w": 927.0,
+    "rev_w": 453.0,
+    "pre_nt": "acetylcholine",
+    "post_nt": "unclear"
+   },
+   {
+    "pre": "DNpe053",
+    "post": "AstA1",
+    "w": 920.0,
+    "rev_w": 6.0,
+    "pre_nt": "acetylcholine",
+    "post_nt": "gaba"
+   },
+   {
+    "pre": "OLVC3",
+    "post": "CT1",
+    "w": 918.0,
+    "rev_w": 12.0,
+    "pre_nt": "acetylcholine",
+    "post_nt": "gaba"
+   }
+  ],
+  "top200_exc_2cycles_by_region": {
+   "CB other <> CB other": 12,
+   "AN/DN <> AN/DN": 2,
+   "VNC <> VNC": 19,
+   "AL <> AL": 161,
+   "AN/DN <> CB other": 3,
+   "LH <> LH": 1,
+   "OL intrinsic <> OL intrinsic": 1,
+   "CB other <> AN/DN": 1
+  },
+  "top10_2cycles": [
+   {
+    "a": "GNG117",
+    "b": "GNG117",
+    "w_ab": 914.0,
+    "w_ba": 973.0,
+    "sqrt_c": 1.2642793364337308
+   },
+   {
+    "a": "DNg33",
+    "b": "DNg33",
+    "w_ab": 773.0,
+    "w_ba": 723.0,
+    "sqrt_c": 1.002241582474003
+   },
+   {
+    "a": "GNG040",
+    "b": "GNG040",
+    "w_ab": 601.0,
+    "w_ba": 610.0,
+    "sqrt_c": 0.8117376228173151
+   },
+   {
+    "a": "dPR1",
+    "b": "dPR1",
+    "w_ab": 513.0,
+    "w_ba": 510.0,
+    "sqrt_c": 0.6857365409936547
+   },
+   {
+    "a": "INXXX181",
+    "b": "INXXX181",
+    "w_ab": 428.0,
+    "w_ba": 446.0,
+    "sqrt_c": 0.5857372389298771
+   },
+   {
+    "a": "INXXX137",
+    "b": "INXXX149",
+    "w_ab": 607.0,
+    "w_ba": 289.0,
+    "sqrt_c": 0.5615090867677422
+   },
+   {
+    "a": "DNge037",
+    "b": "DNge037",
+    "w_ab": 287.0,
+    "w_ba": 416.0,
+    "sqrt_c": 0.4632347548462979
+   },
+   {
+    "a": "CL213",
+    "b": "CL213",
+    "w_ab": 368.0,
+    "w_ba": 311.0,
+    "sqrt_c": 0.453542119908566
+   },
+   {
+    "a": "DP1m_adPN",
+    "b": "lLN2T_c",
+    "w_ab": 440.0,
+    "w_ba": 226.0,
+    "sqrt_c": 0.42276018535338034
+   },
+   {
+    "a": "lLN1_bc",
+    "b": "lLN1_bc",
+    "w_ab": 285.0,
+    "w_ba": 347.0,
+    "sqrt_c": 0.42160008447421926
+   }
+  ],
+  "exc_edges_above_p99.9": {
+   "threshold_syn": 135.0,
+   "n": 15017,
+   "frac_AL_internal": 0.10048611573549977
+  },
+  "exc_edges_above_p99.99": {
+   "threshold_syn": 289.0,
+   "n": 1478,
+   "frac_AL_internal": 0.10690121786197564
+  },
+  "top200_exc_in_strength_by_region": {
+   "AL": 25,
+   "AN/DN": 14,
+   "CB other": 55,
+   "LH": 5,
+   "MB": 23,
+   "OL intrinsic": 34,
+   "VNC": 4,
+   "VPN/VCN": 40
+  },
+  "top10_exc_in_strength": [
+   {
+    "type": "APL",
+    "reg": "MB",
+    "exc_in_syn": 111050.0
+   },
+   {
+    "type": "APL",
+    "reg": "MB",
+    "exc_in_syn": 104959.0
+   },
+   {
+    "type": "CT1",
+    "reg": "OL intrinsic",
+    "exc_in_syn": 77015.0
+   },
+   {
+    "type": "CT1",
+    "reg": "OL intrinsic",
+    "exc_in_syn": 69314.0
+   },
+   {
+    "type": "LPi21",
+    "reg": "OL intrinsic",
+    "exc_in_syn": 66916.0
+   },
+   {
+    "type": "LPi21",
+    "reg": "OL intrinsic",
+    "exc_in_syn": 59633.0
+   },
+   {
+    "type": "DPM",
+    "reg": "MB",
+    "exc_in_syn": 51406.0
+   },
+   {
+    "type": "Am1",
+    "reg": "OL intrinsic",
+    "exc_in_syn": 50382.0
+   },
+   {
+    "type": "Li39",
+    "reg": "OL intrinsic",
+    "exc_in_syn": 45152.0
+   },
+   {
+    "type": "il3LN6",
+    "reg": "AL",
+    "exc_in_syn": 45014.0
+   }
+  ]
+ }
+}

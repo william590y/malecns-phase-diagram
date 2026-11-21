@@ -1,0 +1,22 @@
+pd3_qs.py --mode qs --graph real --r 0 --xs 0.95000 1.00542 1.06407 1.12615 1.19184 1.26137 --rng 100 --tag real_r0_p0
+pd3_qs.py --mode qs --graph real --r 0 --xs 1.33495 1.41283 1.49525 1.58247 1.67479 1.77249 --rng 101 --tag real_r0_p1
+pd3_qs.py --mode qs --graph real --r 0 --xs 1.87589 1.98532 2.10114 2.22371 2.35344 2.49073 --rng 102 --tag real_r0_p2
+pd3_qs.py --mode qs --graph real --r 0 --xs 2.63603 2.78980 2.95255 3.12479 3.30708 3.50000 --rng 103 --tag real_r0_p3
+pd3_qs.py --mode qs --graph real --r 1 --xs 0.95000 1.00542 1.06407 1.12615 1.19184 1.26137 --rng 110 --tag real_r1_p0
+pd3_qs.py --mode qs --graph real --r 1 --xs 1.33495 1.41283 1.49525 1.58247 1.67479 1.77249 --rng 111 --tag real_r1_p1
+pd3_qs.py --mode qs --graph real --r 1 --xs 1.87589 1.98532 2.10114 2.22371 2.35344 2.49073 --rng 112 --tag real_r1_p2
+pd3_qs.py --mode qs --graph real --r 1 --xs 2.63603 2.78980 2.95255 3.12479 3.30708 3.50000 --rng 113 --tag real_r1_p3
+pd3_qs.py --mode qs --graph real --r 6 --xs 0.95000 1.00542 1.06407 1.12615 1.19184 1.26137 --rng 160 --tag real_r6_p0
+pd3_qs.py --mode qs --graph real --r 6 --xs 1.33495 1.41283 1.49525 1.58247 1.67479 1.77249 --rng 161 --tag real_r6_p1
+pd3_qs.py --mode qs --graph real --r 6 --xs 1.87589 1.98532 2.10114 2.22371 2.35344 2.49073 --rng 162 --tag real_r6_p2
+pd3_qs.py --mode qs --graph real --r 6 --xs 2.63603 2.78980 2.95255 3.12479 3.30708 3.50000 --rng 163 --tag real_r6_p3
+pd3_qs.py --mode qs --graph module --r 0 --xs 0.95000 1.00542 1.06407 1.12615 1.19184 1.26137 1.33495 1.41283 1.49525 1.58247 1.67479 1.77249 1.87589 1.98532 2.10114 2.22371 2.35344 2.49073 2.63603 2.78980 2.95255 3.12479 3.30708 3.50000 --rng 200 --tag module_r0
+pd3_qs.py --mode qs --graph module --r 1 --xs 0.95000 1.00542 1.06407 1.12615 1.19184 1.26137 1.33495 1.41283 1.49525 1.58247 1.67479 1.77249 1.87589 1.98532 2.10114 2.22371 2.35344 2.49073 2.63603 2.78980 2.95255 3.12479 3.30708 3.50000 --rng 201 --tag module_r1
+pd3_qs.py --mode field --graph real --r 0 --xs 0.90 --hs 1e-7 3e-7 1e-6 3e-6 1e-5 3e-5 1e-4 3e-4 1e-3 --B 64 --burn 500 --meas 2000 --rng 309 --tag real_r0_x0.90
+pd3_qs.py --mode field --graph real --r 0 --xs 1.00 --hs 1e-7 3e-7 1e-6 3e-6 1e-5 3e-5 1e-4 3e-4 1e-3 --B 64 --burn 500 --meas 2000 --rng 310 --tag real_r0_x1.00
+pd3_qs.py --mode field --graph real --r 0 --xs 1.10 --hs 1e-7 3e-7 1e-6 3e-6 1e-5 3e-5 1e-4 3e-4 1e-3 --B 64 --burn 500 --meas 2000 --rng 311 --tag real_r0_x1.10
+pd3_qs.py --mode field --graph real --r 1 --xs 0.90 --hs 1e-7 3e-7 1e-6 3e-6 1e-5 3e-5 1e-4 3e-4 1e-3 --B 64 --burn 500 --meas 2000 --rng 319 --tag real_r1_x0.90
+pd3_qs.py --mode field --graph real --r 1 --xs 1.00 --hs 1e-7 3e-7 1e-6 3e-6 1e-5 3e-5 1e-4 3e-4 1e-3 --B 64 --burn 500 --meas 2000 --rng 320 --tag real_r1_x1.00
+pd3_qs.py --mode field --graph real --r 1 --xs 1.10 --hs 1e-7 3e-7 1e-6 3e-6 1e-5 3e-5 1e-4 3e-4 1e-3 --B 64 --burn 500 --meas 2000 --rng 321 --tag real_r1_x1.10
+pd3_submodule.py --r 0 --rng 400 --tag r0
+pd3_submodule.py --r 1 --rng 401 --tag r1

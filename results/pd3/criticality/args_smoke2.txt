@@ -1,0 +1,4 @@
+pd3_qs.py --mode qs --graph module --r 0 --xs 1.0 2.0 --burn 50 --meas 100 --tag smoke_module_r0 --outdir /MALECNS_ROOT/results/pd3/criticality/smoke
+pd3_qs.py --mode field --graph module --r 1 --xs 1.0 --hs 1e-5 1e-3 --B 64 --burn 50 --meas 100 --tag smoke_module_r1 --outdir /MALECNS_ROOT/results/pd3/criticality/smoke
+pd3_submodule.py --r 0 --ns 50 526 --xs 1.0 2.0 --B 512 --T 300 --tag smoke_r0 --outdir /MALECNS_ROOT/results/pd3/criticality/smoke
+pd3_qs.py --mode qs --graph real --r 1 --xs 1.5 --burn 20 --meas 40 --tag smoke_real_r1 --outdir /MALECNS_ROOT/results/pd3/criticality/smoke

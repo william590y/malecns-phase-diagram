@@ -1,0 +1,6 @@
+pd3_avalanche.py --graph real --r 6 --x 1.20 --nav 200000 --cap 2500 --tag real_r6_x1.20 --rng 600
+pd3_avalanche.py --graph real --r 6 --x 1.35 --nav 200000 --cap 2500 --tag real_r6_x1.35 --rng 601
+pd3_avalanche.py --graph real --r 6 --x 1.50 --nav 200000 --cap 2500 --tag real_r6_x1.50 --rng 602
+pd3_avalanche.py --graph real --r 6 --x 1.75 --nav 200000 --cap 2500 --tag real_r6_x1.75 --rng 603
+pd3_avalanche.py --graph real --r 6 --x 2.00 --nav 200000 --cap 2500 --tag real_r6_x2.00 --rng 604
+pd3_avalanche.py --graph real --r 6 --x 2.30 --nav 200000 --cap 2500 --tag real_r6_x2.30 --rng 605

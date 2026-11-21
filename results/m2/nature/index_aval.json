@@ -1,0 +1,2285 @@
+[
+{
+"part": "aval",
+"model": "M1",
+"r": 0,
+"G": 0,
+"rep": 0,
+"g": [
+0.11354,
+0.13378,
+0.15762,
+0.18572,
+0.21882
+],
+"g_on": 0.26158338214134275,
+"seed": 403091790,
+"name": "aval_M1_r0_G0_c0_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M1_r0_G0_c0_k0.npz"
+},
+{
+"part": "aval",
+"model": "M1",
+"r": 0,
+"G": 0,
+"rep": 0,
+"g": [
+0.25782,
+0.30377
+],
+"g_on": 0.26158338214134275,
+"seed": 931144235,
+"name": "aval_M1_r0_G0_c1_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M1_r0_G0_c1_k0.npz"
+},
+{
+"part": "aval",
+"model": "M1",
+"r": 0,
+"G": 10,
+"rep": 0,
+"g": [
+0.11354,
+0.13378,
+0.15762,
+0.18572,
+0.21882
+],
+"g_on": 0.26158338214134275,
+"seed": 1238522666,
+"name": "aval_M1_r0_G10_c0_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M1_r0_G10_c0_k0.npz"
+},
+{
+"part": "aval",
+"model": "M1",
+"r": 0,
+"G": 10,
+"rep": 0,
+"g": [
+0.25782,
+0.30377
+],
+"g_on": 0.26158338214134275,
+"seed": 42333263,
+"name": "aval_M1_r0_G10_c1_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M1_r0_G10_c1_k0.npz"
+},
+{
+"part": "aval",
+"model": "M1",
+"r": 0,
+"G": 100,
+"rep": 0,
+"g": [
+0.11354,
+0.13378,
+0.15762,
+0.18572,
+0.21882
+],
+"g_on": 0.26158338214134275,
+"seed": 1195143519,
+"name": "aval_M1_r0_G100_c0_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M1_r0_G100_c0_k0.npz"
+},
+{
+"part": "aval",
+"model": "M1",
+"r": 0,
+"G": 100,
+"rep": 0,
+"g": [
+0.25782,
+0.30377
+],
+"g_on": 0.26158338214134275,
+"seed": 286584378,
+"name": "aval_M1_r0_G100_c1_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M1_r0_G100_c1_k0.npz"
+},
+{
+"part": "aval",
+"model": "M1",
+"r": 0.25,
+"G": 0,
+"rep": 0,
+"g": [
+0.11354,
+0.13378,
+0.15762,
+0.18572,
+0.21882
+],
+"g_on": 0.2865924250853582,
+"seed": 79034078,
+"name": "aval_M1_r0.25_G0_c0_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M1_r0.25_G0_c0_k0.npz"
+},
+{
+"part": "aval",
+"model": "M1",
+"r": 0.25,
+"G": 0,
+"rep": 0,
+"g": [
+0.25782,
+0.30377,
+0.35792
+],
+"g_on": 0.2865924250853582,
+"seed": 1277319611,
+"name": "aval_M1_r0.25_G0_c1_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M1_r0.25_G0_c1_k0.npz"
+},
+{
+"part": "aval",
+"model": "M1",
+"r": 0.25,
+"G": 10,
+"rep": 0,
+"g": [
+0.11354,
+0.13378,
+0.15762,
+0.18572,
+0.21882
+],
+"g_on": 0.2865924250853582,
+"seed": 838642593,
+"name": "aval_M1_r0.25_G10_c0_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M1_r0.25_G10_c0_k0.npz"
+},
+{
+"part": "aval",
+"model": "M1",
+"r": 0.25,
+"G": 10,
+"rep": 0,
+"g": [
+0.25782,
+0.30377,
+0.35792
+],
+"g_on": 0.2865924250853582,
+"seed": 302725316,
+"name": "aval_M1_r0.25_G10_c1_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M1_r0.25_G10_c1_k0.npz"
+},
+{
+"part": "aval",
+"model": "M1",
+"r": 0.25,
+"G": 100,
+"rep": 0,
+"g": [
+0.11354,
+0.13378,
+0.15762,
+0.18572,
+0.21882
+],
+"g_on": 0.2865924250853582,
+"seed": 1034342579,
+"name": "aval_M1_r0.25_G100_c0_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M1_r0.25_G100_c0_k0.npz"
+},
+{
+"part": "aval",
+"model": "M1",
+"r": 0.25,
+"G": 100,
+"rep": 0,
+"g": [
+0.25782,
+0.30377,
+0.35792
+],
+"g_on": 0.2865924250853582,
+"seed": 233120726,
+"name": "aval_M1_r0.25_G100_c1_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M1_r0.25_G100_c1_k0.npz"
+},
+{
+"part": "aval",
+"model": "M1",
+"r": 0.5,
+"G": 0,
+"rep": 0,
+"g": [
+0.11354,
+0.13378,
+0.15762,
+0.18572,
+0.21882
+],
+"g_on": 0.3058797204494285,
+"seed": 1088608118,
+"name": "aval_M1_r0.5_G0_c0_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M1_r0.5_G0_c0_k0.npz"
+},
+{
+"part": "aval",
+"model": "M1",
+"r": 0.5,
+"G": 0,
+"rep": 0,
+"g": [
+0.25782,
+0.30377,
+0.35792
+],
+"g_on": 0.3058797204494285,
+"seed": 10750995,
+"name": "aval_M1_r0.5_G0_c1_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M1_r0.5_G0_c1_k0.npz"
+},
+{
+"part": "aval",
+"model": "M1",
+"r": 0.5,
+"G": 10,
+"rep": 0,
+"g": [
+0.11354,
+0.13378,
+0.15762,
+0.18572,
+0.21882
+],
+"g_on": 0.3058797204494285,
+"seed": 1912397722,
+"name": "aval_M1_r0.5_G10_c0_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M1_r0.5_G10_c0_k0.npz"
+},
+{
+"part": "aval",
+"model": "M1",
+"r": 0.5,
+"G": 10,
+"rep": 0,
+"g": [
+0.25782,
+0.30377,
+0.35792
+],
+"g_on": 0.3058797204494285,
+"seed": 1368265983,
+"name": "aval_M1_r0.5_G10_c1_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M1_r0.5_G10_c1_k0.npz"
+},
+{
+"part": "aval",
+"model": "M1",
+"r": 0.5,
+"G": 100,
+"rep": 0,
+"g": [
+0.11354,
+0.13378,
+0.15762,
+0.18572,
+0.21882
+],
+"g_on": 0.3058797204494285,
+"seed": 356541263,
+"name": "aval_M1_r0.5_G100_c0_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M1_r0.5_G100_c0_k0.npz"
+},
+{
+"part": "aval",
+"model": "M1",
+"r": 0.5,
+"G": 100,
+"rep": 0,
+"g": [
+0.25782,
+0.30377,
+0.35792
+],
+"g_on": 0.3058797204494285,
+"seed": 885624874,
+"name": "aval_M1_r0.5_G100_c1_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M1_r0.5_G100_c1_k0.npz"
+},
+{
+"part": "aval",
+"model": "M1",
+"r": 1,
+"G": 0,
+"rep": 0,
+"g": [
+0.11354,
+0.13378,
+0.15762,
+0.18572,
+0.21882
+],
+"g_on": 0.3466364954224082,
+"seed": 1627270768,
+"name": "aval_M1_r1_G0_c0_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M1_r1_G0_c0_k0.npz"
+},
+{
+"part": "aval",
+"model": "M1",
+"r": 1,
+"G": 0,
+"rep": 0,
+"g": [
+0.25782,
+0.30377,
+0.35792,
+0.42172
+],
+"g_on": 0.3466364954224082,
+"seed": 1628222741,
+"name": "aval_M1_r1_G0_c1_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M1_r1_G0_c1_k0.npz"
+},
+{
+"part": "aval",
+"model": "M1",
+"r": 1,
+"G": 10,
+"rep": 0,
+"g": [
+0.11354,
+0.13378,
+0.15762,
+0.18572,
+0.21882
+],
+"g_on": 0.3466364954224082,
+"seed": 8990954,
+"name": "aval_M1_r1_G10_c0_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M1_r1_G10_c0_k0.npz"
+},
+{
+"part": "aval",
+"model": "M1",
+"r": 1,
+"G": 10,
+"rep": 0,
+"g": [
+0.25782,
+0.30377,
+0.35792,
+0.42172
+],
+"g_on": 0.3466364954224082,
+"seed": 1090503567,
+"name": "aval_M1_r1_G10_c1_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M1_r1_G10_c1_k0.npz"
+},
+{
+"part": "aval",
+"model": "M1",
+"r": 1,
+"G": 100,
+"rep": 0,
+"g": [
+0.11354,
+0.13378,
+0.15762,
+0.18572,
+0.21882
+],
+"g_on": 0.3466364954224082,
+"seed": 1701030192,
+"name": "aval_M1_r1_G100_c0_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M1_r1_G100_c0_k0.npz"
+},
+{
+"part": "aval",
+"model": "M1",
+"r": 1,
+"G": 100,
+"rep": 0,
+"g": [
+0.25782,
+0.30377,
+0.35792,
+0.42172
+],
+"g_on": 0.3466364954224082,
+"seed": 1680169557,
+"name": "aval_M1_r1_G100_c1_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M1_r1_G100_c1_k0.npz"
+},
+{
+"part": "aval",
+"model": "M1",
+"r": 2,
+"G": 0,
+"rep": 0,
+"g": [
+0.11354,
+0.13378,
+0.15762,
+0.18572,
+0.21882
+],
+"g_on": 0.40197711531489394,
+"seed": 345244019,
+"name": "aval_M1_r2_G0_c0_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M1_r2_G0_c0_k0.npz"
+},
+{
+"part": "aval",
+"model": "M1",
+"r": 2,
+"G": 0,
+"rep": 0,
+"g": [
+0.25782,
+0.30377,
+0.35792,
+0.42172,
+0.49688
+],
+"g_on": 0.40197711531489394,
+"seed": 863367702,
+"name": "aval_M1_r2_G0_c1_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M1_r2_G0_c1_k0.npz"
+},
+{
+"part": "aval",
+"model": "M1",
+"r": 2,
+"G": 10,
+"rep": 0,
+"g": [
+0.11354,
+0.13378,
+0.15762,
+0.18572,
+0.21882
+],
+"g_on": 0.40197711531489394,
+"seed": 573948651,
+"name": "aval_M1_r2_G10_c0_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M1_r2_G10_c0_k0.npz"
+},
+{
+"part": "aval",
+"model": "M1",
+"r": 2,
+"G": 10,
+"rep": 0,
+"g": [
+0.25782,
+0.30377,
+0.35792,
+0.42172,
+0.49688
+],
+"g_on": 0.40197711531489394,
+"seed": 567751054,
+"name": "aval_M1_r2_G10_c1_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M1_r2_G10_c1_k0.npz"
+},
+{
+"part": "aval",
+"model": "M1",
+"r": 2,
+"G": 100,
+"rep": 0,
+"g": [
+0.11354,
+0.13378,
+0.15762,
+0.18572,
+0.21882
+],
+"g_on": 0.40197711531489394,
+"seed": 869424064,
+"name": "aval_M1_r2_G100_c0_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M1_r2_G100_c0_k0.npz"
+},
+{
+"part": "aval",
+"model": "M1",
+"r": 2,
+"G": 100,
+"rep": 0,
+"g": [
+0.25782,
+0.30377,
+0.35792,
+0.42172,
+0.49688
+],
+"g_on": 0.40197711531489394,
+"seed": 331057317,
+"name": "aval_M1_r2_G100_c1_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M1_r2_G100_c1_k0.npz"
+},
+{
+"part": "aval",
+"model": "M1",
+"r": 4,
+"G": 0,
+"rep": 0,
+"g": [
+0.11354,
+0.13378,
+0.15762,
+0.18572,
+0.21882
+],
+"g_on": 0.49500779409042317,
+"seed": 262295860,
+"name": "aval_M1_r4_G0_c0_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M1_r4_G0_c0_k0.npz"
+},
+{
+"part": "aval",
+"model": "M1",
+"r": 4,
+"G": 0,
+"rep": 0,
+"g": [
+0.25782,
+0.30377,
+0.35792,
+0.42172,
+0.49688
+],
+"g_on": 0.49500779409042317,
+"seed": 1047233105,
+"name": "aval_M1_r4_G0_c1_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M1_r4_G0_c1_k0.npz"
+},
+{
+"part": "aval",
+"model": "M1",
+"r": 4,
+"G": 0,
+"rep": 0,
+"g": [
+0.58545
+],
+"g_on": 0.49500779409042317,
+"seed": 752758207,
+"name": "aval_M1_r4_G0_c2_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M1_r4_G0_c2_k0.npz"
+},
+{
+"part": "aval",
+"model": "M1",
+"r": 4,
+"G": 10,
+"rep": 0,
+"g": [
+0.11354,
+0.13378,
+0.15762,
+0.18572,
+0.21882
+],
+"g_on": 0.49500779409042317,
+"seed": 1910414504,
+"name": "aval_M1_r4_G10_c0_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M1_r4_G10_c0_k0.npz"
+},
+{
+"part": "aval",
+"model": "M1",
+"r": 4,
+"G": 10,
+"rep": 0,
+"g": [
+0.25782,
+0.30377,
+0.35792,
+0.42172,
+0.49688
+],
+"g_on": 0.49500779409042317,
+"seed": 1378707405,
+"name": "aval_M1_r4_G10_c1_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M1_r4_G10_c1_k0.npz"
+},
+{
+"part": "aval",
+"model": "M1",
+"r": 4,
+"G": 10,
+"rep": 0,
+"g": [
+0.58545
+],
+"g_on": 0.49500779409042317,
+"seed": 1688322083,
+"name": "aval_M1_r4_G10_c2_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M1_r4_G10_c2_k0.npz"
+},
+{
+"part": "aval",
+"model": "M1",
+"r": 4,
+"G": 100,
+"rep": 0,
+"g": [
+0.11354,
+0.13378,
+0.15762,
+0.18572,
+0.21882
+],
+"g_on": 0.49500779409042317,
+"seed": 1144670752,
+"name": "aval_M1_r4_G100_c0_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M1_r4_G100_c0_k0.npz"
+},
+{
+"part": "aval",
+"model": "M1",
+"r": 4,
+"G": 100,
+"rep": 0,
+"g": [
+0.25782,
+0.30377,
+0.35792,
+0.42172,
+0.49688
+],
+"g_on": 0.49500779409042317,
+"seed": 236651845,
+"name": "aval_M1_r4_G100_c1_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M1_r4_G100_c1_k0.npz"
+},
+{
+"part": "aval",
+"model": "M1",
+"r": 4,
+"G": 100,
+"rep": 0,
+"g": [
+0.58545
+],
+"g_on": 0.49500779409042317,
+"seed": 1996353195,
+"name": "aval_M1_r4_G100_c2_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M1_r4_G100_c2_k0.npz"
+},
+{
+"part": "aval",
+"model": "M1",
+"r": 6,
+"G": 0,
+"rep": 0,
+"g": [
+0.11354,
+0.13378,
+0.15762,
+0.18572,
+0.21882
+],
+"g_on": 0.5785358895419409,
+"seed": 183279881,
+"name": "aval_M1_r6_G0_c0_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M1_r6_G0_c0_k0.npz"
+},
+{
+"part": "aval",
+"model": "M1",
+"r": 6,
+"G": 0,
+"rep": 0,
+"g": [
+0.25782,
+0.30377,
+0.35792,
+0.42172,
+0.49688
+],
+"g_on": 0.5785358895419409,
+"seed": 983454316,
+"name": "aval_M1_r6_G0_c1_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M1_r6_G0_c1_k0.npz"
+},
+{
+"part": "aval",
+"model": "M1",
+"r": 6,
+"G": 0,
+"rep": 0,
+"g": [
+0.58545,
+0.6898
+],
+"g_on": 0.5785358895419409,
+"seed": 673971586,
+"name": "aval_M1_r6_G0_c2_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M1_r6_G0_c2_k0.npz"
+},
+{
+"part": "aval",
+"model": "M1",
+"r": 6,
+"G": 10,
+"rep": 0,
+"g": [
+0.11354,
+0.13378,
+0.15762,
+0.18572,
+0.21882
+],
+"g_on": 0.5785358895419409,
+"seed": 699540841,
+"name": "aval_M1_r6_G10_c0_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M1_r6_G10_c0_k0.npz"
+},
+{
+"part": "aval",
+"model": "M1",
+"r": 6,
+"G": 10,
+"rep": 0,
+"g": [
+0.25782,
+0.30377,
+0.35792,
+0.42172,
+0.49688
+],
+"g_on": 0.5785358895419409,
+"seed": 433630732,
+"name": "aval_M1_r6_G10_c1_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M1_r6_G10_c1_k0.npz"
+},
+{
+"part": "aval",
+"model": "M1",
+"r": 6,
+"G": 10,
+"rep": 0,
+"g": [
+0.58545,
+0.6898
+],
+"g_on": 0.5785358895419409,
+"seed": 210131426,
+"name": "aval_M1_r6_G10_c2_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M1_r6_G10_c2_k0.npz"
+},
+{
+"part": "aval",
+"model": "M1",
+"r": 6,
+"G": 100,
+"rep": 0,
+"g": [
+0.11354,
+0.13378,
+0.15762,
+0.18572,
+0.21882
+],
+"g_on": 0.5785358895419409,
+"seed": 818692287,
+"name": "aval_M1_r6_G100_c0_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M1_r6_G100_c0_k0.npz"
+},
+{
+"part": "aval",
+"model": "M1",
+"r": 6,
+"G": 100,
+"rep": 0,
+"g": [
+0.25782,
+0.30377,
+0.35792,
+0.42172,
+0.49688
+],
+"g_on": 0.5785358895419409,
+"seed": 280867802,
+"name": "aval_M1_r6_G100_c1_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M1_r6_G100_c1_k0.npz"
+},
+{
+"part": "aval",
+"model": "M1",
+"r": 6,
+"G": 100,
+"rep": 0,
+"g": [
+0.58545,
+0.6898
+],
+"g_on": 0.5785358895419409,
+"seed": 34085940,
+"name": "aval_M1_r6_G100_c2_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M1_r6_G100_c2_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 0,
+"G": 0,
+"rep": 0,
+"g": [
+0.11354,
+0.13378,
+0.15762,
+0.18572,
+0.21882
+],
+"g_on": 1.1817934057471797,
+"seed": 854993280,
+"name": "aval_M2_r0_G0_c0_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r0_G0_c0_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 0,
+"G": 0,
+"rep": 0,
+"g": [
+0.25782,
+0.30377,
+0.35792,
+0.42172,
+0.49688
+],
+"g_on": 1.1817934057471797,
+"seed": 320125669,
+"name": "aval_M2_r0_G0_c1_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r0_G0_c1_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 0,
+"G": 0,
+"rep": 0,
+"g": [
+0.58545,
+0.6898,
+0.81275,
+0.95762,
+1.12831
+],
+"g_on": 1.1817934057471797,
+"seed": 566906123,
+"name": "aval_M2_r0_G0_c2_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r0_G0_c2_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 0,
+"G": 0,
+"rep": 0,
+"g": [
+1.32942
+],
+"g_on": 1.1817934057471797,
+"seed": 541296238,
+"name": "aval_M2_r0_G0_c3_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r0_G0_c3_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 0,
+"G": 10,
+"rep": 0,
+"g": [
+0.11354,
+0.13378,
+0.15762,
+0.18572,
+0.21882
+],
+"g_on": 1.1817934057471797,
+"seed": 1177630449,
+"name": "aval_M2_r0_G10_c0_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r0_G10_c0_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 0,
+"G": 10,
+"rep": 0,
+"g": [
+0.25782,
+0.30377,
+0.35792,
+0.42172,
+0.49688
+],
+"g_on": 1.1817934057471797,
+"seed": 98217364,
+"name": "aval_M2_r0_G10_c1_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r0_G10_c1_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 0,
+"G": 10,
+"rep": 0,
+"g": [
+0.58545,
+0.6898,
+0.81275,
+0.95762,
+1.12831
+],
+"g_on": 1.1817934057471797,
+"seed": 393151098,
+"name": "aval_M2_r0_G10_c2_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r0_G10_c2_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 0,
+"G": 10,
+"rep": 0,
+"g": [
+1.32942
+],
+"g_on": 1.1817934057471797,
+"seed": 949866783,
+"name": "aval_M2_r0_G10_c3_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r0_G10_c3_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 0,
+"G": 100,
+"rep": 0,
+"g": [
+0.11354,
+0.13378,
+0.15762,
+0.18572,
+0.21882
+],
+"g_on": 1.1817934057471797,
+"seed": 1447107366,
+"name": "aval_M2_r0_G100_c0_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r0_G100_c0_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 0,
+"G": 100,
+"rep": 0,
+"g": [
+0.25782,
+0.30377,
+0.35792,
+0.42172,
+0.49688
+],
+"g_on": 1.1817934057471797,
+"seed": 9589827,
+"name": "aval_M2_r0_G100_c1_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r0_G100_c1_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 0,
+"G": 100,
+"rep": 0,
+"g": [
+0.58545,
+0.6898,
+0.81275,
+0.95762,
+1.12831
+],
+"g_on": 1.1817934057471797,
+"seed": 232631213,
+"name": "aval_M2_r0_G100_c2_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r0_G100_c2_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 0,
+"G": 100,
+"rep": 0,
+"g": [
+1.32942
+],
+"g_on": 1.1817934057471797,
+"seed": 1156887752,
+"name": "aval_M2_r0_G100_c3_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r0_G100_c3_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 0.25,
+"G": 0,
+"rep": 0,
+"g": [
+0.11354,
+0.13378,
+0.15762,
+0.18572,
+0.21882
+],
+"g_on": 1.3312749417510852,
+"seed": 1378041388,
+"name": "aval_M2_r0.25_G0_c0_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r0.25_G0_c0_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 0.25,
+"G": 0,
+"rep": 0,
+"g": [
+0.25782,
+0.30377,
+0.35792,
+0.42172,
+0.49688
+],
+"g_on": 1.3312749417510852,
+"seed": 1936311625,
+"name": "aval_M2_r0.25_G0_c1_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r0.25_G0_c1_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 0.25,
+"G": 0,
+"rep": 0,
+"g": [
+0.58545,
+0.6898,
+0.81275,
+0.95762,
+1.12831
+],
+"g_on": 1.3312749417510852,
+"seed": 163565223,
+"name": "aval_M2_r0.25_G0_c2_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r0.25_G0_c2_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 0.25,
+"G": 0,
+"rep": 0,
+"g": [
+1.32942,
+1.56638
+],
+"g_on": 1.3312749417510852,
+"seed": 1083609538,
+"name": "aval_M2_r0.25_G0_c3_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r0.25_G0_c3_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 0.25,
+"G": 10,
+"rep": 0,
+"g": [
+0.11354,
+0.13378,
+0.15762,
+0.18572,
+0.21882
+],
+"g_on": 1.3312749417510852,
+"seed": 1650913317,
+"name": "aval_M2_r0.25_G10_c0_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r0.25_G10_c0_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 0.25,
+"G": 10,
+"rep": 0,
+"g": [
+0.25782,
+0.30377,
+0.35792,
+0.42172,
+0.49688
+],
+"g_on": 1.3312749417510852,
+"seed": 1671758656,
+"name": "aval_M2_r0.25_G10_c1_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r0.25_G10_c1_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 0.25,
+"G": 10,
+"rep": 0,
+"g": [
+0.58545,
+0.6898,
+0.81275,
+0.95762,
+1.12831
+],
+"g_on": 1.3312749417510852,
+"seed": 1362732206,
+"name": "aval_M2_r0.25_G10_c2_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r0.25_G10_c2_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 0.25,
+"G": 10,
+"rep": 0,
+"g": [
+1.32942,
+1.56638
+],
+"g_on": 1.3312749417510852,
+"seed": 1892900811,
+"name": "aval_M2_r0.25_G10_c3_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r0.25_G10_c3_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 0.25,
+"G": 100,
+"rep": 0,
+"g": [
+0.11354,
+0.13378,
+0.15762,
+0.18572,
+0.21882
+],
+"g_on": 1.3312749417510852,
+"seed": 1609202129,
+"name": "aval_M2_r0.25_G100_c0_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r0.25_G100_c0_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 0.25,
+"G": 100,
+"rep": 0,
+"g": [
+0.25782,
+0.30377,
+0.35792,
+0.42172,
+0.49688
+],
+"g_on": 1.3312749417510852,
+"seed": 1872521908,
+"name": "aval_M2_r0.25_G100_c1_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r0.25_G100_c1_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 0.25,
+"G": 100,
+"rep": 0,
+"g": [
+0.58545,
+0.6898,
+0.81275,
+0.95762,
+1.12831
+],
+"g_on": 1.3312749417510852,
+"seed": 99889498,
+"name": "aval_M2_r0.25_G100_c2_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r0.25_G100_c2_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 0.25,
+"G": 100,
+"rep": 0,
+"g": [
+1.32942,
+1.56638
+],
+"g_on": 1.3312749417510852,
+"seed": 1314917951,
+"name": "aval_M2_r0.25_G100_c3_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r0.25_G100_c3_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 0.5,
+"G": 0,
+"rep": 0,
+"g": [
+0.11354,
+0.13378,
+0.15762,
+0.18572,
+0.21882
+],
+"g_on": 1.4332402406451292,
+"seed": 841968911,
+"name": "aval_M2_r0.5_G0_c0_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r0.5_G0_c0_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 0.5,
+"G": 0,
+"rep": 0,
+"g": [
+0.25782,
+0.30377,
+0.35792,
+0.42172,
+0.49688
+],
+"g_on": 1.4332402406451292,
+"seed": 299460202,
+"name": "aval_M2_r0.5_G0_c1_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r0.5_G0_c1_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 0.5,
+"G": 0,
+"rep": 0,
+"g": [
+0.58545,
+0.6898,
+0.81275,
+0.95762,
+1.12831
+],
+"g_on": 1.4332402406451292,
+"seed": 57461124,
+"name": "aval_M2_r0.5_G0_c2_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r0.5_G0_c2_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 0.5,
+"G": 0,
+"rep": 0,
+"g": [
+1.32942,
+1.56638
+],
+"g_on": 1.4332402406451292,
+"seed": 1151015649,
+"name": "aval_M2_r0.5_G0_c3_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r0.5_G0_c3_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 0.5,
+"G": 10,
+"rep": 0,
+"g": [
+0.11354,
+0.13378,
+0.15762,
+0.18572,
+0.21882
+],
+"g_on": 1.4332402406451292,
+"seed": 1237660520,
+"name": "aval_M2_r0.5_G10_c0_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r0.5_G10_c0_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 0.5,
+"G": 10,
+"rep": 0,
+"g": [
+0.25782,
+0.30377,
+0.35792,
+0.42172,
+0.49688
+],
+"g_on": 1.4332402406451292,
+"seed": 17894413,
+"name": "aval_M2_r0.5_G10_c1_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r0.5_G10_c1_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 0.5,
+"G": 10,
+"rep": 0,
+"g": [
+0.58545,
+0.6898,
+0.81275,
+0.95762,
+1.12831
+],
+"g_on": 1.4332402406451292,
+"seed": 1794314211,
+"name": "aval_M2_r0.5_G10_c2_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r0.5_G10_c2_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 0.5,
+"G": 10,
+"rep": 0,
+"g": [
+1.32942,
+1.56638
+],
+"g_on": 1.4332402406451292,
+"seed": 1528419462,
+"name": "aval_M2_r0.5_G10_c3_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r0.5_G10_c3_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 0.5,
+"G": 100,
+"rep": 0,
+"g": [
+0.11354,
+0.13378,
+0.15762,
+0.18572,
+0.21882
+],
+"g_on": 1.4332402406451292,
+"seed": 1757026507,
+"name": "aval_M2_r0.5_G100_c0_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r0.5_G100_c0_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 0.5,
+"G": 100,
+"rep": 0,
+"g": [
+0.25782,
+0.30377,
+0.35792,
+0.42172,
+0.49688
+],
+"g_on": 1.4332402406451292,
+"seed": 1733544878,
+"name": "aval_M2_r0.5_G100_c1_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r0.5_G100_c1_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 0.5,
+"G": 100,
+"rep": 0,
+"g": [
+0.58545,
+0.6898,
+0.81275,
+0.95762,
+1.12831
+],
+"g_on": 1.4332402406451292,
+"seed": 1978033216,
+"name": "aval_M2_r0.5_G100_c2_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r0.5_G100_c2_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 0.5,
+"G": 100,
+"rep": 0,
+"g": [
+1.32942,
+1.56638
+],
+"g_on": 1.4332402406451292,
+"seed": 1445228325,
+"name": "aval_M2_r0.5_G100_c3_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r0.5_G100_c3_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 1,
+"G": 0,
+"rep": 0,
+"g": [
+0.11354,
+0.13378,
+0.15762,
+0.18572,
+0.21882
+],
+"g_on": 1.5710050264436486,
+"seed": 1711189694,
+"name": "aval_M2_r1_G0_c0_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r1_G0_c0_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 1,
+"G": 0,
+"rep": 0,
+"g": [
+0.25782,
+0.30377,
+0.35792,
+0.42172,
+0.49688
+],
+"g_on": 1.5710050264436486,
+"seed": 1703421403,
+"name": "aval_M2_r1_G0_c1_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r1_G0_c1_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 1,
+"G": 0,
+"rep": 0,
+"g": [
+0.58545,
+0.6898,
+0.81275,
+0.95762,
+1.12831
+],
+"g_on": 1.5710050264436486,
+"seed": 521781,
+"name": "aval_M2_r1_G0_c2_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r1_G0_c2_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 1,
+"G": 0,
+"rep": 0,
+"g": [
+1.32942,
+1.56638,
+1.84558
+],
+"g_on": 1.5710050264436486,
+"seed": 1481398608,
+"name": "aval_M2_r1_G0_c3_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r1_G0_c3_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 1,
+"G": 10,
+"rep": 0,
+"g": [
+0.11354,
+0.13378,
+0.15762,
+0.18572,
+0.21882
+],
+"g_on": 1.5710050264436486,
+"seed": 95584561,
+"name": "aval_M2_r1_G10_c0_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r1_G10_c0_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 1,
+"G": 10,
+"rep": 0,
+"g": [
+0.25782,
+0.30377,
+0.35792,
+0.42172,
+0.49688
+],
+"g_on": 1.5710050264436486,
+"seed": 1293868628,
+"name": "aval_M2_r1_G10_c1_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r1_G10_c1_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 1,
+"G": 10,
+"rep": 0,
+"g": [
+0.58545,
+0.6898,
+0.81275,
+0.95762,
+1.12831
+],
+"g_on": 1.5710050264436486,
+"seed": 1605126586,
+"name": "aval_M2_r1_G10_c2_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r1_G10_c2_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 1,
+"G": 10,
+"rep": 0,
+"g": [
+1.32942,
+1.56638,
+1.84558
+],
+"g_on": 1.5710050264436486,
+"seed": 1851636447,
+"name": "aval_M2_r1_G10_c3_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r1_G10_c3_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 1,
+"G": 100,
+"rep": 0,
+"g": [
+0.11354,
+0.13378,
+0.15762,
+0.18572,
+0.21882
+],
+"g_on": 1.5710050264436486,
+"seed": 1454293833,
+"name": "aval_M2_r1_G100_c0_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r1_G100_c0_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 1,
+"G": 100,
+"rep": 0,
+"g": [
+0.25782,
+0.30377,
+0.35792,
+0.42172,
+0.49688
+],
+"g_on": 1.5710050264436486,
+"seed": 1968713772,
+"name": "aval_M2_r1_G100_c1_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r1_G100_c1_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 1,
+"G": 100,
+"rep": 0,
+"g": [
+0.58545,
+0.6898,
+0.81275,
+0.95762,
+1.12831
+],
+"g_on": 1.5710050264436486,
+"seed": 1743626178,
+"name": "aval_M2_r1_G100_c2_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r1_G100_c2_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 1,
+"G": 100,
+"rep": 0,
+"g": [
+1.32942,
+1.56638,
+1.84558
+],
+"g_on": 1.5710050264436486,
+"seed": 1746691239,
+"name": "aval_M2_r1_G100_c3_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r1_G100_c3_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 2,
+"G": 0,
+"rep": 0,
+"g": [
+0.11354,
+0.13378,
+0.15762,
+0.18572,
+0.21882
+],
+"g_on": 1.7216114012104105,
+"seed": 906230205,
+"name": "aval_M2_r2_G0_c0_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r2_G0_c0_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 2,
+"G": 0,
+"rep": 0,
+"g": [
+0.25782,
+0.30377,
+0.35792,
+0.42172,
+0.49688
+],
+"g_on": 1.7216114012104105,
+"seed": 394922712,
+"name": "aval_M2_r2_G0_c1_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r2_G0_c1_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 2,
+"G": 0,
+"rep": 0,
+"g": [
+0.58545,
+0.6898,
+0.81275,
+0.95762,
+1.12831
+],
+"g_on": 1.7216114012104105,
+"seed": 617913654,
+"name": "aval_M2_r2_G0_c2_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r2_G0_c2_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 2,
+"G": 0,
+"rep": 0,
+"g": [
+1.32942,
+1.56638,
+1.84558
+],
+"g_on": 1.7216114012104105,
+"seed": 615929427,
+"name": "aval_M2_r2_G0_c3_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r2_G0_c3_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 2,
+"G": 10,
+"rep": 0,
+"g": [
+0.11354,
+0.13378,
+0.15762,
+0.18572,
+0.21882
+],
+"g_on": 1.7216114012104105,
+"seed": 1842667312,
+"name": "aval_M2_r2_G10_c0_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r2_G10_c0_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 2,
+"G": 10,
+"rep": 0,
+"g": [
+0.25782,
+0.30377,
+0.35792,
+0.42172,
+0.49688
+],
+"g_on": 1.7216114012104105,
+"seed": 1572213845,
+"name": "aval_M2_r2_G10_c1_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r2_G10_c1_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 2,
+"G": 10,
+"rep": 0,
+"g": [
+0.58545,
+0.6898,
+0.81275,
+0.95762,
+1.12831
+],
+"g_on": 1.7216114012104105,
+"seed": 1325644731,
+"name": "aval_M2_r2_G10_c2_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r2_G10_c2_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 2,
+"G": 10,
+"rep": 0,
+"g": [
+1.32942,
+1.56638,
+1.84558
+],
+"g_on": 1.7216114012104105,
+"seed": 156546270,
+"name": "aval_M2_r2_G10_c3_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r2_G10_c3_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 2,
+"G": 100,
+"rep": 0,
+"g": [
+0.11354,
+0.13378,
+0.15762,
+0.18572,
+0.21882
+],
+"g_on": 1.7216114012104105,
+"seed": 1128591801,
+"name": "aval_M2_r2_G100_c0_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r2_G100_c0_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 2,
+"G": 100,
+"rep": 0,
+"g": [
+0.25782,
+0.30377,
+0.35792,
+0.42172,
+0.49688
+],
+"g_on": 1.7216114012104105,
+"seed": 46588636,
+"name": "aval_M2_r2_G100_c1_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r2_G100_c1_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 2,
+"G": 100,
+"rep": 0,
+"g": [
+0.58545,
+0.6898,
+0.81275,
+0.95762,
+1.12831
+],
+"g_on": 1.7216114012104105,
+"seed": 275991858,
+"name": "aval_M2_r2_G100_c2_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r2_G100_c2_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 2,
+"G": 100,
+"rep": 0,
+"g": [
+1.32942,
+1.56638,
+1.84558
+],
+"g_on": 1.7216114012104105,
+"seed": 832149079,
+"name": "aval_M2_r2_G100_c3_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r2_G100_c3_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 4,
+"G": 0,
+"rep": 0,
+"g": [
+0.11354,
+0.13378,
+0.15762,
+0.18572,
+0.21882
+],
+"g_on": 1.9422301930966004,
+"seed": 991791610,
+"name": "aval_M2_r4_G0_c0_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r4_G0_c0_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 4,
+"G": 0,
+"rep": 0,
+"g": [
+0.25782,
+0.30377,
+0.35792,
+0.42172,
+0.49688
+],
+"g_on": 1.9422301930966004,
+"seed": 208427679,
+"name": "aval_M2_r4_G0_c1_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r4_G0_c1_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 4,
+"G": 0,
+"rep": 0,
+"g": [
+0.58545,
+0.6898,
+0.81275,
+0.95762,
+1.12831
+],
+"g_on": 1.9422301930966004,
+"seed": 434023793,
+"name": "aval_M2_r4_G0_c2_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r4_G0_c2_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 4,
+"G": 0,
+"rep": 0,
+"g": [
+1.32942,
+1.56638,
+1.84558,
+2.17454
+],
+"g_on": 1.9422301930966004,
+"seed": 698885652,
+"name": "aval_M2_r4_G0_c3_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r4_G0_c3_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 4,
+"G": 10,
+"rep": 0,
+"g": [
+0.11354,
+0.13378,
+0.15762,
+0.18572,
+0.21882
+],
+"g_on": 1.9422301930966004,
+"seed": 230668659,
+"name": "aval_M2_r4_G10_c0_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r4_G10_c0_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 4,
+"G": 10,
+"rep": 0,
+"g": [
+0.25782,
+0.30377,
+0.35792,
+0.42172,
+0.49688
+],
+"g_on": 1.9422301930966004,
+"seed": 1036929558,
+"name": "aval_M2_r4_G10_c1_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r4_G10_c1_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 4,
+"G": 10,
+"rep": 0,
+"g": [
+0.58545,
+0.6898,
+0.81275,
+0.95762,
+1.12831
+],
+"g_on": 1.9422301930966004,
+"seed": 813751800,
+"name": "aval_M2_r4_G10_c2_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r4_G10_c2_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 4,
+"G": 10,
+"rep": 0,
+"g": [
+1.32942,
+1.56638,
+1.84558,
+2.17454
+],
+"g_on": 1.9422301930966004,
+"seed": 520754845,
+"name": "aval_M2_r4_G10_c3_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r4_G10_c3_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 4,
+"G": 100,
+"rep": 0,
+"g": [
+0.11354,
+0.13378,
+0.15762,
+0.18572,
+0.21882
+],
+"g_on": 1.9422301930966004,
+"seed": 1430724697,
+"name": "aval_M2_r4_G100_c0_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r4_G100_c0_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 4,
+"G": 100,
+"rep": 0,
+"g": [
+0.25782,
+0.30377,
+0.35792,
+0.42172,
+0.49688
+],
+"g_on": 1.9422301930966004,
+"seed": 1992667964,
+"name": "aval_M2_r4_G100_c1_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r4_G100_c1_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 4,
+"G": 100,
+"rep": 0,
+"g": [
+0.58545,
+0.6898,
+0.81275,
+0.95762,
+1.12831
+],
+"g_on": 1.9422301930966004,
+"seed": 283361490,
+"name": "aval_M2_r4_G100_c2_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r4_G100_c2_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 4,
+"G": 100,
+"rep": 0,
+"g": [
+1.32942,
+1.56638,
+1.84558,
+2.17454
+],
+"g_on": 1.9422301930966004,
+"seed": 1207078839,
+"name": "aval_M2_r4_G100_c3_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r4_G100_c3_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 6,
+"G": 0,
+"rep": 0,
+"g": [
+0.11354,
+0.13378,
+0.15762,
+0.18572,
+0.21882
+],
+"g_on": 2.018157276778613,
+"seed": 1072191943,
+"name": "aval_M2_r6_G0_c0_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r6_G0_c0_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 6,
+"G": 0,
+"rep": 0,
+"g": [
+0.25782,
+0.30377,
+0.35792,
+0.42172,
+0.49688
+],
+"g_on": 2.018157276778613,
+"seed": 270445218,
+"name": "aval_M2_r6_G0_c1_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r6_G0_c1_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 6,
+"G": 0,
+"rep": 0,
+"g": [
+0.58545,
+0.6898,
+0.81275,
+0.95762,
+1.12831
+],
+"g_on": 2.018157276778613,
+"seed": 514587980,
+"name": "aval_M2_r6_G0_c2_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r6_G0_c2_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 6,
+"G": 0,
+"rep": 0,
+"g": [
+1.32942,
+1.56638,
+1.84558,
+2.17454
+],
+"g_on": 2.018157276778613,
+"seed": 761132585,
+"name": "aval_M2_r6_G0_c3_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r6_G0_c3_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 6,
+"G": 10,
+"rep": 0,
+"g": [
+0.11354,
+0.13378,
+0.15762,
+0.18572,
+0.21882
+],
+"g_on": 2.018157276778613,
+"seed": 1439891634,
+"name": "aval_M2_r6_G10_c0_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r6_G10_c0_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 6,
+"G": 10,
+"rep": 0,
+"g": [
+0.25782,
+0.30377,
+0.35792,
+0.42172,
+0.49688
+],
+"g_on": 2.018157276778613,
+"seed": 1983501271,
+"name": "aval_M2_r6_G10_c1_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r6_G10_c1_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 6,
+"G": 10,
+"rep": 0,
+"g": [
+0.58545,
+0.6898,
+0.81275,
+0.95762,
+1.12831
+],
+"g_on": 2.018157276778613,
+"seed": 292528185,
+"name": "aval_M2_r6_G10_c2_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r6_G10_c2_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 6,
+"G": 10,
+"rep": 0,
+"g": [
+1.32942,
+1.56638,
+1.84558,
+2.17454
+],
+"g_on": 2.018157276778613,
+"seed": 1197911900,
+"name": "aval_M2_r6_G10_c3_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r6_G10_c3_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 6,
+"G": 100,
+"rep": 0,
+"g": [
+0.11354,
+0.13378,
+0.15762,
+0.18572,
+0.21882
+],
+"g_on": 2.018157276778613,
+"seed": 1111960262,
+"name": "aval_M2_r6_G100_c0_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r6_G100_c0_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 6,
+"G": 100,
+"rep": 0,
+"g": [
+0.25782,
+0.30377,
+0.35792,
+0.42172,
+0.49688
+],
+"g_on": 2.018157276778613,
+"seed": 29415843,
+"name": "aval_M2_r6_G100_c1_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r6_G100_c1_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 6,
+"G": 100,
+"rep": 0,
+"g": [
+0.58545,
+0.6898,
+0.81275,
+0.95762,
+1.12831
+],
+"g_on": 2.018157276778613,
+"seed": 326465101,
+"name": "aval_M2_r6_G100_c2_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r6_G100_c2_k0.npz"
+},
+{
+"part": "aval",
+"model": "M2",
+"r": 6,
+"G": 100,
+"rep": 0,
+"g": [
+1.32942,
+1.56638,
+1.84558,
+2.17454
+],
+"g_on": 2.018157276778613,
+"seed": 882081064,
+"name": "aval_M2_r6_G100_c3_k0",
+"out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r6_G100_c3_k0.npz"
+}
+]

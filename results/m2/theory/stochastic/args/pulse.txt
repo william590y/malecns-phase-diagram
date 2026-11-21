@@ -1,0 +1,5 @@
+pulse --model M2 --gaps 0 --gmin 0.1 --gmax 2 --ng 16 --iters 60 --eta 0.3
+pulse --model M2 --gaps 10 --gmin 0.1 --gmax 2 --ng 16 --iters 60 --eta 0.3 --tag _gap10
+pulse --model M2 --gaps 100 --gmin 0.1 --gmax 2 --ng 16 --iters 60 --eta 0.3 --tag _gap100
+pulse --model M1 --gaps 0 --gmin 0.1 --gmax 0.5 --ng 10 --iters 30 --eta 0.3
+pulse --model M2 --gaps 0,100 --gmin 0.5 --gmax 3 --ng 10 --iters 60 --eta 0.3 --graph /MALECNS_ROOT/results/m2/theory/stochastic/graphs/cnull_N167216_s0.npz --tag _cnull

@@ -1,0 +1,62 @@
+[
+ {
+  "set": "SMOKE",
+  "setting": "a",
+  "model": "M2",
+  "r": 1,
+  "start": "AL_L",
+  "g": [
+   2.5136
+  ],
+  "B": 64,
+  "T": 1000,
+  "seed": 65000,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/SMOKE/M2_r1_AL_L.npz",
+  "name": "M2_r1_AL_L"
+ },
+ {
+  "set": "SMOKE",
+  "setting": "b",
+  "model": "M2",
+  "r": 1,
+  "start": "hemiL",
+  "g": [
+   1.5697
+  ],
+  "B": 64,
+  "T": 1000,
+  "seed": 65001,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/SMOKE/M2_r1_hemiL.npz",
+  "name": "M2_r1_hemiL"
+ },
+ {
+  "set": "SMOKE",
+  "setting": "a",
+  "model": "M2",
+  "r": 1,
+  "start": "rand10",
+  "g": [
+   3.9275
+  ],
+  "B": 32,
+  "T": 200,
+  "seed": 65002,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/SMOKE/M2_r1_rand10.npz",
+  "name": "M2_r1_rand10"
+ },
+ {
+  "set": "SMOKE",
+  "model": "M2",
+  "r": 1,
+  "module": "AL",
+  "g": [
+   2,
+   4
+  ],
+  "B": 64,
+  "T": 200,
+  "seed": 65999,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/SMOKE/iso_M2_r1_AL.npz",
+  "name": "iso_M2_r1_AL"
+ }
+]

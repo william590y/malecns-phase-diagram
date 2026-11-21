@@ -1,0 +1,67 @@
+{
+ "ORN": {
+  "n": 2639,
+  "def": "class olfactory (all 2,639 ORNs, drive target)",
+  "in_module": 0
+ },
+ "ORN_ant": {
+  "n": 2454,
+  "def": "antennal ORNs (ORN types not of the 6 palp glomeruli)",
+  "in_module": 0
+ },
+ "ORN_palp": {
+  "n": 185,
+  "def": "maxillary-palp ORNs (ORN_(VA4|VC1|VC2|VA7l|VM7d|VM7v))",
+  "in_module": 0
+ },
+ "PN_all": {
+  "n": 686,
+  "def": "class ALPN (incl. 217 GABAergic and multiglomerular PNs)",
+  "in_module": 270
+ },
+ "uPN": {
+  "n": 238,
+  "def": "excitatory (ACh) uniglomerular olfactory PNs (type <glomerulus>_<lineage>PN, no VP glomeruli)",
+  "in_module": 196
+ },
+ "uPN_ant": {
+  "n": 220,
+  "def": "uPN of antennal glomeruli (the PNs recorded by Olsen 2007 / Kazama & Wilson)",
+  "in_module": 178
+ },
+ "uPN_palp": {
+  "n": 18,
+  "def": "uPN of the 6 palp glomeruli",
+  "in_module": 18
+ },
+ "uPN_mod": {
+  "n": 196,
+  "def": "uPN inside the 526-neuron AL module",
+  "in_module": 196
+ },
+ "uPN_nonmod": {
+  "n": 42,
+  "def": "uPN outside the AL module",
+  "in_module": 0
+ },
+ "LN_exc": {
+  "n": 137,
+  "def": "AL local neurons with consensus ACh",
+  "in_module": 91
+ },
+ "LN_inh": {
+  "n": 214,
+  "def": "AL local neurons with consensus GABA/Glu",
+  "in_module": 64
+ },
+ "lLN1_bc": {
+  "n": 30,
+  "def": "the 30 cholinergic lLN1_bc",
+  "in_module": 30
+ },
+ "ALsys": {
+  "n": 1282,
+  "def": "AL without ORNs, union the AL module (persistence region)",
+  "in_module": 526
+ }
+}

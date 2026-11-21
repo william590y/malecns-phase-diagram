@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Phase Diagram Theory</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Same notebook design as the main page: one reading column, sticky contents rail, equations on tinted plates. */
+:root {
+  --paper: #f3f6f5; --ink: #14211f; --ink-soft: #4b5c59; --rule: #d3dcda;
+  --accent: #1f7a5c; --accent-soft: #dcefe7; --amber: #a5650b; --amber-soft: #f6ead6; --berry: #8a2d55; --berry-soft: #f3e1ea;
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Source Serif 4", "Iowan Old Style", Georgia, serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #0f1716; --ink: #e3ece9; --ink-soft: #9db1ac; --rule: #2a3a37;
+    --accent: #6fd3a8; --accent-soft: #173229; --amber: #f0b45c; --amber-soft: #33270f; --berry: #f08fb8; --berry-soft: #36182a;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #0f1716; --ink: #e3ece9; --ink-soft: #9db1ac; --rule: #2a3a37;
+  --accent: #6fd3a8; --accent-soft: #173229; --amber: #f0b45c; --amber-soft: #33270f; --berry: #f08fb8; --berry-soft: #36182a;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { background: var(--paper); color: var(--ink); font: 17px/1.62 var(--body); }
+.page { max-width: 1180px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 40px 80px;
+  display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 48px; }
+nav.toc { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 24px); align-self: start; font: 500 13px/1.5 var(--display); }
+nav.toc p { margin: 0 0 10px; color: var(--ink-soft); letter-spacing: .08em; text-transform: uppercase; font-size: 11.5px; }
+nav.toc ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+nav.toc a { color: var(--ink-soft); text-decoration: none; display: block; }
+nav.toc a:hover, nav.toc a:focus-visible { color: var(--accent); }
+main { min-width: 0; }
+.col { max-width: 68ch; }
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; letter-spacing: -0.01em; }
+h1 { font-size: clamp(30px, 4.6vw, 44px); line-height: 1.08; margin: 6px 0 14px; font-weight: 700; }
+h2 { font-size: 25px; line-height: 1.2; margin: 60px 0 12px; font-weight: 700; scroll-margin-top: 20px; }
+h2 .n { color: var(--accent); margin-right: 10px; }
+h3 { font-size: 18px; margin: 28px 0 6px; font-weight: 600; }
+p { margin: 0 0 14px; }
+.eyebrow { font: 600 12px/1.3 var(--display); letter-spacing: .1em; text-transform: uppercase; color: var(--accent); }
+.lede { font-size: 19.5px; line-height: 1.5; }
+.small { font-size: 14.5px; color: var(--ink-soft); }
+code, .num { font-family: var(--mono); font-size: .86em; font-variant-numeric: tabular-nums; }
+a { color: var(--accent); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.eq { overflow-x: auto; padding: 12px 18px; margin: 12px 0 16px; background: var(--accent-soft); border-radius: 6px; font-size: 17px; max-width: 68ch; }
+.eq .fallback { font-family: var(--mono); font-size: 14px; white-space: pre-wrap; }
+.box { border: 1px solid var(--rule); border-radius: 8px; padding: 6px 18px 4px; margin: 18px 0; max-width: 72ch; }
+.pred { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 10px; padding: 12px 0; border-top: 1px solid var(--rule); }
+.pred:first-child { border-top: 0; }
+.pred .tag { font: 700 13px/1.6 var(--display); color: var(--accent); }
+.pred p { margin: 0 0 6px; }
+.lemma { border-left: 3px solid var(--accent); padding: 4px 0 4px 16px; margin: 14px 0; max-width: 68ch; }
+.lemma b:first-child { font-family: var(--display); }
+.note { border-left: 3px solid var(--amber); background: var(--amber-soft); padding: 12px 16px; margin: 16px 0; max-width: 68ch; font-size: 15.5px; }
+.note b { font-family: var(--display); color: var(--amber); font-weight: 600; }
+table { border-collapse: collapse; font-size: 15px; width: 100%; }
+.tablewrap { overflow-x: auto; margin: 10px 0 18px; max-width: 80ch; }
+th, td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { font: 600 12px/1.3 var(--display); letter-spacing: .06em; text-transform: uppercase; color: var(--ink-soft); }
+td.num, th.num { text-align: right; font-family: var(--mono); font-size: 14px; white-space: nowrap; }
+footer { margin-top: 70px; padding-top: 16px; border-top: 1px solid var(--rule); font-size: 14px; color: var(--ink-soft); max-width: 70ch; }
+@media (max-width: 900px) { .page { grid-template-columns: minmax(0, 1fr); gap: 0; } nav.toc { display: none; } }
+@media (max-width: 560px) { body { font-size: 16px; } .pred { grid-template-columns: minmax(0, 1fr); gap: 2px; } }
+.pages { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 20px; font: 600 13px/1 var(--display); }
+.pages a { padding: 9px 14px; border: 1px solid var(--rule); border-radius: 999px; text-decoration: none; color: var(--ink-soft); }
+.pages a:hover { border-color: var(--accent); color: var(--accent); }
+.pages a[aria-current="page"] { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+</style>
+<script>
+window.MathJax = { tex: { inlineMath: [["\\(", "\\)"]], displayMath: [["\\[", "\\]"]], tags: "none" }, svg: { fontCache: "global" },
+  startup: { pageReady: () => MathJax.startup.defaultPageReady().then(() => document.querySelectorAll(".fallback").forEach(e => e.hidden = true)) } };
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-svg.min.js" async></script>
+</head>
+<body>
+<div class="page">
+  <nav class="toc" aria-label="Contents">
+    <p>Contents</p>
+    <ol>
+      <li><a href="#claims">Predictions</a></li>
+      <li><a href="#setup">1 · Model</a></li>
+      <li><a href="#mf">2 · Mean field</a></li>
+      <li><a href="#onset">3 · Silence loses stability</a></li>
+      <li><a href="#amp">4 · Just above onset</a></li>
+      <li><a href="#ext">5 · Extinction window</a></li>
+      <li><a href="#islands">6 · Many islands</a></li>
+      <li><a href="#drive">7 · Weak drive</a></li>
+      <li><a href="#limits">8 · Where it can fail</a></li>
+      <li><a href="#numbers">9 · Numbers</a></li>
+      <li><a href="#verdict">10 · How it fared</a></li>
+      <li><a href="flow.html">Animated flow field →</a></li>
+      <li><a href="model2.html">New model (Model 2) →</a></li>
+      <li><a href="./">← Back to the notebook</a></li>
+    </ol>
+  </nav>
+
+  <main>
+    <div class="col">
+      <nav class="pages" aria-label="Pages"><a href="./">Notebook</a><a href="theory.html" aria-current="page">Theory (derivation)</a><a href="flow.html">Flow field (animated)</a><a href="model2.html">New model</a></nav>
+      <div class="eyebrow">MaleCNS · stochastic Wilson–Cowan · derivation, written before the phase-diagram sweep finished</div>
+      <h1>A spectral theory of the phase diagram</h1>
+      <p class="lede">This page derives, from the model's equations, where each phase boundary should sit in the plane of coupling \(g\) and inhibition \(r\), and what decides it. Every prediction uses only properties of the connectome's leading eigenvectors. Nothing is fitted to the simulations.</p>
+      <p>The argument has three layers. Linearizing the stochastic process around silence gives the coupling at which activity can first grow; that is the Perron eigenvalue of an excitatory "branching" matrix. Activity just above it takes the shape of the leading eigenvector. And because that eigenvector is concentrated on a few dozen neurons, random fluctuations keep killing the activity until the coupling is well above that line. That last effect produces the slow (Griffiths) window, and its width follows from the eigenvector's size plus how often inhibition coincides with excitation inside it. <a href="./">The notebook</a> has the simulations this will be tested against.</p>
+      <div class="note"><b>Revision, made before the comparison.</b> The first draft of this page put the onset at the mean-field threshold \(\alpha/(\beta\mu(r))\), which includes inhibition (section 3, last part). The first plugged-in number refuted it: for the rewired null at \(r = 1\), mean field puts the onset at \(g = 3.43\), but that network was already measured sustaining activity at \(g = 1.11\). Mean field averages inhibition into every neuron's input, while in the stochastic model an inhibitory spike onto a silent neuron does nothing unless excitation arrives at the same time. The onset below is therefore derived from the exact process instead. The mean-field version is kept for comparison. No other simulation result was used in this revision.</div>
+    </div>
+
+    <h2 id="claims" class="col">Predictions</h2>
+    <div class="box">
+      <div class="pred"><span class="tag">P1</span><div><p><b>Silence becomes unstable</b> at \(g_{\rm lin}\), where the Perron eigenvalue of the branching matrix \(B_{ij}(g) = \beta F(g E_{ij})\) equals \(\alpha\): only <i>excitatory</i> connections, each passed through the saturating rate function. This line is <b>independent of inhibition</b> \(r\). It lies at or above \(\alpha/(\beta\lambda_{\rm PF}(E))\), the weak-synapse limit. A refinement for dynamical correlations (an active pair cannot re-trigger each other) replaces \(B\) by a pair operator \(P(g)\).</p></div></div>
+      <div class="pred"><span class="tag">P2</span><div><p><b>Activity is sustained</b> (over an observation time \(T\)) only above \(g_{\rm on}(r)\), where the extinction time of the leading island first exceeds \(T\). Approximately \(K_{\rm eff}\,\Phi(R_{\rm on}) \approx \ln(\alpha T)\), with \(\Phi(R) = \ln R - 1 + 1/R\) and \(R = \lambda_{\rm PF}(B(g))/\alpha\). \(K_{\rm eff}\) is the effective number of neurons in the mode, computed from its left and right eigenvectors. Inhibition enters <i>only</i> here, by shrinking \(K_{\rm eff}\) when inhibitory and excitatory inputs to the same neuron coincide. The slow window spans \(g_{\rm lin}\) to \(g_{\rm on}\), roughly \(\sqrt{2\ln(\alpha T)/K_{\rm eff}}\) wide on a log axis.</p></div></div>
+      <div class="pred"><span class="tag">P3</span><div><p><b>Just above onset</b> the activity pattern is the leading eigenvector, and the density rises linearly in \(g - g_{\rm lin}\). Further up, more localized eigenmodes ("islands") switch on one after another. The transition is smeared, and the slow decay in the window has an exponent that varies with \(g\).</p></div></div>
+      <div class="pred"><span class="tag">P4</span><div><p><b>Delocalized activity</b> appears when \(g\) reaches the eigenvalues of delocalized modes (large \(K\)), where the window is negligible. A network whose leading mode is already delocalized, like the rewired nulls, goes from silent to whole-network activity through only a narrow window.</p></div></div>
+      <div class="pred"><span class="tag">P5</span><div><p><b>Under weak drive \(h\)</b> islands flicker on and off. Fluctuations peak where ignition and extinction balance, at \(K\Phi(R) \approx \ln[1/(\beta h\, n\, p_{\rm est})]\): the same formula as P2 with \(\alpha T\) replaced by the inverse ignition rate. The peak moves down toward \(g_{\rm lin}\) as \(h\) grows.</p></div></div>
+    </div>
+
+    <h2 id="setup" class="col"><span class="n">1</span>Model and notation</h2>
+    <div class="col">
+      <p>Each neuron \(i = 1,\dots,N\) is a binary unit \(a_i \in \{0,1\}\). In continuous time:</p>
+      <div class="eq">\[ 1 \xrightarrow{\ \alpha\ } 0, \qquad 0 \xrightarrow{\ \beta F(s_i)\ } 1, \qquad F(s) = \tanh(s)_+ = \max(\tanh s, 0), \qquad s_i = g\,(\tilde W a)_i + h . \]
+        <div class="fallback">1 → 0 at rate α;  0 → 1 at rate β F(sᵢ), F(s) = max(tanh s, 0);  sᵢ = g (W̃a)ᵢ + h</div></div>
+      <p>Split the connectivity by the sign of the presynaptic neuron, with \(c\) the inverse mean in-strength:</p>
+      <div class="eq">\[ \tilde W(r) = E - r\, I, \qquad E_{ij} = c\, w_{ij}\,[\,j \text{ excitatory}\,] \ge 0, \qquad I_{ij} = c\, w_{ij}\,[\,j \text{ inhibitory}\,] \ge 0 . \]
+        <div class="fallback">W̃(r) = E − r I,  E, I ≥ 0 elementwise</div></div>
+      <p>The simulation updates all neurons synchronously in steps \(\Delta t = 0.2\), with switch-off probability \(1 - e^{-\alpha\Delta t}\) and switch-on probability \(1 - e^{-\beta F(s_i)\Delta t}\). In the small-rate limit this is the continuous-time process with an effective decay rate \(\alpha_{\rm eff} = (1 - e^{-\alpha \Delta t})/\Delta t = 0.906\) (for \(\alpha = 1\)). Below, read \(\alpha\) as \(\alpha_{\rm eff}\) whenever numbers are compared with the simulation. We use \(\alpha = \beta = 1\).</p>
+      <p>The exact equation for the mean activity is not closed:</p>
+      <div class="eq">\[ \frac{d\langle a_i\rangle}{dt} = -\alpha \langle a_i\rangle + \beta\,\big\langle (1-a_i)\, F(s_i) \big\rangle . \]
+        <div class="fallback">d⟨aᵢ⟩/dt = −α⟨aᵢ⟩ + β ⟨(1 − aᵢ) F(sᵢ)⟩</div></div>
+      <p>With \(h = 0\), the all-silent state is absorbing: once there, the network stays there forever.</p>
+    </div>
+
+    <h2 id="mf" class="col"><span class="n">2</span>Mean-field closure</h2>
+    <div class="col">
+      <p>Quenched mean field (QMF) keeps the full wiring but treats neurons as independent, replacing \(\langle (1-a_i)F(s_i)\rangle\) by \((1-\rho_i)F(\langle s_i\rangle)\) with \(\rho_i = \langle a_i\rangle\):</p>
+      <div class="eq">\[ \dot\rho_i = -\alpha \rho_i + \beta (1-\rho_i)\, F\!\big(g(\tilde W \rho)_i + h\big) . \tag{QMF} \]
+        <div class="fallback">dρᵢ/dt = −αρᵢ + β(1 − ρᵢ) F(g(W̃ρ)ᵢ + h)</div></div>
+      <p>The discrete-time version, \(\rho_i \leftarrow \rho_i e^{-\alpha\Delta t} + (1-\rho_i)(1 - e^{-\beta F(g(\tilde W\rho)_i+h)\Delta t})\), is exactly the simulation's update averaged under this closure. It is iterated on the same graphs, grids and run lengths as the simulations (<code>code/theory_qmf.py</code>). QMF has no fluctuations, so it never goes extinct: it describes what a large, well-mixed region would do. Sections 5–7 add back the finite-size effects.</p>
+    </div>
+
+    <h2 id="onset" class="col"><span class="n">3</span>When silence loses stability (P1)</h2>
+    <div class="col">
+      <h3>Exact linearization of the stochastic process</h3>
+      <p>Expand a silent neuron's switch-on rate over the set \(A\) of its currently active inputs, by inclusion–exclusion:</p>
+      <div class="eq">\[ F\Big(g\!\sum_{j\in A}\tilde W_{ij}\Big) = \sum_{j} a_j\, F(g\tilde W_{ij}) + \sum_{j\lt k} a_j a_k\, \Delta^i_{jk} + \dots, \qquad \Delta^i_{jk} = F\big(g(\tilde W_{ij}+\tilde W_{ik})\big) - F(g\tilde W_{ij}) - F(g\tilde W_{ik}). \]
+        <div class="fallback">F(g Σ_{j∈A} W̃ᵢⱼ) = Σⱼ aⱼ F(gW̃ᵢⱼ) + Σ_{j<k} aⱼaₖ Δⁱⱼₖ + …</div></div>
+      <p>This is an identity. Substituting it into the exact mean equation of section 1 gives</p>
+      <div class="eq">\[ \frac{d\langle a_i\rangle}{dt} = -\alpha\langle a_i\rangle + \sum_j B_{ij}(g)\,\langle a_j\rangle \;+\; \big[\text{terms in } \langle a_j a_k\rangle,\ \langle a_i a_j\rangle\big], \qquad B_{ij}(g) = \beta F(g\tilde W_{ij}) . \]
+        <div class="fallback">d⟨aᵢ⟩/dt = −α⟨aᵢ⟩ + Σⱼ Bᵢⱼ(g)⟨aⱼ⟩ + (pair terms),   Bᵢⱼ(g) = β F(g W̃ᵢⱼ)</div></div>
+      <p>Because \(F(s) = 0\) for \(s \le 0\), a lone inhibitory input contributes nothing: \(B_{ij}(g) = \beta\tanh(gE_{ij})\) for excitatory \(j\) and \(0\) for inhibitory \(j\). Near silence the pair terms are second order, so the growth of activity is governed exactly by the non-negative matrix \(B(g)\). Silence loses stability when</p>
+      <div class="eq">\[ \lambda_{\rm PF}\big(B(g_{\rm lin})\big) = \alpha_{\rm eff}, \qquad \text{which does not depend on } r . \]
+        <div class="fallback">λ_PF(B(g_lin)) = α_eff,   independent of r</div></div>
+      <div class="lemma"><b>Bound.</b> \(\tanh x \le x\) gives \(B(g) \le \beta g E\) elementwise, so \(\lambda_{\rm PF}(B(g)) \le \beta g\,\lambda_{\rm PF}(E)\) and \(g_{\rm lin} \ge \alpha/(\beta\lambda_{\rm PF}(E))\). Equality holds in the weak-synapse limit. Any excess measures how much the strongest single connections saturate.</div>
+      <p><b>Dynamical correlations (pair approximation).</b> Once neuron \(j\) has switched on \(i\), neuron \(i\) cannot be switched on again by \(j\) until it switches off. Closing the hierarchy at pairs (states of each connected pair \((i,j)\)) and setting the growth rate to zero gives the pair operator</p>
+      <div class="eq">\[ P_{ij} = \frac{f_{ij}\,(\alpha + f_{ji}/2)}{\alpha + (f_{ij}+f_{ji})/2}, \qquad P_{ii} = -\sum_j \frac{f_{ij}f_{ji}}{2\alpha + f_{ij} + f_{ji}}, \qquad f_{ij} = B_{ij}(g), \]
+        <div class="fallback">Pᵢⱼ = fᵢⱼ(α + fⱼᵢ/2) / (α + (fᵢⱼ+fⱼᵢ)/2),   Pᵢᵢ = −Σⱼ fᵢⱼfⱼᵢ / (2α + fᵢⱼ + fⱼᵢ)</div></div>
+      <p>For a one-way connection this is \(f_{ij}/(1 + f_{ij}/2\alpha)\), a transmission discounted for the echo. Reciprocal pairs, common in the antennal lobe, add a negative self-term. The threshold becomes \(\lambda_{\max}(P(g)) = \alpha_{\rm eff}\). Both versions are computed (<code>code/theory_branch.py</code>).</p>
+      <h3>For comparison: the mean-field (QMF) threshold</h3>
+      <p>Mean field replaces \(\langle F(s_i)\rangle\) by \(F(\langle s_i\rangle)\), which averages inhibition into every neuron's input. Near \(\rho = 0\) with \(h = 0\), \(\tanh s \approx s\), but the rectification stays: a neuron whose net input is negative has rate zero, not a negative rate. To first order:</p>
+      <div class="eq">\[ \dot\rho = -\alpha\rho + \beta g\, \mathcal T_r(\rho), \qquad \mathcal T_r(x) = \big[\tilde W(r)\,x\big]_+ . \]
+        <div class="fallback">dρ/dt = −αρ + βg T_r(ρ),   T_r(x) = [W̃(r) x]₊</div></div>
+      <p>\(\mathcal T_r\) maps non-negative vectors to non-negative vectors and is positively homogeneous (\(\mathcal T_r(\lambda x) = \lambda\,\mathcal T_r(x)\) for \(\lambda \ge 0\)). It is piecewise linear, not linear. Its growth rate on the non-negative cone,</p>
+      <div class="eq">\[ \mu(r) = \lim_{n\to\infty} \big\lVert \mathcal T_r^{\,n}\, x_0 \big\rVert^{1/n}, \qquad x_0 = (1,\dots,1), \]
+        <div class="fallback">μ(r) = lim ‖T_rⁿ x₀‖^(1/n), started from the fully active state</div></div>
+      <p>plays the role of the leading eigenvalue. It comes with a non-negative "rectified eigenvector" \(v \ge 0\), \(\mathcal T_r v = \mu v\). The mean-field silent state is linearly unstable exactly when \(\beta g \mu(r) > \alpha\), so</p>
+      <div class="eq">\[ g_{\rm QMF}(r) = \frac{\alpha_{\rm eff}}{\beta\, \mu(r)} = \frac{1 - e^{-\alpha\Delta t}}{\beta\,\Delta t\,\mu(r)} . \]
+        <div class="fallback">g_QMF(r) = α_eff / (β μ(r)) = (1 − e^(−αΔt)) / (β Δt μ(r))</div></div>
+      <div class="lemma"><b>Bound.</b> For \(x \ge 0\), \(Ix \ge 0\), so \(0 \le [Ex - rIx]_+ \le Ex\). Since \(E\) is a non-negative matrix it preserves order, and induction gives \(\mathcal T_r^{\,n} x \le E^n x\). Hence \(\mu(r) \le \lambda_{\rm PF}(E) = \mu(0)\): in mean field, inhibition can only raise the onset. At \(r = 0\) the map is linear and \(\mu(0)\) is the Perron–Frobenius eigenvalue of \(E\), so the mean-field and exact linear thresholds coincide in the weak-synapse limit.</div>
+      <p><b>Mean field overstates inhibition near silence.</b> Measured: \(\mu(1) = 5.08\) for the real connectome against \(\lambda_{\rm PF}(E) = 5.57\), only 9% apart, because the leading module receives little inhibition. For the configuration null, \(\mu(1) = 0.264\) against 1.10, which would put the onset at \(g = 3.43\), three times the observed 1.11. Its leading mode is spread over thousands of neurons, so every neuron's averaged input includes inhibition that, at sparse activity, almost never arrives at the same moment as excitation. The exact linearization drops this. Mean field remains the right description of a dense, high-activity state (section 6).</p>
+      <p><b>Why the ordinary spectrum is the wrong object.</b> Take two inhibitory neurons that inhibit each other with weight \(w\). Their block of \(\tilde W\) is \(\begin{pmatrix} 0 & -rw \\ -rw & 0 \end{pmatrix}\). It has eigenvalue \(+rw\), with eigenvector \((1,-1)\), a pattern with negative activity. The rectified map sends every non-negative \((x_1, x_2)\) to \(([-rwx_2]_+, [-rwx_1]_+) = (0,0)\). Mutual inhibition cannot create activity from silence, yet it can dominate the ordinary spectrum. On the connectome this happens at strong inhibition: the leading eigenvalue of the signed matrix jumps from 4.74 at \(r = 3\) to 5.60 at \(r = 4\) and 8.36 at \(r = 6\), each time on a mode carried by about 10 neurons. The rectified \(\mu(r)\) ignores those modes by construction. When inhibition is weak the two agree: at \(r = 0.5\), \(\mu = 5.267\) against a signed eigenvalue of 5.262.</p>
+      <p><b>Notation for what follows.</b> From here on, \(\lambda \equiv \lambda_{\rm PF}(B(g))\) (or \(\lambda_{\max}(P(g))\)), with right and left Perron vectors \(v, u \ge 0\) normalized so \(\langle u, v\rangle = 1\), and \(R \equiv \lambda/\alpha\). In the weak-synapse limit \(R = \beta g\lambda_{\rm PF}(E)/\alpha\).</p>
+    </div>
+
+    <h2 id="amp" class="col"><span class="n">4</span>Just above onset (P3, first half)</h2>
+    <div class="col">
+      <p>Keep the exact mean equation to second order. Close only the pair terms by factorizing them, \(\langle a_j a_k\rangle \approx \rho_j\rho_k\). Every coincidence correction is non-positive: \(F(x - ry) - F(x) \le 0\) when an inhibitory input coincides with an excitatory one, \(F(x+y) - F(x) - F(y) \le 0\) for two excitatory inputs by concavity, and \(0\) for two inhibitory inputs. So, writing \(|\Delta^i_{jk}|\):</p>
+      <div class="eq">\[ 0 = -\alpha\rho_i + (B\rho)_i - \rho_i\,(B\rho)_i - \sum_{j\lt k}|\Delta^i_{jk}|\,\rho_j\rho_k + O(\rho^3) . \]
+        <div class="fallback">0 = −αρᵢ + (Bρ)ᵢ − ρᵢ(Bρ)ᵢ − Σ_{j<k} |Δⁱⱼₖ| ρⱼρₖ + O(ρ³)</div></div>
+      <p>Put \(\rho = \varepsilon v + \varepsilon^2 w + \dots\). At first order this is the eigenproblem \(Bv = \lambda v\) at \(\lambda = \alpha\). At second order, project onto \(u\) to remove \(w\) (solvability):</p>
+      <div class="eq">\[ 0 = \varepsilon(\lambda - \alpha) - \varepsilon^2\big[\lambda\langle u, v^2\rangle + \mathcal D(g,r)\big], \qquad \mathcal D(g,r) = \sum_i u_i \sum_{j\lt k} |\Delta^i_{jk}|\, v_j v_k , \]
+        <div class="fallback">0 = ε(λ − α) − ε²[λ⟨u, v²⟩ + D(g,r)],   D = Σᵢ uᵢ Σ_{j<k} |Δⁱⱼₖ| vⱼvₖ</div></div>
+      <div class="eq">\[ \varepsilon^* = \frac{R - 1}{R\,\langle u, v^2\rangle + \mathcal D/\alpha} . \]
+        <div class="fallback">ε* = (R − 1) / (R⟨u, v²⟩ + D/α)</div></div>
+      <ul>
+        <li><b>A transcritical bifurcation.</b> The mean density \(\bar\rho = \varepsilon^* \sum_i v_i / N\) grows linearly in \(g - g_{\rm lin}\), with no jump.</li>
+        <li><b>The activity pattern is the eigenvector.</b> \(\rho_i \propto v_i\), so the participation ratio of the activity is \((\sum v_i)^2/\sum v_i^2\), and its share in the antennal-lobe module is \(\sum_{i \in \rm AL} v_i / \sum v_i\). The localization measured in the simulation is inherited directly from the spectrum.</li>
+        <li><b>Where inhibition acts.</b> \(r\) appears only in \(\mathcal D\): coincident inhibition lowers the island's activity level without moving its threshold.</li>
+      </ul>
+    </div>
+
+    <h2 id="ext" class="col"><span class="n">5</span>The extinction window (P2)</h2>
+    <div class="col">
+      <p>Above \(g_{\rm lin}\) the active state is only metastable: silence is absorbing, so a chance run of switch-offs ends it. The question is how long that takes.</p>
+      <h3>Reduction to one dimension</h3>
+      <p>Follow the mode amplitude \(m(t) = \langle u, a(t)\rangle\), with \(\langle a_i\rangle \approx m\, v_i\) near the quasi-stationary state. The two kinds of events change \(m\) as follows:</p>
+      <ul>
+        <li>switch-on of neuron \(i\): jump \(+u_i\); summed over neurons, the switch-on rate, weighted by these jumps, is \(\lambda m - [\lambda\langle u,v^2\rangle + \mathcal D]\,m^2\);</li>
+        <li>switch-off of neuron \(i\): rate \(\alpha m v_i\), jump \(-u_i\).</li>
+      </ul>
+      <p>The drift is the amplitude equation of section 4. The typical jump, weighted by how often each neuron flips, is \(\bar s = \sum_i u_i^2 v_i / \sum_i u_i v_i = \langle u^2, v\rangle\). Counting in units of \(\bar s\), \(n = m/\bar s\), turns this into the logistic birth–death process</p>
+      <div class="eq">\[ b(n) = \lambda\, n\Big(1 - \frac{n}{K_{\rm eff}}\Big), \qquad d(n) = \alpha\, n, \qquad K_{\rm eff} = \frac{1}{\langle u^2, v\rangle\,\big(\langle u, v^2\rangle + \mathcal D/\lambda\big)} . \]
+        <div class="fallback">b(n) = λn(1 − n/K_eff),  d(n) = αn,  K_eff = 1 / (⟨u², v⟩ (⟨u, v²⟩ + D/λ))</div></div>
+      <p>\(K_{\rm eff}\) is the effective number of independent units in the island. Check: for a mode spread evenly over \(n\) neurons with no coincidences, \(u_i = v_i = n^{-1/2}\) and \(K_{\rm eff} = n\). It is fixed by the eigenvectors and by how much inhibition overlaps excitation on them. A localized mode has small \(K_{\rm eff}\); a delocalized one has \(K_{\rm eff}\) of order \(N\).</p>
+      <h3>Mean time to extinction</h3>
+      <p>For a birth–death chain absorbed at \(0\), the mean extinction time from the top state follows exactly from a downward recursion, \(D_{n_{\max}} = 1/d(n_{\max})\), \(D_n = (1 + b(n) D_{n+1})/d(n)\), \(\tau = \sum_n D_n\). This is what is computed. Its large-\(K\) form (Nåsell; Doering, Sargsyan &amp; Sander 2005) shows the structure:</p>
+      <div class="eq">\[ \tau \simeq \frac{1}{\alpha}\sqrt{\frac{2\pi}{K_{\rm eff}}}\;\frac{R}{(R-1)^2}\; e^{K_{\rm eff}\,\Phi(R)}, \qquad \Phi(R) = \ln R - 1 + \frac1R . \]
+        <div class="fallback">τ ≈ (1/α) √(2π/K_eff) · R/(R−1)² · exp(K_eff Φ(R)),   Φ(R) = ln R − 1 + 1/R</div></div>
+      <p>The exponent is the sum of log rate ratios along the path from the stable level down to zero:</p>
+      <div class="eq">\[ \ln\tau \approx \sum_{n=1}^{n^*} \ln\frac{b(n)}{d(n)} \approx K_{\rm eff}\!\int_0^{1-1/R}\!\! \ln\!\big(R(1-x)\big)\,dx = K_{\rm eff}\Big[\ln R - 1 + \tfrac1R\Big]. \]
+        <div class="fallback">ln τ ≈ Σ ln(b/d) ≈ K_eff ∫₀^(1−1/R) ln(R(1−x)) dx = K_eff (ln R − 1 + 1/R)</div></div>
+      <h3>The onset seen in a run of length \(T\)</h3>
+      <p>A run of length \(T\) from a fully active start counts as "sustained" when \(\tau > T\). The observed onset \(g_{\rm on}\) is where \(\tau(g) = T\). Approximately,</p>
+      <div class="eq">\[ K_{\rm eff}\,\Phi(R_{\rm on}) \approx \ln(\alpha T), \qquad \ln g_{\rm on} - \ln g_{\rm lin} \approx \sqrt{\frac{2\ln(\alpha T)}{K_{\rm eff}}}\quad (\text{large } K_{\rm eff}) . \]
+        <div class="fallback">K_eff Φ(R_on) ≈ ln(αT);   ln g_on − ln g_lin ≈ √(2 ln(αT) / K_eff)</div></div>
+      <ul>
+        <li><b>Localization sets the width.</b> With \(T = 3000\), \(\ln(\alpha T) \approx 8\). An island of \(K_{\rm eff} \approx 50\)–70 neurons gives \(R_{\rm on} \approx 1.7\)–1.9. A delocalized mode with \(K_{\rm eff}\) in the thousands gives under 1.1.</li>
+        <li><b>The window drifts with observation time</b>, as \(\sqrt{\ln T}\). Longer runs see a later onset. That is the hallmark of rare regions: a finite region is never truly sustained, only long-lived. The 30,000-step runs test this directly.</li>
+        <li><b>The \((g, r)\) plane.</b> The lower line \(g_{\rm lin}\) is vertical (no \(r\) dependence). The upper line \(g_{\rm on}(r)\) bends to larger \(g\) as \(r\) grows, by an amount set entirely by \(\mathcal D(g, r)\), the excitation–inhibition coincidences inside the island.</li>
+      </ul>
+    </div>
+
+    <h2 id="islands" class="col"><span class="n">6</span>Many islands: Griffiths decay and smeared recruitment (P3, P4)</h2>
+    <div class="col">
+      <p>The top of the connectome's spectrum is a list of localized modes ("islands"), each with its own size \(K_k\) and support. If their supports barely overlap, they act independently, and each switches on where its own Perron eigenvalue \(\lambda_k(g)\) reaches \(\alpha\), with its own lifetime \(\tau_k(g)\). From a fully active start:</p>
+      <div class="eq">\[ \rho(t) \approx \frac1N \sum_{k:\,R_k>1} n_k^*\, e^{-t/\tau_k}, \qquad R_k = \frac{\lambda_k(g)}{\alpha},\quad n_k^* = \varepsilon^*_k {\textstyle\sum_i} v_{k,i},\quad \ln\tau_k \approx K_k\Phi(R_k) . \]
+        <div class="fallback">ρ(t) ≈ (1/N) Σ_k n*_k exp(−t/τ_k)</div></div>
+      <p><b>Griffiths decay.</b> Suppose the number of islands of size at least \(K\) falls off as \(e^{-aK}\), a Lifshitz tail. Then</p>
+      <div class="eq">\[ \rho(t) \sim \int dK\; e^{-aK}\, \exp\!\big(-t\,e^{-K\Phi(R)}\big) \sim e^{-aK_t},\quad K_t = \frac{\ln t}{\Phi(R)} \;\;\Longrightarrow\;\; \rho(t) \sim t^{-\theta(g)},\quad \theta(g) = \frac{a}{\Phi(R(g))} , \]
+        <div class="fallback">ρ(t) ~ t^(−θ(g)),  θ(g) = a / Φ(R(g))</div></div>
+      <p>The exponent falls continuously as \(g\) rises. A finite connectome has a finite list of islands, so this power law can only hold over the range of lifetimes the islands span. The sum over the actual islands is the exact form of the prediction, and it is computed from the top 400 eigenmodes (<code>code/spectrum_tail.py</code>).</p>
+      <p><b>Smeared recruitment.</b> In a run of length \(T\), island \(k\) counts as sustained once \(K_k\Phi(R_k) > \ln(\alpha T)\). The active count is</p>
+      <div class="eq">\[ N\bar\rho(g) \approx \sum_{k:\;K_k \Phi(R_k)\, >\, \ln(\alpha T)} n_k^* . \]
+        <div class="fallback">N ρ̄(g) ≈ Σ over sustained islands of n*_k</div></div>
+      <p>It rises in many small steps as \(g\) sweeps down through the spectral tail. There is no single jump. That is the localized active phase.</p>
+      <p><b>Delocalization (P4).</b> Delocalized modes have \(K \sim N\) and essentially no window, so they switch on sharply where the bulk eigenvalue reaches \(\alpha\). A connectome whose tail continues smoothly into the bulk, with \(K\) growing gradually, never shows a sharp jump. A network whose <i>leading</i> mode is delocalized (both nulls, \(K\) in the hundreds to thousands) goes from silent to whole-network activity through a narrow window and has no localized phase.</p>
+    </div>
+
+    <h2 id="drive" class="col"><span class="n">7</span>Weak drive and the susceptibility peak (P5)</h2>
+    <div class="col">
+      <p>With \(h > 0\) silence is no longer absorbing: every neuron fires spontaneously at rate \(\approx \beta h\). Below every island's threshold, the response is linear. linearizing as in section 3 gives \(\rho \approx \beta h\,(\alpha - B)^{-1}\mathbf 1\), which near threshold is dominated by the leading mode:</p>
+      <div class="eq">\[ \rho \approx \frac{\beta h\,\langle u, \mathbf 1\rangle}{\alpha - \lambda(g)}\; v \qquad (\text{diverges at } g_{\rm lin}) . \]
+        <div class="fallback">ρ ≈ βh⟨u,1⟩ v / (α − λ(g))</div></div>
+      <p>Above \(g_{\rm lin}\) an island behaves like a telegraph process. It ignites when a spontaneous spike takes hold, which a single seed does with probability \(p_{\rm est} \approx 1 - 1/R\) (branching process). So it switches on at rate \(\nu_{\rm on} \approx \beta h\, n\, p_{\rm est}\), with \(n\) the number of neurons in the island, and off at rate \(1/\tau\). Its fraction of time on is \(p = \nu_{\rm on}\tau/(1+\nu_{\rm on}\tau)\). The variance it adds across replicas, \((n^*)^2 p(1-p)\), is largest at \(\nu_{\rm on}\tau = 1\):</p>
+      <div class="eq">\[ K_{\rm eff}\,\Phi(R_{\rm peak}) \approx \ln\frac{1}{\beta h\, n\, p_{\rm est}} - \ln\!\Big[\sqrt{2\pi/K_{\rm eff}}\;\frac{R_{\rm peak}}{(R_{\rm peak}-1)^2}\Big] . \]
+        <div class="fallback">K_eff Φ(R_peak) ≈ ln(1/(βh n p_est)) − ln(√(2π/K_eff) R/(R−1)²)</div></div>
+      <p>This is P2 with \(\alpha T\) replaced by the inverse ignition rate. Stronger drive moves the peak down, logarithmically in \(h\), until \(\beta h n \sim 1\), where it reaches \(g_{\rm lin}\). Each island contributes its own peak, so a connectome with many islands has high fluctuations across a <i>range</i> of \(g\): the driven face of the Griffiths window. In a network with one delocalized leading mode (large \(K\)), the peak stays narrow and pinned near threshold.</p>
+    </div>
+
+    <h2 id="limits" class="col"><span class="n">8</span>Where the theory can fail</h2>
+    <div class="col">
+      <ul>
+        <li><b>Dynamical correlations beyond pairs.</b> The pair operator handles the echo within one connection. Longer loops (three-neuron cycles and up) are still treated as independent. They are dense in the antennal lobe.</li>
+        <li><b>Saturation of strong synapses</b> is included exactly at linear order, because \(B\) passes each connection through \(\tanh\). The strongest connection has 2,591 synapses, so \(g\tilde W_{ij} \approx 3.5g\). Saturation of summed inputs enters only through \(\mathcal D\).</li>
+        <li><b>Factorized pair terms.</b> Section 4 closes \(\langle a_j a_k\rangle \approx \rho_j\rho_k\) inside the island. Within a strongly coupled module, co-activation is more likely than that, so \(\mathcal D\) is probably underestimated. If so, \(K_{\rm eff}\) is too large and the predicted window too narrow.</li>
+        <li><b>Independent islands.</b> The island sum assumes nearly disjoint supports. The two leading modes are the left and right antennal lobes, which are cleanly separated. Lower modes may overlap and compete. The full QMF fixed point keeps those interactions at mean-field level.</li>
+        <li><b>One-mode reduction.</b> The formula for \(K\) assumes the island's own spectral gap is large compared with \(R - 1\). Near-degenerate modes on the same support would need a multi-mode treatment.</li>
+      </ul>
+      <p>None of these corrections is fitted. Wherever the predictions miss, the size and direction of the miss will show which of these effects dominates.</p>
+    </div>
+
+    <h2 id="numbers" class="col"><span class="n">9</span>Numbers plugged in</h2>
+    <div class="col">
+      <p>The linear threshold (P1) is computed. The sustained-onset predictions (P2) are running (<code>code/theory_branch.py</code>), and the simulated phase diagram is still being swept. Both columns will be filled in and compared here.</p>
+      <div class="tablewrap"><table>
+        <tr><th>Graph</th><th class="num">\(\lambda_{\rm PF}(E)\)</th><th class="num">\(g_{\rm lin}\) (P1)</th><th class="num">Weak-synapse limit</th><th class="num">Mean-field \(g\) at \(r=1\)</th><th class="num">Observed onset, \(r = 1\)</th></tr>
+        <tr><td>MaleCNS</td><td class="num">5.574</td><td class="num">0.1632</td><td class="num">0.1626</td><td class="num">0.178</td><td class="num">0.345</td></tr>
+        <tr><td>Configuration null</td><td class="num">1.102</td><td class="num">0.829</td><td class="num">0.823</td><td class="num">3.43</td><td class="num">1.11</td></tr>
+        <tr><td>Weight-shuffled null</td><td class="num">1.373</td><td class="num">0.663</td><td class="num">0.660</td><td class="num">0.715</td><td class="num">pending</td></tr>
+      </table></div>
+      <ul>
+        <li><b>Saturation of single strong synapses barely moves the linear threshold</b> (0.3–0.7%). So \(g_{\rm lin}\) is, to good accuracy, \(\alpha_{\rm eff}/\lambda_{\rm PF}(E)\): one eigenvalue of the excitatory connectome.</li>
+        <li><b>Observed onsets lie above \(g_{\rm lin}\) by 2.1× (real) and 1.34× (configuration null)</b>, as P2 requires: the more localized the leading mode, the wider the gap. Whether the size of each gap matches the extinction theory is the open test.</li>
+        <li><b>A first warning.</b> Early output of the P2 calculation gives the real module, at \(r = 1\), an effective size of only about 17. That would put the onset too high (near 0.5). The factorized coincidence term of section 4 is the likely culprit (section 8, last item).</li>
+      </ul>
+    </div>
+
+    <h2 id="verdict" class="col"><span class="n">10</span>How the predictions fared</h2>
+    <div class="col">
+      <p>Tested against the complete simulated phase diagram (<a href="./#complete">notebook, section 10</a>: 23 inhibition levels, both nulls, the driven plane, same criteria on both sides):</p>
+      <ul>
+        <li><b>P1 (onset from the excitatory eigenvalue, independent of inhibition)</b> holds as a lower bound. Every phase starts above g_lin = 0.163, and silence at g &lt; g_lin is confirmed everywhere.</li>
+        <li><b>P2 (slow window from the module's extinction time)</b> works without inhibition: boundaries are within 5–9% (slow window 0.245 vs 0.234, onset 0.291 vs 0.266). With inhibition it fails, by 1.8× at r = 1 and 4× at r = 6. The simulated lifetimes need a module about twice the computed K_eff, which points at the factorized coincidence term of section 4. Section 8 expected that term to be <i>underestimated</i>; the data say it is overestimated. Seen as a correction to that term alone, its inhibition-dependent part would be overstated about 4–5×. The drift of the onset with observation time is real but weaker than predicted: from T = 3,000 to 30,000 the simulated onset moves ×1.10 (0.351 to about 0.386), against the theory's ×1.40.</li>
+        <li><b>P3 (activity follows the eigenvector; smeared recruitment)</b> holds: activity just above onset sits on the module, and there is no global jump. But the Griffiths decay of section 6 does <i>not</i> appear. Inside the window one island dominates and lifetimes are exponential, so the island sum reduces to a single term.</li>
+        <li><b>P4 (nulls go straight to whole-brain activity)</b> holds for the configuration null. It fails for the weight-shuffled null, which has a localized phase.</li>
+        <li><b>P5 (fluctuation peak where ignition balances extinction)</b> places the weak-drive peak correctly (0.305 vs about 0.30) when given the measured lifetime, and too high (0.45) with the theory's lifetime. The predicted shift with drive is weaker in the simulation.</li>
+      </ul>
+    </div>
+
+    <footer>
+      References: Benayoun, Cowan, van Drongelen &amp; Wallace 2010, <i>PLoS Comput Biol</i> 6:e1000846 (model). Moretti &amp; Muñoz 2013, <i>Nat Commun</i> 4:2521 (Griffiths phases in hierarchical modular networks). Nåsell 2001, <i>J Theor Biol</i> 211:11 (extinction times of the stochastic logistic / SIS model). Doering, Sargsyan &amp; Sander 2005, <i>Multiscale Model Simul</i> 3:283 (WKB extinction times). Vojta 2006, <i>J Phys A</i> 39:R143 (rare regions and smeared transitions). Code: <code>/MALECNS_ROOT/code/theory_qmf.py</code>, <code>theory_mode.py</code>, <code>spectrum_tail.py</code>.
+    </footer>
+  </main>
+</div>
+</body>
+</html>

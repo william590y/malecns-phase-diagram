@@ -1,0 +1,176 @@
+{
+ "options": {
+  "exp": "quiet",
+  "norm": "raw",
+  "g": [
+   0.58545,
+   0.6898,
+   0.81275,
+   0.95762,
+   1.12831
+  ],
+  "r": 2.0,
+  "h": 0.0,
+  "beta": 1.0,
+  "T": 3000.0,
+  "dt": 0.2,
+  "B": 64,
+  "null": false,
+  "null_kind": "targets",
+  "seed_set": null,
+  "seed": 275991858,
+  "out": "/MALECNS_ROOT/results/m2/nature/sim/aval/aval_M2_r2_G100_c2_k0.npz",
+  "drive": [],
+  "clamp_off": [],
+  "clamp_on": [],
+  "sign_override": [],
+  "sign_ensemble": 0,
+  "ens_unit": "neuron",
+  "ens_conf": "body",
+  "ens_gt": "ignore",
+  "ens_qmiss": 0.5,
+  "ens_seed": null,
+  "ens_only": null,
+  "wtransform": "linear",
+  "wnorm": "renorm",
+  "std": null,
+  "std_group": [
+   "sign:1=0.25,157"
+  ],
+  "std_mode": "spike",
+  "adapt": null,
+  "adapt_group": [],
+  "refractory": 0,
+  "region": [],
+  "no_default_regions": false,
+  "no_occ": true,
+  "device": "cuda",
+  "engine": "push",
+  "push_max": 0.012,
+  "switch_at": null,
+  "sw_drive": [],
+  "sw_clamp_off": [],
+  "sw_clamp_on": [],
+  "rec_lin": 0.0,
+  "win": [],
+  "reg_last": false,
+  "occ_win": null,
+  "edge_sign": [],
+  "null_seed": null,
+  "graph": null,
+  "rec_counts": true,
+  "counts_win": null,
+  "counts_reg": false,
+  "pulse": "olfactory",
+  "pulse_gap": 100.0,
+  "ramp": 0.0,
+  "ramp_loop": false,
+  "ramp_avg": 0.5,
+  "init": [],
+  "init_frac": 1.0
+ },
+ "device": "cuda",
+ "gpu": "NVIDIA RTX A6000",
+ "c_raw": 0.0013406440848484635,
+ "std": {
+  "default": null,
+  "groups": [
+   {
+    "sel": "sign:1",
+    "U": 0.25,
+    "tau": 157.0,
+    "n": 103746
+   }
+  ],
+  "n_depressing": 103746,
+  "mode": "spike"
+ },
+ "counts": {
+  "steps": [
+   0,
+   15000
+  ],
+  "reg": false
+ },
+ "pulse": {
+  "sel": "olfactory",
+  "n": 2639,
+  "gap": 100.0,
+  "p_per_silent_step": 0.001998001332666921,
+  "mean_silent_interval": 100.10003333333172
+ },
+ "regions": {
+  "AL_module": {
+   "sel": "module",
+   "n": 526
+  },
+  "AL_rest": {
+   "sel": "al_rest",
+   "n": 3395
+  },
+  "CNS_rest": {
+   "sel": "cns_rest",
+   "n": 163295
+  }
+ },
+ "engine_steps": [
+  {
+   "push": 73536,
+   "spmm": 0,
+   "zero": 1464
+  }
+ ],
+ "N": 167216,
+ "nnz": [
+  24562483
+ ],
+ "steps": 15000,
+ "n_draws": 1,
+ "ms_per_step": [
+  [
+   4.667442115147908,
+   4.786460065841675,
+   4.750528033574422,
+   4.732137791315714,
+   4.748938687642416
+  ]
+ ],
+ "rho_T_mean": [
+  2.0183475498924963e-05,
+  2.2332644221023656e-05,
+  2.999488788191229e-05,
+  5.475702346302569e-05,
+  0.00015558095765300095
+ ],
+ "surv_T": [
+  0.0625,
+  0.0625,
+  0.078125,
+  0.109375,
+  0.21875
+ ],
+ "wall_s": 361.6031885147095,
+ "reg_rho_T_mean": {
+  "AL_module": [
+   0.002079372527077794,
+   0.0031487641390413046,
+   0.0008020437089726329,
+   0.002435836475342512,
+   0.004931083880364895
+  ],
+  "AL_rest": [
+   7.824006024748087e-05,
+   0.00011505890870466828,
+   1.3807069990434684e-05,
+   7.824006024748087e-05,
+   0.00016108248382806778
+  ],
+  "CNS_rest": [
+   1.2343458365648985e-05,
+   1.033405806083465e-05,
+   2.784454591164831e-05,
+   4.65989469375927e-05,
+   0.00014008389553055167
+  ]
+ }
+}

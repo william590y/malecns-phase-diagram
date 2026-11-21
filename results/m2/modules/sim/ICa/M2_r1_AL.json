@@ -1,0 +1,1900 @@
+{
+ "options": {
+  "exp": "quiet",
+  "norm": "raw",
+  "g": [
+   1.571,
+   1.9638,
+   2.5136,
+   3.9275,
+   6.284,
+   12.568
+  ],
+  "r": 1.0,
+  "h": 0.0,
+  "beta": 1.0,
+  "T": 2000.0,
+  "dt": 0.2,
+  "B": 32,
+  "null": false,
+  "null_kind": "targets",
+  "seed_set": null,
+  "seed": 62010,
+  "out": "/MALECNS_ROOT/results/m2/modules/sim/ICa/M2_r1_AL.npz",
+  "drive": [],
+  "clamp_off": [],
+  "clamp_on": [],
+  "sign_override": [],
+  "sign_ensemble": 0,
+  "ens_unit": "neuron",
+  "ens_conf": "body",
+  "ens_gt": "ignore",
+  "ens_qmiss": 0.5,
+  "ens_seed": null,
+  "ens_only": null,
+  "wtransform": "linear",
+  "wnorm": "renorm",
+  "std": null,
+  "std_group": [
+   "sign:1=0.25,157"
+  ],
+  "std_mode": "spike",
+  "adapt": null,
+  "adapt_group": [],
+  "refractory": 0,
+  "region": [
+   "ORN=olfactory",
+   "nonORN=~olfactory",
+   "uPN_ant=/MALECNS_ROOT/results/aldef/drive/groups/uPN_ant.npz",
+   "ALsys=/MALECNS_ROOT/results/aldef/drive/groups/ALsys.npz",
+   "lLN1_bc=type:lLN1_bc",
+   "P0_AL-L=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_AL-L",
+   "P0_AL-R=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_AL-R",
+   "P0_AL-mid=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_AL-mid",
+   "P0_isl1=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl1",
+   "P0_isl2=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl2",
+   "P0_isl3=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl3",
+   "P0_isl4=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl4",
+   "P0_isl5=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl5",
+   "P0_isl6=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl6",
+   "P0_isl7=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl7",
+   "P0_isl8=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl8",
+   "P0_isl9=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl9",
+   "P0_isl10=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl10",
+   "P0_isl11=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl11",
+   "P0_isl12=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl12",
+   "P0_isl13=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl13",
+   "P0_isl14=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl14",
+   "P0_isl15=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl15",
+   "P0_isl16=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl16",
+   "P0_isl17=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl17",
+   "P0_isl18=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl18",
+   "P0_isl19=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl19",
+   "P0_isl20=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl20",
+   "P0_isl21=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl21",
+   "P0_isl22=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl22",
+   "P0_isl23=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl23",
+   "P0_isl24=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl24",
+   "P0_isl25=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl25",
+   "P0_isl26=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl26",
+   "P0_isl27=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl27",
+   "P0_isl28=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl28",
+   "P0_isl29=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl29",
+   "P0_isl30=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl30",
+   "P0_rest=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_rest",
+   "P1_L0=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L0",
+   "P1_L1=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L1",
+   "P1_L2=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L2",
+   "P1_L3=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L3",
+   "P1_L4=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L4",
+   "P1_L5=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L5",
+   "P1_L6=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L6",
+   "P1_L7=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L7",
+   "P1_L8=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L8",
+   "P1_L9=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L9",
+   "P1_L10=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L10",
+   "P1_L11=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L11",
+   "P1_L12=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L12",
+   "P1_L13=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L13",
+   "P1_L14=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L14",
+   "P1_L15=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L15",
+   "P1_L16=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L16",
+   "P1_L17=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L17",
+   "P1_L18=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L18",
+   "P1_L19=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L19",
+   "P1_L20=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L20",
+   "P1_L21=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L21",
+   "P1_L22=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L22",
+   "P1_L23=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L23",
+   "P1_L24=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L24",
+   "P1_L25=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L25",
+   "P1_L26=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L26",
+   "P1_L27=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L27",
+   "P1_L28=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L28",
+   "P1_L29=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L29",
+   "P1_L30=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L30",
+   "P1_L31=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L31",
+   "P1_L32=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L32",
+   "P1_L33=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L33",
+   "P1_L34=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L34",
+   "P1_L35=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L35",
+   "P1_L36=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L36",
+   "P1_L37=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L37",
+   "P1_L38=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L38",
+   "P1_L39=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L39",
+   "P1_L40=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L40",
+   "P1_L41=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L41",
+   "P1_L42=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L42",
+   "P1_L43=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L43",
+   "P1_L44=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L44",
+   "P1_L45=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L45",
+   "P1_L46=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L46",
+   "P1_L47=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L47",
+   "P1_L48=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L48",
+   "P1_L49=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L49",
+   "P1_small=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_small",
+   "P2_ol_intrinsic_R=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_ol_intrinsic_R",
+   "P2_ol_intrinsic_L=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_ol_intrinsic_L",
+   "P2_cb_intrinsic_R=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_cb_intrinsic_R",
+   "P2_cb_intrinsic_L=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_cb_intrinsic_L",
+   "P2_vnc_intrinsic_L=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_vnc_intrinsic_L",
+   "P2_vnc_intrinsic_R=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_vnc_intrinsic_R",
+   "P2_visual_projection_R=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_visual_projection_R",
+   "P2_visual_projection_L=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_visual_projection_L",
+   "P2_ol_sensory_R=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_ol_sensory_R",
+   "P2_vnc_sensory_L=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_vnc_sensory_L",
+   "P2_vnc_sensory_R=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_vnc_sensory_R",
+   "P2_cb_sensory_R=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_cb_sensory_R",
+   "P2_ol_sensory_L=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_ol_sensory_L",
+   "P2_cb_sensory_L=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_cb_sensory_L",
+   "P2_ascending_neuron_L=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_ascending_neuron_L",
+   "P2_ascending_neuron_R=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_ascending_neuron_R",
+   "P2_descending_neuron_L=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_descending_neuron_L",
+   "P2_descending_neuron_R=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_descending_neuron_R",
+   "P2_cb_sensory_U=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_cb_sensory_U",
+   "P2_vnc_motor_L=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_vnc_motor_L",
+   "P2_vnc_motor_R=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_vnc_motor_R",
+   "P2_visual_centrifugal_L=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_visual_centrifugal_L",
+   "P2_visual_centrifugal_R=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_visual_centrifugal_R",
+   "P2_sensory_ascending_R=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_sensory_ascending_R",
+   "P2_sensory_ascending_L=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_sensory_ascending_L",
+   "P2_vnc_intrinsic_M=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_vnc_intrinsic_M",
+   "P2_U_R=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_U_R",
+   "P2_U_L=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_U_L",
+   "P2_U_U=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_U_U",
+   "P2_cb_intrinsic_M=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_cb_intrinsic_M",
+   "P2_vnc_efferent_M=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_vnc_efferent_M",
+   "P2_cb_motor_L=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_cb_motor_L",
+   "P2_cb_motor_R=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_cb_motor_R",
+   "P2_small=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_small",
+   "HEM_L=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_HEM_L",
+   "HEM_R=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_HEM_R",
+   "S_AL=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_S_AL",
+   "S_nonAL=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_S_nonAL",
+   "S_CB=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_S_CB",
+   "S_VNC=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_S_VNC",
+   "S_OL=idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_S_OL"
+  ],
+  "no_default_regions": false,
+  "no_occ": false,
+  "device": "cuda",
+  "engine": "push",
+  "push_max": 0.012,
+  "switch_at": null,
+  "sw_drive": [],
+  "sw_clamp_off": [],
+  "sw_clamp_on": [],
+  "rec_lin": 5.0,
+  "win": [
+   "500:1000",
+   "1000:1500",
+   "1500:2000"
+  ],
+  "reg_last": true,
+  "occ_win": null,
+  "edge_sign": [],
+  "null_seed": null,
+  "graph": null,
+  "rec_counts": false,
+  "counts_win": null,
+  "counts_reg": false,
+  "pulse": null,
+  "pulse_gap": 0.0,
+  "ramp": 0.0,
+  "ramp_loop": false,
+  "ramp_avg": 0.5,
+  "init": [
+   "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:S_AL"
+  ],
+  "init_frac": 1.0
+ },
+ "device": "cuda",
+ "gpu": "NVIDIA RTX A6000",
+ "c_raw": 0.0013406440848484635,
+ "std": {
+  "default": null,
+  "groups": [
+   {
+    "sel": "sign:1",
+    "U": 0.25,
+    "tau": 157.0,
+    "n": 103746
+   }
+  ],
+  "n_depressing": 103746,
+  "mode": "spike"
+ },
+ "windows_steps": [
+  [
+   2500,
+   5000
+  ],
+  [
+   5000,
+   7500
+  ],
+  [
+   7500,
+   10000
+  ]
+ ],
+ "init": {
+  "sel": [
+   "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:S_AL"
+  ],
+  "n": 526,
+  "frac": 1.0
+ },
+ "regions": {
+  "AL_module": {
+   "sel": "module",
+   "n": 526
+  },
+  "AL_rest": {
+   "sel": "al_rest",
+   "n": 3395
+  },
+  "CNS_rest": {
+   "sel": "cns_rest",
+   "n": 163295
+  },
+  "ORN": {
+   "sel": "olfactory",
+   "n": 2639
+  },
+  "nonORN": {
+   "sel": "~olfactory",
+   "n": 164577
+  },
+  "uPN_ant": {
+   "sel": "/MALECNS_ROOT/results/aldef/drive/groups/uPN_ant.npz",
+   "n": 220
+  },
+  "ALsys": {
+   "sel": "/MALECNS_ROOT/results/aldef/drive/groups/ALsys.npz",
+   "n": 1282
+  },
+  "lLN1_bc": {
+   "sel": "type:lLN1_bc",
+   "n": 30
+  },
+  "P0_AL-L": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_AL-L",
+   "n": 248
+  },
+  "P0_AL-R": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_AL-R",
+   "n": 275
+  },
+  "P0_AL-mid": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_AL-mid",
+   "n": 3
+  },
+  "P0_isl1": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl1",
+   "n": 2292
+  },
+  "P0_isl2": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl2",
+   "n": 75
+  },
+  "P0_isl3": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl3",
+   "n": 234
+  },
+  "P0_isl4": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl4",
+   "n": 127
+  },
+  "P0_isl5": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl5",
+   "n": 221
+  },
+  "P0_isl6": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl6",
+   "n": 49
+  },
+  "P0_isl7": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl7",
+   "n": 158
+  },
+  "P0_isl8": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl8",
+   "n": 29
+  },
+  "P0_isl9": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl9",
+   "n": 426
+  },
+  "P0_isl10": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl10",
+   "n": 34
+  },
+  "P0_isl11": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl11",
+   "n": 77
+  },
+  "P0_isl12": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl12",
+   "n": 113
+  },
+  "P0_isl13": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl13",
+   "n": 131
+  },
+  "P0_isl14": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl14",
+   "n": 127
+  },
+  "P0_isl15": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl15",
+   "n": 24
+  },
+  "P0_isl16": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl16",
+   "n": 22
+  },
+  "P0_isl17": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl17",
+   "n": 315
+  },
+  "P0_isl18": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl18",
+   "n": 418
+  },
+  "P0_isl19": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl19",
+   "n": 67
+  },
+  "P0_isl20": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl20",
+   "n": 501
+  },
+  "P0_isl21": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl21",
+   "n": 40
+  },
+  "P0_isl22": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl22",
+   "n": 707
+  },
+  "P0_isl23": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl23",
+   "n": 20
+  },
+  "P0_isl24": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl24",
+   "n": 153
+  },
+  "P0_isl25": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl25",
+   "n": 428
+  },
+  "P0_isl26": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl26",
+   "n": 791
+  },
+  "P0_isl27": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl27",
+   "n": 160
+  },
+  "P0_isl28": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl28",
+   "n": 26
+  },
+  "P0_isl29": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl29",
+   "n": 39
+  },
+  "P0_isl30": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_isl30",
+   "n": 141
+  },
+  "P0_rest": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P0_rest",
+   "n": 158745
+  },
+  "P1_L0": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L0",
+   "n": 8622
+  },
+  "P1_L1": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L1",
+   "n": 7983
+  },
+  "P1_L2": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L2",
+   "n": 7752
+  },
+  "P1_L3": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L3",
+   "n": 7467
+  },
+  "P1_L4": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L4",
+   "n": 6911
+  },
+  "P1_L5": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L5",
+   "n": 6898
+  },
+  "P1_L6": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L6",
+   "n": 6743
+  },
+  "P1_L7": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L7",
+   "n": 6632
+  },
+  "P1_L8": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L8",
+   "n": 6566
+  },
+  "P1_L9": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L9",
+   "n": 4970
+  },
+  "P1_L10": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L10",
+   "n": 4814
+  },
+  "P1_L11": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L11",
+   "n": 4762
+  },
+  "P1_L12": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L12",
+   "n": 4653
+  },
+  "P1_L13": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L13",
+   "n": 4560
+  },
+  "P1_L14": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L14",
+   "n": 4483
+  },
+  "P1_L15": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L15",
+   "n": 4467
+  },
+  "P1_L16": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L16",
+   "n": 4243
+  },
+  "P1_L17": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L17",
+   "n": 3736
+  },
+  "P1_L18": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L18",
+   "n": 3641
+  },
+  "P1_L19": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L19",
+   "n": 3492
+  },
+  "P1_L20": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L20",
+   "n": 3402
+  },
+  "P1_L21": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L21",
+   "n": 3023
+  },
+  "P1_L22": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L22",
+   "n": 2869
+  },
+  "P1_L23": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L23",
+   "n": 2867
+  },
+  "P1_L24": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L24",
+   "n": 2782
+  },
+  "P1_L25": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L25",
+   "n": 2273
+  },
+  "P1_L26": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L26",
+   "n": 2249
+  },
+  "P1_L27": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L27",
+   "n": 2245
+  },
+  "P1_L28": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L28",
+   "n": 2101
+  },
+  "P1_L29": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L29",
+   "n": 2054
+  },
+  "P1_L30": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L30",
+   "n": 2054
+  },
+  "P1_L31": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L31",
+   "n": 2053
+  },
+  "P1_L32": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L32",
+   "n": 2041
+  },
+  "P1_L33": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L33",
+   "n": 2012
+  },
+  "P1_L34": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L34",
+   "n": 1971
+  },
+  "P1_L35": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L35",
+   "n": 1939
+  },
+  "P1_L36": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L36",
+   "n": 1857
+  },
+  "P1_L37": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L37",
+   "n": 1675
+  },
+  "P1_L38": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L38",
+   "n": 1614
+  },
+  "P1_L39": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L39",
+   "n": 1531
+  },
+  "P1_L40": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L40",
+   "n": 1513
+  },
+  "P1_L41": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L41",
+   "n": 1208
+  },
+  "P1_L42": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L42",
+   "n": 931
+  },
+  "P1_L43": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L43",
+   "n": 831
+  },
+  "P1_L44": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L44",
+   "n": 617
+  },
+  "P1_L45": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L45",
+   "n": 580
+  },
+  "P1_L46": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L46",
+   "n": 488
+  },
+  "P1_L47": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L47",
+   "n": 479
+  },
+  "P1_L48": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L48",
+   "n": 345
+  },
+  "P1_L49": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_L49",
+   "n": 322
+  },
+  "P1_small": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P1_small",
+   "n": 1895
+  },
+  "P2_ol_intrinsic_R": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_ol_intrinsic_R",
+   "n": 44795
+  },
+  "P2_ol_intrinsic_L": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_ol_intrinsic_L",
+   "n": 44606
+  },
+  "P2_cb_intrinsic_R": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_cb_intrinsic_R",
+   "n": 16052
+  },
+  "P2_cb_intrinsic_L": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_cb_intrinsic_L",
+   "n": 16028
+  },
+  "P2_vnc_intrinsic_L": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_vnc_intrinsic_L",
+   "n": 6473
+  },
+  "P2_vnc_intrinsic_R": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_vnc_intrinsic_R",
+   "n": 6450
+  },
+  "P2_visual_projection_R": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_visual_projection_R",
+   "n": 4612
+  },
+  "P2_visual_projection_L": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_visual_projection_L",
+   "n": 4589
+  },
+  "P2_ol_sensory_R": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_ol_sensory_R",
+   "n": 3749
+  },
+  "P2_vnc_sensory_L": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_vnc_sensory_L",
+   "n": 3186
+  },
+  "P2_vnc_sensory_R": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_vnc_sensory_R",
+   "n": 3170
+  },
+  "P2_cb_sensory_R": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_cb_sensory_R",
+   "n": 2494
+  },
+  "P2_ol_sensory_L": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_ol_sensory_L",
+   "n": 2349
+  },
+  "P2_cb_sensory_L": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_cb_sensory_L",
+   "n": 1961
+  },
+  "P2_ascending_neuron_L": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_ascending_neuron_L",
+   "n": 930
+  },
+  "P2_ascending_neuron_R": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_ascending_neuron_R",
+   "n": 907
+  },
+  "P2_descending_neuron_L": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_descending_neuron_L",
+   "n": 656
+  },
+  "P2_descending_neuron_R": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_descending_neuron_R",
+   "n": 648
+  },
+  "P2_cb_sensory_U": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_cb_sensory_U",
+   "n": 413
+  },
+  "P2_vnc_motor_L": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_vnc_motor_L",
+   "n": 355
+  },
+  "P2_vnc_motor_R": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_vnc_motor_R",
+   "n": 353
+  },
+  "P2_visual_centrifugal_L": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_visual_centrifugal_L",
+   "n": 283
+  },
+  "P2_visual_centrifugal_R": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_visual_centrifugal_R",
+   "n": 280
+  },
+  "P2_sensory_ascending_R": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_sensory_ascending_R",
+   "n": 269
+  },
+  "P2_sensory_ascending_L": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_sensory_ascending_L",
+   "n": 267
+  },
+  "P2_vnc_intrinsic_M": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_vnc_intrinsic_M",
+   "n": 231
+  },
+  "P2_U_R": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_U_R",
+   "n": 209
+  },
+  "P2_U_L": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_U_L",
+   "n": 170
+  },
+  "P2_U_U": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_U_U",
+   "n": 137
+  },
+  "P2_cb_intrinsic_M": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_cb_intrinsic_M",
+   "n": 77
+  },
+  "P2_vnc_efferent_M": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_vnc_efferent_M",
+   "n": 63
+  },
+  "P2_cb_motor_L": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_cb_motor_L",
+   "n": 54
+  },
+  "P2_cb_motor_R": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_cb_motor_R",
+   "n": 53
+  },
+  "P2_small": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_P2_small",
+   "n": 347
+  },
+  "HEM_L": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_HEM_L",
+   "n": 81992
+  },
+  "HEM_R": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_HEM_R",
+   "n": 84145
+  },
+  "S_AL": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_S_AL",
+   "n": 526
+  },
+  "S_nonAL": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_S_nonAL",
+   "n": 166690
+  },
+  "S_CB": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_S_CB",
+   "n": 38545
+  },
+  "S_VNC": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_S_VNC",
+   "n": 22822
+  },
+  "S_OL": {
+   "sel": "idx:/MALECNS_ROOT/results/m2/modules/groups/regions.npz:R_S_OL",
+   "n": 105267
+  }
+ },
+ "engine_steps": [
+  {
+   "push": 39487,
+   "spmm": 20513,
+   "zero": 0
+  }
+ ],
+ "N": 167216,
+ "nnz": [
+  24562483
+ ],
+ "steps": 10000,
+ "n_draws": 1,
+ "ms_per_step": [
+  [
+   3.2465546131134033,
+   3.7383984327316284,
+   4.228811979293823,
+   5.253843688964844,
+   5.277641820907593,
+   5.283821845054626
+  ]
+ ],
+ "rho_T_mean": [
+  0.001025806413963437,
+  0.0020168526098132133,
+  0.002748129889369011,
+  0.004331971984356642,
+  0.00645460095256567,
+  0.011372641660273075
+ ],
+ "surv_T": [
+  0.75,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0
+ ],
+ "wall_s": 273.16695046424866,
+ "reg_rho_T_mean": {
+  "AL_module": [
+   0.017110265791416168,
+   0.03433935344219208,
+   0.04960789158940315,
+   0.064519964158535,
+   0.08721482753753662,
+   0.08715541660785675
+  ],
+  "AL_rest": [
+   0.0007455816958099604,
+   0.0013254786608740687,
+   0.001509572844952345,
+   0.0031019882299005985,
+   0.004418262280523777,
+   0.006572164595127106
+  ],
+  "CNS_rest": [
+   0.0009798217797651887,
+   0.0019271104829385877,
+   0.0026229368522763252,
+   0.004163668490946293,
+   0.006236795336008072,
+   0.011228336952626705
+  ],
+  "ORN": [
+   0.00036708981497213244,
+   0.0005802387022413313,
+   0.0005328722763806581,
+   0.0010894278530031443,
+   0.001255210256204009,
+   0.00311434268951416
+  ],
+  "nonORN": [
+   0.0010363690089434385,
+   0.0020398886408656836,
+   0.00278365146368742,
+   0.004383965861052275,
+   0.006537972949445248,
+   0.011505062691867352
+  ],
+  "uPN_ant": [
+   0.003977272659540176,
+   0.007528408896178007,
+   0.010795454494655132,
+   0.01150568202137947,
+   0.012357953935861588,
+   0.014630681835114956
+  ],
+  "ALsys": [
+   0.008239079266786575,
+   0.016405031085014343,
+   0.02325468137860298,
+   0.03244442120194435,
+   0.044900547713041306,
+   0.04675311967730522
+  ],
+  "lLN1_bc": [
+   0.07395833730697632,
+   0.16770833730697632,
+   0.22291666269302368,
+   0.3427083492279053,
+   0.4208333492279053,
+   0.4010416567325592
+  ],
+  "P0_AL-L": [
+   0.019909273833036423,
+   0.03490423411130905,
+   0.05317540466785431,
+   0.06766633689403534,
+   0.08455140888690948,
+   0.09160786867141724
+  ],
+  "P0_AL-R": [
+   0.014772727154195309,
+   0.03374999761581421,
+   0.04647727310657501,
+   0.06204545497894287,
+   0.09000000357627869,
+   0.0835227221250534
+  ],
+  "P0_AL-mid": [
+   0.0,
+   0.0416666679084301,
+   0.0416666679084301,
+   0.03125,
+   0.0520833358168602,
+   0.0520833358168602
+  ],
+  "P0_isl1": [
+   0.017383836209774017,
+   0.031958989799022675,
+   0.037385471165180206,
+   0.04990183562040329,
+   0.05849149450659752,
+   0.07205770164728165
+  ],
+  "P0_isl2": [
+   0.002916666679084301,
+   0.016249999403953552,
+   0.019999999552965164,
+   0.03125,
+   0.051666662096977234,
+   0.027499999850988388
+  ],
+  "P0_isl3": [
+   0.007345085497945547,
+   0.012820513918995857,
+   0.022302351891994476,
+   0.03699252009391785,
+   0.040464743971824646,
+   0.05755876377224922
+  ],
+  "P0_isl4": [
+   0.01131889782845974,
+   0.011564960703253746,
+   0.02189960703253746,
+   0.030757876113057137,
+   0.033710628747940063,
+   0.057578735053539276
+  ],
+  "P0_isl5": [
+   0.0066459281370043755,
+   0.013574661687016487,
+   0.020927604287862778,
+   0.018665160983800888,
+   0.03181561082601547,
+   0.04991516098380089
+  ],
+  "P0_isl6": [
+   0.00956632662564516,
+   0.01339285634458065,
+   0.024872448295354843,
+   0.01913265325129032,
+   0.022959183901548386,
+   0.0535714291036129
+  ],
+  "P0_isl7": [
+   0.006526899058371782,
+   0.011867089197039604,
+   0.015031645074486732,
+   0.028085442259907722,
+   0.02650316432118416,
+   0.0357990488409996
+  ],
+  "P0_isl8": [
+   0.0,
+   0.011853449046611786,
+   0.019396550953388214,
+   0.014008620753884315,
+   0.042025864124298096,
+   0.052801720798015594
+  ],
+  "P0_isl9": [
+   0.009316314943134785,
+   0.017165493220090866,
+   0.017458919435739517,
+   0.03014964982867241,
+   0.038218893110752106,
+   0.050836265087127686
+  ],
+  "P0_isl10": [
+   0.0036764706019312143,
+   0.013786764815449715,
+   0.008272059261798859,
+   0.020220588892698288,
+   0.021139707416296005,
+   0.028492648154497147
+  ],
+  "P0_isl11": [
+   0.009334416128695011,
+   0.015422077849507332,
+   0.022727273404598236,
+   0.022727273404598236,
+   0.03165584057569504,
+   0.05032467097043991
+  ],
+  "P0_isl12": [
+   0.006360619328916073,
+   0.01603982225060463,
+   0.016316372901201248,
+   0.03097345121204853,
+   0.0511615052819252,
+   0.06332965195178986
+  ],
+  "P0_isl13": [
+   0.0076335882768034935,
+   0.01765267178416252,
+   0.018129771575331688,
+   0.030534353107213974,
+   0.04174618422985077,
+   0.056059159338474274
+  ],
+  "P0_isl14": [
+   0.008120078593492508,
+   0.01722440868616104,
+   0.020915353670716286,
+   0.03395669162273407,
+   0.03863188996911049,
+   0.04527559131383896
+  ],
+  "P0_isl15": [
+   0.0078125,
+   0.006510416977107525,
+   0.0078125,
+   0.015625,
+   0.014322916977107525,
+   0.0455729179084301
+  ],
+  "P0_isl16": [
+   0.011363636702299118,
+   0.019886363297700882,
+   0.02556818351149559,
+   0.03125,
+   0.05113636329770088,
+   0.06392045319080353
+  ],
+  "P0_isl17": [
+   0.00992063619196415,
+   0.01329365186393261,
+   0.01904761977493763,
+   0.03214285895228386,
+   0.04176587611436844,
+   0.05426587909460068
+  ],
+  "P0_isl18": [
+   0.006728468928486109,
+   0.014952152967453003,
+   0.015026913955807686,
+   0.03027810901403427,
+   0.034838516265153885,
+   0.05128588527441025
+  ],
+  "P0_isl19": [
+   0.011194029822945595,
+   0.020522387698292732,
+   0.021921642124652863,
+   0.034981343895196915,
+   0.05317164212465286,
+   0.058768656104803085
+  ],
+  "P0_isl20": [
+   0.007173153106123209,
+   0.012287924066185951,
+   0.015656188130378723,
+   0.02426397241652012,
+   0.029378741979599,
+   0.04609530791640282
+  ],
+  "P0_isl21": [
+   0.007031249813735485,
+   0.01640625111758709,
+   0.014062500558793545,
+   0.03046875074505806,
+   0.03671875223517418,
+   0.04375000298023224
+  ],
+  "P0_isl22": [
+   0.005127298645675182,
+   0.009237976744771004,
+   0.011403819546103477,
+   0.023603253066539764,
+   0.03120579943060875,
+   0.04906294494867325
+  ],
+  "P0_isl23": [
+   0.0015625000232830644,
+   0.01718750037252903,
+   0.02500000037252903,
+   0.02812499925494194,
+   0.04062499850988388,
+   0.05312500149011612
+  ],
+  "P0_isl24": [
+   0.006331699900329113,
+   0.011846406385302544,
+   0.014910131692886353,
+   0.02491830289363861,
+   0.02859477326273918,
+   0.04248366504907608
+  ],
+  "P0_isl25": [
+   0.004891938995569944,
+   0.00883469544351101,
+   0.013215537182986736,
+   0.02080899477005005,
+   0.03110397234559059,
+   0.0494304895401001
+  ],
+  "P0_isl26": [
+   0.00446428544819355,
+   0.007940897718071938,
+   0.009600190445780754,
+   0.015052150003612041,
+   0.020820163190364838,
+   0.031052466481924057
+  ],
+  "P0_isl27": [
+   0.0062500000931322575,
+   0.015234376303851604,
+   0.01894531212747097,
+   0.02402343600988388,
+   0.03398437425494194,
+   0.044921875
+  ],
+  "P0_isl28": [
+   0.0,
+   0.0,
+   0.0,
+   0.003605769481509924,
+   0.003605769481509924,
+   0.008413461968302727
+  ],
+  "P0_isl29": [
+   0.0024038462433964014,
+   0.008012820966541767,
+   0.014423077926039696,
+   0.017628207802772522,
+   0.016826923936605453,
+   0.03205128386616707
+  ],
+  "P0_isl30": [
+   0.004210992716252804,
+   0.006427304819226265,
+   0.012189716100692749,
+   0.021276595070958138,
+   0.025487586855888367,
+   0.037234045565128326
+  ],
+  "P0_rest": [
+   0.0005407650605775416,
+   0.0011179485591128469,
+   0.0016429650131613016,
+   0.0027408343739807606,
+   0.00451569352298975,
+   0.00899910181760788
+  ],
+  "P1_L0": [
+   0.0001232312642969191,
+   0.00035519601078704,
+   0.0005291695706546307,
+   0.0008082521380856633,
+   0.0016165042761713266,
+   0.004787897691130638
+  ],
+  "P1_L1": [
+   0.00016832645633257926,
+   0.0004462607903406024,
+   0.0007515971083194017,
+   0.001358355162665248,
+   0.0021256105974316597,
+   0.005245521664619446
+  ],
+  "P1_L2": [
+   0.0002459042880218476,
+   0.0007538377540186048,
+   0.0010078044142574072,
+   0.0020156088285148144,
+   0.00368856405839324,
+   0.007195723708719015
+  ],
+  "P1_L3": [
+   0.00010881210619118065,
+   0.0003180661587975919,
+   0.00046454399125650525,
+   0.0006445024046115577,
+   0.001845620688982308,
+   0.004867249168455601
+  ],
+  "P1_L4": [
+   0.00017634930554777384,
+   0.0004928737180307508,
+   0.0008229634258896112,
+   0.001293228124268353,
+   0.002315149875357747,
+   0.00608178973197937
+  ],
+  "P1_L5": [
+   0.0002219846355728805,
+   0.00041678745765239,
+   0.0006659539649263024,
+   0.0011506958398967981,
+   0.0024961945600807667,
+   0.0060570091009140015
+  ],
+  "P1_L6": [
+   0.00013439863687381148,
+   0.00030587275978177786,
+   0.00036612042458727956,
+   0.00065345544135198,
+   0.0015571704134345055,
+   0.005292525514960289
+  ],
+  "P1_L7": [
+   0.00015549609088338912,
+   0.0004853362624999136,
+   0.0005984243471175432,
+   0.0011780005879700184,
+   0.0023324410431087017,
+   0.004947602283209562
+  ],
+  "P1_L8": [
+   0.00015705908299423754,
+   0.0004711772780865431,
+   0.0006520331953652203,
+   0.0013564194086939096,
+   0.0020322492346167564,
+   0.005773111246526241
+  ],
+  "P1_L9": [
+   0.00036468810867518187,
+   0.0007168007432483137,
+   0.000962022109888494,
+   0.002232142724096775,
+   0.004495724570006132,
+   0.009274397045373917
+  ],
+  "P1_L10": [
+   0.0003180826606694609,
+   0.0005323016084730625,
+   0.0010321458103135228,
+   0.002161663956940174,
+   0.004894578363746405,
+   0.009503531269729137
+  ],
+  "P1_L11": [
+   0.0003215560573153198,
+   0.00041999161476269364,
+   0.0006890486693009734,
+   0.0010631036711856723,
+   0.00241495156660676,
+   0.005650199484080076
+  ],
+  "P1_L12": [
+   0.003002095501869917,
+   0.005748979281634092,
+   0.007286965847015381,
+   0.011034547351300716,
+   0.016044754534959793,
+   0.02515849843621254
+  ],
+  "P1_L13": [
+   0.00014391448348760605,
+   0.00039062503492459655,
+   0.0007675439119338989,
+   0.00112390355207026,
+   0.0021450109779834747,
+   0.005893640220165253
+  ],
+  "P1_L14": [
+   0.002690720371901989,
+   0.005186259280890226,
+   0.007277493365108967,
+   0.010463139042258263,
+   0.01457589864730835,
+   0.016576511785387993
+  ],
+  "P1_L15": [
+   0.00012592344137374312,
+   0.00043373630614951253,
+   0.0006506044883280993,
+   0.0008534811204299331,
+   0.0022316433023661375,
+   0.005148869473487139
+  ],
+  "P1_L16": [
+   0.00022831722162663937,
+   0.000559745472855866,
+   0.0007217770908027887,
+   0.0011636813869699836,
+   0.002938663586974144,
+   0.005361772142350674
+  ],
+  "P1_L17": [
+   0.0001589266466908157,
+   0.0003513115516398102,
+   0.0006942586041986942,
+   0.0010204764548689127,
+   0.002291889861226082,
+   0.004960184451192617
+  ],
+  "P1_L18": [
+   0.0011844272958114743,
+   0.0025405108463019133,
+   0.0032099697273224592,
+   0.005587407387793064,
+   0.009003364481031895,
+   0.013560835272073746
+  ],
+  "P1_L19": [
+   0.001064934185706079,
+   0.0014765893574804068,
+   0.002541523426771164,
+   0.003275343682616949,
+   0.004796678200364113,
+   0.010309278964996338
+  ],
+  "P1_L20": [
+   0.0022872574627399445,
+   0.003986625000834465,
+   0.005263448227196932,
+   0.008607069030404091,
+   0.010076792910695076,
+   0.015321869403123856
+  ],
+  "P1_L21": [
+   0.0013025141088292003,
+   0.0030908863991498947,
+   0.004713860340416431,
+   0.006967416498810053,
+   0.010513149201869965,
+   0.013138853013515472
+  ],
+  "P1_L22": [
+   0.001241721911355853,
+   0.0030607355292886496,
+   0.004454949405044317,
+   0.00767906941473484,
+   0.012330080382525921,
+   0.01854958012700081
+  ],
+  "P1_L23": [
+   0.0033244681544601917,
+   0.006550837308168411,
+   0.007270229980349541,
+   0.010278601199388504,
+   0.013297872617840767,
+   0.01740713231265545
+  ],
+  "P1_L24": [
+   0.001752336509525776,
+   0.003257548436522484,
+   0.004672897048294544,
+   0.00889647752046585,
+   0.015815960243344307,
+   0.029070813208818436
+  ],
+  "P1_L25": [
+   0.0019110206048935652,
+   0.00342333922162652,
+   0.005375605076551437,
+   0.009610096924006939,
+   0.013418389484286308,
+   0.019728882238268852
+  ],
+  "P1_L26": [
+   0.0015145620563998818,
+   0.0036405071150511503,
+   0.006780791562050581,
+   0.012366607785224915,
+   0.017521675676107407,
+   0.039600931107997894
+  ],
+  "P1_L27": [
+   0.0014755011070519686,
+   0.0023524498101323843,
+   0.006556236185133457,
+   0.011080177500844002,
+   0.017483297735452652,
+   0.050417594611644745
+  ],
+  "P1_L28": [
+   0.0022608283907175064,
+   0.0042093051597476006,
+   0.0051909806206822395,
+   0.008314492180943489,
+   0.01114052813500166,
+   0.016643859446048737
+  ],
+  "P1_L29": [
+   0.003970910795032978,
+   0.007576679810881615,
+   0.009326314553618431,
+   0.015746712684631348,
+   0.02040226384997368,
+   0.02896786853671074
+  ],
+  "P1_L30": [
+   0.0030884859152138233,
+   0.005309761501848698,
+   0.005796615965664387,
+   0.009098101407289505,
+   0.009980525821447372,
+   0.013921007513999939
+  ],
+  "P1_L31": [
+   0.0026790061965584755,
+   0.004612153396010399,
+   0.006469191052019596,
+   0.008737213909626007,
+   0.01505418960005045,
+   0.02079274132847786
+  ],
+  "P1_L32": [
+   0.0027866242453455925,
+   0.006078515201807022,
+   0.007548383437097073,
+   0.009538829326629639,
+   0.01080965157598257,
+   0.019690103828907013
+  ],
+  "P1_L33": [
+   0.003587847575545311,
+   0.005141028668731451,
+   0.006973782554268837,
+   0.011027583852410316,
+   0.013217569328844547,
+   0.01658797264099121
+  ],
+  "P1_L34": [
+   0.0031709792092442513,
+   0.005977295804768801,
+   0.006548072211444378,
+   0.010495941154658794,
+   0.01111428253352642,
+   0.016362253576517105
+  ],
+  "P1_L35": [
+   0.0020145694725215435,
+   0.003835740266367793,
+   0.004496518988162279,
+   0.0071235173381865025,
+   0.010040612891316414,
+   0.01348955649882555
+  ],
+  "P1_L36": [
+   0.00013462573406286538,
+   0.0004375335993245244,
+   0.0008918954990804195,
+   0.0017333063296973705,
+   0.0025578890927135944,
+   0.0056542810052633286
+  ],
+  "P1_L37": [
+   0.004048507194966078,
+   0.008152985014021397,
+   0.010466417297720909,
+   0.014962686225771904,
+   0.01901119388639927,
+   0.029626866802573204
+  ],
+  "P1_L38": [
+   0.0002517038374207914,
+   0.0006195786991156638,
+   0.001161710126325488,
+   0.0011036245850846171,
+   0.002536400221288204,
+   0.005092162638902664
+  ],
+  "P1_L39": [
+   0.005837687291204929,
+   0.011185498908162117,
+   0.013104179874062538,
+   0.01853363774716854,
+   0.024044740945100784,
+   0.03339320421218872
+  ],
+  "P1_L40": [
+   0.003036186331883073,
+   0.00640284176915884,
+   0.007786682341247797,
+   0.01253717765212059,
+   0.013487277552485466,
+   0.02042713202536106
+  ],
+  "P1_L41": [
+   0.00025869207456707954,
+   0.00023282285837922245,
+   0.0004139072843827307,
+   0.0007760761654935777,
+   0.0010606374125927687,
+   0.0025869207456707954
+  ],
+  "P1_L42": [
+   0.0074516646564006805,
+   0.013426424004137516,
+   0.01638023555278778,
+   0.018998388200998306,
+   0.025610901415348053,
+   0.03846670314669609
+  ],
+  "P1_L43": [
+   0.00011281589104328305,
+   0.00033844768768176436,
+   0.0004888688563369215,
+   0.0007897112518548965,
+   0.0010153430048376322,
+   0.0034972927533090115
+  ],
+  "P1_L44": [
+   0.0004558346699923277,
+   0.0011649108491837978,
+   0.0019752837251871824,
+   0.0035960290115326643,
+   0.010129660367965698,
+   0.011193273589015007
+  ],
+  "P1_L45": [
+   0.0011314655421301723,
+   0.0015624999068677425,
+   0.0027478449046611786,
+   0.005872844718396664,
+   0.007381465286016464,
+   0.014116378501057625
+  ],
+  "P1_L46": [
+   0.000384221290005371,
+   0.001088626915588975,
+   0.0017289959359914064,
+   0.003329917788505554,
+   0.005891393404453993,
+   0.010822232812643051
+  ],
+  "P1_L47": [
+   0.001043841359205544,
+   0.001500522019341588,
+   0.0033272444270551205,
+   0.005414927378296852,
+   0.00671972893178463,
+   0.014939979650080204
+  ],
+  "P1_L48": [
+   0.0009057971183210611,
+   0.004619565326720476,
+   0.006884058006107807,
+   0.0062500000931322575,
+   0.01195652224123478,
+   0.017391305416822433
+  ],
+  "P1_L49": [
+   0.00029114907374605536,
+   0.000776397529989481,
+   0.0011645962949842215,
+   0.003979037515819073,
+   0.004270186647772789,
+   0.008734472095966339
+  ],
+  "P1_small": [
+   3.298153023933992e-05,
+   0.00011543535947566852,
+   8.24538292363286e-05,
+   8.24538292363286e-05,
+   0.0001649076584726572,
+   0.0001649076584726572
+  ],
+  "P2_ol_intrinsic_R": [
+   0.00018138185259886086,
+   0.000508566852658987,
+   0.0007157606887631118,
+   0.0013540852814912796,
+   0.0026474774349480867,
+   0.006018389016389847
+  ],
+  "P2_ol_intrinsic_L": [
+   0.0001534266775706783,
+   0.0003600972704589367,
+   0.0005737737519666553,
+   0.0009464814211241901,
+   0.0021430691704154015,
+   0.00555138336494565
+  ],
+  "P2_cb_intrinsic_R": [
+   0.0026048156432807446,
+   0.005396523978561163,
+   0.007403672207146883,
+   0.011589288711547852,
+   0.016142848879098892,
+   0.02593134716153145
+  ],
+  "P2_cb_intrinsic_L": [
+   0.002427392639219761,
+   0.004807991907000542,
+   0.0068220458924770355,
+   0.010561594739556313,
+   0.015724435448646545,
+   0.026432259008288383
+  ],
+  "P2_vnc_intrinsic_L": [
+   0.003360111266374588,
+   0.006044337991625071,
+   0.007270585745573044,
+   0.011509345844388008,
+   0.01449289359152317,
+   0.02184554934501648
+  ],
+  "P2_vnc_intrinsic_R": [
+   0.0029069767333567142,
+   0.005164728499948978,
+   0.006632751785218716,
+   0.010377906262874603,
+   0.013149225153028965,
+   0.020387597382068634
+  ],
+  "P2_visual_projection_R": [
+   0.0005691674305126071,
+   0.0010570252779871225,
+   0.0018226908287033439,
+   0.002601908054202795,
+   0.004804044030606747,
+   0.009059246629476547
+  ],
+  "P2_visual_projection_L": [
+   0.0003064393240492791,
+   0.0007014055154286325,
+   0.0014436696656048298,
+   0.0022608411964029074,
+   0.004010950215160847,
+   0.008069569244980812
+  ],
+  "P2_ol_sensory_R": [
+   0.0,
+   0.0,
+   0.0,
+   2.5006669602589682e-05,
+   0.0001250333443749696,
+   0.0002333955781068653
+  ],
+  "P2_vnc_sensory_L": [
+   9.808537470235024e-06,
+   3.9234149880940095e-05,
+   6.865976320113987e-05,
+   6.865976320113987e-05,
+   8.827683632262051e-05,
+   0.0010691306088119745
+  ],
+  "P2_vnc_sensory_R": [
+   9.85804399533663e-06,
+   2.957413198600989e-05,
+   3.943217598134652e-05,
+   1.971608799067326e-05,
+   0.0001380126050207764,
+   0.0009266561828553677
+  ],
+  "P2_cb_sensory_R": [
+   0.00027566158678382635,
+   0.0004260224523022771,
+   0.00051373295718804,
+   0.0009021651931107044,
+   0.0011903569102287292,
+   0.0024183038622140884
+  ],
+  "P2_ol_sensory_L": [
+   2.6607067411532626e-05,
+   0.0,
+   0.0,
+   0.0,
+   3.9910599298309535e-05,
+   0.00017294593271799386
+  ],
+  "P2_cb_sensory_L": [
+   0.0001434217265341431,
+   0.0003665221738629043,
+   0.00031871494138613343,
+   0.0008764661033637822,
+   0.0009402090799994767,
+   0.002231004647910595
+  ],
+  "P2_ascending_neuron_L": [
+   0.0033602151088416576,
+   0.005846774205565453,
+   0.0075604841113090515,
+   0.01192876324057579,
+   0.013978494331240654,
+   0.02318548411130905
+  ],
+  "P2_ascending_neuron_R": [
+   0.0027218854520469904,
+   0.004823594354093075,
+   0.006615214981138706,
+   0.009406009688973427,
+   0.014574145898222923,
+   0.021189361810684204
+  ],
+  "P2_descending_neuron_L": [
+   0.007383765187114477,
+   0.011861661449074745,
+   0.015720274299383163,
+   0.020531632006168365,
+   0.026295732706785202,
+   0.034727517515420914
+  ],
+  "P2_descending_neuron_R": [
+   0.00771604897454381,
+   0.012490354478359222,
+   0.015769675374031067,
+   0.022907022386789322,
+   0.027633102610707283,
+   0.03583140671253204
+  ],
+  "P2_cb_sensory_U": [
+   0.00022699759574607015,
+   0.00045399516238830984,
+   0.0001513317256467417,
+   0.0004539951914921403,
+   0.0006053269025869668,
+   0.0015133172273635864
+  ],
+  "P2_vnc_motor_L": [
+   0.011267606168985367,
+   0.01875000074505806,
+   0.02447183057665825,
+   0.041637323796749115,
+   0.04595070332288742,
+   0.05730633810162544
+  ],
+  "P2_vnc_motor_R": [
+   0.012659348547458649,
+   0.01983002945780754,
+   0.024699009954929352,
+   0.034702546894550323,
+   0.04337818920612335,
+   0.056214589625597
+  ],
+  "P2_visual_centrifugal_L": [
+   0.0038648408371955156,
+   0.008060954511165619,
+   0.010711130686104298,
+   0.01556978840380907,
+   0.024403709918260574,
+   0.03334805741906166
+  ],
+  "P2_visual_centrifugal_R": [
+   0.00457589328289032,
+   0.00870535708963871,
+   0.01037946529686451,
+   0.0172991082072258,
+   0.02544642984867096,
+   0.02890625223517418
+  ],
+  "P2_sensory_ascending_R": [
+   0.00034851301461458206,
+   0.0,
+   0.00034851301461458206,
+   0.0005808550049550831,
+   0.0005808550049550831,
+   0.0030204460490494967
+  ],
+  "P2_sensory_ascending_L": [
+   0.0005852059694007039,
+   0.00011704119970090687,
+   0.00023408239940181375,
+   0.0003511235991027206,
+   0.0010533707682043314,
+   0.0008192883688025177
+  ],
+  "P2_vnc_intrinsic_M": [
+   0.005140692926943302,
+   0.008522727526724339,
+   0.010687229223549366,
+   0.012581168673932552,
+   0.022862553596496582,
+   0.04369588941335678
+  ],
+  "P2_U_R": [
+   0.0,
+   0.0,
+   0.00014952152559999377,
+   0.0,
+   0.00014952152559999377,
+   0.00014952152559999377
+  ],
+  "P2_U_L": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.00018382353300694376
+  ],
+  "P2_U_U": [
+   0.0,
+   0.0,
+   0.0004562043759506196,
+   0.0,
+   0.0004562043759506196,
+   0.0011405108962208033
+  ],
+  "P2_cb_intrinsic_M": [
+   0.009334415197372437,
+   0.01663961075246334,
+   0.025162335485219955,
+   0.03003246709704399,
+   0.04667207598686218,
+   0.051948051899671555
+  ],
+  "P2_vnc_efferent_M": [
+   0.006944444961845875,
+   0.0153769850730896,
+   0.0193452388048172,
+   0.0376984141767025,
+   0.0496031753718853,
+   0.0466269887983799
+  ],
+  "P2_cb_motor_L": [
+   0.008101852610707283,
+   0.02083333395421505,
+   0.0173611119389534,
+   0.0329861119389534,
+   0.04398148134350777,
+   0.054398149251937866
+  ],
+  "P2_cb_motor_R": [
+   0.00589622650295496,
+   0.021816037595272064,
+   0.025943396613001823,
+   0.03537736088037491,
+   0.052476413547992706,
+   0.06191037595272064
+  ],
+  "P2_small": [
+   0.0014409221475943923,
+   0.004052593372762203,
+   0.0040525938384234905,
+   0.006123919039964676,
+   0.010716859251260757,
+   0.01494956761598587
+  ],
+  "HEM_L": [
+   0.0010126749984920025,
+   0.0019506476819515228,
+   0.002681664191186428,
+   0.00420162919908762,
+   0.006334078498184681,
+   0.01142985001206398
+  ],
+  "HEM_R": [
+   0.0010194455971941352,
+   0.002047804417088628,
+   0.002773114712908864,
+   0.004410912282764912,
+   0.006491398438811302,
+   0.011233213357627392
+  ],
+  "S_AL": [
+   0.017110265791416168,
+   0.03433935344219208,
+   0.04960789158940315,
+   0.064519964158535,
+   0.08721482753753662,
+   0.08715541660785675
+  ],
+  "S_nonAL": [
+   0.0009750509634613991,
+   0.00191485695540905,
+   0.0026002610102295876,
+   0.004142045043408871,
+   0.006199756637215614,
+   0.011133503168821335
+  ],
+  "S_CB": [
+   0.002420871751382947,
+   0.004814988933503628,
+   0.00662618363276124,
+   0.010232359170913696,
+   0.014564145356416702,
+   0.023597419261932373
+  ],
+  "S_VNC": [
+   0.0024866354651749134,
+   0.004377628676593304,
+   0.005493602715432644,
+   0.008560818620026112,
+   0.010885877534747124,
+   0.016516409814357758
+  ],
+  "S_OL": [
+   0.00020364881493151188,
+   0.0004907164839096367,
+   0.0007469102274626493,
+   0.0012785939034074545,
+   0.002558672334998846,
+   0.005840802565217018
+  ]
+ }
+}

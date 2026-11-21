@@ -1,0 +1,4 @@
+pd3_avalanche.py --graph real --r 1 --x 1.0 --B 4096 --nav 20000 --seed_min 3 --wall_min 5 --ckpt_min 2 --tag smoke_real_r1_x1.00 --outdir /MALECNS_ROOT/results/pd3/criticality/smoke
+pd3_avalanche.py --graph module --r 0 --x 1.0 --B 4096 --nav 20000 --seed_min 3 --wall_min 5 --tag smoke_module_r0_x1.00 --outdir /MALECNS_ROOT/results/pd3/criticality/smoke
+pd3_avalanche.py --graph cnull --N 5000 --gseed 1 --r 0 --x 1.0 --B 4096 --nav 20000 --seed_min 3 --wall_min 5 --tag smoke_cnull5k_r0_x1.00 --outdir /MALECNS_ROOT/results/pd3/criticality/smoke
+pd3_avalanche.py --graph real --r 0 --x 1.5 --B 16384 --cap 2500 --nav 200000 --seed_min 4 --wall_min 6 --tag smoke_real_r0_x1.50 --outdir /MALECNS_ROOT/results/pd3/criticality/smoke

@@ -1,0 +1,45 @@
+{
+ "task": 0,
+ "md5_ald_sim": "92c2e0d3498d000e802ba21d06432412",
+ "md5_swc": "c4de48b8ef31c597d4633c0bb62a8816",
+ "cases": {
+  "decay_r1": {
+   "args": "--exp decay --norm raw --r 1 --g 0.25 0.36 --T 300 --B 16 --seed 7101",
+   "t": true,
+   "g": true,
+   "rho": true,
+   "surv": true,
+   "occ": true,
+   "all_identical": true,
+   "surv_T_mean": [
+    0.0,
+    1.0
+   ]
+  },
+  "decay_r0": {
+   "args": "--exp decay --norm raw --r 0 --g 0.28 --T 400 --B 16 --seed 7102",
+   "t": true,
+   "g": true,
+   "rho": true,
+   "surv": true,
+   "occ": true,
+   "all_identical": true,
+   "surv_T_mean": [
+    1.0
+   ]
+  },
+  "decay_r1_h": {
+   "args": "--exp decay --norm raw --r 1 --h 1e-3 --g 0.2 --T 150 --B 8 --seed 7103",
+   "t": true,
+   "g": true,
+   "rho": true,
+   "surv": true,
+   "occ": true,
+   "all_identical": true,
+   "surv_T_mean": [
+    1.0
+   ]
+  }
+ },
+ "all_pass": true
+}

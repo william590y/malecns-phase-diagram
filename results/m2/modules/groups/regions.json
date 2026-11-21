@@ -1,0 +1,817 @@
+{
+ "n_regions": 126,
+ "regions": [
+  {
+   "name": "P0_AL-L",
+   "key": "R_P0_AL-L",
+   "size": 248,
+   "partition": "P0"
+  },
+  {
+   "name": "P0_AL-R",
+   "key": "R_P0_AL-R",
+   "size": 275,
+   "partition": "P0"
+  },
+  {
+   "name": "P0_AL-mid",
+   "key": "R_P0_AL-mid",
+   "size": 3,
+   "partition": "P0"
+  },
+  {
+   "name": "P0_isl1",
+   "key": "R_P0_isl1",
+   "size": 2292,
+   "partition": "P0"
+  },
+  {
+   "name": "P0_isl2",
+   "key": "R_P0_isl2",
+   "size": 75,
+   "partition": "P0"
+  },
+  {
+   "name": "P0_isl3",
+   "key": "R_P0_isl3",
+   "size": 234,
+   "partition": "P0"
+  },
+  {
+   "name": "P0_isl4",
+   "key": "R_P0_isl4",
+   "size": 127,
+   "partition": "P0"
+  },
+  {
+   "name": "P0_isl5",
+   "key": "R_P0_isl5",
+   "size": 221,
+   "partition": "P0"
+  },
+  {
+   "name": "P0_isl6",
+   "key": "R_P0_isl6",
+   "size": 49,
+   "partition": "P0"
+  },
+  {
+   "name": "P0_isl7",
+   "key": "R_P0_isl7",
+   "size": 158,
+   "partition": "P0"
+  },
+  {
+   "name": "P0_isl8",
+   "key": "R_P0_isl8",
+   "size": 29,
+   "partition": "P0"
+  },
+  {
+   "name": "P0_isl9",
+   "key": "R_P0_isl9",
+   "size": 426,
+   "partition": "P0"
+  },
+  {
+   "name": "P0_isl10",
+   "key": "R_P0_isl10",
+   "size": 34,
+   "partition": "P0"
+  },
+  {
+   "name": "P0_isl11",
+   "key": "R_P0_isl11",
+   "size": 77,
+   "partition": "P0"
+  },
+  {
+   "name": "P0_isl12",
+   "key": "R_P0_isl12",
+   "size": 113,
+   "partition": "P0"
+  },
+  {
+   "name": "P0_isl13",
+   "key": "R_P0_isl13",
+   "size": 131,
+   "partition": "P0"
+  },
+  {
+   "name": "P0_isl14",
+   "key": "R_P0_isl14",
+   "size": 127,
+   "partition": "P0"
+  },
+  {
+   "name": "P0_isl15",
+   "key": "R_P0_isl15",
+   "size": 24,
+   "partition": "P0"
+  },
+  {
+   "name": "P0_isl16",
+   "key": "R_P0_isl16",
+   "size": 22,
+   "partition": "P0"
+  },
+  {
+   "name": "P0_isl17",
+   "key": "R_P0_isl17",
+   "size": 315,
+   "partition": "P0"
+  },
+  {
+   "name": "P0_isl18",
+   "key": "R_P0_isl18",
+   "size": 418,
+   "partition": "P0"
+  },
+  {
+   "name": "P0_isl19",
+   "key": "R_P0_isl19",
+   "size": 67,
+   "partition": "P0"
+  },
+  {
+   "name": "P0_isl20",
+   "key": "R_P0_isl20",
+   "size": 501,
+   "partition": "P0"
+  },
+  {
+   "name": "P0_isl21",
+   "key": "R_P0_isl21",
+   "size": 40,
+   "partition": "P0"
+  },
+  {
+   "name": "P0_isl22",
+   "key": "R_P0_isl22",
+   "size": 707,
+   "partition": "P0"
+  },
+  {
+   "name": "P0_isl23",
+   "key": "R_P0_isl23",
+   "size": 20,
+   "partition": "P0"
+  },
+  {
+   "name": "P0_isl24",
+   "key": "R_P0_isl24",
+   "size": 153,
+   "partition": "P0"
+  },
+  {
+   "name": "P0_isl25",
+   "key": "R_P0_isl25",
+   "size": 428,
+   "partition": "P0"
+  },
+  {
+   "name": "P0_isl26",
+   "key": "R_P0_isl26",
+   "size": 791,
+   "partition": "P0"
+  },
+  {
+   "name": "P0_isl27",
+   "key": "R_P0_isl27",
+   "size": 160,
+   "partition": "P0"
+  },
+  {
+   "name": "P0_isl28",
+   "key": "R_P0_isl28",
+   "size": 26,
+   "partition": "P0"
+  },
+  {
+   "name": "P0_isl29",
+   "key": "R_P0_isl29",
+   "size": 39,
+   "partition": "P0"
+  },
+  {
+   "name": "P0_isl30",
+   "key": "R_P0_isl30",
+   "size": 141,
+   "partition": "P0"
+  },
+  {
+   "name": "P0_rest",
+   "key": "R_P0_rest",
+   "size": 158745,
+   "partition": "P0"
+  },
+  {
+   "name": "P1_L0",
+   "key": "R_P1_L0",
+   "size": 8622,
+   "partition": "P1"
+  },
+  {
+   "name": "P1_L1",
+   "key": "R_P1_L1",
+   "size": 7983,
+   "partition": "P1"
+  },
+  {
+   "name": "P1_L2",
+   "key": "R_P1_L2",
+   "size": 7752,
+   "partition": "P1"
+  },
+  {
+   "name": "P1_L3",
+   "key": "R_P1_L3",
+   "size": 7467,
+   "partition": "P1"
+  },
+  {
+   "name": "P1_L4",
+   "key": "R_P1_L4",
+   "size": 6911,
+   "partition": "P1"
+  },
+  {
+   "name": "P1_L5",
+   "key": "R_P1_L5",
+   "size": 6898,
+   "partition": "P1"
+  },
+  {
+   "name": "P1_L6",
+   "key": "R_P1_L6",
+   "size": 6743,
+   "partition": "P1"
+  },
+  {
+   "name": "P1_L7",
+   "key": "R_P1_L7",
+   "size": 6632,
+   "partition": "P1"
+  },
+  {
+   "name": "P1_L8",
+   "key": "R_P1_L8",
+   "size": 6566,
+   "partition": "P1"
+  },
+  {
+   "name": "P1_L9",
+   "key": "R_P1_L9",
+   "size": 4970,
+   "partition": "P1"
+  },
+  {
+   "name": "P1_L10",
+   "key": "R_P1_L10",
+   "size": 4814,
+   "partition": "P1"
+  },
+  {
+   "name": "P1_L11",
+   "key": "R_P1_L11",
+   "size": 4762,
+   "partition": "P1"
+  },
+  {
+   "name": "P1_L12",
+   "key": "R_P1_L12",
+   "size": 4653,
+   "partition": "P1"
+  },
+  {
+   "name": "P1_L13",
+   "key": "R_P1_L13",
+   "size": 4560,
+   "partition": "P1"
+  },
+  {
+   "name": "P1_L14",
+   "key": "R_P1_L14",
+   "size": 4483,
+   "partition": "P1"
+  },
+  {
+   "name": "P1_L15",
+   "key": "R_P1_L15",
+   "size": 4467,
+   "partition": "P1"
+  },
+  {
+   "name": "P1_L16",
+   "key": "R_P1_L16",
+   "size": 4243,
+   "partition": "P1"
+  },
+  {
+   "name": "P1_L17",
+   "key": "R_P1_L17",
+   "size": 3736,
+   "partition": "P1"
+  },
+  {
+   "name": "P1_L18",
+   "key": "R_P1_L18",
+   "size": 3641,
+   "partition": "P1"
+  },
+  {
+   "name": "P1_L19",
+   "key": "R_P1_L19",
+   "size": 3492,
+   "partition": "P1"
+  },
+  {
+   "name": "P1_L20",
+   "key": "R_P1_L20",
+   "size": 3402,
+   "partition": "P1"
+  },
+  {
+   "name": "P1_L21",
+   "key": "R_P1_L21",
+   "size": 3023,
+   "partition": "P1"
+  },
+  {
+   "name": "P1_L22",
+   "key": "R_P1_L22",
+   "size": 2869,
+   "partition": "P1"
+  },
+  {
+   "name": "P1_L23",
+   "key": "R_P1_L23",
+   "size": 2867,
+   "partition": "P1"
+  },
+  {
+   "name": "P1_L24",
+   "key": "R_P1_L24",
+   "size": 2782,
+   "partition": "P1"
+  },
+  {
+   "name": "P1_L25",
+   "key": "R_P1_L25",
+   "size": 2273,
+   "partition": "P1"
+  },
+  {
+   "name": "P1_L26",
+   "key": "R_P1_L26",
+   "size": 2249,
+   "partition": "P1"
+  },
+  {
+   "name": "P1_L27",
+   "key": "R_P1_L27",
+   "size": 2245,
+   "partition": "P1"
+  },
+  {
+   "name": "P1_L28",
+   "key": "R_P1_L28",
+   "size": 2101,
+   "partition": "P1"
+  },
+  {
+   "name": "P1_L29",
+   "key": "R_P1_L29",
+   "size": 2054,
+   "partition": "P1"
+  },
+  {
+   "name": "P1_L30",
+   "key": "R_P1_L30",
+   "size": 2054,
+   "partition": "P1"
+  },
+  {
+   "name": "P1_L31",
+   "key": "R_P1_L31",
+   "size": 2053,
+   "partition": "P1"
+  },
+  {
+   "name": "P1_L32",
+   "key": "R_P1_L32",
+   "size": 2041,
+   "partition": "P1"
+  },
+  {
+   "name": "P1_L33",
+   "key": "R_P1_L33",
+   "size": 2012,
+   "partition": "P1"
+  },
+  {
+   "name": "P1_L34",
+   "key": "R_P1_L34",
+   "size": 1971,
+   "partition": "P1"
+  },
+  {
+   "name": "P1_L35",
+   "key": "R_P1_L35",
+   "size": 1939,
+   "partition": "P1"
+  },
+  {
+   "name": "P1_L36",
+   "key": "R_P1_L36",
+   "size": 1857,
+   "partition": "P1"
+  },
+  {
+   "name": "P1_L37",
+   "key": "R_P1_L37",
+   "size": 1675,
+   "partition": "P1"
+  },
+  {
+   "name": "P1_L38",
+   "key": "R_P1_L38",
+   "size": 1614,
+   "partition": "P1"
+  },
+  {
+   "name": "P1_L39",
+   "key": "R_P1_L39",
+   "size": 1531,
+   "partition": "P1"
+  },
+  {
+   "name": "P1_L40",
+   "key": "R_P1_L40",
+   "size": 1513,
+   "partition": "P1"
+  },
+  {
+   "name": "P1_L41",
+   "key": "R_P1_L41",
+   "size": 1208,
+   "partition": "P1"
+  },
+  {
+   "name": "P1_L42",
+   "key": "R_P1_L42",
+   "size": 931,
+   "partition": "P1"
+  },
+  {
+   "name": "P1_L43",
+   "key": "R_P1_L43",
+   "size": 831,
+   "partition": "P1"
+  },
+  {
+   "name": "P1_L44",
+   "key": "R_P1_L44",
+   "size": 617,
+   "partition": "P1"
+  },
+  {
+   "name": "P1_L45",
+   "key": "R_P1_L45",
+   "size": 580,
+   "partition": "P1"
+  },
+  {
+   "name": "P1_L46",
+   "key": "R_P1_L46",
+   "size": 488,
+   "partition": "P1"
+  },
+  {
+   "name": "P1_L47",
+   "key": "R_P1_L47",
+   "size": 479,
+   "partition": "P1"
+  },
+  {
+   "name": "P1_L48",
+   "key": "R_P1_L48",
+   "size": 345,
+   "partition": "P1"
+  },
+  {
+   "name": "P1_L49",
+   "key": "R_P1_L49",
+   "size": 322,
+   "partition": "P1"
+  },
+  {
+   "name": "P1_small",
+   "key": "R_P1_small",
+   "size": 1895,
+   "partition": "P1"
+  },
+  {
+   "name": "P2_ol_intrinsic_R",
+   "key": "R_P2_ol_intrinsic_R",
+   "size": 44795,
+   "partition": "P2"
+  },
+  {
+   "name": "P2_ol_intrinsic_L",
+   "key": "R_P2_ol_intrinsic_L",
+   "size": 44606,
+   "partition": "P2"
+  },
+  {
+   "name": "P2_cb_intrinsic_R",
+   "key": "R_P2_cb_intrinsic_R",
+   "size": 16052,
+   "partition": "P2"
+  },
+  {
+   "name": "P2_cb_intrinsic_L",
+   "key": "R_P2_cb_intrinsic_L",
+   "size": 16028,
+   "partition": "P2"
+  },
+  {
+   "name": "P2_vnc_intrinsic_L",
+   "key": "R_P2_vnc_intrinsic_L",
+   "size": 6473,
+   "partition": "P2"
+  },
+  {
+   "name": "P2_vnc_intrinsic_R",
+   "key": "R_P2_vnc_intrinsic_R",
+   "size": 6450,
+   "partition": "P2"
+  },
+  {
+   "name": "P2_visual_projection_R",
+   "key": "R_P2_visual_projection_R",
+   "size": 4612,
+   "partition": "P2"
+  },
+  {
+   "name": "P2_visual_projection_L",
+   "key": "R_P2_visual_projection_L",
+   "size": 4589,
+   "partition": "P2"
+  },
+  {
+   "name": "P2_ol_sensory_R",
+   "key": "R_P2_ol_sensory_R",
+   "size": 3749,
+   "partition": "P2"
+  },
+  {
+   "name": "P2_vnc_sensory_L",
+   "key": "R_P2_vnc_sensory_L",
+   "size": 3186,
+   "partition": "P2"
+  },
+  {
+   "name": "P2_vnc_sensory_R",
+   "key": "R_P2_vnc_sensory_R",
+   "size": 3170,
+   "partition": "P2"
+  },
+  {
+   "name": "P2_cb_sensory_R",
+   "key": "R_P2_cb_sensory_R",
+   "size": 2494,
+   "partition": "P2"
+  },
+  {
+   "name": "P2_ol_sensory_L",
+   "key": "R_P2_ol_sensory_L",
+   "size": 2349,
+   "partition": "P2"
+  },
+  {
+   "name": "P2_cb_sensory_L",
+   "key": "R_P2_cb_sensory_L",
+   "size": 1961,
+   "partition": "P2"
+  },
+  {
+   "name": "P2_ascending_neuron_L",
+   "key": "R_P2_ascending_neuron_L",
+   "size": 930,
+   "partition": "P2"
+  },
+  {
+   "name": "P2_ascending_neuron_R",
+   "key": "R_P2_ascending_neuron_R",
+   "size": 907,
+   "partition": "P2"
+  },
+  {
+   "name": "P2_descending_neuron_L",
+   "key": "R_P2_descending_neuron_L",
+   "size": 656,
+   "partition": "P2"
+  },
+  {
+   "name": "P2_descending_neuron_R",
+   "key": "R_P2_descending_neuron_R",
+   "size": 648,
+   "partition": "P2"
+  },
+  {
+   "name": "P2_cb_sensory_U",
+   "key": "R_P2_cb_sensory_U",
+   "size": 413,
+   "partition": "P2"
+  },
+  {
+   "name": "P2_vnc_motor_L",
+   "key": "R_P2_vnc_motor_L",
+   "size": 355,
+   "partition": "P2"
+  },
+  {
+   "name": "P2_vnc_motor_R",
+   "key": "R_P2_vnc_motor_R",
+   "size": 353,
+   "partition": "P2"
+  },
+  {
+   "name": "P2_visual_centrifugal_L",
+   "key": "R_P2_visual_centrifugal_L",
+   "size": 283,
+   "partition": "P2"
+  },
+  {
+   "name": "P2_visual_centrifugal_R",
+   "key": "R_P2_visual_centrifugal_R",
+   "size": 280,
+   "partition": "P2"
+  },
+  {
+   "name": "P2_sensory_ascending_R",
+   "key": "R_P2_sensory_ascending_R",
+   "size": 269,
+   "partition": "P2"
+  },
+  {
+   "name": "P2_sensory_ascending_L",
+   "key": "R_P2_sensory_ascending_L",
+   "size": 267,
+   "partition": "P2"
+  },
+  {
+   "name": "P2_vnc_intrinsic_M",
+   "key": "R_P2_vnc_intrinsic_M",
+   "size": 231,
+   "partition": "P2"
+  },
+  {
+   "name": "P2_U_R",
+   "key": "R_P2_U_R",
+   "size": 209,
+   "partition": "P2"
+  },
+  {
+   "name": "P2_U_L",
+   "key": "R_P2_U_L",
+   "size": 170,
+   "partition": "P2"
+  },
+  {
+   "name": "P2_U_U",
+   "key": "R_P2_U_U",
+   "size": 137,
+   "partition": "P2"
+  },
+  {
+   "name": "P2_cb_intrinsic_M",
+   "key": "R_P2_cb_intrinsic_M",
+   "size": 77,
+   "partition": "P2"
+  },
+  {
+   "name": "P2_vnc_efferent_M",
+   "key": "R_P2_vnc_efferent_M",
+   "size": 63,
+   "partition": "P2"
+  },
+  {
+   "name": "P2_cb_motor_L",
+   "key": "R_P2_cb_motor_L",
+   "size": 54,
+   "partition": "P2"
+  },
+  {
+   "name": "P2_cb_motor_R",
+   "key": "R_P2_cb_motor_R",
+   "size": 53,
+   "partition": "P2"
+  },
+  {
+   "name": "P2_small",
+   "key": "R_P2_small",
+   "size": 347,
+   "partition": "P2"
+  },
+  {
+   "name": "HEM_L",
+   "key": "R_HEM_L",
+   "size": 81992,
+   "partition": "HEM"
+  },
+  {
+   "name": "HEM_R",
+   "key": "R_HEM_R",
+   "size": 84145,
+   "partition": "HEM"
+  },
+  {
+   "name": "S_AL",
+   "key": "R_S_AL",
+   "size": 526,
+   "partition": "START"
+  },
+  {
+   "name": "S_nonAL",
+   "key": "R_S_nonAL",
+   "size": 166690,
+   "partition": "START"
+  },
+  {
+   "name": "S_CB",
+   "key": "R_S_CB",
+   "size": 38545,
+   "partition": "START"
+  },
+  {
+   "name": "S_VNC",
+   "key": "R_S_VNC",
+   "size": 22822,
+   "partition": "START"
+  },
+  {
+   "name": "S_OL",
+   "key": "R_S_OL",
+   "size": 105267,
+   "partition": "START"
+  }
+ ],
+ "starts": {
+  "AL_L": {
+   "key": "S_AL_L",
+   "size": 248
+  },
+  "AL_R": {
+   "key": "S_AL_R",
+   "size": 275
+  },
+  "AL": {
+   "key": "S_AL",
+   "size": 526
+  },
+  "hemiL": {
+   "key": "S_hemiL",
+   "size": 81992
+  },
+  "hemiR": {
+   "key": "S_hemiR",
+   "size": 84145
+  },
+  "nonAL": {
+   "key": "S_nonAL",
+   "size": 166690
+  },
+  "CB": {
+   "key": "S_CB",
+   "size": 38545
+  },
+  "VNC": {
+   "key": "S_VNC",
+   "size": 22822
+  },
+  "OL": {
+   "key": "S_OL",
+   "size": 105267
+  },
+  "isl1": {
+   "key": "S_isl1",
+   "size": 2292
+  },
+  "isl3": {
+   "key": "S_isl3",
+   "size": 234
+  },
+  "isl5": {
+   "key": "S_isl5",
+   "size": 221
+  }
+ },
+ "unassigned_by_CB_VNC_OL": 582,
+ "superclass_rule": {
+  "CB": "cb_* | descending_neuron*",
+  "VNC": "vnc_* | ascending_neuron | sensory_ascending* | efferent_ascending",
+  "OL": "ol_* | visual_projection* | visual_centrifugal"
+ }
+}

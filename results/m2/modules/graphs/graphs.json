@@ -1,0 +1,68 @@
+{
+ "c": 0.0013406441635011774,
+ "graphs": {
+  "AL": {
+   "N": 526,
+   "n_edges": 71327,
+   "n_exc_neurons": 366,
+   "n_inh_neurons": 121,
+   "frac_in_strength_internal": 0.4462096133862433
+  },
+  "AL_L": {
+   "N": 248,
+   "n_edges": 28757,
+   "n_exc_neurons": 177,
+   "n_inh_neurons": 55,
+   "frac_in_strength_internal": 0.4186876167171099
+  },
+  "AL_R": {
+   "N": 275,
+   "n_edges": 32392,
+   "n_exc_neurons": 189,
+   "n_inh_neurons": 66,
+   "frac_in_strength_internal": 0.40208107421405337
+  },
+  "isl1": {
+   "N": 2292,
+   "n_edges": 261063,
+   "n_exc_neurons": 883,
+   "n_inh_neurons": 1139,
+   "frac_in_strength_internal": 0.2711091937231232
+  },
+  "isl3": {
+   "N": 234,
+   "n_edges": 12866,
+   "n_exc_neurons": 101,
+   "n_inh_neurons": 113,
+   "frac_in_strength_internal": 0.3434419839311371
+  },
+  "isl5": {
+   "N": 221,
+   "n_edges": 18734,
+   "n_exc_neurons": 133,
+   "n_inh_neurons": 58,
+   "frac_in_strength_internal": 0.5288633758418112
+  },
+  "CB": {
+   "N": 38545,
+   "n_edges": 7881626,
+   "n_exc_neurons": 24897,
+   "n_inh_neurons": 12019,
+   "frac_in_strength_internal": 0.8521751696051318
+  },
+  "VNC": {
+   "N": 22822,
+   "n_edges": 3500182,
+   "n_exc_neurons": 13110,
+   "n_inh_neurons": 8315,
+   "frac_in_strength_internal": 0.8859172503295284
+  },
+  "OL": {
+   "N": 105267,
+   "n_edges": 12490508,
+   "n_exc_neurons": 65705,
+   "n_inh_neurons": 38928,
+   "frac_in_strength_internal": 0.9731946351383995
+  }
+ }
+}

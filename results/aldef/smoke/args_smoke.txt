@@ -1,0 +1,8 @@
+--exp decay --norm raw --r 1 --g 0.3 0.45 --T 300 --B 16 --seed 0 --out /MALECNS_ROOT/results/aldef/smoke/s0_baseline.npz
+--exp decay --norm raw --r 1 --g 0.3 0.45 --T 300 --B 16 --seed 0 --sign_override "lLN1_bc=-1" --out /MALECNS_ROOT/results/aldef/smoke/s1_lLN1bc_inh.npz
+--exp decay --norm raw --r 1 --g 0.3 0.45 --T 300 --B 16 --seed 0 --sign_override "lLN1_bc=0" --out /MALECNS_ROOT/results/aldef/smoke/s2_lLN1bc_zero.npz
+--exp quiet --norm raw --r 1 --g 0 0.2 0.3 --T 300 --B 16 --seed 0 --drive "olfactory=0.02" --region "ORN=olfactory" --region "PN=ALPN" --region "LN=ALLN" --out /MALECNS_ROOT/results/aldef/smoke/s3_orn_drive.npz
+--exp decay --norm raw --r 1 --g 0.3 0.45 --T 300 --B 16 --seed 0 --clamp_off "class:olfactory&~type:ORN_(VA4|VC1|VC2|VA7l|VM7d|VM7v)" --std 0.5 20 --std_group "sign:-1=0,1" --adapt 0.02 50 --refractory 1 --region "ORN=olfactory" --out /MALECNS_ROOT/results/aldef/smoke/s4_clamp_std_adapt_ref.npz
+--exp decay --norm raw --r 1 --g 0.35 --T 200 --B 16 --seed 0 --sign_ensemble 2 --ens_unit type --out /MALECNS_ROOT/results/aldef/smoke/s5_sign_ens_type.npz
+--exp decay --norm raw --r 1 --g 0.3 1.0 --T 300 --B 16 --seed 0 --wtransform sqrt --out /MALECNS_ROOT/results/aldef/smoke/s6_sqrt_renorm.npz
+--exp decay --norm raw --r 1 --g 0.45 --T 300 --B 16 --seed 0 --wtransform cap:20 --wnorm none --out /MALECNS_ROOT/results/aldef/smoke/s7_cap20_norenorm.npz

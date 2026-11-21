@@ -1,0 +1,151 @@
+{
+ "T1_drive_h0.01": {
+  "pass": true,
+  "expected": 0.010901759840829613,
+  "measured": 0.010885416666666667,
+  "se": 1.179751640554086e-05,
+  "z": -1.3853063306842015
+ },
+ "T1_drive_h0.1": {
+  "pass": true,
+  "expected": 0.09818756073337127,
+  "measured": 0.0982177734375,
+  "se": 3.212304464811013e-05,
+  "z": 0.9405305275291428
+ },
+ "T1_drive_h1.0": {
+  "pass": true,
+  "expected": 0.4380202996390044,
+  "measured": 0.43797607421875,
+  "se": 4.082716682789337e-05,
+  "z": -1.083235102764481
+ },
+ "T5_refractory_n1": {
+  "pass": true,
+  "expected": 0.30915811409076244,
+  "measured": 0.30912434895833335,
+  "no_refractory": 0.32751217770548086,
+  "se": 6.458693490030716e-05
+ },
+ "T5_refractory_n3": {
+  "pass": true,
+  "expected": 0.2779994575515991,
+  "measured": 0.27801595052083333,
+  "no_refractory": 0.32751217770548086,
+  "se": 6.261173748547094e-05
+ },
+ "T2_feedforward_rhoB": {
+  "pass": true,
+  "expected_exact": 0.2229658424795483,
+  "measured": 0.2229521484375,
+  "se": 3.246428237379141e-05,
+  "rhoA_meas": 0.23794278971354166,
+  "rhoA_exact": 0.2379386390804963,
+  "naive_mean_pon": 0.23958722722655088
+ },
+ "T3_depression_mean_x": {
+  "pass": true,
+  "expected_exact": 0.5150668668140842,
+  "measured": 0.5149710178375244,
+  "continuum_1_over_1_plus_U_rho_tau": 0.4566849831289687,
+  "rho_meas": 0.2379210205078125,
+  "rho_exact": 0.2379386390804963
+ },
+ "T3_depression_x_given_active": {
+  "pass": true,
+  "expected_exact": 0.4224088389049654,
+  "measured": 0.4224296808242798
+ },
+ "T3_group_params": {
+  "pass": true,
+  "dep_x": 0.5152758359909058,
+  "nodep_x": "NaN (no depressing neurons in region) as documented"
+ },
+ "T4_adaptation_theta_identity": {
+  "pass": true,
+  "theta_meas": 0.22521431744098663,
+  "D_tau_rho": 0.2252052001953125,
+  "rho_meas": 0.2252052001953125,
+  "rho_meanfield": 0.22419071866130139,
+  "rho_no_adapt": 0.32751217770548086
+ },
+ "T4_adaptation_meanfield": {
+  "pass": true,
+  "rho_meas": 0.2252052001953125,
+  "rho_meanfield": 0.22419071866130139,
+  "note": "approximate (theta fluctuations neglected); 2% tolerance"
+ },
+ "T6_clamp_on_std_trajectory": {
+  "pass": true,
+  "max_abs_z": 3.0697492361947982,
+  "rhoB_final_exact": 0.32020086422680233,
+  "rhoB_final_meas": 0.31993162631988525,
+  "x_final": 0.40000051259994507,
+  "x_final_exact": 0.4000000012366922,
+  "A_always_active": 1.0
+ },
+ "T7_selectors": {
+  "pass": true,
+  "n[lLN1_bc]": 30.0,
+  "n[olfactory]": 2639.0,
+  "n[module]": 526.0,
+  "n[al]": 3874.0,
+  "n[al_rest]": 3395.0,
+  "n[cns_rest]": 163295.0,
+  "n[type:lLN2.*]": 92.0,
+  "n[ALLN&sign:+1]": 137.0,
+  "n[class:olfactory&~type:ORN_(VA4|VC1|VC2|VA7l|VM7d|VM7v)]": 2454.0
+ },
+ "T7_selector_empty_is_error": {
+  "pass": true
+ },
+ "T7_sign_override": {
+  "pass": true,
+  "lLN1_bc_consensus": 1.0,
+  "override_m1_r2": -2.0
+ },
+ "T7_wtransform_renorm_mean_instrength": {
+  "pass": true,
+  "mean_in[linear/renorm]": 0.9999999413321476,
+  "mean_in[linear/none]": 0.9999999413321476,
+  "mean_in[cap:20/renorm]": 1.0000001171510984,
+  "mean_in[cap:20/none]": 0.810348262519786,
+  "mean_in[sqrt/renorm]": 1.0000000444087238,
+  "mean_in[sqrt/none]": 0.3737632209425515,
+  "mean_in[log1p/renorm]": 0.9999999649668174,
+  "mean_in[log1p/none]": 0.27315710506384944,
+  "mean_in[binary/renorm]": 0.9999999825211014,
+  "mean_in[binary/none]": 0.20603022869467186
+ },
+ "T7_nt_sign_probs": {
+  "pass": true,
+  "rows_sum_to_1": 1.0,
+  "q1_reproduces_consensus": 1.0,
+  "lLN1_bc_P_mean": [
+   0.753,
+   0.2326,
+   0.0145
+  ],
+  "lLN1_bc_q_mean": 0.7529735069842765,
+  "all_P_mean": [
+   0.6315,
+   0.3495,
+   0.019
+  ],
+  "draw_freq_max_dev": 6.889205027216239e-05,
+  "type_unit_lLN1_bc_flip_frac": 0.22,
+  "neuron_unit_lLN1_bc_flip_frac": 0.23666666666666666,
+  "gt_fix_one_hot": 1.0,
+  "n_with_ground_truth": 85484.0
+ },
+ "_meta": {
+  "device": "cuda",
+  "gpu": "NVIDIA RTX A6000",
+  "quick": false,
+  "B": 512,
+  "T": 2000.0,
+  "wall_s": 22.58161759376526,
+  "n_pass": 17,
+  "n_tests": 17
+ }
+}

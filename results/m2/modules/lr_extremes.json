@@ -1,0 +1,125 @@
+{
+ "a|M1|AL": {
+  "minp": 0.021477475773723054,
+  "where": [
+   "4",
+   1.27
+  ],
+  "maxdbic": -0.5642094812288292,
+  "tsym_max_q75": 7.15,
+  "died_first": 1,
+  "n_onesided": 36
+ },
+ "a|M1|HEM": {
+  "minp": 0.03624313869735272,
+  "where": [
+   "0",
+   0.4256
+  ],
+  "maxdbic": -0.7731785127257922,
+  "tsym_max_q75": 9.600000000000001,
+  "died_first": 0,
+  "n_onesided": 36
+ },
+ "a|M2|AL": {
+  "minp": 0.012310266753851218,
+  "where": [
+   "1",
+   12.568
+  ],
+  "maxdbic": -4.088587272551166,
+  "tsym_max_q75": 2.8000000000000003,
+  "died_first": 0,
+  "n_onesided": 84
+ },
+ "a|M2|HEM": {
+  "minp": 0.021477475773723054,
+  "where": [
+   "2",
+   13.773
+  ],
+  "maxdbic": 0.7136276773059365,
+  "tsym_max_q75": 7.0,
+  "died_first": 0,
+  "n_onesided": 84
+ },
+ "a|M2_tau30|AL": {
+  "minp": 0.03624313869735272,
+  "where": [
+   "4",
+   3.4333
+  ],
+  "maxdbic": -1000000000.0,
+  "tsym_max_q75": 2.85,
+  "died_first": 0,
+  "n_onesided": 36
+ },
+ "a|M2_tau30|HEM": {
+  "minp": 1,
+  "where": null,
+  "maxdbic": -1000000000.0,
+  "tsym_max_q75": 0,
+  "died_first": 0,
+  "n_onesided": 0
+ },
+ "a|M2s|AL": {
+  "minp": 0.2115209749688004,
+  "where": [
+   "1",
+   6.3189
+  ],
+  "maxdbic": -1000000000.0,
+  "tsym_max_q75": 3.6,
+  "died_first": 0,
+  "n_onesided": 36
+ },
+ "a|M2s|HEM": {
+  "minp": 1,
+  "where": null,
+  "maxdbic": -1000000000.0,
+  "tsym_max_q75": 0,
+  "died_first": 0,
+  "n_onesided": 0
+ },
+ "b|M1|AL": {
+  "minp": 0.012310266753851218,
+  "where": [
+   "1",
+   0.32966
+  ],
+  "maxdbic": -2.692337987268786,
+  "tsym_max_q75": 7.15,
+  "died_first": 0,
+  "n_onesided": 32
+ },
+ "b|M1|HEM": {
+  "minp": 1,
+  "where": null,
+  "maxdbic": -3.303038875478194,
+  "tsym_max_q75": 0,
+  "died_first": 0,
+  "n_onesided": 0
+ },
+ "b|M2|AL": {
+  "minp": 0.012310266753851218,
+  "where": [
+   "0",
+   0.96844
+  ],
+  "maxdbic": -7.196026410169111,
+  "tsym_max_q75": 3.25,
+  "died_first": 0,
+  "n_onesided": 48
+ },
+ "b|M2|HEM": {
+  "minp": 0.012310266753851218,
+  "where": [
+   "4",
+   1.857
+  ],
+  "maxdbic": -6.778752979782894,
+  "tsym_max_q75": 7.6000000000000005,
+  "died_first": 0,
+  "n_onesided": 48
+ }
+}

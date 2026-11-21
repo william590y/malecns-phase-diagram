@@ -1,0 +1,6 @@
+lnaqs --model M2 --r 0 --g 0.6,1.0,1.5,3 --tag _a --smax 60000
+lnaqs --model M2 --r 0 --g 0.8,1.2,2,5 --tag _b --smax 60000
+lnaqs --model M2 --r 0 --g 0.35,8,12 --tag _c --smax 60000
+lnaqs --model M2_tau30 --r 0 --g 0.6,1.0,1.5,3 --tag _a --smax 60000
+lnaqs --model M1 --r 0 --g 0.2,0.27,0.4,0.8 --tag _a --smax 60000
+lnaqs --model M2_KW09 --r 0 --g 1.0,1.5,3 --tag _a --smax 60000

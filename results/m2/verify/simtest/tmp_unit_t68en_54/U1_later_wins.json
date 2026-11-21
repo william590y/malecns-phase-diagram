@@ -1,0 +1,154 @@
+{
+ "options": {
+  "exp": "quiet",
+  "norm": "raw",
+  "g": [
+   1.0
+  ],
+  "r": 1.0,
+  "h": 0.0,
+  "beta": 1.0,
+  "T": 400.0,
+  "dt": 0.2,
+  "B": 64,
+  "null": false,
+  "null_kind": "targets",
+  "seed_set": null,
+  "seed": 11,
+  "out": "/MALECNS_ROOT/results/m2/verify/simtest/tmp_unit_t68en_54/U1_later_wins.npz",
+  "drive": [],
+  "clamp_off": [],
+  "clamp_on": [
+   "lLN1_bc"
+  ],
+  "sign_override": [],
+  "sign_ensemble": 0,
+  "ens_unit": "neuron",
+  "ens_conf": "body",
+  "ens_gt": "ignore",
+  "ens_qmiss": 0.5,
+  "ens_seed": null,
+  "ens_only": null,
+  "wtransform": "linear",
+  "wnorm": "renorm",
+  "std": null,
+  "std_group": [],
+  "std_mode": "rate",
+  "adapt": null,
+  "adapt_group": [],
+  "refractory": 0,
+  "region": [
+   "B=ALPN",
+   "C=ALLN&~lLN1_bc"
+  ],
+  "no_default_regions": true,
+  "no_occ": false,
+  "device": "cuda",
+  "engine": "spmm",
+  "push_max": 0.05,
+  "switch_at": null,
+  "sw_drive": [],
+  "sw_clamp_off": [],
+  "sw_clamp_on": [],
+  "rec_lin": 0.0,
+  "win": [],
+  "reg_last": false,
+  "occ_win": null,
+  "edge_sign": [
+   "lLN1_bc->ALPN=0",
+   "lLN1_bc->all=1"
+  ],
+  "null_seed": null,
+  "graph": "/MALECNS_ROOT/results/m2/verify/simtest/tmp_unit_t68en_54/motif.npz",
+  "rec_counts": false,
+  "counts_win": null,
+  "counts_reg": false,
+  "pulse": null,
+  "pulse_gap": 0.0,
+  "ramp": 0.0,
+  "ramp_loop": false,
+  "ramp_avg": 0.5,
+  "init": [],
+  "init_frac": 1.0
+ },
+ "device": "cuda",
+ "gpu": "NVIDIA RTX A5500",
+ "graph": {
+  "file": "/MALECNS_ROOT/results/m2/verify/simtest/tmp_unit_t68en_54/motif.npz",
+  "N": 1500,
+  "n_edges": 900,
+  "sub": true,
+  "c": 0.1
+ },
+ "c_raw": 0.1,
+ "edge_sign": [
+  {
+   "pre": "lLN1_bc",
+   "post": "ALPN",
+   "V": 0.0,
+   "sigma_edge": 0.0,
+   "n_pre": 300,
+   "n_post": 300,
+   "n_edges": 300,
+   "n_synapses": 3000.0,
+   "pre_consensus_signs_of_edges": {
+    "1.0": 300
+   }
+  },
+  {
+   "pre": "lLN1_bc",
+   "post": "all",
+   "V": 1.0,
+   "sigma_edge": 1.0,
+   "n_pre": 300,
+   "n_post": 1500,
+   "n_edges": 600,
+   "n_synapses": 6000.0,
+   "pre_consensus_signs_of_edges": {
+    "1.0": 600
+   }
+  }
+ ],
+ "clamp_on": [
+  {
+   "sel": "lLN1_bc",
+   "n": 300
+  }
+ ],
+ "regions": {
+  "B": {
+   "sel": "ALPN",
+   "n": 300
+  },
+  "C": {
+   "sel": "ALLN&~lLN1_bc",
+   "n": 300
+  }
+ },
+ "N": 1500,
+ "nnz": [
+  900
+ ],
+ "steps": 2000,
+ "n_draws": 1,
+ "ms_per_step": [
+  [
+   0.2758435010910034
+  ]
+ ],
+ "rho_T_mean": [
+  0.3749895989894867
+ ],
+ "surv_T": [
+  1.0
+ ],
+ "wall_s": 0.6126396656036377,
+ "reg_rho_T_mean": {
+  "B": [
+   0.43708336353302
+  ],
+  "C": [
+   0.43786460161209106
+  ]
+ }
+}
