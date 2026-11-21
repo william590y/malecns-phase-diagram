@@ -1,0 +1,246 @@
+{
+ "release_url": "https://github.com/william590y/malecns-phase-diagram/releases/tag/results-v1",
+ "download_base": "https://github.com/william590y/malecns-phase-diagram/releases/download/results-v1/",
+ "archives": {
+  "al_lit": {
+   "parts": [
+    "al_lit.tar.part00"
+   ],
+   "tar_bytes": 49192960,
+   "sha256": "82a21c60d0a734b16c1dbe7067c2776669c160eeef5ca2b551041e7d311be9a0",
+   "n_files": 28
+  },
+  "aldef__depression": {
+   "parts": [
+    "aldef__depression.tar.part00"
+   ],
+   "tar_bytes": 268165120,
+   "sha256": "9a690457099c385fe50a082fb6a7d6118d84585d31400e7457d722eafb243c92",
+   "n_files": 198
+  },
+  "aldef__drive": {
+   "parts": [
+    "aldef__drive.tar.part00"
+   ],
+   "tar_bytes": 384798720,
+   "sha256": "c83b599c502758d2a03fb119084284e9ba80255833df719ea5fbad78e192f5ee",
+   "n_files": 110
+  },
+  "aldef__files": {
+   "parts": [
+    "aldef__files.tar.part00"
+   ],
+   "tar_bytes": 1873920,
+   "sha256": "dfe68b407559b71c9e58a12018c033ba08ecf574e714d320bb71026ae9a3f957",
+   "n_files": 1
+  },
+  "aldef__signs": {
+   "parts": [
+    "aldef__signs.tar.part00"
+   ],
+   "tar_bytes": 1296209920,
+   "sha256": "dc8c088a0537681b52ddf663676bed09679b713b353789124f503e6e2581a3e2",
+   "n_files": 157
+  },
+  "aldef__smoke": {
+   "parts": [
+    "aldef__smoke.tar.part00"
+   ],
+   "tar_bytes": 675840,
+   "sha256": "aca7b997a465a5f1070889dda2145ec50bb6f15e4c2026df1a76841ca8fbc857",
+   "n_files": 8
+  },
+  "aldef__validation": {
+   "parts": [
+    "aldef__validation.tar.part00"
+   ],
+   "tar_bytes": 1423360,
+   "sha256": "4183cb8843efe67d7ffd569738ca39380c4b70e3d8c38c7864a58632e80071c2",
+   "n_files": 13
+  },
+  "aldef__verify": {
+   "parts": [
+    "aldef__verify.tar.part00"
+   ],
+   "tar_bytes": 4853760,
+   "sha256": "64958d7c21c934c467ca454dd0b02e801bc2f74942afa87b340dc36be09350e6",
+   "n_files": 12
+  },
+  "aldef__weights": {
+   "parts": [
+    "aldef__weights.tar.part00"
+   ],
+   "tar_bytes": 342814720,
+   "sha256": "3f11cca146f083afefe4d4a02c738682fa3c68fc47b27b4ebfae13aabf682784",
+   "n_files": 86
+  },
+  "m2__decay": {
+   "parts": [
+    "m2__decay.tar.part00",
+    "m2__decay.tar.part01",
+    "m2__decay.tar.part02",
+    "m2__decay.tar.part03",
+    "m2__decay.tar.part04"
+   ],
+   "tar_bytes": 9926082560,
+   "sha256": "aae7290f356cfe4d19b3e315682835889b84494be17c2ad2a388c413b94230b7",
+   "n_files": 1043
+  },
+  "m2__driven": {
+   "parts": [
+    "m2__driven.tar.part00",
+    "m2__driven.tar.part01",
+    "m2__driven.tar.part02",
+    "m2__driven.tar.part03",
+    "m2__driven.tar.part04",
+    "m2__driven.tar.part05",
+    "m2__driven.tar.part06",
+    "m2__driven.tar.part07",
+    "m2__driven.tar.part08",
+    "m2__driven.tar.part09",
+    "m2__driven.tar.part10",
+    "m2__driven.tar.part11",
+    "m2__driven.tar.part12"
+   ],
+   "tar_bytes": 25546362880,
+   "sha256": "9eeca2d721a9588005ceb289568df2ad459e71e730e03349578d9c2d0c459f25",
+   "n_files": 988
+  },
+  "m2__modules": {
+   "parts": [
+    "m2__modules.tar.part00",
+    "m2__modules.tar.part01",
+    "m2__modules.tar.part02",
+    "m2__modules.tar.part03",
+    "m2__modules.tar.part04"
+   ],
+   "tar_bytes": 8134041600,
+   "sha256": "a03f7516257d78e16ff38086acd1035a8553b2d2e9895cd302733acd92d8c88e",
+   "n_files": 236
+  },
+  "m2__nature": {
+   "parts": [
+    "m2__nature.tar.part00",
+    "m2__nature.tar.part01",
+    "m2__nature.tar.part02"
+   ],
+   "tar_bytes": 5471426560,
+   "sha256": "5e864b5b13da95f38f664851d252d717a6e11be7a8da5e4f7de0aff106b87db9",
+   "n_files": 1128
+  },
+  "m2__sim": {
+   "parts": [
+    "m2__sim.tar.part00"
+   ],
+   "tar_bytes": 138803200,
+   "sha256": "c0d8c04504c5023090c06ce9ace693de9935f3493920b28fe90b6e8c21025890",
+   "n_files": 57
+  },
+  "m2__theory": {
+   "parts": [
+    "m2__theory.tar.part00",
+    "m2__theory.tar.part01"
+   ],
+   "tar_bytes": 3712512000,
+   "sha256": "07e26e35c9e1499d2ef6b1a07231f6aff148a7885c0a59c4048d4413ca42d6ef",
+   "n_files": 356
+  },
+  "m2__verify": {
+   "parts": [
+    "m2__verify.tar.part00"
+   ],
+   "tar_bytes": 37672960,
+   "sha256": "f45491c0c0eef253634c95891c2ec4dd22af95ad83249e325bbece37d7186168",
+   "n_files": 35
+  },
+  "module": {
+   "parts": [
+    "module.tar.part00"
+   ],
+   "tar_bytes": 153600,
+   "sha256": "94b3181f02d7237dd2bee16806571bab7d8f4c64318eef12f0121dc94bca7eae",
+   "n_files": 1
+  },
+  "pd": {
+   "parts": [
+    "pd.tar.part00"
+   ],
+   "tar_bytes": 552427520,
+   "sha256": "29ac4fbfb6d25567adc8ecdae892ce7592529fc870f773470a2e744b6bb3a1b4",
+   "n_files": 51
+  },
+  "pd2": {
+   "parts": [
+    "pd2.tar.part00"
+   ],
+   "tar_bytes": 383897600,
+   "sha256": "7632ddc37cb072c734b87b0d437ae58f1b3b517f6996e227367c810b1f93617b",
+   "n_files": 61
+  },
+  "pd3__critic_regen": {
+   "parts": [
+    "pd3__critic_regen.tar.part00"
+   ],
+   "tar_bytes": 112640,
+   "sha256": "dbb88844024d805410d945c0a2377b451de3e4ecfd76b216b75664ea18c9cbab",
+   "n_files": 3
+  },
+  "pd3__criticality": {
+   "parts": [
+    "pd3__criticality.tar.part00"
+   ],
+   "tar_bytes": 994938880,
+   "sha256": "b22ae3266d27cfa5c4f0518029bd4592dbcd8dfc64e6a52ba0b654889a5eaab4",
+   "n_files": 102
+  },
+  "pd3__module_theory": {
+   "parts": [
+    "pd3__module_theory.tar.part00"
+   ],
+   "tar_bytes": 99543040,
+   "sha256": "8a49dbfedfee649f44ad5ebd19887570585187e5fbb58719bfc7f7f300e0c4ca",
+   "n_files": 23
+  },
+  "pd3__modules": {
+   "parts": [
+    "pd3__modules.tar.part00"
+   ],
+   "tar_bytes": 14243840,
+   "sha256": "b40432941f2ee76d74d8a02fc328a2e85fe27aaf8ab2fc13bcf712d70b037ab3",
+   "n_files": 10
+  },
+  "pd3__multistab": {
+   "parts": [
+    "pd3__multistab.tar.part00",
+    "pd3__multistab.tar.part01"
+   ],
+   "tar_bytes": 3570749440,
+   "sha256": "0d3c5db14bf2bc2e34c611d9045e0eb5f748147070e59267fb5851eca5e08da1",
+   "n_files": 140
+  },
+  "pd3__redraw": {
+   "parts": [
+    "pd3__redraw.tar.part00"
+   ],
+   "tar_bytes": 112640,
+   "sha256": "f6eb6e462b3f2a93fa8348f9a63253a4e0201e42a77aaec74d05a2b8af756518",
+   "n_files": 3
+  },
+  "pd3__redraw_fss": {
+   "parts": [
+    "pd3__redraw_fss.tar.part00"
+   ],
+   "tar_bytes": 148858880,
+   "sha256": "da65deb2c05783653b85747b159685f07cee3ad0f718689f15bf81350a1cba14",
+   "n_files": 82
+  },
+  "toplevel": {
+   "parts": [
+    "toplevel.tar.part00"
+   ],
+   "tar_bytes": 42291200,
+   "sha256": "be37938cecd5869f59cbdb4782b5741ba8f82601aa1bfac4805cfa24bd88162c",
+   "n_files": 21
+  }
+ }
+}

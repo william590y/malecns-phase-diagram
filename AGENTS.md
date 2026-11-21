@@ -36,18 +36,18 @@ This rewrites files in `code/` in place. Do not commit the rewritten paths; befo
 the placeholders (replace your absolute paths back) or commit only the lines you changed.
 
 ## 4. Get the raw result arrays (only if you need them)
-The repository holds every report, table and JSON summary. The raw arrays (61 GB) are on Google Drive, one tar per
-directory group, listed in `drive_manifest.json` (Drive file id, size, sha256, where it unpacks).
+The repository holds every report, table and JSON summary. The raw arrays (61 GB) are assets of the GitHub release
+`results-v1` (https://github.com/william590y/malecns-phase-diagram/releases/tag/results-v1): one tar per directory group, split into parts of at most 1.9 GB (`<name>.tar.partNN`).
+`results_manifest.json` lists the parts, size and sha256 of each archive. Downloads are public; no login is needed.
 
 ```bash
 python tools/fetch_results.py --list
 python tools/fetch_results.py toplevel module      # small ones first
-python tools/fetch_results.py m2__decay            # one Model 2 lane
+python tools/fetch_results.py m2__decay            # one Model 2 lane (10 GB)
 ```
-- Archives unpack into `results/` at the original paths, so analysis scripts find them.
-- Folder link: __FOLDER_URL__ (anyone with the link can view).
-- If `gdown` is refused for quota reasons, wait an hour, or download through a browser or `rclone` signed in to any
-  Google account, then unpack with `tar -xf <archive>.tar -C results/`.
+- The script downloads the parts, joins them, checks the sha256 and unpacks into `results/` at the original paths, so
+  analysis scripts find the files. Archive names follow the directories: `m2__decay` is `results/m2/decay/`.
+- By hand: download the parts, `cat name.tar.part* > name.tar`, then `tar -xf name.tar -C results/`.
 - Do not add `.npz`/`.npy` files to git (`.gitignore` blocks them under `results/`).
 
 ## 5. Check the setup

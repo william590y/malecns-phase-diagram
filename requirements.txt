@@ -5,5 +5,4 @@ torch==2.11.0        # CUDA build for the simulators; CPU works but is slow at 1
 matplotlib==3.10.6
 pandas==2.3.2
 pyarrow==25.0.1      # reads the Janelia .feather files
-gdown                # only for tools/fetch_results.py
 pytest               # only for data_pipeline/tests

@@ -32,11 +32,11 @@ anaesthesia literature is in `results/al_lit/REPORT.md`.
 | path | contents |
 | --- | --- |
 | `code/` | simulators (GPU, PyTorch), spectral and theory code, analyses, figure scripts, Slurm runners |
-| `results/` | every report (`REPORT.md`), plan, table and JSON summary. Raw arrays are on Google Drive (below) |
+| `results/` | every report (`REPORT.md`), plan, table and JSON summary. Raw arrays are in a GitHub release (below) |
 | `figs/` | all figures and the activity movie |
 | `explainer/` | an illustrated walk-through as web pages; open `explainer/index.html` in a browser |
 | `data_pipeline/` | downloads the public MaleCNS release and builds the array cache the code reads |
-| `tools/` | `set_paths.py` (point the code at your machine), `fetch_results.py` (get raw arrays from Drive) |
+| `tools/` | `set_paths.py` (point the code at your machine), `fetch_results.py` (get raw arrays from the release) |
 | `AGENTS.md` | step-by-step setup and data instructions, written for coding agents |
 | `PROJECT_NOTES.md`, `STATE.md` | the working notes and the full log of the project, as they were |
 
@@ -44,9 +44,9 @@ anaesthesia literature is in `results/al_lit/REPORT.md`.
 
 - **The connectome** is public (CC BY 4.0): <https://male-cns.janelia.org/download/>. `data_pipeline/` downloads it
   (about 1.1 GB) and builds a 399 MB cache. See `AGENTS.md`.
-- **Raw simulation arrays** (`.npz`/`.npy`, about 61 GB) are in a Google Drive folder:
-  __FOLDER_URL__ . `python tools/fetch_results.py --list` shows the archives; fetch only what you need.
-  Every number in the reports can also be regenerated from the code.
+- **Raw simulation arrays** (`.npz`/`.npy`, about 61 GB) are attached to the GitHub release
+  [`results-v1`](https://github.com/william590y/malecns-phase-diagram/releases/tag/results-v1), split into parts under 2 GB. `python tools/fetch_results.py --list` shows the archives;
+  fetch only what you need. Every number in the reports can also be regenerated from the code.
 
 ## Quick start
 
